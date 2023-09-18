@@ -35,14 +35,27 @@ book:
     search: false
 
 
-
+    
   chapters:
     - index.qmd
+
+    - part: sections/part_1.qmd
+      chapters:
+        - sections/chap_1_1.qmd
+
+    - part: sections/part_2.qmd
+      chapters:
+        - sections/chap_2_1.qmd
+
+    - part: sections/part_3.qmd
+      chapters:
+        - sections/chap_3_1.qmd
+
     - sections/license.qmd
-    - sections/chap1.qmd
-    - sections/chap2.qmd
-    - sections/chap3.qmd
+    
     - sections/references.qmd
+
+
 
 
 bibliography: teaching.bib
