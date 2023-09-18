@@ -15,17 +15,17 @@ This work is licensed under a
 
 For attribution, please cite this work as:
 
-> Fanzon, Silvio. (2023). *Lecture Notes on Differential Geometry*.  
-[https://silviofanzon.quarto.pub/2023-differential-geometry/](https://silviofanzon.quarto.pub/2023-differential-geometry/)
+> Fanzon, Silvio. (2023). *Lecture Notes on Numbers, Sequences and Series*.  
+[https://www.silviofanzon.com/2023-NSS-Notes/](https://www.silviofanzon.com/2023-NSS-Notes/)
 
 
 BibTex citation:
 
 
 ```bibtex
-@electronic{fanzon-diff-geom-2023,
+@electronic{fanzon-NSS-2023,
 	author = {Fanzon, Silvio},
-	title = {Lecture Notes on Differential Geometry},
-	url = {https://silviofanzon.quarto.pub/2023-differential-geometry/},
+	title = {Lecture Notes on Numbers, Sequences and Series},
+	url = {https://www.silviofanzon.com/2023-NSS-Notes/},
 	year = {2023}}
 ```
