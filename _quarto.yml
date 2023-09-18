@@ -4,7 +4,7 @@ project:
 
 
 book:
-  title: "Numbers, Sequences & Series"
+  title: "Numbers, Sequences and Series"
   subtitle: "Lecture Notes, T1 2023"
   author: 
     - name: "Silvio Fanzon"
@@ -97,7 +97,7 @@ format:
     include-in-header:
       - text: |
           \usepackage{scrlayer-scrpage}
-          \lohead{Differential Geometry}
+          \lohead{Numbers, Sequences and Series}
           \cohead{}
           \rohead{\pagemark}
           \lofoot{}

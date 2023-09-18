@@ -2,14 +2,14 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Numbers, Sequences & Series",
+    "title": "Numbers, Sequences and Series",
     "section": "",
-    "text": "Welcome\nThese are the Lecture Notes of Numbers, Sequences & Series 400297 for T1 2023 at the University of Hull. I will follow these lecture notes during the course. If you have any question or find any typo, please email me at\nUp to date information about the course and homework will be published on the course webpage\nHomework will also be released on the Canvas webpage\nFeatures of these digital notes:"
+    "text": "Welcome\nThese are the Lecture Notes of Numbers, Sequences & Series 400297 for T1 2023 at the University of Hull. I will follow these lecture notes during the course. If you have any question or find any typo, please email me at\nUp to date information about the course and homework will be published on the course webpage\nHomework will also be released on the Hull Canvas webpage\nFeatures of these digital notes:"
   },
   {
     "objectID": "index.html#references",
     "href": "index.html#references",
-    "title": "Numbers, Sequences & Series",
+    "title": "Numbers, Sequences and Series",
     "section": "References",
     "text": "References\nWe will study the set of real numbers \\(\\mathbb{R}\\), and then sequences and series in \\(\\mathbb{R}\\). I will follow mainly the textbook by Bartle and Sherbert [1]. Other references that inspired these notes are the books by Abbott [2] and Rudin [3].\n\n\n\n\n\n\nImportant\n\n\n\nYou are not expected to purchase any of the above books. These lecture notes will cover 100% of the topics you are expected to known in order to excel in the final exam.\n\n\n\n\n\n\n[1] R.G. Bartle, D.R. Sherbert, Introduction to real analysis, Fourth Edition, Wiley, 2011.\n\n\n[2] S. Abbott, Understanding analysis, Second Edition, Springer, 2015.\n\n\n[3] W. Rudin, Principles of mathematical analysis, Third Edition, McGraw Hill, 1976."
   },

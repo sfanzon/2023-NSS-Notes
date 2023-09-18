@@ -47,7 +47,7 @@ Up to date information about the course and homework will be published on the  *
 
 
 
-Homework will also be released on the **`Canvas webpage`**
+Homework will also be released on the Hull **`Canvas webpage`**
 
 
 ::: {.content-visible when-format="html"}
