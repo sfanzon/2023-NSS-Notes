@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Numbers, Sequences and Series",
     "section": "",
-    "text": "Welcome\nThese are the Lecture Notes of Numbers, Sequences & Series 400297 for T1 2023 at the University of Hull. I will follow these lecture notes during the course. If you have any question or find any typo, please email me at\nUp to date information about the course and homework will be published on the course webpage\nHomework will also be released on the Hull Canvas webpage\nFeatures of these digital notes:"
+    "text": "Welcome\nThese are the Lecture Notes of Numbers, Sequences & Series 400297 for T1 2023/24 at the University of Hull. I will follow these lecture notes during the course. If you have any question or find any typo, please email me at\nUp to date information about the course, Tutorials and Homework will be published on the University of Hull Canvas Website\nand on the Course Webpage hosted on my website\nFeatures of these digital notes:"
   },
   {
     "objectID": "index.html#references",
@@ -18,7 +18,7 @@
     "href": "sections/chap_1.html#introduction",
     "title": "1  Numbers",
     "section": "1.1 Introduction",
-    "text": "1.1 Introduction\nThe aim of this section is to rigorously introduce the set of real numbers \\(\\mathbb{R}\\). But what do we mean by real number anyways? To start our discussion, introduce the set of natural numbers (or non-negative integers) \\[\n\\mathbb{N}= \\{0,1,2,3,4,5,\\dots\\}\n\\] On this set we have a notion of sum of two numbers, denoted as usual by \\[\nn+m\n\\] for \\(n,m \\in \\mathbb{N}\\). Here the symbol \\(\\in\\) denotes that \\(m\\) and \\(n\\) belong to \\(\\mathbb{N}\\). For example \\(3+7\\) results in \\(10\\).\n\nQuestionCan the sum be inverted?sadl"
+    "text": "1.1 Introduction\nThe aim of this chapter is to rigorously introduce the set of real numbers \\(\\mathbb{R}\\). But what do we mean by real number anyways? To start our discussion, introduce the set of natural numbers (or non-negative integers) \\[\n\\mathbb{N}= \\{0,1,2,3,4,5,\\dots\\}\n\\] On this set we have a notion of sum of two numbers, denoted as usual by \\[\nn+m\n\\] for \\(n,m \\in \\mathbb{N}\\). Here the symbol \\(\\in\\) denotes that \\(m\\) and \\(n\\) belong to \\(\\mathbb{N}\\). For example \\(3+7\\) results in \\(10\\).\n\nQuestionCan the sum be inverted?sadl"
   },
   {
     "objectID": "sections/license.html#reuse",

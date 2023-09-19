@@ -11,7 +11,7 @@ $$
 
 ## Introduction
 
-The aim of this section is to rigorously introduce the set of real numbers $\R$. But what do we mean by real number anyways? To start our discussion, introduce the set of natural numbers (or non-negative integers)
+The aim of this chapter is to rigorously introduce the set of real numbers $\R$. But what do we mean by real number anyways? To start our discussion, introduce the set of natural numbers (or non-negative integers)
 $$
 \N = \{0,1,2,3,4,5,\dots\}
 $$

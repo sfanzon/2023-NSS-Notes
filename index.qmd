@@ -7,7 +7,7 @@ $$
 
 # Welcome {.unnumbered}
 
-These are the Lecture Notes of **Numbers, Sequences & Series 400297** for T1 2023 at the University of Hull. I will follow these lecture notes during the course. 
+These are the Lecture Notes of **Numbers, Sequences & Series 400297** for T1 2023/24 at the University of Hull. I will follow these lecture notes during the course. 
 If you have any question or find any typo, please email me at
 
 
@@ -27,7 +27,26 @@ If you have any question or find any typo, please email me at
 :::
 
 
-Up to date information about the course and homework will be published on the  **`course webpage`**
+Up to date information about the course, Tutorials and Homework will be published on the University of Hull **Canvas Website**
+
+
+::: {.content-visible when-format="html"}
+<div style="text-align: center;">
+**[canvas.hull.ac.uk/courses/67551](https://canvas.hull.ac.uk/courses/67551)**
+</div>
+:::
+
+
+::: {.content-visible when-format="pdf"}
+\begin{center}
+\textbf{
+\href{https://canvas.hull.ac.uk/courses/67551}{canvas.hull.ac.uk/courses/67551}
+}
+\end{center}
+:::
+
+
+and on the **Course Webpage** hosted on my website
 
 
 ::: {.content-visible when-format="html"}
@@ -47,24 +66,6 @@ Up to date information about the course and homework will be published on the  *
 
 
 
-Homework will also be released on the Hull **`Canvas webpage`**
-
-
-::: {.content-visible when-format="html"}
-<div style="text-align: center;">
-**[canvas.hull.ac.uk/courses/67551](https://canvas.hull.ac.uk/courses/67551)**
-</div>
-:::
-
-
-::: {.content-visible when-format="pdf"}
-\begin{center}
-\textbf{
-\href{https://canvas.hull.ac.uk/courses/67551}{canvas.hull.ac.uk/courses/67551}
-}
-\end{center}
-:::
-
 
 
 
@@ -74,10 +75,10 @@ Homework will also be released on the Hull **`Canvas webpage`**
 ::: {.content-visible when-format="html"}
 Features of these digital notes:
 
-- Navigation bar is available on the left
-- A `search function` is available on the top-right 
-- You can toggle `dark mode` on top-right
-- A `pdf` version of these notes is available to download on the top-right
+- **Navigation** bar is available on the left
+- A **search function** is available on the top-right 
+- You can toggle **dark mode** on the top-right
+- A **pdf** version of these notes is available to download on the top-right
 :::
 
 
