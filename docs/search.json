@@ -14,6 +14,13 @@
     "text": "References\nWe will study the set of real numbers \\(\\mathbb{R}\\), and then sequences and series in \\(\\mathbb{R}\\). I will follow mainly the textbook by Bartle and Sherbert [1]. Other references that inspired these notes are the books by Abbott [2] and Rudin [3].\n\n\n\n\n\n\nImportant\n\n\n\nYou are not expected to purchase any of the above books. These lecture notes will cover 100% of the topics you are expected to known in order to excel in the final exam.\n\n\n\n\n\n\n[1] R.G. Bartle, D.R. Sherbert, Introduction to real analysis, Fourth Edition, Wiley, 2011.\n\n\n[2] S. Abbott, Understanding analysis, Second Edition, Springer, 2015.\n\n\n[3] W. Rudin, Principles of mathematical analysis, Third Edition, McGraw Hill, 1976."
   },
   {
+    "objectID": "sections/chap_1.html#introduction",
+    "href": "sections/chap_1.html#introduction",
+    "title": "1  Numbers",
+    "section": "1.1 Introduction",
+    "text": "1.1 Introduction\nThe aim of this section is to rigorously introduce the set of real numbers \\(\\mathbb{R}\\). But what do we mean by real number anyways? To start our discussion, introduce the set of natural numbers (or non-negative integers) \\[\n\\mathbb{N}= \\{0,1,2,3,4,5,\\dots\\}\n\\] On this set we have a notion of sum of two numbers, denoted as usual by \\[\nn+m\n\\] for \\(n,m \\in \\mathbb{N}\\). Here the symbol \\(\\in\\) denotes that \\(m\\) and \\(n\\) belong to \\(\\mathbb{N}\\). For example \\(3+7\\) results in \\(10\\).\n\nQuestionCan the sum be inverted?sadl"
+  },
+  {
     "objectID": "sections/license.html#reuse",
     "href": "sections/license.html#reuse",
     "title": "License",
@@ -25,7 +32,7 @@
     "href": "sections/license.html#citation",
     "title": "License",
     "section": "Citation",
-    "text": "Citation\nFor attribution, please cite this work as:\n\nFanzon, Silvio. (2023). Lecture Notes on Numbers, Sequences and Series.\nhttps://www.silviofanzon.com/2023-NSS-Notes/\n\nBibTex citation:\n@electronic{fanzon-NSS-2023,\n    author = {Fanzon, Silvio},\n    title = {Lecture Notes on Numbers, Sequences and Series},\n    url = {https://www.silviofanzon.com/2023-NSS-Notes/},\n    year = {2023}}"
+    "text": "Citation\nFor attribution, please cite this work as:\n\nFanzon, Silvio. (2023). Lecture Notes on Numbers, Sequences and Series.\nhttps://www.silviofanzon.com/2023-NSS-Notes/\n\nBibTex citation:\n@electronic{Fanzon-NSS-2023,\n    author = {Fanzon, Silvio},\n    title = {Lecture Notes on Numbers, Sequences and Series},\n    url = {https://www.silviofanzon.com/2023-NSS-Notes/},\n    year = {2023}}"
   },
   {
     "objectID": "sections/references.html",

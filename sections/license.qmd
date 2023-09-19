@@ -23,7 +23,7 @@ BibTex citation:
 
 
 ```bibtex
-@electronic{fanzon-NSS-2023,
+@electronic{Fanzon-NSS-2023,
 	author = {Fanzon, Silvio},
 	title = {Lecture Notes on Numbers, Sequences and Series},
 	url = {https://www.silviofanzon.com/2023-NSS-Notes/},
