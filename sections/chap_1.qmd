@@ -24,7 +24,7 @@ for $n,m \in \N$. Here the symbol $\in$ denotes that $m$ and $n$ belong to $\N$.
 
 ::: Question
 
-Can the sum be inverted?sadl
+Can the sum be inverted?
 
 :::
 

@@ -18,7 +18,7 @@
     "href": "sections/chap_1.html#introduction",
     "title": "1  Numbers",
     "section": "1.1 Introduction",
-    "text": "1.1 Introduction\nThe aim of this chapter is to rigorously introduce the set of real numbers \\(\\mathbb{R}\\). But what do we mean by real number anyways? To start our discussion, introduce the set of natural numbers (or non-negative integers) \\[\n\\mathbb{N}= \\{0,1,2,3,4,5,\\dots\\}\n\\] On this set we have a notion of sum of two numbers, denoted as usual by \\[\nn+m\n\\] for \\(n,m \\in \\mathbb{N}\\). Here the symbol \\(\\in\\) denotes that \\(m\\) and \\(n\\) belong to \\(\\mathbb{N}\\). For example \\(3+7\\) results in \\(10\\).\n\nQuestionCan the sum be inverted?sadl"
+    "text": "1.1 Introduction\nThe aim of this chapter is to rigorously introduce the set of real numbers \\(\\mathbb{R}\\). But what do we mean by real number anyways? To start our discussion, introduce the set of natural numbers (or non-negative integers) \\[\n\\mathbb{N}= \\{0,1,2,3,4,5,\\dots\\}\n\\] On this set we have a notion of sum of two numbers, denoted as usual by \\[\nn+m\n\\] for \\(n,m \\in \\mathbb{N}\\). Here the symbol \\(\\in\\) denotes that \\(m\\) and \\(n\\) belong to \\(\\mathbb{N}\\). For example \\(3+7\\) results in \\(10\\).\n\nQuestionCan the sum be inverted?"
   },
   {
     "objectID": "sections/license.html#reuse",
