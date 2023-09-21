@@ -66,19 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -94,17 +82,29 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.Theorem {
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 </style>
 
@@ -306,6 +306,13 @@ q^2 = 2 \,.
 \]</span> concluding the thesis.<p></p>
 </div></details>
 </div>
+<p>Seeing the above, we might be tempted to just extend <span class="math inline">\(\mathbb{Q}\)</span> to include <span class="math inline">\(\sqrt{2}\)</span>. But then we also have <span class="math inline">\(\sqrt{p} \notin \mathbb{Q}\)</span> for each prime number <span class="math inline">\(p\)</span>. Then we might attempt <span class="math display">\[
+\tilde{\mathbb{Q}} := \mathbb{Q}\cup \{ \sqrt{p} \, \colon \, p \, \text{ prime} \} \,.
+\]</span> However even this is not enough, as we would have, for example <span class="math display">\[
+\sqrt{2} + \sqrt{3} , \, \pi , \, \pi + \sqrt{2} \notin \tilde{\mathbb{Q}} \,.
+\]</span> The reality of things is that to <strong>complete</strong> <span class="math inline">\(\mathbb{Q}\)</span> and make it into a <strong>continuous line</strong> we have to add a lot of points. Indeed, we need to add way more points than the ones already contained in <span class="math inline">\(\mathbb{Q}\)</span>. Such extension of <span class="math inline">\(\mathbb{Q}\)</span> will be called <span class="math inline">\(\mathbb{R}\)</span>, the set of <strong>real numbers</strong>. The inclusions will be <span class="math display">\[
+\mathbb{N}\subset \mathbb{Z}\subset \mathbb{Q}\subset \mathbb{R}\,.
+\]</span> The set <span class="math inline">\(\mathbb{R}\)</span> is not at all trivial to construct. In fact, at first we will just assume its <strong>existence</strong> and study its <strong>properties</strong>. We will then provide a concrete <strong>model</strong> for the real numbers <span class="math inline">\(\mathbb{R}\)</span>, to prove once and for all that such set indeed exists.</p>
 
 
 </section>

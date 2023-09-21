@@ -141,6 +141,18 @@ concluding the thesis.
 :::
 
 
-
+Seeing the above, we might be tempted to just extend $\Q$ to include $\sqrt{2}$. But then we also have $\sqrt{p} \notin \Q$ for each prime number $p$. Then we might attempt
+$$
+\tilde{\Q} := \Q \cup \{ \sqrt{p} \, \colon \, p \, \text{ prime} \} \,.
+$$
+However even this is not enough, as we would have, for example
+$$
+\sqrt{2} + \sqrt{3} , \, \pi , \, \pi + \sqrt{2} \notin \tilde{\Q} \,.
+$$
+The reality of things is that to **complete** $\Q$ and make it into a **continuous line** we have to add a lot of points. Indeed, we need to add way more points than the ones already contained in $\Q$. Such extension of $\Q$ will be called $\R$, the set of **real numbers**. The inclusions will be 
+$$
+\N \subset \Z \subset \Q \subset \R \,.
+$$
+The set $\R$ is not at all trivial to construct. In fact, at first we will just assume its **existence** and study its **properties**. We will then provide a concrete **model** for the real numbers $\R$, to prove once and for all that such set indeed exists.
 
 
