@@ -11,7 +11,7 @@ $$
 
 ## Introduction
 
-The aim of this chapter is to rigorously introduce the set of real numbers $\R$. But what do we mean by real number anyways? To start our discussion, introduce the set of natural numbers (or non-negative integers)
+The aim of this chapter is to rigorously introduce the set of real numbers $\R$. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers)
 $$
 \N = \{0,1,2,3,4,5,\dots\}
 $$
@@ -24,8 +24,123 @@ for $n,m \in \N$. Here the symbol $\in$ denotes that $m$ and $n$ belong to $\N$.
 
 ::: Question
 
-Can the sum be inverted?
+Can the sum be inverted? That is, given any $n,m \in \N$, can you always find $x \in \N$ such that
+$$
+n+x = m \,?
+$$
 
 :::
+
+The answer to the above question is clearly **no**. For example, take $n=10$ and $m=1$. Then $x = -9$, which does not belong to $\N$. We therefore need to **extend** the
+set $\N$ in order to invert the sum. This is done simply by introducing the set of **integers** 
+$$
+\Z := \{ -n,n \, \colon \, n \in \N   \} \,,
+$$
+that is, the set
+$$
+\Z := \{ \ldots, -3,-2,-1,0,1,2,3,\ldots \} \,.
+$$
+The sum can be extended to $\Z$, by defining 
+$$
+(-n) + (-m) := - (m+n)
+$$ {#eq-def-sum-negative}
+for all $m,n \in \N$. Now every element of $\Z$ possesses an **inverse**, that is, for each $n \in \Z$, there exists $m \in \Z$, such that
+$$
+n + m = 0 \,.
+$$
+What is $m$ for a given $n$? Seeing the definition at (@eq-def-sum-negative), we simply have
+$$
+m = - n \,.
+$$
+We can also multiply integers, in the usual way we learnt in school. For 
+$n,m \in \Z$, we denote the multiplication by $nm$.
+
+
+::: Question
+
+Can the multiplication in $\Z$ be inverted? That is, given any $n,m \in \Z$, can you always find $x \in \Z$ such that
+$$
+nx = m \,?
+$$
+
+:::
+
+The answer is of course **no**. Just take $n=2$ and $m=1$. The answer should be $1/2$, but $1/2$ does not belong to $\Z$. Thus, in order to invert the multiplication, we need to **extend** the set of integers. This extension is called the set of **rational numbers**, defined by
+$$
+\Q := \left\{ \frac{m}{n} \, \colon \, m,n \in \Z, \, n \neq 0    \right\} \,.
+$$
+In $\Q$ the multiplication is invertible, and each non-zero element has an inverse: the inverse of $m/n$ is given by $n/m$. Moreover by construction
+$$
+\N \subset \Z \subset \Q \,.
+$$
+
+
+::: Question
+
+How can we draw the set $\Q$?
+
+:::
+
+
+It is clear how to draw $\Z$, as seen below. 
+
+![Representation of integers](/images/integers.png){#fig-integers width=80%}
+
+
+However $\Q$ is much **denser** than the elements of $\Z$ represented in @fig-integers. For example, consider $0 \in \Q$. 
+
+
+::: Question
+What is the number $x \in \Q$ which is closest to $0$?
+:::
+
+There is no right answer to the above question, since whichever rational number $m/n$ you consider, we can always squeeze the rational number $m / (2n)$ in between:
+$$
+0 < \frac{m}{2n} < \frac{m}{n} \,.
+$$
+For example think about the case of the numbers $1/n$ for $n \in \N$ and $n \neq 0$. Such numbers get arbitrarily close to $0$, as depicted below.
+
+![Fractions $\frac{1}{n}$ can get arbitrarily close to $0$](/images/integers_ratio.png){width=80%}
+
+Maybe if we do the same reasoning with other progressively smaller rational numbers, we manage to fill out the interval $[0,1]$. In other words, we might conjecture the following. 
+
+::: {.Conjecture #conj-line}
+Maybe $\Q$ can be represented by a continuous line.
+:::
+
+Do you think the above conjecture is true? If it was, mathematics would be quite boring. Indeed Conjecture \ref{conj-line} is **false**, as shown by the Theorem below.
+
+::: {.Theorem #theorem-root-2}
+The number $\sqrt{2}$ does not belong to $\Q$.
+:::
+
+The above theorem is the reason why $\sqrt{2}$ is called an irrational number. For reference, a few digits of $\sqrt{2}$ are given by
+$$
+\sqrt{2} = 1.414213562373095048\ldots
+$$
+and the situation is as in the picture below.
+
+![Representing $\sqrt{2}$](/images/integers_root_2.png){width=80%}
+
+We can therefore see that Conjecture \ref{conj-line} is **false**, and $\Q$ is not a line, given that it has a hole at $\sqrt{2}$. Let us see why 
+Theorem \ref{theorem-root-2} is true.
+
+
+::: Proof
+### Proof of Theorem \ref{theorem-root-2}
+
+We prove that $\sqrt{2}$ does not belong to $\Q$ by **contradiction**. This means assuming the existence of $q \in \Q$ such that $q = \sqrt{2}$. In other words
+$$
+q^2 = 2 \,.
+$$ {#eq-contradiction-root-2}
+We will show that (@eq-contradiction-root-2) leads to a contradiction. Thus (@eq-contradiction-root-2) must be false, and so 
+$$
+\sqrt{2} \notin \Q \,,
+$$ 
+concluding the thesis.
+:::
+
+
+
 
 

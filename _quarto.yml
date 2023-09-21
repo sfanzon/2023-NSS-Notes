@@ -70,6 +70,7 @@ format:
       dark: [darkly]
     fig-align: center
     fig-cap-location: bottom
+
   
   pdf:
     documentclass: scrreprt
@@ -106,6 +107,11 @@ format:
   
 
 
+
+crossref:
+  eq-prefix: ""
+
+
 filters:
   - custom-numbered-blocks
 
@@ -127,7 +133,10 @@ custom-numbered-blocks:
       group: thmlike
     
     Conjecture:
-      group: thmlike 
+      group: thmlike
+
+    Proposition:
+      group: thmlike
     
     Question: 
       group: thmlike
