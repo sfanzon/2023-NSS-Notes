@@ -12,3 +12,5 @@
  [**Theorem 1.2**](#theorem-root-2)\Pageref{theorem-root-2}
 
  [**Proof**](#proof-of-theorem): Proof of Theorem 1.2\Pageref{proof-of-theorem}
+
+ [**Theorem 1.3**](#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}

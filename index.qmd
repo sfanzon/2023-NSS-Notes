@@ -86,10 +86,9 @@ Features of these digital notes:
 
 
 
-## References {.unnumbered}
+## Readings {.unnumbered}
 
-We will study the set of real numbers $\R$, and then sequences and series in $\R$. I will follow mainly the textbook by Bartle and Sherbert [@bartle]. 
-Other references that inspired these notes are the books by Abbott [@abbott] and Rudin [@rudin_introduction].
+We will study the set of real numbers $\R$, and then sequences and series in $\R$. I will follow mainly the textbook by Bartle and Sherbert [@bartle]. Another good reading is the book by Abbott [@abbott]. I also point out the classic book by Rudin [@rudin_introduction], although this is more difficult to understand.
 
 
 

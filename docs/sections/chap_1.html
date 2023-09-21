@@ -66,23 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Conjecture {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -90,7 +74,19 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Proposition {
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -98,13 +94,17 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -274,7 +274,7 @@ nx = m \,?
 \]</span> For example think about the case of the numbers <span class="math inline">\(1/n\)</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> and <span class="math inline">\(n \neq 0\)</span>. Such numbers get arbitrarily close to <span class="math inline">\(0\)</span>, as depicted below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/integers_ratio.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p><img src="../images/integers_ratio.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption class="figure-caption">Fractions <span class="math inline">\(\frac{1}{n}\)</span> can get arbitrarily close to <span class="math inline">\(0\)</span></figcaption>
 </figure>
 </div>
@@ -293,11 +293,11 @@ nx = m \,?
 \]</span> and the situation is as in the picture below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/integers_root_2.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p><img src="../images/integers_root_2.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption class="figure-caption">Representing <span class="math inline">\(\sqrt{2}\)</span></figcaption>
 </figure>
 </div>
-<p>We can therefore see that Conjecture <a href="chap_1.html#conj-line">1</a> is <strong>false</strong>, and <span class="math inline">\(\mathbb{Q}\)</span> is not a line, given that it has a hole at <span class="math inline">\(\sqrt{2}\)</span>. Let us see why Theorem <a href="chap_1.html#theorem-root-2">2</a> is true.</p>
+<p>We can therefore see that Conjecture <a href="chap_1.html#conj-line">1</a> is <strong>false</strong>, and <span class="math inline">\(\mathbb{Q}\)</span> is not a line, given that it has a <strong>gap</strong> at <span class="math inline">\(\sqrt{2}\)</span>. Let us see why Theorem <a href="chap_1.html#theorem-root-2">2</a> is true.</p>
 <div id="proof-of-theorem" class="Proof" title="Proof of Theorem 2">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 2</summary><div>We prove that <span class="math inline">\(\sqrt{2}\)</span> does not belong to <span class="math inline">\(\mathbb{Q}\)</span> by <strong>contradiction</strong>. This means assuming the existence of <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math inline">\(q = \sqrt{2}\)</span>. In other words <span id="eq-contradiction-root-2"><span class="math display">\[
 q^2 = 2 \,.
@@ -306,13 +306,19 @@ q^2 = 2 \,.
 \]</span> concluding the thesis.<p></p>
 </div></details>
 </div>
-<p>Seeing the above, we might be tempted to just extend <span class="math inline">\(\mathbb{Q}\)</span> to include <span class="math inline">\(\sqrt{2}\)</span>. But then we also have <span class="math inline">\(\sqrt{p} \notin \mathbb{Q}\)</span> for each prime number <span class="math inline">\(p\)</span>. Then we might attempt <span class="math display">\[
+<p>Seeing the above, we might be tempted to just fill in the gap by adding <span class="math inline">\(\sqrt{2}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span>. However, with analogous proof to Theorem <a href="chap_1.html#theorem-root-2">2</a>, we can prove that <span class="math display">\[
+\sqrt{p} \notin \mathbb{Q}
+\]</span> for each prime number <span class="math inline">\(p\)</span>. Thus <span class="math inline">\(\mathbb{Q}\)</span> has infinite gaps (recall that there are infinite prime numbers). Then we might attempt to fill in these gaps via the extension <span class="math display">\[
 \tilde{\mathbb{Q}} := \mathbb{Q}\cup \{ \sqrt{p} \, \colon \, p \, \text{ prime} \} \,.
-\]</span> However even this is not enough, as we would have, for example <span class="math display">\[
+\]</span> However even this is not enough, as we would still have numbers which are not contained in <span class="math inline">\(\tilde{Q}\)</span>, for example <span class="math display">\[
 \sqrt{2} + \sqrt{3} , \, \pi , \, \pi + \sqrt{2} \notin \tilde{\mathbb{Q}} \,.
 \]</span> The reality of things is that to <strong>complete</strong> <span class="math inline">\(\mathbb{Q}\)</span> and make it into a <strong>continuous line</strong> we have to add a lot of points. Indeed, we need to add way more points than the ones already contained in <span class="math inline">\(\mathbb{Q}\)</span>. Such extension of <span class="math inline">\(\mathbb{Q}\)</span> will be called <span class="math inline">\(\mathbb{R}\)</span>, the set of <strong>real numbers</strong>. The inclusions will be <span class="math display">\[
 \mathbb{N}\subset \mathbb{Z}\subset \mathbb{Q}\subset \mathbb{R}\,.
 \]</span> The set <span class="math inline">\(\mathbb{R}\)</span> is not at all trivial to construct. In fact, at first we will just assume its <strong>existence</strong> and study its <strong>properties</strong>. We will then provide a concrete <strong>model</strong> for the real numbers <span class="math inline">\(\mathbb{R}\)</span>, to prove once and for all that such set indeed exists.</p>
+<div id="to-keep-in-mind-for-the-next-lessons" class="Theorem" title="To keep in mind for the next lessons">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 3: </strong>To keep in mind for the next lessons</summary><div>There exists a set <span class="math inline">\(\mathbb{R}\)</span>, called the set of real numbers, which extends <span class="math inline">\(\mathbb{Q}\)</span> by filling in all the gaps.<p></p>
+</div></details>
+</div>
 
 
 </section>

@@ -100,7 +100,7 @@ $$
 $$
 For example think about the case of the numbers $1/n$ for $n \in \N$ and $n \neq 0$. Such numbers get arbitrarily close to $0$, as depicted below.
 
-![Fractions $\frac{1}{n}$ can get arbitrarily close to $0$](/images/integers_ratio.png){width=80%}
+![Fractions $\frac{1}{n}$ can get arbitrarily close to $0$](/images/integers_ratio.png){width=70%}
 
 Maybe if we do the same reasoning with other progressively smaller rational numbers, we manage to fill out the interval $[0,1]$. In other words, we might conjecture the following. 
 
@@ -120,9 +120,9 @@ $$
 $$
 and the situation is as in the picture below.
 
-![Representing $\sqrt{2}$](/images/integers_root_2.png){width=80%}
+![Representing $\sqrt{2}$](/images/integers_root_2.png){width=70%}
 
-We can therefore see that Conjecture \ref{conj-line} is **false**, and $\Q$ is not a line, given that it has a hole at $\sqrt{2}$. Let us see why 
+We can therefore see that Conjecture \ref{conj-line} is **false**, and $\Q$ is not a line, given that it has a **gap** at $\sqrt{2}$. Let us see why 
 Theorem \ref{theorem-root-2} is true.
 
 
@@ -141,11 +141,15 @@ concluding the thesis.
 :::
 
 
-Seeing the above, we might be tempted to just extend $\Q$ to include $\sqrt{2}$. But then we also have $\sqrt{p} \notin \Q$ for each prime number $p$. Then we might attempt
+Seeing the above, we might be tempted to just fill in the gap by adding $\sqrt{2}$ to $\Q$. However, with analogous proof to Theorem \ref{theorem-root-2}, we can prove that 
+$$
+\sqrt{p} \notin \Q
+$$ 
+for each prime number $p$. Thus $\Q$ has infinite gaps (recall that there are infinite prime numbers). Then we might attempt to fill in these gaps via the extension
 $$
 \tilde{\Q} := \Q \cup \{ \sqrt{p} \, \colon \, p \, \text{ prime} \} \,.
 $$
-However even this is not enough, as we would have, for example
+However even this is not enough, as we would still have numbers which are not contained in $\tilde{Q}$, for example
 $$
 \sqrt{2} + \sqrt{3} , \, \pi , \, \pi + \sqrt{2} \notin \tilde{\Q} \,.
 $$
@@ -154,5 +158,12 @@ $$
 \N \subset \Z \subset \Q \subset \R \,.
 $$
 The set $\R$ is not at all trivial to construct. In fact, at first we will just assume its **existence** and study its **properties**. We will then provide a concrete **model** for the real numbers $\R$, to prove once and for all that such set indeed exists.
+
+::: Theorem
+### To keep in mind for the next lessons
+
+There exists a set $\R$, called the set of real numbers, which extends $\Q$ by filling in all the gaps.
+
+:::
 
 
