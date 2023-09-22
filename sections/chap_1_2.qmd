@@ -2,10 +2,10 @@
 $$
 {{< include macros.tex >}}
 $$
+
 :::
 
 
+# Real Numbers: axioms
 
-
-# Sequences
-
+Coming soon

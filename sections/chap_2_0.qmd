@@ -7,5 +7,6 @@ $$
 
 
 
-# Series
+# Sequences
 
+Coming soon

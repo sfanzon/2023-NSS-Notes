@@ -5,13 +5,13 @@ project:
 
 book:
   title: "Numbers, Sequences and Series"
-  subtitle: "Lecture Notes, T1 2023/24"
+  subtitle: "Lecture Notes"
   author: 
-    - name: "Silvio Fanzon"
+    - name: "Dr. Silvio Fanzon"
       affiliations: "University of Hull, UK"
       email: "S.Fanzon@hull.ac.uk"
       url: "https://www.silviofanzon.com"
-  date: "03 09 2023" 
+  date: "20 09 2023" 
   # To enter today's date replace by today
   # Enter date formatted as dd MM yyyy
   date-format: "D MMM YYYY"
@@ -39,10 +39,15 @@ book:
   chapters:
     - index.qmd
 
+    - sections/chap_1_0.qmd
+    - sections/chap_1_1.qmd
+    - sections/chap_1_2.qmd
 
-    - sections/chap_1.qmd
-    - sections/chap_2.qmd
-    - sections/chap_3.qmd
+    
+    - sections/chap_2_0.qmd
+
+
+    - sections/chap_3_0.qmd
 
     - sections/license.qmd
     
@@ -52,7 +57,7 @@ book:
 
 
 bibliography: teaching.bib
-csl: comptes-rendus-mathematique.csl
+csl: elsevier-with-titles.csl
 
 
 
@@ -70,6 +75,7 @@ format:
       dark: [darkly]
     fig-align: center
     fig-cap-location: bottom
+    link-external-icon: true
 
   
   pdf:
@@ -82,6 +88,7 @@ format:
       - bottom=15mm
       - heightrounded
     link-citations: true
+    link-external-icon: true
     linkcolor: magenta
     urlcolor: magenta
     citecolor: magenta
@@ -94,13 +101,15 @@ format:
           \usepackage{scrlayer-scrpage}
           \lohead{Numbers, Sequences and Series}
           \cohead{}
-          \rohead{\pagemark}
-          \lofoot{}
-          \cofoot{}
-          \rofoot{}
+          \rohead{Page \pagemark}
+          \lofoot{Silvio}
+          \cofoot{Silvio}
+          \rofoot{Silvio}
+          \ifoot{Silvio}
           \setheadsepline{0.5pt}
+          \setfootsepline{0.5pt}
           \addtokomafont{pageheadfoot}{\color{gray}\textnormal}
-          \setkomafont{pagenumber}{}
+          \setkomafont{pagenumber}{\color{gray}\textnormal}
           \usepackage{fvextra}
           \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 
@@ -144,6 +153,10 @@ custom-numbered-blocks:
     Definition:
       group: thmlike
       colors: [c6e6ed, 1995ad]
+
+    Remark: 
+      group: thmlike
+      colors: [bce5de, 21aa93]
 
     Example: 
       group: thmlike

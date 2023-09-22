@@ -7,19 +7,19 @@ $$
 
 
 
-# Numbers
+# Introduction
 
-## Introduction
-
-The aim of this chapter is to rigorously introduce the set of **real numbers**, which is denoted by $\R$. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers)
+The first aim of this lecture notes is to rigorously introduce the set of **real numbers**, which is denoted by $\R$. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers)
 $$
 \N = \{0,1,2,3,4,5,\dots\}
 $$
-On this set we have a notion of **sum** of two numbers, denoted as usual by $$
+
+On this set we have a notion of **sum** of two numbers, denoted as usual by 
+$$
 n+m
 $$ 
-for $n,m \in \N$. Here the symbol $\in$ denotes that $m$ and $n$ belong to $\N$. For example $3+7$ results in $10$.
 
+for $n,m \in \N$. Here the symbol $\in$ denotes that $m$ and $n$ belong to $\N$. For example $3+7$ results in $10$.
 
 
 ::: {.Question #Question-1}
@@ -32,9 +32,11 @@ $$ {#eq-inverting-sum}
 :::
 
 Of course to invert (@eq-inverting-sum) we can just perform a **subtraction**, implying that 
+
 $$
 x = m - n \,.
 $$
+
 But there is a catch. In general $x$ does not need to be in $\N$. For example, take $n=10$ and $m=1$. Then $x = -9$, which does not belong to $\N$. Therefore the answer to Question \ref{Question-1} is **NO**.
 
 To make sure that we can always invert the sum, we need to **extend** the
@@ -42,18 +44,23 @@ set $\N$. This is done simply by introducing the set of **integers**
 $$
 \Z := \{ -n,n \, \colon \, n \in \N   \} \,,
 $$
+
 that is, the set
+
 $$
 \Z := \{ \ldots, -3,-2,-1,0,1,2,3,\ldots \} \,.
 $$
+
 The sum can be extended to $\Z$, by defining 
 $$
 (-n) + (-m) := - (m+n)
 $$ {#eq-def-sum-negative}
+
 for all $m,n \in \N$. Now every element of $\Z$ possesses an **inverse**, that is, for each $n \in \Z$, there exists $m \in \Z$, such that
 $$
 n + m = 0 \,.
 $$
+
 Can we characterize $m$ explicitly? Of course! Seeing the definition at (@eq-def-sum-negative), we simply have
 $$
 m = - n \,.
@@ -142,15 +149,15 @@ Do you think the above conjecture is true? If it was, mathematics would be quite
 The number $\sqrt{2}$ does not belong to $\Q$.
 :::
 
-The above theorem is the reason why $\sqrt{2}$ is called an irrational number. For reference, a few digits of $\sqrt{2}$ are given by
+Theorem \ref{theorem-root-2} is the reason why $\sqrt{2}$ is called an **irrational number**. For reference, a few digits of $\sqrt{2}$ are given by
 $$
 \sqrt{2} = 1.414213562373095048\ldots
 $$
 and the situation is as in the picture below.
 
-![Representing $\sqrt{2}$](/images/integers_root_2.png){width=70%}
+![Representing $\sqrt{2}$ on the numbers line.](/images/integers_root_2.png){width=70%}
 
-We can therefore see that Conjecture \ref{conj-line} is **false**, and $\Q$ is not a line, given that it has a **gap** at $\sqrt{2}$. Let us see why 
+We can therefore see that Conjecture \ref{conj-line} is **false**, and $\Q$ is not a line: indeed $\Q$ has a **gap** at $\sqrt{2}$. Let us see why 
 Theorem \ref{theorem-root-2} is true.
 
 
@@ -213,13 +220,9 @@ $$ {#eq-contradiction-root-2-2}
 $$
 m^2 = 2 n^2 \,.
 $$ {#eq-contradiction-root-2-3}
-Therefore the integer $m^2$ is an even number.
-7. Thus $m$ is an even number, and so there exists $p \in \N$ such that 
-$$
-m = 2p \,.
-$$ {#eq-contradiction-root-2-4}
-    
-    > Wait. Why is the above true? As you know, even numbers are
+Therefore the integer $m^2$ is an even number. 
+
+    > Why is  $m^2$ even? As you already know, **even** numbers are
     $$
     0, 2, 4, 6, 8, 10, 12, \ldots
     $$
@@ -227,8 +230,11 @@ $$ {#eq-contradiction-root-2-4}
     $$
     2 p
     $$
-    for some $p \in \N$. 
-    Instead, odd numbers are
+    for some $p \in \N$. For example $52$ is even, because
+    $$
+    52 = 2 \cdot 26 \,.
+    $$ 
+    Instead, **odd** numbers are
     $$
     1, 3, 5, 7, 8, 9, 11, \ldots
     $$
@@ -236,8 +242,17 @@ $$ {#eq-contradiction-root-2-4}
     $$
     2p + 1
     $$
-    for some $p \in \N$.  
-    Now let us see what happens if we take the square of an even number $m = 2p$
+    for some $p \in \N$. For example $53$ is odd, because
+    $$
+    52 = 2 \cdot 26 + 1 \,.
+    $$ 
+
+7. Thus $m$ is an even number, and so there exists $p \in \N$ such that 
+$$
+m = 2p \,.
+$$ {#eq-contradiction-root-2-4}
+
+    > Why is (@eq-contradiction-root-2-4) true? Let us see what happens if we take the square of an even number $m = 2p$
     $$
     m^2 = (2p)^2 = 4p^2 = 2 (2p^2) = 2 q \,.
     $$
@@ -256,7 +271,7 @@ Dividing both terms by $2$, we obtain
 $$
 n^2 = 2p^2\,. 
 $${#eq-contradiction-root-2-5}
-9. We conclude the proof:
+9. We now make a series of observations:
     * Equation (@eq-contradiction-root-2-5) says that $n^2$ is even. 
     * Step 6 says that $m^2$ is even.
     * Therefore $n$ and $m$ are also even.  
@@ -267,7 +282,7 @@ $${#eq-contradiction-root-2-5}
 $$
 \sqrt{2} \in \Q \,.
 $$
-Hence the above is **false**, and so 
+Hence the above must be **FALSE**, and so 
 $$
 \sqrt{2} \notin \Q \,
 $$
@@ -275,11 +290,11 @@ ending the proof.
 :::
 
 
-Seeing the above, we might be tempted to just fill in the gap by adding $\sqrt{2}$ to $\Q$. However, with analogous proof to Theorem \ref{theorem-root-2}, we can prove that 
+Seeing that $\sqrt{2} \notin \Q$, we might be tempted to just fill in the gap by adding $\sqrt{2}$ to $\Q$. However, with analogous proof to Theorem \ref{theorem-root-2}, we can prove that 
 $$
 \sqrt{p} \notin \Q
 $$ 
-for each prime number $p$. Thus $\Q$ has infinite gaps (recall that there are infinite prime numbers). Then we might attempt to fill in these gaps via the extension
+for each prime number $p$. As there are infinite prime numbers, this means that $\Q$ has infinite gaps. Then we might attempt to fill in these gaps via the extension
 $$
 \tilde{\Q} := \Q \cup \{ \sqrt{p} \, \colon \, p \, \text{ prime} \} \,.
 $$
@@ -287,17 +302,54 @@ However even this is not enough, as we would still have numbers which are not co
 $$
 \sqrt{2} + \sqrt{3} , \, \pi , \, \pi + \sqrt{2} \notin \tilde{\Q} \,.
 $$
-The reality of things is that to **complete** $\Q$ and make it into a **continuous line** we have to add a lot of points. Indeed, we need to add way more points than the ones already contained in $\Q$. Such extension of $\Q$ will be called $\R$, the set of **real numbers**. The inclusions will be 
+
+::: Remark
+
+Proving that 
 $$
-\N \subset \Z \subset \Q \subset \R \,.
+\sqrt{2} + \sqrt{3} \notin \Q
+$$ 
+is relatively easy, and will be left as an **exercise**. Instead, proving that 
 $$
-The set $\R$ is not at all trivial to construct. In fact, at first we will just assume its **existence** and study its **properties**. We will then provide a concrete **model** for the real numbers $\R$, to prove once and for all that such set indeed exists.
-
-::: Theorem
-### To keep in mind for the next lessons
-
-There exists a set $\R$, called the set of real numbers, which extends $\Q$ by filling in all the gaps.
-
+\pi \notin \Q
+$$ 
+is way more complicated. There are several proof of the fact, all requiring mathematics which is more advanced of the one presented in this course. For some proofs, see this [Wikipedia page](https://en.wikipedia.org/wiki/Proof_that_π_is_irrational).
 :::
 
 
+The reality of things is that to **complete** $\Q$ and make it into a **continuous line** we have to add a lot of points. Indeed, we need to add way more points than the ones already contained in $\Q$. Such extension of $\Q$ will be called $\R$, the set of **real numbers**. The inclusions will therefore be 
+$$
+\N \subset \Z \subset \Q \subset \R \,.
+$$
+The set $\R$ is not at all trivial to construct. In fact, at first we will not construct it, but just do the following:
+ 
+* We will assume that $\R$ **exists** and satisfies some basic **axioms**.
+* One of the axioms is that $\R$ fills **all** the **gaps** that $\Q$ has. Therefore $\R$ can be thought as a **continuous** line.
+* We will study the **properties** of $\R$ which descend from such **axioms**. 
+
+For example one of the properties of $\R$ will be the following:
+
+::: Theorem
+### We will prove this in the future
+
+$\R$ contains all the square roots. This means that for every $x \in \R$ with $x \geq 0$, we have
+$$
+\sqrt{x} \in \R \,.
+$$
+:::
+
+At the end of this chapter we will provide a concrete **model** for the real numbers $\R$, to prove once and for all that such set indeed exists.
+
+::: Theorem
+### We will prove this in the future
+
+There exists a set $\R$, called the set of real numbers, which has the following properties:
+
+* $\R$ extends $\Q$, that is,
+$$
+\Q \subset \R \,.
+$$
+* $\R$ satisfies certain **axioms**.
+* $\R$ fills **all** the **gaps** that $\Q$ has. In particular $\R$ can be represented by a **continuous** line.
+
+:::
