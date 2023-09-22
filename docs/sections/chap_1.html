@@ -66,33 +66,13 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Definition {
   --color1: #c6e6ed;
@@ -105,6 +85,26 @@ ul.task-list li input[type="checkbox"] {
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 </style>
 
@@ -220,58 +220,72 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
-<p>The aim of this chapter is to rigorously introduce the set of real numbers <span class="math inline">\(\mathbb{R}\)</span>. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers) <span class="math display">\[
+<p>The aim of this chapter is to rigorously introduce the set of <strong>real numbers</strong>, which is denoted by <span class="math inline">\(\mathbb{R}\)</span>. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers) <span class="math display">\[
 \mathbb{N}= \{0,1,2,3,4,5,\dots\}
 \]</span> On this set we have a notion of <strong>sum</strong> of two numbers, denoted as usual by <span class="math display">\[
 n+m
 \]</span> for <span class="math inline">\(n,m \in \mathbb{N}\)</span>. Here the symbol <span class="math inline">\(\in\)</span> denotes that <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> belong to <span class="math inline">\(\mathbb{N}\)</span>. For example <span class="math inline">\(3+7\)</span> results in <span class="math inline">\(10\)</span>.</p>
-<div id="Question*-1" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question</strong></summary><div>Can the sum be inverted? That is, given any <span class="math inline">\(n,m \in \mathbb{N}\)</span>, can you always find <span class="math inline">\(x \in \mathbb{N}\)</span> such that <span class="math display">\[
+<div id="Question-1" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 1</strong></summary><div>Can the sum be inverted? That is, given any <span class="math inline">\(n,m \in \mathbb{N}\)</span>, can you always find <span class="math inline">\(x \in \mathbb{N}\)</span> such that <span id="eq-inverting-sum"><span class="math display">\[
 n+x = m \,?
-\]</span><p></p>
+\tag{1.1}\]</span></span><p></p>
 </div></details>
 </div>
-<p>The answer to the above question is clearly <strong>no</strong>. For example, take <span class="math inline">\(n=10\)</span> and <span class="math inline">\(m=1\)</span>. Then <span class="math inline">\(x = -9\)</span>, which does not belong to <span class="math inline">\(\mathbb{N}\)</span>. We therefore need to <strong>extend</strong> the set <span class="math inline">\(\mathbb{N}\)</span> in order to invert the sum. This is done simply by introducing the set of <strong>integers</strong> <span class="math display">\[
+<p>Of course to invert (<a href="#eq-inverting-sum"><span>1.1</span></a>) we can just perform a <strong>subtraction</strong>, implying that <span class="math display">\[
+x = m - n \,.
+\]</span> But there is a catch. In general <span class="math inline">\(x\)</span> does not need to be in <span class="math inline">\(\mathbb{N}\)</span>. For example, take <span class="math inline">\(n=10\)</span> and <span class="math inline">\(m=1\)</span>. Then <span class="math inline">\(x = -9\)</span>, which does not belong to <span class="math inline">\(\mathbb{N}\)</span>. Therefore the answer to Question <a href="chap_1.html#Question-1">1</a> is <strong>NO</strong>.</p>
+<p>To make sure that we can always invert the sum, we need to <strong>extend</strong> the set <span class="math inline">\(\mathbb{N}\)</span>. This is done simply by introducing the set of <strong>integers</strong> <span class="math display">\[
 \mathbb{Z}:= \{ -n,n \, \colon \, n \in \mathbb{N}\} \,,
 \]</span> that is, the set <span class="math display">\[
 \mathbb{Z}:= \{ \ldots, -3,-2,-1,0,1,2,3,\ldots \} \,.
 \]</span> The sum can be extended to <span class="math inline">\(\mathbb{Z}\)</span>, by defining <span id="eq-def-sum-negative"><span class="math display">\[
 (-n) + (-m) := - (m+n)
-\tag{1.1}\]</span></span> for all <span class="math inline">\(m,n \in \mathbb{N}\)</span>. Now every element of <span class="math inline">\(\mathbb{Z}\)</span> possesses an <strong>inverse</strong>, that is, for each <span class="math inline">\(n \in \mathbb{Z}\)</span>, there exists <span class="math inline">\(m \in \mathbb{Z}\)</span>, such that <span class="math display">\[
+\tag{1.2}\]</span></span> for all <span class="math inline">\(m,n \in \mathbb{N}\)</span>. Now every element of <span class="math inline">\(\mathbb{Z}\)</span> possesses an <strong>inverse</strong>, that is, for each <span class="math inline">\(n \in \mathbb{Z}\)</span>, there exists <span class="math inline">\(m \in \mathbb{Z}\)</span>, such that <span class="math display">\[
 n + m = 0 \,.
-\]</span> What is <span class="math inline">\(m\)</span> for a given <span class="math inline">\(n\)</span>? Seeing the definition at (<a href="#eq-def-sum-negative"><span>1.1</span></a>), we simply have <span class="math display">\[
+\]</span> Can we characterize <span class="math inline">\(m\)</span> explicitly? Of course! Seeing the definition at (<a href="#eq-def-sum-negative"><span>1.2</span></a>), we simply have <span class="math display">\[
 m = - n \,.
-\]</span> We can also multiply integers, in the usual way we learnt in school. For <span class="math inline">\(n,m \in \mathbb{Z}\)</span>, we denote the multiplication by <span class="math inline">\(nm\)</span>.</p>
-<div id="Question*-2" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question</strong></summary><div>Can the multiplication in <span class="math inline">\(\mathbb{Z}\)</span> be inverted? That is, given any <span class="math inline">\(n,m \in \mathbb{Z}\)</span>, can you always find <span class="math inline">\(x \in \mathbb{Z}\)</span> such that <span class="math display">\[
+\]</span></p>
+<p>On the set <span class="math inline">\(\mathbb{Z}\)</span> we can also define the operation of <strong>multiplication</strong>, in the usual way we learnt in school. For <span class="math inline">\(n,m \in \mathbb{Z}\)</span>, we denote the multiplication by <span class="math inline">\(nm\)</span> or <span class="math inline">\(n \cdot m\)</span>. For example <span class="math inline">\(7 \cdot 2 = 14\)</span> and <span class="math inline">\(1 \cdot (-1) = -1\)</span>.</p>
+<div id="Question-2" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 2</strong></summary><div>Can the multiplication in <span class="math inline">\(\mathbb{Z}\)</span> be inverted? That is, given any <span class="math inline">\(n,m \in \mathbb{Z}\)</span>, can you always find <span class="math inline">\(x \in \mathbb{Z}\)</span> such that <span id="eq-multiplication"><span class="math display">\[
 nx = m \,?
-\]</span><p></p>
+\tag{1.3}\]</span></span><p></p>
 </div></details>
 </div>
-<p>The answer is of course <strong>no</strong>. Just take <span class="math inline">\(n=2\)</span> and <span class="math inline">\(m=1\)</span>. The answer should be <span class="math inline">\(1/2\)</span>, but <span class="math inline">\(1/2\)</span> does not belong to <span class="math inline">\(\mathbb{Z}\)</span>. Thus, in order to invert the multiplication, we need to <strong>extend</strong> the set of integers. This extension is called the set of <strong>rational numbers</strong>, defined by <span class="math display">\[
+<p>To invert (<a href="#eq-multiplication"><span>1.3</span></a>) if <span class="math inline">\(n \neq 0\)</span>, we can just perform a <strong>division</strong>, to obtain <span class="math display">\[
+x = \frac{m}{n} \,.
+\]</span> But again there is a catch. Indeed taking <span class="math inline">\(n=2\)</span> and <span class="math inline">\(m=1\)</span> yields <span class="math inline">\(x = 1/2\)</span>, which does not belong to <span class="math inline">\(\mathbb{Z}\)</span>. The answer to Question <a href="chap_1.html#Question-2">2</a> is therefore <strong>NO</strong>.</p>
+<p>Thus, in order to invert the multiplication, we need to <strong>extend</strong> the set of integers <span class="math inline">\(\mathbb{Z}\)</span>. This extension is called the set of <strong>rational numbers</strong>, defined by <span class="math display">\[
 \mathbb{Q}:= \left\{ \frac{m}{n} \, \colon \, m,n \in \mathbb{Z}, \, n \neq 0    \right\} \,.
-\]</span> In <span class="math inline">\(\mathbb{Q}\)</span> the multiplication is invertible, and each non-zero element has an inverse: the inverse of <span class="math inline">\(m/n\)</span> is given by <span class="math inline">\(n/m\)</span>. Moreover by construction <span class="math display">\[
+\]</span> We then extend the operations of sum and multiplication to <span class="math inline">\(\mathbb{Q}\)</span> by defining <span class="math display">\[
+\frac{m}{n} + \frac{p}{q} := \frac{mq + np}{nq}
+\]</span> and <span class="math display">\[
+\frac{m}{n} \, \cdot \, \frac{p}{q} := \frac{mp}{nq}
+\]</span> Now the multiplication is invertible in <span class="math inline">\(\mathbb{Q}\)</span>. Specifically, each non-zero element has an inverse: the inverse of <span class="math inline">\(m/n\)</span> is given by <span class="math inline">\(n/m\)</span>.</p>
+<p>To summarize, we have extended <span class="math inline">\(\mathbb{N}\)</span> to <span class="math inline">\(\mathbb{Z}\)</span>, and <span class="math inline">\(\mathbb{Z}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span>. By construction we have <span class="math display">\[
 \mathbb{N}\subset \mathbb{Z}\subset \mathbb{Q}\,.
-\]</span></p>
-<div id="Question*-3" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question</strong></summary><div>How can we draw the set <span class="math inline">\(\mathbb{Q}\)</span>?<p></p>
+\]</span> Moreover <strong>sum</strong> and <strong>product</strong> are <strong>invertible</strong> in <span class="math inline">\(\mathbb{Q}\)</span>. Now we are happy right? So and so.</p>
+<div id="Question-3" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 3</strong></summary><div>Can we draw the set <span class="math inline">\(\mathbb{Q}\)</span>?<p></p>
 </div></details>
 </div>
 <p>It is clear how to draw <span class="math inline">\(\mathbb{Z}\)</span>, as seen below.</p>
 <div id="fig-integers" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../images/integers.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;1.1: Representation of integers</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;1.1: Representation of integers <span class="math inline">\(\mathbb{Z}\)</span></figcaption>
 </figure>
 </div>
-<p>However <span class="math inline">\(\mathbb{Q}\)</span> is much <strong>denser</strong> than the elements of <span class="math inline">\(\mathbb{Z}\)</span> represented in <a href="#fig-integers">Figure&nbsp;<span>1.1</span></a>. For example, consider <span class="math inline">\(0 \in \mathbb{Q}\)</span>.</p>
-<div id="Question*-4" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question</strong></summary><div>What is the number <span class="math inline">\(x \in \mathbb{Q}\)</span> which is closest to <span class="math inline">\(0\)</span>?<p></p>
+<p>However <span class="math inline">\(\mathbb{Q}\)</span> is much <strong>larger</strong> than the set <span class="math inline">\(\mathbb{Z}\)</span> represented by the ticks in <a href="#fig-integers">Figure&nbsp;<span>1.1</span></a>. What do we mean by <strong>larger</strong>? For example, consider <span class="math inline">\(0 \in \mathbb{Q}\)</span>.</p>
+<div id="Question-4" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 4</strong></summary><div>What is the number <span class="math inline">\(x \in \mathbb{Q}\)</span> which is closest to <span class="math inline">\(0\)</span>?<p></p>
 </div></details>
 </div>
-<p>There is no right answer to the above question, since whichever rational number <span class="math inline">\(m/n\)</span> you consider, we can always squeeze the rational number <span class="math inline">\(m / (2n)\)</span> in between: <span class="math display">\[
+<p>There is no right answer to the above question, since whichever rational number <span class="math inline">\(m/n\)</span> you consider, you can always squeeze the rational number <span class="math inline">\(m / (2n)\)</span> in between: <span class="math display">\[
 0 &lt; \frac{m}{2n} &lt; \frac{m}{n} \,.
-\]</span> For example think about the case of the numbers <span class="math inline">\(1/n\)</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> and <span class="math inline">\(n \neq 0\)</span>. Such numbers get arbitrarily close to <span class="math inline">\(0\)</span>, as depicted below.</p>
+\]</span> For example think about the case of the numbers <span class="math display">\[
+\frac1n \, \text{ for } \, n \in \mathbb{N}, \, n \neq 0 \,.
+\]</span> Such numbers get arbitrarily close to <span class="math inline">\(0\)</span>, as depicted below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/integers_ratio.png" class="img-fluid figure-img" style="width:70.0%"></p>
@@ -280,12 +294,12 @@ nx = m \,?
 </div>
 <p>Maybe if we do the same reasoning with other progressively smaller rational numbers, we manage to fill out the interval <span class="math inline">\([0,1]\)</span>. In other words, we might conjecture the following.</p>
 <div id="conj-line" class="Conjecture">
-<p></p><details class="Conjecture fbx-simplebox fbx-default" open=""><summary><strong>Conjecture 1</strong></summary><div>Maybe <span class="math inline">\(\mathbb{Q}\)</span> can be represented by a continuous line.<p></p>
+<p></p><details class="Conjecture fbx-simplebox fbx-default" open=""><summary><strong>Conjecture 5</strong></summary><div>Maybe <span class="math inline">\(\mathbb{Q}\)</span> can be represented by a continuous line.<p></p>
 </div></details>
 </div>
-<p>Do you think the above conjecture is true? If it was, mathematics would be quite boring. Indeed Conjecture <a href="chap_1.html#conj-line">1</a> is <strong>false</strong>, as shown by the Theorem below.</p>
+<p>Do you think the above conjecture is true? If it was, mathematics would be quite boring. Indeed Conjecture <a href="chap_1.html#conj-line">5</a> is <strong>false</strong>, as shown by the Theorem below.</p>
 <div id="theorem-root-2" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 2</strong></summary><div>The number <span class="math inline">\(\sqrt{2}\)</span> does not belong to <span class="math inline">\(\mathbb{Q}\)</span>.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 6</strong></summary><div>The number <span class="math inline">\(\sqrt{2}\)</span> does not belong to <span class="math inline">\(\mathbb{Q}\)</span>.<p></p>
 </div></details>
 </div>
 <p>The above theorem is the reason why <span class="math inline">\(\sqrt{2}\)</span> is called an irrational number. For reference, a few digits of <span class="math inline">\(\sqrt{2}\)</span> are given by <span class="math display">\[
@@ -297,16 +311,90 @@ nx = m \,?
 <figcaption class="figure-caption">Representing <span class="math inline">\(\sqrt{2}\)</span></figcaption>
 </figure>
 </div>
-<p>We can therefore see that Conjecture <a href="chap_1.html#conj-line">1</a> is <strong>false</strong>, and <span class="math inline">\(\mathbb{Q}\)</span> is not a line, given that it has a <strong>gap</strong> at <span class="math inline">\(\sqrt{2}\)</span>. Let us see why Theorem <a href="chap_1.html#theorem-root-2">2</a> is true.</p>
-<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 2">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 2</summary><div>We prove that <span class="math inline">\(\sqrt{2}\)</span> does not belong to <span class="math inline">\(\mathbb{Q}\)</span> by <strong>contradiction</strong>. This means assuming the existence of <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math inline">\(q = \sqrt{2}\)</span>. In other words <span id="eq-contradiction-root-2"><span class="math display">\[
-q^2 = 2 \,.
-\tag{1.2}\]</span></span> We will show that (<a href="#eq-contradiction-root-2"><span>1.2</span></a>) leads to a contradiction. Thus (<a href="#eq-contradiction-root-2"><span>1.2</span></a>) must be false, and so <span class="math display">\[
-\sqrt{2} \notin \mathbb{Q}\,,
-\]</span> concluding the thesis.<p></p>
+<p>We can therefore see that Conjecture <a href="chap_1.html#conj-line">5</a> is <strong>false</strong>, and <span class="math inline">\(\mathbb{Q}\)</span> is not a line, given that it has a <strong>gap</strong> at <span class="math inline">\(\sqrt{2}\)</span>. Let us see why Theorem <a href="chap_1.html#theorem-root-2">6</a> is true.</p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 6">
+<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 6</summary><div>
+<p>We prove that <span class="math display">\[
+\sqrt{2} \notin \mathbb{Q}
+\]</span> by <strong>contradiction</strong>.</p>
+<p>Wait, what does this mean? Proving the claim by contradiction means assuming that the claim is <strong>false</strong>. This means we <strong>assume</strong> that <span id="eq-contradiction-root-2-false"><span class="math display">\[
+\sqrt{2} \in \mathbb{Q}\,.
+\tag{1.4}\]</span></span> From this assumption we then start deducing other statements, hoping to encounter a statement which is <strong><code>FALSE</code></strong>. But if (<a href="#eq-contradiction-root-2-false"><span>1.4</span></a>) leads to a false statement, then it must be that (<a href="#eq-contradiction-root-2-false"><span>1.4</span></a>) is <strong><code>FALSE</code></strong>. Thus the contrary of (<a href="#eq-contradiction-root-2-false"><span>1.4</span></a>) must hold, meaning that <span class="math display">\[
+\sqrt{2} \notin \mathbb{Q}
+\]</span> as we wanted to show. This would conclude the proof.</p>
+<p>Now we need to actually show that (<a href="#eq-contradiction-root-2-false"><span>1.4</span></a>) will lead to a contradiction. Since this is our first proof, let us take it slowly, step-by-step.</p>
+<ol type="1">
+<li><p>Assuming (<a href="#eq-contradiction-root-2-false"><span>1.4</span></a>) just means that there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span id="eq-contradiction-root-2"><span class="math display">\[
+q = \sqrt{2} \, .
+\tag{1.5}\]</span></span></p></li>
+<li><p>Since <span class="math inline">\(q \in \mathbb{Q}\)</span>, by definition we have <span class="math display">\[
+q = \frac{m}{n}
+\]</span> for some <span class="math inline">\(m,n \in \mathbb{N}\)</span> with <span class="math inline">\(n \neq 0\)</span>.</p></li>
+<li><p>Recalling (<a href="#eq-contradiction-root-2"><span>1.5</span></a>), we then have <span class="math display">\[
+\frac{m}{n} = \sqrt{2} \,.
+\]</span></p></li>
+<li><p>We can square the above equation to get <span id="eq-contradiction-root-2-2"><span class="math display">\[
+\frac{m^2}{n^2} = 2 \,.
+\tag{1.6}\]</span></span></p></li>
+<li><p><strong>Withouth loss of generality</strong>, we can <strong>assume</strong> that <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> have no common factors.</p>
+<blockquote class="blockquote">
+<p>Wait. What does Step 5 mean? You will encounter the sentence <em>withouth loss of generality</em> many times in mathematics. It is often abbreviated in <strong><code>WLOG</code></strong>. WLOG means that the assumption that follows is chosen arbitrarily, but does not affect the validity of the proof in general.<br>
+For example in our case we can assume that <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> have no common factor. This is because if <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> had common factors, then it would mean <span class="math display">\[
+m = a \tilde{m} \,, \quad n = a \tilde{n}
+\]</span> for some <span class="math inline">\(a \in \mathbb{N}\)</span> with <span class="math inline">\(a \neq 0\)</span>. Then <span class="math display">\[
+\frac{m}{n} = \frac{ a \tilde{m} }{ a \tilde{n} } =
+\frac{ \tilde{m} }{ \tilde{n} } \,.
+\]</span> Therefore by (<a href="#eq-contradiction-root-2-2"><span>1.6</span></a>) <span class="math display">\[
+\frac{ \tilde{m}^2 }{ \tilde{n}^2 } = 2 \,.
+\]</span> The proof can now proceed in the same way we would have proceeded from Step 4, but in addition we have the hypothesis that <span class="math inline">\(\tilde{m}\)</span> and <span class="math inline">\(\tilde{n}\)</span> have no common factors.</p>
+</blockquote></li>
+<li><p>Equation (<a href="#eq-contradiction-root-2-2"><span>1.6</span></a>) implies <span id="eq-contradiction-root-2-3"><span class="math display">\[
+m^2 = 2 n^2 \,.
+\tag{1.7}\]</span></span> Therefore the integer <span class="math inline">\(m^2\)</span> is an even number.</p></li>
+<li><p>Thus <span class="math inline">\(m\)</span> is an even number, and so there exists <span class="math inline">\(p \in \mathbb{N}\)</span> such that <span id="eq-contradiction-root-2-4"><span class="math display">\[
+m = 2p \,.
+\tag{1.8}\]</span></span></p>
+<blockquote class="blockquote">
+<p>Wait. Why is the above true? As you know, even numbers are <span class="math display">\[
+0, 2, 4, 6, 8, 10, 12, \ldots
+\]</span> All these numbers have in common that they can be divided by <span class="math inline">\(2\)</span>, and so they can be written as <span class="math display">\[
+2 p
+\]</span> for some <span class="math inline">\(p \in \mathbb{N}\)</span>. Instead, odd numbers are <span class="math display">\[
+1, 3, 5, 7, 8, 9, 11, \ldots
+\]</span> These can be all written as <span class="math display">\[
+2p + 1
+\]</span> for some <span class="math inline">\(p \in \mathbb{N}\)</span>.<br>
+Now let us see what happens if we take the square of an even number <span class="math inline">\(m = 2p\)</span> <span class="math display">\[
+m^2 = (2p)^2 = 4p^2 = 2 (2p^2) = 2 q \,.
+\]</span> Thus <span class="math inline">\(m^2 = 2 q\)</span> for some <span class="math inline">\(q\in \mathbb{N}\)</span>, and so <span class="math inline">\(m^2\)</span> is an even number. If instead <span class="math inline">\(m\)</span> is odd, then <span class="math inline">\(m = 2p + 1\)</span> and <span class="math display">\[
+m^2 = (2p + 1 )^2 = 4p^2 + 4p + 1 = 2(2 p^2 + 2p) + 1
+\]</span> showing that also <span class="math inline">\(m^2\)</span> is odd.<br>
+This justifies Step 7: Indeed we know that <span class="math inline">\(m^2\)</span> is an even number from Step 6. If <span class="math inline">\(m\)</span> was odd, then <span class="math inline">\(m^2\)</span> would be odd. Hence <span class="math inline">\(m\)</span> must be even as well.</p>
+</blockquote></li>
+<li><p>If we substitute (<a href="#eq-contradiction-root-2-4"><span>1.8</span></a>) in (<a href="#eq-contradiction-root-2-3"><span>1.7</span></a>) we get <span class="math display">\[
+m^2 = 2n^2 \, \implies \,  (2p)^2 = 2n^2 \, \implies \,  4 p^2 = 2 n^2
+\]</span> Dividing both terms by <span class="math inline">\(2\)</span>, we obtain <span id="eq-contradiction-root-2-5"><span class="math display">\[
+n^2 = 2p^2\,.
+\tag{1.9}\]</span></span></p></li>
+<li><p>We conclude the proof:</p>
+<ul>
+<li>Equation (<a href="#eq-contradiction-root-2-5"><span>1.9</span></a>) says that <span class="math inline">\(n^2\)</span> is even.</li>
+<li>Step 6 says that <span class="math inline">\(m^2\)</span> is even.</li>
+<li>Therefore <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> are also even.<br>
+</li>
+<li>Hence <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> have <span class="math inline">\(2\)</span> as common factor.</li>
+<li>But Step 5 says that <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> have no common factors.</li>
+<li><strong><code>CONTRADICTION</code></strong></li>
+</ul></li>
+<li><p>Our reasoning has run into a <strong>contradiction</strong>, starting from assumption (<a href="#eq-contradiction-root-2-false"><span>1.4</span></a>), which says that <span class="math display">\[
+\sqrt{2} \in \mathbb{Q}\,.
+\]</span> Hence the above is <strong>false</strong>, and so <span class="math display">\[
+\sqrt{2} \notin \mathbb{Q}\,
+\]</span> ending the proof.</p></li>
+</ol>
 </div></details>
 </div>
-<p>Seeing the above, we might be tempted to just fill in the gap by adding <span class="math inline">\(\sqrt{2}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span>. However, with analogous proof to Theorem <a href="chap_1.html#theorem-root-2">2</a>, we can prove that <span class="math display">\[
+<p>Seeing the above, we might be tempted to just fill in the gap by adding <span class="math inline">\(\sqrt{2}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span>. However, with analogous proof to Theorem <a href="chap_1.html#theorem-root-2">6</a>, we can prove that <span class="math display">\[
 \sqrt{p} \notin \mathbb{Q}
 \]</span> for each prime number <span class="math inline">\(p\)</span>. Thus <span class="math inline">\(\mathbb{Q}\)</span> has infinite gaps (recall that there are infinite prime numbers). Then we might attempt to fill in these gaps via the extension <span class="math display">\[
 \tilde{\mathbb{Q}} := \mathbb{Q}\cup \{ \sqrt{p} \, \colon \, p \, \text{ prime} \} \,.
@@ -316,7 +404,7 @@ q^2 = 2 \,.
 \mathbb{N}\subset \mathbb{Z}\subset \mathbb{Q}\subset \mathbb{R}\,.
 \]</span> The set <span class="math inline">\(\mathbb{R}\)</span> is not at all trivial to construct. In fact, at first we will just assume its <strong>existence</strong> and study its <strong>properties</strong>. We will then provide a concrete <strong>model</strong> for the real numbers <span class="math inline">\(\mathbb{R}\)</span>, to prove once and for all that such set indeed exists.</p>
 <div id="to-keep-in-mind-for-the-next-lessons" class="Theorem" title="To keep in mind for the next lessons">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 3: </strong>To keep in mind for the next lessons</summary><div>There exists a set <span class="math inline">\(\mathbb{R}\)</span>, called the set of real numbers, which extends <span class="math inline">\(\mathbb{Q}\)</span> by filling in all the gaps.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 7: </strong>To keep in mind for the next lessons</summary><div>There exists a set <span class="math inline">\(\mathbb{R}\)</span>, called the set of real numbers, which extends <span class="math inline">\(\mathbb{Q}\)</span> by filling in all the gaps.<p></p>
 </div></details>
 </div>
 

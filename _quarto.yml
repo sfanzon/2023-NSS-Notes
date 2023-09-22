@@ -140,7 +140,6 @@ custom-numbered-blocks:
     
     Question: 
       group: thmlike
-      numbered: false
 
     Definition:
       group: thmlike

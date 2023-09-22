@@ -1,16 +1,16 @@
 \providecommand{\Pageref}[1]{\hfill p.\pageref{#1}}
- [**Question**](#Question*-1.1)\Pageref{Question*-1.1}
+ [**Question 1.1**](#Question-1)\Pageref{Question-1}
 
- [**Question**](#Question*-1.2)\Pageref{Question*-1.2}
+ [**Question 1.2**](#Question-2)\Pageref{Question-2}
 
- [**Question**](#Question*-1.3)\Pageref{Question*-1.3}
+ [**Question 1.3**](#Question-1.3)\Pageref{Question-1.3}
 
- [**Question**](#Question*-1.4)\Pageref{Question*-1.4}
+ [**Question 1.4**](#Question-1.4)\Pageref{Question-1.4}
 
- [**Conjecture 1.1**](#conj-line)\Pageref{conj-line}
+ [**Conjecture 1.5**](#conj-line)\Pageref{conj-line}
 
- [**Theorem 1.2**](#theorem-root-2)\Pageref{theorem-root-2}
+ [**Theorem 1.6**](#theorem-root-2)\Pageref{theorem-root-2}
 
- [**Proof**](#proof-of-theorem): Proof of Theorem 1.2\Pageref{proof-of-theorem}
+ [**Proof**](#proof-of-theorem): Proof of Theorem 1.6\Pageref{proof-of-theorem}
 
- [**Theorem 1.3**](#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+ [**Theorem 1.7**](#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}

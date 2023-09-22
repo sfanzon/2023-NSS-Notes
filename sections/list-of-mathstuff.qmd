@@ -1056,3 +1056,1107 @@
  [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
 
  [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question*-1)\Pageref{Question*-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question**](chap_1.qmd#Question*-2)\Pageref{Question*-2}
+
+ [**Question**](chap_1.qmd#Question*-3)\Pageref{Question*-3}
+
+ [**Question**](chap_1.qmd#Question*-4)\Pageref{Question*-4}
+
+ [**Conjecture 1**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 2**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 2\Pageref{proof-of-theorem}
+
+ [**Theorem 3**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Theorem 7**](chap_1.qmd#to-keep-in-mind-for-the-next-lessons): To keep in mind for the next lessons\Pageref{to-keep-in-mind-for-the-next-lessons}
