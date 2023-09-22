@@ -102,14 +102,12 @@ format:
           \lohead{Numbers, Sequences and Series}
           \cohead{}
           \rohead{Page \pagemark}
-          \lofoot{Silvio}
-          \cofoot{Silvio}
-          \rofoot{Silvio}
-          \ifoot{Silvio}
+          \lofoot{}
+          \cofoot{}
+          \rofoot{}
           \setheadsepline{0.5pt}
-          \setfootsepline{0.5pt}
           \addtokomafont{pageheadfoot}{\color{gray}\textnormal}
-          \setkomafont{pagenumber}{\color{gray}\textnormal}
+          \setkomafont{pagenumber}{}
           \usepackage{fvextra}
           \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 
