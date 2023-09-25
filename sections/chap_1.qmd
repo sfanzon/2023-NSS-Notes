@@ -353,3 +353,5 @@ $$
 * $\R$ fills **all** the **gaps** that $\Q$ has. In particular $\R$ can be represented by a **continuous** line.
 
 :::
+
+

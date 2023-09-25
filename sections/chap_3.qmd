@@ -6,6 +6,6 @@ $$
 :::
 
 
-# Real Numbers: axioms
+# Real Numbers
 
 Coming soon

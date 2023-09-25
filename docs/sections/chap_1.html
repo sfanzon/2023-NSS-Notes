@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sections/chap_1_1.html" rel="next">
+<link href="../sections/chap_2.html" rel="next">
 <link href="../index.html" rel="prev">
 <link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -66,25 +66,25 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
 .Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Question {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
 }
 .Example {
   --color1: #bce5de;
@@ -94,21 +94,21 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Conjecture {
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
 }
 </style>
 
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/chap_1_0.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/chap_1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -160,31 +160,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/chap_1_0.html" class="sidebar-item-text sidebar-link active">
+  <a href="../sections/chap_1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/chap_1_1.html" class="sidebar-item-text sidebar-link">
+  <a href="../sections/chap_2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preliminaries</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/chap_1_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Real Numbers: axioms</span></span></a>
+  <a href="../sections/chap_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Real Numbers</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/chap_2_0.html" class="sidebar-item-text sidebar-link">
+  <a href="../sections/chap_4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sequences</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/chap_3_0.html" class="sidebar-item-text sidebar-link">
+  <a href="../sections/chap_5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Series</span></span></a>
   </div>
 </li>
@@ -245,7 +245,7 @@ n+x = m \,?
 <p><span class="math display">\[
 x = m - n \,.
 \]</span></p>
-<p>But there is a catch. In general <span class="math inline">\(x\)</span> does not need to be in <span class="math inline">\(\mathbb{N}\)</span>. For example, take <span class="math inline">\(n=10\)</span> and <span class="math inline">\(m=1\)</span>. Then <span class="math inline">\(x = -9\)</span>, which does not belong to <span class="math inline">\(\mathbb{N}\)</span>. Therefore the answer to Question <a href="chap_1_0.html#Question-1">1</a> is <strong>NO</strong>.</p>
+<p>But there is a catch. In general <span class="math inline">\(x\)</span> does not need to be in <span class="math inline">\(\mathbb{N}\)</span>. For example, take <span class="math inline">\(n=10\)</span> and <span class="math inline">\(m=1\)</span>. Then <span class="math inline">\(x = -9\)</span>, which does not belong to <span class="math inline">\(\mathbb{N}\)</span>. Therefore the answer to Question <a href="chap_1.html#Question-1">1</a> is <strong>NO</strong>.</p>
 <p>To make sure that we can always invert the sum, we need to <strong>extend</strong> the set <span class="math inline">\(\mathbb{N}\)</span>. This is done simply by introducing the set of <strong>integers</strong> <span class="math display">\[
 \mathbb{Z}:= \{ -n,n \, \colon \, n \in \mathbb{N}\} \,,
 \]</span></p>
@@ -271,7 +271,7 @@ nx = m \,?
 </div>
 <p>To invert (<a href="#eq-multiplication"><span>1.3</span></a>) if <span class="math inline">\(n \neq 0\)</span>, we can just perform a <strong>division</strong>, to obtain <span class="math display">\[
 x = \frac{m}{n} \,.
-\]</span> But again there is a catch. Indeed taking <span class="math inline">\(n=2\)</span> and <span class="math inline">\(m=1\)</span> yields <span class="math inline">\(x = 1/2\)</span>, which does not belong to <span class="math inline">\(\mathbb{Z}\)</span>. The answer to Question <a href="chap_1_0.html#Question-2">2</a> is therefore <strong>NO</strong>.</p>
+\]</span> But again there is a catch. Indeed taking <span class="math inline">\(n=2\)</span> and <span class="math inline">\(m=1\)</span> yields <span class="math inline">\(x = 1/2\)</span>, which does not belong to <span class="math inline">\(\mathbb{Z}\)</span>. The answer to Question <a href="chap_1.html#Question-2">2</a> is therefore <strong>NO</strong>.</p>
 <p>Thus, in order to invert the multiplication, we need to <strong>extend</strong> the set of integers <span class="math inline">\(\mathbb{Z}\)</span>. This extension is called the set of <strong>rational numbers</strong>, defined by <span class="math display">\[
 \mathbb{Q}:= \left\{ \frac{m}{n} \, \colon \, m,n \in \mathbb{Z}, \, n \neq 0    \right\} \,.
 \]</span> We then extend the operations of sum and multiplication to <span class="math inline">\(\mathbb{Q}\)</span> by defining <span class="math display">\[
@@ -314,12 +314,12 @@ x = \frac{m}{n} \,.
 <p></p><details class="Conjecture fbx-simplebox fbx-default" open=""><summary><strong>Conjecture 5</strong></summary><div>Maybe <span class="math inline">\(\mathbb{Q}\)</span> can be represented by a continuous line.<p></p>
 </div></details>
 </div>
-<p>Do you think the above conjecture is true? If it was, mathematics would be quite boring. Indeed Conjecture <a href="chap_1_0.html#conj-line">5</a> is <strong>false</strong>, as shown by the Theorem below.</p>
+<p>Do you think the above conjecture is true? If it was, mathematics would be quite boring. Indeed Conjecture <a href="chap_1.html#conj-line">5</a> is <strong>false</strong>, as shown by the Theorem below.</p>
 <div id="theorem-root-2" class="Theorem">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 6</strong></summary><div>The number <span class="math inline">\(\sqrt{2}\)</span> does not belong to <span class="math inline">\(\mathbb{Q}\)</span>.<p></p>
 </div></details>
 </div>
-<p>Theorem <a href="chap_1_0.html#theorem-root-2">6</a> is the reason why <span class="math inline">\(\sqrt{2}\)</span> is called an <strong>irrational number</strong>. For reference, a few digits of <span class="math inline">\(\sqrt{2}\)</span> are given by <span class="math display">\[
+<p>Theorem <a href="chap_1.html#theorem-root-2">6</a> is the reason why <span class="math inline">\(\sqrt{2}\)</span> is called an <strong>irrational number</strong>. For reference, a few digits of <span class="math inline">\(\sqrt{2}\)</span> are given by <span class="math display">\[
 \sqrt{2} = 1.414213562373095048\ldots
 \]</span> and the situation is as in the picture below.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -328,7 +328,7 @@ x = \frac{m}{n} \,.
 <figcaption class="figure-caption">Representing <span class="math inline">\(\sqrt{2}\)</span> on the numbers line.</figcaption>
 </figure>
 </div>
-<p>We can therefore see that Conjecture <a href="chap_1_0.html#conj-line">5</a> is <strong>false</strong>, and <span class="math inline">\(\mathbb{Q}\)</span> is not a line: indeed <span class="math inline">\(\mathbb{Q}\)</span> has a <strong>gap</strong> at <span class="math inline">\(\sqrt{2}\)</span>. Let us see why Theorem <a href="chap_1_0.html#theorem-root-2">6</a> is true.</p>
+<p>We can therefore see that Conjecture <a href="chap_1.html#conj-line">5</a> is <strong>false</strong>, and <span class="math inline">\(\mathbb{Q}\)</span> is not a line: indeed <span class="math inline">\(\mathbb{Q}\)</span> has a <strong>gap</strong> at <span class="math inline">\(\sqrt{2}\)</span>. Let us see why Theorem <a href="chap_1.html#theorem-root-2">6</a> is true.</p>
 <div id="proof-of-theorem" class="Proof" title="Proof of Theorem 6">
 <details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 6</summary><div>
 <p>We prove that <span class="math display">\[
@@ -417,7 +417,7 @@ n^2 = 2p^2\,.
 </ol>
 </div></details>
 </div>
-<p>Seeing that <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, we might be tempted to just fill in the gap by adding <span class="math inline">\(\sqrt{2}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span>. However, with analogous proof to Theorem <a href="chap_1_0.html#theorem-root-2">6</a>, we can prove that <span class="math display">\[
+<p>Seeing that <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, we might be tempted to just fill in the gap by adding <span class="math inline">\(\sqrt{2}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span>. However, with analogous proof to Theorem <a href="chap_1.html#theorem-root-2">6</a>, we can prove that <span class="math display">\[
 \sqrt{p} \notin \mathbb{Q}
 \]</span> for each prime number <span class="math inline">\(p\)</span>. As there are infinite prime numbers, this means that <span class="math inline">\(\mathbb{Q}\)</span> has infinite gaps. Then we might attempt to fill in these gaps via the extension <span class="math display">\[
 \tilde{\mathbb{Q}} := \mathbb{Q}\cup \{ \sqrt{p} \, \colon \, p \, \text{ prime} \} \,.
@@ -833,7 +833,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sections/chap_1_1.html" class="pagination-link">
+      <a href="../sections/chap_2.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preliminaries</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

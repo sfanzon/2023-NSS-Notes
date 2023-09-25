@@ -20,3 +20,21 @@
  [**Theorem 1.9**](#we-will-prove-this-in-the-future-1): We will prove this in the future\Pageref{we-will-prove-this-in-the-future-1}
 
  [**Remark 2.1**](#Remark-2.1)\Pageref{Remark-2.1}
+
+ [**Example 2.2**](#Example-2.2)\Pageref{Example-2.2}
+
+ [**Example 2.3**](#Example-2.3)\Pageref{Example-2.3}
+
+ [**Example 2.4**](#Example-2.4)\Pageref{Example-2.4}
+
+ [**Proposition 2.5**](#Proposition-Equality-Sets)\Pageref{Proposition-Equality-Sets}
+
+ [**Proof**](#Proof*-2.1)\Pageref{Proof*-2.1}
+
+ [**Example 2.6**](#Example-2.6)\Pageref{Example-2.6}
+
+ [**Remark 2.7**](#Remark-2.7)\Pageref{Remark-2.7}
+
+ [**Example 2.8**](#Example-2.8)\Pageref{Example-2.8}
+
+ [**Proposition 2.9**](#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
