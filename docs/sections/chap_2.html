@@ -70,31 +70,27 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Question {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
-.Corollary {
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -102,13 +98,17 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.Example {
+.Remark {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 </style>
 
@@ -216,8 +216,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#inclusion-and-equality" id="toc-inclusion-and-equality" class="nav-link" data-scroll-target="#inclusion-and-equality"><span class="header-section-number">2.1.2</span> Inclusion and equality</a></li>
   <li><a href="#infinite-unions-and-intersections" id="toc-infinite-unions-and-intersections" class="nav-link" data-scroll-target="#infinite-unions-and-intersections"><span class="header-section-number">2.1.3</span> Infinite unions and intersections</a></li>
   <li><a href="#complement" id="toc-complement" class="nav-link" data-scroll-target="#complement"><span class="header-section-number">2.1.4</span> Complement</a></li>
-  <li><a href="#cartesian-product" id="toc-cartesian-product" class="nav-link" data-scroll-target="#cartesian-product"><span class="header-section-number">2.1.5</span> Cartesian product</a></li>
+  <li><a href="#product-of-sets" id="toc-product-of-sets" class="nav-link" data-scroll-target="#product-of-sets"><span class="header-section-number">2.1.5</span> Product of sets</a></li>
   </ul></li>
+  <li><a href="#equivalence-and-order-relation" id="toc-equivalence-and-order-relation" class="nav-link" data-scroll-target="#equivalence-and-order-relation"><span class="header-section-number">2.2</span> Equivalence and order relation</a></li>
+  <li><a href="#absolute-value-or-modulus" id="toc-absolute-value-or-modulus" class="nav-link" data-scroll-target="#absolute-value-or-modulus"><span class="header-section-number">2.3</span> Absolute value or Modulus</a></li>
   </ul>
 </nav>
     </div>
@@ -418,7 +420,7 @@ Essentially the same proof, hence we omit it.<br>
 </ul>
 </div></details>
 </div>
-<p>We conclude by stating the De Morgan’s Laws, which we do not prove.</p>
+<p>We conclude by stating the De Morgan’s Laws. The proof will be left as an exercise.</p>
 <div id="de-morgans-laws" class="Proposition" title="De Morgan’s Laws">
 <p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9: </strong>De Morgan’s Laws</summary><div>Suppose <span class="math inline">\(A,B \subset \Omega\)</span>. Then <span class="math display">\[
 (A \cap B)^c = A^c \cup B^c
@@ -428,12 +430,175 @@ Essentially the same proof, hence we omit it.<br>
 </div></details>
 </div>
 </section>
-<section id="cartesian-product" class="level3" data-number="2.1.5">
-<h3 data-number="2.1.5" class="anchored" data-anchor-id="cartesian-product"><span class="header-section-number">2.1.5</span> Cartesian product</h3>
-<p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets. We</p>
-
-
+<section id="product-of-sets" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="product-of-sets"><span class="header-section-number">2.1.5</span> Product of sets</h3>
+<p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets. The <strong>product</strong> of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is the set of pairs <span class="math display">\[
+A \times B := \{ (a,b) \, \colon \, a \in A, \, b \in B \} \,.
+\]</span> By definition two elements in <span class="math inline">\(A \times B\)</span> are the same, in symbols <span class="math display">\[
+(a, b) = (\tilde{a}, \tilde{b})
+\]</span> if and only if they are equal component-by-componenent, that is <span class="math display">\[
+a=\tilde{a}\,, \qquad b = \tilde{b} \,.
+\]</span></p>
 </section>
+</section>
+<section id="equivalence-and-order-relation" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="equivalence-and-order-relation"><span class="header-section-number">2.2</span> Equivalence and order relation</h2>
+<p>Suppose <span class="math inline">\(A\)</span> is a set. A <strong>binary relation</strong> <span class="math inline">\(R\)</span> on <span class="math inline">\(A\)</span> is a subset <span class="math display">\[
+R \subset A \times A \,.
+\]</span></p>
+<div id="equivalence-relation" class="Definition" title="Equivalence relation">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 10: </strong>Equivalence relation</summary><div>A binary relation <span class="math inline">\(R\)</span> is called an <strong>equivalence relation</strong> if it satisfies the following properties:<p></p>
+<ol type="1">
+<li><p><strong>Reflexive</strong>: For each <span class="math inline">\(x \in A\)</span> one has <span class="math display">\[
+(x,x) \in R \,,
+\]</span></p>
+<blockquote class="blockquote">
+<p>This is saying that all the elements in <span class="math inline">\(A\)</span> must be related to themselves</p>
+</blockquote></li>
+<li><p><strong>Symmetric</strong>: We have <span class="math display">\[
+(x,y) \in R \implies (y,x) \in R
+\]</span></p>
+<blockquote class="blockquote">
+<p>If <span class="math inline">\(x\)</span> is related to <span class="math inline">\(y\)</span>, then <span class="math inline">\(y\)</span> is related to <span class="math inline">\(x\)</span></p>
+</blockquote></li>
+<li><p><strong>Transitive</strong>: We have <span class="math display">\[
+(x,y) \in R \,, \,\, (y,z) \in R  \implies (x,z) \in R
+\]</span></p>
+<blockquote class="blockquote">
+<p>If <span class="math inline">\(x\)</span> is related to <span class="math inline">\(y\)</span>, and <span class="math inline">\(y\)</span> is related to <span class="math inline">\(z\)</span>, then <span class="math inline">\(x\)</span> must be related to <span class="math inline">\(z\)</span></p>
+</blockquote></li>
+</ol>
+<p>If <span class="math inline">\((x,y) \in R\)</span> we write <span class="math display">\[
+x \sim y
+\]</span> and we say that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are <strong>equivalent</strong>.</p>
+</div></details>
+</div>
+<div id="equivalence-classes" class="Definition" title="Equivalence classes">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 11: </strong>Equivalence classes</summary><div>Suppose <span class="math inline">\(R\)</span> is an <strong>equivalence relation</strong> on <span class="math inline">\(A\)</span>. The <strong>equivalence class</strong> of an element <span class="math inline">\(x \in A\)</span> is the set <span class="math display">\[
+[x]:=\{ y \in A \, \colon \, y \sim x \} \,.
+\]</span> The set of equivalence classes of elements of <span class="math inline">\(A\)</span> with respect to the equivalence relation <span class="math inline">\(R\)</span> is denoted by <span class="math display">\[
+A / R \, :=  \,\{ [x] \, \colon \, x \in A \} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Let us immediately clarify the above definitions by considering the prototypical example of equivalence relation: the <strong>equality</strong>.</p>
+<div id="equality-is-an-equivalence-relation" class="Example" title="Equality is an equivalence relation">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 12: </strong>Equality is an equivalence relation</summary><div>Consider the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span>. The equality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{N}\times \mathbb{N}\)</span>, via <span class="math display">\[
+R:=\{ (x,y) \in \mathbb{N}\times \mathbb{N}\, \colon \, x=y  \} \,.
+\]</span> Let us check that <span class="math inline">\(R\)</span> is an <strong>equivalence relation</strong>:<p></p>
+<ol type="1">
+<li><p>Reflexive: It holds, since <span class="math inline">\(x=x\)</span> for all <span class="math inline">\(x \in \mathbb{N}\)</span>,</p></li>
+<li><p>Symmetric: Again <span class="math inline">\(x = y\)</span> if and only if <span class="math inline">\(y = x\)</span>,</p></li>
+<li><p>Transitive: If <span class="math inline">\(x = y\)</span> and <span class="math inline">\(y = z\)</span> then <span class="math inline">\(x = z\)</span>.</p></li>
+</ol>
+<p>The class of equivalence of <span class="math inline">\(x \in \mathbb{N}\)</span> is given by <span class="math display">\[
+[x] = \{ x \}\,,
+\]</span> that is, this relation is quite trivial, given that each element of <span class="math inline">\(\mathbb{N}\)</span> can only be related to itself.</p>
+</div></details>
+</div>
+<p>Similarly, we define <strong>order relations</strong>.</p>
+<div id="order-relation" class="Definition" title="Order relation">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Order relation</summary><div>
+<p>A binary relation <span class="math inline">\(R\)</span> is called an <strong>order relation</strong> if it satisfies the following properties:</p>
+<ol type="1">
+<li><p><strong>Reflexive</strong>: For each <span class="math inline">\(x \in A\)</span> one has <span class="math display">\[
+(x,x) \in R \,,
+\]</span></p></li>
+<li><p><strong>Transitive</strong>: We have <span class="math display">\[
+(x,y) \in R \,, \,\, (y,z) \in R  \implies (x,z) \in R
+\]</span></p></li>
+<li><p><strong>Antisymmetric</strong>: We have <span class="math display">\[
+(x,y) \in R \,  \text{ and } \, (y,x) \in R \implies x = y
+\]</span></p>
+<blockquote class="blockquote">
+<p>This is the only new condition with respect to the definition of equivalence relation.</p>
+</blockquote></li>
+</ol>
+</div></details>
+</div>
+<p>The prototypical example of order relation is the <strong>inequality</strong> relation.</p>
+<div id="inequality-is-an-order-relation" class="Example" title="Inequality is an order relation">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14: </strong>Inequality is an order relation</summary><div>
+<p>Consider the set of integers <span class="math inline">\(\mathbb{Z}\)</span>. The inequality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{Z}\times \mathbb{Z}\)</span>, via <span class="math display">\[
+R:=\{ (x,y) \in \mathbb{Z}\times \mathbb{Z}\, \colon \, x \leq y  \} \,.
+\]</span> Let us check that <span class="math inline">\(R\)</span> is an <strong>order relation</strong>:</p>
+<ol type="1">
+<li><p>Reflexive: It holds, since <span class="math inline">\(x \leq x\)</span> for all <span class="math inline">\(x \in \mathbb{Z}\)</span>,</p></li>
+<li><p>Transitive: If <span class="math inline">\(x \leq y\)</span> and <span class="math inline">\(y \leq z\)</span> then <span class="math inline">\(x \leq z\)</span>.</p></li>
+<li><p>Antisymmetric: If <span class="math inline">\(x \leq y\)</span> and <span class="math inline">\(y \leq x\)</span> then <span class="math inline">\(x = y\)</span>.</p></li>
+</ol>
+</div></details>
+</div>
+</section>
+<section id="absolute-value-or-modulus" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="absolute-value-or-modulus"><span class="header-section-number">2.3</span> Absolute value or Modulus</h2>
+<p>In this section we assume to have available the set <span class="math inline">\(\mathbb{R}\)</span> of <strong>real numbers</strong>, which we recall is an extension of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<div id="absolute-value" class="Definition" title="Absolute value">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Absolute value</summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span> we define its <strong>absolute value</strong> as the quantity <span class="math display">\[
+|x| =
+\begin{cases}
+x  &amp; \text{ if } \, x \geq 0 \\
+-x  &amp; \text{ if } \, x &lt; 0
+\end{cases}
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Example-16" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div>By definition one has <span class="math inline">\(|x|=x\)</span> if <span class="math inline">\(x \geq 0\)</span>. For example <span class="math display">\[
+|\pi| = \pi \,, \,\, \left|\sqrt{2}\right| = \sqrt{2} \,, \,\, |0|=0 \,.
+\]</span> Instead <span class="math inline">\(|x|= -x\)</span> if <span class="math inline">\(x &lt; 0\)</span>. For example <span class="math display">\[
+|-\pi| = \pi \,, \,\, \left|-\sqrt{2}\right| = \sqrt{2} \,, \,\, |-10|=10 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Let us also make the following basic remark, whose proof will be left as an exercise.</p>
+<div id="Remark-17" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 17</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
+|x| \geq 0 \,.
+\]</span> Moreover <span class="math display">\[
+|x| = 0 \iff x = 0 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Another basic remark (proof by exercise).</p>
+<div id="rmk-absolute-value-sym" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 18</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
+|x| = |-x| \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>You might be familiar with the graph associated to the absolute value function:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/absolute_value.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Plot of the absolute value function <span class="math inline">\(f(x)=|x|\)</span></figcaption>
+</figure>
+</div>
+<p>However in these Lecture Notes we are not dealing with functions, so it is better to think about the absolute value in a geometric way.</p>
+<div id="geometric-interpretation-of-x" class="Remark" title="Geometric interpretation of |x|">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 19: </strong>Geometric interpretation of <span class="math inline">\(|x|\)</span></summary><div>A number <span class="math inline">\(x \in \mathbb{R}\)</span> can be represented with a point on the real line <span class="math inline">\(\mathbb{R}\)</span>.The non-negative number <span class="math inline">\(|x|\)</span> represents the <strong>distance</strong> of <span class="math inline">\(x\)</span> from the origin <span class="math inline">\(0\)</span>. Notice that this works for both positive and negative numbers <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> respectively, as shown in <a href="#fig-absolute-value-1">Figure&nbsp;<span>2.1</span></a> below.<p></p>
+</div></details>
+</div>
+<div id="fig-absolute-value-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/absolute_value_1.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.1: Geometric interpretation of <span class="math inline">\(|x|\)</span></figcaption>
+</figure>
+</div>
+<div id="geometric-interpretation-of-x-y" class="Remark" title="Geometric interpretation of |x-y|">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 20: </strong>Geometric interpretation of <span class="math inline">\(|x-y|\)</span></summary><div>If <span class="math inline">\(x,y \in \mathbb{R}\)</span> then the number <span class="math inline">\(|x-y|\)</span> represents the distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the real line, as shown in <a href="#fig-absolute-value-2">Figure&nbsp;<span>2.2</span></a> below. Note that by Remark <a href="chap_2.html#rmk-absolute-value-sym">18</a> we have <span class="math display">\[
+|x-y| = |y-x| \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="fig-absolute-value-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/absolute_value_2.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.2: Geometric interpretation of <span class="math inline">\(|x-y|\)</span></figcaption>
+</figure>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

@@ -281,7 +281,7 @@ Suppose that $A \subset B$. We need to show that $B^c \subset A^c$. Hence, assum
 Essentially the same proof, hence we omit it.  
 :::
 
-We conclude by stating the De Morgan's Laws, which we do not prove. 
+We conclude by stating the De Morgan's Laws. The proof will be left as an exercise.
 
 ::: Proposition
 ## De Morgan's Laws
@@ -299,7 +299,252 @@ $$
 
 
 
-### Cartesian product
+### Product of sets
 
-Suppose $A$ and $B$ are two sets. We 
+Suppose $A$ and $B$ are two sets. The **product** of $A$ and $B$ is the set of pairs
+$$
+A \times B := \{ (a,b) \, \colon \, a \in A, \, b \in B \} \,.
+$$
+By definition two elements in $A \times B$ are the same, in symbols
+$$
+(a, b) = (\tilde{a}, \tilde{b})
+$$
+if and only if they are equal component-by-componenent, that is
+$$
+a=\tilde{a}\,, \qquad b = \tilde{b} \,.
+$$
+
+
+
+
+## Equivalence and order relation
+
+
+Suppose $A$ is a set. A **binary relation** $R$ on $A$ is a subset 
+$$
+R \subset A \times A \,.
+$$
+
+::: Definition
+### Equivalence relation
+
+A binary relation $R$ is called an **equivalence relation** if it satisfies the following properties:
+
+1. **Reflexive**: For each $x \in A$ one has 
+$$
+(x,x) \in R \,, 
+$$
+
+    > This is saying that all the elements in $A$ must be related to themselves
+
+2. **Symmetric**: We have
+$$
+(x,y) \in R \implies (y,x) \in R
+$$
+
+    > If $x$ is related to $y$, then $y$ is related to $x$
+
+3. **Transitive**: We have
+$$
+(x,y) \in R \,, \,\, (y,z) \in R  \implies (x,z) \in R 
+$$
+
+    > If $x$ is related to $y$, and $y$ is related to $z$, then $x$ must be related to $z$
+
+
+If $(x,y) \in R$ we write
+$$
+x \sim y 
+$$
+and we say that $x$ and $y$ are **equivalent**.
+:::
+
+
+
+
+
+::: Definition
+### Equivalence classes
+
+Suppose $R$ is an **equivalence relation** on $A$. The **equivalence class** of an element $x \in A$ is the set
+$$
+[x]:=\{ y \in A \, \colon \, y \sim x \} \,.
+$$
+The set of equivalence classes of elements of $A$ with respect to the equivalence relation $R$ is denoted by 
+$$
+A / R \, :=  \,\{ [x] \, \colon \, x \in A \} \,.
+$$
+
+
+:::
+
+
+Let us immediately clarify the above definitions by considering the prototypical example of equivalence relation: the **equality**.
+
+
+::: Example
+### Equality is an equivalence relation
+
+Consider the set of natural numbers $\N$. The equality defines a **binary relation** on $\N \times \N$, via
+$$
+R:=\{ (x,y) \in \N \times \N \, \colon \, x=y  \} \,.
+$$
+Let us check that $R$ is an **equivalence relation**:
+
+1. Reflexive: It holds, since $x=x$ for all $x \in \N$,
+
+2. Symmetric: Again $x = y$ if and only if $y = x$,
+
+3. Transitive: If $x = y$ and $y = z$ then $x = z$.
+
+The class of equivalence of $x \in \N$ is given by
+$$
+[x] = \{ x \}\,,
+$$
+that is, this relation is quite trivial, given that each element of $\N$ can only be related to itself. 
+:::
+
+
+
+Similarly, we define **order relations**.
+
+
+::: Definition
+### Order relation
+
+A binary relation $R$ is called an **order relation** if it satisfies the following properties:
+
+1. **Reflexive**: For each $x \in A$ one has 
+$$
+(x,x) \in R \,, 
+$$
+
+2. **Transitive**: We have
+$$
+(x,y) \in R \,, \,\, (y,z) \in R  \implies (x,z) \in R 
+$$
+
+
+3. **Antisymmetric**: We have
+$$
+(x,y) \in R \,  \text{ and } \, (y,x) \in R \implies x = y 
+$$
+
+    > This is the only new condition with respect to the definition of equivalence relation. 
+
+:::
+
+
+The prototypical example of order relation is the **inequality** relation.
+
+
+::: Example
+### Inequality is an order relation
+
+Consider the set of integers $\Z$. The inequality defines a **binary relation** on $\Z \times \Z$, via
+$$
+R:=\{ (x,y) \in \Z \times \Z \, \colon \, x \leq y  \} \,.
+$$
+Let us check that $R$ is an **order relation**:
+
+1. Reflexive: It holds, since $x \leq x$ for all $x \in \Z$,
+
+2. Transitive: If $x \leq y$ and $y \leq z$ then $x \leq z$.
+
+3. Antisymmetric: If $x \leq y$ and $y \leq x$  then $x = y$.
+
+:::
+
+
+
+
+
+## Absolute value or Modulus
+
+In this section we assume to have available the set $\R$ of **real numbers**, which we recall is an extension of $\Q$. 
+
+::: Definition
+### Absolute value 
+For $x \in \R$ we define its **absolute value** as the quantity
+$$
+|x| = 
+\begin{cases}
+x  & \text{ if } \, x \geq 0 \\
+-x  & \text{ if } \, x < 0 
+\end{cases}
+$$
+:::
+
+::: Example
+
+By definition one has $|x|=x$ if $x \geq 0$. For example
+$$
+|\pi| = \pi \,, \,\, \left|\sqrt{2}\right| = \sqrt{2} \,, \,\, |0|=0 \,.
+$$
+Instead $|x|= -x$ if $x < 0$. For example 
+$$
+|-\pi| = \pi \,, \,\, \left|-\sqrt{2}\right| = \sqrt{2} \,, \,\, |-10|=10 \,.
+$$
+:::
+
+
+Let us also make the following basic remark, whose proof will be left as an exercise.
+
+::: Remark
+For all $x \in \R$ one has 
+$$
+|x| \geq 0 \,.
+$$
+Moreover 
+$$
+|x| = 0 \iff x = 0 \,.
+$$
+:::
+
+Another basic remark (proof by exercise).
+
+::: {.Remark #rmk-absolute-value-sym}
+
+For all $x \in \R$ one has
+$$
+|x| = |-x| \,.
+$$
+
+:::
+
+
+You might be familiar with the graph associated to the absolute value function:
+
+![Plot of the absolute value function $f(x)=|x|$](/images/absolute_value.png){width=50%}
+
+
+However in these Lecture Notes we are not dealing with functions, so it is better to think about the absolute value in a geometric way.  
+
+
+
+
+
+::: Remark
+### Geometric interpretation of $|x|$
+A number $x \in \R$ can be represented with a point on the real line $\R$.The non-negative number $|x|$ represents the **distance** of $x$ from the origin $0$. Notice that this works for both positive and negative numbers $x_1$ and $x_2$ respectively, as shown in @fig-absolute-value-1 below.
+:::
+
+
+![Geometric interpretation of $|x|$](/images/absolute_value_1.png){#fig-absolute-value-1 width=85%}
+
+
+
+::: Remark
+### Geometric interpretation of $|x-y|$
+
+If $x,y \in \R$ then the number $|x-y|$ represents the distance between $x$ and $y$ on the real line, as shown in @fig-absolute-value-2 below.
+Note that by Remark \ref{rmk-absolute-value-sym} we have
+$$
+|x-y| = |y-x| \,.
+$$
+:::
+
+![Geometric interpretation of $|x-y|$](/images/absolute_value_2.png){#fig-absolute-value-2 width=85%}
+
+
 

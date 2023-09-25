@@ -38,3 +38,25 @@
  [**Example 2.8**](#Example-2.8)\Pageref{Example-2.8}
 
  [**Proposition 2.9**](#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
+
+ [**Definition 2.10**](#equivalence-relation): Equivalence relation\Pageref{equivalence-relation}
+
+ [**Definition 2.11**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+
+ [**Example 2.12**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
+
+ [**Definition 2.13**](#order-relation): Order relation\Pageref{order-relation}
+
+ [**Example 2.14**](#inequality-is-an-order-relation): Inequality is an order relation\Pageref{inequality-is-an-order-relation}
+
+ [**Definition 2.15**](#absolute-value): Absolute value\Pageref{absolute-value}
+
+ [**Example 2.16**](#Example-2.16)\Pageref{Example-2.16}
+
+ [**Remark 2.17**](#Remark-2.17)\Pageref{Remark-2.17}
+
+ [**Remark 2.18**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+
+ [**Remark 2.19**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+
+ [**Remark 2.20**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
