@@ -75,4 +75,8 @@
 
  [**Theorem 2.26**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
 
- [**Proof**](#Proof*-2.3)\Pageref{Proof*-2.3}
+ [**Remark 2.27**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
+
+ [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.26\Pageref{proof-of-theorem-1}
+
+ [**Remark 2.28**](#Remark-2.28)\Pageref{Remark-2.28}

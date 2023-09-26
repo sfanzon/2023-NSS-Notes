@@ -70,17 +70,13 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 .Remark {
   --color1: #bce5de;
@@ -90,19 +86,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Theorem {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -113,6 +105,14 @@ ul.task-list li input[type="checkbox"] {
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 </style>
 
@@ -789,13 +789,80 @@ Suppose now that<br>
 <h2 data-number="2.7" class="anchored" data-anchor-id="triangle-inequality"><span class="header-section-number">2.7</span> Triangle inequality</h2>
 <p>The triangle inequality relates the absolute value to the sum operation. It is a very important inequality, which we will use a lot in the future.</p>
 <div id="theorem-triangle-inequality" class="Theorem" title="Triangle inequality">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26: </strong>Triangle inequality</summary><div>For every <span class="math inline">\(x, y \in \mathbb{R}\)</span> we have <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26: </strong>Triangle inequality</summary><div>For every <span class="math inline">\(x, y \in \mathbb{R}\)</span> we have <span id="eq-triangle-inequality"><span class="math display">\[
 | |x| - |y| | \leq |x-y| \leq |x| + |y| \,.
-\]</span><p></p>
+\tag{2.7}\]</span></span><p></p>
 </div></details>
 </div>
-<div id="Proof*-3" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>TO do<p></p>
+<p>Before proceeding with the proof, let us discuss the geometric meaning of the triangle inequality.</p>
+<div id="geometric-meaning-of-triangle-inequality" class="Remark" title="Geometric meaning of triangle inequality">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 27: </strong>Geometric meaning of triangle inequality</summary><div>The notion of absolute value can be extended also to vectors in the plane. Suppose that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are two vectors in the plane, as in <a href="#fig-triangle-ineq-1">Figure&nbsp;<span>2.8</span></a> below. Then <span class="math inline">\(|x|\)</span> and <span class="math inline">\(|y|\)</span> can be interpreted as the <strong>lengths</strong> of these vectors.<br>
+Using the rule of sum of vectors, we can draw <span class="math inline">\(x+y\)</span>, as shown in <a href="#fig-triangle-ineq-2">Figure&nbsp;<span>2.9</span></a> below. From the picture it is evident that <span id="eq-triangle-inequality-1"><span class="math display">\[
+|x+y| \leq |x| + |y|\,,
+\tag{2.8}\]</span></span> that is, <em>the length of each side of a triangle does not exceed the sum of the lengths of the two remaining sides</em>. Note that (<a href="#eq-triangle-inequality-1"><span>2.8</span></a>) is exactly the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>). This is why (<a href="#eq-triangle-inequality"><span>2.7</span></a>) is called triangle inequality.<p></p>
+</div></details>
+</div>
+<div id="fig-triangle-ineq-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/triangle_ineq_1.png" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.8: Vectors <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></figcaption>
+</figure>
+</div>
+<div id="fig-triangle-ineq-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/triangle_ineq_2.png" class="img-fluid figure-img" style="width:45.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.9: Summing the vectors <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. The triangle inequality relates the length of <span class="math inline">\(x+y\)</span> to the length of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></figcaption>
+</figure>
+</div>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 26">
+<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 26</summary><div>
+<p>Assume that <span class="math inline">\(x,y \in \mathbb{R}\)</span>. We prove the two inequalities in (<a href="#eq-triangle-inequality"><span>2.7</span></a>) individually.</p>
+<ul>
+<li><p>Proof of the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>):<br>
+Trivially we have <span class="math display">\[
+|x| \leq |x| \,.
+\]</span> Therefore we can apply Lemma <a href="chap_2.html#lemma-absolute-value">24</a> and infer <span id="eq-triangle-inequality-3"><span class="math display">\[
+-|x| \leq x \leq |x| \,.
+\tag{2.9}\]</span></span> Similarly we have that <span class="math inline">\(|y| \leq |y|\)</span>, and so Lemma <a href="chap_2.html#lemma-absolute-value">24</a> implies <span id="eq-triangle-inequality-4"><span class="math display">\[
+-|y| \leq y \leq |y| \,.
+\tag{2.10}\]</span></span> Summing (<a href="#eq-triangle-inequality-3"><span>2.9</span></a>) and (<a href="#eq-triangle-inequality-4"><span>2.10</span></a>) we get <span class="math display">\[
+-(|x| + |y|) \leq x + y \leq |x| + |y| \,.
+\]</span> We can now again apply Lemma <a href="chap_2.html#lemma-absolute-value">24</a> to get <span id="eq-triangle-inequality-5"><span class="math display">\[
+|x + y| \leq |x| + |y| \,,
+\tag{2.11}\]</span></span> which is the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>).</p></li>
+<li><p>Proof of the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>):<br>
+Note that the trivial identity <span class="math display">\[
+x = x+y - y
+\]</span> always holds. We then have <span class="math display">\[\begin{align}
+|x| &amp; = |x+y - y| \\
+  &amp; = |(x+y) + (-y)| \\
+  &amp; = |a+b|
+\end{align}\]</span> with <span class="math inline">\(a=x+y\)</span> and <span class="math inline">\(b=-y\)</span>. We can now apply (<a href="#eq-triangle-inequality-5"><span>2.11</span></a>) to <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> to obtain <span class="math display">\[\begin{align}
+|x| &amp; = |a+b| \\
+  &amp; \leq |a| + |b| \\
+  &amp; = |x+y| + |-y| \\
+  &amp; = |x+y| + |y|
+\end{align}\]</span> Therefore <span id="eq-triangle-inequality-6"><span class="math display">\[
+|x| - |y| \leq |x+y| \,.
+\tag{2.12}\]</span></span> We can now swap <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in (<a href="#eq-triangle-inequality-6"><span>2.12</span></a>) to get <span class="math display">\[
+|y| - |x| \leq |x+y| \,.
+\]</span> By rearranging the above inequality we obtain <span id="eq-triangle-inequality-7"><span class="math display">\[
+-|x+y| \leq |x| - |y|  \,.
+\tag{2.13}\]</span></span> Putting together (<a href="#eq-triangle-inequality-6"><span>2.12</span></a>) and (<a href="#eq-triangle-inequality-7"><span>2.13</span></a>) yields <span class="math display">\[
+-|x+y| \leq |x| - |y| \leq |x+y| \,.  
+\]</span> By Lemma <a href="chap_2.html#lemma-absolute-value">24</a> the above is equivalent to <span class="math display">\[
+||x| - |y|| \leq |x+y| \,,
+\]</span> which is the first inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>).</p></li>
+</ul>
+</div></details>
+</div>
+<p>An immediate consequence of the triangle inequality are the following inequalities, which are left as an exercise.</p>
+<div id="Remark-28" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 28</strong></summary><div>For any <span class="math inline">\(x,y \in \mathbb{R}\)</span> it holds <span class="math display">\[
+||x|-|y|| \leq |x-y| \leq |x|+|y|\,.
+\]</span> Moreover for any <span class="math inline">\(x,y,z \in \mathbb{R}\)</span> it holds <span class="math display">\[
+|x-y| \leq |x-z| + |z-y| \,.
+\]</span><p></p>
 </div></details>
 </div>
 </section>

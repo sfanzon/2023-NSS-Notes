@@ -785,16 +785,120 @@ The triangle inequality relates the absolute value to the sum operation. It is a
 For every $x, y \in \R$ we have
 $$
 | |x| - |y| | \leq |x-y| \leq |x| + |y| \,.
-$$
+$$ {#eq-triangle-inequality}
 :::
+
+
+Before proceeding with the proof, let us discuss the geometric meaning of the triangle inequality.
+
+
+
+::: Remark
+### Geometric meaning of triangle inequality
+
+The notion of absolute value can be extended also to vectors in the plane. Suppose that $x$ and $y$ are two vectors in the plane, as in @fig-triangle-ineq-1 below. Then $|x|$ and $|y|$ can be interpreted as the **lengths** of these vectors.  
+Using the rule of sum of vectors, we can draw $x+y$, as shown in @fig-triangle-ineq-2 below. From the picture it is evident that 
+$$
+|x+y| \leq |x| + |y|\,,
+$$ {#eq-triangle-inequality-1}
+that is, *the length of each side of a triangle does not exceed the sum of the lengths of the two remaining sides*. Note that (@eq-triangle-inequality-1) is exactly the second inequality in (@eq-triangle-inequality). This is why (@eq-triangle-inequality) is called triangle inequality.
+:::
+
+
+![Vectors $x$ and $y$](/images/triangle_ineq_1.png){#fig-triangle-ineq-1 width=30%}
+
+
+![Summing the vectors $x$ and $y$. The triangle inequality relates the length of $x+y$ to the length of $x$ and $y$](/images/triangle_ineq_2.png){#fig-triangle-ineq-2 width=45%}
+
+
+
+
 
 ::: Proof
+### Proof of Theorem \ref{theorem-triangle-inequality}
 
-TO do
+Assume that $x,y \in \R$. We prove the two inequalities in (@eq-triangle-inequality) individually.
 
+- Proof of the second inequality in (@eq-triangle-inequality):  
+Trivially we have
+$$
+|x| \leq |x| \,.
+$$
+Therefore we can apply Lemma \ref{lemma-absolute-value} and infer
+$$
+-|x| \leq x \leq |x| \,.
+$$ {#eq-triangle-inequality-3}
+Similarly we have that $|y| \leq |y|$, and so Lemma \ref{lemma-absolute-value} implies
+$$
+-|y| \leq y \leq |y| \,.
+$$ {#eq-triangle-inequality-4}
+Summing (@eq-triangle-inequality-3) and (@eq-triangle-inequality-4) we get
+$$
+-(|x| + |y|) \leq x + y \leq |x| + |y| \,.
+$$
+We can now again apply Lemma \ref{lemma-absolute-value} to get
+$$
+|x + y| \leq |x| + |y| \,,
+$$ {#eq-triangle-inequality-5}
+which is the second inequality in (@eq-triangle-inequality).
+
+- Proof of the second inequality in (@eq-triangle-inequality):  
+Note that the trivial identity
+$$
+x = x+y - y
+$$
+always holds. We then have
+\begin{align}
+|x| & = |x+y - y| \\
+    & = |(x+y) + (-y)| \\
+    & = |a+b|
+\end{align}
+with $a=x+y$ and $b=-y$. We can now apply (@eq-triangle-inequality-5) to $a$ and $b$ to obtain
+\begin{align}
+|x| & = |a+b| \\
+    & \leq |a| + |b| \\
+    & = |x+y| + |-y| \\
+    & = |x+y| + |y|
+\end{align}
+Therefore
+$$
+|x| - |y| \leq |x+y| \,.
+$$ {#eq-triangle-inequality-6}
+We can now swap $x$ and $y$ in (@eq-triangle-inequality-6) to get
+$$
+|y| - |x| \leq |x+y| \,.
+$$
+By rearranging the above inequality we obtain
+$$
+-|x+y| \leq |x| - |y|  \,.
+$$ {#eq-triangle-inequality-7}
+Putting together (@eq-triangle-inequality-6) and (@eq-triangle-inequality-7) yields
+$$
+-|x+y| \leq |x| - |y| \leq |x+y| \,.  
+$$
+By Lemma \ref{lemma-absolute-value} the above is equivalent to
+$$
+||x| - |y|| \leq |x+y| \,,
+$$
+which is the first inequality in (@eq-triangle-inequality).
 :::
 
 
+
+An immediate consequence of the triangle inequality are the following inequalities, which are left as an exercise. 
+
+
+
+::: Remark
+For any $x,y \in \R$ it holds
+$$
+||x|-|y|| \leq |x-y| \leq |x|+|y|\,.
+$$
+Moreover for any  $x,y,z \in \R$ it holds
+$$
+|x-y| \leq |x-z| + |z-y| \,.
+$$
+:::
 
 
 
