@@ -66,15 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Theorem {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proposition {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -82,33 +78,41 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 </style>
 
@@ -210,16 +214,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sets" id="toc-sets" class="nav-link active" data-scroll-target="#sets"><span class="header-section-number">2.1</span> Sets</a>
+  <li><a href="#sets" id="toc-sets" class="nav-link active" data-scroll-target="#sets"><span class="header-section-number">2.1</span> Sets</a></li>
+  <li><a href="#logic" id="toc-logic" class="nav-link" data-scroll-target="#logic"><span class="header-section-number">2.2</span> Logic</a></li>
+  <li><a href="#operations-on-sets" id="toc-operations-on-sets" class="nav-link" data-scroll-target="#operations-on-sets"><span class="header-section-number">2.3</span> Operations on sets</a>
   <ul class="collapse">
-  <li><a href="#union-and-intersection" id="toc-union-and-intersection" class="nav-link" data-scroll-target="#union-and-intersection"><span class="header-section-number">2.1.1</span> Union and intersection</a></li>
-  <li><a href="#inclusion-and-equality" id="toc-inclusion-and-equality" class="nav-link" data-scroll-target="#inclusion-and-equality"><span class="header-section-number">2.1.2</span> Inclusion and equality</a></li>
-  <li><a href="#infinite-unions-and-intersections" id="toc-infinite-unions-and-intersections" class="nav-link" data-scroll-target="#infinite-unions-and-intersections"><span class="header-section-number">2.1.3</span> Infinite unions and intersections</a></li>
-  <li><a href="#complement" id="toc-complement" class="nav-link" data-scroll-target="#complement"><span class="header-section-number">2.1.4</span> Complement</a></li>
-  <li><a href="#product-of-sets" id="toc-product-of-sets" class="nav-link" data-scroll-target="#product-of-sets"><span class="header-section-number">2.1.5</span> Product of sets</a></li>
+  <li><a href="#union-and-intersection" id="toc-union-and-intersection" class="nav-link" data-scroll-target="#union-and-intersection"><span class="header-section-number">2.3.1</span> Union and intersection</a></li>
+  <li><a href="#inclusion-and-equality" id="toc-inclusion-and-equality" class="nav-link" data-scroll-target="#inclusion-and-equality"><span class="header-section-number">2.3.2</span> Inclusion and equality</a></li>
+  <li><a href="#infinite-unions-and-intersections" id="toc-infinite-unions-and-intersections" class="nav-link" data-scroll-target="#infinite-unions-and-intersections"><span class="header-section-number">2.3.3</span> Infinite unions and intersections</a></li>
+  <li><a href="#complement" id="toc-complement" class="nav-link" data-scroll-target="#complement"><span class="header-section-number">2.3.4</span> Complement</a></li>
+  <li><a href="#product-of-sets" id="toc-product-of-sets" class="nav-link" data-scroll-target="#product-of-sets"><span class="header-section-number">2.3.5</span> Product of sets</a></li>
   </ul></li>
-  <li><a href="#equivalence-and-order-relation" id="toc-equivalence-and-order-relation" class="nav-link" data-scroll-target="#equivalence-and-order-relation"><span class="header-section-number">2.2</span> Equivalence and order relation</a></li>
-  <li><a href="#absolute-value-or-modulus" id="toc-absolute-value-or-modulus" class="nav-link" data-scroll-target="#absolute-value-or-modulus"><span class="header-section-number">2.3</span> Absolute value or Modulus</a></li>
+  <li><a href="#equivalence-and-order-relation" id="toc-equivalence-and-order-relation" class="nav-link" data-scroll-target="#equivalence-and-order-relation"><span class="header-section-number">2.4</span> Equivalence and order relation</a></li>
+  <li><a href="#intervals" id="toc-intervals" class="nav-link" data-scroll-target="#intervals"><span class="header-section-number">2.5</span> Intervals</a></li>
+  <li><a href="#absolute-value-or-modulus" id="toc-absolute-value-or-modulus" class="nav-link" data-scroll-target="#absolute-value-or-modulus"><span class="header-section-number">2.6</span> Absolute value or Modulus</a></li>
+  <li><a href="#proof-with-varepsilon" id="toc-proof-with-varepsilon" class="nav-link" data-scroll-target="#proof-with-varepsilon"><span class="header-section-number">2.7</span> Proof with <span class="math inline">\(\varepsilon\)</span></a></li>
   </ul>
 </nav>
     </div>
@@ -276,8 +284,77 @@ S = \{
 \]</span></p>
 </div></details>
 </div>
-<section id="union-and-intersection" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="union-and-intersection"><span class="header-section-number">2.1.1</span> Union and intersection</h3>
+</section>
+<section id="logic" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="logic"><span class="header-section-number">2.2</span> Logic</h2>
+<p>In this section we introduce some basic logic symbols. Suppose that you are given two statements, say <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. The formula <span class="math display">\[
+\alpha \implies \beta
+\]</span> means that <span class="math inline">\(\alpha\)</span> <strong>implies</strong> <span class="math inline">\(\beta\)</span>. In other words, if <span class="math inline">\(\alpha\)</span> is true then also <span class="math inline">\(\beta\)</span> is true.<br>
+The formula <span class="math display">\[
+\alpha \impliedby \beta
+\]</span> means that <span class="math inline">\(\alpha\)</span> is implied by <span class="math inline">\(\beta\)</span>: if <span class="math inline">\(\beta\)</span> is true then also <span class="math inline">\(\alpha\)</span> is true.<br>
+When we write <span id="eq-iff"><span class="math display">\[
+\alpha \iff \beta
+\tag{2.1}\]</span></span> we mean that <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are <strong>equivalent</strong>. Note that (<a href="#eq-iff"><span>2.1</span></a>) is equivalent to <span class="math display">\[
+\alpha \implies \beta  \,\, \text{ and } \,\,
+\beta \implies \alpha \,.
+\]</span> Such equivalence is very useful in proofs.</p>
+<div id="Example-2" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 2</strong></summary><div>We have that <span class="math display">\[
+x &gt; 0 \implies x&gt;-100 \,,
+\]</span> and <span class="math display">\[
+\text{ contradiction }   \impliedby  \sqrt{2} \in \mathbb{Q}\,.
+\]</span> Concerning <span class="math inline">\(\iff\)</span> we have <span class="math display">\[
+x^2 &lt; 2  \iff  - \sqrt{2} &lt; x &lt; \sqrt{2} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>We now introduce logic <strong>quantifiers</strong>. These are</p>
+<ul>
+<li><span class="math inline">\(\forall\)</span> which reads <strong>for all</strong></li>
+<li><span class="math inline">\(\exists\)</span> which reads <strong>exists</strong></li>
+<li><span class="math inline">\(\exists !\)</span> which reads <strong>exists unique</strong></li>
+<li><span class="math inline">\(\not\exists\)</span> which reads <strong>does not exists</strong></li>
+</ul>
+<p>These work in the following way. Suppose that you are given a statement <span class="math inline">\(\alpha(x)\)</span> which depends on the point <span class="math inline">\(x \in \mathbb{R}\)</span>. Then we say</p>
+<ul>
+<li><span class="math inline">\(\alpha(x)\)</span> is satisfied for all <span class="math inline">\(x \in A\)</span> with <span class="math inline">\(A\)</span> some collection of numbers. This translates to the symbols <span class="math display">\[
+\alpha(x) \, \text{ is true } \, \forall \, x \in A \,,
+\]</span></li>
+<li>There exists some <span class="math inline">\(x\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math inline">\(\alpha(x)\)</span> is satisfied: in symbols <span class="math display">\[
+\exists \, x \in \mathbb{R}\, \text{ such that } \, \alpha(x) \, \text{ is true},
+\]</span></li>
+<li>There exists a unique <span class="math inline">\(x_0\)</span> in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math inline">\(\alpha(x)\)</span> is satisfied: in symbols <span class="math display">\[
+\exists ! \, x_0 \in \mathbb{R}\, \text{ such that } \, \alpha(x_0) \, \text{ is true},
+\]</span></li>
+<li><span class="math inline">\(\alpha(x)\)</span> is never satisfied: <span class="math display">\[
+\not\exists  \, x \in \mathbb{R}\, \text{ such that } \, \alpha(x) \, \text{ is true}.
+\]</span></li>
+</ul>
+<div id="Example-3" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 3</strong></summary><div>
+<p>Let us make concrete examples:</p>
+<ul>
+<li>The expression <span class="math inline">\(x^2\)</span> is always non-negative. Thus we can say <span class="math display">\[
+x^2 \geq 0 \,\, \text{ for all } \,\, x \in \mathbb{R}\,.
+\]</span></li>
+<li>The equation <span class="math inline">\(x^2=1\)</span> has two solutions <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=-1\)</span>. Therefore we can say <span class="math display">\[
+\exists \, x \in \mathbb{R}\, \text{such that } \, x^2  = 1 \,.
+\]</span></li>
+<li>The equation <span class="math inline">\(x^3=1\)</span> has a unique solution <span class="math inline">\(x=1\)</span>. Thus <span class="math display">\[
+\exists ! \, x \in \mathbb{R}\, \text{such that } \, x^3  = 1 \,.
+\]</span></li>
+<li>We know that the equation <span class="math inline">\(x^2=2\)</span> has no solutions in <span class="math inline">\(\mathbb{Q}\)</span>. Then <span class="math display">\[
+\not\exists  \, x \in \mathbb{Q}\, \text{such that } \, x^2  = 2 \,.
+\]</span></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="operations-on-sets" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="operations-on-sets"><span class="header-section-number">2.3</span> Operations on sets</h2>
+<section id="union-and-intersection" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="union-and-intersection"><span class="header-section-number">2.3.1</span> Union and intersection</h3>
 <p>For two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> we define their <strong>union</strong> as the set <span class="math display">\[
 A \cup B := \{ x\, \colon \, x \in A  \, \text{ or } \, x \in B \} \,.
 \]</span> The <strong>intersection</strong> of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is defined by <span class="math display">\[
@@ -285,8 +362,8 @@ A \cap B := \{ x\, \colon \, x \in A  \, \text{ and } \, x \in B \} \,.
 \]</span> We denote the <strong>empty set</strong> by the symbol <span class="math inline">\(\emptyset\)</span>. Two sets are <strong>disjoint</strong> if <span class="math display">\[
 A \cap B = \emptyset \,.
 \]</span></p>
-<div id="Example-2" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 2</strong></summary><div>Define the subset of rational numbers <span class="math display">\[
+<div id="Example-4" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 4</strong></summary><div>Define the subset of rational numbers <span class="math display">\[
 S:= \left\{ x \in \mathbb{Q}\, \colon \, 0 &lt; x &lt; \frac52 \right\} \,.
 \]</span> Then we have <span class="math display">\[
 \mathbb{N}\cap S = \{1, 2 \} \,.
@@ -303,8 +380,8 @@ O \cup E &amp; = \mathbb{N}\,, \,\, O \cap D = \emptyset \,.
 </div></details>
 </div>
 </section>
-<section id="inclusion-and-equality" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="inclusion-and-equality"><span class="header-section-number">2.1.2</span> Inclusion and equality</h3>
+<section id="inclusion-and-equality" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="inclusion-and-equality"><span class="header-section-number">2.3.2</span> Inclusion and equality</h3>
 <p>Given two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we say that <span class="math inline">\(A\)</span> is <strong>contained</strong> in <span class="math inline">\(B\)</span> if all the elements of <span class="math inline">\(A\)</span> are also contained in <span class="math inline">\(B\)</span>. This will be denoted with the <strong>inclusion</strong> symbol <span class="math inline">\(\subset\)</span>, that is, <span class="math display">\[
 A \subset B \,.
 \]</span> In this case we say that</p>
@@ -315,8 +392,8 @@ A \subset B \,.
 <p>The inclusion <span class="math inline">\(A \subset B\)</span> is equivalent to the implication: <span class="math display">\[
 x \in A \,\, \implies \,\, x \in B
 \]</span> for all <span class="math inline">\(x \in A\)</span>. The symbol <span class="math inline">\(\implies\)</span> reads <strong>implies</strong>, and denotes the fact that the first condition implies the second.</p>
-<div id="Example-3" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 3</strong></summary><div>Given two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> we always have <span class="math display">\[\begin{gather}
+<div id="Example-5" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 5</strong></summary><div>Given two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> we always have <span class="math display">\[\begin{gather}
 (A \cap B) \subset A \,, \,\, (A \cap B) \subset B \,,\\
 A \subset (A \cup B) \,, \,\, B \subset (A \cup B) \,.
 \end{gather}\]</span><p></p>
@@ -325,8 +402,8 @@ A \subset (A \cup B) \,, \,\, B \subset (A \cup B) \,.
 <p>We say that two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are equal if they contain the <strong>same</strong> elements. We denote equality by the symbol <span class="math display">\[
 A=B \,.
 \]</span></p>
-<div id="Example-4" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 4</strong></summary><div>The sets <span class="math display">\[
+<div id="Example-6" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>The sets <span class="math display">\[
 A =\{ 1,2,3 \}
 \]</span> and <span class="math display">\[
 B= \{ 3 ,1,2\}
@@ -334,20 +411,13 @@ B= \{ 3 ,1,2\}
 </div></details>
 </div>
 <div id="Proposition-Equality-Sets" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 5</strong></summary><div>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets. Then <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 7</strong></summary><div>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets. Then <span class="math display">\[
 A=B
 \]</span> <strong>if and only if</strong> <span class="math display">\[
 A \subset B \,\, \text{ and } \,\, B \subset A \,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>Before proceeding with the proof, let us clarify what the expression <strong>if and only if</strong> mean. Suppose that you are given two statements, say <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. Then <span class="math display">\[
-\alpha \iff \beta
-\]</span> is equivalent to the following conditions:</p>
-<ul>
-<li><span class="math inline">\(\alpha \implies \beta\)</span>, that is, if <span class="math inline">\(\alpha\)</span> is true then also <span class="math inline">\(\beta\)</span> is true,</li>
-<li><span class="math inline">\(\beta \implies \alpha\)</span>, that is, if <span class="math inline">\(\beta\)</span> is true then also <span class="math inline">\(\alpha\)</span> is true.</li>
-</ul>
 <div id="Proof*-1" class="Proof">
 <details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>
 <p>The proof is almost trivial. However it is a good exercise in basic logic, so let us do it.</p>
@@ -363,15 +433,15 @@ Suppose that <span class="math inline">\(A \subset B\)</span> and <span class="m
 </div>
 <p>The above proposition is very useful when we need to <strong>prove</strong> that two sets are equal: rather than showing directly that <span class="math inline">\(A = B\)</span>, we can prove that <span class="math inline">\(A \subset B\)</span> and <span class="math inline">\(B \subset A\)</span>.</p>
 </section>
-<section id="infinite-unions-and-intersections" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="infinite-unions-and-intersections"><span class="header-section-number">2.1.3</span> Infinite unions and intersections</h3>
+<section id="infinite-unions-and-intersections" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="infinite-unions-and-intersections"><span class="header-section-number">2.3.3</span> Infinite unions and intersections</h3>
 <p>Suppose given a set <span class="math inline">\(\Omega\)</span>, and a family of sets <span class="math inline">\(A_n \subset \Omega\)</span>, where <span class="math inline">\(n \in \mathbb{N}\)</span>. Then we can define the <strong>infinte union</strong> <span class="math display">\[
 \bigcup_{n \in \mathbb{N}} A_n := \{ x \in \Omega \, \colon \, x \in A_n \,\, \text{ for at least one } \,\, n \in \mathbb{N}\} \,.
 \]</span> The <strong>infinte intersection</strong> is defined as <span class="math display">\[
 \bigcap_{n \in \mathbb{N}} A_n := \{ x \in \Omega \, \colon \, x \in A_n \,\, \text{ for all } \,\, n \in \mathbb{N}\} \,.
 \]</span></p>
-<div id="Example-6" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>Let the ambient set be <span class="math inline">\(\Omega:=\mathbb{N}\)</span> and define the family <span class="math inline">\(A_n\)</span> by <span class="math display">\[\begin{align}
+<div id="Example-8" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 8</strong></summary><div>Let the ambient set be <span class="math inline">\(\Omega:=\mathbb{N}\)</span> and define the family <span class="math inline">\(A_n\)</span> by <span class="math display">\[\begin{align}
 A_1 &amp; := \{ 1, 2, 3 , 4 , \ldots \} \\
 A_2 &amp; := \{ 2, 3 , 4 , 5, \ldots \} \\
 A_3 &amp; := \{ 3 , 4 , 5, 6, \ldots \} \\
@@ -379,34 +449,34 @@ A_3 &amp; := \{ 3 , 4 , 5, 6, \ldots \} \\
 A_n &amp; := \{ n, n+1, n+2, n+3,  \ldots \} \,,
 \end{align}\]</span> for arbitrary <span class="math inline">\(n \in \mathbb{N}\)</span>. Then <span id="eq-infinite-union"><span class="math display">\[
 \bigcup_{n \in \mathbb{N}} A_n = \mathbb{N}\,.
-\tag{2.1}\]</span></span> The above equality can be easily proven using Proposition <a href="chap_2.html#Proposition-Equality-Sets">5</a>. Indeed, assume that <span class="math inline">\(m \in \cup_n A_n\)</span>. Then <span class="math inline">\(m \in A_n\)</span> for at least one <span class="math inline">\(n \in \mathbb{N}\)</span>. Since <span class="math inline">\(A_n \subset \mathbb{N}\)</span>, we conclude that <span class="math inline">\(m \in \mathbb{N}\)</span>. This shows <span class="math display">\[
+\tag{2.2}\]</span></span> The above equality can be easily proven using Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>. Indeed, assume that <span class="math inline">\(m \in \cup_n A_n\)</span>. Then <span class="math inline">\(m \in A_n\)</span> for at least one <span class="math inline">\(n \in \mathbb{N}\)</span>. Since <span class="math inline">\(A_n \subset \mathbb{N}\)</span>, we conclude that <span class="math inline">\(m \in \mathbb{N}\)</span>. This shows <span class="math display">\[
 \bigcup_{n \in \mathbb{N}} A_n \subset \mathbb{N}\,.
 \]</span> Conversely, suppose that <span class="math inline">\(m \in \mathbb{N}\)</span>. By definition <span class="math inline">\(m \in A_m\)</span>. Hence there exists at least one index <span class="math inline">\(n\)</span>, <span class="math inline">\(n=m\)</span> in this case, such that <span class="math inline">\(m \in A_n\)</span>. Then by definition <span class="math inline">\(m \in \cup_{n \in \mathbb{N}} A_n\)</span>, showing that <span class="math display">\[
 \mathbb{N}\subset \bigcup_{n \in \mathbb{N}} A_n \,.
-\]</span> Hence we conclude (<a href="#eq-infinite-union"><span>2.1</span></a>) by Proposition <a href="chap_2.html#Proposition-Equality-Sets">5</a>.<br>
+\]</span> Hence we conclude (<a href="#eq-infinite-union"><span>2.2</span></a>) by Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>.<br>
 We also have that <span id="eq-infinite-intersection"><span class="math display">\[
 \bigcap_{n \in \mathbb{N}} A_n = \emptyset \,.
-\tag{2.2}\]</span></span> We prove the above by <strong>contradiction</strong>. Indeed, suppose that (<a href="#eq-infinite-intersection"><span>2.2</span></a>) is false, i.e., <span class="math display">\[
+\tag{2.3}\]</span></span> We prove the above by <strong>contradiction</strong>. Indeed, suppose that (<a href="#eq-infinite-intersection"><span>2.3</span></a>) is false, i.e., <span class="math display">\[
 \bigcap_{n \in \mathbb{N}} A_n \neq \emptyset \,.
-\]</span> This means there exists some <span class="math inline">\(m \in \mathbb{N}\)</span> such that <span class="math inline">\(m \in \cap_{n \in \mathbb{N}} A_n\)</span>. Hence, by definition, <span class="math inline">\(m \in A_n\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. However <span class="math inline">\(m \notin A_{m+1}\)</span>, yielding a contradiction. Thus (<a href="#eq-infinite-intersection"><span>2.2</span></a>) holds.<p></p>
+\]</span> This means there exists some <span class="math inline">\(m \in \mathbb{N}\)</span> such that <span class="math inline">\(m \in \cap_{n \in \mathbb{N}} A_n\)</span>. Hence, by definition, <span class="math inline">\(m \in A_n\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. However <span class="math inline">\(m \notin A_{m+1}\)</span>, yielding a contradiction. Thus (<a href="#eq-infinite-intersection"><span>2.3</span></a>) holds.<p></p>
 </div></details>
 </div>
 </section>
-<section id="complement" class="level3" data-number="2.1.4">
-<h3 data-number="2.1.4" class="anchored" data-anchor-id="complement"><span class="header-section-number">2.1.4</span> Complement</h3>
+<section id="complement" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="complement"><span class="header-section-number">2.3.4</span> Complement</h3>
 <p>Suppose that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are subsets of a larger set <span class="math inline">\(\Omega\)</span>. The <strong>complement</strong> of <span class="math inline">\(A\)</span> with respect to <span class="math inline">\(B\)</span> is the set of elements of <span class="math inline">\(B\)</span> which do not belong to <span class="math inline">\(A\)</span>, that is <span class="math display">\[
 B \smallsetminus A := \{ x \in \Omega \, \colon \, x \in B \, \text{ and } \, x \notin A \} \,.
 \]</span> In particular, the complement of <span class="math inline">\(A\)</span> with respect to <span class="math inline">\(\Omega\)</span> is denoted by <span class="math display">\[
 A^c := \Omega \smallsetminus A := \{ x \in \Omega \, \colon \, x \notin A \} \,.
 \]</span></p>
-<div id="Remark-7" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 7</strong></summary><div>Suppose that <span class="math inline">\(A \subset \Omega\)</span>. Then <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> form a <strong>partition</strong> of <span class="math inline">\(\Omega\)</span>, in the sense that <span class="math display">\[
+<div id="Remark-9" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 9</strong></summary><div>Suppose that <span class="math inline">\(A \subset \Omega\)</span>. Then <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> form a <strong>partition</strong> of <span class="math inline">\(\Omega\)</span>, in the sense that <span class="math display">\[
 A \cup A^c = \Omega  \,\, \text{ and } \,\,  A \cap A^c = \emptyset \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Example-8" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 8</strong></summary><div>
+<div id="Example-10" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 10</strong></summary><div>
 <p>Suppose <span class="math inline">\(A, B \subset \Omega\)</span>. Then <span class="math display">\[
 A \subset B  \iff B^c \subset A^c \,.
 \]</span></p>
@@ -422,7 +492,7 @@ Essentially the same proof, hence we omit it.<br>
 </div>
 <p>We conclude by stating the De Morgan’s Laws. The proof will be left as an exercise.</p>
 <div id="de-morgans-laws" class="Proposition" title="De Morgan’s Laws">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9: </strong>De Morgan’s Laws</summary><div>Suppose <span class="math inline">\(A,B \subset \Omega\)</span>. Then <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 11: </strong>De Morgan’s Laws</summary><div>Suppose <span class="math inline">\(A,B \subset \Omega\)</span>. Then <span class="math display">\[
 (A \cap B)^c = A^c \cup B^c
 \]</span> and <span class="math display">\[
 (A \cup B)^c = A^c \cap B^c  \,.
@@ -430,8 +500,8 @@ Essentially the same proof, hence we omit it.<br>
 </div></details>
 </div>
 </section>
-<section id="product-of-sets" class="level3" data-number="2.1.5">
-<h3 data-number="2.1.5" class="anchored" data-anchor-id="product-of-sets"><span class="header-section-number">2.1.5</span> Product of sets</h3>
+<section id="product-of-sets" class="level3" data-number="2.3.5">
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="product-of-sets"><span class="header-section-number">2.3.5</span> Product of sets</h3>
 <p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets. The <strong>product</strong> of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is the set of pairs <span class="math display">\[
 A \times B := \{ (a,b) \, \colon \, a \in A, \, b \in B \} \,.
 \]</span> By definition two elements in <span class="math inline">\(A \times B\)</span> are the same, in symbols <span class="math display">\[
@@ -441,13 +511,13 @@ a=\tilde{a}\,, \qquad b = \tilde{b} \,.
 \]</span></p>
 </section>
 </section>
-<section id="equivalence-and-order-relation" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="equivalence-and-order-relation"><span class="header-section-number">2.2</span> Equivalence and order relation</h2>
+<section id="equivalence-and-order-relation" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="equivalence-and-order-relation"><span class="header-section-number">2.4</span> Equivalence and order relation</h2>
 <p>Suppose <span class="math inline">\(A\)</span> is a set. A <strong>binary relation</strong> <span class="math inline">\(R\)</span> on <span class="math inline">\(A\)</span> is a subset <span class="math display">\[
 R \subset A \times A \,.
 \]</span></p>
 <div id="equivalence-relation" class="Definition" title="Equivalence relation">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 10: </strong>Equivalence relation</summary><div>A binary relation <span class="math inline">\(R\)</span> is called an <strong>equivalence relation</strong> if it satisfies the following properties:<p></p>
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 12: </strong>Equivalence relation</summary><div>A binary relation <span class="math inline">\(R\)</span> is called an <strong>equivalence relation</strong> if it satisfies the following properties:<p></p>
 <ol type="1">
 <li><p><strong>Reflexive</strong>: For each <span class="math inline">\(x \in A\)</span> one has <span class="math display">\[
 (x,x) \in R \,,
@@ -474,7 +544,7 @@ x \sim y
 </div></details>
 </div>
 <div id="equivalence-classes" class="Definition" title="Equivalence classes">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 11: </strong>Equivalence classes</summary><div>Suppose <span class="math inline">\(R\)</span> is an <strong>equivalence relation</strong> on <span class="math inline">\(A\)</span>. The <strong>equivalence class</strong> of an element <span class="math inline">\(x \in A\)</span> is the set <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Equivalence classes</summary><div>Suppose <span class="math inline">\(R\)</span> is an <strong>equivalence relation</strong> on <span class="math inline">\(A\)</span>. The <strong>equivalence class</strong> of an element <span class="math inline">\(x \in A\)</span> is the set <span class="math display">\[
 [x]:=\{ y \in A \, \colon \, y \sim x \} \,.
 \]</span> The set of equivalence classes of elements of <span class="math inline">\(A\)</span> with respect to the equivalence relation <span class="math inline">\(R\)</span> is denoted by <span class="math display">\[
 A / R \, :=  \,\{ [x] \, \colon \, x \in A \} \,.
@@ -483,7 +553,7 @@ A / R \, :=  \,\{ [x] \, \colon \, x \in A \} \,.
 </div>
 <p>Let us immediately clarify the above definitions by considering the prototypical example of equivalence relation: the <strong>equality</strong>.</p>
 <div id="equality-is-an-equivalence-relation" class="Example" title="Equality is an equivalence relation">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 12: </strong>Equality is an equivalence relation</summary><div>Consider the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span>. The equality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{N}\times \mathbb{N}\)</span>, via <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14: </strong>Equality is an equivalence relation</summary><div>Consider the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span>. The equality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{N}\times \mathbb{N}\)</span>, via <span class="math display">\[
 R:=\{ (x,y) \in \mathbb{N}\times \mathbb{N}\, \colon \, x=y  \} \,.
 \]</span> Let us check that <span class="math inline">\(R\)</span> is an <strong>equivalence relation</strong>:<p></p>
 <ol type="1">
@@ -498,7 +568,7 @@ R:=\{ (x,y) \in \mathbb{N}\times \mathbb{N}\, \colon \, x=y  \} \,.
 </div>
 <p>Similarly, we define <strong>order relations</strong>.</p>
 <div id="order-relation" class="Definition" title="Order relation">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Order relation</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Order relation</summary><div>
 <p>A binary relation <span class="math inline">\(R\)</span> is called an <strong>order relation</strong> if it satisfies the following properties:</p>
 <ol type="1">
 <li><p><strong>Reflexive</strong>: For each <span class="math inline">\(x \in A\)</span> one has <span class="math display">\[
@@ -518,7 +588,7 @@ R:=\{ (x,y) \in \mathbb{N}\times \mathbb{N}\, \colon \, x=y  \} \,.
 </div>
 <p>The prototypical example of order relation is the <strong>inequality</strong> relation.</p>
 <div id="inequality-is-an-order-relation" class="Example" title="Inequality is an order relation">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14: </strong>Inequality is an order relation</summary><div>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16: </strong>Inequality is an order relation</summary><div>
 <p>Consider the set of integers <span class="math inline">\(\mathbb{Z}\)</span>. The inequality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{Z}\times \mathbb{Z}\)</span>, via <span class="math display">\[
 R:=\{ (x,y) \in \mathbb{Z}\times \mathbb{Z}\, \colon \, x \leq y  \} \,.
 \]</span> Let us check that <span class="math inline">\(R\)</span> is an <strong>order relation</strong>:</p>
@@ -530,11 +600,56 @@ R:=\{ (x,y) \in \mathbb{Z}\times \mathbb{Z}\, \colon \, x \leq y  \} \,.
 </div></details>
 </div>
 </section>
-<section id="absolute-value-or-modulus" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="absolute-value-or-modulus"><span class="header-section-number">2.3</span> Absolute value or Modulus</h2>
+<section id="intervals" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="intervals"><span class="header-section-number">2.5</span> Intervals</h2>
+<p>In this section we assume to have available the set <span class="math inline">\(\mathbb{R}\)</span> of <strong>real numbers</strong>, which we recall is an extension of <span class="math inline">\(\mathbb{Q}\)</span>. We now introduce the concept of <strong>interval</strong>.</p>
+<div id="Definition-17" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. We define the <strong>open interval</strong> <span class="math inline">\((a,b)\)</span> as the set <span class="math display">\[
+(a,b) := \{ x \in \mathbb{R}\, \colon \, a &lt; x &lt; b \}\,.
+\]</span> We define the <strong>close interval</strong> <span class="math inline">\([a,b]\)</span> as the set <span class="math display">\[
+[a,b] := \{ x \in \mathbb{R}\, \colon \, a \leq x \leq b \}\,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>In general we also define the intervals <span class="math display">\[\begin{align}
+[a,b) &amp; := \{ x \in \mathbb{R}\, \colon \, a \leq x &lt; b \}\,, \\
+(a,b] &amp; := \{ x \in \mathbb{R}\, \colon \, a \leq x \leq b \}\,, \\
+(a, \infty) &amp; := \{ x \in \mathbb{R}\, \colon \, x &gt; a  \}\,, \\
+[a, \infty) &amp; := \{ x \in \mathbb{R}\, \colon \, x \geq a  \}\,, \\
+(-\infty, b) &amp; := \{ x \in \mathbb{R}\, \colon \, x &lt; b  \}\,, \\
+(-\infty, b] &amp; := \{ x \in \mathbb{R}\, \colon \, x \leq b  \}\,.
+\end{align}\]</span></p>
+<p>Some of the above intervals are depicted in <a href="#fig-interval-1">Figure&nbsp;<span>2.1</span></a>, <a href="#fig-interval-2">Figure&nbsp;<span>2.2</span></a>, <a href="#fig-interval-3">Figure&nbsp;<span>2.3</span></a>, <a href="#fig-interval-4">Figure&nbsp;<span>2.4</span></a> below.</p>
+<div id="fig-interval-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/interval_1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.1: Interval <span class="math inline">\((a,b)\)</span></figcaption>
+</figure>
+</div>
+<div id="fig-interval-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/interval_2.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.2: Interval <span class="math inline">\([a,b]\)</span></figcaption>
+</figure>
+</div>
+<div id="fig-interval-3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/interval_3.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.3: Interval <span class="math inline">\((a,\infty)\)</span></figcaption>
+</figure>
+</div>
+<div id="fig-interval-4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/interval_4.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.4: Interval <span class="math inline">\((-\infty,b]\)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="absolute-value-or-modulus" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="absolute-value-or-modulus"><span class="header-section-number">2.6</span> Absolute value or Modulus</h2>
 <p>In this section we assume to have available the set <span class="math inline">\(\mathbb{R}\)</span> of <strong>real numbers</strong>, which we recall is an extension of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <div id="absolute-value" class="Definition" title="Absolute value">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Absolute value</summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span> we define its <strong>absolute value</strong> as the quantity <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 18: </strong>Absolute value</summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span> we define its <strong>absolute value</strong> as the quantity <span class="math display">\[
 |x| =
 \begin{cases}
 x  &amp; \text{ if } \, x \geq 0 \\
@@ -543,8 +658,8 @@ x  &amp; \text{ if } \, x \geq 0 \\
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Example-16" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div>By definition one has <span class="math inline">\(|x|=x\)</span> if <span class="math inline">\(x \geq 0\)</span>. For example <span class="math display">\[
+<div id="Example-19" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 19</strong></summary><div>By definition one has <span class="math inline">\(|x|=x\)</span> if <span class="math inline">\(x \geq 0\)</span>. For example <span class="math display">\[
 |\pi| = \pi \,, \,\, \left|\sqrt{2}\right| = \sqrt{2} \,, \,\, |0|=0 \,.
 \]</span> Instead <span class="math inline">\(|x|= -x\)</span> if <span class="math inline">\(x &lt; 0\)</span>. For example <span class="math display">\[
 |-\pi| = \pi \,, \,\, \left|-\sqrt{2}\right| = \sqrt{2} \,, \,\, |-10|=10 \,.
@@ -552,8 +667,8 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </div></details>
 </div>
 <p>Let us also make the following basic remark, whose proof will be left as an exercise.</p>
-<div id="Remark-17" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 17</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
+<div id="Remark-20" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 20</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
 |x| \geq 0 \,.
 \]</span> Moreover <span class="math display">\[
 |x| = 0 \iff x = 0 \,.
@@ -562,7 +677,7 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </div>
 <p>Another basic remark (proof by exercise).</p>
 <div id="rmk-absolute-value-sym" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 18</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 21</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
 |x| = |-x| \,.
 \]</span><p></p>
 </div></details>
@@ -570,33 +685,63 @@ x  &amp; \text{ if } \, x \geq 0 \\
 <p>You might be familiar with the graph associated to the absolute value function:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/absolute_value.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="../images/absolute_value.png" class="img-fluid figure-img" style="width:40.0%"></p>
 <figcaption class="figure-caption">Plot of the absolute value function <span class="math inline">\(f(x)=|x|\)</span></figcaption>
 </figure>
 </div>
 <p>However in these Lecture Notes we are not dealing with functions, so it is better to think about the absolute value in a geometric way.</p>
 <div id="geometric-interpretation-of-x" class="Remark" title="Geometric interpretation of |x|">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 19: </strong>Geometric interpretation of <span class="math inline">\(|x|\)</span></summary><div>A number <span class="math inline">\(x \in \mathbb{R}\)</span> can be represented with a point on the real line <span class="math inline">\(\mathbb{R}\)</span>.The non-negative number <span class="math inline">\(|x|\)</span> represents the <strong>distance</strong> of <span class="math inline">\(x\)</span> from the origin <span class="math inline">\(0\)</span>. Notice that this works for both positive and negative numbers <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> respectively, as shown in <a href="#fig-absolute-value-1">Figure&nbsp;<span>2.1</span></a> below.<p></p>
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 22: </strong>Geometric interpretation of <span class="math inline">\(|x|\)</span></summary><div>A number <span class="math inline">\(x \in \mathbb{R}\)</span> can be represented with a point on the real line <span class="math inline">\(\mathbb{R}\)</span>.The non-negative number <span class="math inline">\(|x|\)</span> represents the <strong>distance</strong> of <span class="math inline">\(x\)</span> from the origin <span class="math inline">\(0\)</span>. Notice that this works for both positive and negative numbers <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> respectively, as shown in <a href="#fig-absolute-value-1">Figure&nbsp;<span>2.5</span></a> below.<p></p>
 </div></details>
 </div>
 <div id="fig-absolute-value-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="../images/absolute_value_1.png" class="img-fluid figure-img" style="width:85.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.1: Geometric interpretation of <span class="math inline">\(|x|\)</span></figcaption>
+<p><img src="../images/absolute_value_1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.5: Geometric interpretation of <span class="math inline">\(|x|\)</span></figcaption>
 </figure>
 </div>
 <div id="geometric-interpretation-of-x-y" class="Remark" title="Geometric interpretation of |x-y|">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 20: </strong>Geometric interpretation of <span class="math inline">\(|x-y|\)</span></summary><div>If <span class="math inline">\(x,y \in \mathbb{R}\)</span> then the number <span class="math inline">\(|x-y|\)</span> represents the distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the real line, as shown in <a href="#fig-absolute-value-2">Figure&nbsp;<span>2.2</span></a> below. Note that by Remark <a href="chap_2.html#rmk-absolute-value-sym">18</a> we have <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 23: </strong>Geometric interpretation of <span class="math inline">\(|x-y|\)</span></summary><div>If <span class="math inline">\(x,y \in \mathbb{R}\)</span> then the number <span class="math inline">\(|x-y|\)</span> represents the distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the real line, as shown in <a href="#fig-absolute-value-2">Figure&nbsp;<span>2.6</span></a> below. Note that by Remark <a href="chap_2.html#rmk-absolute-value-sym">21</a> we have <span class="math display">\[
 |x-y| = |y-x| \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="fig-absolute-value-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="../images/absolute_value_2.png" class="img-fluid figure-img" style="width:85.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.2: Geometric interpretation of <span class="math inline">\(|x-y|\)</span></figcaption>
+<p><img src="../images/absolute_value_2.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.6: Geometric interpretation of <span class="math inline">\(|x-y|\)</span></figcaption>
 </figure>
 </div>
+<p>In the next Lemma we show a fundamental equivalence regarding the absolute value.</p>
+<div id="lemma-absolute-value" class="Lemma">
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 24</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(y \geq 0\)</span>. Then <span class="math display">\[
+|x| \leq y  \iff -y \leq x \leq y \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>The geometric meaning of the above statement is clear: the distance of <span class="math inline">\(x\)</span> from the origin is less than <span class="math inline">\(y\)</span>, in formulae <span class="math display">\[
+|x| \leq y\,,
+\]</span> if and only if <span class="math inline">\(x\)</span> belongs to the interval <span class="math inline">\([-y,y]\)</span>, in formulae <span class="math display">\[
+-y \leq x \leq y \,.
+\]</span> A sketch of this explanation is seen in <a href="#fig-absolute-value-3">Figure&nbsp;<span>2.7</span></a> below.</p>
+<div id="fig-absolute-value-3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/absolute_value_3.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.7: Geometric meaning of Lemma <a href="chap_2.html#lemma-absolute-value">24</a></figcaption>
+</figure>
+</div>
+<div id="proof-of-lemma" class="Proof" title="Proof of Lemma 24">
+<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Lemma 24</summary><div>
+<p>We divide the proof in steps.</p>
+<ol type="1">
+<li>Step 1: implication <span class="math inline">\(\implies\)</span><br>
+Suppose first that <span class="math inline">\(|x| \leq y\)</span>.</li>
+</ol>
+</div></details>
+</div>
+</section>
+<section id="proof-with-varepsilon" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="proof-with-varepsilon"><span class="header-section-number">2.7</span> Proof with <span class="math inline">\(\varepsilon\)</span></h2>
 
 
 </section>

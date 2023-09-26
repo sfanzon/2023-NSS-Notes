@@ -149,6 +149,9 @@ custom-numbered-blocks:
     Proposition:
       group: thmlike
     
+    Lemma:
+      group: thmlike
+    
     Question: 
       group: thmlike
 

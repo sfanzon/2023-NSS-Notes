@@ -27,36 +27,46 @@
 
  [**Example 2.4**](#Example-2.4)\Pageref{Example-2.4}
 
- [**Proposition 2.5**](#Proposition-Equality-Sets)\Pageref{Proposition-Equality-Sets}
-
- [**Proof**](#Proof*-2.1)\Pageref{Proof*-2.1}
+ [**Example 2.5**](#Example-2.5)\Pageref{Example-2.5}
 
  [**Example 2.6**](#Example-2.6)\Pageref{Example-2.6}
 
- [**Remark 2.7**](#Remark-2.7)\Pageref{Remark-2.7}
+ [**Proposition 2.7**](#Proposition-Equality-Sets)\Pageref{Proposition-Equality-Sets}
+
+ [**Proof**](#Proof*-2.1)\Pageref{Proof*-2.1}
 
  [**Example 2.8**](#Example-2.8)\Pageref{Example-2.8}
 
- [**Proposition 2.9**](#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
+ [**Remark 2.9**](#Remark-2.9)\Pageref{Remark-2.9}
 
- [**Definition 2.10**](#equivalence-relation): Equivalence relation\Pageref{equivalence-relation}
+ [**Example 2.10**](#Example-2.10)\Pageref{Example-2.10}
 
- [**Definition 2.11**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+ [**Proposition 2.11**](#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
 
- [**Example 2.12**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
+ [**Definition 2.12**](#equivalence-relation): Equivalence relation\Pageref{equivalence-relation}
 
- [**Definition 2.13**](#order-relation): Order relation\Pageref{order-relation}
+ [**Definition 2.13**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
 
- [**Example 2.14**](#inequality-is-an-order-relation): Inequality is an order relation\Pageref{inequality-is-an-order-relation}
+ [**Example 2.14**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
 
- [**Definition 2.15**](#absolute-value): Absolute value\Pageref{absolute-value}
+ [**Definition 2.15**](#order-relation): Order relation\Pageref{order-relation}
 
- [**Example 2.16**](#Example-2.16)\Pageref{Example-2.16}
+ [**Example 2.16**](#inequality-is-an-order-relation): Inequality is an order relation\Pageref{inequality-is-an-order-relation}
 
- [**Remark 2.17**](#Remark-2.17)\Pageref{Remark-2.17}
+ [**Definition 2.17**](#Definition-2.17)\Pageref{Definition-2.17}
 
- [**Remark 2.18**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+ [**Definition 2.18**](#absolute-value): Absolute value\Pageref{absolute-value}
 
- [**Remark 2.19**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+ [**Example 2.19**](#Example-2.19)\Pageref{Example-2.19}
 
- [**Remark 2.20**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+ [**Remark 2.20**](#Remark-2.20)\Pageref{Remark-2.20}
+
+ [**Remark 2.21**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+
+ [**Remark 2.22**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+
+ [**Remark 2.23**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+
+ [**Lemma 2.24**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
+
+ [**Proof**](#proof-of-lemma): Proof of Lemma 2.24\Pageref{proof-of-lemma}

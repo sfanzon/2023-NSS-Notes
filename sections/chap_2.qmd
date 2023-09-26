@@ -11,6 +11,8 @@ $$
 
 Before introducing $\R$ we want to make sure that we cover all the basics needed for the task.
 
+
+
 ## Sets
 
 A sets is a **collection** of objects. These objects are called **elements** of the set. For example in the previous section we mentioned the following sets:
@@ -54,6 +56,103 @@ $$
 
 :::
 
+
+
+
+## Logic
+
+In this section we introduce some basic logic symbols. Suppose that you are given two statements, say $\alpha$ and $\beta$. The formula
+$$
+\alpha \implies \beta
+$$
+means that $\alpha$ **implies** $\beta$. In other words, if $\alpha$ is true then also $\beta$ is true.  
+The formula
+$$
+\alpha \impliedby \beta
+$$
+means that $\alpha$ is implied by $\beta$: if $\beta$ is true then also $\alpha$ is true.  
+When we write
+$$
+\alpha \iff \beta
+$$ {#eq-iff}
+we mean that $\alpha$ and $\beta$ are **equivalent**. Note that (@eq-iff) is equivalent to 
+$$
+\alpha \implies \beta  \,\, \text{ and } \,\,
+\beta \implies \alpha \,.
+$$
+Such equivalence is very useful in proofs.
+
+::: Example
+We have that 
+$$
+x > 0 \implies x>-100 \,,
+$$
+and 
+$$
+\text{ contradiction }   \impliedby  \sqrt{2} \in \Q \,.
+$$
+Concerning $\iff$ we have
+$$
+x^2 < 2  \iff  - \sqrt{2} < x < \sqrt{2} \,.
+$$
+:::
+
+We now introduce logic **quantifiers**. These are 
+
+* $\forall$ which reads **for all**
+* $\exists$ which reads **exists**
+* $\exists !$ which reads **exists unique**
+* $\not\exists$ which reads **does not exists**
+
+These work in the following way. Suppose that you are given a statement $\alpha(x)$ which depends on the point $x \in \R$. Then we say 
+
+* $\alpha(x)$ is satisfied for all $x \in A$ with $A$ some collection of numbers. This translates to the symbols
+$$
+\alpha(x) \, \text{ is true } \, \forall \, x \in A \,,
+$$
+* There exists some $x$ in $\R$ such that $\alpha(x)$ is satisfied: in symbols
+$$
+\exists \, x \in \R \, \text{ such that } \, \alpha(x) \, \text{ is true},
+$$
+* There exists a unique $x_0$ in $\R$ such that $\alpha(x)$ is satisfied: in symbols
+$$
+\exists ! \, x_0 \in \R \, \text{ such that } \, \alpha(x_0) \, \text{ is true},
+$$
+* $\alpha(x)$ is never satisfied: 
+$$
+\not\exists  \, x \in \R \, \text{ such that } \, \alpha(x) \, \text{ is true}.
+$$
+
+
+::: Example
+
+Let us make concrete examples:
+
+* The expression $x^2$ is always non-negative. Thus we can say
+$$
+x^2 \geq 0 \,\, \text{ for all } \,\, x \in \R \,.
+$$
+* The equation $x^2=1$ has two solutions $x=1$ and $x=-1$. Therefore we can say
+$$
+\exists \, x \in \R \, \text{such that } \, x^2  = 1 \,. 
+$$
+* The equation $x^3=1$ has a unique solution $x=1$. Thus
+$$
+\exists ! \, x \in \R \, \text{such that } \, x^3  = 1 \,. 
+$$
+* We know that the equation $x^2=2$ has no solutions in $\Q$. Then
+$$
+\not\exists  \, x \in \Q \, \text{such that } \, x^2  = 2 \,. 
+$$
+:::
+
+
+
+
+
+
+
+## Operations on sets
 
 ### Union and intersection
 
@@ -162,16 +261,6 @@ $$
 
 :::
 
-
-
-Before proceeding with the proof, let us clarify what the expression **if and only if** mean. Suppose that you are given two statements, say $\alpha$ and $\beta$. Then 
-$$
-\alpha \iff \beta
-$$
-is equivalent to the following conditions:
-
-- $\alpha \implies \beta$, that is, if $\alpha$ is true then also $\beta$ is true,
-- $\beta \implies \alpha$, that is, if $\beta$ is true then also $\alpha$ is true.  
 
 
 ::: Proof
@@ -459,6 +548,47 @@ Let us check that $R$ is an **order relation**:
 
 
 
+## Intervals
+
+In this section we assume to have available the set $\R$ of **real numbers**, which we recall is an extension of $\Q$. We now introduce the concept of **interval**.
+
+::: Definition
+
+Let $a,b \in \R$ with $a<b$. We define the **open interval** $(a,b)$ as the set
+$$
+(a,b) := \{ x \in \R \, \colon \, a < x < b \}\,.
+$$
+We define the **close interval** $[a,b]$ as the set
+$$
+[a,b] := \{ x \in \R \, \colon \, a \leq x \leq b \}\,.
+$$
+:::
+
+In general we also define the intervals
+\begin{align}
+[a,b) & := \{ x \in \R \, \colon \, a \leq x < b \}\,, \\
+(a,b] & := \{ x \in \R \, \colon \, a \leq x \leq b \}\,, \\
+(a, \infty) & := \{ x \in \R \, \colon \, x > a  \}\,, \\
+[a, \infty) & := \{ x \in \R \, \colon \, x \geq a  \}\,, \\
+(-\infty, b) & := \{ x \in \R \, \colon \, x < b  \}\,, \\
+(-\infty, b] & := \{ x \in \R \, \colon \, x \leq b  \}\,.
+\end{align}
+
+Some of the above intervals are depicted in @fig-interval-1, @fig-interval-2, @fig-interval-3, @fig-interval-4 below. 
+
+![Interval $(a,b)$](/images/interval_1.png){#fig-interval-1 width=70%}
+
+![Interval $[a,b]$](/images/interval_2.png){#fig-interval-2 width=70%}
+
+![Interval $(a,\infty)$](/images/interval_3.png){#fig-interval-3 width=70%}
+
+![Interval $(-\infty,b]$](/images/interval_4.png){#fig-interval-4 width=70%}
+
+
+
+
+
+
 ## Absolute value or Modulus
 
 In this section we assume to have available the set $\R$ of **real numbers**, which we recall is an extension of $\Q$. 
@@ -515,7 +645,7 @@ $$
 
 You might be familiar with the graph associated to the absolute value function:
 
-![Plot of the absolute value function $f(x)=|x|$](/images/absolute_value.png){width=50%}
+![Plot of the absolute value function $f(x)=|x|$](/images/absolute_value.png){width=40%}
 
 
 However in these Lecture Notes we are not dealing with functions, so it is better to think about the absolute value in a geometric way.  
@@ -530,7 +660,7 @@ A number $x \in \R$ can be represented with a point on the real line $\R$.The no
 :::
 
 
-![Geometric interpretation of $|x|$](/images/absolute_value_1.png){#fig-absolute-value-1 width=85%}
+![Geometric interpretation of $|x|$](/images/absolute_value_1.png){#fig-absolute-value-1 width=70%}
 
 
 
@@ -544,7 +674,46 @@ $$
 $$
 :::
 
-![Geometric interpretation of $|x-y|$](/images/absolute_value_2.png){#fig-absolute-value-2 width=85%}
+![Geometric interpretation of $|x-y|$](/images/absolute_value_2.png){#fig-absolute-value-2 width=70%}
+
+
+In the next Lemma we show a fundamental equivalence regarding the absolute value.
+
+::: {.Lemma #lemma-absolute-value}
+Let $x,y \in \R$, with $y \geq 0$. Then
+$$
+|x| \leq y  \iff -y \leq x \leq y \,.
+$$
+:::
+
+The geometric meaning of the above statement is clear: the distance of $x$ from the origin is less than $y$, in formulae 
+$$
+|x| \leq y\,,
+$$
+if and only if $x$ belongs to the interval $[-y,y]$, in formulae
+$$
+-y \leq x \leq y \,.
+$$
+A sketch of this explanation is seen in @fig-absolute-value-3 below.
+
+![Geometric meaning of Lemma \ref{lemma-absolute-value}](/images/absolute_value_3.png){#fig-absolute-value-3 width=70%}
+
+
+::: Proof
+### Proof of Lemma \ref{lemma-absolute-value}
+
+We divide the proof in steps.  
+
+1. Step 1: implication $\implies$  
+Suppose first that $|x| \leq y$.
+:::
+
+
+
+
+
+
+## Proof with $\e$
 
 
 
