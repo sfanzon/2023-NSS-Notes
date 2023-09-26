@@ -70,3 +70,9 @@
  [**Lemma 2.24**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
 
  [**Proof**](#proof-of-lemma): Proof of Lemma 2.24\Pageref{proof-of-lemma}
+
+ [**Lemma 2.25**](#Lemma-2.25)\Pageref{Lemma-2.25}
+
+ [**Theorem 2.26**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
+
+ [**Proof**](#Proof*-2.3)\Pageref{Proof*-2.3}

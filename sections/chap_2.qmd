@@ -680,7 +680,7 @@ $$
 In the next Lemma we show a fundamental equivalence regarding the absolute value.
 
 ::: {.Lemma #lemma-absolute-value}
-Let $x,y \in \R$, with $y \geq 0$. Then
+Let $x,y \in \R$. Then
 $$
 |x| \leq y  \iff -y \leq x \leq y \,.
 $$
@@ -693,7 +693,7 @@ $$
 if and only if $x$ belongs to the interval $[-y,y]$, in formulae
 $$
 -y \leq x \leq y \,.
-$$
+$$ 
 A sketch of this explanation is seen in @fig-absolute-value-3 below.
 
 ![Geometric meaning of Lemma \ref{lemma-absolute-value}](/images/absolute_value_3.png){#fig-absolute-value-3 width=70%}
@@ -704,16 +704,112 @@ A sketch of this explanation is seen in @fig-absolute-value-3 below.
 
 We divide the proof in steps.  
 
-1. Step 1: implication $\implies$  
-Suppose first that $|x| \leq y$.
+* Step 1: implication $\implies$  
+Suppose first that 
+$$
+|x| \leq y \,.
+$$ {#eq-lemma-absolute-value-1}
+Recalling that the absolute value is non-negative, from (@eq-lemma-absolute-value-1) we deduce that $0 \leq |x| \leq y$. In particular it holds 
+$$
+y \geq 0 \,.
+$$ {#eq-lemma-absolute-value-2}
+We make separate arguments for the cases $x \geq 0$ and $x<0$:
+
+    - Case 1: $x \geq 0$.  From (@eq-lemma-absolute-value-1), (@eq-lemma-absolute-value-2) and from $x \geq 0$ we have
+    $$
+    -y \leq 0 \leq x = |x| \leq y
+    $$
+    which shows 
+    $$
+    -y \leq x \leq y \,.
+    $$
+    - Case 2: $x < 0$. From (@eq-lemma-absolute-value-1), (@eq-lemma-absolute-value-2) and from $x < 0$ we have
+    $$
+    -y \leq 0 < - x = |x| \leq y
+    $$
+    which shows 
+    $$
+    -y \leq - x \leq y \,.
+    $$
+    Multiplying the above inequalities by $-1$ yields
+    $$
+    -y \leq x \leq y \,.
+    $$
+
+* Step 2: implication $\impliedby$  
+Suppose now that  
+$$
+-y \leq x \leq  y \,.
+$$ {#eq-lemma-absolute-value-3}
+We make separate arguments for the cases $x \geq 0$ and $x<0$:
+
+    - Case 1: $x \geq 0$. Since $x \geq 0$, from (@eq-lemma-absolute-value-3) we get
+    $$
+    |x| = x \leq y
+    $$
+    showing that 
+    $$
+    |x| \leq y \,.
+    $$
+    - Case 2: $x < 0$. Since $x < 0$, from (@eq-lemma-absolute-value-3) we have
+    $$
+    -y \leq x = - |x| \,.
+    $$
+    Multiplying the above inequality by $-1$ yields
+    $$
+    |x| \leq y \,.
+    $$
+:::
+
+
+With basically the same arguments, one can also show the following.
+
+
+::: Lemma
+Let $x,y \in \R$. Then
+$$
+|x| < y  \iff -y < x < y \,.
+$$
+:::
+
+
+
+
+## Triangle inequality
+
+The triangle inequality relates the absolute value to the sum operation. It is a very important inequality, which we will use a lot in the future.
+
+::: Theorem
+### Triangle inequality  {#theorem-triangle-inequality}
+
+For every $x, y \in \R$ we have
+$$
+| |x| - |y| | \leq |x-y| \leq |x| + |y| \,.
+$$
+:::
+
+::: Proof
+
+TO do
+
 :::
 
 
 
 
 
+## Proofs involving $\e$
 
-## Proof with $\e$
 
+
+
+
+## Induction
+
+
+
+
+
+## Example: Approximating $\sqrt{2}$
 
 

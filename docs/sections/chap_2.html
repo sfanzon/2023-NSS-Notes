@@ -66,15 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -82,7 +78,31 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -90,29 +110,9 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
 }
 </style>
 
@@ -227,7 +227,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#equivalence-and-order-relation" id="toc-equivalence-and-order-relation" class="nav-link" data-scroll-target="#equivalence-and-order-relation"><span class="header-section-number">2.4</span> Equivalence and order relation</a></li>
   <li><a href="#intervals" id="toc-intervals" class="nav-link" data-scroll-target="#intervals"><span class="header-section-number">2.5</span> Intervals</a></li>
   <li><a href="#absolute-value-or-modulus" id="toc-absolute-value-or-modulus" class="nav-link" data-scroll-target="#absolute-value-or-modulus"><span class="header-section-number">2.6</span> Absolute value or Modulus</a></li>
-  <li><a href="#proof-with-varepsilon" id="toc-proof-with-varepsilon" class="nav-link" data-scroll-target="#proof-with-varepsilon"><span class="header-section-number">2.7</span> Proof with <span class="math inline">\(\varepsilon\)</span></a></li>
+  <li><a href="#triangle-inequality" id="toc-triangle-inequality" class="nav-link" data-scroll-target="#triangle-inequality"><span class="header-section-number">2.7</span> Triangle inequality</a></li>
+  <li><a href="#proofs-involving-varepsilon" id="toc-proofs-involving-varepsilon" class="nav-link" data-scroll-target="#proofs-involving-varepsilon"><span class="header-section-number">2.8</span> Proofs involving <span class="math inline">\(\varepsilon\)</span></a></li>
+  <li><a href="#induction" id="toc-induction" class="nav-link" data-scroll-target="#induction"><span class="header-section-number">2.9</span> Induction</a></li>
+  <li><a href="#example-approximating-sqrt2" id="toc-example-approximating-sqrt2" class="nav-link" data-scroll-target="#example-approximating-sqrt2"><span class="header-section-number">2.10</span> Example: Approximating <span class="math inline">\(\sqrt{2}\)</span></a></li>
   </ul>
 </nav>
     </div>
@@ -714,7 +717,7 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </div>
 <p>In the next Lemma we show a fundamental equivalence regarding the absolute value.</p>
 <div id="lemma-absolute-value" class="Lemma">
-<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 24</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(y \geq 0\)</span>. Then <span class="math display">\[
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 24</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
 |x| \leq y  \iff -y \leq x \leq y \,.
 \]</span><p></p>
 </div></details>
@@ -733,15 +736,77 @@ x  &amp; \text{ if } \, x \geq 0 \\
 <div id="proof-of-lemma" class="Proof" title="Proof of Lemma 24">
 <details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Lemma 24</summary><div>
 <p>We divide the proof in steps.</p>
-<ol type="1">
-<li>Step 1: implication <span class="math inline">\(\implies\)</span><br>
-Suppose first that <span class="math inline">\(|x| \leq y\)</span>.</li>
-</ol>
+<ul>
+<li><p>Step 1: implication <span class="math inline">\(\implies\)</span><br>
+Suppose first that <span id="eq-lemma-absolute-value-1"><span class="math display">\[
+|x| \leq y \,.
+\tag{2.4}\]</span></span> Recalling that the absolute value is non-negative, from (<a href="#eq-lemma-absolute-value-1"><span>2.4</span></a>) we deduce that <span class="math inline">\(0 \leq |x| \leq y\)</span>. In particular it holds <span id="eq-lemma-absolute-value-2"><span class="math display">\[
+y \geq 0 \,.
+\tag{2.5}\]</span></span> We make separate arguments for the cases <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(x&lt;0\)</span>:</p>
+<ul>
+<li>Case 1: <span class="math inline">\(x \geq 0\)</span>. From (<a href="#eq-lemma-absolute-value-1"><span>2.4</span></a>), (<a href="#eq-lemma-absolute-value-2"><span>2.5</span></a>) and from <span class="math inline">\(x \geq 0\)</span> we have <span class="math display">\[
+  -y \leq 0 \leq x = |x| \leq y
+  \]</span> which shows <span class="math display">\[
+  -y \leq x \leq y \,.
+  \]</span></li>
+<li>Case 2: <span class="math inline">\(x &lt; 0\)</span>. From (<a href="#eq-lemma-absolute-value-1"><span>2.4</span></a>), (<a href="#eq-lemma-absolute-value-2"><span>2.5</span></a>) and from <span class="math inline">\(x &lt; 0\)</span> we have <span class="math display">\[
+  -y \leq 0 &lt; - x = |x| \leq y
+  \]</span> which shows <span class="math display">\[
+  -y \leq - x \leq y \,.
+  \]</span> Multiplying the above inequalities by <span class="math inline">\(-1\)</span> yields <span class="math display">\[
+  -y \leq x \leq y \,.
+  \]</span></li>
+</ul></li>
+<li><p>Step 2: implication <span class="math inline">\(\impliedby\)</span><br>
+Suppose now that<br>
+<span id="eq-lemma-absolute-value-3"><span class="math display">\[
+-y \leq x \leq  y \,.
+\tag{2.6}\]</span></span> We make separate arguments for the cases <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(x&lt;0\)</span>:</p>
+<ul>
+<li>Case 1: <span class="math inline">\(x \geq 0\)</span>. Since <span class="math inline">\(x \geq 0\)</span>, from (<a href="#eq-lemma-absolute-value-3"><span>2.6</span></a>) we get <span class="math display">\[
+  |x| = x \leq y
+  \]</span> showing that <span class="math display">\[
+  |x| \leq y \,.
+  \]</span></li>
+<li>Case 2: <span class="math inline">\(x &lt; 0\)</span>. Since <span class="math inline">\(x &lt; 0\)</span>, from (<a href="#eq-lemma-absolute-value-3"><span>2.6</span></a>) we have <span class="math display">\[
+  -y \leq x = - |x| \,.
+  \]</span> Multiplying the above inequality by <span class="math inline">\(-1\)</span> yields <span class="math display">\[
+  |x| \leq y \,.
+  \]</span></li>
+</ul></li>
+</ul>
+</div></details>
+</div>
+<p>With basically the same arguments, one can also show the following.</p>
+<div id="Lemma-25" class="Lemma">
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 25</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
+|x| &lt; y  \iff -y &lt; x &lt; y \,.
+\]</span><p></p>
 </div></details>
 </div>
 </section>
-<section id="proof-with-varepsilon" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="proof-with-varepsilon"><span class="header-section-number">2.7</span> Proof with <span class="math inline">\(\varepsilon\)</span></h2>
+<section id="triangle-inequality" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="triangle-inequality"><span class="header-section-number">2.7</span> Triangle inequality</h2>
+<p>The triangle inequality relates the absolute value to the sum operation. It is a very important inequality, which we will use a lot in the future.</p>
+<div id="theorem-triangle-inequality" class="Theorem" title="Triangle inequality">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26: </strong>Triangle inequality</summary><div>For every <span class="math inline">\(x, y \in \mathbb{R}\)</span> we have <span class="math display">\[
+| |x| - |y| | \leq |x-y| \leq |x| + |y| \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-3" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>TO do<p></p>
+</div></details>
+</div>
+</section>
+<section id="proofs-involving-varepsilon" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="proofs-involving-varepsilon"><span class="header-section-number">2.8</span> Proofs involving <span class="math inline">\(\varepsilon\)</span></h2>
+</section>
+<section id="induction" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="induction"><span class="header-section-number">2.9</span> Induction</h2>
+</section>
+<section id="example-approximating-sqrt2" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="example-approximating-sqrt2"><span class="header-section-number">2.10</span> Example: Approximating <span class="math inline">\(\sqrt{2}\)</span></h2>
 
 
 </section>
