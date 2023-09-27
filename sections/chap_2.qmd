@@ -576,13 +576,13 @@ In general we also define the intervals
 
 Some of the above intervals are depicted in @fig-interval-1, @fig-interval-2, @fig-interval-3, @fig-interval-4 below. 
 
-![Interval $(a,b)$](/images/interval_1.png){#fig-interval-1 width=70%}
+![Interval $(a,b)$](/images/interval_1.png){#fig-interval-1 width=60%}
 
-![Interval $[a,b]$](/images/interval_2.png){#fig-interval-2 width=70%}
+![Interval $[a,b]$](/images/interval_2.png){#fig-interval-2 width=60%}
 
-![Interval $(a,\infty)$](/images/interval_3.png){#fig-interval-3 width=70%}
+![Interval $(a,\infty)$](/images/interval_3.png){#fig-interval-3 width=60%}
 
-![Interval $(-\infty,b]$](/images/interval_4.png){#fig-interval-4 width=70%}
+![Interval $(-\infty,b]$](/images/interval_4.png){#fig-interval-4 width=60%}
 
 
 
@@ -805,10 +805,10 @@ that is, *the length of each side of a triangle does not exceed the sum of the l
 :::
 
 
-![Vectors $x$ and $y$](/images/triangle_ineq_1.png){#fig-triangle-ineq-1 width=30%}
+![Vectors $x$ and $y$](/images/triangle_ineq_1.png){#fig-triangle-ineq-1 width=20%}
 
 
-![Summing the vectors $x$ and $y$. The triangle inequality relates the length of $x+y$ to the length of $x$ and $y$](/images/triangle_ineq_2.png){#fig-triangle-ineq-2 width=45%}
+![Summing the vectors $x$ and $y$. The triangle inequality relates the length of $x+y$ to the length of $x$ and $y$](/images/triangle_ineq_2.png){#fig-triangle-ineq-2 width=35%}
 
 
 
@@ -899,6 +899,8 @@ $$
 |x-y| \leq |x-z| + |z-y| \,.
 $$
 :::
+
+
 
 
 
