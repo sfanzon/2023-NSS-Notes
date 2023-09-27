@@ -12994,3 +12994,147 @@
  [**Proof**](chap_2.qmd#proof-of-theorem): Proof of Theorem 26\Pageref{proof-of-theorem}
 
  [**Remark 28**](chap_2.qmd#Remark-28)\Pageref{Remark-28}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Remark 7**](chap_1.qmd#Remark-7)\Pageref{Remark-7}
+
+ [**Theorem 8**](chap_1.qmd#we-will-prove-this-in-the-future): We will prove this in the future\Pageref{we-will-prove-this-in-the-future}
+
+ [**Theorem 9**](chap_1.qmd#we-will-prove-this-in-the-future-1): We will prove this in the future\Pageref{we-will-prove-this-in-the-future-1}
+
+ [**Remark 1**](chap_2.qmd#Remark-1)\Pageref{Remark-1}
+
+ [**Example 2**](chap_2.qmd#Example-2)\Pageref{Example-2}
+
+ [**Example 3**](chap_2.qmd#Example-3)\Pageref{Example-3}
+
+ [**Example 4**](chap_2.qmd#Example-4)\Pageref{Example-4}
+
+ [**Example 5**](chap_2.qmd#Example-5)\Pageref{Example-5}
+
+ [**Example 6**](chap_2.qmd#Example-6)\Pageref{Example-6}
+
+ [**Proposition 7**](chap_2.qmd#Proposition-Equality-Sets)\Pageref{Proposition-Equality-Sets}
+
+ [**Proof**](chap_2.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Example 8**](chap_2.qmd#Example-8)\Pageref{Example-8}
+
+ [**Remark 9**](chap_2.qmd#Remark-9)\Pageref{Remark-9}
+
+ [**Example 10**](chap_2.qmd#Example-10)\Pageref{Example-10}
+
+ [**Proposition 11**](chap_2.qmd#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
+
+ [**Definition 12**](chap_2.qmd#equivalence-relation): Equivalence relation\Pageref{equivalence-relation}
+
+ [**Definition 13**](chap_2.qmd#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+
+ [**Example 14**](chap_2.qmd#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
+
+ [**Definition 15**](chap_2.qmd#order-relation): Order relation\Pageref{order-relation}
+
+ [**Example 16**](chap_2.qmd#inequality-is-an-order-relation): Inequality is an order relation\Pageref{inequality-is-an-order-relation}
+
+ [**Definition 17**](chap_2.qmd#Definition-17)\Pageref{Definition-17}
+
+ [**Definition 18**](chap_2.qmd#absolute-value): Absolute value\Pageref{absolute-value}
+
+ [**Example 19**](chap_2.qmd#Example-19)\Pageref{Example-19}
+
+ [**Remark 20**](chap_2.qmd#Remark-20)\Pageref{Remark-20}
+
+ [**Remark 21**](chap_2.qmd#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+
+ [**Remark 22**](chap_2.qmd#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+
+ [**Remark 23**](chap_2.qmd#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+
+ [**Lemma 24**](chap_2.qmd#lemma-absolute-value)\Pageref{lemma-absolute-value}
+
+ [**Proof**](chap_2.qmd#proof-of-lemma): Proof of Lemma 24\Pageref{proof-of-lemma}
+
+ [**Lemma 25**](chap_2.qmd#Lemma-25)\Pageref{Lemma-25}
+
+ [**Theorem 26**](chap_2.qmd#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
+
+ [**Remark 27**](chap_2.qmd#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
+
+ [**Proof**](chap_2.qmd#proof-of-theorem): Proof of Theorem 26\Pageref{proof-of-theorem}
+
+ [**Remark 28**](chap_2.qmd#Remark-28)\Pageref{Remark-28}
+
+ [**Remark 1**](chap_2.qmd#Remark-1)\Pageref{Remark-1}
+
+ [**Example 2**](chap_2.qmd#Example-2)\Pageref{Example-2}
+
+ [**Example 3**](chap_2.qmd#Example-3)\Pageref{Example-3}
+
+ [**Example 4**](chap_2.qmd#Example-4)\Pageref{Example-4}
+
+ [**Example 5**](chap_2.qmd#Example-5)\Pageref{Example-5}
+
+ [**Example 6**](chap_2.qmd#Example-6)\Pageref{Example-6}
+
+ [**Proposition 7**](chap_2.qmd#Proposition-Equality-Sets)\Pageref{Proposition-Equality-Sets}
+
+ [**Proof**](chap_2.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Example 8**](chap_2.qmd#Example-8)\Pageref{Example-8}
+
+ [**Remark 9**](chap_2.qmd#Remark-9)\Pageref{Remark-9}
+
+ [**Example 10**](chap_2.qmd#Example-10)\Pageref{Example-10}
+
+ [**Proposition 11**](chap_2.qmd#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
+
+ [**Definition 12**](chap_2.qmd#equivalence-relation): Equivalence relation\Pageref{equivalence-relation}
+
+ [**Definition 13**](chap_2.qmd#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+
+ [**Example 14**](chap_2.qmd#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
+
+ [**Definition 15**](chap_2.qmd#order-relation): Order relation\Pageref{order-relation}
+
+ [**Example 16**](chap_2.qmd#inequality-is-an-order-relation): Inequality is an order relation\Pageref{inequality-is-an-order-relation}
+
+ [**Definition 17**](chap_2.qmd#Definition-17)\Pageref{Definition-17}
+
+ [**Definition 18**](chap_2.qmd#absolute-value): Absolute value\Pageref{absolute-value}
+
+ [**Example 19**](chap_2.qmd#Example-19)\Pageref{Example-19}
+
+ [**Remark 20**](chap_2.qmd#Remark-20)\Pageref{Remark-20}
+
+ [**Remark 21**](chap_2.qmd#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+
+ [**Remark 22**](chap_2.qmd#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+
+ [**Remark 23**](chap_2.qmd#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+
+ [**Lemma 24**](chap_2.qmd#lemma-absolute-value)\Pageref{lemma-absolute-value}
+
+ [**Proof**](chap_2.qmd#proof-of-lemma): Proof of Lemma 24\Pageref{proof-of-lemma}
+
+ [**Lemma 25**](chap_2.qmd#Lemma-25)\Pageref{Lemma-25}
+
+ [**Theorem 26**](chap_2.qmd#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
+
+ [**Remark 27**](chap_2.qmd#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
+
+ [**Proof**](chap_2.qmd#proof-of-theorem): Proof of Theorem 26\Pageref{proof-of-theorem}
+
+ [**Remark 28**](chap_2.qmd#Remark-28)\Pageref{Remark-28}
