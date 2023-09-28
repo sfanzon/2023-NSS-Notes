@@ -43,40 +43,42 @@
 
  [**Proposition 2.11**](#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
 
- [**Definition 2.12**](#equivalence-relation): Equivalence relation\Pageref{equivalence-relation}
+ [**Definition 2.12**](#equivalence-relation-1): Equivalence relation\Pageref{equivalence-relation-1}
 
  [**Definition 2.13**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
 
  [**Example 2.14**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
 
- [**Definition 2.15**](#order-relation): Order relation\Pageref{order-relation}
+ [**Example 2.15**](#Example-2.15)\Pageref{Example-2.15}
 
- [**Example 2.16**](#inequality-is-an-order-relation): Inequality is an order relation\Pageref{inequality-is-an-order-relation}
+ [**Definition 2.16**](#order-relation-1): Order relation\Pageref{order-relation-1}
 
- [**Definition 2.17**](#Definition-2.17)\Pageref{Definition-2.17}
+ [**Example 2.17**](#inequality-is-an-order-relation): Inequality is an order relation\Pageref{inequality-is-an-order-relation}
 
- [**Definition 2.18**](#absolute-value): Absolute value\Pageref{absolute-value}
+ [**Definition 2.18**](#Definition-2.18)\Pageref{Definition-2.18}
 
- [**Example 2.19**](#Example-2.19)\Pageref{Example-2.19}
+ [**Definition 2.19**](#absolute-value): Absolute value\Pageref{absolute-value}
 
- [**Remark 2.20**](#Remark-2.20)\Pageref{Remark-2.20}
+ [**Example 2.20**](#Example-2.20)\Pageref{Example-2.20}
 
- [**Remark 2.21**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+ [**Remark 2.21**](#Remark-2.21)\Pageref{Remark-2.21}
 
- [**Remark 2.22**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+ [**Remark 2.22**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
 
- [**Remark 2.23**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+ [**Remark 2.23**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
 
- [**Lemma 2.24**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
+ [**Remark 2.24**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
 
- [**Proof**](#proof-of-lemma): Proof of Lemma 2.24\Pageref{proof-of-lemma}
+ [**Lemma 2.25**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
 
- [**Lemma 2.25**](#Lemma-2.25)\Pageref{Lemma-2.25}
+ [**Proof**](#proof-of-lemma): Proof of Lemma 2.25\Pageref{proof-of-lemma}
 
- [**Theorem 2.26**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
+ [**Lemma 2.26**](#Lemma-2.26)\Pageref{Lemma-2.26}
 
- [**Remark 2.27**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
+ [**Theorem 2.27**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
 
- [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.26\Pageref{proof-of-theorem-1}
+ [**Remark 2.28**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
 
- [**Remark 2.28**](#Remark-2.28)\Pageref{Remark-2.28}
+ [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.27\Pageref{proof-of-theorem-1}
+
+ [**Remark 2.29**](#Remark-2.29)\Pageref{Remark-2.29}

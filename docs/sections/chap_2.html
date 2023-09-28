@@ -66,35 +66,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -102,17 +82,37 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -224,13 +224,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#complement" id="toc-complement" class="nav-link" data-scroll-target="#complement"><span class="header-section-number">2.3.4</span> Complement</a></li>
   <li><a href="#product-of-sets" id="toc-product-of-sets" class="nav-link" data-scroll-target="#product-of-sets"><span class="header-section-number">2.3.5</span> Product of sets</a></li>
   </ul></li>
-  <li><a href="#equivalence-and-order-relation" id="toc-equivalence-and-order-relation" class="nav-link" data-scroll-target="#equivalence-and-order-relation"><span class="header-section-number">2.4</span> Equivalence and order relation</a></li>
-  <li><a href="#intervals" id="toc-intervals" class="nav-link" data-scroll-target="#intervals"><span class="header-section-number">2.5</span> Intervals</a></li>
-  <li><a href="#absolute-value-or-modulus" id="toc-absolute-value-or-modulus" class="nav-link" data-scroll-target="#absolute-value-or-modulus"><span class="header-section-number">2.6</span> Absolute value or Modulus</a></li>
-  <li><a href="#triangle-inequality" id="toc-triangle-inequality" class="nav-link" data-scroll-target="#triangle-inequality"><span class="header-section-number">2.7</span> Triangle inequality</a></li>
-  <li><a href="#proofs-involving-varepsilon" id="toc-proofs-involving-varepsilon" class="nav-link" data-scroll-target="#proofs-involving-varepsilon"><span class="header-section-number">2.8</span> Proofs involving <span class="math inline">\(\varepsilon\)</span></a></li>
-  <li><a href="#induction" id="toc-induction" class="nav-link" data-scroll-target="#induction"><span class="header-section-number">2.9</span> Induction</a></li>
-  <li><a href="#example-approximating-sqrt2" id="toc-example-approximating-sqrt2" class="nav-link" data-scroll-target="#example-approximating-sqrt2"><span class="header-section-number">2.10</span> Example: Approximating <span class="math inline">\(\sqrt{2}\)</span></a></li>
+  <li><a href="#equivalence-relation" id="toc-equivalence-relation" class="nav-link" data-scroll-target="#equivalence-relation"><span class="header-section-number">2.4</span> Equivalence relation</a></li>
+  <li><a href="#order-relation" id="toc-order-relation" class="nav-link" data-scroll-target="#order-relation"><span class="header-section-number">2.5</span> Order relation</a></li>
+  <li><a href="#intervals" id="toc-intervals" class="nav-link" data-scroll-target="#intervals"><span class="header-section-number">2.6</span> Intervals</a></li>
+  <li><a href="#absolute-value-or-modulus" id="toc-absolute-value-or-modulus" class="nav-link" data-scroll-target="#absolute-value-or-modulus"><span class="header-section-number">2.7</span> Absolute value or Modulus</a></li>
+  <li><a href="#triangle-inequality" id="toc-triangle-inequality" class="nav-link" data-scroll-target="#triangle-inequality"><span class="header-section-number">2.8</span> Triangle inequality</a></li>
+  <li><a href="#proofs-involving-varepsilon" id="toc-proofs-involving-varepsilon" class="nav-link" data-scroll-target="#proofs-involving-varepsilon"><span class="header-section-number">2.9</span> Proofs involving <span class="math inline">\(\varepsilon\)</span></a></li>
+  <li><a href="#induction" id="toc-induction" class="nav-link" data-scroll-target="#induction"><span class="header-section-number">2.10</span> Induction</a></li>
+  <li><a href="#example-approximating-sqrt2" id="toc-example-approximating-sqrt2" class="nav-link" data-scroll-target="#example-approximating-sqrt2"><span class="header-section-number">2.11</span> Example: Approximating <span class="math inline">\(\sqrt{2}\)</span></a></li>
   </ul>
 </nav>
     </div>
@@ -514,12 +515,12 @@ a=\tilde{a}\,, \qquad b = \tilde{b} \,.
 \]</span></p>
 </section>
 </section>
-<section id="equivalence-and-order-relation" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="equivalence-and-order-relation"><span class="header-section-number">2.4</span> Equivalence and order relation</h2>
+<section id="equivalence-relation" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="equivalence-relation"><span class="header-section-number">2.4</span> Equivalence relation</h2>
 <p>Suppose <span class="math inline">\(A\)</span> is a set. A <strong>binary relation</strong> <span class="math inline">\(R\)</span> on <span class="math inline">\(A\)</span> is a subset <span class="math display">\[
 R \subset A \times A \,.
 \]</span></p>
-<div id="equivalence-relation" class="Definition" title="Equivalence relation">
+<div id="equivalence-relation-1" class="Definition" title="Equivalence relation">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 12: </strong>Equivalence relation</summary><div>A binary relation <span class="math inline">\(R\)</span> is called an <strong>equivalence relation</strong> if it satisfies the following properties:<p></p>
 <ol type="1">
 <li><p><strong>Reflexive</strong>: For each <span class="math inline">\(x \in A\)</span> one has <span class="math display">\[
@@ -569,9 +570,45 @@ R:=\{ (x,y) \in \mathbb{N}\times \mathbb{N}\, \colon \, x=y  \} \,.
 \]</span> that is, this relation is quite trivial, given that each element of <span class="math inline">\(\mathbb{N}\)</span> can only be related to itself.</p>
 </div></details>
 </div>
+<div id="Example-15" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 15</strong></summary><div>Suppose that <span class="math inline">\(R\)</span> is a binary relation on the set <span class="math inline">\(\mathbb{Q}\)</span> of rational numbers defined by <span class="math display">\[
+x \sim y  \iff x-y \in \mathbb{Z}\,.
+\]</span> Then <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(\mathbb{Q}\)</span>. Indeed:<p></p>
+<ol type="1">
+<li>Reflexive: Let <span class="math inline">\(x \in \mathbb{Q}\)</span>. Then <span class="math inline">\(x-x = 0\)</span> and <span class="math inline">\(0 \in \mathbb{Z}\)</span>. Thus <span class="math inline">\(x \sim x\)</span>.</li>
+<li>Symmetric: If <span class="math inline">\(x \sim y\)</span> then <span class="math inline">\(x-y \in \mathbb{Z}\)</span>. But then also<br>
+<span class="math display">\[
+-(x-y) = y - x \in \mathbb{Z}
+\]</span> and so <span class="math inline">\(y \sim x\)</span>.</li>
+<li>Transitive: Suppose <span class="math inline">\(x \sim y\)</span> and <span class="math inline">\(y \sim z\)</span>. Then <span class="math display">\[
+x - y \in \mathbb{Z}\,  \text{ and } \, y - z \in \mathbb{Z}\,.
+\]</span> Thus we have <span class="math display">\[
+x-z = (x-y) + (y-z) \in \mathbb{Z}
+\]</span> showing that <span class="math inline">\(x \sim z\)</span>. This shows that <span class="math inline">\(R\)</span> is an equivalence relation on <span class="math inline">\(\mathbb{Q}\)</span>.</li>
+</ol>
+<p>Now note that <span class="math display">\[
+y \sim x \iff y -x \in \mathbb{Z}
+\]</span> and the above is equivalent to <span class="math display">\[
+\exists \, n \in \mathbb{Z}\, \text{ s.t. } \, y - x = n
+\]</span> which again is equivalent to <span class="math display">\[
+\exists \, n \in \mathbb{Z}\, \text{ s.t. } \, y = x + n \,.
+\]</span> Therefore all the elements of <span class="math inline">\(\mathbb{Q}\)</span> related to <span class="math inline">\(x\)</span> by <span class="math inline">\(R\)</span> are of the form <span class="math display">\[
+x + n \,, \, \forall \, n \in \mathbb{Z}\,.
+\]</span> The equivalence classes with respect to <span class="math inline">\(R\)</span> are then <span class="math display">\[
+[x] = \{  x + n \ \colon \ n \in \mathbb{Z}\}  \,.
+\]</span> Each equivalence class has exactly one element in <span class="math inline">\([0,1) \cap \mathbb{Q}\)</span>, meaning that: <span class="math display">\[
+\forall x \in \mathbb{Q}\,, \,\, \exists! \, q \in \mathbb{Q}\, \text{ s.t } \, 0 \leq q &lt; 1 \, \text{ and } \, q \in [x]\,.
+\]</span> Therefore <span class="math display">\[
+\mathbb{Q}/ R = \{ [x] \, \colon \,x \in \mathbb{Q}\} = \{ q \in \mathbb{Q}\, \colon \,0&lt;q&lt;1  \} \,.
+\]</span></p>
+</div></details>
+</div>
+</section>
+<section id="order-relation" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="order-relation"><span class="header-section-number">2.5</span> Order relation</h2>
 <p>Similarly, we define <strong>order relations</strong>.</p>
-<div id="order-relation" class="Definition" title="Order relation">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Order relation</summary><div>
+<div id="order-relation-1" class="Definition" title="Order relation">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Order relation</summary><div>
 <p>A binary relation <span class="math inline">\(R\)</span> is called an <strong>order relation</strong> if it satisfies the following properties:</p>
 <ol type="1">
 <li><p><strong>Reflexive</strong>: For each <span class="math inline">\(x \in A\)</span> one has <span class="math display">\[
@@ -591,7 +628,7 @@ R:=\{ (x,y) \in \mathbb{N}\times \mathbb{N}\, \colon \, x=y  \} \,.
 </div>
 <p>The prototypical example of order relation is the <strong>inequality</strong> relation.</p>
 <div id="inequality-is-an-order-relation" class="Example" title="Inequality is an order relation">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16: </strong>Inequality is an order relation</summary><div>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 17: </strong>Inequality is an order relation</summary><div>
 <p>Consider the set of integers <span class="math inline">\(\mathbb{Z}\)</span>. The inequality defines a <strong>binary relation</strong> on <span class="math inline">\(\mathbb{Z}\times \mathbb{Z}\)</span>, via <span class="math display">\[
 R:=\{ (x,y) \in \mathbb{Z}\times \mathbb{Z}\, \colon \, x \leq y  \} \,.
 \]</span> Let us check that <span class="math inline">\(R\)</span> is an <strong>order relation</strong>:</p>
@@ -603,11 +640,11 @@ R:=\{ (x,y) \in \mathbb{Z}\times \mathbb{Z}\, \colon \, x \leq y  \} \,.
 </div></details>
 </div>
 </section>
-<section id="intervals" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="intervals"><span class="header-section-number">2.5</span> Intervals</h2>
+<section id="intervals" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="intervals"><span class="header-section-number">2.6</span> Intervals</h2>
 <p>In this section we assume to have available the set <span class="math inline">\(\mathbb{R}\)</span> of <strong>real numbers</strong>, which we recall is an extension of <span class="math inline">\(\mathbb{Q}\)</span>. We now introduce the concept of <strong>interval</strong>.</p>
-<div id="Definition-17" class="Definition">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. We define the <strong>open interval</strong> <span class="math inline">\((a,b)\)</span> as the set <span class="math display">\[
+<div id="Definition-18" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 18</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. We define the <strong>open interval</strong> <span class="math inline">\((a,b)\)</span> as the set <span class="math display">\[
 (a,b) := \{ x \in \mathbb{R}\, \colon \, a &lt; x &lt; b \}\,.
 \]</span> We define the <strong>close interval</strong> <span class="math inline">\([a,b]\)</span> as the set <span class="math display">\[
 [a,b] := \{ x \in \mathbb{R}\, \colon \, a \leq x \leq b \}\,.
@@ -648,11 +685,11 @@ R:=\{ (x,y) \in \mathbb{Z}\times \mathbb{Z}\, \colon \, x \leq y  \} \,.
 </figure>
 </div>
 </section>
-<section id="absolute-value-or-modulus" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="absolute-value-or-modulus"><span class="header-section-number">2.6</span> Absolute value or Modulus</h2>
+<section id="absolute-value-or-modulus" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="absolute-value-or-modulus"><span class="header-section-number">2.7</span> Absolute value or Modulus</h2>
 <p>In this section we assume to have available the set <span class="math inline">\(\mathbb{R}\)</span> of <strong>real numbers</strong>, which we recall is an extension of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <div id="absolute-value" class="Definition" title="Absolute value">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 18: </strong>Absolute value</summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span> we define its <strong>absolute value</strong> as the quantity <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 19: </strong>Absolute value</summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span> we define its <strong>absolute value</strong> as the quantity <span class="math display">\[
 |x| =
 \begin{cases}
 x  &amp; \text{ if } \, x \geq 0 \\
@@ -661,8 +698,8 @@ x  &amp; \text{ if } \, x \geq 0 \\
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Example-19" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 19</strong></summary><div>By definition one has <span class="math inline">\(|x|=x\)</span> if <span class="math inline">\(x \geq 0\)</span>. For example <span class="math display">\[
+<div id="Example-20" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 20</strong></summary><div>By definition one has <span class="math inline">\(|x|=x\)</span> if <span class="math inline">\(x \geq 0\)</span>. For example <span class="math display">\[
 |\pi| = \pi \,, \,\, \left|\sqrt{2}\right| = \sqrt{2} \,, \,\, |0|=0 \,.
 \]</span> Instead <span class="math inline">\(|x|= -x\)</span> if <span class="math inline">\(x &lt; 0\)</span>. For example <span class="math display">\[
 |-\pi| = \pi \,, \,\, \left|-\sqrt{2}\right| = \sqrt{2} \,, \,\, |-10|=10 \,.
@@ -670,8 +707,8 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </div></details>
 </div>
 <p>Let us also make the following basic remark, whose proof will be left as an exercise.</p>
-<div id="Remark-20" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 20</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
+<div id="Remark-21" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 21</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
 |x| \geq 0 \,.
 \]</span> Moreover <span class="math display">\[
 |x| = 0 \iff x = 0 \,.
@@ -680,7 +717,7 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </div>
 <p>Another basic remark (proof by exercise).</p>
 <div id="rmk-absolute-value-sym" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 21</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 22</strong></summary><div>For all <span class="math inline">\(x \in \mathbb{R}\)</span> one has <span class="math display">\[
 |x| = |-x| \,.
 \]</span><p></p>
 </div></details>
@@ -694,7 +731,7 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </div>
 <p>However in these Lecture Notes we are not dealing with functions, so it is better to think about the absolute value in a geometric way.</p>
 <div id="geometric-interpretation-of-x" class="Remark" title="Geometric interpretation of |x|">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 22: </strong>Geometric interpretation of <span class="math inline">\(|x|\)</span></summary><div>A number <span class="math inline">\(x \in \mathbb{R}\)</span> can be represented with a point on the real line <span class="math inline">\(\mathbb{R}\)</span>.The non-negative number <span class="math inline">\(|x|\)</span> represents the <strong>distance</strong> of <span class="math inline">\(x\)</span> from the origin <span class="math inline">\(0\)</span>. Notice that this works for both positive and negative numbers <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> respectively, as shown in <a href="#fig-absolute-value-1">Figure&nbsp;<span>2.5</span></a> below.<p></p>
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 23: </strong>Geometric interpretation of <span class="math inline">\(|x|\)</span></summary><div>A number <span class="math inline">\(x \in \mathbb{R}\)</span> can be represented with a point on the real line <span class="math inline">\(\mathbb{R}\)</span>.The non-negative number <span class="math inline">\(|x|\)</span> represents the <strong>distance</strong> of <span class="math inline">\(x\)</span> from the origin <span class="math inline">\(0\)</span>. Notice that this works for both positive and negative numbers <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> respectively, as shown in <a href="#fig-absolute-value-1">Figure&nbsp;<span>2.5</span></a> below.<p></p>
 </div></details>
 </div>
 <div id="fig-absolute-value-1" class="quarto-figure quarto-figure-center anchored">
@@ -704,7 +741,7 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </figure>
 </div>
 <div id="geometric-interpretation-of-x-y" class="Remark" title="Geometric interpretation of |x-y|">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 23: </strong>Geometric interpretation of <span class="math inline">\(|x-y|\)</span></summary><div>If <span class="math inline">\(x,y \in \mathbb{R}\)</span> then the number <span class="math inline">\(|x-y|\)</span> represents the distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the real line, as shown in <a href="#fig-absolute-value-2">Figure&nbsp;<span>2.6</span></a> below. Note that by Remark <a href="chap_2.html#rmk-absolute-value-sym">21</a> we have <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 24: </strong>Geometric interpretation of <span class="math inline">\(|x-y|\)</span></summary><div>If <span class="math inline">\(x,y \in \mathbb{R}\)</span> then the number <span class="math inline">\(|x-y|\)</span> represents the distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the real line, as shown in <a href="#fig-absolute-value-2">Figure&nbsp;<span>2.6</span></a> below. Note that by Remark <a href="chap_2.html#rmk-absolute-value-sym">22</a> we have <span class="math display">\[
 |x-y| = |y-x| \,.
 \]</span><p></p>
 </div></details>
@@ -717,7 +754,7 @@ x  &amp; \text{ if } \, x \geq 0 \\
 </div>
 <p>In the next Lemma we show a fundamental equivalence regarding the absolute value.</p>
 <div id="lemma-absolute-value" class="Lemma">
-<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 24</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 25</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
 |x| \leq y  \iff -y \leq x \leq y \,.
 \]</span><p></p>
 </div></details>
@@ -730,11 +767,11 @@ x  &amp; \text{ if } \, x \geq 0 \\
 <div id="fig-absolute-value-3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../images/absolute_value_3.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.7: Geometric meaning of Lemma <a href="chap_2.html#lemma-absolute-value">24</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;2.7: Geometric meaning of Lemma <a href="chap_2.html#lemma-absolute-value">25</a></figcaption>
 </figure>
 </div>
-<div id="proof-of-lemma" class="Proof" title="Proof of Lemma 24">
-<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Lemma 24</summary><div>
+<div id="proof-of-lemma" class="Proof" title="Proof of Lemma 25">
+<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Lemma 25</summary><div>
 <p>We divide the proof in steps.</p>
 <ul>
 <li><p>Step 1: implication <span class="math inline">\(\implies\)</span><br>
@@ -778,25 +815,25 @@ Suppose now that<br>
 </div></details>
 </div>
 <p>With basically the same arguments, one can also show the following.</p>
-<div id="Lemma-25" class="Lemma">
-<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 25</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
+<div id="Lemma-26" class="Lemma">
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 26</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>. Then <span class="math display">\[
 |x| &lt; y  \iff -y &lt; x &lt; y \,.
 \]</span><p></p>
 </div></details>
 </div>
 </section>
-<section id="triangle-inequality" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="triangle-inequality"><span class="header-section-number">2.7</span> Triangle inequality</h2>
+<section id="triangle-inequality" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="triangle-inequality"><span class="header-section-number">2.8</span> Triangle inequality</h2>
 <p>The triangle inequality relates the absolute value to the sum operation. It is a very important inequality, which we will use a lot in the future.</p>
 <div id="theorem-triangle-inequality" class="Theorem" title="Triangle inequality">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26: </strong>Triangle inequality</summary><div>For every <span class="math inline">\(x, y \in \mathbb{R}\)</span> we have <span id="eq-triangle-inequality"><span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 27: </strong>Triangle inequality</summary><div>For every <span class="math inline">\(x, y \in \mathbb{R}\)</span> we have <span id="eq-triangle-inequality"><span class="math display">\[
 | |x| - |y| | \leq |x-y| \leq |x| + |y| \,.
 \tag{2.7}\]</span></span><p></p>
 </div></details>
 </div>
 <p>Before proceeding with the proof, let us discuss the geometric meaning of the triangle inequality.</p>
 <div id="geometric-meaning-of-triangle-inequality" class="Remark" title="Geometric meaning of triangle inequality">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 27: </strong>Geometric meaning of triangle inequality</summary><div>The notion of absolute value can be extended also to vectors in the plane. Suppose that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are two vectors in the plane, as in <a href="#fig-triangle-ineq-1">Figure&nbsp;<span>2.8</span></a> below. Then <span class="math inline">\(|x|\)</span> and <span class="math inline">\(|y|\)</span> can be interpreted as the <strong>lengths</strong> of these vectors.<br>
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 28: </strong>Geometric meaning of triangle inequality</summary><div>The notion of absolute value can be extended also to vectors in the plane. Suppose that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are two vectors in the plane, as in <a href="#fig-triangle-ineq-1">Figure&nbsp;<span>2.8</span></a> below. Then <span class="math inline">\(|x|\)</span> and <span class="math inline">\(|y|\)</span> can be interpreted as the <strong>lengths</strong> of these vectors.<br>
 Using the rule of sum of vectors, we can draw <span class="math inline">\(x+y\)</span>, as shown in <a href="#fig-triangle-ineq-2">Figure&nbsp;<span>2.9</span></a> below. From the picture it is evident that <span id="eq-triangle-inequality-1"><span class="math display">\[
 |x+y| \leq |x| + |y|\,,
 \tag{2.8}\]</span></span> that is, <em>the length of each side of a triangle does not exceed the sum of the lengths of the two remaining sides</em>. Note that (<a href="#eq-triangle-inequality-1"><span>2.8</span></a>) is exactly the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>). This is why (<a href="#eq-triangle-inequality"><span>2.7</span></a>) is called triangle inequality.<p></p>
@@ -814,20 +851,20 @@ Using the rule of sum of vectors, we can draw <span class="math inline">\(x+y\)<
 <figcaption class="figure-caption">Figure&nbsp;2.9: Summing the vectors <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. The triangle inequality relates the length of <span class="math inline">\(x+y\)</span> to the length of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></figcaption>
 </figure>
 </div>
-<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 26">
-<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 26</summary><div>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 27">
+<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 27</summary><div>
 <p>Assume that <span class="math inline">\(x,y \in \mathbb{R}\)</span>. We prove the two inequalities in (<a href="#eq-triangle-inequality"><span>2.7</span></a>) individually.</p>
 <ul>
 <li><p>Proof of the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>):<br>
 Trivially we have <span class="math display">\[
 |x| \leq |x| \,.
-\]</span> Therefore we can apply Lemma <a href="chap_2.html#lemma-absolute-value">24</a> and infer <span id="eq-triangle-inequality-3"><span class="math display">\[
+\]</span> Therefore we can apply Lemma <a href="chap_2.html#lemma-absolute-value">25</a> and infer <span id="eq-triangle-inequality-3"><span class="math display">\[
 -|x| \leq x \leq |x| \,.
-\tag{2.9}\]</span></span> Similarly we have that <span class="math inline">\(|y| \leq |y|\)</span>, and so Lemma <a href="chap_2.html#lemma-absolute-value">24</a> implies <span id="eq-triangle-inequality-4"><span class="math display">\[
+\tag{2.9}\]</span></span> Similarly we have that <span class="math inline">\(|y| \leq |y|\)</span>, and so Lemma <a href="chap_2.html#lemma-absolute-value">25</a> implies <span id="eq-triangle-inequality-4"><span class="math display">\[
 -|y| \leq y \leq |y| \,.
 \tag{2.10}\]</span></span> Summing (<a href="#eq-triangle-inequality-3"><span>2.9</span></a>) and (<a href="#eq-triangle-inequality-4"><span>2.10</span></a>) we get <span class="math display">\[
 -(|x| + |y|) \leq x + y \leq |x| + |y| \,.
-\]</span> We can now again apply Lemma <a href="chap_2.html#lemma-absolute-value">24</a> to get <span id="eq-triangle-inequality-5"><span class="math display">\[
+\]</span> We can now again apply Lemma <a href="chap_2.html#lemma-absolute-value">25</a> to get <span id="eq-triangle-inequality-5"><span class="math display">\[
 |x + y| \leq |x| + |y| \,,
 \tag{2.11}\]</span></span> which is the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>).</p></li>
 <li><p>Proof of the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>):<br>
@@ -850,15 +887,15 @@ x = x+y - y
 -|x+y| \leq |x| - |y|  \,.
 \tag{2.13}\]</span></span> Putting together (<a href="#eq-triangle-inequality-6"><span>2.12</span></a>) and (<a href="#eq-triangle-inequality-7"><span>2.13</span></a>) yields <span class="math display">\[
 -|x+y| \leq |x| - |y| \leq |x+y| \,.  
-\]</span> By Lemma <a href="chap_2.html#lemma-absolute-value">24</a> the above is equivalent to <span class="math display">\[
+\]</span> By Lemma <a href="chap_2.html#lemma-absolute-value">25</a> the above is equivalent to <span class="math display">\[
 ||x| - |y|| \leq |x+y| \,,
 \]</span> which is the first inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>).</p></li>
 </ul>
 </div></details>
 </div>
 <p>An immediate consequence of the triangle inequality are the following inequalities, which are left as an exercise.</p>
-<div id="Remark-28" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 28</strong></summary><div>For any <span class="math inline">\(x,y \in \mathbb{R}\)</span> it holds <span class="math display">\[
+<div id="Remark-29" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 29</strong></summary><div>For any <span class="math inline">\(x,y \in \mathbb{R}\)</span> it holds <span class="math display">\[
 ||x|-|y|| \leq |x-y| \leq |x|+|y|\,.
 \]</span> Moreover for any <span class="math inline">\(x,y,z \in \mathbb{R}\)</span> it holds <span class="math display">\[
 |x-y| \leq |x-z| + |z-y| \,.
@@ -866,14 +903,14 @@ x = x+y - y
 </div></details>
 </div>
 </section>
-<section id="proofs-involving-varepsilon" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="proofs-involving-varepsilon"><span class="header-section-number">2.8</span> Proofs involving <span class="math inline">\(\varepsilon\)</span></h2>
+<section id="proofs-involving-varepsilon" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="proofs-involving-varepsilon"><span class="header-section-number">2.9</span> Proofs involving <span class="math inline">\(\varepsilon\)</span></h2>
 </section>
-<section id="induction" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="induction"><span class="header-section-number">2.9</span> Induction</h2>
+<section id="induction" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="induction"><span class="header-section-number">2.10</span> Induction</h2>
 </section>
-<section id="example-approximating-sqrt2" class="level2" data-number="2.10">
-<h2 data-number="2.10" class="anchored" data-anchor-id="example-approximating-sqrt2"><span class="header-section-number">2.10</span> Example: Approximating <span class="math inline">\(\sqrt{2}\)</span></h2>
+<section id="example-approximating-sqrt2" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="example-approximating-sqrt2"><span class="header-section-number">2.11</span> Example: Approximating <span class="math inline">\(\sqrt{2}\)</span></h2>
 
 
 </section>

@@ -406,7 +406,7 @@ $$
 
 
 
-## Equivalence and order relation
+## Equivalence relation
 
 
 Suppose $A$ is a set. A **binary relation** $R$ on $A$ is a subset 
@@ -494,6 +494,67 @@ that is, this relation is quite trivial, given that each element of $\N$ can onl
 :::
 
 
+
+
+::: Example
+Suppose that $R$ is a binary relation on the set $\Q$ of rational numbers defined by
+$$
+x \sim y  \iff x-y \in \Z \,.
+$$
+Then $R$ is an equivalence relation on $\Q$. Indeed:
+
+1. Reflexive: Let $x \in \Q$. Then $x-x = 0$ and $0 \in \Z$. Thus $x \sim x$.
+2. Symmetric: If $x \sim y$ then $x-y \in \Z$. But then also  
+$$
+-(x-y) = y - x \in \Z
+$$
+and so $y \sim x$.
+3. Transitive: Suppose $x \sim y$ and $y \sim z$. Then 
+$$
+x - y \in \Z \,  \text{ and } \, y - z \in \Z \,.
+$$
+Thus we have
+$$
+x-z = (x-y) + (y-z) \in \Z
+$$
+showing that $x \sim z$. This shows that $R$ is an equivalence relation on $\Q$.
+
+
+Now note that 
+$$
+y \sim x \iff y -x \in \Z 
+$$
+and the above is equivalent to
+$$
+\exists \, n \in \Z \, \text{ s.t. } \, y - x = n
+$$
+which again is equivalent to 
+$$
+\exists \, n \in \Z \, \text{ s.t. } \, y = x + n \,.
+$$
+Therefore all the elements of $\Q$ related to $x$ by $R$ are of the form 
+$$
+x + n \,, \, \forall \, n \in \Z \,.
+$$
+The equivalence classes with respect to $R$ are then
+$$
+ [x] = \{  x + n \ \colon \ n \in \Z  \}  \,.
+$$
+Each equivalence class has exactly one element in $[0,1) \cap \Q$, meaning that:
+$$
+\forall x \in \Q \,, \,\, \exists! \, q \in \Q \st  0 \leq q < 1 \, \text{ and } \, q \in [x]\,.
+$$
+Therefore 
+$$
+\Q / R = \{ [x] \divider x \in \Q \} = \{ q \in \Q \divider 0<q<1  \} \,.
+$$
+:::
+
+
+
+
+
+## Order relation
 
 Similarly, we define **order relations**.
 
