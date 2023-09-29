@@ -490,7 +490,10 @@ The class of equivalence of $x \in \N$ is given by
 $$
 [x] = \{ x \}\,,
 $$
-that is, this relation is quite trivial, given that each element of $\N$ can only be related to itself. 
+that is, this relation is quite trivial, given that each element of $\N$ can only be related to itself. The quotient space is then 
+$$
+\N / R = \{ [x] \divider x \in \N \} = \{  \{ x\} \divider x \in \N \}  \,.
+$$
 :::
 
 
@@ -546,7 +549,7 @@ $$
 $$
 Therefore 
 $$
-\Q / R = \{ [x] \divider x \in \Q \} = \{ q \in \Q \divider 0<q<1  \} \,.
+\Q / R = \{ [x] \divider x \in \Q \} = \{ q \in \Q \divider 0 \leq q <1  \} \,.
 $$
 :::
 

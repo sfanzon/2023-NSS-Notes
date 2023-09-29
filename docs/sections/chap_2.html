@@ -70,17 +70,21 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Lemma {
   --color1: #f4cce0;
@@ -90,17 +94,9 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Corollary {
   --color1: #f4cce0;
@@ -110,9 +106,13 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 </style>
 
@@ -567,7 +567,9 @@ R:=\{ (x,y) \in \mathbb{N}\times \mathbb{N}\, \colon \, x=y  \} \,.
 </ol>
 <p>The class of equivalence of <span class="math inline">\(x \in \mathbb{N}\)</span> is given by <span class="math display">\[
 [x] = \{ x \}\,,
-\]</span> that is, this relation is quite trivial, given that each element of <span class="math inline">\(\mathbb{N}\)</span> can only be related to itself.</p>
+\]</span> that is, this relation is quite trivial, given that each element of <span class="math inline">\(\mathbb{N}\)</span> can only be related to itself. The quotient space is then <span class="math display">\[
+\mathbb{N}/ R = \{ [x] \, \colon \,x \in \mathbb{N}\} = \{  \{ x\} \, \colon \,x \in \mathbb{N}\}  \,.
+\]</span></p>
 </div></details>
 </div>
 <div id="Example-15" class="Example">
@@ -599,7 +601,7 @@ x + n \,, \, \forall \, n \in \mathbb{Z}\,.
 \]</span> Each equivalence class has exactly one element in <span class="math inline">\([0,1) \cap \mathbb{Q}\)</span>, meaning that: <span class="math display">\[
 \forall x \in \mathbb{Q}\,, \,\, \exists! \, q \in \mathbb{Q}\, \text{ s.t } \, 0 \leq q &lt; 1 \, \text{ and } \, q \in [x]\,.
 \]</span> Therefore <span class="math display">\[
-\mathbb{Q}/ R = \{ [x] \, \colon \,x \in \mathbb{Q}\} = \{ q \in \mathbb{Q}\, \colon \,0&lt;q&lt;1  \} \,.
+\mathbb{Q}/ R = \{ [x] \, \colon \,x \in \mathbb{Q}\} = \{ q \in \mathbb{Q}\, \colon \,0 \leq q &lt;1  \} \,.
 \]</span></p>
 </div></details>
 </div>
