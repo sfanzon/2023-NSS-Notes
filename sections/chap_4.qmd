@@ -10,3 +10,7 @@ $$
 # Sequences
 
 Coming soon
+
+
+
+## Example: Approximating $\sqrt{2}$

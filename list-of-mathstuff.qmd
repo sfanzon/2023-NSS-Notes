@@ -82,3 +82,21 @@
  [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.27\Pageref{proof-of-theorem-1}
 
  [**Remark 2.29**](#Remark-2.29)\Pageref{Remark-2.29}
+
+ [**Proposition 2.30**](#proposition-easy)\Pageref{proposition-easy}
+
+ [**Proof**](#of-proposition): of Proposition 2.30\Pageref{of-proposition}
+
+ [**Axiom 2.31**](#principle-of-induction): Principle of Induction\Pageref{principle-of-induction}
+
+ [**Important**](#Important*-2.5)\Pageref{Important*-2.5}
+
+ [**Remark 2.32**](#Remark-2.32)\Pageref{Remark-2.32}
+
+ [**Corollary 2.33**](#principle-of-inducion---alternative-formulation): Principle of Inducion - Alternative formulation\Pageref{principle-of-inducion---alternative-formulation}
+
+ [**Proof**](#Proof*-2.6)\Pageref{Proof*-2.6}
+
+ [**Example 2.34**](#formula-for-summing-first-n-natural-numbers): Formula for summing first $n$ natural numbers\Pageref{formula-for-summing-first-n-natural-numbers}
+
+ [**Example 2.35**](#statements-about-sequences-of-numbers): Statements about sequences of numbers\Pageref{statements-about-sequences-of-numbers}

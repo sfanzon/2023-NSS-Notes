@@ -968,7 +968,134 @@ $$
 
 
 
-## Proofs involving $\e$
+## Proofs in Mathematics
+
+In this section we carry out the proof of a seemingly trivial statement, to get used to the process. In a proof one needs to show that 
+$$
+\alpha \implies \beta
+$${#eq-implication}
+where 
+
+- $\alpha$ is a given set of assumptions, or **hypothesis**
+- $\beta$ is a conclusion, or **thesis**
+
+To show (@eq-implication) we need to convince ourselves that $\beta$ follows by assuming $\alpha$. 
+
+Common strategies to prove (@eq-implication) are:
+
+- **Contradiction**: Assume that the thesis is **false**, and hope to reach a contradiction: that is, prove that 
+$$
+\neg \beta \implies \, \mbox{ contradiction}
+$$
+where $\neg \beta$ is the **negation** of $\beta$. For example we already proved by contradiction that 
+$$
+\mbox{Definition of } \Q  \, \implies \, \sqrt{2} \notin \Q \,,
+$$
+In the above statement 
+$$
+\alpha \leadsto \mbox{Definition of } \Q \,.
+$$
+$$
+\beta  \leadsto \sqrt{2} \notin \Q \,.
+$$
+Therefore
+$$
+\neg \beta  \leadsto \sqrt{2} \in \Q \,.
+$$ 
+
+- **Direct**: Sometimes proofs will also need **direct** arguments, meaning that one need to show directly that (@eq-implication).
+
+- **Contrapositive**: The statement  
+is equivalent to (@eq-implication)
+$$
+\neg \beta \, \implies \, \neg \alpha \,.
+$$ {#eq-contrapositive}
+Thus, instead of proving (@eq-implication) one could instead show (@eq-contrapositive). The statement (@eq-contrapositive) is called the **contrapositive** of (@eq-implication).
+
+
+Let us make an example.
+
+::: { .Proposition  #proposition-easy}
+
+Two real numbers $a,b$ are equal if and only if for every real number $\e >0$ it follows that $|a-b|<\e$.  
+:::
+
+Before proceeding with the proof, note that the above stetement is just saying that:
+
+> Two numbers are equal if and only if they are **arbitrarily** close 
+
+By *arbitrarily close* we mean that they are *as close as you want the to be*.
+
+
+::: Proof
+### of Proposition \ref{proposition-easy}
+
+Let us first rephrase the statement using mathematical symbols:  
+
+> Let $a, b \in \R$. Then it holds:
+$$
+a=b \, \iff \, |a-b| < \e \,, \,\, \forall \, \e>0 \,. 
+$$ 
+
+Setting
+\begin{align}
+\alpha & \leadsto \, a=b   \\
+\beta  & \leadsto  \, |a-b| < \e \,, \,\, \forall \, \e>0 
+\end{align}
+the statement is equivalent to 
+$$
+\alpha \iff \beta \,.
+$$
+To show the above, it is sufficient to show that
+$$
+\alpha \implies \beta
+$$
+and 
+$$
+\beta \implies \alpha \,.
+$$
+
+*Step 1. Proof that $\alpha \implies \beta$*:  
+This proof can be carried out by a **direct** argument. Since we are assuming $\alpha$, this means 
+$$
+a=b \,.
+$$
+We want to see that $\beta$ holds. Therefore fix an arbitrary $\e>0$. This means that $\e$ can be **any** positive number. Clearly
+$$
+|a-b| = |0| = 0 < \e
+$$
+since $a=b$, $|0|=0$, and $\e>0$. The above shows that 
+$$
+|a-b| < \e \,.
+$$
+As $\e>0$ was arbitrary, we have just proven that 
+$$
+|a-b| < \e \,, \,\, \forall \, \e >0 \,,
+$$
+meaning that $\beta$ holds and the proof is concluded.
+
+
+*Step 2. Proof that $\beta \implies \alpha$*:  
+Let us prove this implication by showing the **contrapositive**
+$$
+\neg \alpha \implies \neg\beta \,.
+$$
+So let us assume $\neg \alpha$ is true. This means that 
+$$
+a \neq b \,.
+$$ 
+We have to see that $\neg \beta$ holds. But $\neg \beta$ means that 
+$$
+\exists \, \e_0> 0 \st |a-b| \geq \e_0 \,. 
+$$
+The above is satisfied by choosing
+$$
+ \e_0 := |a-b| \,,
+$$
+since $\e_0 >0$ given that $a \neq b$,
+:::
+
+
 
 
 
@@ -976,10 +1103,156 @@ $$
 
 ## Induction
 
+Another technique for carrying out proofs is **induction**, which we take as an axiom.  
+
+::: Axiom 
+### Principle of Induction
+
+Let $S$ be a subset of $\N$. Suppose that 
+
+1. We have $1 \in S$, and
+2. Whenever $n \in S$, then $(n+1) \in S$.
+
+Then we have 
+$$
+S=\N \,.
+$$
+:::
+
+::: Important
+The above is an **axiom**, meaning that we do not prove it, but rather we just **assume it holds**.
+:::
+
+::: Remark
+It would be possible to prove the Principle of Induction starting from elementary axioms for $\N$, called the **Peano Axioms**, see the [Wikipedia page](https://en.wikipedia.org/wiki/Peano_axioms#Peano_arithmetic_as_first-order_theory).  
+However, in justifying basic principles of mathematics, one at some point needs to draw a line. This means that something which looks elementary needs to be assumed to hold, in order to have a starting point for proving deeper statements.  
+In the case of the Principle of Induction, the intuition is clear:
+
+> The Principle of Induction is just describing the **domino effect**: *If one tile falls, then the next one will fall as well*. Therefore if the *first tile falls, all the tiles will fall*.
+
+It seems reasonable to assume such evident principle. 
+:::
+
+The Principle of Induction can be used to prove statements which depend on some index $n \in \N$. Precisely, the following statement holds.
+
+::: Corollary
+### Principle of Inducion - Alternative formulation
+
+Let $\alpha(n)$ be a statement which depends on $n \in \N$. Suppose that 
+
+1. $\alpha(1)$ is true, and
+2. Whenever $\alpha(n)$ is true, then $\alpha(n+1)$ is true.
+
+Then $\alpha(n)$ is true for all $n \in \N$.
+:::
+
+::: Proof
+Define the set 
+$$
+S:= \{ n \in \N \st \alpha(n) \mbox{ is true}   \} \,.
+$$
+Then 
+
+1. We have $1 \in S$, since $\alpha(1)$ is true.
+2. If $n \in S$ then $\alpha(n)$ is true. By assumption this implies that $\alpha(n+1)$ is true. Therefore $(n+1) \in S$.
+
+Therefore $S$ satisfies the assumptions of the Induction Principle and we conclude that 
+$$
+S=\N \,.
+$$
+By definition this means that $\alpha(n)$ is true for all $n \in \N$.
+:::
+
+
+::: Example 
+### Formula for summing first $n$ natural numbers
+Using the Principle of Induction we can prove that
+$$
+1 + 2 + 3 + \ldots + (n-1) + n = \frac{n(n+1)}{2} 
+$$ {#eq-formula-sum-naturals}
+holds for all $n \in \N$.  
+
+*Proof*. To be really precise, consider the statement
+$$
+\alpha(n) :=  \, \mbox{the above formula is true for } \, n \,. 
+$$
+In order to apply induction, we need to show that 
+
+1. $\alpha(1)$ is true,
+2. If $\alpha(n)$ is true then $\alpha(n+1)$ is true.
+
+Let us proceed:
+1. It is immediate to check that (@eq-formula-sum-naturals) holds for $n=1$.
+2. Suppose (@eq-formula-sum-naturals) holds for $n$. Then
+\begin{align}
+1 + \ldots +  n + (n+1) & =   \frac{n(n+1)}{2}  + (n+1) \\
+& = \frac{ n(n+1) + 2(n+1) }{2} \\
+& = \frac{(n+1)(n+2)}{n}
+\end{align}
+where in the first equality we used that (@eq-formula-sum-naturals) holds for $n$. We then have
+$$
+1 +   \ldots + n + (n+1) = \frac{(n+1)(n+2)}{n}\,,
+$$
+which shows that (@eq-formula-sum-naturals) holds for $n+1$.
+
+By the Principle of Induction we then conclude that $\alpha(n)$ is true for all $n \in \N$, which means that (@eq-formula-sum-naturals) holds for all $n \in \N$.
+:::
+
+
+::: Example
+### Statements about sequences of numbers
+
+Suppose you are given a collection of numbers
+$$
+\{ x_n \st n \in \N\} \,.
+$$
+Such collection of numbers is called **sequence**. Assume that 
+$$
+x_1 = 1 
+$$
+and that 
+$$
+x_{n+1}:= \frac{x_n}{2} + 1 \,.
+$$
+A sequence defined as above is called **recurrence sequence**. Using the above rule we can compute all the terms of $x_n$: for example
+$$
+x_2 = \frac{x_1}{2} + 1 = \frac12 + 1 =\frac{3}{2}
+$$
+and 
+$$
+x_3 = \frac{x_2}{2} + 1 =  \frac34 + 1 = \frac74 \,.
+$$
+By computing these terms we notice that the sequence might be increasing. Indeed we can prove by induction that 
+$$
+x_{n+1} \geq x_n
+$$ {#eq-induction-increasing}
+for all $n \in \N$. 
+
+*Proof.* By induction:
+
+1. We have seen that $x_1 = 1$ and $x_2 = 3/2$. Thus
+$$
+x_2 \geq x_1 \,.
+$$
+2. Suppose now that 
+$$
+x_{n+1} \geq x_{n} \,.
+$$
+We need to prove that
+$$
+x_{n+2} \geq x_{n+1} \,.
+$$
+Indeed, we can multiply the inequality $x_{n+1} \geq x_n$ by $1/2$ and add $1$ to get
+$$
+\frac{x_{n+1}}{2} + 1 \geq \frac{x_{n}}{2} + 1   \,.
+$$
+The above is equivalent, by definition, to $x_{n+2} \geq x_{n+1}$.
+
+Therefore the assumptions of the Induction Principle are satisfied, and (@eq-induction-increasing) follows.
+:::
 
 
 
 
-## Example: Approximating $\sqrt{2}$
 
 

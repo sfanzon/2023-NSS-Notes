@@ -66,43 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -110,9 +74,53 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -229,9 +237,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#intervals" id="toc-intervals" class="nav-link" data-scroll-target="#intervals"><span class="header-section-number">2.6</span> Intervals</a></li>
   <li><a href="#absolute-value-or-modulus" id="toc-absolute-value-or-modulus" class="nav-link" data-scroll-target="#absolute-value-or-modulus"><span class="header-section-number">2.7</span> Absolute value or Modulus</a></li>
   <li><a href="#triangle-inequality" id="toc-triangle-inequality" class="nav-link" data-scroll-target="#triangle-inequality"><span class="header-section-number">2.8</span> Triangle inequality</a></li>
-  <li><a href="#proofs-involving-varepsilon" id="toc-proofs-involving-varepsilon" class="nav-link" data-scroll-target="#proofs-involving-varepsilon"><span class="header-section-number">2.9</span> Proofs involving <span class="math inline">\(\varepsilon\)</span></a></li>
+  <li><a href="#proofs-in-mathematics" id="toc-proofs-in-mathematics" class="nav-link" data-scroll-target="#proofs-in-mathematics"><span class="header-section-number">2.9</span> Proofs in Mathematics</a></li>
   <li><a href="#induction" id="toc-induction" class="nav-link" data-scroll-target="#induction"><span class="header-section-number">2.10</span> Induction</a></li>
-  <li><a href="#example-approximating-sqrt2" id="toc-example-approximating-sqrt2" class="nav-link" data-scroll-target="#example-approximating-sqrt2"><span class="header-section-number">2.11</span> Example: Approximating <span class="math inline">\(\sqrt{2}\)</span></a></li>
   </ul>
 </nav>
     </div>
@@ -905,14 +912,187 @@ x = x+y - y
 </div></details>
 </div>
 </section>
-<section id="proofs-involving-varepsilon" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="proofs-involving-varepsilon"><span class="header-section-number">2.9</span> Proofs involving <span class="math inline">\(\varepsilon\)</span></h2>
+<section id="proofs-in-mathematics" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="proofs-in-mathematics"><span class="header-section-number">2.9</span> Proofs in Mathematics</h2>
+<p>In this section we carry out the proof of a seemingly trivial statement, to get used to the process. In a proof one needs to show that <span id="eq-implication"><span class="math display">\[
+\alpha \implies \beta
+\tag{2.14}\]</span></span> where</p>
+<ul>
+<li><span class="math inline">\(\alpha\)</span> is a given set of assumptions, or <strong>hypothesis</strong></li>
+<li><span class="math inline">\(\beta\)</span> is a conclusion, or <strong>thesis</strong></li>
+</ul>
+<p>To show (<a href="#eq-implication"><span>2.14</span></a>) we need to convince ourselves that <span class="math inline">\(\beta\)</span> follows by assuming <span class="math inline">\(\alpha\)</span>.</p>
+<p>Common strategies to prove (<a href="#eq-implication"><span>2.14</span></a>) are:</p>
+<ul>
+<li><p><strong>Contradiction</strong>: Assume that the thesis is <strong>false</strong>, and hope to reach a contradiction: that is, prove that <span class="math display">\[
+\neg \beta \implies \, \mbox{ contradiction}
+\]</span> where <span class="math inline">\(\neg \beta\)</span> is the <strong>negation</strong> of <span class="math inline">\(\beta\)</span>. For example we already proved by contradiction that <span class="math display">\[
+\mbox{Definition of } \mathbb{Q}\, \implies \, \sqrt{2} \notin \mathbb{Q}\,,
+\]</span> In the above statement <span class="math display">\[
+\alpha \leadsto \mbox{Definition of } \mathbb{Q}\,.
+\]</span> <span class="math display">\[
+\beta  \leadsto \sqrt{2} \notin \mathbb{Q}\,.
+\]</span> Therefore <span class="math display">\[
+\neg \beta  \leadsto \sqrt{2} \in \mathbb{Q}\,.
+\]</span></p></li>
+<li><p><strong>Direct</strong>: Sometimes proofs will also need <strong>direct</strong> arguments, meaning that one need to show directly that (<a href="#eq-implication"><span>2.14</span></a>).</p></li>
+<li><p><strong>Contrapositive</strong>: The statement<br>
+is equivalent to (<a href="#eq-implication"><span>2.14</span></a>) <span id="eq-contrapositive"><span class="math display">\[
+\neg \beta \, \implies \, \neg \alpha \,.
+\tag{2.15}\]</span></span> Thus, instead of proving (<a href="#eq-implication"><span>2.14</span></a>) one could instead show (<a href="#eq-contrapositive"><span>2.15</span></a>). The statement (<a href="#eq-contrapositive"><span>2.15</span></a>) is called the <strong>contrapositive</strong> of (<a href="#eq-implication"><span>2.14</span></a>).</p></li>
+</ul>
+<p>Let us make an example.</p>
+<div id="proposition-easy" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 30</strong></summary><div>Two real numbers <span class="math inline">\(a,b\)</span> are equal if and only if for every real number <span class="math inline">\(\varepsilon&gt;0\)</span> it follows that <span class="math inline">\(|a-b|&lt;\varepsilon\)</span>.<p></p>
+</div></details>
+</div>
+<p>Before proceeding with the proof, note that the above stetement is just saying that:</p>
+<blockquote class="blockquote">
+<p>Two numbers are equal if and only if they are <strong>arbitrarily</strong> close</p>
+</blockquote>
+<p>By <em>arbitrarily close</em> we mean that they are <em>as close as you want the to be</em>.</p>
+<div id="of-proposition" class="Proof" title="of Proposition 30">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>of Proposition 30</summary><div>Let us first rephrase the statement using mathematical symbols:<p></p>
+<blockquote class="blockquote">
+<p>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span>. Then it holds: <span class="math display">\[
+a=b \, \iff \, |a-b| &lt; \varepsilon\,, \,\, \forall \, \varepsilon&gt;0 \,.
+\]</span></p>
+</blockquote>
+<p>Setting <span class="math display">\[\begin{align}
+\alpha &amp; \leadsto \, a=b   \\
+\beta  &amp; \leadsto  \, |a-b| &lt; \varepsilon\,, \,\, \forall \, \varepsilon&gt;0
+\end{align}\]</span> the statement is equivalent to <span class="math display">\[
+\alpha \iff \beta \,.
+\]</span> To show the above, it is sufficient to show that <span class="math display">\[
+\alpha \implies \beta
+\]</span> and <span class="math display">\[
+\beta \implies \alpha \,.
+\]</span></p>
+<p><em>Step 1. Proof that <span class="math inline">\(\alpha \implies \beta\)</span></em>:<br>
+This proof can be carried out by a <strong>direct</strong> argument. Since we are assuming <span class="math inline">\(\alpha\)</span>, this means <span class="math display">\[
+a=b \,.
+\]</span> We want to see that <span class="math inline">\(\beta\)</span> holds. Therefore fix an arbitrary <span class="math inline">\(\varepsilon&gt;0\)</span>. This means that <span class="math inline">\(\varepsilon\)</span> can be <strong>any</strong> positive number. Clearly <span class="math display">\[
+|a-b| = |0| = 0 &lt; \varepsilon
+\]</span> since <span class="math inline">\(a=b\)</span>, <span class="math inline">\(|0|=0\)</span>, and <span class="math inline">\(\varepsilon&gt;0\)</span>. The above shows that <span class="math display">\[
+|a-b| &lt; \varepsilon\,.
+\]</span> As <span class="math inline">\(\varepsilon&gt;0\)</span> was arbitrary, we have just proven that <span class="math display">\[
+|a-b| &lt; \varepsilon\,, \,\, \forall \, \varepsilon&gt;0 \,,
+\]</span> meaning that <span class="math inline">\(\beta\)</span> holds and the proof is concluded.</p>
+<p><em>Step 2. Proof that <span class="math inline">\(\beta \implies \alpha\)</span></em>:<br>
+Let us prove this implication by showing the <strong>contrapositive</strong> <span class="math display">\[
+\neg \alpha \implies \neg\beta \,.
+\]</span> So let us assume <span class="math inline">\(\neg \alpha\)</span> is true. This means that <span class="math display">\[
+a \neq b \,.
+\]</span> We have to see that <span class="math inline">\(\neg \beta\)</span> holds. But <span class="math inline">\(\neg \beta\)</span> means that <span class="math display">\[
+\exists \, \varepsilon_0&gt; 0 \, \text{ s.t } \, |a-b| \geq \varepsilon_0 \,.
+\]</span> The above is satisfied by choosing <span class="math display">\[
+\varepsilon_0 := |a-b| \,,
+\]</span> since <span class="math inline">\(\varepsilon_0 &gt;0\)</span> given that <span class="math inline">\(a \neq b\)</span>,</p>
+</div></details>
+</div>
 </section>
 <section id="induction" class="level2" data-number="2.10">
 <h2 data-number="2.10" class="anchored" data-anchor-id="induction"><span class="header-section-number">2.10</span> Induction</h2>
-</section>
-<section id="example-approximating-sqrt2" class="level2" data-number="2.11">
-<h2 data-number="2.11" class="anchored" data-anchor-id="example-approximating-sqrt2"><span class="header-section-number">2.11</span> Example: Approximating <span class="math inline">\(\sqrt{2}\)</span></h2>
+<p>Another technique for carrying out proofs is <strong>induction</strong>, which we take as an axiom.</p>
+<div id="principle-of-induction" class="Axiom" title="Principle of Induction">
+<p></p><details class="Axiom fbx-simplebox fbx-default" open=""><summary><strong>Axiom 31: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(S\)</span> be a subset of <span class="math inline">\(\mathbb{N}\)</span>. Suppose that<p></p>
+<ol type="1">
+<li>We have <span class="math inline">\(1 \in S\)</span>, and</li>
+<li>Whenever <span class="math inline">\(n \in S\)</span>, then <span class="math inline">\((n+1) \in S\)</span>.</li>
+</ol>
+<p>Then we have <span class="math display">\[
+S=\mathbb{N}\,.
+\]</span></p>
+</div></details>
+</div>
+<div id="Important*-5" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The above is an <strong>axiom</strong>, meaning that we do not prove it, but rather we just <strong>assume it holds</strong>.<p></p>
+</div></details>
+</div>
+<div id="Remark-32" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 32</strong></summary><div>It would be possible to prove the Principle of Induction starting from elementary axioms for <span class="math inline">\(\mathbb{N}\)</span>, called the <strong>Peano Axioms</strong>, see the <a href="https://en.wikipedia.org/wiki/Peano_axioms#Peano_arithmetic_as_first-order_theory">Wikipedia page</a>.<br>
+However, in justifying basic principles of mathematics, one at some point needs to draw a line. This means that something which looks elementary needs to be assumed to hold, in order to have a starting point for proving deeper statements.<br>
+In the case of the Principle of Induction, the intuition is clear:<p></p>
+<blockquote class="blockquote">
+<p>The Principle of Induction is just describing the <strong>domino effect</strong>: <em>If one tile falls, then the next one will fall as well</em>. Therefore if the <em>first tile falls, all the tiles will fall</em>.</p>
+</blockquote>
+<p>It seems reasonable to assume such evident principle.</p>
+</div></details>
+</div>
+<p>The Principle of Induction can be used to prove statements which depend on some index <span class="math inline">\(n \in \mathbb{N}\)</span>. Precisely, the following statement holds.</p>
+<div id="principle-of-inducion---alternative-formulation" class="Corollary" title="Principle of Inducion - Alternative formulation">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 33: </strong>Principle of Inducion - Alternative formulation</summary><div>Let <span class="math inline">\(\alpha(n)\)</span> be a statement which depends on <span class="math inline">\(n \in \mathbb{N}\)</span>. Suppose that<p></p>
+<ol type="1">
+<li><span class="math inline">\(\alpha(1)\)</span> is true, and</li>
+<li>Whenever <span class="math inline">\(\alpha(n)\)</span> is true, then <span class="math inline">\(\alpha(n+1)\)</span> is true.</li>
+</ol>
+<p>Then <span class="math inline">\(\alpha(n)\)</span> is true for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+</div></details>
+</div>
+<div id="Proof*-6" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math display">\[
+S:= \{ n \in \mathbb{N}\, \text{ s.t } \, \alpha(n) \mbox{ is true}   \} \,.
+\]</span> Then<p></p>
+<ol type="1">
+<li>We have <span class="math inline">\(1 \in S\)</span>, since <span class="math inline">\(\alpha(1)\)</span> is true.</li>
+<li>If <span class="math inline">\(n \in S\)</span> then <span class="math inline">\(\alpha(n)\)</span> is true. By assumption this implies that <span class="math inline">\(\alpha(n+1)\)</span> is true. Therefore <span class="math inline">\((n+1) \in S\)</span>.</li>
+</ol>
+<p>Therefore <span class="math inline">\(S\)</span> satisfies the assumptions of the Induction Principle and we conclude that <span class="math display">\[
+S=\mathbb{N}\,.
+\]</span> By definition this means that <span class="math inline">\(\alpha(n)\)</span> is true for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+</div></details>
+</div>
+<div id="formula-for-summing-first-n-natural-numbers" class="Example" title="Formula for summing first n natural numbers">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 34: </strong>Formula for summing first <span class="math inline">\(n\)</span> natural numbers</summary><div>Using the Principle of Induction we can prove that <span id="eq-formula-sum-naturals"><span class="math display">\[
+1 + 2 + 3 + \ldots + (n-1) + n = \frac{n(n+1)}{2}
+\tag{2.16}\]</span></span> holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>.<p></p>
+<p><em>Proof</em>. To be really precise, consider the statement <span class="math display">\[
+\alpha(n) :=  \, \mbox{the above formula is true for } \, n \,.
+\]</span> In order to apply induction, we need to show that</p>
+<ol type="1">
+<li><span class="math inline">\(\alpha(1)\)</span> is true,</li>
+<li>If <span class="math inline">\(\alpha(n)\)</span> is true then <span class="math inline">\(\alpha(n+1)\)</span> is true.</li>
+</ol>
+<p>Let us proceed: 1. It is immediate to check that (<a href="#eq-formula-sum-naturals"><span>2.16</span></a>) holds for <span class="math inline">\(n=1\)</span>. 2. Suppose (<a href="#eq-formula-sum-naturals"><span>2.16</span></a>) holds for <span class="math inline">\(n\)</span>. Then <span class="math display">\[\begin{align}
+1 + \ldots +  n + (n+1) &amp; =   \frac{n(n+1)}{2}  + (n+1) \\
+&amp; = \frac{ n(n+1) + 2(n+1) }{2} \\
+&amp; = \frac{(n+1)(n+2)}{n}
+\end{align}\]</span> where in the first equality we used that (<a href="#eq-formula-sum-naturals"><span>2.16</span></a>) holds for <span class="math inline">\(n\)</span>. We then have <span class="math display">\[
+1 +   \ldots + n + (n+1) = \frac{(n+1)(n+2)}{n}\,,
+\]</span> which shows that (<a href="#eq-formula-sum-naturals"><span>2.16</span></a>) holds for <span class="math inline">\(n+1\)</span>.</p>
+<p>By the Principle of Induction we then conclude that <span class="math inline">\(\alpha(n)\)</span> is true for all <span class="math inline">\(n \in \mathbb{N}\)</span>, which means that (<a href="#eq-formula-sum-naturals"><span>2.16</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+</div></details>
+</div>
+<div id="statements-about-sequences-of-numbers" class="Example" title="Statements about sequences of numbers">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35: </strong>Statements about sequences of numbers</summary><div>Suppose you are given a collection of numbers <span class="math display">\[
+\{ x_n \, \text{ s.t } \, n \in \mathbb{N}\} \,.
+\]</span> Such collection of numbers is called <strong>sequence</strong>. Assume that <span class="math display">\[
+x_1 = 1
+\]</span> and that <span class="math display">\[
+x_{n+1}:= \frac{x_n}{2} + 1 \,.
+\]</span> A sequence defined as above is called <strong>recurrence sequence</strong>. Using the above rule we can compute all the terms of <span class="math inline">\(x_n\)</span>: for example <span class="math display">\[
+x_2 = \frac{x_1}{2} + 1 = \frac12 + 1 =\frac{3}{2}
+\]</span> and <span class="math display">\[
+x_3 = \frac{x_2}{2} + 1 =  \frac34 + 1 = \frac74 \,.
+\]</span> By computing these terms we notice that the sequence might be increasing. Indeed we can prove by induction that <span id="eq-induction-increasing"><span class="math display">\[
+x_{n+1} \geq x_n
+\tag{2.17}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>.<p></p>
+<p><em>Proof.</em> By induction:</p>
+<ol type="1">
+<li>We have seen that <span class="math inline">\(x_1 = 1\)</span> and <span class="math inline">\(x_2 = 3/2\)</span>. Thus <span class="math display">\[
+x_2 \geq x_1 \,.
+\]</span></li>
+<li>Suppose now that <span class="math display">\[
+x_{n+1} \geq x_{n} \,.
+\]</span> We need to prove that <span class="math display">\[
+x_{n+2} \geq x_{n+1} \,.
+\]</span> Indeed, we can multiply the inequality <span class="math inline">\(x_{n+1} \geq x_n\)</span> by <span class="math inline">\(1/2\)</span> and add <span class="math inline">\(1\)</span> to get <span class="math display">\[
+\frac{x_{n+1}}{2} + 1 \geq \frac{x_{n}}{2} + 1   \,.
+\]</span> The above is equivalent, by definition, to <span class="math inline">\(x_{n+2} \geq x_{n+1}\)</span>.</li>
+</ol>
+<p>Therefore the assumptions of the Induction Principle are satisfied, and (<a href="#eq-induction-increasing"><span>2.17</span></a>) follows.</p>
+</div></details>
+</div>
 
 
 </section>

@@ -154,6 +154,13 @@ custom-numbered-blocks:
     
     Question: 
       group: thmlike
+    
+    Axiom: 
+      group: thmlike
+
+    Important: 
+      group: thmlike
+      numbered: false
 
     Definition:
       group: thmlike
