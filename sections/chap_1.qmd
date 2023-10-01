@@ -7,7 +7,7 @@ $$
 
 
 
-# Introduction
+# Introduction {#sec-chap-1}
 
 The first aim of this lecture notes is to rigorously introduce the set of **real numbers**, which is denoted by $\R$. But what do we mean by real numbers? To start our discussion, introduce the set of natural numbers (or non-negative integers)
 $$

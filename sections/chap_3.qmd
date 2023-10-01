@@ -8,4 +8,21 @@ $$
 
 # Real Numbers
 
-Coming soon
+In @sec-chap-1 we proved that 
+$$
+\sqrt{2} \notin \Q \,,
+$$
+where $\Q$ is the set of rational numbers. Therefore $\Q$ has a **gap**, and cannot be represented as a **continuous** line. Let us make this concept more precise, by giving a mathematical definition of **gap**.
+
+
+## Cut Property  
+
+The rigorous definition of **gap** is given in terms of **cuts** of a set.
+
+
+::: Definition
+### Cut of a set
+
+Suppose that 
+
+:::
