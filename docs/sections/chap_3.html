@@ -66,21 +66,61 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
 .Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Warning {
   --color1: #f4cce0;
@@ -89,46 +129,6 @@ ul.task-list li input[type="checkbox"] {
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
 }
 </style>
 
@@ -1305,8 +1305,12 @@ x^{-1} = \frac{1}{x} \,.
 <details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 44</strong></summary><div>
 <p>Recall that</p>
 <ul>
-<li><span class="math inline">\((K,+,\cdot)\)</span> satisfying (A1)-(A3), (M1)-(M3), (AM) is a <strong>field</strong></li>
-<li><span class="math inline">\((K,+,\cdot, \geq)\)</span> satisfying (A1)-(A3), (M1)-(M3), (O1)-(O4) ,(AM), (AO), (MO) is an <strong>ordered field</strong></li>
+<li><span class="math inline">\((K,+,\cdot)\)</span> satisfying <span class="math display">\[
+\mbox{(A1)-(A3), (M1)-(M3), (AM)}
+\]</span> is a <strong>field</strong></li>
+<li><span class="math inline">\((K,+,\cdot, \geq)\)</span> satisfying <span class="math display">\[
+\mbox{(A1)-(A3), (M1)-(M3), (O1)-(O4) ,(AM), (AO), (MO)}
+\]</span> is an <strong>ordered field</strong></li>
 </ul>
 <p>In particular we have:</p>
 <ul>
@@ -1314,20 +1318,31 @@ x^{-1} = \frac{1}{x} \,.
 <li><span class="math inline">\((\mathbb{Z}, + , \cdot)\)</span> is <strong>not a field</strong></li>
 <li><span class="math inline">\((\mathbb{Q}, + , \cdot)\)</span> is a <strong>field</strong></li>
 <li><span class="math inline">\((\mathbb{Q},+, \cdot,\geq)\)</span> is an <strong>ordered field</strong></li>
-<li><span class="math inline">\((\mathbb{R},+, \cdot,\geq)\)</span> is an <strong>ordered field</strong> in which the <strong>Cut Property</strong> (CP) or <strong>Axiom of Completeness</strong> (AC) hold</li>
+<li><span class="math inline">\((\mathbb{R},+, \cdot,\geq)\)</span> is a <strong>complete ordered field</strong>: that is, an ordered field in which the <strong>Cut Property</strong> (CP) or <strong>Axiom of Completeness</strong> (AC) hold</li>
 </ul>
 </div></details>
 </div>
+<div id="Important*-14" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>It can be shown that <span class="math inline">\((\mathbb{R},+, \cdot,\geq)\)</span> is the <strong>only</strong> complete ordered field.<p></p>
+</div></details>
+</div>
+<p>The above has to be intended in the following sense: if <span class="math inline">\((K,+, \cdot,\geq)\)</span> is another complete ordered field, then <span class="math inline">\(K\)</span> <em>looks like</em> <span class="math inline">\(\mathbb{R}\)</span>. Mathematically this means that there exists an invertible map <span class="math inline">\(\Psi \ \colon \mathbb{R}\to K\)</span>, called isomorphism of fields, which preserves <span class="math inline">\(+\)</span>, <span class="math inline">\(\cdot\)</span> and <span class="math inline">\(\leq\)</span>.</p>
+<div id="Question-45" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 45</strong></summary><div>We have only postulated the existence of <span class="math inline">\(\mathbb{R}\)</span>. Does such complete ordered field actually exist?<p></p>
+</div></details>
+</div>
+<p>The answer is <strong>YES</strong>, and there are several models for such <span class="math inline">\(\mathbb{R}\)</span>. If time allows, we will look into one of these constructions towards the end of the module.</p>
 </section>
 <section id="consequences-of-the-axioms" class="level2" data-number="3.7">
 <h2 data-number="3.7" class="anchored" data-anchor-id="consequences-of-the-axioms"><span class="header-section-number">3.7</span> Consequences of the Axioms</h2>
-<p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span>, let us investigate some of their properies.</p>
+<p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> as a <strong>complete ordered field</strong>, let us investigate some of their properies.</p>
 <section id="nested-interval-property" class="level3" data-number="3.7.1">
 <h3 data-number="3.7.1" class="anchored" data-anchor-id="nested-interval-property"><span class="header-section-number">3.7.1</span> Nested Interval Property</h3>
 <p>Not sure</p>
 </section>
 <section id="archimedean-property" class="level3" data-number="3.7.2">
 <h3 data-number="3.7.2" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">3.7.2</span> Archimedean Property</h3>
+<p>Notes, or Dommers. See prop on dommers too.</p>
 </section>
 <section id="revisiting-sup-and-inf" class="level3" data-number="3.7.3">
 <h3 data-number="3.7.3" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">3.7.3</span> Revisiting Sup and inf</h3>

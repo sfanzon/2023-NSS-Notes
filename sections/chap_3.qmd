@@ -1488,8 +1488,16 @@ $$
 
 Recall that
 
-- $(K,+,\cdot)$ satisfying (A1)-(A3), (M1)-(M3), (AM) is a **field** 
-- $(K,+,\cdot, \geq)$ satisfying (A1)-(A3), (M1)-(M3), (O1)-(O4) ,(AM), (AO), (MO) is an **ordered field**
+- $(K,+,\cdot)$ satisfying
+$$
+\mbox{(A1)-(A3), (M1)-(M3), (AM)}
+$$ 
+is a **field** 
+- $(K,+,\cdot, \geq)$ satisfying 
+$$
+\mbox{(A1)-(A3), (M1)-(M3), (O1)-(O4) ,(AM), (AO), (MO)}
+$$ 
+is an **ordered field**
 
 In particular we have:
 
@@ -1497,15 +1505,30 @@ In particular we have:
 - $(\Z, + , \cdot)$ is **not a field**
 - $(\Q, + , \cdot)$ is a **field**
 - $(\Q,+, \cdot,\geq)$ is an **ordered field**
-- $(\R,+, \cdot,\geq)$ is an **ordered field** in which the **Cut Property** (CP) or **Axiom of Completeness** (AC) hold
+- $(\R,+, \cdot,\geq)$ is a **complete ordered field**: that is, an ordered field in which the **Cut Property** (CP) or **Axiom of Completeness** (AC) hold
 :::
 
+
+
+::: Important
+It can be shown that $(\R,+, \cdot,\geq)$ is the **only** complete ordered field.   
+:::
+
+The above has to be intended in the following sense: if $(K,+, \cdot,\geq)$ is another complete ordered field, then $K$ *looks like* $\R$. Mathematically this means that there exists an invertible map 
+$\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves $+$, $\cdot$ and $\leq$.
+
+
+::: Question
+We have only postulated the existence of $\R$. Does such complete ordered field actually exist? 
+:::
+
+The answer is **YES**, and there are several models for such $\R$. If time allows, we will look into one of these constructions towards the end of the module.
 
 
 
 ## Consequences of the Axioms
 
-Now that we established the axiomatic definition of the Real Numbers $\R$, let us investigate some of their properies. 
+Now that we established the axiomatic definition of the Real Numbers $\R$ as a **complete ordered field**, let us investigate some of their properies. 
 
 
 ### Nested Interval Property
@@ -1513,6 +1536,8 @@ Now that we established the axiomatic definition of the Real Numbers $\R$, let u
 Not sure
 
 ### Archimedean Property
+
+Notes, or Dommers. See prop on dommers too.
 
 ### Revisiting Sup and inf 
 
