@@ -524,7 +524,7 @@ for some $s \in \Q$. Then the pair $(A,B)$ is a cut of $\Q$, and $s$ is the sepa
 
 
 ::: Question
-Do all cuts of $\Q$ have a **separator**? In other words, does $\Q$ have the **cut property**?
+Do all ordered fields have the Cut Property? Does $\Q$ have the Cut Property?
 :::
 
 
@@ -746,7 +746,8 @@ does not admit a **lowest element** in $\Q$. We will clarify this remark in the 
 ## Supremum and infimum
 
 
-A crucial definition in Analysis is the one of supremum or infimum of a set. 
+A crucial definition in Analysis is the one of supremum or infimum of a set. This is also another way of studying the **gaps** of $\Q$.
+
 
 ::: Example
 ### Intuition about supremum and infimum
@@ -804,6 +805,11 @@ We will almost always prefer the name supremum to least upper bound. For $A \sub
 $$
 s := \sup \ A \,.
 $$
+:::
+
+
+::: Remark
+Note that if a set $A \subset K$ in **NOT** bounded above, then the supremum does not exist, as there are no upper bounds of $A$. 
 :::
 
 
@@ -1081,6 +1087,8 @@ We conclude with another simple proposition. The proof is again left to the read
 
 
 ::: Proposition
+### Relationship between sup and inf {#proposition-inf-sup}
+
 Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. 
 Define 
 $$
@@ -1104,8 +1112,248 @@ $$
 
 ## Completeness
 
-In this section we introduce the notion of **Completeness**. We will see that completeness is equivalent to the **Cut Property**. 
 
+We have introduced the concepts of supremum and infimum on an ordered field $K$. 
+
+
+::: Question
+Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subset K$ is non-empty and bounded above. Does
+$$
+\sup A 
+$$
+always exist?
+:::
+
+The answer to the above question is **NO**. Like we did with the Cut Property, the counterexample can be found in the set of rational numbers $\Q$. A set bounded above for which the supremum does nor exist is, for example, 
+$$
+A = [0, \sqrt{2}) \cap \Q \,.
+$${#eq-no-sup-in-Q}
+
+
+::: {.Theorem  #theorem-Q-not-complete}
+There exists a set $A \subset \Q$ such that 
+
+- $A$ is non-empty,
+- $A$ is bounded above,
+- $\sup A$ does not exist in $\Q$. 
+:::
+
+The proof uses the same ideas we used for showing that $\Q$ does not have the Cut Property.
+
+::: Proof
+Define the set $A$ as in (@eq-no-sup-in-Q). Equivalently, this can be written as
+$$
+A = \{ q \in \Q  \divider q \geq 0 \,, \,\, q^2 < 2 \} \,.
+$$
+
+*Step 1. $A$ is bounded above.*  
+Take $b:=9$. Then $b$ is an upper bound for $A$. Indeed by definition 
+$$
+q^2 < 2 \,, \,\, q \geq 0 \,, \,\,\, \forall q \in A \,.
+$$
+Therefore 
+$$
+q^2 < 2 < 9  \implies q^2 < 9 \implies q < 3 = b \, .
+$$
+
+*Step 2. $\sup A$ does not exist.*  
+Assume by contradiction that 
+$$
+s = \sup A \in \Q
+$$
+exists. By definition it holds
+$$
+s \geq q \,, \quad \forall \, q \in A
+$$ {#eq-sup-contradiction-1}
+$$
+b \geq q \,, \, \forall \, q \in A \,\, \implies \,\, 
+s \leq b 
+$$ {#eq-sup-contradiction-2}
+There are two possibilities: $s \in A$ or $s \notin A$:
+
+- *Case 1. $s \in A$*.  
+If $s \in A$ by definition
+$$
+s  \geq 0\,, \quad s^2 < 2 \,.
+$${#eq-sup-contradiction-3}
+Define 
+$$
+\tilde{s} := s + \frac{1}{n}
+$$
+with $n \in \N$, $n \neq 0$ to be chosen later. Then
+\begin{align}
+\tilde{s}^2 & = \left( s + \frac1n \right)^2 \\
+            & = s^2 + \frac{1}{n^2} + 2 \frac{s}{n} \\
+            & < s^2 + \frac{1}{n} + 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}<\frac{1}{n^2}  \right) \\
+            & = s^2 + \frac{2s + 1}{n} \,. 
+\end{align}
+If we now impose that 
+$$
+s^2 + \frac{2s + 1}{n} < 2 \,,
+$$
+we can rearrange the above and obtain
+$$
+n(2 - s^2) > 2s + 1 \,.
+$$
+Now note that $s^2 < 2$ by assumption (@eq-sup-contradiction-3). Thus we can divide by $(2 - s^2)$ and obtain
+$$
+n >\frac{2s + 1}{2 - s^2} \,.
+$$
+To summarize, we have just shown that 
+$$
+n >\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \tilde{s}^2 < 2 \,.
+$$
+Moreover $\tilde{s} := (s + 1/n) \in \Q$. Therefore
+$$
+\tilde{s} \in A \,.
+$$
+Since $s = \sup A$, we then have
+$$
+\tilde{s} \leq s \,.
+$$
+However 
+$$
+\tilde{s} := s + \frac{1}{n} > s \,,
+$$
+yielding a contradiction. Thus $s \in A$ is not possible. 
+
+- *Case 2. $s \notin A$*.  
+If $s \notin A$, by the fact that $s = \sup A$ and by definition of $A$ we get
+$$
+s > 0 \,, \quad s^2 > 2 \,.
+$${#eq-sup-contradiction-4}  
+Define 
+$$
+\tilde{s} := s - \frac{1}{n} \,.
+$$
+We have
+\begin{align}
+\tilde{s}^2  & = \left(  s - \frac1n   \right)^2 \\
+             & = s^2 + \frac{1}{n^2} - 2 \frac{s}{n} \\
+             & > s^2 - \frac{1}{n^2} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} > - \frac{1}{n^2}  \right) \\
+             & > s^2 - \frac{1}{n} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} > - \frac{1}{n}  \right) \\
+             & = s^2 - \frac{1 + 2s}{n} \,.
+\end{align}
+Now we impose 
+$$
+s^2 - \frac{1 + 2s}{n} > 2 
+$$
+which is equivalent to 
+$$
+n(s^2 - 2) > 1 + 2s \,.
+$$
+By (@eq-sup-contradiction-4) we have $s^2 > 2$. Therefore we can divide by $(s^2 -2)$ and get
+$$
+n > \frac{1+2s}{s^2 - 2} \,.
+$$
+In total, we have just shown that 
+$$
+ n > \frac{1+2s}{s^2 - 2} \quad \implies \quad \tilde{s}^2 > 2\,.
+$$
+Therefore $\tilde{s} \notin A$, and by definition of $A$ we have
+$$
+\tilde{s} \geq q \,, \quad \forall q \in A\,.
+$$
+Moreover $\tilde{s} := (s - 1/n) \in \Q$. Therefore $\tilde{s}$ is an upper bound of $A$ in $\Q$. Since $s=\sup A$ is the smallest upper bound, see (@eq-sup-contradiction-2), it follows
+$$
+s \leq \tilde{s} \,.
+$$
+However 
+$$
+\tilde{s} := s - \frac{1}{n} < s \,,
+$$
+obtaining a contradiction. Then $s \notin A$. 
+
+*Conclusion.*  
+We have assumed by contradiction that $s = \sup A$ exists in $\Q$. In this case either $s \in A$ or $s \notin A$. In both cases we found a contradiction. Therefore $\sup A$ does not exist.    
+:::
+
+The above theorem shows that the supremum does not necessarily exist. What about the infimum? 
+
+
+::: Question
+Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subset K$ is non-empty and bounded below. Does
+$$
+\inf A 
+$$
+always exist?
+:::
+
+The answer to the above question is again **NO**. A set bounded below for which the infimum does nor exist is, for example, 
+$$
+A = (\sqrt{2}, 10] \cap \Q \,.
+$$
+The proof of this fact is, of course, very similar to the one of Theorem \ref{theorem-Q-not-complete}, and is therefore omitted.
+
+
+Thus infimum and supremum do not exist in general. The fields for which all the bounded sets admit supremum or infimum are called **complete**.
+
+
+::: Definition
+### Completeness
+
+Let $(K,+,\cdot,\leq)$ be an ordered field. We say that $K$ is **complete** if it holds the property:
+
+- (AC) For every $A \subset K$ non-empty and bounded above 
+$$
+\sup A \in K \,.
+$$
+
+:::
+
+
+::: Notation
+We have that:
+
+- Property (AC) is called **Axiom of Completeness**
+- If $K$ is an ordered field in which (AC) holds, then $K$ is called a **complete ordered field**
+:::
+
+
+Notice that if the **Axiom of Completeness** holds, then also the infimum exists. This is shown in the following proposition.
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be a complete ordered field. Suppose that $A \subset K$ is non-empty and bounded below. Then 
+$$
+\inf A \in K\,.
+$$
+:::
+
+::: Proof
+Suppose that $A \subset K$ is non-empty and bounded below. Then 
+$$
+-A:= \{ -a \divider a \in A   \}
+$$
+is non-empty and bounded above. By completeness we have that $\sup(-A)$ exists in $K$. But then Proposition \ref{proposition-inf-sup} implies that $\inf A$ exists in $K$, with
+$$
+\inf A = - \sup (-A)\,. 
+$$
+:::
+
+
+
+
+
+
+We can show that **Completeness** is equivalent to the **Cut Property**.  
+
+
+::: Theorem 
+### Equivalence of Cut Property and Completeness  {#theorem-cut-complete}
+Let $(K,+,\cdot, \leq)$ be an ordered field. Then they are equivalent:
+
+1. $K$ has the **Cut Property**
+2. $K$ is **Complete**
+
+:::
+
+
+::: Proof
+
+TO DO
+
+:::
 
 
 
@@ -1202,11 +1450,24 @@ The multiplication satisifes: $\, \forall \, x,y,z \in \R$
     x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
     $$
 
-5. The **Cut Property** holds:
+5. **Cut Property** holds:
     - (CP) Every cut $(A,B)$ of $\R$ admits a **separator** $s \in \R \, \st$
     $$
     a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B 
     $$  
+
+:::
+
+
+
+::: Remark
+Since **Cut Property** and **Axiom of Completeness** are equivalent by Theorem \ref{theorem-cut-complete}, one can replace the Cut Property at Point 5 with:  
+
+5. **Axiom of Completeness** holds:
+    - (AC) For every $A \subset \R$ non-empty and bounded above 
+    $$
+    \sup A \in \R
+    $$ 
 :::
 
 
@@ -1219,12 +1480,6 @@ $$
 
 
 
-::: Remark
-Since **Cut Property** and **Axiom of Completeness** are equivalent, one can replace the Cut Property at Point 5 with:  
-
-5. The **Axiom of Completeness** holds:
-    - (AC) STATEMENT HERE
-:::
 
 
 

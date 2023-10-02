@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Proposition {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -74,19 +74,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -94,17 +82,13 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Lemma {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Axiom {
   --color1: #f4cce0;
@@ -114,21 +98,37 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 </style>
 
@@ -654,7 +654,7 @@ A = (-\infty,s] \cap \mathbb{Q}\,, \quad B = (0,\infty) \cap \mathbb{Q}\,.
 </figure>
 </div>
 <div id="Question-19" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 19</strong></summary><div>Do all cuts of <span class="math inline">\(\mathbb{Q}\)</span> have a <strong>separator</strong>? In other words, does <span class="math inline">\(\mathbb{Q}\)</span> have the <strong>cut property</strong>?<p></p>
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 19</strong></summary><div>Do all ordered fields have the Cut Property? Does <span class="math inline">\(\mathbb{Q}\)</span> have the Cut Property?<p></p>
 </div></details>
 </div>
 <p>The answer to the above question is <strong>NO</strong>. For example the pair <span id="eq-cut-Q"><span class="math display">\[
@@ -782,7 +782,7 @@ B = (\sqrt{2}, \infty) \cap \mathbb{Q}
 </section>
 <section id="supremum-and-infimum" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="supremum-and-infimum"><span class="header-section-number">3.4</span> Supremum and infimum</h2>
-<p>A crucial definition in Analysis is the one of supremum or infimum of a set.</p>
+<p>A crucial definition in Analysis is the one of supremum or infimum of a set. This is also another way of studying the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <div id="intuition-about-supremum-and-infimum" class="Example" title="Intuition about supremum and infimum">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Intuition about supremum and infimum</summary><div>
 <p>Consider the set <span class="math display">\[
@@ -830,8 +830,12 @@ s := \sup \ A \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proposition-26" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 26</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If <span class="math display">\[
+<div id="Remark-26" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 26</strong></summary><div>Note that if a set <span class="math inline">\(A \subset K\)</span> in <strong>NOT</strong> bounded above, then the supremum does not exist, as there are no upper bounds of <span class="math inline">\(A\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Proposition-27" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 27</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If <span class="math display">\[
 \sup A
 \]</span> exists, then it is unique.<p></p>
 </div></details>
@@ -881,15 +885,15 @@ A = [0,\sqrt{2})  \cap \mathbb{Q}\,.
 </figure>
 </div>
 <div id="maximum" class="Definition" title="Maximum">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 27: </strong>Maximum</summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. A number <span class="math inline">\(M \in K\)</span> is called the <strong>maximum</strong> of <span class="math inline">\(A\)</span> if: <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 28: </strong>Maximum</summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. A number <span class="math inline">\(M \in K\)</span> is called the <strong>maximum</strong> of <span class="math inline">\(A\)</span> if: <span class="math display">\[
 M \in A   \,\, \mbox{ and } \,\, a \leq M  \,, \, \forall a \in A \,.
 \]</span> We denote the maximum by <span class="math display">\[
 M = \max A \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proposition-28" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 28</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If the maximum of <span class="math inline">\(A\)</span> exists, then also the supremum exists, and <span class="math display">\[
+<div id="Proposition-29" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 29</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If the maximum of <span class="math inline">\(A\)</span> exists, then also the supremum exists, and <span class="math display">\[
 \sup A = \max A \,.
 \]</span><p></p>
 </div></details>
@@ -929,7 +933,7 @@ B = [0,1] \cap \mathbb{Q}
 <h3 data-number="3.4.2" class="anchored" data-anchor-id="lower-bound-infimum-minimum"><span class="header-section-number">3.4.2</span> Lower bound, infimum, minimum</h3>
 <p>We now introduce the definitions of lower bound, infimum, minimum. These are the counterpart of upper bound, supremum and maximum, respectively.</p>
 <div id="upper-bound-bounded-below-infimum-minimum" class="Definition" title="Upper bound, bounded below, infimum, minimum">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29: </strong>Upper bound, bounded below, infimum, minimum</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 30: </strong>Upper bound, bounded below, infimum, minimum</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>:</p>
 <ol type="1">
 <li><p>We say that <span class="math inline">\(l \in K\)</span> is a <strong>lower bound</strong> for <span class="math inline">\(A\)</span> if <span class="math display">\[
@@ -959,8 +963,8 @@ m = \min A \,.
 <figcaption class="figure-caption">Infimum and lower bounds of a set <span class="math inline">\(A\)</span> in the field <span class="math inline">\(K\)</span></figcaption>
 </figure>
 </div>
-<div id="Proposition-30" class="Proposition">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 30</strong></summary><div>
+<div id="Proposition-31" class="Proposition">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 31</strong></summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>:</p>
 <ol type="1">
 <li>If <span class="math inline">\(\inf A\)</span> exists, then it is unique.</li>
@@ -1006,8 +1010,8 @@ B = [0,1] \cap \mathbb{Q}
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proposition-31" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 31</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If <span class="math inline">\(\inf A\)</span> and <span class="math inline">\(\sup A\)</span> exist, then <span class="math display">\[
+<div id="Proposition-32" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 32</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If <span class="math inline">\(\inf A\)</span> and <span class="math inline">\(\sup A\)</span> exist, then <span class="math display">\[
 \inf A \leq a \leq \sup A \,, \quad \forall a \in A \,.
 \]</span><p></p>
 </div></details>
@@ -1020,8 +1024,8 @@ B = [0,1] \cap \mathbb{Q}
 </figure>
 </div>
 <p>We conclude with another simple proposition. The proof is again left to the reader.</p>
-<div id="Proposition-32" class="Proposition">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 32</strong></summary><div>
+<div id="proposition-inf-sup" class="Proposition" title="Relationship between sup and inf">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 33: </strong>Relationship between sup and inf</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. Define <span class="math display">\[
 - A := \{ - a \, \colon \,a \in A \} \,.
 \]</span> It holds:</p>
@@ -1039,7 +1043,163 @@ B = [0,1] \cap \mathbb{Q}
 </section>
 <section id="completeness" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="completeness"><span class="header-section-number">3.5</span> Completeness</h2>
-<p>In this section we introduce the notion of <strong>Completeness</strong>. We will see that completeness is equivalent to the <strong>Cut Property</strong>.</p>
+<p>We have introduced the concepts of supremum and infimum on an ordered field <span class="math inline">\(K\)</span>.</p>
+<div id="Question-34" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 34</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subset K\)</span> is non-empty and bounded above. Does <span class="math display">\[
+\sup A
+\]</span> always exist?<p></p>
+</div></details>
+</div>
+<p>The answer to the above question is <strong>NO</strong>. Like we did with the Cut Property, the counterexample can be found in the set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span>. A set bounded above for which the supremum does nor exist is, for example, <span id="eq-no-sup-in-Q"><span class="math display">\[
+A = [0, \sqrt{2}) \cap \mathbb{Q}\,.
+\tag{3.11}\]</span></span></p>
+<div id="theorem-Q-not-complete" class="Theorem">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 35</strong></summary><div>
+<p>There exists a set <span class="math inline">\(A \subset \mathbb{Q}\)</span> such that</p>
+<ul>
+<li><span class="math inline">\(A\)</span> is non-empty,</li>
+<li><span class="math inline">\(A\)</span> is bounded above,</li>
+<li><span class="math inline">\(\sup A\)</span> does not exist in <span class="math inline">\(\mathbb{Q}\)</span>.</li>
+</ul>
+</div></details>
+</div>
+<p>The proof uses the same ideas we used for showing that <span class="math inline">\(\mathbb{Q}\)</span> does not have the Cut Property.</p>
+<div id="Proof*-11" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math inline">\(A\)</span> as in (<a href="#eq-no-sup-in-Q"><span>3.11</span></a>). Equivalently, this can be written as <span class="math display">\[
+A = \{ q \in \mathbb{Q}\, \colon \,q \geq 0 \,, \,\, q^2 &lt; 2 \} \,.
+\]</span><p></p>
+<p><em>Step 1. <span class="math inline">\(A\)</span> is bounded above.</em><br>
+Take <span class="math inline">\(b:=9\)</span>. Then <span class="math inline">\(b\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Indeed by definition <span class="math display">\[
+q^2 &lt; 2 \,, \,\, q \geq 0 \,, \,\,\, \forall q \in A \,.
+\]</span> Therefore <span class="math display">\[
+q^2 &lt; 2 &lt; 9  \implies q^2 &lt; 9 \implies q &lt; 3 = b \, .
+\]</span></p>
+<p><em>Step 2. <span class="math inline">\(\sup A\)</span> does not exist.</em><br>
+Assume by contradiction that <span class="math display">\[
+s = \sup A \in \mathbb{Q}
+\]</span> exists. By definition it holds <span id="eq-sup-contradiction-1"><span class="math display">\[
+s \geq q \,, \quad \forall \, q \in A
+\tag{3.12}\]</span></span> <span id="eq-sup-contradiction-2"><span class="math display">\[
+b \geq q \,, \, \forall \, q \in A \,\, \implies \,\,
+s \leq b
+\tag{3.13}\]</span></span> There are two possibilities: <span class="math inline">\(s \in A\)</span> or <span class="math inline">\(s \notin A\)</span>:</p>
+<ul>
+<li><p><em>Case 1. <span class="math inline">\(s \in A\)</span></em>.<br>
+If <span class="math inline">\(s \in A\)</span> by definition <span id="eq-sup-contradiction-3"><span class="math display">\[
+s  \geq 0\,, \quad s^2 &lt; 2 \,.
+\tag{3.14}\]</span></span> Define <span class="math display">\[
+\tilde{s} := s + \frac{1}{n}
+\]</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Then <span class="math display">\[\begin{align}
+\tilde{s}^2 &amp; = \left( s + \frac1n \right)^2 \\
+          &amp; = s^2 + \frac{1}{n^2} + 2 \frac{s}{n} \\
+          &amp; &lt; s^2 + \frac{1}{n} + 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}&lt;\frac{1}{n^2}  \right) \\
+          &amp; = s^2 + \frac{2s + 1}{n} \,.
+\end{align}\]</span> If we now impose that <span class="math display">\[
+s^2 + \frac{2s + 1}{n} &lt; 2 \,,
+\]</span> we can rearrange the above and obtain <span class="math display">\[
+n(2 - s^2) &gt; 2s + 1 \,.
+\]</span> Now note that <span class="math inline">\(s^2 &lt; 2\)</span> by assumption (<a href="#eq-sup-contradiction-3"><span>3.14</span></a>). Thus we can divide by <span class="math inline">\((2 - s^2)\)</span> and obtain <span class="math display">\[
+n &gt;\frac{2s + 1}{2 - s^2} \,.
+\]</span> To summarize, we have just shown that <span class="math display">\[
+n &gt;\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \tilde{s}^2 &lt; 2 \,.
+\]</span> Moreover <span class="math inline">\(\tilde{s} := (s + 1/n) \in \mathbb{Q}\)</span>. Therefore <span class="math display">\[
+\tilde{s} \in A \,.
+\]</span> Since <span class="math inline">\(s = \sup A\)</span>, we then have <span class="math display">\[
+\tilde{s} \leq s \,.
+\]</span> However <span class="math display">\[
+\tilde{s} := s + \frac{1}{n} &gt; s \,,
+\]</span> yielding a contradiction. Thus <span class="math inline">\(s \in A\)</span> is not possible.</p></li>
+<li><p><em>Case 2. <span class="math inline">\(s \notin A\)</span></em>.<br>
+If <span class="math inline">\(s \notin A\)</span>, by the fact that <span class="math inline">\(s = \sup A\)</span> and by definition of <span class="math inline">\(A\)</span> we get <span id="eq-sup-contradiction-4"><span class="math display">\[
+s &gt; 0 \,, \quad s^2 &gt; 2 \,.
+\tag{3.15}\]</span></span><br>
+Define <span class="math display">\[
+\tilde{s} := s - \frac{1}{n} \,.
+\]</span> We have <span class="math display">\[\begin{align}
+\tilde{s}^2  &amp; = \left(  s - \frac1n   \right)^2 \\
+           &amp; = s^2 + \frac{1}{n^2} - 2 \frac{s}{n} \\
+           &amp; &gt; s^2 - \frac{1}{n^2} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} &gt; - \frac{1}{n^2}  \right) \\
+           &amp; &gt; s^2 - \frac{1}{n} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} &gt; - \frac{1}{n}  \right) \\
+           &amp; = s^2 - \frac{1 + 2s}{n} \,.
+\end{align}\]</span> Now we impose <span class="math display">\[
+s^2 - \frac{1 + 2s}{n} &gt; 2
+\]</span> which is equivalent to <span class="math display">\[
+n(s^2 - 2) &gt; 1 + 2s \,.
+\]</span> By (<a href="#eq-sup-contradiction-4"><span>3.15</span></a>) we have <span class="math inline">\(s^2 &gt; 2\)</span>. Therefore we can divide by <span class="math inline">\((s^2 -2)\)</span> and get <span class="math display">\[
+n &gt; \frac{1+2s}{s^2 - 2} \,.
+\]</span> In total, we have just shown that <span class="math display">\[
+n &gt; \frac{1+2s}{s^2 - 2} \quad \implies \quad \tilde{s}^2 &gt; 2\,.
+\]</span> Therefore <span class="math inline">\(\tilde{s} \notin A\)</span>, and by definition of <span class="math inline">\(A\)</span> we have <span class="math display">\[
+\tilde{s} \geq q \,, \quad \forall q \in A\,.
+\]</span> Moreover <span class="math inline">\(\tilde{s} := (s - 1/n) \in \mathbb{Q}\)</span>. Therefore <span class="math inline">\(\tilde{s}\)</span> is an upper bound of <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathbb{Q}\)</span>. Since <span class="math inline">\(s=\sup A\)</span> is the smallest upper bound, see (<a href="#eq-sup-contradiction-2"><span>3.13</span></a>), it follows <span class="math display">\[
+s \leq \tilde{s} \,.
+\]</span> However <span class="math display">\[
+\tilde{s} := s - \frac{1}{n} &lt; s \,,
+\]</span> obtaining a contradiction. Then <span class="math inline">\(s \notin A\)</span>.</p></li>
+</ul>
+<p><em>Conclusion.</em><br>
+We have assumed by contradiction that <span class="math inline">\(s = \sup A\)</span> exists in <span class="math inline">\(\mathbb{Q}\)</span>. In this case either <span class="math inline">\(s \in A\)</span> or <span class="math inline">\(s \notin A\)</span>. In both cases we found a contradiction. Therefore <span class="math inline">\(\sup A\)</span> does not exist.</p>
+</div></details>
+</div>
+<p>The above theorem shows that the supremum does not necessarily exist. What about the infimum?</p>
+<div id="Question-36" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 36</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subset K\)</span> is non-empty and bounded below. Does <span class="math display">\[
+\inf A
+\]</span> always exist?<p></p>
+</div></details>
+</div>
+<p>The answer to the above question is again <strong>NO</strong>. A set bounded below for which the infimum does nor exist is, for example, <span class="math display">\[
+A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
+\]</span> The proof of this fact is, of course, very similar to the one of Theorem <a href="chap_3.html#theorem-Q-not-complete">35</a>, and is therefore omitted.</p>
+<p>Thus infimum and supremum do not exist in general. The fields for which all the bounded sets admit supremum or infimum are called <strong>complete</strong>.</p>
+<div id="completeness-1" class="Definition" title="Completeness">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 37: </strong>Completeness</summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field. We say that <span class="math inline">\(K\)</span> is <strong>complete</strong> if it holds the property:</p>
+<ul>
+<li>(AC) For every <span class="math inline">\(A \subset K\)</span> non-empty and bounded above <span class="math display">\[
+\sup A \in K \,.
+\]</span></li>
+</ul>
+</div></details>
+</div>
+<div id="Notation-38" class="Notation">
+<details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 38</strong></summary><div>
+<p>We have that:</p>
+<ul>
+<li>Property (AC) is called <strong>Axiom of Completeness</strong></li>
+<li>If <span class="math inline">\(K\)</span> is an ordered field in which (AC) holds, then <span class="math inline">\(K\)</span> is called a <strong>complete ordered field</strong></li>
+</ul>
+</div></details>
+</div>
+<p>Notice that if the <strong>Axiom of Completeness</strong> holds, then also the infimum exists. This is shown in the following proposition.</p>
+<div id="Proposition-39" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 39</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be a complete ordered field. Suppose that <span class="math inline">\(A \subset K\)</span> is non-empty and bounded below. Then <span class="math display">\[
+\inf A \in K\,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-12" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose that <span class="math inline">\(A \subset K\)</span> is non-empty and bounded below. Then <span class="math display">\[
+-A:= \{ -a \, \colon \,a \in A   \}
+\]</span> is non-empty and bounded above. By completeness we have that <span class="math inline">\(\sup(-A)\)</span> exists in <span class="math inline">\(K\)</span>. But then Proposition <a href="chap_3.html#proposition-inf-sup">33</a> implies that <span class="math inline">\(\inf A\)</span> exists in <span class="math inline">\(K\)</span>, with <span class="math display">\[
+\inf A = - \sup (-A)\,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>We can show that <strong>Completeness</strong> is equivalent to the <strong>Cut Property</strong>.</p>
+<div id="theorem-cut-complete" class="Theorem" title="Equivalence of Cut Property and Completeness">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 40: </strong>Equivalence of Cut Property and Completeness</summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot, \leq)\)</span> be an ordered field. Then they are equivalent:</p>
+<ol type="1">
+<li><span class="math inline">\(K\)</span> has the <strong>Cut Property</strong></li>
+<li><span class="math inline">\(K\)</span> is <strong>Complete</strong></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-13" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>TO DO<p></p>
+</div></details>
+</div>
 </section>
 <section id="axioms-of-real-numbers" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="axioms-of-real-numbers"><span class="header-section-number">3.6</span> Axioms of Real Numbers</h2>
@@ -1050,7 +1210,7 @@ B = [0,1] \cap \mathbb{Q}
 </ul>
 <p>The definition of <span class="math inline">\(\mathbb{R}\)</span> is given in an axiomatic way.</p>
 <div id="system-of-real-numbers-mathbbr" class="Definition" title="System of Real Numbers \mathbb{R}">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 33: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 41: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
 <p>A system of Real Numbers is a set <span class="math inline">\(\mathbb{R}\)</span> satisfying the following properties:</p>
 <ol type="1">
 <li>There is an operation <span class="math inline">\(+\)</span> of <strong>addition</strong> on <span class="math inline">\(\mathbb{R}\)</span> <span class="math display">\[
@@ -1113,35 +1273,36 @@ x \leq y \,\, \implies \,\, x + z \leq y + z
 x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
 \]</span></li>
 </ul></li>
-<li>The <strong>Cut Property</strong> holds:
+<li><strong>Cut Property</strong> holds:
 <ul>
 <li>(CP) Every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{R}\)</span> admits a <strong>separator</strong> <span class="math inline">\(s \in \mathbb{R}\, \, \text{ s.t } \, \)</span> <span class="math display">\[
 a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
-\]</span><br>
-</li>
+\]</span></li>
 </ul></li>
 </ol>
 </div></details>
 </div>
-<div id="Notation-34" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 34</strong></summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x \neq 0\)</span>, the multiplicative inverse is also denoted by <span class="math display">\[
+<div id="Remark-42" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42</strong></summary><div>
+<p>Since <strong>Cut Property</strong> and <strong>Axiom of Completeness</strong> are equivalent by Theorem <a href="chap_3.html#theorem-cut-complete">40</a>, one can replace the Cut Property at Point 5 with:</p>
+<ol start="5" type="1">
+<li><strong>Axiom of Completeness</strong> holds:
+<ul>
+<li>(AC) For every <span class="math inline">\(A \subset \mathbb{R}\)</span> non-empty and bounded above <span class="math display">\[
+\sup A \in \mathbb{R}
+\]</span></li>
+</ul></li>
+</ol>
+</div></details>
+</div>
+<div id="Notation-43" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 43</strong></summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x \neq 0\)</span>, the multiplicative inverse is also denoted by <span class="math display">\[
 x^{-1} = \frac{1}{x} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Remark-35" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 35</strong></summary><div>
-<p>Since <strong>Cut Property</strong> and <strong>Axiom of Completeness</strong> are equivalent, one can replace the Cut Property at Point 5 with:</p>
-<ol start="5" type="1">
-<li>The <strong>Axiom of Completeness</strong> holds:
-<ul>
-<li>(AC) STATEMENT HERE</li>
-</ul></li>
-</ol>
-</div></details>
-</div>
-<div id="Remark-36" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 36</strong></summary><div>
+<div id="Remark-44" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 44</strong></summary><div>
 <p>Recall that</p>
 <ul>
 <li><span class="math inline">\((K,+,\cdot)\)</span> satisfying (A1)-(A3), (M1)-(M3), (AM) is a <strong>field</strong></li>

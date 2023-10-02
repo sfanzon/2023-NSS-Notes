@@ -41836,3 +41836,3903 @@
  [**Theorem 4**](chap_4.qmd#convergence-of-herons-algorithm): Convergence of Heron’s Algorithm\Pageref{convergence-of-herons-algorithm}
 
  [**Proof**](chap_4.qmd#Proof*-4)\Pageref{Proof*-4}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Proposition 26**](chap_3.qmd#Proposition-26)\Pageref{Proposition-26}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 27**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 28**](chap_3.qmd#Proposition-28)\Pageref{Proposition-28}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 29**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 30**](chap_3.qmd#Proposition-30)\Pageref{Proposition-30}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Definition 33**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 34**](chap_3.qmd#Notation-34)\Pageref{Notation-34}
+
+ [**Remark 35**](chap_3.qmd#Remark-35)\Pageref{Remark-35}
+
+ [**Remark 36**](chap_3.qmd#Remark-36)\Pageref{Remark-36}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#Theorem-35)\Pageref{Theorem-35}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Definition 36**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 37**](chap_3.qmd#Notation-37)\Pageref{Notation-37}
+
+ [**Remark 38**](chap_3.qmd#Remark-38)\Pageref{Remark-38}
+
+ [**Remark 39**](chap_3.qmd#Remark-39)\Pageref{Remark-39}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Theorem 37**](chap_3.qmd#Theorem-37)\Pageref{Theorem-37}
+
+ [**Definition 38**](chap_3.qmd#complete-ordered-field): Complete ordered field\Pageref{complete-ordered-field}
+
+ [**Definition 39**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 40**](chap_3.qmd#Notation-40)\Pageref{Notation-40}
+
+ [**Remark 41**](chap_3.qmd#Remark-41)\Pageref{Remark-41}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Theorem 37**](chap_3.qmd#Theorem-37)\Pageref{Theorem-37}
+
+ [**Definition 38**](chap_3.qmd#complete-ordered-field): Complete ordered field\Pageref{complete-ordered-field}
+
+ [**Definition 39**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 40**](chap_3.qmd#Notation-40)\Pageref{Notation-40}
+
+ [**Remark 41**](chap_3.qmd#Remark-41)\Pageref{Remark-41}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Theorem 37**](chap_3.qmd#Theorem-37)\Pageref{Theorem-37}
+
+ [**Definition 38**](chap_3.qmd#complete-ordered-field): Complete ordered field\Pageref{complete-ordered-field}
+
+ [**Definition 39**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 40**](chap_3.qmd#Notation-40)\Pageref{Notation-40}
+
+ [**Remark 41**](chap_3.qmd#Remark-41)\Pageref{Remark-41}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Theorem 37**](chap_3.qmd#Theorem-37)\Pageref{Theorem-37}
+
+ [**Definition 38**](chap_3.qmd#complete-ordered-field): Complete ordered field\Pageref{complete-ordered-field}
+
+ [**Notation 39**](chap_3.qmd#Notation-39)\Pageref{Notation-39}
+
+ [**Theorem 40**](chap_3.qmd#Theorem-40)\Pageref{Theorem-40}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 42**](chap_3.qmd#Notation-42)\Pageref{Notation-42}
+
+ [**Remark 43**](chap_3.qmd#Remark-43)\Pageref{Remark-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#complete-ordered-field): Complete ordered field\Pageref{complete-ordered-field}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Theorem 39**](chap_3.qmd#Theorem-39)\Pageref{Theorem-39}
+
+ [**Definition 40**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 41**](chap_3.qmd#Notation-41)\Pageref{Notation-41}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Remark 43**](chap_3.qmd#Remark-43)\Pageref{Remark-43}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#Proposition-33)\Pageref{Proposition-33}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Theorem 39**](chap_3.qmd#Theorem-39)\Pageref{Theorem-39}
+
+ [**Definition 40**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 41**](chap_3.qmd#Notation-41)\Pageref{Notation-41}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Remark 43**](chap_3.qmd#Remark-43)\Pageref{Remark-43}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#Theorem-40)\Pageref{Theorem-40}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 42**](chap_3.qmd#Notation-42)\Pageref{Notation-42}
+
+ [**Remark 43**](chap_3.qmd#Remark-43)\Pageref{Remark-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#Theorem-40)\Pageref{Theorem-40}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 42**](chap_3.qmd#Notation-42)\Pageref{Notation-42}
+
+ [**Remark 43**](chap_3.qmd#Remark-43)\Pageref{Remark-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#Theorem-40)\Pageref{Theorem-40}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 42**](chap_3.qmd#Notation-42)\Pageref{Notation-42}
+
+ [**Remark 43**](chap_3.qmd#Remark-43)\Pageref{Remark-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#Theorem-40)\Pageref{Theorem-40}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 42**](chap_3.qmd#Notation-42)\Pageref{Notation-42}
+
+ [**Remark 43**](chap_3.qmd#Remark-43)\Pageref{Remark-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#Theorem-40)\Pageref{Theorem-40}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Notation 43**](chap_3.qmd#Notation-43)\Pageref{Notation-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-13)\Pageref{Proof*-13}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Notation 43**](chap_3.qmd#Notation-43)\Pageref{Notation-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-13)\Pageref{Proof*-13}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Notation 43**](chap_3.qmd#Notation-43)\Pageref{Notation-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-13)\Pageref{Proof*-13}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Notation 43**](chap_3.qmd#Notation-43)\Pageref{Notation-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-13)\Pageref{Proof*-13}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Notation 43**](chap_3.qmd#Notation-43)\Pageref{Notation-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Question 1**](chap_1.qmd#Question-1)\Pageref{Question-1}
+
+ [**Question 2**](chap_1.qmd#Question-2)\Pageref{Question-2}
+
+ [**Question 3**](chap_1.qmd#Question-3)\Pageref{Question-3}
+
+ [**Question 4**](chap_1.qmd#Question-4)\Pageref{Question-4}
+
+ [**Conjecture 5**](chap_1.qmd#conj-line)\Pageref{conj-line}
+
+ [**Theorem 6**](chap_1.qmd#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](chap_1.qmd#proof-of-theorem): Proof of Theorem 6\Pageref{proof-of-theorem}
+
+ [**Remark 7**](chap_1.qmd#Remark-7)\Pageref{Remark-7}
+
+ [**Theorem 8**](chap_1.qmd#we-will-prove-this-in-the-future): We will prove this in the future\Pageref{we-will-prove-this-in-the-future}
+
+ [**Theorem 9**](chap_1.qmd#we-will-prove-this-in-the-future-1): We will prove this in the future\Pageref{we-will-prove-this-in-the-future-1}
+
+ [**Remark 1**](chap_2.qmd#Remark-1)\Pageref{Remark-1}
+
+ [**Example 2**](chap_2.qmd#Example-2)\Pageref{Example-2}
+
+ [**Example 3**](chap_2.qmd#Example-3)\Pageref{Example-3}
+
+ [**Example 4**](chap_2.qmd#Example-4)\Pageref{Example-4}
+
+ [**Example 5**](chap_2.qmd#Example-5)\Pageref{Example-5}
+
+ [**Example 6**](chap_2.qmd#Example-6)\Pageref{Example-6}
+
+ [**Proposition 7**](chap_2.qmd#Proposition-Equality-Sets)\Pageref{Proposition-Equality-Sets}
+
+ [**Proof**](chap_2.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Example 8**](chap_2.qmd#Example-8)\Pageref{Example-8}
+
+ [**Remark 9**](chap_2.qmd#Remark-9)\Pageref{Remark-9}
+
+ [**Example 10**](chap_2.qmd#Example-10)\Pageref{Example-10}
+
+ [**Proposition 11**](chap_2.qmd#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
+
+ [**Remark 12**](chap_2.qmd#Remark-12)\Pageref{Remark-12}
+
+ [**Example 13**](chap_2.qmd#Example-13)\Pageref{Example-13}
+
+ [**Definition 14**](chap_2.qmd#equivalence-relation-1): Equivalence relation\Pageref{equivalence-relation-1}
+
+ [**Definition 15**](chap_2.qmd#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+
+ [**Example 16**](chap_2.qmd#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
+
+ [**Example 17**](chap_2.qmd#Example-17)\Pageref{Example-17}
+
+ [**Definition 18**](chap_2.qmd#partial-order): Partial order\Pageref{partial-order}
+
+ [**Definition 19**](chap_2.qmd#total-order): Total order\Pageref{total-order}
+
+ [**Example 20**](chap_2.qmd#set-inclusion-is-a-partial-order): Set inclusion is a partial order\Pageref{set-inclusion-is-a-partial-order}
+
+ [**Example 21**](chap_2.qmd#inequality-is-a-total-order): Inequality is a total order\Pageref{inequality-is-a-total-order}
+
+ [**Notation 22**](chap_2.qmd#Notation-22)\Pageref{Notation-22}
+
+ [**Definition 23**](chap_2.qmd#Definition-23)\Pageref{Definition-23}
+
+ [**Definition 24**](chap_2.qmd#definition-function): Functions\Pageref{definition-function}
+
+ [**Warning**](chap_2.qmd#Warning*-2)\Pageref{Warning*-2}
+
+ [**Example 25**](chap_2.qmd#Example-25)\Pageref{Example-25}
+
+ [**Example 26**](chap_2.qmd#Example-26)\Pageref{Example-26}
+
+ [**Definition 27**](chap_2.qmd#absolute-value): Absolute value\Pageref{absolute-value}
+
+ [**Example 28**](chap_2.qmd#Example-28)\Pageref{Example-28}
+
+ [**Remark 29**](chap_2.qmd#Remark-29)\Pageref{Remark-29}
+
+ [**Remark 30**](chap_2.qmd#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+
+ [**Remark 31**](chap_2.qmd#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+
+ [**Remark 32**](chap_2.qmd#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+
+ [**Lemma 33**](chap_2.qmd#lemma-absolute-value)\Pageref{lemma-absolute-value}
+
+ [**Proof**](chap_2.qmd#proof-of-lemma): Proof of Lemma 33\Pageref{proof-of-lemma}
+
+ [**Lemma 34**](chap_2.qmd#Lemma-34)\Pageref{Lemma-34}
+
+ [**Theorem 35**](chap_2.qmd#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
+
+ [**Remark 36**](chap_2.qmd#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
+
+ [**Proof**](chap_2.qmd#proof-of-theorem): Proof of Theorem 35\Pageref{proof-of-theorem}
+
+ [**Remark 37**](chap_2.qmd#Remark-37)\Pageref{Remark-37}
+
+ [**Proposition 38**](chap_2.qmd#proposition-easy)\Pageref{proposition-easy}
+
+ [**Proof**](chap_2.qmd#of-proposition): of Proposition 38\Pageref{of-proposition}
+
+ [**Axiom 39**](chap_2.qmd#principle-of-induction): Principle of Induction\Pageref{principle-of-induction}
+
+ [**Important**](chap_2.qmd#Important*-6)\Pageref{Important*-6}
+
+ [**Remark 40**](chap_2.qmd#Remark-40)\Pageref{Remark-40}
+
+ [**Corollary 41**](chap_2.qmd#principle-of-inducion---alternative-formulation): Principle of Inducion - Alternative formulation\Pageref{principle-of-inducion---alternative-formulation}
+
+ [**Proof**](chap_2.qmd#Proof*-7)\Pageref{Proof*-7}
+
+ [**Example 42**](chap_2.qmd#formula-for-summing-first-n-natural-numbers): Formula for summing first $n$ natural numbers\Pageref{formula-for-summing-first-n-natural-numbers}
+
+ [**Example 43**](chap_2.qmd#statements-about-sequences-of-numbers): Statements about sequences of numbers\Pageref{statements-about-sequences-of-numbers}
+
+ [**Definition 1**](chap_3.qmd#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 2**](chap_3.qmd#Notation-2)\Pageref{Notation-2}
+
+ [**Example 3**](chap_3.qmd#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 4**](chap_3.qmd#Definition-4)\Pageref{Definition-4}
+
+ [**Example 5**](chap_3.qmd#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 6**](chap_3.qmd#Example-6)\Pageref{Example-6}
+
+ [**Definition 7**](chap_3.qmd#field): Field\Pageref{field}
+
+ [**Example 8**](chap_3.qmd#Example-8)\Pageref{Example-8}
+
+ [**Definition 9**](chap_3.qmd#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 10**](chap_3.qmd#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](chap_3.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 11**](chap_3.qmd#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 12**](chap_3.qmd#Theorem-12)\Pageref{Theorem-12}
+
+ [**Definition 13**](chap_3.qmd#Definition-13)\Pageref{Definition-13}
+
+ [**Example 14**](chap_3.qmd#Example-14)\Pageref{Example-14}
+
+ [**Definition 15**](chap_3.qmd#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 16**](chap_3.qmd#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 17**](chap_3.qmd#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 18**](chap_3.qmd#Example-18)\Pageref{Example-18}
+
+ [**Question 19**](chap_3.qmd#Question-19)\Pageref{Question-19}
+
+ [**Theorem 20**](chap_3.qmd#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](chap_3.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Remark 21**](chap_3.qmd#Remark-21)\Pageref{Remark-21}
+
+ [**Example 22**](chap_3.qmd#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 23**](chap_3.qmd#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 24**](chap_3.qmd#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 25**](chap_3.qmd#Notation-25)\Pageref{Notation-25}
+
+ [**Remark 26**](chap_3.qmd#Remark-26)\Pageref{Remark-26}
+
+ [**Proposition 27**](chap_3.qmd#Proposition-27)\Pageref{Proposition-27}
+
+ [**Proof**](chap_3.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Warning**](chap_3.qmd#Warning*-4)\Pageref{Warning*-4}
+
+ [**Warning**](chap_3.qmd#Warning*-5)\Pageref{Warning*-5}
+
+ [**Definition 28**](chap_3.qmd#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 29**](chap_3.qmd#Proposition-29)\Pageref{Proposition-29}
+
+ [**Proof**](chap_3.qmd#Proof*-6)\Pageref{Proof*-6}
+
+ [**Warning**](chap_3.qmd#Warning*-7)\Pageref{Warning*-7}
+
+ [**Definition 30**](chap_3.qmd#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 31**](chap_3.qmd#Proposition-31)\Pageref{Proposition-31}
+
+ [**Warning**](chap_3.qmd#Warning*-8)\Pageref{Warning*-8}
+
+ [**Warning**](chap_3.qmd#Warning*-9)\Pageref{Warning*-9}
+
+ [**Warning**](chap_3.qmd#Warning*-10)\Pageref{Warning*-10}
+
+ [**Proposition 32**](chap_3.qmd#Proposition-32)\Pageref{Proposition-32}
+
+ [**Proposition 33**](chap_3.qmd#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+
+ [**Question 34**](chap_3.qmd#Question-34)\Pageref{Question-34}
+
+ [**Theorem 35**](chap_3.qmd#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-11)\Pageref{Proof*-11}
+
+ [**Question 36**](chap_3.qmd#Question-36)\Pageref{Question-36}
+
+ [**Definition 37**](chap_3.qmd#completeness-1): Completeness\Pageref{completeness-1}
+
+ [**Notation 38**](chap_3.qmd#Notation-38)\Pageref{Notation-38}
+
+ [**Proposition 39**](chap_3.qmd#Proposition-39)\Pageref{Proposition-39}
+
+ [**Proof**](chap_3.qmd#Proof*-12)\Pageref{Proof*-12}
+
+ [**Theorem 40**](chap_3.qmd#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
+
+ [**Proof**](chap_3.qmd#Proof*-13)\Pageref{Proof*-13}
+
+ [**Definition 41**](chap_3.qmd#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Remark 42**](chap_3.qmd#Remark-42)\Pageref{Remark-42}
+
+ [**Notation 43**](chap_3.qmd#Notation-43)\Pageref{Notation-43}
+
+ [**Remark 44**](chap_3.qmd#Remark-44)\Pageref{Remark-44}
+
+ [**Proposition 1**](chap_4.qmd#proposition-heron)\Pageref{proposition-heron}
+
+ [**Proof**](chap_4.qmd#Proof*-1)\Pageref{Proof*-1}
+
+ [**Proposition 2**](chap_4.qmd#proposition-heron-error): Error estimate\Pageref{proposition-heron-error}
+
+ [**Proof**](chap_4.qmd#Proof*-2)\Pageref{Proof*-2}
+
+ [**Proposition 3**](chap_4.qmd#proposition-heron-error-exp)\Pageref{proposition-heron-error-exp}
+
+ [**Proof**](chap_4.qmd#Proof*-3)\Pageref{Proof*-3}
+
+ [**Theorem 4**](chap_4.qmd#convergence-of-herons-algorithm): Convergence of Heron’s Algorithm\Pageref{convergence-of-herons-algorithm}
+
+ [**Proof**](chap_4.qmd#Proof*-4)\Pageref{Proof*-4}
