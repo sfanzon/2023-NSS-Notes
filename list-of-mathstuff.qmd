@@ -145,23 +145,71 @@
 
  [**Theorem 3.12**](#Theorem-3.12)\Pageref{Theorem-3.12}
 
- [**Definition 3.13**](#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+ [**Definition 3.13**](#Definition-3.13)\Pageref{Definition-3.13}
 
- [**Definition 3.14**](#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+ [**Example 3.14**](#Example-3.14)\Pageref{Example-3.14}
 
- [**Definition 3.15**](#cut-property-1): Cut property\Pageref{cut-property-1}
+ [**Definition 3.15**](#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
 
- [**Example 3.16**](#Example-3.16)\Pageref{Example-3.16}
+ [**Definition 3.16**](#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
 
- [**Question 3.17**](#Question-3.17)\Pageref{Question-3.17}
+ [**Definition 3.17**](#cut-property-1): Cut property\Pageref{cut-property-1}
 
- [**Theorem 3.18**](#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+ [**Example 3.18**](#Example-3.18)\Pageref{Example-3.18}
+
+ [**Question 3.19**](#Question-3.19)\Pageref{Question-3.19}
+
+ [**Theorem 3.20**](#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
 
  [**Proof**](#Proof*-3.2)\Pageref{Proof*-3.2}
 
- [**Remark 3.19**](#Remark-3.19)\Pageref{Remark-3.19}
+ [**Remark 3.21**](#Remark-3.21)\Pageref{Remark-3.21}
 
- [**Definition 3.20**](#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+ [**Example 3.22**](#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+
+ [**Definition 3.23**](#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+
+ [**Definition 3.24**](#supremum): Supremum\Pageref{supremum}
+
+ [**Notation 3.25**](#Notation-3.25)\Pageref{Notation-3.25}
+
+ [**Proposition 3.26**](#Proposition-3.26)\Pageref{Proposition-3.26}
+
+ [**Proof**](#Proof*-3.3)\Pageref{Proof*-3.3}
+
+ [**Warning**](#Warning*-3.4)\Pageref{Warning*-3.4}
+
+ [**Warning**](#Warning*-3.5)\Pageref{Warning*-3.5}
+
+ [**Definition 3.27**](#maximum): Maximum\Pageref{maximum}
+
+ [**Proposition 3.28**](#Proposition-3.28)\Pageref{Proposition-3.28}
+
+ [**Proof**](#Proof*-3.6)\Pageref{Proof*-3.6}
+
+ [**Warning**](#Warning*-3.7)\Pageref{Warning*-3.7}
+
+ [**Definition 3.29**](#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+
+ [**Proposition 3.30**](#Proposition-3.30)\Pageref{Proposition-3.30}
+
+ [**Warning**](#Warning*-3.8)\Pageref{Warning*-3.8}
+
+ [**Warning**](#Warning*-3.9)\Pageref{Warning*-3.9}
+
+ [**Warning**](#Warning*-3.10)\Pageref{Warning*-3.10}
+
+ [**Proposition 3.31**](#Proposition-3.31)\Pageref{Proposition-3.31}
+
+ [**Proposition 3.32**](#Proposition-3.32)\Pageref{Proposition-3.32}
+
+ [**Definition 3.33**](#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Notation 3.34**](#Notation-3.34)\Pageref{Notation-3.34}
+
+ [**Remark 3.35**](#Remark-3.35)\Pageref{Remark-3.35}
+
+ [**Remark 3.36**](#Remark-3.36)\Pageref{Remark-3.36}
 
  [**Proposition 4.1**](#proposition-heron)\Pageref{proposition-heron}
 

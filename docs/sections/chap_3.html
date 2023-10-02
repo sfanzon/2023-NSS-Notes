@@ -66,25 +66,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Theorem {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
 }
 .Important {
   --color1: #f4cce0;
@@ -94,23 +78,11 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Conjecture {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -118,17 +90,45 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Question {
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -231,8 +231,24 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#fields" id="toc-fields" class="nav-link active" data-scroll-target="#fields"><span class="header-section-number">3.1</span> Fields</a></li>
-  <li><a href="#cut-property" id="toc-cut-property" class="nav-link" data-scroll-target="#cut-property"><span class="header-section-number">3.2</span> Cut Property</a></li>
-  <li><a href="#axioms-of-real-numbers" id="toc-axioms-of-real-numbers" class="nav-link" data-scroll-target="#axioms-of-real-numbers"><span class="header-section-number">3.3</span> Axioms of Real Numbers</a></li>
+  <li><a href="#ordered-fields" id="toc-ordered-fields" class="nav-link" data-scroll-target="#ordered-fields"><span class="header-section-number">3.2</span> Ordered fields</a></li>
+  <li><a href="#cut-property" id="toc-cut-property" class="nav-link" data-scroll-target="#cut-property"><span class="header-section-number">3.3</span> Cut Property</a></li>
+  <li><a href="#supremum-and-infimum" id="toc-supremum-and-infimum" class="nav-link" data-scroll-target="#supremum-and-infimum"><span class="header-section-number">3.4</span> Supremum and infimum</a>
+  <ul class="collapse">
+  <li><a href="#upper-bound-supremum-maximum" id="toc-upper-bound-supremum-maximum" class="nav-link" data-scroll-target="#upper-bound-supremum-maximum"><span class="header-section-number">3.4.1</span> Upper bound, supremum, maximum</a></li>
+  <li><a href="#lower-bound-infimum-minimum" id="toc-lower-bound-infimum-minimum" class="nav-link" data-scroll-target="#lower-bound-infimum-minimum"><span class="header-section-number">3.4.2</span> Lower bound, infimum, minimum</a></li>
+  </ul></li>
+  <li><a href="#completeness" id="toc-completeness" class="nav-link" data-scroll-target="#completeness"><span class="header-section-number">3.5</span> Completeness</a></li>
+  <li><a href="#axioms-of-real-numbers" id="toc-axioms-of-real-numbers" class="nav-link" data-scroll-target="#axioms-of-real-numbers"><span class="header-section-number">3.6</span> Axioms of Real Numbers</a></li>
+  <li><a href="#consequences-of-the-axioms" id="toc-consequences-of-the-axioms" class="nav-link" data-scroll-target="#consequences-of-the-axioms"><span class="header-section-number">3.7</span> Consequences of the Axioms</a>
+  <ul class="collapse">
+  <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link" data-scroll-target="#nested-interval-property"><span class="header-section-number">3.7.1</span> Nested Interval Property</a></li>
+  <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link" data-scroll-target="#archimedean-property"><span class="header-section-number">3.7.2</span> Archimedean Property</a></li>
+  <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">3.7.3</span> Revisiting Sup and inf</a></li>
+  <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">3.7.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#existence-of-square-roots" id="toc-existence-of-square-roots" class="nav-link" data-scroll-target="#existence-of-square-roots"><span class="header-section-number">3.7.5</span> Existence of Square Roots</a></li>
+  </ul></li>
+  <li><a href="#cardinality" id="toc-cardinality" class="nav-link" data-scroll-target="#cardinality"><span class="header-section-number">3.8</span> Cardinality</a></li>
   </ul>
 </nav>
     </div>
@@ -391,23 +407,43 @@ x \circ y = y \circ x = e \,.
 <p>We are ready to define fields.</p>
 <div id="field" class="Definition" title="Field">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 7: </strong>Field</summary><div>
-<p>Let <span class="math inline">\(K\)</span> be a set with binary operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>. We call the triple <span class="math inline">\((K, + , \cdot)\)</span> a <strong>field</strong> if:</p>
+<p>Let <span class="math inline">\(K\)</span> be a set with binary operations of <strong>addition</strong> <span class="math display">\[
++\ \colon K \times K \to K \,, \quad (x,y) \mapsto x + y
+\]</span> and <strong>multiplication</strong> <span class="math display">\[
+\cdot\ \colon K \times K \to K \,, \quad (x,y) \mapsto x \cdot y  = xy \,.
+\]</span> We call the triple <span class="math inline">\((K, + , \cdot)\)</span> a <strong>field</strong> if:</p>
 <ol type="1">
-<li>The addition <span class="math inline">\(+\)</span> satisfies:
+<li>The addition <span class="math inline">\(+\)</span> satisfies: <span class="math inline">\(\,\forall \, x,y,z \in K\)</span>
 <ul>
-<li>(A1) <span class="math inline">\(+\)</span> is <strong>commutative</strong> and <strong>associative</strong>.</li>
-<li>(A2) There exists a <strong>neutral element</strong> in <span class="math inline">\(K\)</span> for <span class="math inline">\(+\)</span>. We call this element <span class="math inline">\(0\)</span>.</li>
-<li>(A3) For every <span class="math inline">\(x \in K\)</span> there exists an inverse <span class="math inline">\(y \in K\)</span> with respect to <span class="math inline">\(+\)</span>. We call this element the <strong>additive inverse</strong> of <span class="math inline">\(x\)</span> and denote it by <span class="math inline">\(y=-x\)</span>.</li>
+<li>(A1) <strong>Commutativity and Associativity</strong>: <span class="math display">\[
+x+y = y+x
+\]</span> <span class="math display">\[
+(x+y)+z = x+(y+z)
+\]</span></li>
+<li>(A2) <strong>Additive Identity</strong>: There exists a <strong>neutral element</strong> in <span class="math inline">\(K\)</span> for <span class="math inline">\(+\)</span>, which we call <span class="math inline">\(0\)</span>. It holds: <span class="math display">\[
+x + 0 = 0 + x = x
+\]</span></li>
+<li>(A3) <strong>Additive Inverse</strong>: There exists an <strong>inverse</strong> of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(+\)</span>. We call this element the <strong>additive inverse</strong> of <span class="math inline">\(x\)</span> and denote it by <span class="math inline">\(-x\)</span>. It holds <span class="math display">\[
+x + (-x) = (-x) + x = 0
+\]</span></li>
 </ul></li>
-<li>The multiplication <span class="math inline">\(\cdot\)</span> satisfies:
+<li>The multiplication <span class="math inline">\(\cdot\)</span> satisifes: <span class="math inline">\(\,\forall \, x,y,z \in K\)</span>
 <ul>
-<li>(M1) <span class="math inline">\(\cdot\)</span> is <strong>commutative</strong> and <strong>associative</strong>.</li>
-<li>(M2) There exists a <strong>neutral element</strong> in <span class="math inline">\(K\)</span> for <span class="math inline">\(\cdot\)</span>. We call this element <span class="math inline">\(1\)</span>.</li>
-<li>(M3) For every <span class="math inline">\(x \in K\)</span> with <span class="math inline">\(x \neq 0\)</span> there exists an inverse <span class="math inline">\(y \in K\)</span> with respect to <span class="math inline">\(\cdot\)</span>. We call this element the <strong>multiplciative inverse</strong> of <span class="math inline">\(x\)</span> and denote it by <span class="math inline">\(y=x^{-1}\)</span>.</li>
+<li>(M1) <strong>Commutativity and Associativity</strong>: <span class="math display">\[
+x \cdot y = y \cdot x
+\]</span> <span class="math display">\[
+(x \cdot y) \cdot z = x \cdot (y \cdot z)
+\]</span></li>
+<li>(M2) <strong>Multiplicative Identity</strong>: There exists a <strong>neutral element</strong> in <span class="math inline">\(K\)</span> for <span class="math inline">\(\cdot\)</span>, which we call <span class="math inline">\(1\)</span>. It holds: <span class="math display">\[
+x \cdot 1 = 1 \cdot x = x
+\]</span></li>
+<li>(M3) <strong>Multiplicative Inverse</strong>: If <span class="math inline">\(x \neq 0\)</span> there exists an <strong>inverse</strong> of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(\cdot\)</span>. We call this element the <strong>multiplicative inverse</strong> of <span class="math inline">\(x\)</span> and denote it by <span class="math inline">\(x^{-1}\)</span>. It holds <span class="math display">\[
+x \cdot x^{-1} = x^{-1} \cdot x = 0
+\]</span> by <span class="math inline">\(y=x^{-1}\)</span>.</li>
 </ul></li>
-<li><span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> are related by the <strong>distributive property</strong>:
+<li>The operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> are related by
 <ul>
-<li>(AM) For all <span class="math inline">\(x,y,z \in K\)</span> we have <span class="math display">\[
+<li>(AM) <strong>Distributive Property</strong>: <span class="math inline">\(\,\forall \, x,y,z \in K\)</span> <span class="math display">\[
 x \cdot (y + z) = (x \cdot y) + (y \cdot z) \,.
 \]</span></li>
 </ul></li>
@@ -427,11 +463,14 @@ x \cdot (y + z) = (x \cdot y) + (y \cdot z) \,.
 <li>(M3) every element which is not <span class="math inline">\(0\)</span> a multiplicative inverse, with <span class="math display">\[
 1^{-1} = 1\,.
 \]</span></li>
-<li>(AM) this is left to show: Indeed, for all <span class="math inline">\(y,z \in K\)</span> we have <span class="math display">\[
+</ul>
+<p>We are left to show the Distributive Property (AM). Indeed:</p>
+<ul>
+<li>(AM) For all <span class="math inline">\(y,z \in K\)</span> we have <span class="math display">\[
 0 \cdot (y + z) = 0 \,, \quad (0 \cdot y) + (0 \cdot z) = 0 + 0 = 0\,,
 \]</span> and also <span class="math display">\[
 1 \cdot (y + z) = y + z \,, \quad (1 \cdot y) + (1 \cdot z) = y + z \,.
-\]</span></li>
+\]</span> Thus (AM) holds.</li>
 </ul>
 </div></details>
 </div>
@@ -518,8 +557,51 @@ It satisfies properties (A1), (A2), (A3), (M1), (M2), (AM) of fields. Thus it is
 </div>
 <p>The proof is omitted.</p>
 </section>
-<section id="cut-property" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="cut-property"><span class="header-section-number">3.2</span> Cut Property</h2>
+<section id="ordered-fields" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="ordered-fields"><span class="header-section-number">3.2</span> Ordered fields</h2>
+<div id="Definition-13" class="Definition">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13</strong></summary><div>
+<p>Let <span class="math inline">\(K\)</span> be a set with binary operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>, and with an order relation <span class="math inline">\(\leq\)</span>. We call <span class="math inline">\((K,+,\cdot,\leq)\)</span> an <strong>ordered field</strong> if:</p>
+<ol type="1">
+<li><p><span class="math inline">\((K,+,\cdot)\)</span> is a field</p></li>
+<li><p>There <span class="math inline">\(\leq\)</span> is of <strong>total order</strong> on <span class="math inline">\(K\)</span>: <span class="math inline">\(\, \forall \, x, y, z \in K\)</span></p>
+<ul>
+<li>(O1) <strong>Reflexivity</strong>: <span class="math display">\[
+x \leq x
+\]</span></li>
+<li>(O2) <strong>Antisymmetry</strong>: <span class="math display">\[
+x \leq y \, \mbox{ and } \, y \leq x \,\, \implies \,\, x = y
+\]</span></li>
+<li>(O3) <strong>Transitivity</strong>: <span class="math display">\[
+x \leq y \,\, \mbox{ and } \,\, y \leq z \,\, \implies \,\, x = z
+\]</span></li>
+<li>(O4) <strong>Total order</strong>:<br>
+<span class="math display">\[
+x \leq y \,\, \mbox{ or } \,\, y \leq x
+\]</span></li>
+</ul></li>
+<li><p>The operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>, and the total order <span class="math inline">\(\leq\)</span>, are related by the following properties: <span class="math inline">\(\, \forall x, y, z \in K\)</span></p>
+<ul>
+<li>(AM) <strong>Distributive</strong>: Relates addition and multiplication via <span class="math display">\[
+x \cdot (y + z) = x \cdot y + x \cdot z
+\]</span></li>
+<li>(AO) Relates addition and order with the requirement: <span class="math display">\[
+x \leq y \,\, \implies \,\, x + z \leq y + z
+\]</span></li>
+<li>(MO) Relates multiplication and order with the requirement: <span class="math display">\[
+x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
+\]</span></li>
+</ul></li>
+</ol>
+</div></details>
+</div>
+<div id="Example-14" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14</strong></summary><div><span class="math inline">\((\mathbb{Q},+,\cdot,\leq)\)</span> is an <strong>ordered field</strong>.<p></p>
+</div></details>
+</div>
+</section>
+<section id="cut-property" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="cut-property"><span class="header-section-number">3.3</span> Cut Property</h2>
 <p>We have just introduced the notion of <strong>field</strong>, and noted that the set of rational numbers with the usual operations <span class="math display">\[
 (\mathbb{Q}, + , \cdot)
 \]</span> is a <strong>field</strong>.</p>
@@ -527,7 +609,7 @@ It satisfies properties (A1), (A2), (A3), (M1), (M2), (AM) of fields. Thus it is
 \sqrt{2} \notin \mathbb{Q}\,.
 \]</span> This means that <span class="math inline">\(\mathbb{Q}\)</span> has <strong>gaps</strong>, and cannot be represented as a <strong>continuous</strong> line. The rigorous definition of <strong>lack of gaps</strong> needs the concept of <strong>cut</strong> of a set.</p>
 <div id="partition-of-a-set" class="Definition" title="Partition of a set">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Partition of a set</summary><div>Let <span class="math inline">\(S\)</span> be a set. The pair <span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span> if <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Partition of a set</summary><div>Let <span class="math inline">\(S\)</span> be a set. The pair <span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span> if <span class="math display">\[
 A , B \subset S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
 \]</span> and <span class="math display">\[
 S = A \cup B \,, \quad
@@ -542,7 +624,7 @@ A \cap B = \emptyset \, .
 </figure>
 </div>
 <div id="cut-of-a-set" class="Definition" title="Cut of a set">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 14: </strong>Cut of a set</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Cut of a set</summary><div>
 <p>Let <span class="math inline">\(S\)</span> be a set with a total order relation <span class="math inline">\(\leq\)</span>. The pair <span class="math inline">\((A,B)\)</span> is a <strong>cut</strong> of <span class="math inline">\(S\)</span> if</p>
 <ol type="1">
 <li><span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span>,</li>
@@ -554,13 +636,13 @@ a \leq b \,,  \quad \forall \, a \in A \,, \,\, \forall \, b \in B \,.
 </div>
 <p>The <strong>cut</strong> of a set is often called <strong>Dedekind cut</strong>, named after <strong>Richard Dedekind</strong>, who used cuts to give an explicit construction of the real numbers <span class="math inline">\(\mathbb{R}\)</span>, see <a href="https://en.wikipedia.org/wiki/Dedekind_cut">Wikipedia page</a>.</p>
 <div id="cut-property-1" class="Definition" title="Cut property">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Cut property</summary><div>Let <span class="math inline">\(S\)</span> be a set with a total order relation <span class="math inline">\(\leq\)</span>. We say that <span class="math inline">\(S\)</span> has the <strong>cut property</strong> if for every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(S\)</span> there exists some <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17: </strong>Cut property</summary><div>Let <span class="math inline">\(S\)</span> be a set with a total order relation <span class="math inline">\(\leq\)</span>. We say that <span class="math inline">\(S\)</span> has the <strong>cut property</strong> if for every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(S\)</span> there exists some <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
 a \leq s \leq b \,, \quad \forall  \, a \in A\,, \,\, \forall  \, b \in B \,.
 \]</span> We call <span class="math inline">\(s\)</span> the <strong>separator</strong> of the cut <span class="math inline">\((A,B)\)</span>.<p></p>
 </div></details>
 </div>
-<div id="Example-16" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div>Let <span class="math inline">\(S = \mathbb{Q}\)</span> and consider the sets <span class="math display">\[
+<div id="Example-18" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 18</strong></summary><div>Let <span class="math inline">\(S = \mathbb{Q}\)</span> and consider the sets <span class="math display">\[
 A = (-\infty,s] \cap \mathbb{Q}\,, \quad B = (0,\infty) \cap \mathbb{Q}\,.
 \]</span> for some <span class="math inline">\(s \in \mathbb{Q}\)</span>. Then the pair <span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span>, and <span class="math inline">\(s\)</span> is the separator.<p></p>
 </div></details>
@@ -571,8 +653,8 @@ A = (-\infty,s] \cap \mathbb{Q}\,, \quad B = (0,\infty) \cap \mathbb{Q}\,.
 <figcaption class="figure-caption"><span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span> with separator <span class="math inline">\(s\)</span>.</figcaption>
 </figure>
 </div>
-<div id="Question-17" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 17</strong></summary><div>Do all cuts of <span class="math inline">\(\mathbb{Q}\)</span> have a <strong>separator</strong>? In other words, does <span class="math inline">\(\mathbb{Q}\)</span> have the <strong>cut property</strong>?<p></p>
+<div id="Question-19" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 19</strong></summary><div>Do all cuts of <span class="math inline">\(\mathbb{Q}\)</span> have a <strong>separator</strong>? In other words, does <span class="math inline">\(\mathbb{Q}\)</span> have the <strong>cut property</strong>?<p></p>
 </div></details>
 </div>
 <p>The answer to the above question is <strong>NO</strong>. For example the pair <span id="eq-cut-Q"><span class="math display">\[
@@ -587,7 +669,7 @@ a \leq \sqrt{2}  \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B 
 </figure>
 </div>
 <div id="mathbbq-does-not-have-the-cut-property." class="Theorem" title="\mathbb{Q} does not have the cut property.">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 18: </strong><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</summary><div><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property. More explicitly, there exist a cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{Q}\)</span> which has no separator.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 20: </strong><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</summary><div><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property. More explicitly, there exist a cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{Q}\)</span> which has no separator.<p></p>
 </div></details>
 </div>
 <div id="Proof*-2" class="Proof">
@@ -689,59 +771,423 @@ L \leq \tilde{L} \,.
 We have seen that assuming that <span class="math inline">\((A,B)\)</span> has a separator <span class="math inline">\(L \in \mathbb{Q}\)</span> leads to a contradiction. Thus the cut <span class="math inline">\((A,B)\)</span> has no separator.</p>
 </div></details>
 </div>
-<div id="Remark-19" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 19</strong></summary><div>The above proof can be summarized by saying that the set <span class="math display">\[
+<div id="Remark-21" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 21</strong></summary><div>The above proof can be summarized by saying that the set <span class="math display">\[
 A = (-\infty, \sqrt{2}) \cap \mathbb{Q}
 \]</span> does not admit a <strong>largest</strong> element in <span class="math inline">\(\mathbb{Q}\)</span>, and that the set <span class="math display">\[
 B = (\sqrt{2}, \infty) \cap \mathbb{Q}
-\]</span> does not admit a <strong>lowest element</strong> in <span class="math inline">\(\mathbb{Q}\)</span>. We will make this more precise.<p></p>
+\]</span> does not admit a <strong>lowest element</strong> in <span class="math inline">\(\mathbb{Q}\)</span>. We will clarify this remark in the next section.<p></p>
 </div></details>
 </div>
 </section>
-<section id="axioms-of-real-numbers" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="axioms-of-real-numbers"><span class="header-section-number">3.3</span> Axioms of Real Numbers</h2>
+<section id="supremum-and-infimum" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="supremum-and-infimum"><span class="header-section-number">3.4</span> Supremum and infimum</h2>
+<p>A crucial definition in Analysis is the one of supremum or infimum of a set.</p>
+<div id="intuition-about-supremum-and-infimum" class="Example" title="Intuition about supremum and infimum">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Intuition about supremum and infimum</summary><div>
+<p>Consider the set <span class="math display">\[
+A = [0,1) \cap \mathbb{Q}\,.
+\]</span> Intuitively, we understand that <span class="math inline">\(A\)</span> is bounded, i.e.&nbsp;not infinite. We also see that</p>
+<ul>
+<li><span class="math inline">\(0\)</span> is the lowest element of <span class="math inline">\(A\)</span></li>
+<li><span class="math inline">\(1\)</span> is the highest element of <span class="math inline">\(A\)</span></li>
+</ul>
+<p>However we see that <span class="math inline">\(0 \in A\)</span> while <span class="math inline">\(1 \notin A\)</span>. We will see that</p>
+<ul>
+<li><span class="math inline">\(0\)</span> can be defined as the <strong>infimum</strong> and <strong>minimum</strong> of <span class="math inline">\(A\)</span>.</li>
+<li><span class="math inline">\(1\)</span> can be defined as the <strong>supremum</strong>, but not <strong>maximum</strong>, of <span class="math inline">\(A\)</span>.</li>
+</ul>
+</div></details>
+</div>
+<section id="upper-bound-supremum-maximum" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="upper-bound-supremum-maximum"><span class="header-section-number">3.4.1</span> Upper bound, supremum, maximum</h3>
+<p>We start by defining the supremum. First we need the notion of upper bound of a set.</p>
+<div id="upper-bound-and-bounded-above" class="Definition" title="Upper bound and bounded above">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 23: </strong>Upper bound and bounded above</summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>:</p>
+<ol type="1">
+<li>We say that <span class="math inline">\(b \in K\)</span> is an <strong>upper bound</strong> for <span class="math inline">\(A\)</span> if <span class="math display">\[
+a \leq b \,, \quad \forall \, a \in A \,.
+\]</span></li>
+<li>We say that <span class="math inline">\(A\)</span> is <strong>bounded above</strong> if there exists and upper bound <span class="math inline">\(b \in K\)</span> for <span class="math inline">\(A\)</span>.</li>
+</ol>
+</div></details>
+</div>
+<div id="supremum" class="Definition" title="Supremum">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 24: </strong>Supremum</summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. A number <span class="math inline">\(s \in K\)</span> is called <strong>least upper bound</strong> or <strong>supremum</strong> of <span class="math inline">\(A\)</span> if:</p>
+<ol type="i">
+<li><span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>,</li>
+<li><span class="math inline">\(s\)</span> is the smallest upper bound of <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
+\mbox{If } \, b \in K \, \mbox{ is upper bound for } \, A \, \mbox{ then } \, s \leq b \,.  
+\]</span></li>
+</ol>
+</div></details>
+</div>
+<div id="Notation-25" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 25</strong></summary><div>We will almost always prefer the name supremum to least upper bound. For <span class="math inline">\(A \subset K\)</span> the supremum is denoted by <span class="math display">\[
+s := \sup \ A \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proposition-26" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 26</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If <span class="math display">\[
+\sup A
+\]</span> exists, then it is unique.<p></p>
+</div></details>
+</div>
+<div id="Proof*-3" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose there exist <span class="math inline">\(s_1, s_2 \in K\)</span> such that <span class="math display">\[
+s_1 = \sup A,  \,\, s_2 = \sup A \,.
+\]</span> Then:<p></p>
+<ul>
+<li>Since <span class="math inline">\(s_2 = \sup A\)</span>, in particular <span class="math inline">\(s_2\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Since <span class="math inline">\(s_1 = \sup A\)</span> then <span class="math inline">\(s_1\)</span> is the lowest upper bound. Thus we get <span class="math display">\[
+s_1 \leq s_2 \,.
+\]</span></li>
+<li>Exchanging the roles <span class="math inline">\(s_1\)</span> and <span class="math inline">\(s_2\)</span> in the above reasoning we also get <span class="math display">\[
+s_2 \leq s_1 \,.
+\]</span></li>
+</ul>
+<p>This shows <span class="math inline">\(s_1 = s_2\)</span>.</p>
+</div></details>
+</div>
+<div id="Warning*-4" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>In general:<p></p>
+<ul>
+<li>A set can have infinite upper bounds,</li>
+<li>The supremum does not belong to the set.</li>
+</ul>
+<p>For example <span class="math display">\[
+A = [0,1)  \cap \mathbb{Q}
+\]</span> has for upper bounds all the numbers <span class="math inline">\(b \in \mathbb{Q}\)</span> with <span class="math inline">\(b&gt;1\)</span>. Moreover one can show that <span class="math display">\[
+\sup A = 1\,,
+\]</span> and so <span class="math display">\[
+\sup A \notin A \,.
+\]</span></p>
+</div></details>
+</div>
+<div id="Warning*-5" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>The supremum does not exist in general. For example let <span class="math display">\[
+A = [0,\sqrt{2})  \cap \mathbb{Q}\,.
+\]</span> We will show that <span class="math inline">\(\sup A\)</span> does not exist in <span class="math inline">\(\mathbb{Q}\)</span>. Indeed we will have that <span class="math display">\[
+\sup A = \sqrt{2} \in \mathbb{R}\,.
+\]</span><p></p>
+</div></details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/definition_supremum.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Supremum and upper bounds of a set <span class="math inline">\(A\)</span> in the field <span class="math inline">\(K\)</span></figcaption>
+</figure>
+</div>
+<div id="maximum" class="Definition" title="Maximum">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 27: </strong>Maximum</summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. A number <span class="math inline">\(M \in K\)</span> is called the <strong>maximum</strong> of <span class="math inline">\(A\)</span> if: <span class="math display">\[
+M \in A   \,\, \mbox{ and } \,\, a \leq M  \,, \, \forall a \in A \,.
+\]</span> We denote the maximum by <span class="math display">\[
+M = \max A \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proposition-28" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 28</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If the maximum of <span class="math inline">\(A\)</span> exists, then also the supremum exists, and <span class="math display">\[
+\sup A = \max A \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-6" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math display">\[
+M = \max A \,.
+\]</span> Then:<p></p>
+<ul>
+<li>By definition we have <span class="math inline">\(M \in A\)</span> and <span class="math display">\[
+a \leq M \,, \quad \forall \, a \in A \,.
+\]</span> In particular the above tells us that <span class="math inline">\(M\)</span> is an upper bound of <span class="math inline">\(A\)</span>.</li>
+<li>We claim that <span class="math inline">\(M\)</span> is the least upper bound. Indeed, suppose <span class="math inline">\(b\)</span> is an upper bound of <span class="math inline">\(A\)</span>, that is,<br>
+<span class="math display">\[
+a \leq b \,, \quad \forall \, a \in A \,.
+\]</span> In particular, since <span class="math inline">\(M \in A\)</span>, by the above condition we have <span class="math display">\[
+M \leq b \,.
+\]</span></li>
+</ul>
+<p>Therefore <span class="math inline">\(M\)</span> is the least upper bound of <span class="math inline">\(A\)</span>, meaning that <span class="math inline">\(M = \sup A\)</span>.</p>
+</div></details>
+</div>
+<div id="Warning*-7" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>The converse of the above statement is not true: In general the <span class="math inline">\(\sup\)</span> might exist while the <span class="math inline">\(\max\)</span> does not. For example <span class="math display">\[
+A = [0,1) \cap \mathbb{Q}
+\]</span> is such that <span class="math display">\[
+\sup A = 1
+\]</span> but <span class="math inline">\(\max A\)</span> does not exist. Instead for the set <span class="math display">\[
+B = [0,1] \cap \mathbb{Q}
+\]</span> we have that <span class="math display">\[
+\max A = \sup A = 1 \,.
+\]</span><p></p>
+</div></details>
+</div>
+</section>
+<section id="lower-bound-infimum-minimum" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="lower-bound-infimum-minimum"><span class="header-section-number">3.4.2</span> Lower bound, infimum, minimum</h3>
+<p>We now introduce the definitions of lower bound, infimum, minimum. These are the counterpart of upper bound, supremum and maximum, respectively.</p>
+<div id="upper-bound-bounded-below-infimum-minimum" class="Definition" title="Upper bound, bounded below, infimum, minimum">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29: </strong>Upper bound, bounded below, infimum, minimum</summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>:</p>
+<ol type="1">
+<li><p>We say that <span class="math inline">\(l \in K\)</span> is a <strong>lower bound</strong> for <span class="math inline">\(A\)</span> if <span class="math display">\[
+l \leq a \,, \quad \forall \, a \in A \,.
+\]</span></p></li>
+<li><p>We say that <span class="math inline">\(A\)</span> is <strong>bounded below</strong> if there exists a lower bound <span class="math inline">\(l \in K\)</span> for <span class="math inline">\(A\)</span>.</p></li>
+<li><p>We say that <span class="math inline">\(i \in K\)</span> is the <strong>greatest lower bound</strong> or <strong>infimum</strong> of <span class="math inline">\(A\)</span> if:</p>
+<ul>
+<li><span class="math inline">\(i\)</span> is a lower bound for <span class="math inline">\(A\)</span>,</li>
+<li><span class="math inline">\(i\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
+\mbox{If } \, l \in K \, \mbox{ is a lower bound for } \, A \, \mbox{ then } \, l \leq i \,.  
+\]</span> If it exists, the infimum is denoted by <span class="math display">\[
+i = \inf A \,.
+\]</span></li>
+</ul></li>
+<li><p>We say that <span class="math inline">\(m \in K\)</span> is the <strong>minimum</strong> of <span class="math inline">\(A\)</span> if: <span class="math display">\[
+m \in A   \,\, \mbox{ and } \,\, m \leq a  \,, \, \forall a \in A \,.
+\]</span> If it exists, we denote the minimum by <span class="math display">\[
+m = \min A \,.
+\]</span></p></li>
+</ol>
+</div></details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/definition_infimum.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Infimum and lower bounds of a set <span class="math inline">\(A\)</span> in the field <span class="math inline">\(K\)</span></figcaption>
+</figure>
+</div>
+<div id="Proposition-30" class="Proposition">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 30</strong></summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>:</p>
+<ol type="1">
+<li>If <span class="math inline">\(\inf A\)</span> exists, then it is unique.</li>
+<li>If the minimum of <span class="math inline">\(A\)</span> exists, then also the infimum exists, and <span class="math display">\[
+\inf A = \min A \,.
+\]</span></li>
+</ol>
+</div></details>
+</div>
+<p>The proof uses similar arguments to the one employed in the previous section, and is left to the reader as an exercise.</p>
+<div id="Warning*-8" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>We have<p></p>
+<ul>
+<li>A set can have infinite lower bounds,</li>
+<li>The infimum does not belong to the set.</li>
+</ul>
+<p>For example <span class="math display">\[
+A = (0,1)  \cap \mathbb{Q}
+\]</span> has for lower bounds all the numbers <span class="math inline">\(b \in \mathbb{Q}\)</span> with <span class="math inline">\(b&lt;1\)</span>. Moreover we will show that <span class="math display">\[
+\inf A = 0\,,
+\]</span> and so <span class="math display">\[
+\inf A \notin A \,.
+\]</span></p>
+</div></details>
+</div>
+<div id="Warning*-9" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>The infimum does not exist in general. For example let <span class="math display">\[
+A = (\sqrt{2},5]  \cap \mathbb{Q}\,.
+\]</span> We will show that <span class="math inline">\(\inf A\)</span> does not exist in <span class="math inline">\(\mathbb{Q}\)</span>. Indeed we will have that <span class="math display">\[
+\inf A = \sqrt{2} \in \mathbb{R}\,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Warning*-10" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>In general the <span class="math inline">\(\inf\)</span> might exist while the <span class="math inline">\(\min\)</span> does not. For example <span class="math display">\[
+A = (0,1) \cap \mathbb{Q}
+\]</span> is such that <span class="math display">\[
+\inf A = 0
+\]</span> but <span class="math inline">\(\min A\)</span> does not exist. Instead for the set <span class="math display">\[
+B = [0,1] \cap \mathbb{Q}
+\]</span> we have that <span class="math display">\[
+\inf A = \min A = 0 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proposition-31" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 31</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If <span class="math inline">\(\inf A\)</span> and <span class="math inline">\(\sup A\)</span> exist, then <span class="math display">\[
+\inf A \leq a \leq \sup A \,, \quad \forall a \in A \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>The proof is simple, and is left as an exercise. We now have a complete picture about supremum and infimum, see figure below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/definition_sup_inf.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Supremum, upper bounds, infimum and lower bounds of a set <span class="math inline">\(A\)</span> in <span class="math inline">\(K\)</span></figcaption>
+</figure>
+</div>
+<p>We conclude with another simple proposition. The proof is again left to the reader.</p>
+<div id="Proposition-32" class="Proposition">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 32</strong></summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. Define <span class="math display">\[
+- A := \{ - a \, \colon \,a \in A \} \,.
+\]</span> It holds:</p>
+<ul>
+<li>If <span class="math inline">\(\sup A\)</span> exists, then <span class="math inline">\(\inf A\)</span> exists and <span class="math display">\[
+\inf(-A) = - \sup A \,.
+\]</span></li>
+<li>If <span class="math inline">\(\inf A\)</span> exists, then <span class="math inline">\(\sup A\)</span> exists and <span class="math display">\[
+\sup(-A) = - \inf A \,.
+\]</span></li>
+</ul>
+</div></details>
+</div>
+</section>
+</section>
+<section id="completeness" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="completeness"><span class="header-section-number">3.5</span> Completeness</h2>
+<p>In this section we introduce the notion of <strong>Completeness</strong>. We will see that completeness is equivalent to the <strong>Cut Property</strong>.</p>
+</section>
+<section id="axioms-of-real-numbers" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="axioms-of-real-numbers"><span class="header-section-number">3.6</span> Axioms of Real Numbers</h2>
 <p>We now have all the key elements to introduce the Real Numbers <span class="math inline">\(\mathbb{R}\)</span>. These ingredients are</p>
 <ul>
-<li>Definition of <strong>field</strong></li>
-<li>Definition of <strong>total order</strong></li>
-<li>The <strong>Cut Property</strong></li>
+<li>Definition of <strong>ordered field</strong></li>
+<li>The <strong>Cut Property</strong> or <strong>Axiom of Completeness</strong></li>
 </ul>
 <p>The definition of <span class="math inline">\(\mathbb{R}\)</span> is given in an axiomatic way.</p>
 <div id="system-of-real-numbers-mathbbr" class="Definition" title="System of Real Numbers \mathbb{R}">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 33: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
 <p>A system of Real Numbers is a set <span class="math inline">\(\mathbb{R}\)</span> satisfying the following properties:</p>
 <ol type="1">
-<li>There is a relation <span class="math inline">\(\leq\)</span> of <strong>total order</strong> on <span class="math inline">\(\mathbb{R}\)</span>, that is, they hold
+<li>There is an operation <span class="math inline">\(+\)</span> of <strong>addition</strong> on <span class="math inline">\(\mathbb{R}\)</span> <span class="math display">\[
++\ \colon \mathbb{R}\times \mathbb{R}\to \mathbb{R}\,, \quad (x,y) \mapsto x + y
+\]</span> The addition satisifes: <span class="math inline">\(\,\forall \, x,y,z \in \mathbb{R}\)</span>
 <ul>
-<li>(A1) Reflexivity: <span class="math inline">\(\forall \, a \in \mathbb{R}\)</span> <span class="math display">\[
-a \leq a \,,
+<li>(A1) <strong>Commutativity and Associativity</strong>: <span class="math display">\[
+x+y = y+x
+\]</span> <span class="math display">\[
+(x+y)+z = x+(y+z)
 \]</span></li>
-<li>(A2) Antisymmetry: It holds <span class="math display">\[
-a \leq b \, \mbox{ and } \, b \leq a \,\, \implies \,\, a = b\,,
+<li>(A2) <strong>Additive Identity</strong>: <span class="math inline">\(\,\exists \, 0 \in \mathbb{R}\, \text{ s.t } \, \)</span> <span class="math display">\[
+x + 0 = 0 + x = x
 \]</span></li>
-<li>(A3) Transitivity: It holds <span class="math display">\[
-a \leq b \,\, \mbox{ and } \,\, b \leq c \,\, \implies \,\, a = c \,,
-\]</span></li>
-<li>(A4) Total order: <span class="math inline">\(\forall \, a,b \in \mathbb{R}\)</span> we have <span class="math display">\[
-a \leq b \,\, \mbox{ or } \,\, b \leq a \,.
+<li>(A3) <strong>Additive Inverse</strong>: <span class="math inline">\(\, \exists \, (-x) \in \mathbb{R}\, \text{ s.t } \, \)</span> <span class="math display">\[
+x + (-x) = (-x) + x = 0
 \]</span></li>
 </ul></li>
-<li>There is an operation <span class="math inline">\(+\)</span> of <strong>sum</strong> on <span class="math inline">\(\mathbb{R}\)</span> which associates to pairs <span class="math inline">\(a,b \in \mathbb{R}\)</span> the number <span class="math inline">\((a+b) \in \mathbb{R}\)</span>. The sum satisfies:
+<li>There is an operation <span class="math inline">\(\cdot\)</span> of <strong>multiplication</strong> on <span class="math inline">\(\mathbb{R}\)</span> <span class="math display">\[
+\cdot\ \colon \mathbb{R}\times \mathbb{R}\to \mathbb{R}\,, \quad (x,y) \mapsto x \cdot y  = xy
+\]</span> The multiplication satisifes: <span class="math inline">\(\, \forall \, x,y,z \in \mathbb{R}\)</span>
 <ul>
-<li>(B1) Commutativity: <span class="math inline">\(\forall \, a,b \in \mathbb{R}\)</span> <span class="math display">\[
-a+b = b+a
+<li>(M1) <strong>Commutativity and Associativity</strong>: <span class="math display">\[
+x \cdot y = y \cdot x
+\]</span> <span class="math display">\[
+(x \cdot y) \cdot z = x \cdot (y \cdot z)
 \]</span></li>
-<li>(B2) Associativity: <span class="math inline">\(\forall \, a,b,c \in \mathbb{R}\)</span> <span class="math display">\[
-(a+b)+c = a+(b+c) \,,
+<li>(M2) <strong>Multiplicative Identity</strong>: <span class="math inline">\(\, \exists \, 1 \in \mathbb{R}\, \text{ s.t } \, \)</span> <span class="math display">\[
+x \cdot 1 = 1 \cdot x = x
 \]</span></li>
-<li>(B3) Additive Identity: <span class="math inline">\(\exists \, 0 \in \mathbb{R}\, \text{ s.t } \, \)</span> <span class="math display">\[
-a + 0 = 0 + a = a \,, \,\,\, \forall \, a \in \mathbb{R}\,,
+<li>(M3) <strong>Multiplicative Inverse</strong>: If <span class="math inline">\(x \neq 0 \,, \,\, \exists \, x^{-1} \in \mathbb{R}\, \text{ s.t } \, \)</span> <span class="math display">\[
+x \cdot x^{-1} = x^{-1} \cdot x = 1
 \]</span></li>
-<li>(B4) Additive Inverse: <span class="math inline">\(\forall\)</span></li>
+</ul></li>
+<li>There is a relation <span class="math inline">\(\leq\)</span> of <strong>total order</strong> on <span class="math inline">\(\mathbb{R}\)</span>. The order satisfies: <span class="math inline">\(\, \forall \, x, y, z \in \mathbb{R}\)</span>
+<ul>
+<li>(O1) <strong>Reflexivity</strong>: <span class="math display">\[
+x \leq x
+\]</span></li>
+<li>(O2) <strong>Antisymmetry</strong>: <span class="math display">\[
+x \leq y \, \mbox{ and } \, y \leq x \,\, \implies \,\, x = y
+\]</span></li>
+<li>(O3) <strong>Transitivity</strong>: <span class="math display">\[
+x \leq y \,\, \mbox{ and } \,\, y \leq z \,\, \implies \,\, x = z
+\]</span></li>
+<li>(O4) <strong>Total order</strong>:<br>
+<span class="math display">\[
+x \leq y \,\, \mbox{ or } \,\, y \leq x
+\]</span></li>
+</ul></li>
+<li>The operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>, and the total order <span class="math inline">\(\leq\)</span>, are related by the following properties: <span class="math inline">\(\, \forall x, y, z \in \mathbb{R}\)</span>
+<ul>
+<li>(AM) <strong>Distributive</strong>: Relates addition and multiplication via <span class="math display">\[
+x \cdot (y + z) = x \cdot y + x \cdot z
+\]</span></li>
+<li>(AO) Relates addition and order with the requirement: <span class="math display">\[
+x \leq y \,\, \implies \,\, x + z \leq y + z
+\]</span></li>
+<li>(MO) Relates multiplication and order with the requirement: <span class="math display">\[
+x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
+\]</span></li>
+</ul></li>
+<li>The <strong>Cut Property</strong> holds:
+<ul>
+<li>(CP) Every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{R}\)</span> admits a <strong>separator</strong> <span class="math inline">\(s \in \mathbb{R}\, \, \text{ s.t } \, \)</span> <span class="math display">\[
+a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
+\]</span><br>
+</li>
 </ul></li>
 </ol>
 </div></details>
 </div>
+<div id="Notation-34" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 34</strong></summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x \neq 0\)</span>, the multiplicative inverse is also denoted by <span class="math display">\[
+x^{-1} = \frac{1}{x} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Remark-35" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 35</strong></summary><div>
+<p>Since <strong>Cut Property</strong> and <strong>Axiom of Completeness</strong> are equivalent, one can replace the Cut Property at Point 5 with:</p>
+<ol start="5" type="1">
+<li>The <strong>Axiom of Completeness</strong> holds:
+<ul>
+<li>(AC) STATEMENT HERE</li>
+</ul></li>
+</ol>
+</div></details>
+</div>
+<div id="Remark-36" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 36</strong></summary><div>
+<p>Recall that</p>
+<ul>
+<li><span class="math inline">\((K,+,\cdot)\)</span> satisfying (A1)-(A3), (M1)-(M3), (AM) is a <strong>field</strong></li>
+<li><span class="math inline">\((K,+,\cdot, \geq)\)</span> satisfying (A1)-(A3), (M1)-(M3), (O1)-(O4) ,(AM), (AO), (MO) is an <strong>ordered field</strong></li>
+</ul>
+<p>In particular we have:</p>
+<ul>
+<li><span class="math inline">\((\mathbb{N}, + , \cdot)\)</span> is <strong>not a field</strong></li>
+<li><span class="math inline">\((\mathbb{Z}, + , \cdot)\)</span> is <strong>not a field</strong></li>
+<li><span class="math inline">\((\mathbb{Q}, + , \cdot)\)</span> is a <strong>field</strong></li>
+<li><span class="math inline">\((\mathbb{Q},+, \cdot,\geq)\)</span> is an <strong>ordered field</strong></li>
+<li><span class="math inline">\((\mathbb{R},+, \cdot,\geq)\)</span> is an <strong>ordered field</strong> in which the <strong>Cut Property</strong> (CP) or <strong>Axiom of Completeness</strong> (AC) hold</li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="consequences-of-the-axioms" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="consequences-of-the-axioms"><span class="header-section-number">3.7</span> Consequences of the Axioms</h2>
+<p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span>, let us investigate some of their properies.</p>
+<section id="nested-interval-property" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="nested-interval-property"><span class="header-section-number">3.7.1</span> Nested Interval Property</h3>
+<p>Not sure</p>
+</section>
+<section id="archimedean-property" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">3.7.2</span> Archimedean Property</h3>
+</section>
+<section id="revisiting-sup-and-inf" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">3.7.3</span> Revisiting Sup and inf</h3>
+<ol type="1">
+<li>Characterize sup and inf with epsilon (see Marcellini)</li>
+<li>Compute sup and inf of interval (a,b) - Dommers</li>
+<li>Compute sup and inf of <span class="math display">\[
+\left\{ \frac1n \, \colon \,n \in \mathbb{N}\,, \,\, n \neq 0 \right\}
+\]</span> see Dommers</li>
+</ol>
+</section>
+<section id="density-of-mathbbq-in-mathbbr" class="level3" data-number="3.7.4">
+<h3 data-number="3.7.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">3.7.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h3>
+</section>
+<section id="existence-of-square-roots" class="level3" data-number="3.7.5">
+<h3 data-number="3.7.5" class="anchored" data-anchor-id="existence-of-square-roots"><span class="header-section-number">3.7.5</span> Existence of Square Roots</h3>
+</section>
+</section>
+<section id="cardinality" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="cardinality"><span class="header-section-number">3.8</span> Cardinality</h2>
+<p>Brief. Use Dommers</p>
 
 
 </section>

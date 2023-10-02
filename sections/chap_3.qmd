@@ -201,21 +201,59 @@ $$
 We are ready to define fields.
 
 
+
+
+
 ::: Definition
 ### Field
 
-Let $K$ be a set with binary operations $+$ and $\cdot$. We call the triple $(K, + , \cdot)$ a **field** if:
+Let $K$ be a set with binary operations of **addition** 
+$$
++\ \colon K \times K \to K \,, \quad (x,y) \mapsto x + y 
+$$
+and **multiplication** 
+$$
+\cdot\ \colon K \times K \to K \,, \quad (x,y) \mapsto x \cdot y  = xy \,. 
+$$ 
+We call the triple $(K, + , \cdot)$ a **field** if:
 
-1. The addition $+$ satisfies:
-    - (A1) $+$ is **commutative** and **associative**.
-    - (A2) There exists a **neutral element** in $K$ for $+$. We call this element $0$. 
-    - (A3) For every $x \in K$ there exists an inverse $y \in K$ with respect to $+$. We call this element the **additive inverse** of $x$ and denote it by $y=-x$.
-2. The multiplication $\cdot$ satisfies:
-    - (M1) $\cdot$ is **commutative** and **associative**.
-    - (M2) There exists a **neutral element** in $K$ for $\cdot$. We call this element $1$. 
-    - (M3) For every $x \in K$ with $x \neq 0$ there exists an inverse $y \in K$ with respect to $\cdot$. We call this element the **multiplciative inverse** of $x$ and denote it by $y=x^{-1}$.
-3. $+$ and $\cdot$ are related by the **distributive property**:
-    - (AM) For all $x,y,z \in K$ we have
+1. The addition $+$ satisfies: $\,\forall \, x,y,z \in K$
+    - (A1) **Commutativity and Associativity**: 
+    $$
+    x+y = y+x 
+    $$
+    $$
+    (x+y)+z = x+(y+z) 
+    $$
+    - (A2) **Additive Identity**: There exists a **neutral element** in $K$ for $+$, which we call $0$. It holds:
+    $$ 
+    x + 0 = 0 + x = x 
+    $$
+    - (A3) **Additive Inverse**: There exists an **inverse** of $x$ with respect to $+$. We call this element the **additive inverse** of $x$ and denote it by $-x$. It holds
+    $$
+    x + (-x) = (-x) + x = 0 
+    $$
+
+2. The multiplication $\cdot$ satisifes: $\,\forall \, x,y,z \in K$
+    - (M1) **Commutativity and Associativity**: 
+    $$
+    x \cdot y = y \cdot x 
+    $$
+    $$
+    (x \cdot y) \cdot z = x \cdot (y \cdot z) 
+    $$
+    - (M2) **Multiplicative Identity**: There exists a **neutral element** in $K$ for $\cdot$, which we call $1$. It holds:
+    $$ 
+    x \cdot 1 = 1 \cdot x = x 
+    $$
+    - (M3) **Multiplicative Inverse**: If $x \neq 0$ there exists an **inverse** of $x$ with respect to $\cdot$. We call this element the **multiplicative inverse** of $x$ and denote it by $x^{-1}$. It holds
+    $$
+    x \cdot x^{-1} = x^{-1} \cdot x = 0 
+    $$
+    by $y=x^{-1}$.
+
+3. The operations $+$ and $\cdot$ are related by 
+    - (AM) **Distributive Property**: $\,\forall \, x,y,z \in K$
     $$
     x \cdot (y + z) = (x \cdot y) + (y \cdot z) \,.
     $$
@@ -236,7 +274,10 @@ $$
 $$
 1^{-1} = 1\,.
 $$
-- (AM) this is left to show: Indeed, for all $y,z \in K$ we have
+
+We are left to show the Distributive Property (AM). Indeed:
+
+- (AM) For all $y,z \in K$ we have
 $$
 0 \cdot (y + z) = 0 \,, \quad (0 \cdot y) + (0 \cdot z) = 0 + 0 = 0\,,
 $$
@@ -244,7 +285,9 @@ and also
 $$
 1 \cdot (y + z) = y + z \,, \quad (1 \cdot y) + (1 \cdot z) = y + z \,.
 $$
+Thus (AM) holds.
 :::
+
 
 
 ::: Definition
@@ -356,6 +399,53 @@ It satisfies properties (A1), (A2), (A3), (M1), (M2), (AM) of fields. Thus it is
 
 The proof is omitted. 
 
+
+
+
+## Ordered fields
+
+::: Definition
+Let $K$ be a set with binary operations $+$ and $\cdot$, and with an order relation $\leq$. We call $(K,+,\cdot,\leq)$ an **ordered field** if:
+
+1. $(K,+,\cdot)$ is a field
+
+3. There $\leq$ is of **total order** on $K$:  $\, \forall \, x, y, z \in K$ 
+    - (O1) **Reflexivity**: 
+    $$
+    x \leq x
+    $$ 
+    - (O2) **Antisymmetry**: 
+    $$
+    x \leq y \, \mbox{ and } \, y \leq x \,\, \implies \,\, x = y 
+    $$
+    - (O3) **Transitivity**: 
+    $$
+    x \leq y \,\, \mbox{ and } \,\, y \leq z \,\, \implies \,\, x = z 
+    $$
+    - (O4) **Total order**:  
+    $$
+    x \leq y \,\, \mbox{ or } \,\, y \leq x 
+    $$
+
+4. The operations $+$ and $\cdot$, and the total order $\leq$, are related by the following properties: $\, \forall x, y, z \in K$
+    - (AM) **Distributive**: Relates addition and multiplication via
+    $$
+    x \cdot (y + z) = x \cdot y + x \cdot z 
+    $$
+    - (AO) Relates addition and order with the requirement:
+    $$
+    x \leq y \,\, \implies \,\, x + z \leq y + z
+    $$
+    - (MO) Relates multiplication and order with the requirement:
+    $$
+    x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
+    $$
+:::
+
+
+::: Example 
+$(\Q,+,\cdot,\leq)$ is an **ordered field**.
+:::
 
 
 
@@ -647,10 +737,374 @@ does not admit a **largest** element in $\Q$, and that the set
 $$
 B = (\sqrt{2}, \infty) \cap \Q
 $$
-does not admit a **lowest element** in $\Q$. We will make this more precise.
+does not admit a **lowest element** in $\Q$. We will clarify this remark in the next section.
 :::
 
 
+
+ 
+## Supremum and infimum
+
+
+A crucial definition in Analysis is the one of supremum or infimum of a set. 
+
+::: Example
+### Intuition about supremum and infimum
+Consider the set
+$$
+A = [0,1) \cap \Q \,.
+$$
+Intuitively, we understand that $A$ is bounded, i.e. not infinite. We also see that
+
+- $0$ is the lowest element of $A$
+- $1$ is the highest element of $A$
+
+However we see that $0 \in A$ while $1 \notin A$. We will see that 
+
+- $0$ can be defined as the **infimum** and **minimum** of $A$.
+- $1$ can be defined as the **supremum**, but not **maximum**, of $A$. 
+:::
+
+
+
+### Upper bound, supremum, maximum 
+
+We start by defining the supremum. First we need the notion of upper bound of a set.
+
+
+::: Definition
+### Upper bound and bounded above
+
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$:
+
+1. We say that $b \in K$ is an **upper bound** for $A$ if
+$$
+a \leq b \,, \quad \forall \, a \in A \,.
+$$
+2. We say that $A$ is **bounded above** if there exists and upper bound $b \in K$ for $A$.
+:::
+
+
+
+
+::: Definition 
+### Supremum
+
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. A number $s \in K$ is called **least upper bound** or **supremum** of $A$ if:
+
+i. $s$ is an upper bound for $A$,
+ii. $s$ is the smallest upper bound of $A$, that is, 
+    $$
+    \mbox{If } \, b \in K \, \mbox{ is upper bound for } \, A \, \mbox{ then } \, s \leq b \,.  
+    $$
+:::
+
+::: Notation
+We will almost always prefer the name supremum to least upper bound. For $A \subset K$ the supremum is denoted by
+$$
+s := \sup \ A \,.
+$$
+:::
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. If 
+$$
+\sup A
+$$
+exists, then it is unique.  
+:::
+
+
+::: Proof
+Suppose there exist $s_1, s_2 \in K$ such that
+$$
+s_1 = \sup A,  \,\, s_2 = \sup A \,.
+$$
+Then:
+
+- Since $s_2 = \sup A$, in particular $s_2$ is an upper bound for $A$. Since $s_1 = \sup A$ then $s_1$ is the lowest upper bound. Thus we get
+$$
+s_1 \leq s_2 \,.
+$$
+- Exchanging the roles $s_1$ and $s_2$ in the above reasoning we also get
+$$
+s_2 \leq s_1 \,.
+$$
+
+This shows $s_1 = s_2$.
+:::
+
+
+
+
+::: Warning
+In general:
+
+- A set can have infinite upper bounds,
+- The supremum does not belong to the set.
+
+For example
+$$
+A = [0,1)  \cap \Q
+$$
+has for upper bounds all the numbers $b \in \Q$ with $b>1$. Moreover one can show that 
+$$
+\sup A = 1\,,
+$$
+and so 
+$$
+\sup A \notin A \,.
+$$
+:::
+
+::: Warning 
+The supremum does not exist in general. For example let
+$$
+A = [0,\sqrt{2})  \cap \Q \,.
+$$
+We will show that $\sup A$ does not exist in $\Q$. Indeed we will have that
+$$
+\sup A = \sqrt{2} \in \R \,.
+$$
+:::
+
+
+![Supremum and upper bounds of a set $A$ in the field $K$](/images/definition_supremum.png){width=70%}
+
+
+
+::: Definition 
+### Maximum
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. A number $M \in K$ is called the **maximum** of $A$ if:
+$$
+M \in A   \,\, \mbox{ and } \,\, a \leq M  \,, \, \forall a \in A \,.
+$$
+We denote the maximum by
+$$
+M = \max A \,.
+$$
+:::
+
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. If the maximum of $A$ exists, then also the supremum exists, and
+$$
+\sup A = \max A \,.
+$$
+:::
+
+::: Proof
+Let 
+$$
+M = \max A \,.
+$$ 
+Then:
+
+- By definition we have $M \in A$ and 
+$$
+a \leq M \,, \quad \forall \, a \in A \,.
+$$
+In particular the above tells us that $M$ is an upper bound of $A$. 
+- We claim that $M$ is the least upper bound. Indeed, suppose $b$ is an upper bound of $A$, that is,    
+$$
+a \leq b \,, \quad \forall \, a \in A \,.
+$$
+In particular, since $M \in A$, by the above condition we have
+$$
+M \leq b \,.
+$$
+
+Therefore $M$ is the least upper bound of $A$, meaning that $M = \sup A$.
+:::
+
+
+::: Warning
+The converse of the above statement is not true: In general the $\sup$ might exist while the $\max$ does not. For example
+$$
+A = [0,1) \cap \Q
+$$
+is such that 
+$$
+\sup A = 1
+$$
+but $\max A$ does not exist. Instead for the set
+$$
+B = [0,1] \cap \Q
+$$
+we have that 
+$$
+\max A = \sup A = 1 \,. 
+$$
+:::
+
+
+
+
+
+
+### Lower bound, infimum, minimum
+
+We now introduce the definitions of lower bound, infimum, minimum. These are the counterpart of upper bound, supremum and maximum, respectively.
+
+
+
+
+::: Definition
+### Upper bound, bounded below, infimum, minimum
+
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$:
+
+1. We say that $l \in K$ is a **lower bound** for $A$ if
+$$
+l \leq a \,, \quad \forall \, a \in A \,.
+$$
+2. We say that $A$ is **bounded below** if there exists a lower bound $l \in K$ for $A$.
+3. We say that $i \in K$ is the **greatest lower bound** or **infimum** of $A$ if:
+
+    - $i$ is a lower bound for $A$,
+    - $i$ is the largest lower bound of $A$, that is, 
+    $$
+    \mbox{If } \, l \in K \, \mbox{ is a lower bound for } \, A \, \mbox{ then } \, l \leq i \,.  
+    $$
+If it exists, the infimum is denoted by 
+$$
+i = \inf A \,.
+$$
+4. We say that $m \in K$ is the **minimum** of $A$ if:
+$$
+m \in A   \,\, \mbox{ and } \,\, m \leq a  \,, \, \forall a \in A \,.
+$$
+If it exists, we denote the minimum by
+$$
+m = \min A \,.
+$$
+:::
+
+
+
+![Infimum and lower bounds of a set $A$ in the field $K$](/images/definition_infimum.png){width=70%}
+
+
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$:
+
+1. If $\inf A$ exists, then it is unique.
+2. If the minimum of $A$ exists, then also the infimum exists, and
+$$
+\inf A = \min A \,.
+$$  
+
+:::
+
+The proof uses similar arguments to the one employed in the previous section, and is left to the reader as an exercise.
+
+
+
+
+::: Warning
+We have
+
+- A set can have infinite lower bounds,
+- The infimum does not belong to the set.
+
+For example
+$$
+A = (0,1)  \cap \Q
+$$
+has for lower bounds all the numbers $b \in \Q$ with $b<1$. Moreover we will show that
+$$
+\inf A = 0\,,
+$$
+and so 
+$$
+\inf A \notin A \,.
+$$
+:::
+
+::: Warning 
+The infimum does not exist in general. For example let
+$$
+A = (\sqrt{2},5]  \cap \Q \,.
+$$
+We will show that $\inf A$ does not exist in $\Q$. Indeed we will have that
+$$
+\inf A = \sqrt{2} \in \R \,.
+$$
+:::
+
+
+::: Warning
+In general the $\inf$ might exist while the $\min$ does not. For example
+$$
+A = (0,1) \cap \Q
+$$
+is such that 
+$$
+\inf A = 0
+$$
+but $\min A$ does not exist. Instead for the set
+$$
+B = [0,1] \cap \Q
+$$
+we have that 
+$$
+\inf A = \min A = 0 \,. 
+$$
+:::
+
+
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. If $\inf A$ and $\sup A$ exist, then
+$$
+\inf A \leq a \leq \sup A \,, \quad \forall a \in A \,.
+$$
+:::
+
+The proof is simple, and is left as an exercise. We now have a complete picture about supremum and infimum, see figure below.
+
+
+
+![Supremum, upper bounds, infimum and lower bounds of a set $A$ in $K$](/images/definition_sup_inf.png){width=70%}
+
+
+
+
+
+
+We conclude with another simple proposition. The proof is again left to the reader.
+
+
+::: Proposition
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. 
+Define 
+$$
+- A := \{ - a \divider a \in A \} \,.
+$$
+It holds:
+
+- If $\sup A$ exists, then $\inf A$ exists and
+$$
+\inf(-A) = - \sup A \,.
+$$
+- If $\inf A$ exists, then $\sup A$ exists and
+$$
+\sup(-A) = - \inf A \,.
+$$
+:::
+
+
+
+
+
+## Completeness
+
+In this section we introduce the notion of **Completeness**. We will see that completeness is equivalent to the **Cut Property**. 
 
 
 
@@ -660,9 +1114,8 @@ does not admit a **lowest element** in $\Q$. We will make this more precise.
 
 We now have all the key elements to introduce the Real Numbers $\R$. These ingredients are
 
-- Definition of **field**
-- Definition of **total order**
-- The **Cut Property**
+- Definition of **ordered field**
+- The **Cut Property** or **Axiom of Completeness**
 
 The definition of $\R$ is given in an axiomatic way.
 
@@ -672,46 +1125,162 @@ The definition of $\R$ is given in an axiomatic way.
 
 A system of Real Numbers is a set $\R$ satisfying the following properties:
 
-1. There is a relation $\leq$ of **total order** on $\R$, that is, they hold
-    - (A1) Reflexivity: $\forall \, a \in \R$ 
-    $$
-    a \leq a \,,
-    $$
-    - (A2) Antisymmetry: It holds
-    $$
-    a \leq b \, \mbox{ and } \, b \leq a \,\, \implies \,\, a = b\,,
-    $$
-    - (A3) Transitivity: It holds
-    $$
-    a \leq b \,\, \mbox{ and } \,\, b \leq c \,\, \implies \,\, a = c \,,
-    $$
-    - (A4) Total order:  $\forall \, a,b \in \R$ we have 
-    $$
-    a \leq b \,\, \mbox{ or } \,\, b \leq a \,.
-    $$
 
-2. There is an operation $+$ of **sum** on $\R$ which associates to pairs $a,b \in \R$ the number $(a+b) \in \R$. The sum satisfies:
-    - (B1) Commutativity: $\forall \, a,b \in \R$
+1. There is an operation $+$ of **addition** on $\R$ 
+$$
++\ \colon \R \times \R \to \R \,, \quad (x,y) \mapsto x + y 
+$$
+The addition satisifes: $\,\forall \, x,y,z \in \R$
+    - (A1) **Commutativity and Associativity**: 
     $$
-    a+b = b+a
+    x+y = y+x 
     $$
-    - (B2) Associativity: $\forall \, a,b,c \in \R$
     $$
-    (a+b)+c = a+(b+c) \,,
+    (x+y)+z = x+(y+z) 
     $$
-    - (B3) Additive Identity: $\exists \, 0 \in \R \st$
+    - (A2) **Additive Identity**: $\,\exists \, 0 \in \R \st$
     $$ 
-    a + 0 = 0 + a = a \,, \,\,\, \forall \, a \in \R\,,
+    x + 0 = 0 + x = x 
     $$
-    - (B4) Additive Inverse: $\forall$
+    - (A3) **Additive Inverse**: $\, \exists \, (-x) \in \R \st$
+    $$
+    x + (-x) = (-x) + x = 0 
+    $$
 
+2. There is an operation $\cdot$ of **multiplication** on $\R$
+$$
+\cdot\ \colon \R \times \R \to \R \,, \quad (x,y) \mapsto x \cdot y  = xy 
+$$ 
+The multiplication satisifes: $\, \forall \, x,y,z \in \R$
+    - (M1) **Commutativity and Associativity**: 
+    $$
+    x \cdot y = y \cdot x
+    $$
+    $$
+    (x \cdot y) \cdot z = x \cdot (y \cdot z) 
+    $$
+    - (M2) **Multiplicative Identity**: $\, \exists \, 1 \in \R \st$
+    $$ 
+    x \cdot 1 = 1 \cdot x = x 
+    $$
+    - (M3) **Multiplicative Inverse**: If $x \neq 0 \,, \,\, \exists \, x^{-1} \in \R \st$
+    $$
+    x \cdot x^{-1} = x^{-1} \cdot x = 1 
+    $$
+
+
+
+3. There is a relation $\leq$ of **total order** on $\R$. The order satisfies: $\, \forall \, x, y, z \in \R$ 
+    - (O1) **Reflexivity**: 
+    $$
+    x \leq x
+    $$ 
+    - (O2) **Antisymmetry**: 
+    $$
+    x \leq y \, \mbox{ and } \, y \leq x \,\, \implies \,\, x = y 
+    $$
+    - (O3) **Transitivity**: 
+    $$
+    x \leq y \,\, \mbox{ and } \,\, y \leq z \,\, \implies \,\, x = z 
+    $$
+    - (O4) **Total order**:  
+    $$
+    x \leq y \,\, \mbox{ or } \,\, y \leq x 
+    $$
+
+4. The operations $+$ and $\cdot$, and the total order $\leq$, are related by the following properties: $\, \forall x, y, z \in \R$
+    - (AM) **Distributive**: Relates addition and multiplication via
+    $$
+    x \cdot (y + z) = x \cdot y + x \cdot z 
+    $$
+    - (AO) Relates addition and order with the requirement:
+    $$
+    x \leq y \,\, \implies \,\, x + z \leq y + z
+    $$
+    - (MO) Relates multiplication and order with the requirement:
+    $$
+    x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
+    $$
+
+5. The **Cut Property** holds:
+    - (CP) Every cut $(A,B)$ of $\R$ admits a **separator** $s \in \R \, \st$
+    $$
+    a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B 
+    $$  
+:::
+
+
+::: Notation
+For $x \in \R$, $x \neq 0$, the multiplicative inverse is also denoted by 
+$$
+x^{-1} = \frac{1}{x} \,.
+$$
+:::
+
+
+
+::: Remark
+Since **Cut Property** and **Axiom of Completeness** are equivalent, one can replace the Cut Property at Point 5 with:  
+
+5. The **Axiom of Completeness** holds:
+    - (AC) STATEMENT HERE
 :::
 
 
 
 
+::: Remark
+
+Recall that
+
+- $(K,+,\cdot)$ satisfying (A1)-(A3), (M1)-(M3), (AM) is a **field** 
+- $(K,+,\cdot, \geq)$ satisfying (A1)-(A3), (M1)-(M3), (O1)-(O4) ,(AM), (AO), (MO) is an **ordered field**
+
+In particular we have:
+
+- $(\N, + , \cdot)$ is **not a field**
+- $(\Z, + , \cdot)$ is **not a field**
+- $(\Q, + , \cdot)$ is a **field**
+- $(\Q,+, \cdot,\geq)$ is an **ordered field**
+- $(\R,+, \cdot,\geq)$ is an **ordered field** in which the **Cut Property** (CP) or **Axiom of Completeness** (AC) hold
+:::
 
 
 
 
+## Consequences of the Axioms
+
+Now that we established the axiomatic definition of the Real Numbers $\R$, let us investigate some of their properies. 
+
+
+### Nested Interval Property
+
+Not sure
+
+### Archimedean Property
+
+### Revisiting Sup and inf 
+
+1. Characterize sup and inf with epsilon (see Marcellini)
+2. Compute sup and inf of interval (a,b) - Dommers
+3. Compute sup and inf of 
+$$
+\left\{ \frac1n \divider n \in \N  \,, \,\, n \neq 0 \right\}
+$$
+see Dommers
+
+
+
+### Density of $\Q$ in $\R$
+
+### Existence of Square Roots
+
+
+
+
+
+
+## Cardinality
+
+Brief. Use Dommers
 
