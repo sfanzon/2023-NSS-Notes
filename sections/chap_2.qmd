@@ -388,6 +388,60 @@ $$
 
 
 
+
+### Power set
+
+Let $\Omega$ be an arbitray set. We define the **power set** of $\Omega$ as 
+$$
+\mathcal{P}(\Omega) := \{ A \divider A \subset \Omega \}\,,
+$$
+that is, the power set of $\Omega$ is the set of all subsets of $\Omega$. 
+
+
+::: Remark
+It holds that:
+
+1. $\mathcal{P}(\Omega)$ is always non-empty, since we have that 
+$$
+\emptyset \in \mathcal{P}(\Omega) \,,  \quad  \Omega \in \mathcal{P}(\Omega) \,.
+$$
+2. Given $A, B \in \mathcal{P}(\Omega)$, then the sets
+$$
+A \cup B, \quad  A \cap B ,\quad A^c , \quad B \smallsetminus A 
+$$
+are all elements of $\mathcal{P}(\Omega)$.
+3. Suppose $\Omega$ is **discrete** and **finite**, that is,
+$$
+\Omega = \{x_1, \ldots, x_m\}
+$$
+for some $m \in \N$. Then $\mathcal{P}(\Omega)$ contains $2^m$ elements. This is because for each $x_i \in \Omega$ we have just two choices: either include $x_i$ in a subset, or do not include $x_i$ in a subset.
+:::
+
+
+::: Example
+Define the set
+$$
+\Omega = \{ x, y, z \}\,.
+$$
+Then $\mathcal{P}(\Omega)$ has $2^3 = 8$ elements. These are
+
+- $\emptyset$
+- $\{x\}$
+- $\{y\}$
+- $\{z\}$
+- $\{x,y\}$
+- $\{x,z\}$
+- $\{y,z\}$
+- $\{x,y,z\}$
+
+We therefore write 
+\begin{align}
+\mathcal{P}(\Omega) = \{ \emptyset, & \, \{x\} , \,  \{y\} , \, \{z\} , \{x,y\} \\
+&  \{x,z\}, \, \{y,z\} , \, \{x,y,z\} \} \,. 
+\end{align}
+:::
+
+
 ### Product of sets
 
 Suppose $A$ and $B$ are two sets. The **product** of $A$ and $B$ is the set of pairs
@@ -563,9 +617,9 @@ Similarly, we define **order relations**.
 
 
 ::: Definition
-### Order relation
+### Partial order
 
-A binary relation $R$ is called an **order relation** if it satisfies the following properties:
+A binary relation $R$ on $A$ is called a **partial order** if it satisfies the following properties:
 
 1. **Reflexive**: For each $x \in A$ one has 
 $$
@@ -583,29 +637,104 @@ $$
 (x,y) \in R \,  \text{ and } \, (y,x) \in R \implies x = y 
 $$
 
-    > This is the only new condition with respect to the definition of equivalence relation. 
-
+    > This is the only new condition with respect to the definition of equivalence relation, and it replaces symmetry.
 :::
 
 
-The prototypical example of order relation is the **inequality** relation.
 
+
+:::  Definition
+### Total order
+
+A binary relation $R$ on $A$ is called a **total order relation** if it satisfies the following properties:
+
+1. **Partial order**: $R$ is a partial order on $A$.
+2. **Total**: For each $x,y \in A$ we have
+$$
+(x, y) \in R \,\, \mbox{ or } \,\, (y,x) \in R \,.
+$$
+
+    > This is saying that all elements in $A$ are related.
+:::
+
+
+
+
+An example of partial order is the operation of **set inclusion**.
 
 ::: Example
-### Inequality is an order relation
+### Set inclusion is a partial order
 
-Consider the set of integers $\Z$. The inequality defines a **binary relation** on $\Z \times \Z$, via
+Consider an arbitrary non-empty set $\Omega$ and consider its **power set**
 $$
-R:=\{ (x,y) \in \Z \times \Z \, \colon \, x \leq y  \} \,.
+\mathcal{P}(\Omega) = \{ A \divider A \subset \Omega  \}\,.
+$$
+The inclusion defines **binary relation** on $\mathcal{P}(\Omega) \times \mathcal{P}(\Omega)$, via
+$$
+R:=\{ (A,B) \in \mathcal{P}(\Omega) \times \mathcal{P}(\Omega) \, \colon \, A \subset B  \} \,.
 $$
 Let us check that $R$ is an **order relation**:
 
-1. Reflexive: It holds, since $x \leq x$ for all $x \in \Z$,
+1. Reflexive: It holds, since $A \subset A$ for all $A \in \mathcal{P}(\Omega)$,
+
+2. Transitive: If $A \subset B$ and $B \subset C$ then by definition of inclusion $A \leq C$.
+
+3. Antisymmetric: If $A \subset B$ and $B \subset A$, then $A=B$ by Proposition \ref{Proposition-Equality-Sets}.
+
+Therefore $R$ is a **partial order** on $\mathcal{P}(\Omega)$. Note that in general $R$ is **not** a total order. For example if we consider
+$$
+\Omega = \{x, y\}\,,
+$$
+then we have 
+$$
+\mathcal{P}(\Omega)  = \{ \emptyset , \, \{x\} , \, \{y\} , \, \{x,y\} \}\,.
+$$
+If we pick $A=\{x\}$ and $B=\{y\}$ then $A \cap B = \emptyset$, meaning that 
+$$
+(A, B) \notin R \,, \quad  (B, A) \notin R \,,
+$$
+showing that $R$ is not a total order.
+:::
+
+
+
+
+
+
+
+A very important example of total order is the **inequality** on $\Q$.
+
+
+::: Example
+### Inequality is a total order
+
+Consider the set of rationals $\Q$. The usual inequality defines a **binary relation** on $\Q \times \Q$, via
+$$
+R:=\{ (x,y) \in \Q \times \Q \, \colon \, x \leq y  \} \,.
+$$
+Let us check that $R$ is an **order relation**:
+
+1. Reflexive: It holds, since $x \leq x$ for all $x \in \Q$,
 
 2. Transitive: If $x \leq y$ and $y \leq z$ then $x \leq z$.
 
 3. Antisymmetric: If $x \leq y$ and $y \leq x$  then $x = y$.
 
+Finally, we halso have that $R$ is a **total order** on $\Q$, since for all $x,y \in \Q$ we have
+$$
+x \leq y \,\, \text{ or } \,\, y \leq x \,.
+$$
+:::
+
+
+
+
+::: Notation
+If $\Omega$ is a set and $R$ is a total order on $\Omega$, we write
+$$
+(x,y) \in R  \, \iff \, x \leq y \,. 
+$$
+Therefore the symbol $\leq$ will always denote a total order relation.
 :::
 
 
@@ -649,6 +778,92 @@ Some of the above intervals are depicted in @fig-interval-1, @fig-interval-2, @f
 ![Interval $(-\infty,b]$](/images/interval_4.png){#fig-interval-4 width=60%}
 
 
+
+
+
+## Functions
+
+
+::: Definition
+### Functions {#definition-function}
+Assume given two sets $A$ and $B$. A **function** from $A$ to $B$ is a rule which associates **at each** element $x \in A$ a **single** element $y \in B$. Notations:
+
+- We write $f \ \colon A \to B$ to indicate such rule,
+- For $x \in A$, we denote by $f(x)$ the element $y \in B$ associated with $x$ by $f$.
+
+In addition:
+
+- The set $A$ is called the **domain** of $f$,
+- The **range** of $f$ is the set
+$$
+\{ y \in B \divider y = f(x) \, \mbox{ for some }\, x \in A \} \subset B \,.
+$$
+:::
+
+::: Warning
+We want to stress the importance of the first two sentences in Definition \ref{definition-function}.  Assume that $f \colon A \to B$ is a function. Then:
+
+- To each element $x \in A$ we can **only** associate **one** element $f(x) \in B$,
+- Every element $x \in A$ has to be associated to an element $f(x)$ in $B$.
+:::
+
+
+::: Example
+Assume given the two sets 
+$$
+A = \{ a_1,a_2 \} \,, \quad B=\{b_1,b_2,b_3\} \,.
+$$
+Let us see a few examples:
+
+- Define $f \ \colon A \to B$ by setting 
+$$
+f(a_1) = b_1 \,, \quad f(a_2) = b_1 \,.
+$$
+In this way $f$ is a function, with domain $A$ and range
+$$
+f(A) = \{ b_1 \} \subset B \,.
+$$
+- Define $g \ \colon A \to B$ by setting 
+$$
+g(a_1) = b_2 \,, \quad g(a_1) = b_3 \,, \quad g(a_2) = b_3 
+$$
+Then $g$ is **NOT** a function, since the element $a_1$ has two elements associated. 
+- Define $h \ \colon A \to B$ by setting 
+$$
+h(a_1) = b_1 \,. 
+$$
+Then $g$ is **NOT** a function, since the element $a_2$ has no element associated. 
+:::
+
+![Schematic picture of the function $f$](/images/example_function_f.png){width=60%}
+
+![Schematic picture of the function $g$](/images/example_function_g.png){width=60%}
+
+![Schematic picture of the function $h$](/images/example_function_h.png){width=60%}
+
+
+::: Example
+Let us make two examples of functions on $\R$:
+
+- Define $f \ \colon \R \to \R$ by
+$$
+f(x)=x^2 \,.
+$$
+Note that the domain of $f$ is given by $\R$, while the range is
+$$
+f(\R) = [0,\infty)\,.
+$$
+- Define $g \ \colon \R \to \R$ as the logarithm:
+$$
+g(x) = \log (x) \,.
+$$
+This time the domain is $(0,\infty)$, while the range is $g(\R)=\R$. 
+:::
+
+
+![Plot of function $f(x)=x^2$](/images/square_graph.png){width=40%}
+
+![Plot of function $g(x)=\log(x)$](/images/log_graph.png){width=40%}
 
 
 
@@ -706,16 +921,16 @@ $$
 
 :::
 
-
-You might be familiar with the graph associated to the absolute value function:
+We can use the definition of abosulte value to define the **absolute value function**. This is a map 
+$$
+f \ \colon \R \to \R \,, \quad f(x):=|x| \,.
+$$
+You might be familiar with the graph associated to $f$, as seen below.
 
 ![Plot of the absolute value function $f(x)=|x|$](/images/absolute_value.png){width=40%}
 
 
-However in these Lecture Notes we are not dealing with functions, so it is better to think about the absolute value in a geometric way.  
-
-
-
+It is also useful to understand the absolute value in a geometric way.  
 
 
 ::: Remark
@@ -1250,9 +1465,3 @@ The above is equivalent, by definition, to $x_{n+2} \geq x_{n+1}$.
 
 Therefore the assumptions of the Induction Principle are satisfied, and (@eq-induction-increasing) follows.
 :::
-
-
-
-
-
-

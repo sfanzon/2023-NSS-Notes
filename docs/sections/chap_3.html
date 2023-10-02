@@ -66,7 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Question {
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -74,35 +78,31 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
+.Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
 }
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Axiom {
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -110,17 +110,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Theorem {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
 }
 </style>
 
@@ -222,7 +230,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#cut-property" id="toc-cut-property" class="nav-link active" data-scroll-target="#cut-property"><span class="header-section-number">3.1</span> Cut Property</a></li>
+  <li><a href="#fields" id="toc-fields" class="nav-link active" data-scroll-target="#fields"><span class="header-section-number">3.1</span> Fields</a></li>
+  <li><a href="#cut-property" id="toc-cut-property" class="nav-link" data-scroll-target="#cut-property"><span class="header-section-number">3.2</span> Cut Property</a></li>
+  <li><a href="#axioms-of-real-numbers" id="toc-axioms-of-real-numbers" class="nav-link" data-scroll-target="#axioms-of-real-numbers"><span class="header-section-number">3.3</span> Axioms of Real Numbers</a></li>
   </ul>
 </nav>
     </div>
@@ -246,14 +256,490 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In <a href="chap_1.html"><span>Chapter&nbsp;1</span></a> we proved that <span class="math display">\[
-\sqrt{2} \notin \mathbb{Q}\,,
-\]</span> where <span class="math inline">\(\mathbb{Q}\)</span> is the set of rational numbers. Therefore <span class="math inline">\(\mathbb{Q}\)</span> has a <strong>gap</strong>, and cannot be represented as a <strong>continuous</strong> line. Let us make this concept more precise, by giving a mathematical definition of <strong>gap</strong>.</p>
-<section id="cut-property" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="cut-property"><span class="header-section-number">3.1</span> Cut Property</h2>
-<p>The rigorous definition of <strong>gap</strong> is given in terms of <strong>cuts</strong> of a set.</p>
+<p>In this chapter we introduce the sysyem of Real Numbers <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<section id="fields" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="fields"><span class="header-section-number">3.1</span> Fields</h2>
+<p>In order to introduce <span class="math inline">\(\mathbb{R}\)</span>, we need the concepts of <strong>binary operation</strong> and <strong>field</strong>. We proceed in a general setting, starting from a set <span class="math inline">\(K\)</span>.</p>
+<div id="binary-operation" class="Definition" title="Binary operation">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Binary operation</summary><div>A binary operation on a set <span class="math inline">\(K\)</span> is a function <span class="math display">\[
+\circ \ \colon K \times K \to K
+\]</span> which maps the ordered pair <span class="math inline">\((x,y)\)</span> into <span class="math inline">\(x \circ y\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Notation-2" class="Notation">
+<details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 2</strong></summary><div>
+<p>There are two main binary operations we are interested in:</p>
+<ul>
+<li><strong>Addition</strong>: denoted by <span class="math inline">\(+\)</span>. The addition, or <strong>sum</strong> of <span class="math inline">\(x,y \in K\)</span> is denoted by <span class="math display">\[
+x + y \,.
+\]</span></li>
+<li><strong>Multiplication</strong>: denoted by <span class="math inline">\(\cdot\)</span>. The multiplication, or <strong>product</strong> of <span class="math inline">\(x,y \in K\)</span> is denoted by <span class="math display">\[
+x \cdot y \,\, \mbox{ or } \,\, xy\,.
+\]</span></li>
+</ul>
+</div></details>
+</div>
+<div id="example-binary-operation" class="Example" title="of binary operation">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 3: </strong>of binary operation</summary><div>Let <span class="math inline">\(K=\{0,1\}\)</span>. We can for example define the operations of sum and product according to the tables <span class="math display">\[
+\begin{array}{c|cc}
++ &amp; 0 &amp; 1 \\ \hline
+0 &amp; 0 &amp; 1 \\
+1 &amp; 1 &amp; 0 \\
+\end{array}
+\qquad \qquad
+\begin{array}{c|cc}
+\cdot &amp; 0 &amp; 1 \\ \hline
+    0 &amp; 0 &amp; 0 \\
+    1 &amp; 0 &amp; 1 \\
+\end{array}
+\]</span> The above mean that <span class="math display">\[
+0+0 = 1+1 = 0 \,, \quad 0 + 1 = 1 + 0 = 1\,,
+\]</span> <span class="math display">\[
+0 \cdot 0 = 0 \cdot 1 = 1 \cdot 0 = 0 \,, \quad 1 \cdot 1 = 1  \,.
+\]</span> This is just one option. Note that we could not have defined <span class="math display">\[
+1 + 1  = 2\,,
+\]</span> since <span class="math inline">\(2 \notin K\)</span>.<p></p>
+</div></details>
+</div>
+<p>Binary operations take ordered pairs of elements of <span class="math inline">\(K\)</span> as input. Therefore the operation <span class="math display">\[
+x \circ y \circ z
+\]</span> does not make sense, since we do not know which one between <span class="math display">\[
+x \circ y  \,\, \mbox{ or } \,\, y \circ z
+\]</span> has to be performed first. Also one could have that the outcome of an operation depends on order: <span class="math display">\[
+x \circ y \neq y \circ x \,.
+\]</span> This motivates the following definition.</p>
+<div id="Definition-4" class="Definition">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 4</strong></summary><div>
+<p>Let <span class="math inline">\(K\)</span> be a set and <span class="math inline">\(\circ \ \colon K \times K \to K\)</span> be a binary operation on <span class="math inline">\(K\)</span>. We say that:</p>
+<ol type="1">
+<li><span class="math inline">\(\circ\)</span> is <strong>commutative</strong> if <span class="math inline">\(\forall \, x,y \in K\)</span> <span class="math display">\[
+x \circ y = y \circ x \,.
+\]</span></li>
+<li><span class="math inline">\(\circ\)</span> is <strong>associative</strong> if <span class="math inline">\(\forall \, x,y,z \in K\)</span> <span class="math display">\[
+(x \circ y) \circ z = x \circ (y \circ z) \,.
+\]</span></li>
+<li>An element <span class="math inline">\(e \in K\)</span> is called <strong>neutral element</strong> of <span class="math inline">\(\circ\)</span> if <span class="math inline">\(\forall \, x \in K\)</span> <span class="math display">\[
+x \circ e = e \circ x = e \,.
+\]</span></li>
+<li>Let <span class="math inline">\(e\)</span> be a neutral element of <span class="math inline">\(\circ\)</span> and let <span class="math inline">\(x \in K\)</span>. An element <span class="math inline">\(y \in K\)</span> is called an <strong>inverse</strong> of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(\circ\)</span> if <span class="math display">\[
+x \circ y = y \circ x = e \,.
+\]</span></li>
+</ol>
+</div></details>
+</div>
+<div id="example-binary-operation-2" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 5</strong></summary><div>
+<p>Let <span class="math inline">\(K\)</span> with <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> be as in Example <a href="chap_3.html#example-binary-operation">3</a>. For the sum we have</p>
+<ul>
+<li><span class="math inline">\(+\)</span> is commutative, since <span class="math display">\[
+0 + 1 = 1 + 0 = 0 \,.  
+\]</span></li>
+<li><span class="math inline">\(+\)</span> is associative, since for example <span class="math display">\[
+(0 + 1) + 1 = 1 + 1 = 0 \,, \quad 0 + (1 + 1) = 0 + 0 = 0 \,,  
+\]</span> and therefore <span class="math display">\[
+(0 + 1) + 1 = 0 + (1 + 1) \,.
+\]</span> In general one can show that <span class="math inline">\(+\)</span> is associative by checking all the other permutations.</li>
+<li>The neutral element of <span class="math inline">\(+\)</span> is <span class="math inline">\(0\)</span>, since <span class="math display">\[
+0 + 0 = 0 \,, \quad 1 + 0 = 0 + 1 = 1 \,.
+\]</span></li>
+<li>Every element has an inverse. Indeed, the inverse of <span class="math inline">\(0\)</span> is <span class="math inline">\(0\)</span>, since <span class="math display">\[
+0 + 0 = 0\,,
+\]</span> while the inverse of <span class="math inline">\(1\)</span> is <span class="math inline">\(1\)</span>, since <span class="math display">\[
+1 + 1 = 1 + 1 = 0 \,.
+\]</span></li>
+</ul>
+<p>For the product we have:</p>
+<ul>
+<li><span class="math inline">\(\cdot\)</span> is commutative, since <span class="math display">\[
+1 \cdot 0 = 0 \cdot 1 = 0 \,.
+\]</span></li>
+<li><span class="math inline">\(\cdot\)</span> is associative, since for example <span class="math display">\[
+(0 \cdot 1) \cdot 1 = 0 \cdot 1 = 0 \,, \quad 0 \cdot (1 \cdot 1) = 0 \cdot 1 = 0 \,,  
+\]</span> and therefore <span class="math display">\[
+(0 \cdot 1) \cdot 1 = 0 \cdot (1 \cdot 1) \,.
+\]</span> By checking all the other permutations one can show that <span class="math inline">\(\cdot\)</span> is associative.</li>
+<li>The neutral element of <span class="math inline">\(\cdot\)</span> is <span class="math inline">\(1\)</span>, since <span class="math display">\[
+0 \cdot 1 = 1 \cdot 0 = 0 \,, \quad 1 \cdot 1 =  1 \,.
+\]</span></li>
+<li>The element <span class="math inline">\(0\)</span> has no inverse, since<br>
+<span class="math display">\[
+0 \cdot 0 = 0 \cdot 1 = 1 \cdot 0 = 0\,,
+\]</span> and thus we never obtain the neutral element <span class="math inline">\(1\)</span>. The inverse of <span class="math inline">\(1\)</span> is given by <span class="math inline">\(1\)</span>, since <span class="math display">\[
+1 \cdot 1 = 1 \,.
+\]</span></li>
+</ul>
+</div></details>
+</div>
+<div id="Example-6" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>Let <span class="math inline">\(K=\{0,1\}\)</span> be a set with binary relation <span class="math inline">\(\circ\)</span> defined by the table <span class="math display">\[
+\begin{array}{c|cc}
+\circ &amp; 0 &amp; 1 \\ \hline
+0     &amp; 1 &amp; 1 \\
+1     &amp; 0 &amp; 0 \\
+\end{array}
+\]</span> In this case <span class="math inline">\(\circ\)</span> is not commutative since <span class="math display">\[
+0 \circ 1 = 1 \, , \quad 1 \circ 0 = 0
+\]</span> and therefore <span class="math display">\[
+0 \circ 1 \neq 1 \circ 0 \,.
+\]</span> Moreover <span class="math inline">\(\circ\)</span> is not associative, since <span class="math display">\[
+(0 \circ 1) \circ 1 = 1 \circ 1 = 0 \,,
+\]</span> while <span class="math display">\[
+0 (\circ 1 \circ 1) = 0 \circ 0 = 1 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>We are ready to define fields.</p>
+<div id="field" class="Definition" title="Field">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 7: </strong>Field</summary><div>
+<p>Let <span class="math inline">\(K\)</span> be a set with binary operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>. We call the triple <span class="math inline">\((K, + , \cdot)\)</span> a <strong>field</strong> if:</p>
+<ol type="1">
+<li>The addition <span class="math inline">\(+\)</span> satisfies:
+<ul>
+<li>(A1) <span class="math inline">\(+\)</span> is <strong>commutative</strong> and <strong>associative</strong>.</li>
+<li>(A2) There exists a <strong>neutral element</strong> in <span class="math inline">\(K\)</span> for <span class="math inline">\(+\)</span>. We call this element <span class="math inline">\(0\)</span>.</li>
+<li>(A3) For every <span class="math inline">\(x \in K\)</span> there exists an inverse <span class="math inline">\(y \in K\)</span> with respect to <span class="math inline">\(+\)</span>. We call this element the <strong>additive inverse</strong> of <span class="math inline">\(x\)</span> and denote it by <span class="math inline">\(y=-x\)</span>.</li>
+</ul></li>
+<li>The multiplication <span class="math inline">\(\cdot\)</span> satisfies:
+<ul>
+<li>(M1) <span class="math inline">\(\cdot\)</span> is <strong>commutative</strong> and <strong>associative</strong>.</li>
+<li>(M2) There exists a <strong>neutral element</strong> in <span class="math inline">\(K\)</span> for <span class="math inline">\(\cdot\)</span>. We call this element <span class="math inline">\(1\)</span>.</li>
+<li>(M3) For every <span class="math inline">\(x \in K\)</span> with <span class="math inline">\(x \neq 0\)</span> there exists an inverse <span class="math inline">\(y \in K\)</span> with respect to <span class="math inline">\(\cdot\)</span>. We call this element the <strong>multiplciative inverse</strong> of <span class="math inline">\(x\)</span> and denote it by <span class="math inline">\(y=x^{-1}\)</span>.</li>
+</ul></li>
+<li><span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> are related by the <strong>distributive property</strong>:
+<ul>
+<li>(AM) For all <span class="math inline">\(x,y,z \in K\)</span> we have <span class="math display">\[
+x \cdot (y + z) = (x \cdot y) + (y \cdot z) \,.
+\]</span></li>
+</ul></li>
+</ol>
+</div></details>
+</div>
+<div id="Example-8" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 8</strong></summary><div>
+<p>Let <span class="math inline">\(K\)</span> with <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> be as in Example <a href="chap_3.html#example-binary-operation">3</a>. We can show that <span class="math inline">\((K,+,\cdot)\)</span> is a field. Indeed we have already shown in Example <a href="chap_3.html#example-binary-operation-2">5</a> that:</p>
+<ul>
+<li>(A1) and (M1) hold,</li>
+<li>(A2) holds with neutral element <span class="math inline">\(0\)</span>,</li>
+<li>(M2) holds with neutral element <span class="math inline">\(1\)</span>,</li>
+<li>(A3) every element has an additive inverse, with <span class="math display">\[
+-0 = 0 \,, \quad - 1 = 1 \,,
+\]</span></li>
+<li>(M3) every element which is not <span class="math inline">\(0\)</span> a multiplicative inverse, with <span class="math display">\[
+1^{-1} = 1\,.
+\]</span></li>
+<li>(AM) this is left to show: Indeed, for all <span class="math inline">\(y,z \in K\)</span> we have <span class="math display">\[
+0 \cdot (y + z) = 0 \,, \quad (0 \cdot y) + (0 \cdot z) = 0 + 0 = 0\,,
+\]</span> and also <span class="math display">\[
+1 \cdot (y + z) = y + z \,, \quad (1 \cdot y) + (1 \cdot z) = y + z \,.
+\]</span></li>
+</ul>
+</div></details>
+</div>
+<div id="subtraction-and-division" class="Definition" title="Subtraction and division">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 9: </strong>Subtraction and division</summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot)\)</span> be a field. We define:</p>
+<ul>
+<li><strong>Subtraction</strong> as the operation <span class="math inline">\(-\)</span> defined by <span class="math display">\[
+x - y := x + (-y) \,, \quad \forall \, x , y \in K \,,
+\]</span> where <span class="math inline">\(-y\)</span> is the additive inverse of <span class="math inline">\(y\)</span>.</li>
+<li><strong>Division</strong> as the operation <span class="math inline">\(/\)</span> defined by <span class="math display">\[
+x/y := x \cdot y^{-1}\,, \quad \forall \, x , y \in K \,, \,\, y \neq 0 \,,
+\]</span> where <span class="math inline">\(y^{-1}\)</span> is the multiplicative inverse of <span class="math inline">\(y\)</span>.</li>
+</ul>
+</div></details>
+</div>
+<div id="uniqueness-of-neutral-elements-and-inverses" class="Proposition" title="Uniqueness of neutral elements and inverses">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 10: </strong>Uniqueness of neutral elements and inverses</summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot)\)</span> be a field. Then</p>
+<ol type="1">
+<li>There is a unique element in <span class="math inline">\(K\)</span> with the property of <span class="math inline">\(0\)</span>,</li>
+<li>There is a unique element in <span class="math inline">\(K\)</span> with the property of <span class="math inline">\(1\)</span>,</li>
+<li>For all <span class="math inline">\(x \in K\)</span> there is a unique additive inverse <span class="math inline">\(-x\)</span>,</li>
+<li>For all <span class="math inline">\(x \in K\)</span>, <span class="math inline">\(x \neq 0\)</span>, there is a unique multiplicative inverse <span class="math inline">\(x^{-1}\)</span>.</li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-1" class="Proof">
+<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>
+<ol type="1">
+<li>Suppose that <span class="math inline">\(0 \in K\)</span> and <span class="math inline">\(\tilde{0} \in K\)</span> are both neutral element of <span class="math inline">\(+\)</span>, that is, they both satisfy (A2). Then <span class="math display">\[
+0 + \tilde{0} = 0
+\]</span> since <span class="math inline">\(\tilde{0}\)</span> is a neutral element for <span class="math inline">\(+\)</span>. Moreover <span class="math display">\[
+\tilde{0} + 0 = \tilde{0}
+\]</span> since <span class="math inline">\(0\)</span> is a neutral element for <span class="math inline">\(+\)</span>. By commutativity of <span class="math inline">\(+\)</span>, see property (A1), we have <span class="math display">\[
+0 = 0 + \tilde{0} = \tilde{0} + 0 = \tilde{0} \,,
+\]</span> showing that <span class="math inline">\(0 = \tilde{0}\)</span>. Hence the neutral element for <span class="math inline">\(+\)</span> is unique.</li>
+<li>Exercise.</li>
+<li>Let <span class="math inline">\(x \in K\)</span> and suppose that <span class="math inline">\(y, \tilde{y} \in K\)</span> are both additive inverses of <span class="math inline">\(x\)</span>, that is, they both satisfy (A3). Therefore <span class="math display">\[
+x + y = 0
+\]</span> since <span class="math inline">\(y\)</span> is an additive inverse of <span class="math inline">\(x\)</span> and <span class="math display">\[
+x + \tilde{y} = 0
+\]</span> since <span class="math inline">\(\tilde{y}\)</span> is an additive inverse of <span class="math inline">\(x\)</span>. Therefore we can use commutativity and associativity and of <span class="math inline">\(+\)</span>, see property (A1), and the fact that <span class="math inline">\(0\)</span> is the neutral element of <span class="math inline">\(+\)</span>, to infer <span class="math display">\[\begin{align}
+y &amp; = y + 0 = y + (x + \tilde{y}) \\
+  &amp; = (y + x) + \tilde{y} = (x + y) + \tilde{y} \\
+  &amp; = 0 + \tilde{y} = \tilde{y} \,,    
+\end{align}\]</span> concluding that <span class="math inline">\(y = \tilde{y}\)</span>. Thus there is a unique additive inverse of <span class="math inline">\(x\)</span>, and <span class="math display">\[
+y = \tilde{y} = -x \,,
+\]</span> with <span class="math inline">\(-x\)</span> the element from property (A3).</li>
+<li>Exercise.</li>
+</ol>
+</div></details>
+</div>
+<p>Using the properties of field we can also show that the usual properties of sum, subtraction, multiplication and division still hold in any field. We list such properties in the following proposition.</p>
+<div id="properties-of-field-operations" class="Proposition" title="Properties of field operations">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 11: </strong>Properties of field operations</summary><div>
+<p>Let <span class="math inline">\((K,+,\cdot)\)</span> be a field. Then for all <span class="math inline">\(x,y,z \in K\)</span>,</p>
+<ul>
+<li><span class="math inline">\(x + y = x + z \,\, \implies \,\, y = z\)</span></li>
+<li><span class="math inline">\(x \cdot y = x \cdot z \,\)</span> and <span class="math inline">\(\,x \neq 0 \,\, \implies \,\, y = z\)</span></li>
+<li><span class="math inline">\(- 0 = 0\)</span></li>
+<li><span class="math inline">\(1^{-1} = 1\)</span></li>
+<li><span class="math inline">\(x \cdot 0 = 0\)</span></li>
+<li><span class="math inline">\(-1 \cdot x = -x\)</span></li>
+<li><span class="math inline">\(-(-x) = x\)</span></li>
+<li><span class="math inline">\((x^{-1})^{-1} = x \,\)</span> if <span class="math inline">\(\, x \neq 0\)</span></li>
+<li><span class="math inline">\((x \cdot y)^{-1} = x^{-1} \cdot y^{-1}\)</span></li>
+</ul>
+</div></details>
+</div>
+<p>The above properties can be all proven with elementary use of the field properties (A1)-(A3), (M1)-(M3) and (AM). This is an exercise in patience, and is left to the reader.</p>
+<p>Let us conclude with examining the sets of numbers introduced in <a href="chap_1.html"><span>Chapter&nbsp;1</span></a>.</p>
+<div id="Theorem-12" class="Theorem">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 12</strong></summary><div>
+<p>Consider the sets <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span> with the usual operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>. We have:</p>
+<ul>
+<li><span class="math inline">\((\mathbb{N}, + , \cdot)\)</span> is <strong>not a field</strong>:<br>
+It satisfies properties (A1), (A2), (M1), (M2), (AM) of fields. It is missing properties (A3) and (M3), the additive and multiplicative inverse properties, respectively.</li>
+<li><span class="math inline">\((\mathbb{Z}, + , \cdot)\)</span> is <strong>not a field</strong>:<br>
+It satisfies properties (A1), (A2), (A3), (M1), (M2), (AM) of fields. Thus it is only missing (M3), the multiplicative inverse property.</li>
+<li><span class="math inline">\((\mathbb{Q}, + , \cdot)\)</span> <strong>is a field</strong>.</li>
+</ul>
+</div></details>
+</div>
+<p>The proof is omitted.</p>
+</section>
+<section id="cut-property" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="cut-property"><span class="header-section-number">3.2</span> Cut Property</h2>
+<p>We have just introduced the notion of <strong>field</strong>, and noted that the set of rational numbers with the usual operations <span class="math display">\[
+(\mathbb{Q}, + , \cdot)
+\]</span> is a <strong>field</strong>.</p>
+<p>We now need to address the key issue we proved in <a href="chap_1.html"><span>Chapter&nbsp;1</span></a>, that is, that <span class="math display">\[
+\sqrt{2} \notin \mathbb{Q}\,.
+\]</span> This means that <span class="math inline">\(\mathbb{Q}\)</span> has <strong>gaps</strong>, and cannot be represented as a <strong>continuous</strong> line. The rigorous definition of <strong>lack of gaps</strong> needs the concept of <strong>cut</strong> of a set.</p>
+<div id="partition-of-a-set" class="Definition" title="Partition of a set">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Partition of a set</summary><div>Let <span class="math inline">\(S\)</span> be a set. The pair <span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span> if <span class="math display">\[
+A , B \subset S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
+\]</span> and <span class="math display">\[
+S = A \cup B \,, \quad
+A \cap B = \emptyset \, .
+\]</span><p></p>
+</div></details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/partition.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption class="figure-caption">Schematic picture of partition</figcaption>
+</figure>
+</div>
 <div id="cut-of-a-set" class="Definition" title="Cut of a set">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Cut of a set</summary><div>Suppose that<p></p>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 14: </strong>Cut of a set</summary><div>
+<p>Let <span class="math inline">\(S\)</span> be a set with a total order relation <span class="math inline">\(\leq\)</span>. The pair <span class="math inline">\((A,B)\)</span> is a <strong>cut</strong> of <span class="math inline">\(S\)</span> if</p>
+<ol type="1">
+<li><span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span>,</li>
+<li>We have <span class="math display">\[
+a \leq b \,,  \quad \forall \, a \in A \,, \,\, \forall \, b \in B \,.
+\]</span></li>
+</ol>
+</div></details>
+</div>
+<p>The <strong>cut</strong> of a set is often called <strong>Dedekind cut</strong>, named after <strong>Richard Dedekind</strong>, who used cuts to give an explicit construction of the real numbers <span class="math inline">\(\mathbb{R}\)</span>, see <a href="https://en.wikipedia.org/wiki/Dedekind_cut">Wikipedia page</a>.</p>
+<div id="cut-property-1" class="Definition" title="Cut property">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Cut property</summary><div>Let <span class="math inline">\(S\)</span> be a set with a total order relation <span class="math inline">\(\leq\)</span>. We say that <span class="math inline">\(S\)</span> has the <strong>cut property</strong> if for every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(S\)</span> there exists some <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
+a \leq s \leq b \,, \quad \forall  \, a \in A\,, \,\, \forall  \, b \in B \,.
+\]</span> We call <span class="math inline">\(s\)</span> the <strong>separator</strong> of the cut <span class="math inline">\((A,B)\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Example-16" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div>Let <span class="math inline">\(S = \mathbb{Q}\)</span> and consider the sets <span class="math display">\[
+A = (-\infty,s] \cap \mathbb{Q}\,, \quad B = (0,\infty) \cap \mathbb{Q}\,.
+\]</span> for some <span class="math inline">\(s \in \mathbb{Q}\)</span>. Then the pair <span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span>, and <span class="math inline">\(s\)</span> is the separator.<p></p>
+</div></details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/cut.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption"><span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span> with separator <span class="math inline">\(s\)</span>.</figcaption>
+</figure>
+</div>
+<div id="Question-17" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 17</strong></summary><div>Do all cuts of <span class="math inline">\(\mathbb{Q}\)</span> have a <strong>separator</strong>? In other words, does <span class="math inline">\(\mathbb{Q}\)</span> have the <strong>cut property</strong>?<p></p>
+</div></details>
+</div>
+<p>The answer to the above question is <strong>NO</strong>. For example the pair <span id="eq-cut-Q"><span class="math display">\[
+A =  (-\infty,\sqrt{2}) \cap \mathbb{Q}\,, \quad B = (\sqrt{2},\infty) \cap \mathbb{Q}\,.
+\tag{3.1}\]</span></span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span>, since <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>. However what is the separator? It should be <span class="math inline">\(s = \sqrt{2}\)</span>, given that clearly <span class="math display">\[
+a \leq \sqrt{2}  \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B \,.
+\]</span> However <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, so we are <strong>NOT ALLOWED</strong> to take it as separator. Indeed, we can show that <span class="math inline">\((A,B)\)</span> defined as in (<a href="#eq-cut-Q"><span>3.1</span></a>) has no separator.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/cut_sqrt2.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption"><span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span> which has no separator</figcaption>
+</figure>
+</div>
+<div id="mathbbq-does-not-have-the-cut-property." class="Theorem" title="\mathbb{Q} does not have the cut property.">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 18: </strong><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</summary><div><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property. More explicitly, there exist a cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{Q}\)</span> which has no separator.<p></p>
+</div></details>
+</div>
+<div id="Proof*-2" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be the sets defined in (<a href="#eq-cut-Q"><span>3.1</span></a>). It is useful to rewrite <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in the form <span class="math display">\[
+A = A_1 \cup A_2 \,,
+\]</span> where <span class="math display">\[
+A_1 = \{ q \in \mathbb{Q}\, \colon \,q&lt; 0  \}\,,
+\]</span> <span class="math display">\[
+A_2 =\{ q \in \mathbb{Q}\, \colon \,q \geq 0\,, \,\, q^2 &lt; 2  \} \,,
+\]</span> and <span class="math display">\[
+B = \{ q \in \mathbb{Q}\, \colon \,q &gt; 0, \,\, q^2 &gt; 2  \} \,.
+\]</span><p></p>
+<p><em>Step 1. <span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span></em>:<br>
+We need to prove the following:</p>
+<ol type="1">
+<li><span class="math inline">\((A,B)\)</span> is a partition of <span class="math inline">\(\mathbb{Q}\)</span>. This is because <span class="math inline">\(A , B \subset \mathbb{Q}\)</span> with <span class="math inline">\(A \neq \emptyset\)</span> and <span class="math inline">\(B \neq \emptyset\)</span>. Moreover <span class="math inline">\(A \cap B = \emptyset\)</span> and <span class="math display">\[
+A \cup B = \mathbb{Q}\,,
+\]</span> given that <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, and so there is no element <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math inline">\(q^2 = 2\)</span>.</li>
+<li>It holds <span class="math display">\[
+a \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
+\]</span> Indeed, suppose that <span class="math inline">\(a \in A\)</span> and <span class="math inline">\(b \in B\)</span>. We have two cases:
+<ul>
+<li><span class="math inline">\(a \in A_1\)</span>: Therefore <span class="math inline">\(a&lt;0\)</span>. In particular <span class="math display">\[
+a &lt; 0 &lt; b\,,
+\]</span> given that <span class="math inline">\(b &gt; 0\)</span> for all <span class="math inline">\(b \in B\)</span>. Thus <span class="math inline">\(a&lt;b\)</span>.</li>
+<li><span class="math inline">\(a \in A_2\)</span>: Therefore <span class="math inline">\(a \geq 0\)</span> and <span class="math inline">\(a^2 &lt; 2\)</span>. In particular <span class="math display">\[
+a^2 &lt; 2 &lt; b^2 \,,
+\]</span> since <span class="math inline">\(b^2&gt;2\)</span> for all <span class="math inline">\(b \in B\)</span>. In particular <span class="math display">\[
+a^2 &lt; b^2 \,.
+\]</span> Since <span class="math inline">\(b&gt;0\)</span> for all <span class="math inline">\(b \in B\)</span>, from the above inequality we infer <span class="math inline">\(a&lt;b\)</span>, concluding.</li>
+</ul></li>
+</ol>
+<p><em>Step 2. <span class="math inline">\((A,B)\)</span> has no separator</em>:<br>
+Suppose by contradiction that <span class="math inline">\((A,B)\)</span> admits a separator <span class="math display">\[
+L \in \mathbb{Q}\,.
+\]</span> By definition this means <span id="eq-separator-contradiction"><span class="math display">\[
+a \leq L \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
+\tag{3.2}\]</span></span> Since <span class="math display">\[
+L \in \mathbb{Q}\,, \quad \mathbb{Q}= A \cup B \,, \quad  A \cap B = \emptyset \,,
+\]</span> then either <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span>. We will see that both these possibilities lead to a contradiction:</p>
+<p><em>Case 1: <span class="math inline">\(L \in A\)</span>.</em><br>
+By (<a href="#eq-separator-contradiction"><span>3.2</span></a>) we know that <span id="eq-separator-contradiction-hp-0"><span class="math display">\[
+a \leq L \,, \quad \forall \, a \in A \,.
+\tag{3.3}\]</span></span> In particular the above implies <span id="eq-separator-contradiction-1"><span class="math display">\[
+L \geq 0
+\tag{3.4}\]</span></span> since <span class="math inline">\(0 \in A\)</span>. Therefore we must have <span class="math inline">\(L \in A_2\)</span>, that is, <span id="eq-separator-contradiction-hp-1"><span class="math display">\[
+L \geq 0 \,\, \mbox{ and } \,\, L^2 &lt; 2 \,.
+\tag{3.5}\]</span></span> Set <span class="math display">\[
+\tilde{L} := L + \frac1n
+\]</span> for <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Clearly we have <span id="eq-separator-contradiction-2"><span class="math display">\[
+\tilde{L} \in \mathbb{Q}\,\,\, \mbox{ and } \,\,\, L &lt; \tilde{L}  \,.
+\tag{3.6}\]</span></span> From (<a href="#eq-separator-contradiction-1"><span>3.4</span></a>) and (<a href="#eq-separator-contradiction-2"><span>3.6</span></a>) we have also <span id="eq-separator-contradiction-3"><span class="math display">\[
+\tilde{L}&gt;0 \,.
+\tag{3.7}\]</span></span> We now want to show that there is a choice of <span class="math inline">\(n\)</span> such that <span class="math inline">\(\tilde{L}^2 &lt; 2\)</span>, which will lead to a contradiction. Indeed, we can estimate <span class="math display">\[\begin{align}
+\tilde{L}^2 &amp; = \left( L + \frac1n \right)^2 \\
+            &amp; = L^2 + \frac{1}{n^2} + 2 \frac{L}{n} \\
+            &amp; &lt; L^2 + \frac{1}{n} + 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}&lt;\frac{1}{n^2}  \right) \\
+            &amp; = L^2 + \frac{2L + 1}{n} \,.
+\end{align}\]</span> If we now impose that <span class="math display">\[
+L^2 + \frac{2L + 1}{n} &lt; 2 \,,
+\]</span> we can rearrange the above and obtain <span class="math display">\[
+n(2 - L^2) &gt; 2L + 1 \,.
+\]</span> Now note that <span class="math inline">\(L^2 &lt; 2\)</span> by assumption (<a href="#eq-separator-contradiction-hp-1"><span>3.5</span></a>). Thus we can divived by <span class="math inline">\((2 - L^2)\)</span> and obtain <span class="math display">\[
+n &gt;\frac{2L + 1}{2 - L^2} \,.
+\]</span> Therefore we have just shown that <span class="math display">\[
+n &gt;\frac{2L + 1}{2 - L^2}  \,\, \implies \,\, \tilde{L}^2 &lt; 2 \,.
+\]</span> Together with (<a href="#eq-separator-contradiction-3"><span>3.7</span></a>) this implies <span class="math inline">\(\tilde{L} \in A\)</span>. Therefore we have <span class="math display">\[
+\tilde{L} \leq L
+\]</span> by (<a href="#eq-separator-contradiction-hp-0"><span>3.3</span></a>). On the other hand it also holds <span class="math display">\[
+\tilde{L} &gt; L
+\]</span> by (<a href="#eq-separator-contradiction-2"><span>3.6</span></a>), and therefore we have a contradiction. Thus <span class="math inline">\(L \notin A\)</span>.</p>
+<p><em>Case 2: <span class="math inline">\(L \in B\)</span>.</em><br>
+As <span class="math inline">\(L \in B\)</span>, we have by definition <span id="eq-separator-contradiction-5"><span class="math display">\[
+L &gt; 0 \,, \quad L^2 &gt; 2 \,.
+\tag{3.8}\]</span></span> Moreover since <span class="math inline">\(L\)</span> is a separator, see (<a href="#eq-separator-contradiction"><span>3.2</span></a>), in particular <span id="eq-separator-contradiction-6"><span class="math display">\[
+L \leq b \,,  \,\, \forall \, b \in B \,.
+\tag{3.9}\]</span></span> Define now <span class="math display">\[
+\tilde{L} := L - \frac1n
+\]</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Clearly we have <span id="eq-separator-contradiction-7"><span class="math display">\[
+\tilde{L} &lt; L \,.
+\tag{3.10}\]</span></span> We now show that <span class="math inline">\(n\)</span> can be chosen so that <span class="math inline">\(\tilde{L} \in B\)</span>. Indeed <span class="math display">\[\begin{align}
+\tilde{L}^2  &amp; = \left(  L - \frac1n   \right)^2 \\
+             &amp; = L^2 + \frac{1}{n^2} - 2 \frac{L}{n} \\
+             &amp; &gt; L^2 - \frac{1}{n^2} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} &gt; - \frac{1}{n^2}  \right) \\
+             &amp; &gt; L^2 - \frac{1}{n} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} &gt; - \frac{1}{n}  \right) \\
+             &amp; = L^2 - \frac{1 + 2L}{n} \,.
+\end{align}\]</span> Now we impose <span class="math display">\[
+L^2 - \frac{1 + 2L}{n} &gt; 2
+\]</span> which is equivalent to <span class="math display">\[
+n(L^2 - 2) &gt; 1 + 2L \,.
+\]</span> Since we are assuming <span class="math inline">\(L \in B\)</span>, then <span class="math inline">\(L^2 &gt; 2\)</span>, see (<a href="#eq-separator-contradiction-5"><span>3.8</span></a>). Therefore we can divide by <span class="math inline">\((L^2 -2)\)</span> and get <span class="math display">\[
+n &gt; \frac{1+2L}{L^2 - 2} \,.
+\]</span> In total, we have just shown that <span class="math display">\[
+n &gt; \frac{1+2L}{L^2 - 2} \quad \implies \quad \tilde{L}^2 &gt; 2\,,
+\]</span> proving that <span class="math inline">\(\tilde{L} \in B\)</span>. Therefore by (<a href="#eq-separator-contradiction-6"><span>3.9</span></a>) we get <span class="math display">\[
+L \leq \tilde{L} \,.
+\]</span> This contradicts (<a href="#eq-separator-contradiction-7"><span>3.10</span></a>).</p>
+<p><em>Conclusion:</em><br>
+We have seen that assuming that <span class="math inline">\((A,B)\)</span> has a separator <span class="math inline">\(L \in \mathbb{Q}\)</span> leads to a contradiction. Thus the cut <span class="math inline">\((A,B)\)</span> has no separator.</p>
+</div></details>
+</div>
+<div id="Remark-19" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 19</strong></summary><div>The above proof can be summarized by saying that the set <span class="math display">\[
+A = (-\infty, \sqrt{2}) \cap \mathbb{Q}
+\]</span> does not admit a <strong>largest</strong> element in <span class="math inline">\(\mathbb{Q}\)</span>, and that the set <span class="math display">\[
+B = (\sqrt{2}, \infty) \cap \mathbb{Q}
+\]</span> does not admit a <strong>lowest element</strong> in <span class="math inline">\(\mathbb{Q}\)</span>. We will make this more precise.<p></p>
+</div></details>
+</div>
+</section>
+<section id="axioms-of-real-numbers" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="axioms-of-real-numbers"><span class="header-section-number">3.3</span> Axioms of Real Numbers</h2>
+<p>We now have all the key elements to introduce the Real Numbers <span class="math inline">\(\mathbb{R}\)</span>. These ingredients are</p>
+<ul>
+<li>Definition of <strong>field</strong></li>
+<li>Definition of <strong>total order</strong></li>
+<li>The <strong>Cut Property</strong></li>
+</ul>
+<p>The definition of <span class="math inline">\(\mathbb{R}\)</span> is given in an axiomatic way.</p>
+<div id="system-of-real-numbers-mathbbr" class="Definition" title="System of Real Numbers \mathbb{R}">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
+<p>A system of Real Numbers is a set <span class="math inline">\(\mathbb{R}\)</span> satisfying the following properties:</p>
+<ol type="1">
+<li>There is a relation <span class="math inline">\(\leq\)</span> of <strong>total order</strong> on <span class="math inline">\(\mathbb{R}\)</span>, that is, they hold
+<ul>
+<li>(A1) Reflexivity: <span class="math inline">\(\forall \, a \in \mathbb{R}\)</span> <span class="math display">\[
+a \leq a \,,
+\]</span></li>
+<li>(A2) Antisymmetry: It holds <span class="math display">\[
+a \leq b \, \mbox{ and } \, b \leq a \,\, \implies \,\, a = b\,,
+\]</span></li>
+<li>(A3) Transitivity: It holds <span class="math display">\[
+a \leq b \,\, \mbox{ and } \,\, b \leq c \,\, \implies \,\, a = c \,,
+\]</span></li>
+<li>(A4) Total order: <span class="math inline">\(\forall \, a,b \in \mathbb{R}\)</span> we have <span class="math display">\[
+a \leq b \,\, \mbox{ or } \,\, b \leq a \,.
+\]</span></li>
+</ul></li>
+<li>There is an operation <span class="math inline">\(+\)</span> of <strong>sum</strong> on <span class="math inline">\(\mathbb{R}\)</span> which associates to pairs <span class="math inline">\(a,b \in \mathbb{R}\)</span> the number <span class="math inline">\((a+b) \in \mathbb{R}\)</span>. The sum satisfies:
+<ul>
+<li>(B1) Commutativity: <span class="math inline">\(\forall \, a,b \in \mathbb{R}\)</span> <span class="math display">\[
+a+b = b+a
+\]</span></li>
+<li>(B2) Associativity: <span class="math inline">\(\forall \, a,b,c \in \mathbb{R}\)</span> <span class="math display">\[
+(a+b)+c = a+(b+c) \,,
+\]</span></li>
+<li>(B3) Additive Identity: <span class="math inline">\(\exists \, 0 \in \mathbb{R}\, \text{ s.t } \, \)</span> <span class="math display">\[
+a + 0 = 0 + a = a \,, \,\,\, \forall \, a \in \mathbb{R}\,,
+\]</span></li>
+<li>(B4) Additive Inverse: <span class="math inline">\(\forall\)</span></li>
+</ul></li>
+</ol>
 </div></details>
 </div>
 

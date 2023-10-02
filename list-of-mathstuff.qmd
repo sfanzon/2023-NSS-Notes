@@ -1,1 +1,180 @@
 \providecommand{\Pageref}[1]{\hfill p.\pageref{#1}}
+ [**Question 1.1**](#Question-1)\Pageref{Question-1}
+
+ [**Question 1.2**](#Question-2)\Pageref{Question-2}
+
+ [**Question 1.3**](#Question-1.3)\Pageref{Question-1.3}
+
+ [**Question 1.4**](#Question-1.4)\Pageref{Question-1.4}
+
+ [**Conjecture 1.5**](#conj-line)\Pageref{conj-line}
+
+ [**Theorem 1.6**](#theorem-root-2)\Pageref{theorem-root-2}
+
+ [**Proof**](#proof-of-theorem): Proof of Theorem 1.6\Pageref{proof-of-theorem}
+
+ [**Remark 1.7**](#Remark-1.7)\Pageref{Remark-1.7}
+
+ [**Theorem 1.8**](#we-will-prove-this-in-the-future): We will prove this in the future\Pageref{we-will-prove-this-in-the-future}
+
+ [**Theorem 1.9**](#we-will-prove-this-in-the-future-1): We will prove this in the future\Pageref{we-will-prove-this-in-the-future-1}
+
+ [**Remark 2.1**](#Remark-2.1)\Pageref{Remark-2.1}
+
+ [**Example 2.2**](#Example-2.2)\Pageref{Example-2.2}
+
+ [**Example 2.3**](#Example-2.3)\Pageref{Example-2.3}
+
+ [**Example 2.4**](#Example-2.4)\Pageref{Example-2.4}
+
+ [**Example 2.5**](#Example-2.5)\Pageref{Example-2.5}
+
+ [**Example 2.6**](#Example-2.6)\Pageref{Example-2.6}
+
+ [**Proposition 2.7**](#Proposition-Equality-Sets)\Pageref{Proposition-Equality-Sets}
+
+ [**Proof**](#Proof*-2.1)\Pageref{Proof*-2.1}
+
+ [**Example 2.8**](#Example-2.8)\Pageref{Example-2.8}
+
+ [**Remark 2.9**](#Remark-2.9)\Pageref{Remark-2.9}
+
+ [**Example 2.10**](#Example-2.10)\Pageref{Example-2.10}
+
+ [**Proposition 2.11**](#de-morgans-laws): De Morgan’s Laws\Pageref{de-morgans-laws}
+
+ [**Remark 2.12**](#Remark-2.12)\Pageref{Remark-2.12}
+
+ [**Example 2.13**](#Example-2.13)\Pageref{Example-2.13}
+
+ [**Definition 2.14**](#equivalence-relation-1): Equivalence relation\Pageref{equivalence-relation-1}
+
+ [**Definition 2.15**](#equivalence-classes): Equivalence classes\Pageref{equivalence-classes}
+
+ [**Example 2.16**](#equality-is-an-equivalence-relation): Equality is an equivalence relation\Pageref{equality-is-an-equivalence-relation}
+
+ [**Example 2.17**](#Example-2.17)\Pageref{Example-2.17}
+
+ [**Definition 2.18**](#partial-order): Partial order\Pageref{partial-order}
+
+ [**Definition 2.19**](#total-order): Total order\Pageref{total-order}
+
+ [**Example 2.20**](#set-inclusion-is-a-partial-order): Set inclusion is a partial order\Pageref{set-inclusion-is-a-partial-order}
+
+ [**Example 2.21**](#inequality-is-a-total-order): Inequality is a total order\Pageref{inequality-is-a-total-order}
+
+ [**Notation 2.22**](#Notation-2.22)\Pageref{Notation-2.22}
+
+ [**Definition 2.23**](#Definition-2.23)\Pageref{Definition-2.23}
+
+ [**Definition 2.24**](#definition-function): Functions\Pageref{definition-function}
+
+ [**Warning**](#Warning*-2.2)\Pageref{Warning*-2.2}
+
+ [**Example 2.25**](#Example-2.25)\Pageref{Example-2.25}
+
+ [**Example 2.26**](#Example-2.26)\Pageref{Example-2.26}
+
+ [**Definition 2.27**](#absolute-value): Absolute value\Pageref{absolute-value}
+
+ [**Example 2.28**](#Example-2.28)\Pageref{Example-2.28}
+
+ [**Remark 2.29**](#Remark-2.29)\Pageref{Remark-2.29}
+
+ [**Remark 2.30**](#rmk-absolute-value-sym)\Pageref{rmk-absolute-value-sym}
+
+ [**Remark 2.31**](#geometric-interpretation-of-x): Geometric interpretation of $|x|$\Pageref{geometric-interpretation-of-x}
+
+ [**Remark 2.32**](#geometric-interpretation-of-x-y): Geometric interpretation of $|x-y|$\Pageref{geometric-interpretation-of-x-y}
+
+ [**Lemma 2.33**](#lemma-absolute-value)\Pageref{lemma-absolute-value}
+
+ [**Proof**](#proof-of-lemma): Proof of Lemma 2.33\Pageref{proof-of-lemma}
+
+ [**Lemma 2.34**](#Lemma-2.34)\Pageref{Lemma-2.34}
+
+ [**Theorem 2.35**](#theorem-triangle-inequality): Triangle inequality\Pageref{theorem-triangle-inequality}
+
+ [**Remark 2.36**](#geometric-meaning-of-triangle-inequality): Geometric meaning of triangle inequality\Pageref{geometric-meaning-of-triangle-inequality}
+
+ [**Proof**](#proof-of-theorem-1): Proof of Theorem 2.32\Pageref{proof-of-theorem-1}
+
+ [**Remark 2.37**](#Remark-2.37)\Pageref{Remark-2.37}
+
+ [**Proposition 2.38**](#proposition-easy)\Pageref{proposition-easy}
+
+ [**Proof**](#of-proposition): of Proposition 2.38\Pageref{of-proposition}
+
+ [**Axiom 2.39**](#principle-of-induction): Principle of Induction\Pageref{principle-of-induction}
+
+ [**Important**](#Important*-2.6)\Pageref{Important*-2.6}
+
+ [**Remark 2.40**](#Remark-2.40)\Pageref{Remark-2.40}
+
+ [**Corollary 2.41**](#principle-of-inducion---alternative-formulation): Principle of Inducion - Alternative formulation\Pageref{principle-of-inducion---alternative-formulation}
+
+ [**Proof**](#Proof*-2.7)\Pageref{Proof*-2.7}
+
+ [**Example 2.42**](#formula-for-summing-first-n-natural-numbers): Formula for summing first $n$ natural numbers\Pageref{formula-for-summing-first-n-natural-numbers}
+
+ [**Example 2.43**](#statements-about-sequences-of-numbers): Statements about sequences of numbers\Pageref{statements-about-sequences-of-numbers}
+
+ [**Definition 3.1**](#binary-operation): Binary operation\Pageref{binary-operation}
+
+ [**Notation 3.2**](#Notation-3.2)\Pageref{Notation-3.2}
+
+ [**Example 3.3**](#example-binary-operation): of binary operation\Pageref{example-binary-operation}
+
+ [**Definition 3.4**](#Definition-3.4)\Pageref{Definition-3.4}
+
+ [**Example 3.5**](#example-binary-operation-2)\Pageref{example-binary-operation-2}
+
+ [**Example 3.6**](#Example-3.6)\Pageref{Example-3.6}
+
+ [**Definition 3.7**](#field): Field\Pageref{field}
+
+ [**Example 3.8**](#Example-3.8)\Pageref{Example-3.8}
+
+ [**Definition 3.9**](#subtraction-and-division): Subtraction and division\Pageref{subtraction-and-division}
+
+ [**Proposition 3.10**](#uniqueness-of-neutral-elements-and-inverses): Uniqueness of neutral elements and inverses\Pageref{uniqueness-of-neutral-elements-and-inverses}
+
+ [**Proof**](#Proof*-3.1)\Pageref{Proof*-3.1}
+
+ [**Proposition 3.11**](#properties-of-field-operations): Properties of field operations\Pageref{properties-of-field-operations}
+
+ [**Theorem 3.12**](#Theorem-3.12)\Pageref{Theorem-3.12}
+
+ [**Definition 3.13**](#partition-of-a-set): Partition of a set\Pageref{partition-of-a-set}
+
+ [**Definition 3.14**](#cut-of-a-set): Cut of a set\Pageref{cut-of-a-set}
+
+ [**Definition 3.15**](#cut-property-1): Cut property\Pageref{cut-property-1}
+
+ [**Example 3.16**](#Example-3.16)\Pageref{Example-3.16}
+
+ [**Question 3.17**](#Question-3.17)\Pageref{Question-3.17}
+
+ [**Theorem 3.18**](#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
+
+ [**Proof**](#Proof*-3.2)\Pageref{Proof*-3.2}
+
+ [**Remark 3.19**](#Remark-3.19)\Pageref{Remark-3.19}
+
+ [**Definition 3.20**](#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+
+ [**Proposition 4.1**](#proposition-heron)\Pageref{proposition-heron}
+
+ [**Proof**](#Proof*-4.1)\Pageref{Proof*-4.1}
+
+ [**Proposition 4.2**](#proposition-heron-error): Error estimate\Pageref{proposition-heron-error}
+
+ [**Proof**](#Proof*-4.2)\Pageref{Proof*-4.2}
+
+ [**Proposition 4.3**](#proposition-heron-error-exp)\Pageref{proposition-heron-error-exp}
+
+ [**Proof**](#Proof*-4.3)\Pageref{Proof*-4.3}
+
+ [**Theorem 4.4**](#convergence-of-herons-algorithm): Convergence of Heron’s Algorithm\Pageref{convergence-of-herons-algorithm}
+
+ [**Proof**](#Proof*-4.4)\Pageref{Proof*-4.4}
