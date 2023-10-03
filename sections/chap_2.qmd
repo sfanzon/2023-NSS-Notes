@@ -414,7 +414,9 @@ are all elements of $\mathcal{P}(\Omega)$.
 $$
 \Omega = \{x_1, \ldots, x_m\}
 $$
-for some $m \in \N$. Then $\mathcal{P}(\Omega)$ contains $2^m$ elements. This is because for each $x_i \in \Omega$ we have just two choices: either include $x_i$ in a subset, or do not include $x_i$ in a subset.
+for some $m \in \N$. Then $\mathcal{P}(\Omega)$ contains $2^m$ elements. 
+    
+    >This is because for each $x_i \in \Omega$ we have just two choices: either include $x_i$ in a subset, or do not include $x_i$ in a subset.
 :::
 
 
@@ -677,21 +679,21 @@ Let us check that $R$ is an **order relation**:
 
 1. Reflexive: It holds, since $A \subset A$ for all $A \in \mathcal{P}(\Omega)$,
 
-2. Transitive: If $A \subset B$ and $B \subset C$ then by definition of inclusion $A \leq C$.
+2. Transitive: If $A \subset B$ and $B \subset C$, then by definition of inclusion $A \subset C$.
 
 3. Antisymmetric: If $A \subset B$ and $B \subset A$, then $A=B$ by Proposition \ref{Proposition-Equality-Sets}.
 
 Therefore $R$ is a **partial order** on $\mathcal{P}(\Omega)$. Note that in general $R$ is **not** a total order. For example if we consider
 $$
-\Omega = \{x, y\}\,,
+\Omega = \{x, y\}\,.
 $$
-then we have 
+Thus
 $$
 \mathcal{P}(\Omega)  = \{ \emptyset , \, \{x\} , \, \{y\} , \, \{x,y\} \}\,.
 $$
 If we pick $A=\{x\}$ and $B=\{y\}$ then $A \cap B = \emptyset$, meaning that 
 $$
-(A, B) \notin R \,, \quad  (B, A) \notin R \,,
+A \not\subset B \,, \quad  B \not\subset A \,,
 $$
 showing that $R$ is not a total order.
 :::
@@ -786,10 +788,22 @@ Some of the above intervals are depicted in @fig-interval-1, @fig-interval-2, @f
 
 ::: Definition
 ### Functions {#definition-function}
-Assume given two sets $A$ and $B$. A **function** from $A$ to $B$ is a rule which associates **at each** element $x \in A$ a **single** element $y \in B$. Notations:
+Let $A$ and $B$ be sets. A **function** from $A$ to $B$ is a rule which associates **at each** element $x \in A$ a **single** element $y \in B$. Notations:
 
-- We write $f \ \colon A \to B$ to indicate such rule,
-- For $x \in A$, we denote by $f(x)$ the element $y \in B$ associated with $x$ by $f$.
+- We write 
+$$
+f \ \colon A \to B
+$$ 
+to indicate such rule,
+- For $x \in A$, we denote by 
+$$
+y:=f(x) \in B
+$$ 
+the element associated with $x$ by $f$.
+- We will often denote the map $f$ also by
+$$
+x \mapsto f(x) \,.
+$$
 
 In addition:
 
@@ -804,7 +818,7 @@ $$
 We want to stress the importance of the first two sentences in Definition \ref{definition-function}.  Assume that $f \colon A \to B$ is a function. Then:
 
 - To each element $x \in A$ we can **only** associate **one** element $f(x) \in B$,
-- Every element $x \in A$ has to be associated to an element $f(x)$ in $B$.
+- Every element $x \in A$ has to be associated to an element $f(x) \in B$.
 :::
 
 
@@ -921,7 +935,7 @@ $$
 
 :::
 
-We can use the definition of abosulte value to define the **absolute value function**. This is a map 
+We can use the definition of absolute value to define the **absolute value function**. This is the function
 $$
 f \ \colon \R \to \R \,, \quad f(x):=|x| \,.
 $$
@@ -981,9 +995,8 @@ A sketch of this explanation is seen in @fig-absolute-value-3 below.
 ::: Proof
 ### Proof of Lemma \ref{lemma-absolute-value}
 
-We divide the proof in steps.  
 
-* Step 1: implication $\implies$  
+*Step 1: First implication.*  
 Suppose first that 
 $$
 |x| \leq y \,.
@@ -994,54 +1007,54 @@ y \geq 0 \,.
 $$ {#eq-lemma-absolute-value-2}
 We make separate arguments for the cases $x \geq 0$ and $x<0$:
 
-    - Case 1: $x \geq 0$.  From (@eq-lemma-absolute-value-1), (@eq-lemma-absolute-value-2) and from $x \geq 0$ we have
-    $$
-    -y \leq 0 \leq x = |x| \leq y
-    $$
-    which shows 
-    $$
-    -y \leq x \leq y \,.
-    $$
-    - Case 2: $x < 0$. From (@eq-lemma-absolute-value-1), (@eq-lemma-absolute-value-2) and from $x < 0$ we have
-    $$
-    -y \leq 0 < - x = |x| \leq y
-    $$
-    which shows 
-    $$
-    -y \leq - x \leq y \,.
-    $$
-    Multiplying the above inequalities by $-1$ yields
-    $$
-    -y \leq x \leq y \,.
-    $$
+- Case 1: $x \geq 0$.  From (@eq-lemma-absolute-value-1), (@eq-lemma-absolute-value-2) and from $x \geq 0$ we have
+$$
+-y \leq 0 \leq x = |x| \leq y
+$$
+which shows 
+$$
+-y \leq x \leq y \,.
+$$
+- Case 2: $x < 0$. From (@eq-lemma-absolute-value-1), (@eq-lemma-absolute-value-2) and from $x < 0$ we have
+$$
+-y \leq 0 < - x = |x| \leq y
+$$
+which shows 
+$$
+-y \leq - x \leq y \,.
+$$
+Multiplying the above inequalities by $-1$ yields
+$$
+-y \leq x \leq y \,.
+$$
 
-* Step 2: implication $\impliedby$  
+*Step 2: Second implication.*  
 Suppose now that  
 $$
 -y \leq x \leq  y \,.
 $$ {#eq-lemma-absolute-value-3}
 We make separate arguments for the cases $x \geq 0$ and $x<0$:
 
-    - Case 1: $x \geq 0$. Since $x \geq 0$, from (@eq-lemma-absolute-value-3) we get
-    $$
-    |x| = x \leq y
-    $$
-    showing that 
-    $$
-    |x| \leq y \,.
-    $$
-    - Case 2: $x < 0$. Since $x < 0$, from (@eq-lemma-absolute-value-3) we have
-    $$
-    -y \leq x = - |x| \,.
-    $$
-    Multiplying the above inequality by $-1$ yields
-    $$
-    |x| \leq y \,.
-    $$
+- Case 1: $x \geq 0$. Since $x \geq 0$, from (@eq-lemma-absolute-value-3) we get
+$$
+|x| = x \leq y
+$$
+showing that 
+$$
+|x| \leq y \,.
+$$
+- Case 2: $x < 0$. Since $x < 0$, from (@eq-lemma-absolute-value-3) we have
+$$
+-y \leq x = - |x| \,.
+$$
+Multiplying the above inequality by $-1$ yields
+$$
+|x| \leq y \,.
+$$
 :::
 
 
-With basically the same arguments, one can also show the following.
+With the same arguments, just replacing $\leq$ with $<$, one can also show the following.
 
 
 ::: Lemma
@@ -1098,7 +1111,7 @@ that is, *the length of each side of a triangle does not exceed the sum of the l
 
 Assume that $x,y \in \R$. We prove the two inequalities in (@eq-triangle-inequality) individually.
 
-- Proof of the second inequality in (@eq-triangle-inequality):  
+*Step 1. Proof of the second inequality in (@eq-triangle-inequality).*  
 Trivially we have
 $$
 |x| \leq |x| \,.
@@ -1121,7 +1134,7 @@ $$
 $$ {#eq-triangle-inequality-5}
 which is the second inequality in (@eq-triangle-inequality).
 
-- Proof of the second inequality in (@eq-triangle-inequality):  
+*Step 2. Proof of the second inequality in (@eq-triangle-inequality).*  
 Note that the trivial identity
 $$
 x = x+y - y
@@ -1185,47 +1198,46 @@ $$
 
 ## Proofs in Mathematics
 
-In this section we carry out the proof of a seemingly trivial statement, to get used to the process. In a proof one needs to show that 
+In a mathematical proof one needs to show that 
 $$
 \alpha \implies \beta
 $${#eq-implication}
 where 
 
-- $\alpha$ is a given set of assumptions, or **hypothesis**
-- $\beta$ is a conclusion, or **thesis**
+- $\alpha$ is a given set of assumptions, or **Hypothesis**
+- $\beta$ is a conclusion, or **Thesis**
 
-To show (@eq-implication) we need to convince ourselves that $\beta$ follows by assuming $\alpha$. 
+Proving (@eq-implication) means convincing ourselves that $\beta$ follows from $\alpha$. Common strategies to prove (@eq-implication) are:
 
-Common strategies to prove (@eq-implication) are:
-
-- **Contradiction**: Assume that the thesis is **false**, and hope to reach a contradiction: that is, prove that 
+1. **Contradiction**: Assume that the thesis is **false**, and hope to reach a contradiction: that is, prove that 
 $$
 \neg \beta \implies \, \mbox{ contradiction}
 $$
-where $\neg \beta$ is the **negation** of $\beta$. For example we already proved by contradiction that 
-$$
-\mbox{Definition of } \Q  \, \implies \, \sqrt{2} \notin \Q \,,
-$$
-In the above statement 
-$$
-\alpha \leadsto \mbox{Definition of } \Q \,.
-$$
-$$
-\beta  \leadsto \sqrt{2} \notin \Q \,.
-$$
-Therefore
-$$
-\neg \beta  \leadsto \sqrt{2} \in \Q \,.
-$$ 
+where $\neg \beta$ is the **negation** of $\beta$. 
 
-- **Direct**: Sometimes proofs will also need **direct** arguments, meaning that one need to show directly that (@eq-implication).
+    >For example we already proved by contradiction that 
+    $$
+    \mbox{Definition of } \Q  \, \implies \, \sqrt{2} \notin \Q \,,
+    $$
+    In the above statement 
+    $$
+    \alpha = \left( \mbox{Definition of } \Q \right) \,.
+    $$
+    $$
+    \beta = \left( \sqrt{2} \notin \Q \right) \,.
+    $$
+    Therefore
+    $$
+    \neg \beta  = \left(  \sqrt{2} \in \Q \right) \,.
+    $$ 
 
-- **Contrapositive**: The statement  
-is equivalent to (@eq-implication)
+2. **Direct**: Sometimes proofs will also need **direct** arguments, meaning that one need to show directly that (@eq-implication) holds.
+
+3. **Contrapositive**: The statement (@eq-implication) is equivalent to
 $$
 \neg \beta \, \implies \, \neg \alpha \,.
 $$ {#eq-contrapositive}
-Thus, instead of proving (@eq-implication) one could instead show (@eq-contrapositive). The statement (@eq-contrapositive) is called the **contrapositive** of (@eq-implication).
+Thus, instead of proving (@eq-implication), one could show (@eq-contrapositive). The statement (@eq-contrapositive) is called the **contrapositive** of (@eq-implication).
 
 
 Let us make an example.
@@ -1254,8 +1266,8 @@ $$
 
 Setting
 \begin{align}
-\alpha & \leadsto \, a=b   \\
-\beta  & \leadsto  \, |a-b| < \e \,, \,\, \forall \, \e>0 
+\alpha & = \left(  a=b \right)   \\
+\beta  & = \left( |a-b| < \e \,, \,\, \forall \, \e>0 \right)
 \end{align}
 the statement is equivalent to 
 $$
@@ -1263,19 +1275,16 @@ $$
 $$
 To show the above, it is sufficient to show that
 $$
-\alpha \implies \beta
-$$
-and 
-$$
-\beta \implies \alpha \,.
+\alpha \implies \beta \quad \mbox{ and } \quad \beta \implies \alpha \,.
 $$
 
-*Step 1. Proof that $\alpha \implies \beta$*:  
+
+*Step 1. Proof that $\alpha \implies \beta$*.  
 This proof can be carried out by a **direct** argument. Since we are assuming $\alpha$, this means 
 $$
 a=b \,.
 $$
-We want to see that $\beta$ holds. Therefore fix an arbitrary $\e>0$. This means that $\e$ can be **any** positive number. Clearly
+We want to see that $\beta$ holds. Therefore fix an arbitrary $\e>0$. This means that $\e$ can be **any** positive number, as long as you fix it. Clearly
 $$
 |a-b| = |0| = 0 < \e
 $$
@@ -1290,7 +1299,7 @@ $$
 meaning that $\beta$ holds and the proof is concluded.
 
 
-*Step 2. Proof that $\beta \implies \alpha$*:  
+*Step 2. Proof that $\beta \implies \alpha$*.   
 Let us prove this implication by showing the **contrapositive**
 $$
 \neg \alpha \implies \neg\beta \,.
@@ -1307,7 +1316,7 @@ The above is satisfied by choosing
 $$
  \e_0 := |a-b| \,,
 $$
-since $\e_0 >0$ given that $a \neq b$,
+since $\e_0 >0$ given that $a \neq b$.
 :::
 
 
@@ -1323,7 +1332,7 @@ Another technique for carrying out proofs is **induction**, which we take as an 
 ::: Axiom 
 ### Principle of Induction
 
-Let $S$ be a subset of $\N$. Suppose that 
+Let $S \subset  \N$. Suppose that 
 
 1. We have $1 \in S$, and
 2. Whenever $n \in S$, then $(n+1) \in S$.
@@ -1397,6 +1406,7 @@ In order to apply induction, we need to show that
 2. If $\alpha(n)$ is true then $\alpha(n+1)$ is true.
 
 Let us proceed:
+
 1. It is immediate to check that (@eq-formula-sum-naturals) holds for $n=1$.
 2. Suppose (@eq-formula-sum-naturals) holds for $n$. Then
 \begin{align}
@@ -1422,28 +1432,29 @@ $$
 \{ x_n \st n \in \N\} \,.
 $$
 Such collection of numbers is called **sequence**. Assume that 
-$$
-x_1 = 1 
-$$
-and that 
-$$
-x_{n+1}:= \frac{x_n}{2} + 1 \,.
-$$
-A sequence defined as above is called **recurrence sequence**. Using the above rule we can compute all the terms of $x_n$: for example
-$$
-x_2 = \frac{x_1}{2} + 1 = \frac12 + 1 =\frac{3}{2}
-$$
-and 
-$$
-x_3 = \frac{x_2}{2} + 1 =  \frac34 + 1 = \frac74 \,.
-$$
-By computing these terms we notice that the sequence might be increasing. Indeed we can prove by induction that 
+\begin{align}
+& x_1  := 1 \\
+& x_{n+1}  := \frac{x_n}{2} + 1 \,.
+\end{align}
+A sequence defined as above is called **recurrence sequence**. Using the above rule we can compute all the terms of $x_n$. 
+
+>For example
+\begin{align}
+x_2 & = \frac{x_1}{2} + 1 = \frac12 + 1 =\frac{3}{2} \\
+x_3 & = \frac{x_2}{2} + 1 =  \frac34 + 1 = \frac74 \,.
+\end{align}
+
+By computing these terms, we suspect that the sequence might be increasing, meaning that 
 $$
 x_{n+1} \geq x_n
 $$ {#eq-induction-increasing}
 for all $n \in \N$. 
 
-*Proof.* By induction:
+
+*Claim. (@eq-induction-increasing) holds for all $n \in \N$*.
+
+*Proof of Claim.*  
+We argue by induction:
 
 1. We have seen that $x_1 = 1$ and $x_2 = 3/2$. Thus
 $$
@@ -1451,17 +1462,17 @@ x_2 \geq x_1 \,.
 $$
 2. Suppose now that 
 $$
-x_{n+1} \geq x_{n} \,.
-$$
+x_{n+1} \geq x_{n} \,. 
+$$ {#eq-induction-increasing-1}
 We need to prove that
 $$
 x_{n+2} \geq x_{n+1} \,.
-$$
-Indeed, we can multiply the inequality $x_{n+1} \geq x_n$ by $1/2$ and add $1$ to get
+$${#eq-induction-increasing-2}
+Indeed, we can multiply the inequality (@eq-induction-increasing-1) by $1/2$ and add $1$ to get
 $$
 \frac{x_{n+1}}{2} + 1 \geq \frac{x_{n}}{2} + 1   \,.
 $$
-The above is equivalent, by definition, to $x_{n+2} \geq x_{n+1}$.
+The above is equivalent, by definition, to (@eq-induction-increasing-2).
 
 Therefore the assumptions of the Induction Principle are satisfied, and (@eq-induction-increasing) follows.
 :::

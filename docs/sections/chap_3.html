@@ -66,35 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -102,23 +74,11 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Warning {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proposition {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -126,9 +86,49 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Theorem {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 </style>
 
@@ -272,7 +272,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In this chapter we introduce the sysyem of Real Numbers <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>In this chapter we introduce the system of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> and study some of its properties.</p>
 <section id="fields" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="fields"><span class="header-section-number">3.1</span> Fields</h2>
 <p>In order to introduce <span class="math inline">\(\mathbb{R}\)</span>, we need the concepts of <strong>binary operation</strong> and <strong>field</strong>. We proceed in a general setting, starting from a set <span class="math inline">\(K\)</span>.</p>
@@ -296,7 +296,7 @@ x \cdot y \,\, \mbox{ or } \,\, xy\,.
 </div></details>
 </div>
 <div id="example-binary-operation" class="Example" title="of binary operation">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 3: </strong>of binary operation</summary><div>Let <span class="math inline">\(K=\{0,1\}\)</span>. We can for example define the operations of sum and product according to the tables <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 3: </strong>of binary operation</summary><div>Let <span class="math inline">\(K=\{0,1\}\)</span>. We can for example define operations of sum and product on <span class="math inline">\(K\)</span> according to the tables <span class="math display">\[
 \begin{array}{c|cc}
 + &amp; 0 &amp; 1 \\ \hline
 0 &amp; 0 &amp; 1 \\
@@ -320,22 +320,22 @@ x \cdot y \,\, \mbox{ or } \,\, xy\,.
 <p>Binary operations take ordered pairs of elements of <span class="math inline">\(K\)</span> as input. Therefore the operation <span class="math display">\[
 x \circ y \circ z
 \]</span> does not make sense, since we do not know which one between <span class="math display">\[
-x \circ y  \,\, \mbox{ or } \,\, y \circ z
-\]</span> has to be performed first. Also one could have that the outcome of an operation depends on order: <span class="math display">\[
+x \circ y  \quad \mbox{ or } \quad y \circ z
+\]</span> has to be performed first. Moreover the outcome of an operation depends on order: <span class="math display">\[
 x \circ y \neq y \circ x \,.
 \]</span> This motivates the following definition.</p>
 <div id="Definition-4" class="Definition">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 4</strong></summary><div>
 <p>Let <span class="math inline">\(K\)</span> be a set and <span class="math inline">\(\circ \ \colon K \times K \to K\)</span> be a binary operation on <span class="math inline">\(K\)</span>. We say that:</p>
 <ol type="1">
-<li><span class="math inline">\(\circ\)</span> is <strong>commutative</strong> if <span class="math inline">\(\forall \, x,y \in K\)</span> <span class="math display">\[
-x \circ y = y \circ x \,.
+<li><span class="math inline">\(\circ\)</span> is <strong>commutative</strong> if <span class="math display">\[
+x \circ y = y \circ x \,, \quad \, \forall \, x,y \in K
 \]</span></li>
-<li><span class="math inline">\(\circ\)</span> is <strong>associative</strong> if <span class="math inline">\(\forall \, x,y,z \in K\)</span> <span class="math display">\[
-(x \circ y) \circ z = x \circ (y \circ z) \,.
+<li><span class="math inline">\(\circ\)</span> is <strong>associative</strong> if <span class="math display">\[
+(x \circ y) \circ z = x \circ (y \circ z) \,, \quad \, \forall \, x,y,z \in K
 \]</span></li>
-<li>An element <span class="math inline">\(e \in K\)</span> is called <strong>neutral element</strong> of <span class="math inline">\(\circ\)</span> if <span class="math inline">\(\forall \, x \in K\)</span> <span class="math display">\[
-x \circ e = e \circ x = e \,.
+<li>An element <span class="math inline">\(e \in K\)</span> is called <strong>neutral element</strong> of <span class="math inline">\(\circ\)</span> if <span class="math display">\[
+x \circ e = e \circ x = e \,, \quad \, \forall \, x \in K
 \]</span></li>
 <li>Let <span class="math inline">\(e\)</span> be a neutral element of <span class="math inline">\(\circ\)</span> and let <span class="math inline">\(x \in K\)</span>. An element <span class="math inline">\(y \in K\)</span> is called an <strong>inverse</strong> of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(\circ\)</span> if <span class="math display">\[
 x \circ y = y \circ x = e \,.
@@ -345,7 +345,7 @@ x \circ y = y \circ x = e \,.
 </div>
 <div id="example-binary-operation-2" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 5</strong></summary><div>
-<p>Let <span class="math inline">\(K\)</span> with <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> be as in Example <a href="chap_3.html#example-binary-operation">3</a>. For the sum we have</p>
+<p>Let <span class="math inline">\(K\)</span> with <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> be as in Example <a href="chap_3.html#example-binary-operation">3</a>. The sum satisfies:</p>
 <ul>
 <li><span class="math inline">\(+\)</span> is commutative, since <span class="math display">\[
 0 + 1 = 1 + 0 = 0 \,.  
@@ -364,7 +364,7 @@ x \circ y = y \circ x = e \,.
 1 + 1 = 1 + 1 = 0 \,.
 \]</span></li>
 </ul>
-<p>For the product we have:</p>
+<p>The multiplication satisfies:</p>
 <ul>
 <li><span class="math inline">\(\cdot\)</span> is commutative, since <span class="math display">\[
 1 \cdot 0 = 0 \cdot 1 = 0 \,.
@@ -400,7 +400,9 @@ x \circ y = y \circ x = e \,.
 \]</span> Moreover <span class="math inline">\(\circ\)</span> is not associative, since <span class="math display">\[
 (0 \circ 1) \circ 1 = 1 \circ 1 = 0 \,,
 \]</span> while <span class="math display">\[
-0 (\circ 1 \circ 1) = 0 \circ 0 = 1 \,.
+0 \circ (1 \circ 1) = 0 \circ 0 = 1 \,,
+\]</span> so that <span class="math display">\[
+(0 \circ 1) \circ 1  \neq 0 \circ (1 \circ 1)\,.
 \]</span><p></p>
 </div></details>
 </div>

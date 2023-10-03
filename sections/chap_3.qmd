@@ -9,7 +9,7 @@ $$
 # Real Numbers
 
 
-In this chapter we introduce the sysyem of Real Numbers $\R$. 
+In this chapter we introduce the system of Real Numbers $\R$ and study some of its properties. 
 
 
 ## Fields
@@ -44,7 +44,7 @@ $$
 ::: Example
 ### of binary operation  {#example-binary-operation}
 
-Let $K=\{0,1\}$. We can for example define the operations of sum and product according to the tables 
+Let $K=\{0,1\}$. We can for example define operations of sum and product on $K$ according to the tables 
 $$
 \begin{array}{c|cc}
  + & 0 & 1 \\ \hline
@@ -78,9 +78,9 @@ x \circ y \circ z
 $$
 does not make sense, since we do not know which one between
 $$
-x \circ y  \,\, \mbox{ or } \,\, y \circ z
+x \circ y  \quad \mbox{ or } \quad y \circ z
 $$
-has to be performed first. Also one could have that the outcome of an operation depends on order:
+has to be performed first. Moreover the outcome of an operation depends on order:
 $$
 x \circ y \neq y \circ x \,.
 $$
@@ -90,17 +90,17 @@ This motivates the following definition.
 ::: Definition
 Let $K$ be a set and $\circ \ \colon K \times K \to K$ be a binary operation on $K$. We say that:
 
-1. $\circ$ is **commutative** if $\forall \, x,y \in K$
+1. $\circ$ is **commutative** if 
     $$
-    x \circ y = y \circ x \,.
+    x \circ y = y \circ x \,, \quad \, \forall \, x,y \in K
     $$
-2. $\circ$ is **associative** if $\forall \, x,y,z \in K$
+2. $\circ$ is **associative** if 
     $$
-    (x \circ y) \circ z = x \circ (y \circ z) \,.
+    (x \circ y) \circ z = x \circ (y \circ z) \,, \quad \, \forall \, x,y,z \in K
     $$
-3. An element $e \in K$ is called **neutral element** of $\circ$ if $\forall \, x \in K$
+3. An element $e \in K$ is called **neutral element** of $\circ$ if
     $$ 
-    x \circ e = e \circ x = e \,.
+    x \circ e = e \circ x = e \,, \quad \, \forall \, x \in K
     $$
 4. Let $e$ be a neutral element of $\circ$ and let $x \in K$. An element $y \in K$ is called an **inverse** of $x$ with respect to $\circ$ if 
 $$
@@ -111,7 +111,7 @@ $$
 
 ::: {.Example #example-binary-operation-2}
 
-Let $K$ with $+$ and $\cdot$ be as in Example \ref{example-binary-operation}. For the sum we have
+Let $K$ with $+$ and $\cdot$ be as in Example \ref{example-binary-operation}. The sum satisfies:
 
 - $+$ is commutative, since 
 $$
@@ -139,7 +139,7 @@ $$
 1 + 1 = 1 + 1 = 0 \,.
 $$
 
-For the product we have:
+The multiplication satisfies:
 
 - $\cdot$ is commutative, since 
 $$
@@ -192,7 +192,11 @@ $$
 $$
 while 
 $$
-0 (\circ 1 \circ 1) = 0 \circ 0 = 1 \,.
+0 \circ (1 \circ 1) = 0 \circ 0 = 1 \,,
+$$
+so that 
+$$
+(0 \circ 1) \circ 1  \neq 0 \circ (1 \circ 1)\,.
 $$
 
 :::
