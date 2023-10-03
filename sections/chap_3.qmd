@@ -1351,8 +1351,112 @@ Let $(K,+,\cdot, \leq)$ be an ordered field. Then they are equivalent:
 
 ::: Proof
 
-TO DO
+*Step 1. Cut Property $\implies$ Completeness*.  
+We need to prove that $K$ is complete. To this end, consider $A \subset K$ non-empty and bounded above. Define the set of upper bounds of $A$:
+$$
+B := \{ b \in K \divider b \geq a \,, \,\, \forall a \in A \} \,.
+$$
+We have $B \neq \emptyset$, since $A$ is bounded above. 
 
+
+*Claim. The pair $(B^c,B)$ is a cut of $K$.*  
+
+
+*Proof of Claim*.  
+$(B^c,B)$ forms a partition of $K$, since $B^c \neq \emptyset$. Thus $B \neq \emptyset$ and 
+$$
+K = B^c \cup B \,, \quad B^c \cap B =  \emptyset \,.
+$$
+Moreover we have
+$$
+x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
+$${#eq-equiv-cut-complete-1}
+To show the above, let $x \in B^c$ and $y \in B$. By definition of $B$ we have that elements of $B^c$ are not upper bounds of $A$. Therefore $x$ is not an upper bound. This means there exists $\tilde{a} \in A$ which is larger than $x$, that is,
+$$
+x \leq \tilde{a} \,.
+$$
+Since $y \in B$, then $y$ is an upper bound for $A$, so that 
+$$
+a \leq y \,, \,\, \forall a \in A\,.
+$$
+Therefore 
+$$
+x \leq \tilde{a} \leq y \,,
+$$
+concluding (@eq-equiv-cut-complete-1) and the claim.
+
+Since $(B^c,B)$ is a cut, by the Cut Propery there exists a separator $s \in K$ such that 
+$$
+x \leq s \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
+$${#eq-equiv-cut-complete-2}
+
+*Claim. $s$ is an upper bound for $A$.*  
+
+*Proof of Claim.*  
+Suppose by contradiction that $s$ is not an upper bound for $A$. Therefore by definition of upper bound, there exists $\tilde{a} \in A$ such that 
+$$
+s < \tilde{a} \,.
+$$
+Consider the mid-point between $s$ and $\tilde{a}$, that is, 
+$$
+m:=\frac{s + \tilde{a}}{2} \in K \,.
+$$
+Since $m$ is the mid-point between $s$ and $\tilde{a}$, and $s < \tilde{a}$, it holds
+$$
+s < m < \tilde{a} \,.
+$$
+In particular the above tells us that $m$ is not an upper bound for $A$, given that $\tilde{a} \in A$. Therefore $m \in B^c$. By (@eq-equiv-cut-complete-2) we then have
+$$
+m \leq s \,,
+$$
+which contradicts $s < m$. Therefore $s$ is an upper bound of $A$.
+
+*Conclusion*. We have shown that $s$ is an upper bound of $A$. Condition  
+(@eq-equiv-cut-complete-2) tells us that 
+$$
+s \leq y \,, \,\, \forall y \in B \,.
+$$
+Recalling that $B$ is the set of upper bounds of $A$, this means that $s$ is the least upper bound of $A$, that is, 
+$$
+s = \sup A \in K \,.
+$$
+
+*Step 2. Completeness $\implies$ Cut Property*.  
+Suppose $K$ is complete. We need to show that $K$ has the Cut Property. Therefore assume $(A,B)$ is a cut of $K$, that is, 
+$$
+A \neq \emptyset\,, \quad B \neq \emptyset \,,
+$$
+$$
+K = A \cup B\,, \quad A \cap B = \emptyset \,,
+$$
+$$
+a \leq b \,, \quad \forall a \in A \,, \,\, b \in B \,.
+$${#eq-equiv-cut-complete-3}
+Since $B \neq \emptyset$, from (@eq-equiv-cut-complete-3) it follows that $A$ is bounded above: just take any element $b \in B$ in estimate (@eq-equiv-cut-complete-3) to see it. Since $A \neq \emptyset$, by Completeness we have
+$$
+s = \sup A \in K \,.
+$$
+In particular 
+$$
+a \leq s \,, \,\, \forall \, a \in A \,. 
+$$
+Let now $b \in B$ be arbitrary. From (@eq-equiv-cut-complete-3) we have that 
+$$
+a \leq b \,, \,\, \forall \, a \in A \,.
+$${#eq-equiv-cut-complete-4}
+Therefore $b$ is an upper bound of $A$. Since $s = \sup A$, we have that $s$ is the smallest upper bound, and so 
+$$
+s \leq b \,.
+$$
+Given that $b \in B$ was arbitrary, it actually holds
+$$
+s \leq b \,, \,\, \forall \,  b \in B \,.
+$${#eq-equiv-cut-complete-5}
+From (@eq-equiv-cut-complete-4) and (@eq-equiv-cut-complete-5) we therefore have 
+$$
+a \leq s \leq b \,, \,\, \forall a \in A \,,  \, \forall \, b \in B \,,
+$$
+showing that $s$ is a separator of $(A,B)$. Thus $K$ has the Cut Property.
 :::
 
 
@@ -1522,7 +1626,9 @@ $\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves $+$, $\c
 We have only postulated the existence of $\R$. Does such complete ordered field actually exist? 
 :::
 
-The answer is **YES**, and there are several models for such $\R$. If time allows, we will look into one of these constructions towards the end of the module.
+The answer is **YES**, and there are several models for such $\R$. If time allows, we will look into one of these models at the end of the module.
+
+
 
 
 

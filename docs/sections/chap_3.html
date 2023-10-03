@@ -66,11 +66,47 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Corollary {
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -82,53 +118,17 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
 }
 </style>
 
@@ -1197,7 +1197,63 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 </div></details>
 </div>
 <div id="Proof*-13" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>TO DO<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>.<br>
+We need to prove that <span class="math inline">\(K\)</span> is complete. To this end, consider <span class="math inline">\(A \subset K\)</span> non-empty and bounded above. Define the set of upper bounds of <span class="math inline">\(A\)</span>: <span class="math display">\[
+B := \{ b \in K \, \colon \,b \geq a \,, \,\, \forall a \in A \} \,.
+\]</span> We have <span class="math inline">\(B \neq \emptyset\)</span>, since <span class="math inline">\(A\)</span> is bounded above.<p></p>
+<p><em>Claim. The pair <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span>.</em></p>
+<p><em>Proof of Claim</em>.<br>
+<span class="math inline">\((B^c,B)\)</span> forms a partition of <span class="math inline">\(K\)</span>, since <span class="math inline">\(B^c \neq \emptyset\)</span>. Thus <span class="math inline">\(B \neq \emptyset\)</span> and <span class="math display">\[
+K = B^c \cup B \,, \quad B^c \cap B =  \emptyset \,.
+\]</span> Moreover we have <span id="eq-equiv-cut-complete-1"><span class="math display">\[
+x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
+\tag{3.16}\]</span></span> To show the above, let <span class="math inline">\(x \in B^c\)</span> and <span class="math inline">\(y \in B\)</span>. By definition of <span class="math inline">\(B\)</span> we have that elements of <span class="math inline">\(B^c\)</span> are not upper bounds of <span class="math inline">\(A\)</span>. Therefore <span class="math inline">\(x\)</span> is not an upper bound. This means there exists <span class="math inline">\(\tilde{a} \in A\)</span> which is larger than <span class="math inline">\(x\)</span>, that is, <span class="math display">\[
+x \leq \tilde{a} \,.
+\]</span> Since <span class="math inline">\(y \in B\)</span>, then <span class="math inline">\(y\)</span> is an upper bound for <span class="math inline">\(A\)</span>, so that <span class="math display">\[
+a \leq y \,, \,\, \forall a \in A\,.
+\]</span> Therefore <span class="math display">\[
+x \leq \tilde{a} \leq y \,,
+\]</span> concluding (<a href="#eq-equiv-cut-complete-1"><span>3.16</span></a>) and the claim.</p>
+<p>Since <span class="math inline">\((B^c,B)\)</span> is a cut, by the Cut Propery there exists a separator <span class="math inline">\(s \in K\)</span> such that <span id="eq-equiv-cut-complete-2"><span class="math display">\[
+x \leq s \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
+\tag{3.17}\]</span></span></p>
+<p><em>Claim. <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>.</em></p>
+<p><em>Proof of Claim.</em><br>
+Suppose by contradiction that <span class="math inline">\(s\)</span> is not an upper bound for <span class="math inline">\(A\)</span>. Therefore by definition of upper bound, there exists <span class="math inline">\(\tilde{a} \in A\)</span> such that <span class="math display">\[
+s &lt; \tilde{a} \,.
+\]</span> Consider the mid-point between <span class="math inline">\(s\)</span> and <span class="math inline">\(\tilde{a}\)</span>, that is, <span class="math display">\[
+m:=\frac{s + \tilde{a}}{2} \in K \,.
+\]</span> Since <span class="math inline">\(m\)</span> is the mid-point between <span class="math inline">\(s\)</span> and <span class="math inline">\(\tilde{a}\)</span>, and <span class="math inline">\(s &lt; \tilde{a}\)</span>, it holds <span class="math display">\[
+s &lt; m &lt; \tilde{a} \,.
+\]</span> In particular the above tells us that <span class="math inline">\(m\)</span> is not an upper bound for <span class="math inline">\(A\)</span>, given that <span class="math inline">\(\tilde{a} \in A\)</span>. Therefore <span class="math inline">\(m \in B^c\)</span>. By (<a href="#eq-equiv-cut-complete-2"><span>3.17</span></a>) we then have <span class="math display">\[
+m \leq s \,,
+\]</span> which contradicts <span class="math inline">\(s &lt; m\)</span>. Therefore <span class="math inline">\(s\)</span> is an upper bound of <span class="math inline">\(A\)</span>.</p>
+<p><em>Conclusion</em>. We have shown that <span class="math inline">\(s\)</span> is an upper bound of <span class="math inline">\(A\)</span>. Condition<br>
+(<a href="#eq-equiv-cut-complete-2"><span>3.17</span></a>) tells us that <span class="math display">\[
+s \leq y \,, \,\, \forall y \in B \,.
+\]</span> Recalling that <span class="math inline">\(B\)</span> is the set of upper bounds of <span class="math inline">\(A\)</span>, this means that <span class="math inline">\(s\)</span> is the least upper bound of <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
+s = \sup A \in K \,.
+\]</span></p>
+<p><em>Step 2. Completeness <span class="math inline">\(\implies\)</span> Cut Property</em>.<br>
+Suppose <span class="math inline">\(K\)</span> is complete. We need to show that <span class="math inline">\(K\)</span> has the Cut Property. Therefore assume <span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(K\)</span>, that is, <span class="math display">\[
+A \neq \emptyset\,, \quad B \neq \emptyset \,,
+\]</span> <span class="math display">\[
+K = A \cup B\,, \quad A \cap B = \emptyset \,,
+\]</span> <span id="eq-equiv-cut-complete-3"><span class="math display">\[
+a \leq b \,, \quad \forall a \in A \,, \,\, b \in B \,.
+\tag{3.18}\]</span></span> Since <span class="math inline">\(B \neq \emptyset\)</span>, from (<a href="#eq-equiv-cut-complete-3"><span>3.18</span></a>) it follows that <span class="math inline">\(A\)</span> is bounded above: just take any element <span class="math inline">\(b \in B\)</span> in estimate (<a href="#eq-equiv-cut-complete-3"><span>3.18</span></a>) to see it. Since <span class="math inline">\(A \neq \emptyset\)</span>, by Completeness we have <span class="math display">\[
+s = \sup A \in K \,.
+\]</span> In particular <span class="math display">\[
+a \leq s \,, \,\, \forall \, a \in A \,.
+\]</span> Let now <span class="math inline">\(b \in B\)</span> be arbitrary. From (<a href="#eq-equiv-cut-complete-3"><span>3.18</span></a>) we have that <span id="eq-equiv-cut-complete-4"><span class="math display">\[
+a \leq b \,, \,\, \forall \, a \in A \,.
+\tag{3.19}\]</span></span> Therefore <span class="math inline">\(b\)</span> is an upper bound of <span class="math inline">\(A\)</span>. Since <span class="math inline">\(s = \sup A\)</span>, we have that <span class="math inline">\(s\)</span> is the smallest upper bound, and so <span class="math display">\[
+s \leq b \,.
+\]</span> Given that <span class="math inline">\(b \in B\)</span> was arbitrary, it actually holds <span id="eq-equiv-cut-complete-5"><span class="math display">\[
+s \leq b \,, \,\, \forall \,  b \in B \,.
+\tag{3.20}\]</span></span> From (<a href="#eq-equiv-cut-complete-4"><span>3.19</span></a>) and (<a href="#eq-equiv-cut-complete-5"><span>3.20</span></a>) we therefore have <span class="math display">\[
+a \leq s \leq b \,, \,\, \forall a \in A \,,  \, \forall \, b \in B \,,
+\]</span> showing that <span class="math inline">\(s\)</span> is a separator of <span class="math inline">\((A,B)\)</span>. Thus <span class="math inline">\(K\)</span> has the Cut Property.</p>
 </div></details>
 </div>
 </section>
@@ -1331,7 +1387,7 @@ x^{-1} = \frac{1}{x} \,.
 <p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 45</strong></summary><div>We have only postulated the existence of <span class="math inline">\(\mathbb{R}\)</span>. Does such complete ordered field actually exist?<p></p>
 </div></details>
 </div>
-<p>The answer is <strong>YES</strong>, and there are several models for such <span class="math inline">\(\mathbb{R}\)</span>. If time allows, we will look into one of these constructions towards the end of the module.</p>
+<p>The answer is <strong>YES</strong>, and there are several models for such <span class="math inline">\(\mathbb{R}\)</span>. If time allows, we will look into one of these models at the end of the module.</p>
 </section>
 <section id="consequences-of-the-axioms" class="level2" data-number="3.7">
 <h2 data-number="3.7" class="anchored" data-anchor-id="consequences-of-the-axioms"><span class="header-section-number">3.7</span> Consequences of the Axioms</h2>
