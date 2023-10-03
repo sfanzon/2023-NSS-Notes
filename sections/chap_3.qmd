@@ -553,12 +553,52 @@ However $\sqrt{2} \notin \Q$, so we are **NOT ALLOWED** to take it as separator.
 
 
 ::: Theorem
-### $\Q$ does not have the cut property.
+### $\Q$ does not have the cut property.  {#theorem-Q-cut}
 
 $\Q$ does not have the cut property. More explicitly, there exist a cut $(A,B)$ of $\Q$ which has no separator.
 :::
 
+::: Remark
+Before proceeding with the proof, let us summarize the ideas behind it:  
+We will consider the cut $(A,B)$ in (@eq-cut-Q). We then assume by contradiction that $(A,B)$ admits a separator $L \in \Q$, so that 
+$$
+a \leq L \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B \,. 
+$${#eq-theorem-Q-cut}
+Since $(A,B)$ is a partition of $\Q$, then either $L \in A$ or $L \in B$. These will both lead to a contradiction:
+
+- If $L \in A$, then by definition we will have
+$$
+L < \sqrt{2} \,.
+$$
+Now the idea is that $\sqrt{2} \notin \Q$, and hence we can always find some $\tilde{L} \in \Q$ such that 
+$$
+L < \tilde{L} < \sqrt{2} \,.
+$$ {#eq-theorem-Q-cut-2}
+Therefore $\tilde{L} \in A$, and (@eq-theorem-Q-cut) implies 
+$$
+\tilde{L} \leq L \,,
+$$
+which contradicts (@eq-theorem-Q-cut-2).
+
+- If $L \in B$, then by definition we will have
+$$
+ \sqrt{2} < L \,.
+$$
+Similarly, as $\sqrt{2} \notin \Q$, we can find $\tilde{L} \in \Q$ such that 
+$$
+\sqrt{2} < \tilde{L} < L \,.
+$$
+Arguing as above we find a contradiction.
+
+Therefore both $L \in A$ and $L \in B$ lead to a contradiction. We conclude that $(A,B)$ has no separator in $\Q$.
+:::
+
+
+Time to make the ideas in the above remark rigorous. 
+
+
 ::: Proof
+### Proof of Theorem \ref{theorem-Q-cut}
 Let $A$ and $B$ be the sets defined in (@eq-cut-Q). It is useful to rewrite $A$ and $B$ in the form
 $$
 A = A_1 \cup A_2 \,, 

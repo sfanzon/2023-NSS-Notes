@@ -159,23 +159,25 @@
 
  [**Question 3.19**](#Question-3.19)\Pageref{Question-3.19}
 
- [**Theorem 3.20**](#mathbbq-does-not-have-the-cut-property.): $\mathbb{Q}$ does not have the cut property.\Pageref{mathbbq-does-not-have-the-cut-property.}
-
- [**Proof**](#Proof*-3.2)\Pageref{Proof*-3.2}
+ [**Theorem 3.20**](#theorem-Q-cut): $\mathbb{Q}$ does not have the cut property.\Pageref{theorem-Q-cut}
 
  [**Remark 3.21**](#Remark-3.21)\Pageref{Remark-3.21}
 
- [**Example 3.22**](#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
+ [**Proof**](#proof-of-theorem-2): Proof of Theorem 3.20\Pageref{proof-of-theorem-2}
 
- [**Definition 3.23**](#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
+ [**Remark 3.22**](#Remark-3.22)\Pageref{Remark-3.22}
 
- [**Definition 3.24**](#supremum): Supremum\Pageref{supremum}
+ [**Example 3.23**](#intuition-about-supremum-and-infimum): Intuition about supremum and infimum\Pageref{intuition-about-supremum-and-infimum}
 
- [**Notation 3.25**](#Notation-3.25)\Pageref{Notation-3.25}
+ [**Definition 3.24**](#upper-bound-and-bounded-above): Upper bound and bounded above\Pageref{upper-bound-and-bounded-above}
 
- [**Remark 3.26**](#Remark-3.26)\Pageref{Remark-3.26}
+ [**Definition 3.25**](#supremum): Supremum\Pageref{supremum}
 
- [**Proposition 3.27**](#Proposition-3.27)\Pageref{Proposition-3.27}
+ [**Notation 3.26**](#Notation-3.26)\Pageref{Notation-3.26}
+
+ [**Remark 3.27**](#Remark-3.27)\Pageref{Remark-3.27}
+
+ [**Proposition 3.28**](#Proposition-3.28)\Pageref{Proposition-3.28}
 
  [**Proof**](#Proof*-3.3)\Pageref{Proof*-3.3}
 
@@ -183,17 +185,17 @@
 
  [**Warning**](#Warning*-3.5)\Pageref{Warning*-3.5}
 
- [**Definition 3.28**](#maximum): Maximum\Pageref{maximum}
+ [**Definition 3.29**](#maximum): Maximum\Pageref{maximum}
 
- [**Proposition 3.29**](#Proposition-3.29)\Pageref{Proposition-3.29}
+ [**Proposition 3.30**](#Proposition-3.30)\Pageref{Proposition-3.30}
 
  [**Proof**](#Proof*-3.6)\Pageref{Proof*-3.6}
 
  [**Warning**](#Warning*-3.7)\Pageref{Warning*-3.7}
 
- [**Definition 3.30**](#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
+ [**Definition 3.31**](#upper-bound-bounded-below-infimum-minimum): Upper bound, bounded below, infimum, minimum\Pageref{upper-bound-bounded-below-infimum-minimum}
 
- [**Proposition 3.31**](#Proposition-3.31)\Pageref{Proposition-3.31}
+ [**Proposition 3.32**](#Proposition-3.32)\Pageref{Proposition-3.32}
 
  [**Warning**](#Warning*-3.8)\Pageref{Warning*-3.8}
 
@@ -201,41 +203,41 @@
 
  [**Warning**](#Warning*-3.10)\Pageref{Warning*-3.10}
 
- [**Proposition 3.32**](#Proposition-3.32)\Pageref{Proposition-3.32}
+ [**Proposition 3.33**](#Proposition-3.33)\Pageref{Proposition-3.33}
 
- [**Proposition 3.33**](#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
+ [**Proposition 3.34**](#proposition-inf-sup): Relationship between sup and inf\Pageref{proposition-inf-sup}
 
- [**Question 3.34**](#Question-3.34)\Pageref{Question-3.34}
+ [**Question 3.35**](#Question-3.35)\Pageref{Question-3.35}
 
- [**Theorem 3.35**](#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
+ [**Theorem 3.36**](#theorem-Q-not-complete)\Pageref{theorem-Q-not-complete}
 
  [**Proof**](#Proof*-3.11)\Pageref{Proof*-3.11}
 
- [**Question 3.36**](#Question-3.36)\Pageref{Question-3.36}
+ [**Question 3.37**](#Question-3.37)\Pageref{Question-3.37}
 
- [**Definition 3.37**](#completeness-1): Completeness\Pageref{completeness-1}
+ [**Definition 3.38**](#completeness-1): Completeness\Pageref{completeness-1}
 
- [**Notation 3.38**](#Notation-3.38)\Pageref{Notation-3.38}
+ [**Notation 3.39**](#Notation-3.39)\Pageref{Notation-3.39}
 
- [**Proposition 3.39**](#Proposition-3.39)\Pageref{Proposition-3.39}
+ [**Proposition 3.40**](#Proposition-3.40)\Pageref{Proposition-3.40}
 
  [**Proof**](#Proof*-3.12)\Pageref{Proof*-3.12}
 
- [**Theorem 3.40**](#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
+ [**Theorem 3.41**](#theorem-cut-complete): Equivalence of Cut Property and Completeness\Pageref{theorem-cut-complete}
 
  [**Proof**](#Proof*-3.13)\Pageref{Proof*-3.13}
 
- [**Definition 3.41**](#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
+ [**Definition 3.42**](#system-of-real-numbers-mathbbr): System of Real Numbers $\mathbb{R}$\Pageref{system-of-real-numbers-mathbbr}
 
- [**Remark 3.42**](#Remark-3.42)\Pageref{Remark-3.42}
+ [**Remark 3.43**](#Remark-3.43)\Pageref{Remark-3.43}
 
- [**Notation 3.43**](#Notation-3.43)\Pageref{Notation-3.43}
+ [**Notation 3.44**](#Notation-3.44)\Pageref{Notation-3.44}
 
- [**Remark 3.44**](#Remark-3.44)\Pageref{Remark-3.44}
+ [**Remark 3.45**](#Remark-3.45)\Pageref{Remark-3.45}
 
  [**Important**](#Important*-3.14)\Pageref{Important*-3.14}
 
- [**Question 3.45**](#Question-3.45)\Pageref{Question-3.45}
+ [**Question 3.46**](#Question-3.46)\Pageref{Question-3.46}
 
  [**Proposition 4.1**](#proposition-heron)\Pageref{proposition-heron}
 
