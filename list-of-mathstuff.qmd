@@ -235,6 +235,10 @@
 
  [**Remark 3.45**](#Remark-3.45)\Pageref{Remark-3.45}
 
+ [**Important**](#Important*-3.14)\Pageref{Important*-3.14}
+
+ [**Question 3.46**](#Question-3.46)\Pageref{Question-3.46}
+
  [**Proposition 4.1**](#proposition-heron)\Pageref{proposition-heron}
 
  [**Proof**](#Proof*-4.1)\Pageref{Proof*-4.1}

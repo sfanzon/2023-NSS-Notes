@@ -66,35 +66,27 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Important {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
 }
 .Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
 .Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -102,11 +94,27 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.Warning {
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -118,15 +126,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -240,6 +240,15 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#completeness" id="toc-completeness" class="nav-link" data-scroll-target="#completeness"><span class="header-section-number">3.5</span> Completeness</a></li>
   <li><a href="#axioms-of-real-numbers" id="toc-axioms-of-real-numbers" class="nav-link" data-scroll-target="#axioms-of-real-numbers"><span class="header-section-number">3.6</span> Axioms of Real Numbers</a></li>
+  <li><a href="#consequences-of-the-axioms" id="toc-consequences-of-the-axioms" class="nav-link" data-scroll-target="#consequences-of-the-axioms"><span class="header-section-number">3.7</span> Consequences of the Axioms</a>
+  <ul class="collapse">
+  <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link" data-scroll-target="#nested-interval-property"><span class="header-section-number">3.7.1</span> Nested Interval Property</a></li>
+  <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link" data-scroll-target="#archimedean-property"><span class="header-section-number">3.7.2</span> Archimedean Property</a></li>
+  <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">3.7.3</span> Revisiting Sup and inf</a></li>
+  <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">3.7.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#existence-of-square-roots" id="toc-existence-of-square-roots" class="nav-link" data-scroll-target="#existence-of-square-roots"><span class="header-section-number">3.7.5</span> Existence of Square Roots</a></li>
+  </ul></li>
+  <li><a href="#cardinality" id="toc-cardinality" class="nav-link" data-scroll-target="#cardinality"><span class="header-section-number">3.8</span> Cardinality</a></li>
   </ul>
 </nav>
     </div>
@@ -1394,6 +1403,54 @@ x^{-1} = \frac{1}{x} \,.
 </ul>
 </div></details>
 </div>
+<div id="Important*-14" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>It can be shown that <span class="math inline">\((\mathbb{R},+, \cdot,\geq)\)</span> is the <strong>only</strong> complete ordered field.<p></p>
+</div></details>
+</div>
+<p>The above has to be intended in the following sense: if <span class="math inline">\((K,+, \cdot,\geq)\)</span> is another complete ordered field, then <span class="math inline">\(K\)</span> <em>looks like</em> <span class="math inline">\(\mathbb{R}\)</span>. Mathematically this means that there exists an invertible map <span class="math inline">\(\Psi \ \colon \mathbb{R}\to K\)</span>, called isomorphism of fields, which preserves <span class="math inline">\(+\)</span>, <span class="math inline">\(\cdot\)</span> and <span class="math inline">\(\leq\)</span>.</p>
+<div id="Question-46" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 46</strong></summary><div>We have only postulated the existence of <span class="math inline">\(\mathbb{R}\)</span>. Does such complete ordered field actually exist?<p></p>
+</div></details>
+</div>
+<p>The answer is <strong>YES</strong>, and there are several models for such <span class="math inline">\(\mathbb{R}\)</span>. If time allows, we will look into one of these models at the end of the module.</p>
+</section>
+<section id="consequences-of-the-axioms" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="consequences-of-the-axioms"><span class="header-section-number">3.7</span> Consequences of the Axioms</h2>
+<p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> as a <strong>complete ordered field</strong>, let us investigate some of their properies.</p>
+<section id="nested-interval-property" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="nested-interval-property"><span class="header-section-number">3.7.1</span> Nested Interval Property</h3>
+<p>Not sure</p>
+</section>
+<section id="archimedean-property" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">3.7.2</span> Archimedean Property</h3>
+<p>Notes, or Dommers. See prop on dommers too.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/archimedean.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">For <span class="math inline">\(0&lt;a&lt;b\)</span> there exists <span class="math inline">\(n \in \mathbb{N}\)</span> so that <span class="math inline">\(na&gt;b\)</span>. In the picture <span class="math inline">\(n=3\)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="revisiting-sup-and-inf" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">3.7.3</span> Revisiting Sup and inf</h3>
+<ol type="1">
+<li>Characterize sup and inf with epsilon (see Marcellini)</li>
+<li>Compute sup and inf of interval (a,b) - Dommers</li>
+<li>Compute sup and inf of <span class="math display">\[
+\left\{ \frac1n \, \colon \,n \in \mathbb{N}\,, \,\, n \neq 0 \right\}
+\]</span> see Dommers</li>
+</ol>
+</section>
+<section id="density-of-mathbbq-in-mathbbr" class="level3" data-number="3.7.4">
+<h3 data-number="3.7.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">3.7.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h3>
+</section>
+<section id="existence-of-square-roots" class="level3" data-number="3.7.5">
+<h3 data-number="3.7.5" class="anchored" data-anchor-id="existence-of-square-roots"><span class="header-section-number">3.7.5</span> Existence of Square Roots</h3>
+</section>
+</section>
+<section id="cardinality" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="cardinality"><span class="header-section-number">3.8</span> Cardinality</h2>
+<p>Brief. Use Dommers</p>
 
 
 </section>
