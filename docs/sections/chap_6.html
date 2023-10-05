@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Numbers, Sequences and Series - 4&nbsp; Properties of \(\mathbb{R}\)</title>
+<title>Numbers, Sequences and Series - 6&nbsp; Sequences</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sections/chap_5.html" rel="next">
-<link href="../sections/chap_3.html" rel="prev">
+<link href="../sections/license.html" rel="next">
+<link href="../sections/chap_5.html" rel="prev">
 <link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -66,7 +100,55 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
 .Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -78,57 +160,9 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
 }
 </style>
 
@@ -160,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/chap_4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Properties of $\mathbb{R}$</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/chap_6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -198,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/chap_4.html" class="sidebar-item-text sidebar-link active">
+  <a href="../sections/chap_4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Properties of <span class="math inline">\(\mathbb{R}\)</span></span></span></a>
   </div>
 </li>
@@ -210,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/chap_6.html" class="sidebar-item-text sidebar-link">
+  <a href="../sections/chap_6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences</span></span></a>
   </div>
 </li>
@@ -236,12 +270,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link active" data-scroll-target="#nested-interval-property"><span class="header-section-number">4.1</span> Nested Interval Property</a></li>
-  <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link" data-scroll-target="#archimedean-property"><span class="header-section-number">4.2</span> Archimedean Property</a></li>
-  <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</a></li>
-  <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
-  <li><a href="#existence-of-square-roots" id="toc-existence-of-square-roots" class="nav-link" data-scroll-target="#existence-of-square-roots"><span class="header-section-number">4.5</span> Existence of Square Roots</a></li>
-  <li><a href="#cardinality" id="toc-cardinality" class="nav-link" data-scroll-target="#cardinality"><span class="header-section-number">4.6</span> Cardinality</a></li>
+  <li><a href="#example-herons-method" id="toc-example-herons-method" class="nav-link active" data-scroll-target="#example-herons-method"><span class="header-section-number">6.1</span> Example: Heron’s Method</a>
+  <ul class="collapse">
+  <li><a href="#coding-the-algorithm" id="toc-coding-the-algorithm" class="nav-link" data-scroll-target="#coding-the-algorithm"><span class="header-section-number">6.1.1</span> Coding the Algorithm</a></li>
+  </ul></li>
+  <li><a href="#fibonacci-sequence" id="toc-fibonacci-sequence" class="nav-link" data-scroll-target="#fibonacci-sequence"><span class="header-section-number">6.2</span> Fibonacci Sequence</a></li>
   </ul>
 </nav>
     </div>
@@ -250,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Properties of <span class="math inline">\(\mathbb{R}\)</span></span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences</span></h1>
 </div>
 
 
@@ -265,40 +298,149 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> as a <strong>complete ordered field</strong>, let us investigate some of their properies. These will all be consequence of the axioms of the real numbers, particulaly of the <strong>completeness axiom</strong>.</p>
-<section id="nested-interval-property" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="nested-interval-property"><span class="header-section-number">4.1</span> Nested Interval Property</h2>
-<p>Not sure</p>
-</section>
-<section id="archimedean-property" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">4.2</span> Archimedean Property</h2>
-<p>Notes, or Dommers. See prop on dommers too.</p>
+<p>Coming soon</p>
+<section id="example-herons-method" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="example-herons-method"><span class="header-section-number">6.1</span> Example: Heron’s Method</h2>
+<p>The first explicit algorithm for approximating <span class="math display">\[
+\sqrt{x}
+\]</span> for <span class="math inline">\(x &gt; 0\)</span> is known <strong>Heron’s method</strong>, after the first-century Greek mathematician <a href="https://en.wikipedia.org/wiki/Hero_of_Alexandria">Heron of Alexandria</a> who described the method in his AD 60 work Metrica, see reference to <a href="https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method">Wikipedia page</a>.</p>
+<p>Let us see what is the idea of the algorithm:</p>
+<ul>
+<li>Suppose that <span class="math inline">\(a_1\)</span> is an approximation of <span class="math inline">\(\sqrt{x}\)</span> from above, that is, <span id="eq-heron"><span class="math display">\[
+\sqrt{x} &lt; a_1 \,.
+\tag{6.1}\]</span></span></li>
+<li>Multiplying (<a href="#eq-heron"><span>6.1</span></a>) by <span class="math inline">\(\sqrt{x}/a_1\)</span> we obtain <span id="eq-heron-1"><span class="math display">\[
+\frac{x}{a_1} &lt; \sqrt{x} \,,
+\tag{6.2}\]</span></span> obtaining an approximation of <span class="math inline">\(\sqrt{x}\)</span> from below.</li>
+<li>Therefore, putting together the above inequalities, <span id="eq-heron-2"><span class="math display">\[
+\frac{x}{a_1} &lt; \sqrt{x} &lt; a_1
+\tag{6.3}\]</span></span></li>
+<li>If we take the average of the points <span class="math inline">\(x/a_1\)</span> and <span class="math inline">\(a_1\)</span>, it is reasonable to think that we find a better approximation of <span class="math inline">\(\sqrt{x}\)</span>. Thus our next approximation is <span class="math display">\[
+a_2 := \frac{1}{2} \left( a_1 + \frac{x}{a_1} \right) \,,
+\]</span> see figure below.</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/archimedean.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption class="figure-caption">For <span class="math inline">\(0&lt;a&lt;b\)</span> there exists <span class="math inline">\(n \in \mathbb{N}\)</span> so that <span class="math inline">\(na&gt;b\)</span>. In the picture <span class="math inline">\(n=3\)</span></figcaption>
+<p><img src="../images/heron.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Heron’s Algorithm for approximating <span class="math inline">\(\sqrt{x}\)</span></figcaption>
 </figure>
 </div>
-</section>
-<section id="revisiting-sup-and-inf" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</h2>
+<p>Iterating, we define by recurrence the sequence <span class="math display">\[
+a_{n+1} := \frac12  \left( a_n + \frac{x}{a_n} \right)
+\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, where the initial guess <span class="math inline">\(a_1\)</span> has to satisfy (<a href="#eq-heron"><span>6.1</span></a>). The aim of the section is to show that <span id="eq-heron-convergence"><span class="math display">\[
+\lim_{n \to \infty } \ a_n = \sqrt{x} \,.
+\tag{6.4}\]</span></span> We start by showing that (<a href="#eq-heron-2"><span>6.3</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<div id="proposition-heron" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 1</strong></summary><div>We have <span id="eq-heron-3"><span class="math display">\[
+\frac{x}{a_n} &lt; \sqrt{x} &lt; a_n
+\tag{6.5}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-1" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We prove it by induction:<p></p>
 <ol type="1">
-<li>Characterize sup and inf with epsilon (see Marcellini)</li>
-<li>Compute sup and inf of interval (a,b) - Dommers</li>
-<li>Compute sup and inf of <span class="math display">\[
-\left\{ \frac1n \, \colon \,n \in \mathbb{N}\,, \,\, n \neq 0 \right\}
-\]</span> see Dommers</li>
+<li><p>By (<a href="#eq-heron"><span>6.1</span></a>) and (<a href="#eq-heron-1"><span>6.2</span></a>) we know that (<a href="#eq-heron-3"><span>6.5</span></a>) holds for <span class="math inline">\(n=1\)</span>.</p></li>
+<li><p>Suppose now that (<a href="#eq-heron-3"><span>6.5</span></a>) holds for <span class="math inline">\(n\)</span>. Then <span class="math display">\[\begin{align}
+a_{n+1} - \sqrt{x} &amp; = \frac12  \left( a_n + \frac{x}{a_n} \right) - \sqrt{x} \\
+&amp; = \frac{1}{2 a_n} ( a_n^2 + x - 2 a_n \sqrt{x} ) \\
+&amp; = \frac{1}{2 a_n} ( a_n - \sqrt{x} )^2 &gt; 0 \,,
+\end{align}\]</span> since we are assuming that <span class="math inline">\(a_n &gt; \sqrt{x}\)</span>. Therefore <span id="eq-heron-proof-1"><span class="math display">\[
+\sqrt{x} &lt; a_{n+1} \,.
+\tag{6.6}\]</span></span> Multiplying the above by <span class="math inline">\(\sqrt{x}/a_{n+1}\)</span> we get <span id="eq-heron-proof-2"><span class="math display">\[
+\frac{x}{a_{n+1}} &lt; \sqrt{x} \,.
+\tag{6.7}\]</span></span> Inequalities (<a href="#eq-heron-proof-1"><span>6.6</span></a>) and (<a href="#eq-heron-proof-2"><span>6.7</span></a>) show that (<a href="#eq-heron-3"><span>6.5</span></a>) holds for <span class="math inline">\(n+1\)</span>.</p></li>
 </ol>
+<p>Therefore we conclude (<a href="#eq-heron-3"><span>6.5</span></a>) by the Principle of Induction.</p>
+</div></details>
+</div>
+<p>We are now ready to prove error estimates, that is, estimating how far away <span class="math inline">\(a_n\)</span> is from <span class="math inline">\(\sqrt{x}\)</span>.</p>
+<div id="proposition-heron-error" class="Proposition" title="Error estimate">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 2: </strong>Error estimate</summary><div>For all <span class="math inline">\(n \in \mathbb{N}\)</span> we have <span id="eq-heron-half"><span class="math display">\[
+a_{n+1} - \sqrt{x} &lt; \frac12 (a_{n} - \sqrt{x}) \,.
+\tag{6.8}\]</span></span><p></p>
+</div></details>
+</div>
+<div id="Proof*-2" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>By Proposition <a href="chap_6.html#proposition-heron">1</a> we know that <span class="math display">\[
+\frac{x}{a_n} &lt; \sqrt{x}
+\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Therefore <span class="math display">\[\begin{align}
+a_{n+1} &amp; = \frac12 \left(  a_n +  \frac{x}{a_n}   \right) \\
+        &amp; &lt; \frac12 \left(  a_n +  \sqrt{x}   \right) \,.
+\end{align}\]</span> Subtracting <span class="math inline">\(\sqrt{x}\)</span> from both members in the above inequality we get the thesis.<p></p>
+</div></details>
+</div>
+<p>Inequality (<a href="#eq-heron-half"><span>6.8</span></a>) is saying that the error halves at each step. Therefore we can prove that after <span class="math inline">\(n\)</span> steps the error is exponentially lower, as detailed in the following proposition.</p>
+<div id="proposition-heron-error-exp" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 3</strong></summary><div>For all <span class="math inline">\(n \in \mathbb{N}\)</span> we have <span id="eq-heron-error"><span class="math display">\[
+a_{n+1} - \sqrt{x} &lt; \frac{1}{2^n} (a_1 - \sqrt{x})
+\tag{6.9}\]</span></span><p></p>
+</div></details>
+</div>
+<div id="Proof*-3" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We prove (<a href="#eq-heron-error"><span>6.9</span></a>) by induction:<p></p>
+<ol type="1">
+<li>For <span class="math inline">\(n=1\)</span> we have that (<a href="#eq-heron-error"><span>6.9</span></a>) is satisfied, since it coincides with (<a href="#eq-heron-half"><span>6.8</span></a>) for <span class="math inline">\(n=1\)</span>.</li>
+<li>Suppose that (<a href="#eq-heron-error"><span>6.9</span></a>) holds for <span class="math inline">\(n\)</span>. By (<a href="#eq-heron-half"><span>6.8</span></a>) with <span class="math inline">\(n\)</span> replaced by <span class="math inline">\(n+1\)</span> we have <span class="math display">\[\begin{align}
+a_{n+2} - \sqrt{x} &amp; &lt; \frac12 (a_{n+1} - \sqrt{x}) \\
+&amp; &lt; \frac12 \,\cdot \, \frac{1}{2^n} (a_{1} - \sqrt{x}) \\
+&amp; = \frac{1}{2^{n+1}} (a_{1} - \sqrt{x})
+\end{align}\]</span> where in the second inequality we used the induction hypothesis (<a href="#eq-heron-error"><span>6.9</span></a>). Hence (<a href="#eq-heron-error"><span>6.9</span></a>) holds for <span class="math inline">\(n+1\)</span>.</li>
+</ol>
+<p>By invoking the Induction Principle we conclude the proof.</p>
+</div></details>
+</div>
+<p>Let us comment estimate (<a href="#eq-heron-error"><span>6.9</span></a>). Denote the error at step <span class="math inline">\(n\)</span> by <span class="math display">\[
+e_n := a_n - \sqrt{x}\,.
+\]</span> The initial error <span class="math inline">\(e_1\)</span> depends on how far the initial guess is from <span class="math inline">\(\sqrt{x}\)</span>. The estimate in (<a href="#eq-heron-error"><span>6.9</span></a>) is telling us that <span class="math inline">\(e_n\)</span> is a fraction of <span class="math inline">\(e_1\)</span>, and actually <span class="math display">\[
+\lim_{n \to \infty} \ e_n = 0
+\]</span> exponentially fast. From this fact we are finally able to prove (<a href="#eq-heron-convergence"><span>6.4</span></a>).</p>
+<div id="convergence-of-herons-algorithm" class="Theorem" title="Convergence of Heron’s Algorithm">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 4: </strong>Convergence of Heron’s Algorithm</summary><div>We have that <span class="math display">\[
+\lim_{n \to \infty} \ a_n = \sqrt{x} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-4" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>By Proposition <a href="chap_6.html#proposition-heron-error-exp">3</a> we have that <span class="math display">\[
+a_{n+1} - \sqrt{x} &lt; \frac{1}{2^n} (a_1 - \sqrt{x})
+\]</span> Moreover Proposition <a href="chap_6.html#proposition-heron">1</a> tells us that <span class="math display">\[
+\sqrt{x} &lt; a_{n+1} \,.
+\]</span> Putting together the two inequalities above we infer <span id="eq-heron-final"><span class="math display">\[
+\sqrt{x} &lt; a_{n+1} &lt; \sqrt{x} + \frac{1}{2^n} (a_1 - \sqrt{x}) \,.
+\tag{6.10}\]</span></span> Now note that <span class="math display">\[
+\lim_{n \to \infty} \ \frac{1}{2^n} =
+\lim_{n \to \infty} \ \left( \frac{1}{2} \right)^n = 0 \,.
+\]</span> Therefore the RHS of (<a href="#eq-heron-final"><span>6.10</span></a>) converges to <span class="math inline">\(\sqrt{x}\)</span> as <span class="math inline">\(n \to \infty\)</span>. Applying the Squeeze Theorem to (<a href="#eq-heron-final"><span>6.10</span></a>) we conclude that <span class="math inline">\(a_n \to \sqrt{x}\)</span> as <span class="math inline">\(n \to \infty\)</span>.<p></p>
+</div></details>
+</div>
+<section id="coding-the-algorithm" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="coding-the-algorithm"><span class="header-section-number">6.1.1</span> Coding the Algorithm</h3>
+<p>Heron’s Algorithm can be easily coded in Python. For example, see the function below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># x is the number for which to compute sqrt(x)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># guess is the point a_1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># a_1 must be strictly larger than sqrt(x)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># n is the number of iterations</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># the function returns a_{n+1}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> herons_algorithm(x, guess, n):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        guess <span class="op">=</span> (guess <span class="op">+</span> x <span class="op">/</span> guess) <span class="op">/</span> <span class="fl">2.0</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> guess</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For example let us use the Algorithm to compute <span class="math inline">\(\sqrt{2}\)</span> after <span class="math inline">\(3\)</span> iterations. For initial guess we take <span class="math inline">\(a_1 = 2\)</span>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate sqrt(2) with 3 iterations and guess 2</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sqrt_2 <span class="op">=</span> herons_algorithm(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The sqrt(2) is approximately </span><span class="sc">{</span>sqrt_2<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-stdout">
+<pre><code>The sqrt(2) is approximately 1.4142156862745097</code></pre>
+</div>
+</div>
+<p>That is a pretty good approximation in just <span class="math inline">\(3\)</span> iterations!</p>
 </section>
-<section id="density-of-mathbbq-in-mathbbr" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
 </section>
-<section id="existence-of-square-roots" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="existence-of-square-roots"><span class="header-section-number">4.5</span> Existence of Square Roots</h2>
-</section>
-<section id="cardinality" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="cardinality"><span class="header-section-number">4.6</span> Cardinality</h2>
-<p>Brief. Use Dommers</p>
+<section id="fibonacci-sequence" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="fibonacci-sequence"><span class="header-section-number">6.2</span> Fibonacci Sequence</h2>
 
 
 </section>
@@ -668,13 +810,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sections/chap_3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Real Numbers</span></span>
+      <a href="../sections/chap_5.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Complex Numbers</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sections/chap_5.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Complex Numbers</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../sections/license.html" class="pagination-link">
+        <span class="nav-page-text">License</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,237 @@
+::: {.content-hidden}
+$$
+{{< include macros.tex >}}
+$$
+:::
+
+
+
+
+# Sequences
+
+Coming soon
+
+
+
+
+## Example: Heron's Method
+
+
+The first explicit algorithm for approximating 
+$$
+\sqrt{x}
+$$ 
+for $x > 0$ is known **Heron's method**, after the first-century Greek mathematician [Heron of Alexandria](https://en.wikipedia.org/wiki/Hero_of_Alexandria) who described the method in his AD 60 work Metrica, see reference to
+[Wikipedia page](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
+
+Let us see what is the idea of the algorithm:
+
+- Suppose that $a_1$ is an approximation of $\sqrt{x}$ from above, that is,
+$$
+ \sqrt{x} < a_1 \,.
+$$ {#eq-heron}
+- Multiplying (@eq-heron) by $\sqrt{x}/a_1$ we obtain
+$$
+\frac{x}{a_1} < \sqrt{x} \,,
+$${#eq-heron-1}
+obtaining an approximation of $\sqrt{x}$ from below.
+- Therefore, putting together the above inequalities,
+$$
+\frac{x}{a_1} < \sqrt{x} < a_1 
+$$ {#eq-heron-2}
+- If we take the average of the points $x/a_1$ and $a_1$, it is reasonable to think that we find a better approximation of $\sqrt{x}$. Thus our next approximation is
+$$
+a_2 := \frac{1}{2} \left( a_1 + \frac{x}{a_1} \right) \,,
+$$
+see figure below.
+
+
+![Heron's Algorithm for approximating $\sqrt{x}$](/images/heron.png){width=70%}
+
+
+Iterating, we define by recurrence the sequence 
+$$
+a_{n+1} := \frac12  \left( a_n + \frac{x}{a_n} \right)
+$$
+for all $n \in \N$, where the initial guess $a_1$ has to satisfy (@eq-heron). The aim of the section is to show that
+$$
+\lim_{n \to \infty } \ a_n = \sqrt{x} \,.
+$${#eq-heron-convergence}
+We start by showing that (@eq-heron-2) holds for all $n \in \N$.
+
+::: {.Proposition  #proposition-heron}
+We have
+$$
+\frac{x}{a_n} < \sqrt{x} < a_n 
+$${#eq-heron-3}
+for all $n \in \N$.
+:::
+
+
+::: Proof
+We prove it by induction:
+
+1. By (@eq-heron) and (@eq-heron-1) we know that (@eq-heron-3) holds for $n=1$. 
+
+2. Suppose now that (@eq-heron-3) holds for $n$. Then
+\begin{align}
+a_{n+1} - \sqrt{x} & = \frac12  \left( a_n + \frac{x}{a_n} \right) - \sqrt{x} \\
+& = \frac{1}{2 a_n} ( a_n^2 + x - 2 a_n \sqrt{x} ) \\
+& = \frac{1}{2 a_n} ( a_n - \sqrt{x} )^2 > 0 \,,
+\end{align}
+since we are assuming that $a_n > \sqrt{x}$. Therefore
+$$
+\sqrt{x} < a_{n+1} \,.
+$${#eq-heron-proof-1}
+Multiplying the above by $\sqrt{x}/a_{n+1}$ we get
+$$
+\frac{x}{a_{n+1}} < \sqrt{x} \,.
+$${#eq-heron-proof-2}
+Inequalities (@eq-heron-proof-1) and (@eq-heron-proof-2) show that (@eq-heron-3) holds for $n+1$.
+
+Therefore we conclude (@eq-heron-3) by the Principle of Induction.
+:::
+
+
+We are now ready to prove error estimates, that is, estimating how far away $a_n$ is from $\sqrt{x}$. 
+
+
+::: Proposition
+### Error estimate {#proposition-heron-error}
+For all $n \in \N$ we have
+$$
+a_{n+1} - \sqrt{x} < \frac12 (a_{n} - \sqrt{x}) \,.
+$${#eq-heron-half}
+:::
+
+
+::: Proof
+By Proposition \ref{proposition-heron} we know that 
+$$
+\frac{x}{a_n} < \sqrt{x}
+$$
+for all $n \in \N$. Therefore
+\begin{align}
+a_{n+1} & = \frac12 \left(  a_n +  \frac{x}{a_n}   \right) \\
+        & < \frac12 \left(  a_n +  \sqrt{x}   \right) \,.
+\end{align}
+Subtracting $\sqrt{x}$ from both members in the above inequality we get the thesis.
+:::
+
+
+Inequality (@eq-heron-half) is saying that the error halves at each step. Therefore we can prove that after $n$ steps the error is exponentially lower, as detailed in the following proposition.
+
+
+::: {.Proposition #proposition-heron-error-exp}
+For all $n \in \N$ we have
+$$
+a_{n+1} - \sqrt{x} < \frac{1}{2^n} (a_1 - \sqrt{x})
+$$ {#eq-heron-error}
+:::
+
+
+
+::: Proof
+We prove (@eq-heron-error) by induction:
+
+1. For $n=1$ we have that (@eq-heron-error) is satisfied, since it coincides with (@eq-heron-half) for $n=1$.
+2. Suppose that (@eq-heron-error) holds for $n$. By (@eq-heron-half) with $n$ replaced by $n+1$ we have
+\begin{align}
+a_{n+2} - \sqrt{x} & < \frac12 (a_{n+1} - \sqrt{x}) \\
+& < \frac12 \,\cdot \, \frac{1}{2^n} (a_{1} - \sqrt{x}) \\
+& = \frac{1}{2^{n+1}} (a_{1} - \sqrt{x})
+\end{align}
+where in the second inequality we used the induction hypothesis (@eq-heron-error). Hence (@eq-heron-error) holds for $n+1$.
+
+By invoking the Induction Principle we conclude the proof.
+:::
+
+Let us comment estimate (@eq-heron-error). Denote the error at step $n$ by
+$$
+e_n := a_n - \sqrt{x}\,.
+$$
+The initial error $e_1$ depends on how far the initial guess is from $\sqrt{x}$. The estimate in (@eq-heron-error) is telling us that $e_n$ is a fraction of $e_1$, and actually
+$$
+\lim_{n \to \infty} \ e_n = 0
+$$
+exponentially fast. From this fact we are finally able to prove (@eq-heron-convergence).
+
+::: Theorem
+### Convergence of Heron's Algorithm
+We have that 
+$$
+\lim_{n \to \infty} \ a_n = \sqrt{x} \,.
+$$
+:::
+
+::: Proof
+By Proposition \ref{proposition-heron-error-exp} we have that
+$$
+a_{n+1} - \sqrt{x} < \frac{1}{2^n} (a_1 - \sqrt{x})
+$$
+Moreover Proposition \ref{proposition-heron} tells us that
+$$
+\sqrt{x} < a_{n+1} \,.
+$$
+Putting together the two inequalities above we infer
+$$
+\sqrt{x} < a_{n+1} < \sqrt{x} + \frac{1}{2^n} (a_1 - \sqrt{x}) \,.
+$${#eq-heron-final}
+Now note that
+$$
+\lim_{n \to \infty} \ \frac{1}{2^n} =
+\lim_{n \to \infty} \ \left( \frac{1}{2} \right)^n = 0 \,.
+$$
+Therefore the RHS of (@eq-heron-final) converges to $\sqrt{x}$ as $n \to \infty$. Applying the Squeeze Theorem to (@eq-heron-final) we conclude that $a_n \to \sqrt{x}$ as $n \to \infty$.
+:::
+
+
+
+### Coding the Algorithm
+
+Heron's Algorithm can be easily coded in Python. For example, see the function below:
+
+```python
+# x is the number for which to compute sqrt(x)
+# guess is the point a_1
+# a_1 must be strictly larger than sqrt(x)
+# n is the number of iterations
+# the function returns a_{n+1}
+
+def herons_algorithm(x, guess, n):
+    for i in range(n):
+        guess = (guess + x / guess) / 2.0
+    return guess
+```
+
+For example let us use the Algorithm to compute $\sqrt{2}$ after $3$ iterations. For initial guess we take $a_1 = 2$. 
+
+```python
+# Calculate sqrt(2) with 3 iterations and guess 2
+sqrt_2 = herons_algorithm(2, 2, 3)
+
+print(f"The sqrt(2) is approximately {sqrt_2}")
+```
+
+```{python}
+#| echo: false 
+
+def herons_algorithm(x, guess, n):
+    for i in range(n):
+        guess = (guess + x / guess) / 2.0
+    return guess
+
+# Calculate sqrt(2) with 3 iterations and guess 2
+sqrt_2 = herons_algorithm(2, 2, 3)
+
+print(f"The sqrt(2) is approximately {sqrt_2}")
+```
+
+That is a pretty good approximation in just $3$ iterations!
+
+
+
+
+
+## Fibonacci Sequence
+

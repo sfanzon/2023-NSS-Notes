@@ -100,7 +100,7 @@ Let $K$ be a set and $\circ \ \colon K \times K \to K$ be a binary operation on 
     $$
 3. An element $e \in K$ is called **neutral element** of $\circ$ if
     $$ 
-    x \circ e = e \circ x = e \,, \quad \, \forall \, x \in K
+    x \circ e = e \circ x = x \,, \quad \, \forall \, x \in K
     $$
 4. Let $e$ be a neutral element of $\circ$ and let $x \in K$. An element $y \in K$ is called an **inverse** of $x$ with respect to $\circ$ if 
 $$
@@ -252,9 +252,8 @@ We call the triple $(K, + , \cdot)$ a **field** if:
     $$
     - (M3) **Multiplicative Inverse**: If $x \neq 0$ there exists an **inverse** of $x$ with respect to $\cdot$. We call this element the **multiplicative inverse** of $x$ and denote it by $x^{-1}$. It holds
     $$
-    x \cdot x^{-1} = x^{-1} \cdot x = 0 
+    x \cdot x^{-1} = x^{-1} \cdot x = 1 
     $$
-    by $y=x^{-1}$.
 
 3. The operations $+$ and $\cdot$ are related by 
     - (AM) **Distributive Property**: $\,\forall \, x,y,z \in K$
@@ -1671,49 +1670,3 @@ We have only postulated the existence of $\R$. Does such complete ordered field 
 :::
 
 The answer is **YES**, and there are several models for such $\R$. If time allows, we will look into one of these models at the end of the module.
-
-
-
-
-
-## Consequences of the Axioms
-
-Now that we established the axiomatic definition of the Real Numbers $\R$ as a **complete ordered field**, let us investigate some of their properies. 
-
-
-### Nested Interval Property
-
-Not sure
-
-### Archimedean Property
-
-Notes, or Dommers. See prop on dommers too.
-
-![For $0<a<b$ there exists $n \in \N$ so that $na>b$. In the picture $n=3$](/images/archimedean.png){width=60%}
-
-
-### Revisiting Sup and inf 
-
-1. Characterize sup and inf with epsilon (see Marcellini)
-2. Compute sup and inf of interval (a,b) - Dommers
-3. Compute sup and inf of 
-$$
-\left\{ \frac1n \divider n \in \N  \,, \,\, n \neq 0 \right\}
-$$
-see Dommers
-
-
-
-### Density of $\Q$ in $\R$
-
-### Existence of Square Roots
-
-
-
-
-
-
-## Cardinality
-
-Brief. Use Dommers
-

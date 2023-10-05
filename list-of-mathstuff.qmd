@@ -239,18 +239,18 @@
 
  [**Question 3.46**](#Question-3.46)\Pageref{Question-3.46}
 
- [**Proposition 4.1**](#proposition-heron)\Pageref{proposition-heron}
+ [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 
- [**Proof**](#Proof*-4.1)\Pageref{Proof*-4.1}
+ [**Proof**](#Proof*-6.1)\Pageref{Proof*-6.1}
 
- [**Proposition 4.2**](#proposition-heron-error): Error estimate\Pageref{proposition-heron-error}
+ [**Proposition 6.2**](#proposition-heron-error): Error estimate\Pageref{proposition-heron-error}
 
- [**Proof**](#Proof*-4.2)\Pageref{Proof*-4.2}
+ [**Proof**](#Proof*-6.2)\Pageref{Proof*-6.2}
 
- [**Proposition 4.3**](#proposition-heron-error-exp)\Pageref{proposition-heron-error-exp}
+ [**Proposition 6.3**](#proposition-heron-error-exp)\Pageref{proposition-heron-error-exp}
 
- [**Proof**](#Proof*-4.3)\Pageref{Proof*-4.3}
+ [**Proof**](#Proof*-6.3)\Pageref{Proof*-6.3}
 
- [**Theorem 4.4**](#convergence-of-herons-algorithm): Convergence of Heron’s Algorithm\Pageref{convergence-of-herons-algorithm}
+ [**Theorem 6.4**](#convergence-of-herons-algorithm): Convergence of Heron’s Algorithm\Pageref{convergence-of-herons-algorithm}
 
- [**Proof**](#Proof*-4.4)\Pageref{Proof*-4.4}
+ [**Proof**](#Proof*-6.4)\Pageref{Proof*-6.4}

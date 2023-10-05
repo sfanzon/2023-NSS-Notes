@@ -7,7 +7,6 @@ $$
 
 
 
-# Complex Numbers
+# Sequences
 
 Coming soon
-
