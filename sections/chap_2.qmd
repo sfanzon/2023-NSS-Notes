@@ -1076,7 +1076,7 @@ The triangle inequality relates the absolute value to the sum operation. It is a
 
 For every $x, y \in \R$ we have
 $$
-| |x| - |y| | \leq |x-y| \leq |x| + |y| \,.
+| |x| - |y| | \leq |x+y| \leq |x| + |y| \,.
 $$ {#eq-triangle-inequality}
 :::
 
@@ -1134,7 +1134,7 @@ $$
 $$ {#eq-triangle-inequality-5}
 which is the second inequality in (@eq-triangle-inequality).
 
-*Step 2. Proof of the second inequality in (@eq-triangle-inequality).*  
+*Step 2. Proof of the first inequality in (@eq-triangle-inequality).*  
 Note that the trivial identity
 $$
 x = x+y - y

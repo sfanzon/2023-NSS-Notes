@@ -66,55 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
 .Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -122,11 +74,59 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Warning {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -1033,7 +1033,7 @@ Suppose now that<br>
 <p>The triangle inequality relates the absolute value to the sum operation. It is a very important inequality, which we will use a lot in the future.</p>
 <div id="theorem-triangle-inequality" class="Theorem" title="Triangle inequality">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 35: </strong>Triangle inequality</summary><div>For every <span class="math inline">\(x, y \in \mathbb{R}\)</span> we have <span id="eq-triangle-inequality"><span class="math display">\[
-| |x| - |y| | \leq |x-y| \leq |x| + |y| \,.
+| |x| - |y| | \leq |x+y| \leq |x| + |y| \,.
 \tag{2.7}\]</span></span><p></p>
 </div></details>
 </div>
@@ -1071,7 +1071,7 @@ Trivially we have <span class="math display">\[
 \]</span> We can now again apply Lemma <a href="chap_2.html#lemma-absolute-value">33</a> to get <span id="eq-triangle-inequality-5"><span class="math display">\[
 |x + y| \leq |x| + |y| \,,
 \tag{2.11}\]</span></span> which is the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>).</p>
-<p><em>Step 2. Proof of the second inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>).</em><br>
+<p><em>Step 2. Proof of the first inequality in (<a href="#eq-triangle-inequality"><span>2.7</span></a>).</em><br>
 Note that the trivial identity <span class="math display">\[
 x = x+y - y
 \]</span> always holds. We then have <span class="math display">\[\begin{align}
