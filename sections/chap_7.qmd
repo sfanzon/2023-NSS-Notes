@@ -1,12 +1,13 @@
 ::: {.content-hidden}
-$$
+$
 {{< include macros.tex >}}
-$$
+$
 :::
 
 
 
 
-# Sequences
+
+# Series
 
 Coming soon

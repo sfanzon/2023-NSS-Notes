@@ -1,8 +1,9 @@
 ::: {.content-hidden}
-$$
+$
 {{< include macros.tex >}}
-$$
+$
 :::
+
 
 
 
@@ -11,7 +12,7 @@ $$
 
 Coming soon
 
-
+$\R$
 
 
 ## Example: Heron's Method

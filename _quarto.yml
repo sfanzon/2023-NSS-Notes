@@ -51,7 +51,7 @@ book:
 
     - sections/chap_6.qmd
 
-    #- sections/chap_7.qmd
+    - sections/chap_7.qmd
 
     - sections/license.qmd
     
@@ -117,6 +117,7 @@ format:
           \ModifyLayer[addvoffset=-.6ex]{plain.scrheadings.foot.above.line}
           \usepackage{fvextra}
           \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+          \setlength{\parindent}{0pt}
 
   
 
