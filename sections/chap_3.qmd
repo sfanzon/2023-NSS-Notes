@@ -516,7 +516,7 @@ We call $s$ the **separator** of the cut $(A,B)$.
 ::: Example
 Let $S = \Q$ and consider the sets
 $$
-A = (-\infty,s] \cap \Q \,, \quad B = (0,\infty) \cap \Q \,. 
+A = (-\infty,s] \cap \Q \,, \quad B = (s,\infty) \cap \Q \,. 
 $$
 for some $s \in \Q$. Then the pair $(A,B)$ is a cut of $\Q$, and $s$ is the separator.
 :::

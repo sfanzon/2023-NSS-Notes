@@ -7,7 +7,7 @@ $$
 
 # Welcome {.unnumbered}
 
-These are the Lecture Notes of **Numbers, Sequences & Series 400297** for T1 2023/24 at the University of Hull. I will follow these lecture notes during the course. 
+These are the Lecture Notes of **Numbers, Sequences and Series 400297** for T1 2023/24 at the University of Hull. I will follow these lecture notes during the course. 
 If you have any question or find any typo, please email me at
 
 
