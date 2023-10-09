@@ -66,19 +66,27 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Corollary {
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 .Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -86,29 +94,13 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Lemma {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .TODO {
   --color1: #e7b1b4;
@@ -118,17 +110,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Warning {
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -614,7 +614,7 @@ x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
 \sqrt{2} \notin \mathbb{Q}\,.
 \]</span> This means that <span class="math inline">\(\mathbb{Q}\)</span> has <strong>gaps</strong>, and cannot be represented as a <strong>continuous</strong> line. The rigorous definition of <strong>lack of gaps</strong> needs the concept of <strong>cut</strong> of a set.</p>
 <div id="partition-of-a-set" class="Definition" title="Partition of a set">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Partition of a set</summary><div>Let <span class="math inline">\(S\)</span> be a set. The pair <span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span> if <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Partition of a set</summary><div>Let <span class="math inline">\(S\)</span> be a non-empty set. The pair <span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span> if <span class="math display">\[
 A , B \subset S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
 \]</span> and <span class="math display">\[
 S = A \cup B \,, \quad
@@ -630,7 +630,7 @@ A \cap B = \emptyset \, .
 </div>
 <div id="cut-of-a-set" class="Definition" title="Cut of a set">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Cut of a set</summary><div>
-<p>Let <span class="math inline">\(S\)</span> be a set with a total order relation <span class="math inline">\(\leq\)</span>. The pair <span class="math inline">\((A,B)\)</span> is a <strong>cut</strong> of <span class="math inline">\(S\)</span> if</p>
+<p>Let <span class="math inline">\(S\)</span> be a non-empty set with a total order relation <span class="math inline">\(\leq\)</span>. The pair <span class="math inline">\((A,B)\)</span> is a <strong>cut</strong> of <span class="math inline">\(S\)</span> if</p>
 <ol type="1">
 <li><span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span>,</li>
 <li>We have <span class="math display">\[
@@ -641,7 +641,7 @@ a \leq b \,,  \quad \forall \, a \in A \,, \,\, \forall \, b \in B \,.
 </div>
 <p>The <strong>cut</strong> of a set is often called <strong>Dedekind cut</strong>, named after <strong>Richard Dedekind</strong>, who used cuts to give an explicit construction of the real numbers <span class="math inline">\(\mathbb{R}\)</span>, see <a href="https://en.wikipedia.org/wiki/Dedekind_cut">Wikipedia page</a>.</p>
 <div id="cut-property-1" class="Definition" title="Cut property">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17: </strong>Cut property</summary><div>Let <span class="math inline">\(S\)</span> be a set with a total order relation <span class="math inline">\(\leq\)</span>. We say that <span class="math inline">\(S\)</span> has the <strong>cut property</strong> if for every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(S\)</span> there exists some <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17: </strong>Cut property</summary><div>Let <span class="math inline">\(S\)</span> be a non-empty set with a total order relation <span class="math inline">\(\leq\)</span>. We say that <span class="math inline">\(S\)</span> has the <strong>cut property</strong> if for every cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(S\)</span> there exists some <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
 a \leq s \leq b \,, \quad \forall  \, a \in A\,, \,\, \forall  \, b \in B \,.
 \]</span> We call <span class="math inline">\(s\)</span> the <strong>separator</strong> of the cut <span class="math inline">\((A,B)\)</span>.<p></p>
 </div></details>
@@ -777,7 +777,7 @@ L \leq b \,,  \,\, \forall \, b \in B \,.
 \tag{3.11}\]</span></span> Define now <span class="math display">\[
 \tilde{L} := L - \frac1n
 \]</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Clearly we have <span id="eq-separator-contradiction-7"><span class="math display">\[
-\tilde{L} &lt; L \,.
+\tilde{L} \in \mathbb{Q}\,, \quad \tilde{L} &lt; L \,.
 \tag{3.12}\]</span></span> We now show that <span class="math inline">\(n\)</span> can be chosen so that <span class="math inline">\(\tilde{L} \in B\)</span>. Indeed <span class="math display">\[\begin{align}
 \tilde{L}^2  &amp; = \left(  L - \frac1n   \right)^2 \\
              &amp; = L^2 + \frac{1}{n^2} - 2 \frac{L}{n} \\

@@ -470,7 +470,7 @@ This means that $\Q$ has **gaps**, and cannot be represented as a **continuous**
 ::: Definition
 ### Partition of a set
 
-Let $S$ be a set. The pair $(A,B)$ is a **partition** of $S$ if
+Let $S$ be a non-empty set. The pair $(A,B)$ is a **partition** of $S$ if
 $$
 A , B \subset S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
 $$
@@ -489,7 +489,7 @@ $$
 ::: Definition
 ### Cut of a set
 
-Let $S$ be a set with a total order relation $\leq$. The pair $(A,B)$ is a **cut** of $S$ if 
+Let $S$ be a non-empty set with a total order relation $\leq$. The pair $(A,B)$ is a **cut** of $S$ if 
 
 1. $(A,B)$ is a **partition** of $S$,
 2. We have
@@ -503,7 +503,7 @@ The **cut** of a set is often called **Dedekind cut**, named after **Richard Ded
 
 ::: Definition 
 ### Cut property
-Let $S$ be a set with a total order relation $\leq$. We say that $S$ has the **cut property** if for every cut $(A,B)$ of $S$ there exists some $s \in S$ such that 
+Let $S$ be a non-empty set with a total order relation $\leq$. We say that $S$ has the **cut property** if for every cut $(A,B)$ of $S$ there exists some $s \in S$ such that 
 $$
 a \leq s \leq b \,, \quad \forall  \, a \in A\,, \,\, \forall  \, b \in B \,.
 $$
@@ -732,7 +732,7 @@ $$
 $$
 with $n \in \N$, $n \neq 0$ to be chosen later. Clearly we have
 $$
-\tilde{L} < L \,.
+\tilde{L} \in \Q \,, \quad \tilde{L} < L \,.
 $${#eq-separator-contradiction-7}
 We now show that $n$ can be chosen so that $\tilde{L} \in B$. Indeed
 \begin{align}
