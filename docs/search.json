@@ -18,7 +18,7 @@
     "href": "index.html#readings",
     "title": "Numbers, Sequences and Series",
     "section": "Readings",
-    "text": "Readings\nWe will study the set of real numbers \\(\\mathbb{R}\\), and then sequences and series in \\(\\mathbb{R}\\). I will follow mainly the textbook by Bartle and Sherbert [1]. Another good reading is the book by Abbott [2]. I also point out the classic book by Rudin [3], although this is more difficult to understand.\n\n\n\n\n\n\nImportant\n\n\n\nYou are not expected to purchase any of the above books. These lecture notes will cover 100% of the topics you are expected to known in order to excel in the final exam.\n\n\n\n\n\n\n[1] R.G. Bartle, D.R. Sherbert, Introduction to real analysis, Fourth Edition, Wiley, 2011.\n\n\n[2] S. Abbott, Understanding analysis, Second Edition, Springer, 2015.\n\n\n[3] W. Rudin, Principles of mathematical analysis, Third Edition, McGraw Hill, 1976."
+    "text": "Readings\nWe will study the set of real numbers \\(\\mathbb{R}\\), and then sequences and series in \\(\\mathbb{R}\\). I will follow mainly the textbook by Bartle and Sherbert (Bartle and Sherbert 2011). Another good reading is the book by Abbott (Abbott 2015). I also point out the classic book by Rudin (Rudin 1976), although this is more difficult to understand.\n\n\n\n\n\n\nImportant\n\n\n\nYou are not expected to purchase any of the above books. These lecture notes will cover 100% of the topics you are expected to known in order to excel in the final exam.\n\n\n\n\n\n\nAbbott, S. 2015. Understanding Analysis. Second Edition. Springer.\n\n\nBartle, Robert G., and Donald R. Sherbert. 2011. Introduction to Real Analysis. Fourth Edition. Wiley.\n\n\nRudin, W. 1976. Principles of Mathematical Analysis. Third Edition. McGraw Hill."
   },
   {
     "objectID": "sections/chap_1.html",
@@ -235,6 +235,6 @@
     "href": "sections/references.html",
     "title": "References",
     "section": "",
-    "text": "[1] S.\nAbbott, Understanding analysis, Second Edition, Springer, 2015.\n\n\n[2] W.\nRudin, Principles of mathematical analysis, Third Edition, McGraw Hill,\n1976.\n\n\n[3] R.G. Bartle, D.R. Sherbert, Introduction to\nreal analysis, Fourth Edition, Wiley, 2011."
+    "text": "Abbott, S. 2015. Understanding Analysis. Second Edition.\nSpringer.\n\n\nBartle, Robert G., and Donald R. Sherbert. 2011. Introduction to\nReal Analysis. Fourth Edition. Wiley.\n\n\nRudin, W. 1976. Principles of Mathematical Analysis. Third\nEdition. McGraw Hill."
   }
 ]

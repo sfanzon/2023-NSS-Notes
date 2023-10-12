@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr.&nbsp;Silvio Fanzon">
+<meta name="dcterms.date" content="2023-10-12">
 
 <title>Numbers, Sequences and Series</title>
 <style>
@@ -85,29 +86,21 @@ div.csl-indent {
   }
 }</script>
 <style>
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Question {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Example {
   --color1: #bce5de;
@@ -117,15 +110,35 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
 .Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -133,21 +146,9 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
 }
 </style>
 
@@ -299,7 +300,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">9 Oct 2023</p>
+      <p class="date">12 Oct 2023</p>
     </div>
   </div>
   
@@ -335,7 +336,7 @@ div.csl-indent {
 </section>
 <section id="readings" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="readings">Readings</h2>
-<p>We will study the set of real numbers <span class="math inline">\(\mathbb{R}\)</span>, and then sequences and series in <span class="math inline">\(\mathbb{R}\)</span>. I will follow mainly the textbook by Bartle and Sherbert <span class="citation" data-cites="bartle">[<a href="sections/references.html#ref-bartle" role="doc-biblioref">1</a>]</span>. Another good reading is the book by Abbott <span class="citation" data-cites="abbott">[<a href="sections/references.html#ref-abbott" role="doc-biblioref">2</a>]</span>. I also point out the classic book by Rudin <span class="citation" data-cites="rudin_introduction">[<a href="sections/references.html#ref-rudin_introduction" role="doc-biblioref">3</a>]</span>, although this is more difficult to understand.</p>
+<p>We will study the set of real numbers <span class="math inline">\(\mathbb{R}\)</span>, and then sequences and series in <span class="math inline">\(\mathbb{R}\)</span>. I will follow mainly the textbook by Bartle and Sherbert <span class="citation" data-cites="bartle">(<a href="sections/references.html#ref-bartle" role="doc-biblioref">Bartle and Sherbert 2011</a>)</span>. Another good reading is the book by Abbott <span class="citation" data-cites="abbott">(<a href="sections/references.html#ref-abbott" role="doc-biblioref">Abbott 2015</a>)</span>. I also point out the classic book by Rudin <span class="citation" data-cites="rudin_introduction">(<a href="sections/references.html#ref-rudin_introduction" role="doc-biblioref">Rudin 1976</a>)</span>, although this is more difficult to understand.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -351,15 +352,15 @@ Important
 </div>
 
 
-<div id="refs" class="references csl-bib-body" role="list" style="display: none">
-<div id="ref-bartle" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">R.G. Bartle, D.R. Sherbert, Introduction to real analysis, Fourth Edition, Wiley, 2011.</div>
-</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-abbott" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. Abbott, Understanding analysis, Second Edition, Springer, 2015.</div>
+Abbott, S. 2015. <em>Understanding Analysis</em>. Second Edition. Springer.
+</div>
+<div id="ref-bartle" class="csl-entry" role="listitem">
+Bartle, Robert G., and Donald R. Sherbert. 2011. <em>Introduction to Real Analysis</em>. Fourth Edition. Wiley.
 </div>
 <div id="ref-rudin_introduction" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">W. Rudin, Principles of mathematical analysis, Third Edition, McGraw Hill, 1976.</div>
+Rudin, W. 1976. <em>Principles of Mathematical Analysis</em>. Third Edition. McGraw Hill.
 </div>
 </div>
 </section>
