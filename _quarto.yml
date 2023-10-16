@@ -9,8 +9,9 @@ book:
   author: 
     - name: "Dr. Silvio Fanzon"
       affiliations: 
-        - name: "University of Hull, UK"
+        - name: "University of Hull"
           department: "Department of Mathematics"
+          state: "United Kingdom"
       email: "S.Fanzon@hull.ac.uk"
       url: "https://www.silviofanzon.com"
   date: today 
@@ -40,23 +41,14 @@ book:
     
   chapters:
     - index.qmd
-
     - sections/chap_1.qmd
-
     - sections/chap_2.qmd
-    
     - sections/chap_3.qmd
-
     - sections/chap_4.qmd
-
     - sections/chap_5.qmd
-
     - sections/chap_6.qmd
-
     - sections/chap_7.qmd
-
     - sections/license.qmd
-    
     - sections/references.qmd
 
 
@@ -86,6 +78,10 @@ format:
   
   pdf:
     documentclass: scrreprt
+    fontfamily: libertinus
+    fontfamilyoptions:
+      - osf
+      - p
     fontsize: 12pt
     template-partials:
       - before-body.tex
