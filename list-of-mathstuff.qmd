@@ -239,6 +239,48 @@
 
  [**Question 3.46**](#Question-3.46)\Pageref{Question-3.46}
 
+ [**Remark 4.1**](#Remark-4.1)\Pageref{Remark-4.1}
+
+ [**Theorem 4.2**](#theorem-archimedean): Archimedean Property\Pageref{theorem-archimedean}
+
+ [**Proof**](#Proof*-4.1)\Pageref{Proof*-4.1}
+
+ [**Theorem 4.3**](#theorem-archimedean-alternative): Archimedean Property (Alternative formulation)\Pageref{theorem-archimedean-alternative}
+
+ [**Proof**](#Proof*-4.2)\Pageref{Proof*-4.2}
+
+ [**Question 4.4**](#Question-4.4)\Pageref{Question-4.4}
+
+ [**Theorem 4.5**](#theorem-nested): Nested Interval Property\Pageref{theorem-nested}
+
+ [**Proof**](#Proof*-4.3)\Pageref{Proof*-4.3}
+
+ [**Important**](#Important*-4.4)\Pageref{Important*-4.4}
+
+ [**Example 4.6**](#example-nested-open)\Pageref{example-nested-open}
+
+ [**Proposition 4.7**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
+
+ [**Proof**](#Proof*-4.5)\Pageref{Proof*-4.5}
+
+ [**Proposition 4.8**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
+
+ [**Proposition 4.9**](#Proposition-4.9)\Pageref{Proposition-4.9}
+
+ [**Proof**](#Proof*-4.6)\Pageref{Proof*-4.6}
+
+ [**Proposition 4.10**](#Proposition-4.10)\Pageref{Proposition-4.10}
+
+ [**Proof**](#Proof*-4.7)\Pageref{Proof*-4.7}
+
+ [**Theorem 4.11**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+
+ [**Question 4.12**](#Question-4.12)\Pageref{Question-4.12}
+
+ [**Corollary 4.13**](#Corollary-4.13)\Pageref{Corollary-4.13}
+
+ [**Proof**](#Proof*-4.8)\Pageref{Proof*-4.8}
+
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 
  [**Proof**](#Proof*-6.1)\Pageref{Proof*-6.1}

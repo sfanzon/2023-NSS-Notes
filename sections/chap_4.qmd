@@ -10,33 +10,587 @@ $
 
 # Properties of $\mathbb{R}$
 
-Now that we established the axiomatic definition of the Real Numbers $\R$ as a **complete ordered field**, let us investigate some of their properies. These will all be consequence of the axioms of the real numbers, particulaly of the **completeness axiom**.
+Now that we established the axiomatic definition of the Real Numbers $\R$ as a **complete ordered field**, let us investigate some of the properties of $\R$. These will be consequence of the axioms of the real numbers, particulaly of the **Axiom of Completeness**.
+
+
+
+
+
+## Archimedean Property
+
+
+The first propery of $\R$ we investigate is the Archimedean property. This is on of the most useful properties of $\R$, and it essentially states that the set of natural numbers $\N$ is not bounded above in $\R$. 
+
+
+More precisley, the Archimedean Property says two things:
+
+1. For any $x \in \R$ we can always find a natural number $n \in \N$ such that
+$$
+n > x \,.
+$$
+
+2. For any $x \in \R$ with $x>0$, we can always find a natural number $m \in \N$ such that 
+$$
+0< \frac1m < x  \,.
+$$
+
+The situation is depicted in @fig-archimedean.
+
+
+![For any $x>0$ we can find $n,m \in \N$ such that $1/m<x<n$.](/images/archimedean_original.png){#fig-archimedean width=80%}
+
+
+::: Remark
+The Archimedean property might sound trivial. However it far from trivial.
+Indeed there are examples of ordered fields $K$ that satisfy:
+
+1. $\N \subset K$.
+2. $K$ does not have the Archimedean property.
+3. In particular, $\N$ is bounded above in $K$. 
+:::
+
+
+Let us proceed with the precise statement of the Archimedean property in $\R$.
+
+
+::: Theorem
+### Archimedean Property   {#theorem-archimedean}
+
+Let $x \in \R$ be given. Then:
+
+1. There exists $n \in \N$ such that
+$$
+n > x \,.
+$$
+
+2. Suppose in addition that $x>0$. There exists $n \in \N$ such that
+$$
+\frac1n < x \,.
+$$
+
+
+:::
+
+
+
+
+::: Proof
+
+*Part 1.* Let $x \in \R$. Suppose by contradiction that there is no $n \in \N$ such that 
+$$
+n > x  \,.
+$$
+This means that 
+$$
+n \leq x \, \quad \forall n \in \N \,.
+$${#eq-archimedean-proof-2}
+The above is saying that the set $\N$ is bounded above. Since $\N$ is not empty, by the Axiom of Completeness there exists
+$$
+\alpha = \sup \N \,.
+$$
+
+*Claim: $(\alpha-1)$ is not an upper bound for $\N$.*
+
+*Proof of Claim.* Indeed, we have
+$$
+(\alpha - 1) < \alpha \,.
+$${#eq-archimedean-proof}
+Therefore $\alpha-1$ cannot be an upper bound for $\N$. Indeed, if by contradiction $\alpha - 1$ was an upper bound for $\N$, then we would have
+$$
+\alpha \leq (\alpha - 1)\,, 
+$$
+since $\alpha$ is the smallest upper bound for $\N$. This contradicts (@eq-archimedean-proof). Therefore $\alpha - 1$ is not an upper bound for $\N$. 
+
+*Conclusion.* Since $\alpha - 1$ is not an upper bound for $\N$, there exists $n_0 \in \N$ such that
+$$
+\alpha - 1 < n_0 \,.
+$$
+The above implies 
+$$
+\alpha < n_0 + 1 \,.
+$$
+Since 
+$$
+(n_0+1) \in \N \,,
+$$
+we have obtained a contradiction, given that $\alpha$ was the supremum of $\N$. Thus (@eq-archimedean-proof-2) is false, meaning that there exists $n \in \N$ such that 
+$$
+n > x \,.
+$$
+
+
+
+*Part 2.* Suppose $x \in \R$ with $x>0$. We can define
+$$
+y:=\frac1x \,.
+$$
+By Part 1 there exists $n \in \N$ such that
+$$
+n > y = \frac{1}{x} \,.
+$$
+Using that $x>0$, we can rearrange the above inequlaity to obtain
+$$
+\frac1n < x \,,
+$$
+which is the desired thesis.
+
+:::
+
+
+
+
+There is another formulation of the Archimedean Property which, depending on the situation, might
+be more useful. This formulation says the following: If $x,y \in \R$ are such that 
+$$
+0 < x < y \,,
+$$
+then there exists $n \in \N$ such that 
+$$
+nx > y \,.
+$$
+In other words, if one does $n$ steps of size $x$ in the positive numbers direction, then
+the resulting number $nx$ will be larger than $y$. The situation is depicted in @fig-archimedean. 
+
+
+
+
+![For $0<x<y$ there exists $n \in \N$ such that that $nx>y$. In the picture $n=3$.](/images/archimedean.png){#fig-archimedean width=80%}
+
+
+
+::: Theorem
+### Archimedean Property (Alternative formulation)  {#theorem-archimedean-alternative}
+
+Let $x,y \in \R$, with $0<x<y$. There exists $n \in \N$ such that 
+$$
+nx > y \,.
+$$
+
+:::
+
+
+::: Proof
+
+
+Suppose by contradiction that there does not exist some $n \in \N$ such that 
+$$
+nx > y \,.
+$$
+This means that
+$$
+nx \leq y \,, \quad \forall \, n \in \N \,.
+$${#eq-archimedean-proof-4}
+Define the set
+$$
+A := \{ nx \divider n \in \N \} \,.
+$$
+Condition (@eq-archimedean-proof-4) is saying that $A$ is bounded above by $y$. Morever $A$ is trivially non-empty. By the Axiom of Completeness there exists
+$$
+\alpha = \sup A \,.
+$$
+Since $\alpha$ is the supremum of $A$, by definition of supremum and of the set $A$, we have 
+$$
+nx \leq \alpha \,, \quad   \forall \, n \in \N \,.
+$${#eq-archimedean-proof-5}
+As (@eq-archimedean-proof-5) holds for every $n \in \N$, then it also holds for $(n+1)$, meaning that
+$$
+(n+1) x \leq \alpha \,.
+$$
+The above implies 
+$$
+nx \leq \alpha - x \,.
+$$
+As $n$ was arbitrary, we conclude that
+$$
+nx \leq \alpha - x \,, \quad   \forall \, n \in \N \,.
+$$
+The above is saying that $(\alpha - x)$ is an upper bound for $A$. Since $\alpha$ is the supremum of 
+$A$, in particular $\alpha$ is the smallest upper bound. Thus it must hold
+$$
+\alpha \leq \alpha - x \,.
+$$
+The above is equivalent to 
+$$
+x \leq 0 \,,
+$$
+which contradicts our assumption of $x>0$. Therefore (@eq-archimedean-proof-4) is false, and there exists $n \in \N$ such that
+$$
+nx > y \,,
+$$
+concluding the proof.
+:::
+
+
+
+
+
 
 
 ## Nested Interval Property
 
-Not sure
 
-## Archimedean Property
 
-Notes, or Dommers. See prop on dommers too.
+Another consequence of the axiom of completeness is the **Nested Interval Property**. This is yet another way of saying
+the same thing: $\R$ does not have **gaps**. 
 
-![For $0<a<b$ there exists $n \in \N$ so that $na>b$. In the picture $n=3$](/images/archimedean.png){width=60%}
+Let us look at a construction. Suppose given some closed intervals
+$$
+I_n := [a_n,b_n] = \{   x \in \R \divider  a_n \leq x \leq b_n   \} \,,
+$$
+where the end points are ordered in the following way:
+$$
+a_1 \leq a_2 \leq \ldots \leq a_n \leq \dots \leq b_n  \leq \ldots b_n \leq b_1 \,,
+$$
+as shown in @fig-nested. 
+
+![Nested intervals $I_n = [a_n,b_n]$.](/images/nested_interval_property.png){#fig-nested width=80%}
+
+
+The intervals $I_n$ are **nested**, meaning that 
+$$
+I_1 \supset I_2 \supset I_3 \supset \ldots I_n \supset \ldots
+$$
+For finite intersections we clearly have
+$$
+\bigcap_{n=1}^k  I_n = I_k \,, 
+$$
+that is, intersecting the first $k$ intervals yields $I_k$, the smallest interval in the sequence.
+
+::: Question
+
+Consider the infinite intersection
+
+$$
+\bigcap_{n=1}^\infty I_n := \{  x \in \R \divider x \in I_n \,, \forall \, n \in \N  \}  \,.
+$$
+
+What can we say about it? Is it empty? Is it not empty?
+:::
+
+The answer is that the infinite intersection is not empty, because $\R$ was constructed in a way that it does not have gaps.
+
+
+
+
+::: Theorem
+### Nested Interval Property  {#theorem-nested}
+
+
+For each $n \in \N$ assume given a closed interval
+$$
+I_n := [a_n,b_n] = \{   x \in \R \divider  a_n \leq x \leq b_n   \} \,.
+$$
+Suppose that the intervals are nested, that is,
+$$
+I_n \supset I_{n+1}\,, \quad \forall \, n \in \N \,.
+$$
+Then
+$$
+\bigcap_{n=1}^\infty I_n \neq \emptyset \,.
+$${#eq-theorem-nested-proof-0}
+:::
+
+
+::: Proof 
+
+By definition we have
+$$
+\bigcap_{n=1}^\infty I_n := \{  x \in \R \divider x \in I_n \,, \forall \, n \in \N  \}  \,.
+$$
+We want to prove (@eq-theorem-nested-proof-0). This means we need to find a real number $x$ such that
+$$
+x \in I_n \,, \quad  \forall \, n \in \N \,.
+$${#eq-theorem-nested-proof-1}
+In particular (@eq-theorem-nested-proof-1) is saying that it should hold
+$$
+x \geq a_n \,, \quad \forall \, n \in \N \,.
+$$
+We might be tempted to choose $x$ to be any of the $b_n$. This choice would indeed satisy 
+the above. However (@eq-theorem-nested-proof-1) also implies that
+$$
+x \leq b_n \,, \quad \forall \, n \in \N \,.
+$$
+Therefore $x$ has to be larger than all the $a_n$, but not too large. This suggests that 
+$x$ should be defined as a supremum. Define the set
+$$
+A:= \{ a_n \divider n \in \N \} \,.
+$$
+The set $A$ is non-empty and is bounded above by any of the $b_n$. Therefore there exists 
+$$
+x = \sup \ A \,.
+$$
+By definition of supremum and definition of the set $A$, we have
+$$
+a_n \leq x \,, \quad \forall \, n \in \N \,.
+$$
+On the other hand, consider an arbitrary number $b_n$. By construction we have
+$$
+a_i \leq b_n \,, \quad \forall \, i \in \N \,.
+$$
+Therefore $b_n$ is an upper bound for $A$. Since the supremum is the smallest upper bound, 
+we conclude that
+$$
+x \leq b_n \,.
+$$
+The index $n$ was chosen arbitrarily, and therefore
+$$
+x \leq b_n \,, \quad \forall \, n \in \N \,.
+$$
+In total we have
+$$
+a_n \leq x \leq b_n \,, \quad \forall \, n \in \N \,,
+$$
+showing that $x$ satisfies (@eq-theorem-nested-proof-1). Therefore (@eq-theorem-nested-proof-0) holds and the proof is concluded.
+::::
+
+
+::: Important
+
+The assumption that $I_n$ is **closed** is crucial in Theorem \ref{theorem-nested}. 
+Without such assumption the thesis of Theorem \ref{theorem-nested} does not hold in general, as seen in Example \ref{example-nested-open} below.
+
+:::
+
+
+::: {.Example #example-nested-open}
+
+Consider the **open** intervals 
+$$
+I_n := \left( 0, \frac1n \right) \,.
+$$
+These are clearly nested
+$$
+I_n \supset I_{n+1}\,, \quad \forall \, n \in \N \,.
+$$
+For this choice of $I_n$ we have
+$$
+\bigcap_{n=1}^\infty I_n = \emptyset \,.
+$${#eq-example-nested-2}
+Indeed, suppose by contradiction that the intersection is non-empty. Then there exists $x \in \N$
+such that 
+$$
+x \in I_n \,, \quad \forall \, n \in \N \,.
+$$
+By definition of $I_n$ the above reads
+$$
+0 < x < \frac1n  \,, \quad \forall \, n \in \N \,.
+$${#eq-example-nested}
+Since $x>0$, by the Archimedean Property in Theorem \ref{theorem-archimedean} Point 1, there exists $n_0 \in \N$ such that
+$$
+0 < \frac{1}{n_0} < x \,.
+$$
+The above contradicts (@eq-example-nested). Therefore (@eq-example-nested-2) holds.
+:::
+
+
+
 
 
 ## Revisiting Sup and inf 
 
-1. Characterize sup and inf with epsilon (see Marcellini)
-2. Compute sup and inf of interval (a,b) - Dommers
-3. Compute sup and inf of 
+
+We now investigate some of the properties of supremum and infimum in $\R$. 
+The first property is an alternative characterization of the supremum, which we will often use.
+
+::: Proposition 
+### Characterization of Supremum  {#proposition-supremum-characterization}
+
+Let $A \subset \R$ be a non-empty set. Suppose that $s \in \R$ is an upper bound for $A$. They 
+are equivalent:
+
+1. $s = \sup A$
+2. For every $\e > 0$ there exists $x \in A$ such that 
 $$
-\left\{ \frac1n \divider n \in \N  \,, \,\, n \neq 0 \right\}
+s - \e < x \,.
 $$
-see Dommers
+
+:::
+
+
+
+::: Proof
+
+*Step 1*. Assume that 
+$$
+s = \sup A \,.
+$$
+Let $\e>0$ be arbitrary. We clearly have that
+$$
+s - \e < s \,.
+$${#eq-proof-sup-alt-1}
+Therefore $(s-\e)$ cannot be an upper bound of $A$. Indeed, if by contradiction $(s-\e)$ was 
+an upper bound, then we would have
+$$
+s \leq (s - \e )\,,
+$$
+since $s$ is the smallest upper bound. The above contradicts (@eq-proof-sup-alt-1), and therefore
+$(s-\e)$ is not an upper bound for $A$. Hence there exists some $x \in A$ such that
+$$
+s - \e < x  \, ,
+$$
+concluding.
+
+*Step 2*. Assume that Point 2 in the statement of Proposition \ref{proposition-supremum-characterization} holds. By assumption we have that $s$ is an upper bound 
+for $A$. Suppose by contradiction that 
+$$
+s \neq \sup A \,.
+$$
+This is equivalent to the statement
+$$
+s \, \mbox{ is not the smallest upper bound of } \, A. 
+$${#eq-proof-sup-alt-2}
+Hence there exists an upper bound $b$ of $A$ such that
+$$
+b < s \,.
+$$
+Let
+$$
+\e := s - b \,.
+$$
+By assumption there exists $x \in A$ such that 
+$$
+s - \e < x \,.
+$$
+Substituting the definition of $\e$ we get
+$$
+s - s + b < x \quad \implies \quad b < x \,.
+$$
+Since $b$ is an upper bound for $A$ and $x \in A$, the above is a contradiction. Therefore 
+(@eq-proof-sup-alt-2) is false, and $s$ is the smallest upper bound of $A$. Thus $s = \sup A$.
+:::
+
+
+
+
+The analogue of Proposition \ref{proposition-supremum-characterization} is as follows. The proof is left as an exercise.
+
+
+::: Proposition 
+### Characterization of Infimum  {#prop-supremum-infimum}
+
+Let $A \subset \R$ be a non-empty set. Suppose that $i \in \R$ is a lower bound for $A$. They 
+are equivalent:
+
+1. $i = \inf A$
+2. For every $\e \in \R$, with $\e > 0$, there exists $x \in A$ such that 
+$$
+x < i + \e  \,.
+$$
+
+:::
+
+
+
+With the above characterizations of supremum and infimum, it is now easier to
+prove that some candidate number is the supremum or infimum of some set.
+As an example, let us characterize supremum and infimum of an open interval of $\R$.
+
+
+::: Proposition
+
+Let $a, b \in \R$ with $a<b$. Then
+$$
+\inf (a,b) = a \,, \quad \sup (a,b) = b \,.
+$$
+
+:::
+
+
+::: Proof
+
+Dommers.
+
+:::
+
+
+Let us make another example. 
+
+
+::: Proposition
+
+Define the set
+$$
+A :=  \left\{ \frac1n \divider n \in \N   \right\} \,.
+$$
+Then
+$$
+\inf A = 0 \,, \quad \sup A = \max A = 1 \,.
+$$
+:::
+
+
+::: Proof
+
+Dommers
+:::
+
+
+
+
+
+
+
 
 
 
 ## Density of $\Q$ in $\R$
+
+
+The result we discuss below is so important that it deserves its own section: We are going to
+show that $\Q$ is dense in $\R$. This means that for every given number $x \in \R$, there exists
+a rational number $r \in \Q$ which is arbitrarily close to $x$. This is saying that $\Q$ and 
+$\R$ are tightly knitted together: For every pair of $a,b \in \R$ with $a<b$, there exists $r \in \Q$ such that
+$$
+a < r < b \,.
+$$
+Let us prove this statement.
+
+
+::: Theorem 
+### Density of $\Q$ in $\R$    {#theorem-density}
+
+Let $a,b \in \R$, with $a<b$. There exists $r \in \Q$ such that
+$$
+a < r < b \,.
+$$
+
+:::
+
+
+The density result of Theorem \ref{theorem-density} has a surprising corollary. Indeed, we have
+constructed the real numbers $\R$ so that they would fill the **gaps** of $\Q$. 
+
+::: Question
+
+How many gaps were there in $\Q$? In other words, how many irrational numbers are out there?
+
+:::
+
+
+The interesting answer to the above question is that there are as many irrational numbers 
+as there are real numbers. Moreover for every pair of real numbers, we can always find
+and irrational number in between.
+
+
+::: Corollary
+
+Let $a,b \in \R$, with $a<b$. There exists $t \in (\R \smallsetminus \Q)$ such that
+$$
+a < t < b \,.
+$$
+
+:::
+
+
+::: Proof 
+
+Abbott
+:::
+
+
+
+
+
 
 ## Existence of Square Roots
 

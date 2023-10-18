@@ -66,50 +66,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
@@ -118,17 +74,61 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -242,8 +242,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link active" data-scroll-target="#nested-interval-property"><span class="header-section-number">4.1</span> Nested Interval Property</a></li>
-  <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link" data-scroll-target="#archimedean-property"><span class="header-section-number">4.2</span> Archimedean Property</a></li>
+  <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link active" data-scroll-target="#archimedean-property"><span class="header-section-number">4.1</span> Archimedean Property</a></li>
+  <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link" data-scroll-target="#nested-interval-property"><span class="header-section-number">4.2</span> Nested Interval Property</a></li>
   <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</a></li>
   <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
   <li><a href="#existence-of-square-roots" id="toc-existence-of-square-roots" class="nav-link" data-scroll-target="#existence-of-square-roots"><span class="header-section-number">4.5</span> Existence of Square Roots</a></li>
@@ -271,33 +271,314 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> as a <strong>complete ordered field</strong>, let us investigate some of their properies. These will all be consequence of the axioms of the real numbers, particulaly of the <strong>completeness axiom</strong>.</p>
-<section id="nested-interval-property" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="nested-interval-property"><span class="header-section-number">4.1</span> Nested Interval Property</h2>
-<p>Not sure</p>
-</section>
-<section id="archimedean-property" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">4.2</span> Archimedean Property</h2>
-<p>Notes, or Dommers. See prop on dommers too.</p>
-<div class="quarto-figure quarto-figure-center">
+<p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> as a <strong>complete ordered field</strong>, let us investigate some of the properties of <span class="math inline">\(\mathbb{R}\)</span>. These will be consequence of the axioms of the real numbers, particulaly of the <strong>Axiom of Completeness</strong>.</p>
+<section id="archimedean-property" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">4.1</span> Archimedean Property</h2>
+<p>The first propery of <span class="math inline">\(\mathbb{R}\)</span> we investigate is the Archimedean property. This is on of the most useful properties of <span class="math inline">\(\mathbb{R}\)</span>, and it essentially states that the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span> is not bounded above in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>More precisley, the Archimedean Property says two things:</p>
+<ol type="1">
+<li><p>For any <span class="math inline">\(x \in \mathbb{R}\)</span> we can always find a natural number <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; x \,.
+\]</span></p></li>
+<li><p>For any <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x&gt;0\)</span>, we can always find a natural number <span class="math inline">\(m \in \mathbb{N}\)</span> such that <span class="math display">\[
+0&lt; \frac1m &lt; x  \,.
+\]</span></p></li>
+</ol>
+<p>The situation is depicted in <a href="#fig-archimedean">Figure&nbsp;<span>4.2</span></a>.</p>
+<div id="fig-archimedean" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="../images/archimedean.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption class="figure-caption">For <span class="math inline">\(0&lt;a&lt;b\)</span> there exists <span class="math inline">\(n \in \mathbb{N}\)</span> so that <span class="math inline">\(na&gt;b\)</span>. In the picture <span class="math inline">\(n=3\)</span></figcaption>
+<p><img src="../images/archimedean_original.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4.1: For any <span class="math inline">\(x&gt;0\)</span> we can find <span class="math inline">\(n,m \in \mathbb{N}\)</span> such that <span class="math inline">\(1/m&lt;x&lt;n\)</span>.</figcaption>
 </figure>
+</div>
+<div id="Remark-1" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 1</strong></summary><div>
+<p>The Archimedean property might sound trivial. However it far from trivial. Indeed there are examples of ordered fields <span class="math inline">\(K\)</span> that satisfy:</p>
+<ol type="1">
+<li><span class="math inline">\(\mathbb{N}\subset K\)</span>.</li>
+<li><span class="math inline">\(K\)</span> does not have the Archimedean property.</li>
+<li>In particular, <span class="math inline">\(\mathbb{N}\)</span> is bounded above in <span class="math inline">\(K\)</span>.</li>
+</ol>
+</div></details>
+</div>
+<p>Let us proceed with the precise statement of the Archimedean property in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="theorem-archimedean" class="Theorem" title="Archimedean Property">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 2: </strong>Archimedean Property</summary><div>
+<p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> be given. Then:</p>
+<ol type="1">
+<li><p>There exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; x \,.
+\]</span></p></li>
+<li><p>Suppose in addition that <span class="math inline">\(x&gt;0\)</span>. There exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+\frac1n &lt; x \,.
+\]</span></p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-1" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> Let <span class="math inline">\(x \in \mathbb{R}\)</span>. Suppose by contradiction that there is no <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; x  \,.
+\]</span> This means that <span id="eq-archimedean-proof-2"><span class="math display">\[
+n \leq x \, \quad \forall n \in \mathbb{N}\,.
+\tag{4.1}\]</span></span> The above is saying that the set <span class="math inline">\(\mathbb{N}\)</span> is bounded above. Since <span class="math inline">\(\mathbb{N}\)</span> is not empty, by the Axiom of Completeness there exists <span class="math display">\[
+\alpha = \sup \mathbb{N}\,.
+\]</span><p></p>
+<p><em>Claim: <span class="math inline">\((\alpha-1)\)</span> is not an upper bound for <span class="math inline">\(\mathbb{N}\)</span>.</em></p>
+<p><em>Proof of Claim.</em> Indeed, we have <span id="eq-archimedean-proof"><span class="math display">\[
+(\alpha - 1) &lt; \alpha \,.
+\tag{4.2}\]</span></span> Therefore <span class="math inline">\(\alpha-1\)</span> cannot be an upper bound for <span class="math inline">\(\mathbb{N}\)</span>. Indeed, if by contradiction <span class="math inline">\(\alpha - 1\)</span> was an upper bound for <span class="math inline">\(\mathbb{N}\)</span>, then we would have <span class="math display">\[
+\alpha \leq (\alpha - 1)\,,
+\]</span> since <span class="math inline">\(\alpha\)</span> is the smallest upper bound for <span class="math inline">\(\mathbb{N}\)</span>. This contradicts (<a href="#eq-archimedean-proof"><span>4.2</span></a>). Therefore <span class="math inline">\(\alpha - 1\)</span> is not an upper bound for <span class="math inline">\(\mathbb{N}\)</span>.</p>
+<p><em>Conclusion.</em> Since <span class="math inline">\(\alpha - 1\)</span> is not an upper bound for <span class="math inline">\(\mathbb{N}\)</span>, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\alpha - 1 &lt; n_0 \,.
+\]</span> The above implies <span class="math display">\[
+\alpha &lt; n_0 + 1 \,.
+\]</span> Since <span class="math display">\[
+(n_0+1) \in \mathbb{N}\,,
+\]</span> we have obtained a contradiction, given that <span class="math inline">\(\alpha\)</span> was the supremum of <span class="math inline">\(\mathbb{N}\)</span>. Thus (<a href="#eq-archimedean-proof-2"><span>4.1</span></a>) is false, meaning that there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; x \,.
+\]</span></p>
+<p><em>Part 2.</em> Suppose <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x&gt;0\)</span>. We can define <span class="math display">\[
+y:=\frac1x \,.
+\]</span> By Part 1 there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n &gt; y = \frac{1}{x} \,.
+\]</span> Using that <span class="math inline">\(x&gt;0\)</span>, we can rearrange the above inequlaity to obtain <span class="math display">\[
+\frac1n &lt; x \,,
+\]</span> which is the desired thesis.</p>
+</div></details>
+</div>
+<p>There is another formulation of the Archimedean Property which, depending on the situation, might be more useful. This formulation says the following: If <span class="math inline">\(x,y \in \mathbb{R}\)</span> are such that <span class="math display">\[
+0 &lt; x &lt; y \,,
+\]</span> then there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+nx &gt; y \,.
+\]</span> In other words, if one does <span class="math inline">\(n\)</span> steps of size <span class="math inline">\(x\)</span> in the positive numbers direction, then the resulting number <span class="math inline">\(nx\)</span> will be larger than <span class="math inline">\(y\)</span>. The situation is depicted in <a href="#fig-archimedean">Figure&nbsp;<span>4.2</span></a>.</p>
+<div id="fig-archimedean" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/archimedean.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4.2: For <span class="math inline">\(0&lt;x&lt;y\)</span> there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that that <span class="math inline">\(nx&gt;y\)</span>. In the picture <span class="math inline">\(n=3\)</span>.</figcaption>
+</figure>
+</div>
+<div id="theorem-archimedean-alternative" class="Theorem" title="Archimedean Property (Alternative formulation)">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 3: </strong>Archimedean Property (Alternative formulation)</summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(0&lt;x&lt;y\)</span>. There exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+nx &gt; y \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-2" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction that there does not exist some <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+nx &gt; y \,.
+\]</span> This means that <span id="eq-archimedean-proof-4"><span class="math display">\[
+nx \leq y \,, \quad \forall \, n \in \mathbb{N}\,.
+\tag{4.3}\]</span></span> Define the set <span class="math display">\[
+A := \{ nx \, \colon \,n \in \mathbb{N}\} \,.
+\]</span> Condition (<a href="#eq-archimedean-proof-4"><span>4.3</span></a>) is saying that <span class="math inline">\(A\)</span> is bounded above by <span class="math inline">\(y\)</span>. Morever <span class="math inline">\(A\)</span> is trivially non-empty. By the Axiom of Completeness there exists <span class="math display">\[
+\alpha = \sup A \,.
+\]</span> Since <span class="math inline">\(\alpha\)</span> is the supremum of <span class="math inline">\(A\)</span>, by definition of supremum and of the set <span class="math inline">\(A\)</span>, we have <span id="eq-archimedean-proof-5"><span class="math display">\[
+nx \leq \alpha \,, \quad   \forall \, n \in \mathbb{N}\,.
+\tag{4.4}\]</span></span> As (<a href="#eq-archimedean-proof-5"><span>4.4</span></a>) holds for every <span class="math inline">\(n \in \mathbb{N}\)</span>, then it also holds for <span class="math inline">\((n+1)\)</span>, meaning that <span class="math display">\[
+(n+1) x \leq \alpha \,.
+\]</span> The above implies <span class="math display">\[
+nx \leq \alpha - x \,.
+\]</span> As <span class="math inline">\(n\)</span> was arbitrary, we conclude that <span class="math display">\[
+nx \leq \alpha - x \,, \quad   \forall \, n \in \mathbb{N}\,.
+\]</span> The above is saying that <span class="math inline">\((\alpha - x)\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Since <span class="math inline">\(\alpha\)</span> is the supremum of <span class="math inline">\(A\)</span>, in particular <span class="math inline">\(\alpha\)</span> is the smallest upper bound. Thus it must hold <span class="math display">\[
+\alpha \leq \alpha - x \,.
+\]</span> The above is equivalent to <span class="math display">\[
+x \leq 0 \,,
+\]</span> which contradicts our assumption of <span class="math inline">\(x&gt;0\)</span>. Therefore (<a href="#eq-archimedean-proof-4"><span>4.3</span></a>) is false, and there exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+nx &gt; y \,,
+\]</span> concluding the proof.<p></p>
+</div></details>
+</div>
+</section>
+<section id="nested-interval-property" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="nested-interval-property"><span class="header-section-number">4.2</span> Nested Interval Property</h2>
+<p>Another consequence of the axiom of completeness is the <strong>Nested Interval Property</strong>. This is yet another way of saying the same thing: <span class="math inline">\(\mathbb{R}\)</span> does not have <strong>gaps</strong>.</p>
+<p>Let us look at a construction. Suppose given some closed intervals <span class="math display">\[
+I_n := [a_n,b_n] = \{   x \in \mathbb{R}\, \colon \,a_n \leq x \leq b_n   \} \,,
+\]</span> where the end points are ordered in the following way: <span class="math display">\[
+a_1 \leq a_2 \leq \ldots \leq a_n \leq \dots \leq b_n  \leq \ldots b_n \leq b_1 \,,
+\]</span> as shown in <a href="#fig-nested">Figure&nbsp;<span>4.3</span></a>.</p>
+<div id="fig-nested" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/nested_interval_property.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4.3: Nested intervals <span class="math inline">\(I_n = [a_n,b_n]\)</span>.</figcaption>
+</figure>
+</div>
+<p>The intervals <span class="math inline">\(I_n\)</span> are <strong>nested</strong>, meaning that <span class="math display">\[
+I_1 \supset I_2 \supset I_3 \supset \ldots I_n \supset \ldots
+\]</span> For finite intersections we clearly have <span class="math display">\[
+\bigcap_{n=1}^k  I_n = I_k \,,
+\]</span> that is, intersecting the first <span class="math inline">\(k\)</span> intervals yields <span class="math inline">\(I_k\)</span>, the smallest interval in the sequence.</p>
+<div id="Question-4" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 4</strong></summary><div>Consider the infinite intersection<p></p>
+<p><span class="math display">\[
+\bigcap_{n=1}^\infty I_n := \{  x \in \mathbb{R}\, \colon \,x \in I_n \,, \forall \, n \in \mathbb{N}\}  \,.
+\]</span></p>
+<p>What can we say about it? Is it empty? Is it not empty?</p>
+</div></details>
+</div>
+<p>The answer is that the infinite intersection is not empty, because <span class="math inline">\(\mathbb{R}\)</span> was constructed in a way that it does not have gaps.</p>
+<div id="theorem-nested" class="Theorem" title="Nested Interval Property">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 5: </strong>Nested Interval Property</summary><div>For each <span class="math inline">\(n \in \mathbb{N}\)</span> assume given a closed interval <span class="math display">\[
+I_n := [a_n,b_n] = \{   x \in \mathbb{R}\, \colon \,a_n \leq x \leq b_n   \} \,.
+\]</span> Suppose that the intervals are nested, that is, <span class="math display">\[
+I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Then <span id="eq-theorem-nested-proof-0"><span class="math display">\[
+\bigcap_{n=1}^\infty I_n \neq \emptyset \,.
+\tag{4.5}\]</span></span><p></p>
+</div></details>
+</div>
+<div id="Proof*-3" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>By definition we have <span class="math display">\[
+\bigcap_{n=1}^\infty I_n := \{  x \in \mathbb{R}\, \colon \,x \in I_n \,, \forall \, n \in \mathbb{N}\}  \,.
+\]</span> We want to prove (<a href="#eq-theorem-nested-proof-0"><span>4.5</span></a>). This means we need to find a real number <span class="math inline">\(x\)</span> such that <span id="eq-theorem-nested-proof-1"><span class="math display">\[
+x \in I_n \,, \quad  \forall \, n \in \mathbb{N}\,.
+\tag{4.6}\]</span></span> In particular (<a href="#eq-theorem-nested-proof-1"><span>4.6</span></a>) is saying that it should hold <span class="math display">\[
+x \geq a_n \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> We might be tempted to choose <span class="math inline">\(x\)</span> to be any of the <span class="math inline">\(b_n\)</span>. This choice would indeed satisy the above. However (<a href="#eq-theorem-nested-proof-1"><span>4.6</span></a>) also implies that <span class="math display">\[
+x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Therefore <span class="math inline">\(x\)</span> has to be larger than all the <span class="math inline">\(a_n\)</span>, but not too large. This suggests that <span class="math inline">\(x\)</span> should be defined as a supremum. Define the set <span class="math display">\[
+A:= \{ a_n \, \colon \,n \in \mathbb{N}\} \,.
+\]</span> The set <span class="math inline">\(A\)</span> is non-empty and is bounded above by any of the <span class="math inline">\(b_n\)</span>. Therefore there exists <span class="math display">\[
+x = \sup \ A \,.
+\]</span> By definition of supremum and definition of the set <span class="math inline">\(A\)</span>, we have <span class="math display">\[
+a_n \leq x \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> On the other hand, consider an arbitrary number <span class="math inline">\(b_n\)</span>. By construction we have <span class="math display">\[
+a_i \leq b_n \,, \quad \forall \, i \in \mathbb{N}\,.
+\]</span> Therefore <span class="math inline">\(b_n\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Since the supremum is the smallest upper bound, we conclude that <span class="math display">\[
+x \leq b_n \,.
+\]</span> The index <span class="math inline">\(n\)</span> was chosen arbitrarily, and therefore <span class="math display">\[
+x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> In total we have <span class="math display">\[
+a_n \leq x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> showing that <span class="math inline">\(x\)</span> satisfies (<a href="#eq-theorem-nested-proof-1"><span>4.6</span></a>). Therefore (<a href="#eq-theorem-nested-proof-0"><span>4.5</span></a>) holds and the proof is concluded.<p></p>
+</div></details>
+</div>
+<div id="Important*-4" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The assumption that <span class="math inline">\(I_n\)</span> is <strong>closed</strong> is crucial in Theorem <a href="chap_4.html#theorem-nested">5</a>. Without such assumption the thesis of Theorem <a href="chap_4.html#theorem-nested">5</a> does not hold in general, as seen in Example <a href="chap_4.html#example-nested-open">6</a> below.<p></p>
+</div></details>
+</div>
+<div id="example-nested-open" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>Consider the <strong>open</strong> intervals <span class="math display">\[
+I_n := \left( 0, \frac1n \right) \,.
+\]</span> These are clearly nested <span class="math display">\[
+I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> For this choice of <span class="math inline">\(I_n\)</span> we have <span id="eq-example-nested-2"><span class="math display">\[
+\bigcap_{n=1}^\infty I_n = \emptyset \,.
+\tag{4.7}\]</span></span> Indeed, suppose by contradiction that the intersection is non-empty. Then there exists <span class="math inline">\(x \in \mathbb{N}\)</span> such that <span class="math display">\[
+x \in I_n \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> By definition of <span class="math inline">\(I_n\)</span> the above reads <span id="eq-example-nested"><span class="math display">\[
+0 &lt; x &lt; \frac1n  \,, \quad \forall \, n \in \mathbb{N}\,.
+\tag{4.8}\]</span></span> Since <span class="math inline">\(x&gt;0\)</span>, by the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+0 &lt; \frac{1}{n_0} &lt; x \,.
+\]</span> The above contradicts (<a href="#eq-example-nested"><span>4.8</span></a>). Therefore (<a href="#eq-example-nested-2"><span>4.7</span></a>) holds.<p></p>
+</div></details>
 </div>
 </section>
 <section id="revisiting-sup-and-inf" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</h2>
+<p>We now investigate some of the properties of supremum and infimum in <span class="math inline">\(\mathbb{R}\)</span>. The first property is an alternative characterization of the supremum, which we will often use.</p>
+<div id="proposition-supremum-characterization" class="Proposition" title="Characterization of Supremum">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 7: </strong>Characterization of Supremum</summary><div>
+<p>Let <span class="math inline">\(A \subset \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(s \in \mathbb{R}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
 <ol type="1">
-<li>Characterize sup and inf with epsilon (see Marcellini)</li>
-<li>Compute sup and inf of interval (a,b) - Dommers</li>
-<li>Compute sup and inf of <span class="math display">\[
-\left\{ \frac1n \, \colon \,n \in \mathbb{N}\,, \,\, n \neq 0 \right\}
-\]</span> see Dommers</li>
+<li><span class="math inline">\(s = \sup A\)</span></li>
+<li>For every <span class="math inline">\(\varepsilon&gt; 0\)</span> there exists <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
+s - \varepsilon&lt; x \,.
+\]</span></li>
 </ol>
+</div></details>
+</div>
+<div id="Proof*-5" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1</em>. Assume that <span class="math display">\[
+s = \sup A \,.
+\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span> be arbitrary. We clearly have that <span id="eq-proof-sup-alt-1"><span class="math display">\[
+s - \varepsilon&lt; s \,.
+\tag{4.9}\]</span></span> Therefore <span class="math inline">\((s-\varepsilon)\)</span> cannot be an upper bound of <span class="math inline">\(A\)</span>. Indeed, if by contradiction <span class="math inline">\((s-\varepsilon)\)</span> was an upper bound, then we would have <span class="math display">\[
+s \leq (s - \varepsilon)\,,
+\]</span> since <span class="math inline">\(s\)</span> is the smallest upper bound. The above contradicts (<a href="#eq-proof-sup-alt-1"><span>4.9</span></a>), and therefore <span class="math inline">\((s-\varepsilon)\)</span> is not an upper bound for <span class="math inline">\(A\)</span>. Hence there exists some <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
+s - \varepsilon&lt; x  \, ,
+\]</span> concluding.<p></p>
+<p><em>Step 2</em>. Assume that Point 2 in the statement of Proposition <a href="chap_4.html#proposition-supremum-characterization">7</a> holds. By assumption we have that <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Suppose by contradiction that <span class="math display">\[
+s \neq \sup A \,.
+\]</span> This is equivalent to the statement <span id="eq-proof-sup-alt-2"><span class="math display">\[
+s \, \mbox{ is not the smallest upper bound of } \, A.
+\tag{4.10}\]</span></span> Hence there exists an upper bound <span class="math inline">\(b\)</span> of <span class="math inline">\(A\)</span> such that <span class="math display">\[
+b &lt; s \,.
+\]</span> Let <span class="math display">\[
+\varepsilon:= s - b \,.
+\]</span> By assumption there exists <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
+s - \varepsilon&lt; x \,.
+\]</span> Substituting the definition of <span class="math inline">\(\varepsilon\)</span> we get <span class="math display">\[
+s - s + b &lt; x \quad \implies \quad b &lt; x \,.
+\]</span> Since <span class="math inline">\(b\)</span> is an upper bound for <span class="math inline">\(A\)</span> and <span class="math inline">\(x \in A\)</span>, the above is a contradiction. Therefore (<a href="#eq-proof-sup-alt-2"><span>4.10</span></a>) is false, and <span class="math inline">\(s\)</span> is the smallest upper bound of <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(s = \sup A\)</span>.</p>
+</div></details>
+</div>
+<p>The analogue of Proposition <a href="chap_4.html#proposition-supremum-characterization">7</a> is as follows. The proof is left as an exercise.</p>
+<div id="prop-supremum-infimum" class="Proposition" title="Characterization of Infimum">
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 8: </strong>Characterization of Infimum</summary><div>
+<p>Let <span class="math inline">\(A \subset \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(i \in \mathbb{R}\)</span> is a lower bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
+<ol type="1">
+<li><span class="math inline">\(i = \inf A\)</span></li>
+<li>For every <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span>, with <span class="math inline">\(\varepsilon&gt; 0\)</span>, there exists <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
+x &lt; i + \varepsilon\,.
+\]</span></li>
+</ol>
+</div></details>
+</div>
+<p>With the above characterizations of supremum and infimum, it is now easier to prove that some candidate number is the supremum or infimum of some set. As an example, let us characterize supremum and infimum of an open interval of <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="Proposition-9" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Then <span class="math display">\[
+\inf (a,b) = a \,, \quad \sup (a,b) = b \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-6" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Dommers.<p></p>
+</div></details>
+</div>
+<p>Let us make another example.</p>
+<div id="Proposition-10" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 10</strong></summary><div>Define the set <span class="math display">\[
+A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
+\]</span> Then <span class="math display">\[
+\inf A = 0 \,, \quad \sup A = \max A = 1 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-7" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Dommers<p></p>
+</div></details>
+</div>
 </section>
 <section id="density-of-mathbbq-in-mathbbr" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
+<p>The result we discuss below is so important that it deserves its own section: We are going to show that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. This means that for every given number <span class="math inline">\(x \in \mathbb{R}\)</span>, there exists a rational number <span class="math inline">\(r \in \mathbb{Q}\)</span> which is arbitrarily close to <span class="math inline">\(x\)</span>. This is saying that <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together: For every pair of <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>, there exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
+a &lt; r &lt; b \,.
+\]</span> Let us prove this statement.</p>
+<div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 11: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
+a &lt; r &lt; b \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>The density result of Theorem <a href="chap_4.html#theorem-density">11</a> has a surprising corollary. Indeed, we have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<div id="Question-12" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 12</strong></summary><div>How many gaps were there in <span class="math inline">\(\mathbb{Q}\)</span>? In other words, how many irrational numbers are out there?<p></p>
+</div></details>
+</div>
+<p>The interesting answer to the above question is that there are as many irrational numbers as there are real numbers. Moreover for every pair of real numbers, we can always find and irrational number in between.</p>
+<div id="Corollary-13" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 13</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(t \in (\mathbb{R}\smallsetminus \mathbb{Q})\)</span> such that <span class="math display">\[
+a &lt; t &lt; b \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-8" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Abbott<p></p>
+</div></details>
+</div>
 </section>
 <section id="existence-of-square-roots" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="existence-of-square-roots"><span class="header-section-number">4.5</span> Existence of Square Roots</h2>
