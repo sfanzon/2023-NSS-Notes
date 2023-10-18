@@ -66,19 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -86,47 +78,55 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Example {
+.Remark {
   --color1: #bce5de;
   --color2: #21aa93;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
 }
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -528,54 +528,143 @@ x &lt; i + \varepsilon\,.
 </div></details>
 </div>
 <p>With the above characterizations of supremum and infimum, it is now easier to prove that some candidate number is the supremum or infimum of some set. As an example, let us characterize supremum and infimum of an open interval of <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<div id="Proposition-9" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Then <span class="math display">\[
-\inf (a,b) = a \,, \quad \sup (a,b) = b \,.
+<div id="proposition-interval-inf-sup" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
+\]</span> Then <span class="math display">\[
+\inf A = a \,, \quad \sup A = b \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="Proof*-6" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Dommers.<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We will only prove that <span class="math display">\[
+\inf A = a \,,
+\]</span> since the proof of <span class="math inline">\(\sup A = b\)</span> is similar.<p></p>
+<p>By definition of <span class="math inline">\(A\)</span>, we have that <span class="math inline">\(a\)</span> is a lower bound for <span class="math inline">\(A\)</span>, since <span class="math display">\[
+a &lt; x \,, \quad \forall \, x \in A \,.
+\]</span> We need to prove that <span class="math inline">\(a\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>. To this end, let <span class="math inline">\(L\)</span> be a lower bound for <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
+L \leq x \,, \quad \forall \, x \in A \,.
+\]</span> We have to prove that <span id="eq-interval-inf-sup-proof"><span class="math display">\[
+L \leq a \,.
+\tag{4.11}\]</span></span> Indeed suppose by contradiction that (<a href="#eq-interval-inf-sup-proof"><span>4.11</span></a>) does not hold, namely that <span class="math display">\[
+a &lt; L \,.
+\]</span> Since <span class="math inline">\(a&lt;b\)</span> we have <span class="math display">\[
+a = \frac{2a}{2} &lt; \frac{a+b}{2} &lt; \frac{2b}{b} = b \,,
+\]</span> showing that the midpoint between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> satisfies <span class="math display">\[
+\frac{a+b}{2} \in A \,.
+\]</span> Since <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span> we have <span id="eq-interval-inf-sup-proof-2"><span class="math display">\[
+L \leq \frac{a+b}{2} &lt; b \,.
+\tag{4.12}\]</span></span> Consider the midpoint <span class="math display">\[
+M := \frac{a + L}{2} \,.
+\]</span> We have that <span class="math display">\[
+M \in A \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p>Indeed, recalling that <span class="math inline">\(a&lt;L\)</span>, we have <span class="math display">\[
+a = \frac{2a}{2} &lt; \frac{a+L}{2} = M \,.
+\]</span> Moreover by (<a href="#eq-interval-inf-sup-proof-2"><span>4.12</span></a>) we have <span class="math inline">\(L&lt;b\)</span>. Thus <span class="math display">\[
+M = \frac{a+L}{2} \leq \frac{a+b}{2} &lt; b \,.
+\]</span> This shows <span class="math inline">\(M \in A\)</span>.</p>
+</blockquote>
+<p>Moreover <span class="math display">\[
+M &lt; L \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p>This is because <span class="math inline">\(a&lt;L\)</span>, and therefore <span class="math display">\[
+M = \frac{a + L}{2} &lt; \frac{2L}{2} = L \,.
+\]</span></p>
+</blockquote>
+<p>This is a contradiction, since by assumption <span class="math inline">\(L\)</span> is a lower bound for <span class="math inline">\(A\)</span>, and thus we should have <span class="math display">\[
+L \leq M \,.
+\]</span> Therefore (<a href="#eq-interval-inf-sup-proof"><span>4.11</span></a>) holds, showing that <span class="math inline">\(a\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(a = \inf A\)</span>.</p>
 </div></details>
 </div>
-<p>Let us make another example.</p>
-<div id="Proposition-10" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 10</strong></summary><div>Define the set <span class="math display">\[
+<p>As a corollary of the above we have that the maximum and minimum of an open interval do not exist.</p>
+<div id="Corollary-10" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 10</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
+\]</span> Then <span class="math inline">\(\min A\)</span> and <span class="math inline">\(\max A\)</span> do not exist.<p></p>
+</div></details>
+</div>
+<div id="Proof*-7" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction that <span class="math inline">\(\min A\)</span> exists. We have shown that if the minimum of a set exists, then it must be <span class="math display">\[
+\min A = \inf A \,.
+\]</span> Since <span class="math display">\[
+\inf A = a\,,
+\]</span> by Proposition <a href="chap_4.html#proposition-interval-inf-sup">9</a>, we would obtain that <span class="math display">\[
+\min A = a \,.
+\]</span> By definition <span class="math inline">\(\min A \in A\)</span>, so that <span class="math inline">\(a \in A\)</span>. This is contradiction. Then <span class="math inline">\(\min A\)</span> does not exist.<p></p>
+<p>The proof that <span class="math inline">\(\max A\)</span> does not exist is similar, and is left as an exercise.</p>
+</div></details>
+</div>
+<p>We can also consider intervals for which one or both of the sides are closed.</p>
+<div id="Corollary-11" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 11</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+A:= [a,b) = \{ x \in \mathbb{R}\, \colon \,a \leq x &lt; b \}\,.
+\]</span> Then <span class="math display">\[
+\min A = \inf A = a \,, \quad \sup A = b \,,
+\]</span> <span class="math inline">\(\max A\)</span> does not exist.<p></p>
+</div></details>
+</div>
+<p>The proof is very similar to the ones above, and is left to the reader for exercise. Let us now compute supremum and infimum of a set which is not an interval.</p>
+<div id="Proposition-12" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 12</strong></summary><div>Define the set <span class="math display">\[
 A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 \]</span> Then <span class="math display">\[
 \inf A = 0 \,, \quad \sup A = \max A = 1 \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-7" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Dommers<p></p>
+<div id="Proof*-8" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We have <span class="math display">\[
+\frac1n \leq 1 \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Since <span class="math inline">\(1 \in A\)</span>, we conclude that <span class="math display">\[
+\max A = \sup A = 1 \,.
+\]</span><p></p>
+<p><em>Part 2.</em> We have <span class="math display">\[
+\frac1n &gt; 0 \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> showing that <span class="math inline">\(0\)</span> is a lower bound for <span class="math inline">\(A\)</span>. Suppose by contradiction that <span class="math inline">\(0\)</span> is not the infimum. Therefore <span class="math inline">\(0\)</span> is not the largest lower bound. Then there exists <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span> such that:</p>
+<ul>
+<li><p><span class="math inline">\(\varepsilon\)</span> is a lower bound for <span class="math inline">\(A\)</span>, that is, <span id="eq-lower-bound-1-n"><span class="math display">\[
+\varepsilon\leq \frac1n  \,, \quad \forall \, n \in \mathbb{N}\,,
+\tag{4.13}\]</span></span></p></li>
+<li><p><span class="math inline">\(\varepsilon\)</span> is larger than <span class="math inline">\(0\)</span>: <span class="math display">\[
+0 &lt; \varepsilon\,.
+\]</span></p></li>
+</ul>
+<p>As <span class="math inline">\(\varepsilon&gt;0\)</span>, by the Archimedean Property there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+0 &lt; \frac{1}{n_0} &lt; \varepsilon\,.
+\]</span> This contradicts (<a href="#eq-lower-bound-1-n"><span>4.13</span></a>). Thus <span class="math inline">\(0\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>, that is, <span class="math inline">\(0 = \inf A\)</span>.</p>
+<p><em>Part 3.</em> We have that <span class="math inline">\(\min A\)</span> does not exist. Indeed suppose by contradiction that <span class="math inline">\(\min A\)</span> exists. Then <span class="math display">\[
+\min A = \inf A \,.
+\]</span> As <span class="math inline">\(\inf A = 0\)</span> by Part 2, we conclude <span class="math inline">\(\min A = 0\)</span>. As <span class="math inline">\(\min A \in A\)</span>, we obtain <span class="math inline">\(0 \in A\)</span>, which is a contradiction.</p>
 </div></details>
 </div>
 </section>
 <section id="density-of-mathbbq-in-mathbbr" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
-<p>The result we discuss below is so important that it deserves its own section: We are going to show that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. This means that for every given number <span class="math inline">\(x \in \mathbb{R}\)</span>, there exists a rational number <span class="math inline">\(r \in \mathbb{Q}\)</span> which is arbitrarily close to <span class="math inline">\(x\)</span>. This is saying that <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together: For every pair of <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>, there exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
+<p>The result we discuss below is so important that it deserves its own section: We are going to show that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. This means that for every given number <span class="math inline">\(x \in \mathbb{R}\)</span>, there exists a rational number <span class="math inline">\(r \in \mathbb{Q}\)</span> which is arbitrarily close to <span class="math inline">\(x\)</span>. In other words, <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together: For every pair of <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>, there exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
 a &lt; r &lt; b \,.
 \]</span> Let us prove this statement.</p>
 <div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 11: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
 a &lt; r &lt; b \,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>The density result of Theorem <a href="chap_4.html#theorem-density">11</a> has a surprising corollary. Indeed, we have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
-<div id="Question-12" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 12</strong></summary><div>How many gaps were there in <span class="math inline">\(\mathbb{Q}\)</span>? In other words, how many irrational numbers are out there?<p></p>
+<p>The density result of Theorem <a href="chap_4.html#theorem-density">13</a> has a surprising corollary. Indeed, we have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<div id="Question-14" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 14</strong></summary><div>How many gaps are there in <span class="math inline">\(\mathbb{Q}\)</span>? In other words, how many irrational numbers are out there?<p></p>
 </div></details>
 </div>
-<p>The interesting answer to the above question is that there are as many irrational numbers as there are real numbers. Moreover for every pair of real numbers, we can always find and irrational number in between.</p>
-<div id="Corollary-13" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 13</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(t \in (\mathbb{R}\smallsetminus \mathbb{Q})\)</span> such that <span class="math display">\[
+<p>The answer is that there are as many irrational numbers as there are real numbers. Moreover for every pair of real numbers, we can always find and irrational number in between.</p>
+<div id="Corollary-15" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 15</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(t \in (\mathbb{R}\smallsetminus \mathbb{Q})\)</span> such that <span class="math display">\[
 a &lt; t &lt; b \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-8" class="Proof">
+<div id="Proof*-9" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Abbott<p></p>
 </div></details>
 </div>

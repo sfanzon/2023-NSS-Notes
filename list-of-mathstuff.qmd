@@ -265,21 +265,27 @@
 
  [**Proposition 4.8**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
 
- [**Proposition 4.9**](#Proposition-4.9)\Pageref{Proposition-4.9}
+ [**Proposition 4.9**](#proposition-interval-inf-sup)\Pageref{proposition-interval-inf-sup}
 
  [**Proof**](#Proof*-4.6)\Pageref{Proof*-4.6}
 
- [**Proposition 4.10**](#Proposition-4.10)\Pageref{Proposition-4.10}
+ [**Corollary 4.10**](#Corollary-4.10)\Pageref{Corollary-4.10}
 
  [**Proof**](#Proof*-4.7)\Pageref{Proof*-4.7}
 
- [**Theorem 4.11**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+ [**Corollary 4.11**](#Corollary-4.11)\Pageref{Corollary-4.11}
 
- [**Question 4.12**](#Question-4.12)\Pageref{Question-4.12}
-
- [**Corollary 4.13**](#Corollary-4.13)\Pageref{Corollary-4.13}
+ [**Proposition 4.12**](#Proposition-4.12)\Pageref{Proposition-4.12}
 
  [**Proof**](#Proof*-4.8)\Pageref{Proof*-4.8}
+
+ [**Theorem 4.13**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+
+ [**Question 4.14**](#Question-4.14)\Pageref{Question-4.14}
+
+ [**Corollary 4.15**](#Corollary-4.15)\Pageref{Corollary-4.15}
+
+ [**Proof**](#Proof*-4.9)\Pageref{Proof*-4.9}
 
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 

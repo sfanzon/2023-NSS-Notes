@@ -486,11 +486,15 @@ prove that some candidate number is the supremum or infimum of some set.
 As an example, let us characterize supremum and infimum of an open interval of $\R$.
 
 
-::: Proposition
+::: {.Proposition  #proposition-interval-inf-sup}
 
-Let $a, b \in \R$ with $a<b$. Then
+Let $a, b \in \R$ with $a<b$. Let
 $$
-\inf (a,b) = a \,, \quad \sup (a,b) = b \,.
+A:= (a,b) = \{ x \in \R \divider a < x < b \}\,.
+$$
+Then
+$$
+\inf A = a \,, \quad \sup A = b \,.
 $$
 
 :::
@@ -498,12 +502,137 @@ $$
 
 ::: Proof
 
-Dommers.
+We will only prove that 
+$$
+\inf A = a \,,
+$$
+since the proof of $\sup A = b$ is similar. 
+
+By definition of $A$, we have that $a$ is a lower bound for $A$, since 
+$$
+a < x \,, \quad \forall \, x \in A \,.
+$$
+We need to prove that $a$ is the largest lower bound of $A$. To this end, let $L$ be a lower bound for $A$, that is,
+$$
+L \leq x \,, \quad \forall \, x \in A \,.
+$$
+We have to prove that
+$$
+L \leq a \,.
+$${#eq-interval-inf-sup-proof}
+Indeed suppose by contradiction that (@eq-interval-inf-sup-proof) does not hold, namely that
+$$
+a < L \,.
+$$
+Since $a<b$ we have
+$$
+a = \frac{2a}{2} < \frac{a+b}{2} < \frac{2b}{b} = b \,,
+$$
+showing that the midpoint between $a$ and $b$ satisfies
+$$
+\frac{a+b}{2} \in A \,.
+$$
+Since $L$ is a lower bound for $A$ we have
+$$
+L \leq \frac{a+b}{2} < b \,.
+$${#eq-interval-inf-sup-proof-2}
+Consider the midpoint
+$$
+M := \frac{a + L}{2} \,. 
+$$
+We have that 
+$$
+M \in A \,.
+$$
+
+> Indeed, recalling that $a<L$, we have
+$$
+a = \frac{2a}{2} < \frac{a+L}{2} = M \,. 
+$$
+Moreover by (@eq-interval-inf-sup-proof-2) we have $L<b$. Thus
+$$
+M = \frac{a+L}{2} \leq \frac{a+b}{2} < b \,.
+$$
+This shows $M \in A$.
+
+
+Moreover 
+$$
+M < L \,.
+$$
+
+> This is because $a<L$, and therefore
+$$
+M = \frac{a + L}{2} < \frac{2L}{2} = L \,.
+$$
+
+
+This is a contradiction, since by assumption $L$ is a lower bound for $A$, and thus we should have 
+$$
+L \leq M \,.
+$$
+Therefore (@eq-interval-inf-sup-proof) holds, showing that $a$ is the largest lower bound of $A$. Thus $a = \inf A$.
+:::
+
+
+
+
+
+As a corollary of the above we have that the maximum and minimum of an open interval do not exist.
+
+
+
+
+::: Corollary
+
+Let $a, b \in \R$ with $a<b$. Let
+$$
+A:= (a,b) = \{ x \in \R \divider a < x < b \}\,.
+$$
+Then $\min A$ and $\max A$ do not exist.
+:::
+
+::: Proof
+
+Suppose by contradiction that $\min A$ exists. We have shown that if the minimum of a set exists, then it must be
+$$
+\min A = \inf A \,.
+$$
+Since 
+$$
+\inf A = a\,,
+$$
+by Proposition \ref{proposition-interval-inf-sup}, we would obtain that
+$$
+\min A = a \,.
+$$
+By definition $\min A \in A$, so that $a \in A$. This is contradiction. Then $\min A$ does not exist. 
+
+The proof that $\max A$ does not exist is similar, and is left as an exercise.
+:::
+
+
+We can also consider intervals for which one or both of the sides are closed.
+
+
+::: Corollary
+
+Let $a, b \in \R$ with $a<b$. Let
+$$
+A:= [a,b) = \{ x \in \R \divider a \leq x < b \}\,.
+$$
+Then 
+$$
+\min A = \inf A = a \,, \quad \sup A = b \,,
+$$ 
+$\max A$ does not exist.
+
 
 :::
 
 
-Let us make another example. 
+The proof is very similar to the ones above, and is left to the reader for exercise. Let us now compute supremum and infimum of 
+a set which is not an interval.
 
 
 ::: Proposition
@@ -521,7 +650,44 @@ $$
 
 ::: Proof
 
-Dommers
+*Part 1.* We have
+$$
+\frac1n \leq 1 \,, \quad \forall \, n \in \N \,.
+$$
+Since $1 \in A$, we conclude that 
+$$
+\max A = \sup A = 1 \,.
+$$
+
+
+*Part 2.* We have
+$$
+\frac1n > 0 \,, \quad \forall \, n \in \N \,,
+$$
+showing that $0$ is a lower bound for $A$. Suppose by contradiction that $0$ is not the infimum. Therefore $0$ is not the largest lower bound. Then there exists $\e \in \R$ such that:
+
+- $\e$ is a lower bound for $A$, that is,
+$$
+\e \leq \frac1n  \,, \quad \forall \, n \in \N \,,
+$${#eq-lower-bound-1-n}
+
+- $\e$ is larger than $0$:
+$$
+0 < \e \,.
+$$
+
+As $\e>0$, by the Archimedean Property there exists $n_0 \in \N$ such that
+$$
+0 < \frac{1}{n_0} < \e \,.
+$$
+This contradicts (@eq-lower-bound-1-n). Thus $0$ is the largest lower bound of $A$, that is, $0 = \inf A$.
+
+
+*Part 3.* We have that $\min A$ does not exist. Indeed suppose by contradiction that $\min A$ exists. Then 
+$$
+\min A = \inf A \,.
+$$
+As $\inf A = 0$ by Part 2, we conclude $\min A = 0$. As $\min A \in A$, we obtain $0 \in A$, which is a contradiction.
 :::
 
 
@@ -538,7 +704,7 @@ Dommers
 
 The result we discuss below is so important that it deserves its own section: We are going to
 show that $\Q$ is dense in $\R$. This means that for every given number $x \in \R$, there exists
-a rational number $r \in \Q$ which is arbitrarily close to $x$. This is saying that $\Q$ and 
+a rational number $r \in \Q$ which is arbitrarily close to $x$. In other words, $\Q$ and 
 $\R$ are tightly knitted together: For every pair of $a,b \in \R$ with $a<b$, there exists $r \in \Q$ such that
 $$
 a < r < b \,.
@@ -562,12 +728,12 @@ constructed the real numbers $\R$ so that they would fill the **gaps** of $\Q$.
 
 ::: Question
 
-How many gaps were there in $\Q$? In other words, how many irrational numbers are out there?
+How many gaps are there in $\Q$? In other words, how many irrational numbers are out there?
 
 :::
 
 
-The interesting answer to the above question is that there are as many irrational numbers 
+The answer is that there are as many irrational numbers 
 as there are real numbers. Moreover for every pair of real numbers, we can always find
 and irrational number in between.
 
