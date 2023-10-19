@@ -25,19 +25,16 @@
   \node at (0.4, 0.5) {$A$};
   
   % Draw the brace and label it
-  \draw[decorate,decoration={brace,amplitude=5pt}] (-3.97,0.4) -- (-1.55,0.4) node[midway,above=5pt] {\mbox{lower bounds}};
-
-  \node[magenta, anchor=south] at (-1.5,-0.9) {$\inf A$};
+  \draw[decorate,decoration={brace,mirror,amplitude=5pt}] (-3.97,-0.4) -- (1.80,-0.4) node[midway,below=5pt] {\footnotesize$B^c = $\mbox{ not upper bounds of} $A$};
   
-  \draw[line width=2pt, magenta] (-1.5,-0.3) -- (-1.5,0.3);
 
   
   
-   \draw[decorate,decoration={brace,amplitude=5pt}] (1.9,0.4) -- (4,0.4) node[midway,above=5pt] {\mbox{upper bounds}};
-
-  \node[magenta, anchor=south] at (1.88,-0.9) {$\sup A$};  
+   \draw[decorate,decoration={brace,mirror,amplitude=5pt}] (1.95,-0.4) -- (4,-0.4) node[midway,below=6pt] {\footnotesize$B = $\mbox{ upper bounds of} $A$};
+  
   \draw[line width=2pt, magenta] (1.88,-0.3) -- (1.88,0.3);
-
+  
+  \node[anchor=south, magenta] at (1.88,0.4) {$s = \sup A$};
   
 
   

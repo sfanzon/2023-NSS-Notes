@@ -66,9 +66,41 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Proof {
   --color1: #f1f1f2;
@@ -78,57 +110,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
 }
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -251,7 +251,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lower-bound-infimum-minimum" id="toc-lower-bound-infimum-minimum" class="nav-link" data-scroll-target="#lower-bound-infimum-minimum"><span class="header-section-number">3.4.2</span> Lower bound, infimum, minimum</a></li>
   </ul></li>
   <li><a href="#completeness" id="toc-completeness" class="nav-link" data-scroll-target="#completeness"><span class="header-section-number">3.5</span> Completeness</a></li>
-  <li><a href="#axioms-of-real-numbers" id="toc-axioms-of-real-numbers" class="nav-link" data-scroll-target="#axioms-of-real-numbers"><span class="header-section-number">3.6</span> Axioms of Real Numbers</a></li>
+  <li><a href="#equivalence-of-completeness-and-cut-property" id="toc-equivalence-of-completeness-and-cut-property" class="nav-link" data-scroll-target="#equivalence-of-completeness-and-cut-property"><span class="header-section-number">3.6</span> Equivalence of Completeness and Cut Property</a></li>
+  <li><a href="#axioms-of-real-numbers" id="toc-axioms-of-real-numbers" class="nav-link" data-scroll-target="#axioms-of-real-numbers"><span class="header-section-number">3.7</span> Axioms of Real Numbers</a></li>
   </ul>
 </nav>
     </div>
@@ -625,7 +626,7 @@ A \cap B = \emptyset \, .
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/partition.png" class="img-fluid figure-img" style="width:55.0%"></p>
-<figcaption class="figure-caption">Schematic picture of partition</figcaption>
+<figcaption class="figure-caption">Schematic picture of a partition <span class="math inline">\((A,B)\)</span> of the set <span class="math inline">\(K\)</span>.</figcaption>
 </figure>
 </div>
 <div id="cut-of-a-set" class="Definition" title="Cut of a set">
@@ -1214,7 +1215,10 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>We can show that <strong>Completeness</strong> is equivalent to the <strong>Cut Property</strong>.</p>
+</section>
+<section id="equivalence-of-completeness-and-cut-property" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="equivalence-of-completeness-and-cut-property"><span class="header-section-number">3.6</span> Equivalence of Completeness and Cut Property</h2>
+<p>We can show that <strong>Completeness</strong> is equivalent to the <strong>Cut Property</strong>. Such result is not essential, but its proof is very instructive.</p>
 <div id="theorem-cut-complete" class="Theorem" title="Equivalence of Cut Property and Completeness">
 <details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 41: </strong>Equivalence of Cut Property and Completeness</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot, \leq)\)</span> be an ordered field. Then they are equivalent:</p>
@@ -1224,31 +1228,76 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-13" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>.<br>
+<div id="ideas-for-proving-theorem" class="Remark" title="Ideas for proving Theorem 41">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42: </strong>Ideas for proving Theorem 41</summary><div>The proof of Theorem <a href="chap_3.html#theorem-cut-complete">41</a> is rather long, but the ideas are simple:<p></p>
+<p><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>. Suppose <span class="math inline">\(K\)</span> has the Cut Property. To prove that <span class="math inline">\(K\)</span> is Complete, we need to:</p>
+<ul>
+<li><p>Consider an arbitrary set <span class="math inline">\(A \subset K\)</span> such that <span class="math inline">\(A \neq \emptyset\)</span> and <span class="math inline">\(A\)</span> is bounded above.</p></li>
+<li><p>Show that <span class="math inline">\(A\)</span> has a supremum.</p></li>
+</ul>
+<p>To achieve this, consider the set <span class="math display">\[
+B := \{ b \in K \, \colon \,b \geq a \,, \,\, \forall a \in A \} \,,
+\]</span> which is the set of Upper Bounds of <span class="math inline">\(A\)</span>. We can show that the pair <span class="math display">\[
+(B^c,B)
+\]</span> is a Cut of <span class="math inline">\(K\)</span>. As <span class="math inline">\(K\)</span> has the Cut Property, then there exists <span class="math inline">\(s \in K\)</span> separator of <span class="math inline">\((B^c,B)\)</span>. We will show that the separator <span class="math inline">\(s\)</span> is the supremum of <span class="math inline">\(A\)</span> <span class="math display">\[
+s = \sup A \,.
+\]</span> Thus <span class="math inline">\(K\)</span> is complete. See <a href="#fig-cut-complete-1">Figure&nbsp;<span>3.1</span></a> for a schematic picture of the above construction.</p>
+<p><em>Step 2. Completeness <span class="math inline">\(\implies\)</span> Cut Property</em>. Conversely, suppose that <span class="math inline">\(K\)</span> is Complete. To prove that <span class="math inline">\(K\)</span> has the Cut Property, we need to:</p>
+<ul>
+<li>Consider a cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(K\)</span>.</li>
+<li>Show that <span class="math inline">\((A,B)\)</span> has a separator <span class="math inline">\(s \in K\)</span>.</li>
+</ul>
+<p>This implication is easier. Indeed, since <span class="math inline">\(A\)</span> is non-empty and bounded above, by Completeness there exists <span class="math display">\[
+\sup A \in K \,.
+\]</span> We will show that <span class="math display">\[
+s := \sup A
+\]</span> is a separator for the cut <span class="math inline">\((A,B)\)</span>. See <a href="#fig-cut-complete-2">Figure&nbsp;<span>3.2</span></a> for a schematic picture of the above construction.</p>
+</div></details>
+</div>
+<div id="fig-cut-complete-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/construction_cut_1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;3.1: Let <span class="math inline">\(s\)</span> be the separator of the cut <span class="math inline">\((B^c,B)\)</span>, with <span class="math inline">\(B\)</span> the set of upper bounds of <span class="math inline">\(A\)</span>. Then <span class="math inline">\(s = \sup A\)</span>.</figcaption>
+</figure>
+</div>
+<div id="fig-cut-complete-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/construction_cut_2.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;3.2: Let <span class="math inline">\((A,B)\)</span> be a cut of <span class="math inline">\(K\)</span> and let <span class="math inline">\(s = \sup A\)</span>. Then <span class="math inline">\(s\)</span> is the separator of the cut <span class="math inline">\((A,B)\)</span>.</figcaption>
+</figure>
+</div>
+<p>Keeping the above ideas in mind, let us proceed with the proof.</p>
+<div id="proof-of-theorem-1" class="Proof" title="Proof of Theorem 41">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 41</summary><div><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>.<br>
 We need to prove that <span class="math inline">\(K\)</span> is complete. To this end, consider <span class="math inline">\(A \subset K\)</span> non-empty and bounded above. Define the set of upper bounds of <span class="math inline">\(A\)</span>: <span class="math display">\[
 B := \{ b \in K \, \colon \,b \geq a \,, \,\, \forall a \in A \} \,.
 \]</span><p></p>
 <p><em>Claim. The pair <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span>.</em></p>
-<p><em>Proof of Claim</em>.<br>
-<span class="math inline">\((B^c,B)\)</span> forms a partition of <span class="math inline">\(K\)</span>.</p>
+<p><em>Proof of Claim</em>. We have to prove two points:</p>
+<ul>
+<li><span class="math inline">\((B^c,B)\)</span> forms a partition of <span class="math inline">\(K\)</span>.</li>
+</ul>
 <blockquote class="blockquote">
-<p>Indeed, we have <span class="math inline">\(B \neq \emptyset\)</span>, since <span class="math inline">\(A\)</span> is bounded above. Further, we have <span class="math inline">\(B \neq K\)</span>: this is because otherwise every point of <span class="math inline">\(K\)</span> would be an upper bound of <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(A\)</span> would be empty. Hence <span class="math display">\[
-B \neq \emptyset \,, \quad B \neq K \,,
-\]</span> which shows that <span class="math inline">\(B^c \neq \emptyset\)</span> and <span class="math display">\[
+<p>Indeed, we have <span class="math inline">\(B \neq \emptyset\)</span>, since <span class="math inline">\(A\)</span> is bounded above. Further, we have <span class="math inline">\(B^c \neq \emptyset\)</span>, since <span class="math inline">\(A\)</span> is non-empty. Thus <span class="math display">\[
 K = B^c \cup B \,, \quad B^c \cap B =  \emptyset \,.
 \]</span> Then <span class="math inline">\((B^c,B)\)</span> is a partition of <span class="math inline">\(K\)</span>.</p>
 </blockquote>
-<p>Moreover we have <span id="eq-equiv-cut-complete-1"><span class="math display">\[
+<ul>
+<li>We have <span id="eq-equiv-cut-complete-1"><span class="math display">\[
 x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
-\tag{3.18}\]</span></span> To show the above, let <span class="math inline">\(x \in B^c\)</span> and <span class="math inline">\(y \in B\)</span>. By definition of <span class="math inline">\(B\)</span> we have that elements of <span class="math inline">\(B^c\)</span> are not upper bounds of <span class="math inline">\(A\)</span>. Therefore <span class="math inline">\(x\)</span> is not an upper bound. This means there exists <span class="math inline">\(\tilde{a} \in A\)</span> which is larger than <span class="math inline">\(x\)</span>, that is, <span class="math display">\[
+\tag{3.18}\]</span></span></li>
+</ul>
+<blockquote class="blockquote">
+<p>To show the above, let <span class="math inline">\(x \in B^c\)</span> and <span class="math inline">\(y \in B\)</span>. By definition of <span class="math inline">\(B\)</span> we have that elements of <span class="math inline">\(B^c\)</span> are not upper bounds of <span class="math inline">\(A\)</span>. Therefore <span class="math inline">\(x\)</span> is not an upper bound. This means there exists <span class="math inline">\(\tilde{a} \in A\)</span> which is larger than <span class="math inline">\(x\)</span>, that is, <span class="math display">\[
 x \leq \tilde{a} \,.
 \]</span> Since <span class="math inline">\(y \in B\)</span>, then <span class="math inline">\(y\)</span> is an upper bound for <span class="math inline">\(A\)</span>, so that <span class="math display">\[
 a \leq y \,, \,\, \forall a \in A\,.
 \]</span> Therefore <span class="math display">\[
 x \leq \tilde{a} \leq y \,,
-\]</span> concluding (<a href="#eq-equiv-cut-complete-1"><span>3.18</span></a>) and the claim.</p>
-<p>Since <span class="math inline">\((B^c,B)\)</span> is a cut, by the Cut Propery there exists a separator <span class="math inline">\(s \in K\)</span> such that <span id="eq-equiv-cut-complete-2"><span class="math display">\[
+\]</span> concluding (<a href="#eq-equiv-cut-complete-1"><span>3.18</span></a>).</p>
+</blockquote>
+<p>Thus <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span> and the claim is proven.</p>
+<p>Since <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span>, by the Cut Property there exists a separator <span class="math inline">\(s \in K\)</span> such that <span id="eq-equiv-cut-complete-2"><span class="math display">\[
 x \leq s \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
 \tag{3.19}\]</span></span></p>
 <p><em>Claim. <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>.</em></p>
@@ -1259,13 +1308,19 @@ s &lt; \tilde{a} \,.
 m:=\frac{s + \tilde{a}}{2} \in K \,.
 \]</span> Since <span class="math inline">\(m\)</span> is the mid-point between <span class="math inline">\(s\)</span> and <span class="math inline">\(\tilde{a}\)</span>, and <span class="math inline">\(s &lt; \tilde{a}\)</span>, it holds <span class="math display">\[
 s &lt; m &lt; \tilde{a} \,.
-\]</span> In particular the above tells us that <span class="math inline">\(m\)</span> is not an upper bound for <span class="math inline">\(A\)</span>, given that <span class="math inline">\(\tilde{a} \in A\)</span>. Therefore <span class="math inline">\(m \in B^c\)</span>. By (<a href="#eq-equiv-cut-complete-2"><span>3.19</span></a>) we then have <span class="math display">\[
+\]</span></p>
+<blockquote class="blockquote">
+<p>Indeed, since <span class="math inline">\(s &lt; \tilde{a}\)</span> then <span class="math display">\[
+s = \frac{2s}{2} &lt; \frac{s + \tilde{a}}{2} &lt; \frac{2 \tilde{a}}{2} = \tilde{a} \,.
+\]</span></p>
+</blockquote>
+<p>In particular the above tells us that <span class="math inline">\(m\)</span> is not an upper bound for <span class="math inline">\(A\)</span>, given that <span class="math inline">\(\tilde{a} \in A\)</span> and <span class="math inline">\(m &lt; \tilde{a}\)</span>. Therefore <span class="math inline">\(m \in B^c\)</span>, by definition of <span class="math inline">\(B^c\)</span>. Therefore(<a href="#eq-equiv-cut-complete-2"><span>3.19</span></a>) implies <span class="math display">\[
 m \leq s \,,
-\]</span> which contradicts <span class="math inline">\(s &lt; m\)</span>. Therefore <span class="math inline">\(s\)</span> is an upper bound of <span class="math inline">\(A\)</span>.</p>
+\]</span> which contradicts <span class="math inline">\(s &lt; m\)</span>. Hence <span class="math inline">\(s\)</span> is an upper bound of <span class="math inline">\(A\)</span>, concluding the proof of Claim.</p>
 <p><em>Conclusion</em>. We have shown that <span class="math inline">\(s\)</span> is an upper bound of <span class="math inline">\(A\)</span>. Condition<br>
 (<a href="#eq-equiv-cut-complete-2"><span>3.19</span></a>) tells us that <span class="math display">\[
 s \leq y \,, \,\, \forall y \in B \,.
-\]</span> Recalling that <span class="math inline">\(B\)</span> is the set of upper bounds of <span class="math inline">\(A\)</span>, this means that <span class="math inline">\(s\)</span> is the least upper bound of <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
+\]</span> Recalling that <span class="math inline">\(B\)</span> is the set of upper bounds of <span class="math inline">\(A\)</span>, this means that <span class="math inline">\(s\)</span> is the smallest upper bound of <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
 s = \sup A \in K \,.
 \]</span></p>
 <p><em>Step 2. Completeness <span class="math inline">\(\implies\)</span> Cut Property</em>.<br>
@@ -1274,10 +1329,10 @@ A \neq \emptyset\,, \quad B \neq \emptyset \,,
 \]</span> <span class="math display">\[
 K = A \cup B\,, \quad A \cap B = \emptyset \,,
 \]</span> <span id="eq-equiv-cut-complete-3"><span class="math display">\[
-a \leq b \,, \quad \forall a \in A \,, \,\, b \in B \,.
-\tag{3.20}\]</span></span> Since <span class="math inline">\(B \neq \emptyset\)</span>, from (<a href="#eq-equiv-cut-complete-3"><span>3.20</span></a>) it follows that <span class="math inline">\(A\)</span> is bounded above: just take any element <span class="math inline">\(b \in B\)</span> in estimate (<a href="#eq-equiv-cut-complete-3"><span>3.20</span></a>) to see it. Since <span class="math inline">\(A \neq \emptyset\)</span>, by Completeness we have <span class="math display">\[
+a \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
+\tag{3.20}\]</span></span> Since <span class="math inline">\(B \neq \emptyset\)</span>, from (<a href="#eq-equiv-cut-complete-3"><span>3.20</span></a>) it follows that <span class="math inline">\(A\)</span> is bounded above: indeed, every element of <span class="math inline">\(B\)</span> is an upper bound for <span class="math inline">\(A\)</span>, thanks to (<a href="#eq-equiv-cut-complete-3"><span>3.20</span></a>). Since <span class="math inline">\(A \neq \emptyset\)</span>, by the Axiom of Completeness we have <span class="math display">\[
 s = \sup A \in K \,.
-\]</span> In particular <span class="math display">\[
+\]</span> In particular, by definition of supremum, we have <span class="math display">\[
 a \leq s \,, \,\, \forall \, a \in A \,.
 \]</span> Let now <span class="math inline">\(b \in B\)</span> be arbitrary. From (<a href="#eq-equiv-cut-complete-3"><span>3.20</span></a>) we have that <span id="eq-equiv-cut-complete-4"><span class="math display">\[
 a \leq b \,, \,\, \forall \, a \in A \,.
@@ -1291,16 +1346,16 @@ a \leq s \leq b \,, \,\, \forall a \in A \,,  \, \forall \, b \in B \,,
 </div></details>
 </div>
 </section>
-<section id="axioms-of-real-numbers" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="axioms-of-real-numbers"><span class="header-section-number">3.6</span> Axioms of Real Numbers</h2>
-<p>We now have all the key elements to introduce the Real Numbers <span class="math inline">\(\mathbb{R}\)</span>. These ingredients are</p>
+<section id="axioms-of-real-numbers" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="axioms-of-real-numbers"><span class="header-section-number">3.7</span> Axioms of Real Numbers</h2>
+<p>We now have all the key elements to introduce the Real Numbers <span class="math inline">\(\mathbb{R}\)</span>. These ingredients are:</p>
 <ul>
-<li>Definition of <strong>ordered field</strong></li>
-<li>The <strong>Cut Property</strong> or <strong>Axiom of Completeness</strong></li>
+<li>Definition of <strong>ordered field</strong>,</li>
+<li>The <strong>Cut Property</strong> or <strong>Axiom of Completeness</strong>.</li>
 </ul>
 <p>The definition of <span class="math inline">\(\mathbb{R}\)</span> is given in an axiomatic way.</p>
-<div id="system-of-real-numbers-mathbbr" class="Definition" title="System of Real Numbers \mathbb{R}">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 42: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
+<div id="definition-R" class="Definition" title="System of Real Numbers \mathbb{R}">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 43: </strong>System of Real Numbers <span class="math inline">\(\mathbb{R}\)</span></summary><div>
 <p>A system of Real Numbers is a set <span class="math inline">\(\mathbb{R}\)</span> satisfying the following properties:</p>
 <ol type="1">
 <li>There is an operation <span class="math inline">\(+\)</span> of <strong>addition</strong> on <span class="math inline">\(\mathbb{R}\)</span> <span class="math display">\[
@@ -1372,9 +1427,9 @@ a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
 </ol>
 </div></details>
 </div>
-<div id="Remark-43" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 43</strong></summary><div>
-<p>Since <strong>Cut Property</strong> and <strong>Axiom of Completeness</strong> are equivalent by Theorem <a href="chap_3.html#theorem-cut-complete">41</a>, one can replace the Cut Property at Point 5 with:</p>
+<div id="Remark-44" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 44</strong></summary><div>
+<p>Since <strong>Cut Property</strong> and <strong>Axiom of Completeness</strong> are equivalent by Theorem <a href="chap_3.html#theorem-cut-complete">41</a>, one can replace the Cut Property in Definition <a href="chap_3.html#definition-R">43</a> Point 5 with:</p>
 <ol start="5" type="1">
 <li><strong>Axiom of Completeness</strong> holds:
 <ul>
@@ -1385,14 +1440,14 @@ a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
 </ol>
 </div></details>
 </div>
-<div id="Notation-44" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 44</strong></summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x \neq 0\)</span>, the multiplicative inverse is also denoted by <span class="math display">\[
+<div id="Notation-45" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 45</strong></summary><div>For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x \neq 0\)</span>, the multiplicative inverse is also denoted by <span class="math display">\[
 x^{-1} = \frac{1}{x} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Remark-45" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 45</strong></summary><div>
+<div id="Remark-46" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 46</strong></summary><div>
 <p>Recall that</p>
 <ul>
 <li><span class="math inline">\((K,+,\cdot)\)</span> satisfying <span class="math display">\[
@@ -1417,8 +1472,8 @@ x^{-1} = \frac{1}{x} \,.
 </div></details>
 </div>
 <p>The above has to be intended in the following sense: if <span class="math inline">\((K,+, \cdot,\geq)\)</span> is another complete ordered field, then <span class="math inline">\(K\)</span> <em>looks like</em> <span class="math inline">\(\mathbb{R}\)</span>. Mathematically this means that there exists an invertible map <span class="math inline">\(\Psi \ \colon \mathbb{R}\to K\)</span>, called isomorphism of fields, which preserves <span class="math inline">\(+\)</span>, <span class="math inline">\(\cdot\)</span> and <span class="math inline">\(\leq\)</span>.</p>
-<div id="Question-46" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 46</strong></summary><div>We have only postulated the existence of <span class="math inline">\(\mathbb{R}\)</span>. Does such complete ordered field actually exist?<p></p>
+<div id="Question-47" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 47</strong></summary><div>We have only postulated the existence of <span class="math inline">\(\mathbb{R}\)</span>. Does such complete ordered field actually exist?<p></p>
 </div></details>
 </div>
 <p>The answer is <strong>YES</strong>, and there are several models for such <span class="math inline">\(\mathbb{R}\)</span>. If time allows, we will look into one of these models at the end of the module.</p>

@@ -483,7 +483,7 @@ $$
 
 
 
-![Schematic picture of partition](/images/partition.png){width=55%}
+![Schematic picture of a partition $(A,B)$ of the set $K$.](/images/partition.png){width=55%}
 
 
 ::: Definition
@@ -1376,9 +1376,11 @@ $$
 
 
 
+## Equivalence of Completeness and Cut Property
 
 
-We can show that **Completeness** is equivalent to the **Cut Property**.  
+
+We can show that **Completeness** is equivalent to the **Cut Property**. Such result is not essential, but its proof is very instructive.
 
 
 ::: Theorem 
@@ -1391,7 +1393,63 @@ Let $(K,+,\cdot, \leq)$ be an ordered field. Then they are equivalent:
 :::
 
 
-::: Proof
+::: Remark
+### Ideas for proving Theorem \ref{theorem-cut-complete}
+
+The proof of Theorem \ref{theorem-cut-complete} is rather long, but the ideas are simple:
+
+*Step 1. Cut Property $\implies$ Completeness*. Suppose $K$ has the Cut Property. To prove that $K$ is Complete, we need to: 
+
+- Consider an arbitrary set $A \subset K$ such that $A \neq \emptyset$ and $A$ is bounded above.
+
+- Show that $A$ has a supremum.  
+
+To achieve this, consider the set
+$$
+B := \{ b \in K \divider b \geq a \,, \,\, \forall a \in A \} \,,
+$$
+which is the set of Upper Bounds of $A$. We can show that the pair
+$$
+(B^c,B)
+$$
+is a Cut of $K$. As $K$ has the Cut Property, then there exists
+$s \in K$ separator of $(B^c,B)$. We will show that the separator $s$ is the supremum of $A$ 
+$$
+s = \sup A \,.
+$$
+Thus $K$ is complete. See @fig-cut-complete-1 for a schematic picture of the above construction.
+
+
+*Step 2. Completeness $\implies$ Cut Property*.
+Conversely, suppose that $K$ is Complete. To prove that $K$ has the Cut Property, we need to:
+
+- Consider a cut $(A,B)$ of $K$.
+- Show that $(A,B)$ has a separator $s \in K$.
+
+This implication is easier. Indeed, since $A$ is non-empty and bounded above, by Completeness there exists
+$$
+\sup A \in K \,.
+$$
+We will show that
+$$
+s := \sup A 
+$$
+is a separator for the cut $(A,B)$. See @fig-cut-complete-2 for a schematic picture of the above construction.
+
+
+:::
+
+
+![Let $s$ be the separator of the cut $(B^c,B)$, with $B$ the set of upper bounds of $A$. Then $s = \sup A$.](/images/construction_cut_1.png){#fig-cut-complete-1 width=80%}
+
+
+![Let $(A,B)$ be a cut of $K$ and let $s = \sup A$. Then $s$ is the separator of the cut $(A,B)$.](/images/construction_cut_2.png){#fig-cut-complete-2 width=80%}
+
+
+Keeping the above ideas in mind, let us proceed with the proof.
+
+::: Proof 
+### Proof of Theorem \ref{theorem-cut-complete}
 
 *Step 1. Cut Property $\implies$ Completeness*.  
 We need to prove that $K$ is complete. To this end, consider $A \subset K$ non-empty and bounded above. Define the set of upper bounds of $A$:
@@ -1404,24 +1462,22 @@ $$
 *Claim. The pair $(B^c,B)$ is a cut of $K$.*  
 
 
-*Proof of Claim*.  
-$(B^c,B)$ forms a partition of $K$. 
+*Proof of Claim*.  We have to prove two points:
 
-> Indeed, we have $B \neq \emptyset$, since $A$ is bounded above. Further, we have $B \neq K$: this is because otherwise every point of $K$ would be an upper bound of $A$. Thus $A$ would be empty. Hence 
-$$
-B \neq \emptyset \,, \quad B \neq K \,,
-$$
-which shows that $B^c \neq \emptyset$ and
+- $(B^c,B)$ forms a partition of $K$. 
+
+> Indeed, we have $B \neq \emptyset$, since $A$ is bounded above. Further, we have $B^c \neq \emptyset$, since $A$ is non-empty. Thus
 $$
 K = B^c \cup B \,, \quad B^c \cap B =  \emptyset \,.
 $$
 Then $(B^c,B)$ is a partition of $K$.
 
-Moreover we have
+- We have
 $$
 x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
 $${#eq-equiv-cut-complete-1}
-To show the above, let $x \in B^c$ and $y \in B$. By definition of $B$ we have that elements of $B^c$ are not upper bounds of $A$. Therefore $x$ is not an upper bound. This means there exists $\tilde{a} \in A$ which is larger than $x$, that is,
+
+> To show the above, let $x \in B^c$ and $y \in B$. By definition of $B$ we have that elements of $B^c$ are not upper bounds of $A$. Therefore $x$ is not an upper bound. This means there exists $\tilde{a} \in A$ which is larger than $x$, that is,
 $$
 x \leq \tilde{a} \,.
 $$
@@ -1433,9 +1489,11 @@ Therefore
 $$
 x \leq \tilde{a} \leq y \,,
 $$
-concluding (@eq-equiv-cut-complete-1) and the claim.
+concluding (@eq-equiv-cut-complete-1).
 
-Since $(B^c,B)$ is a cut, by the Cut Propery there exists a separator $s \in K$ such that 
+Thus $(B^c,B)$ is a cut of $K$ and the claim is proven.
+
+Since $(B^c,B)$ is a cut of $K$, by the Cut Property there exists a separator $s \in K$ such that 
 $$
 x \leq s \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
 $${#eq-equiv-cut-complete-2}
@@ -1455,18 +1513,25 @@ Since $m$ is the mid-point between $s$ and $\tilde{a}$, and $s < \tilde{a}$, it 
 $$
 s < m < \tilde{a} \,.
 $$
-In particular the above tells us that $m$ is not an upper bound for $A$, given that $\tilde{a} \in A$. Therefore $m \in B^c$. By (@eq-equiv-cut-complete-2) we then have
+
+> Indeed, since $s < \tilde{a}$ then
+$$
+s = \frac{2s}{2} < \frac{s + \tilde{a}}{2} < \frac{2 \tilde{a}}{2} = \tilde{a} \,.
+$$
+
+In particular the above tells us that $m$ is not an upper bound for $A$, given that $\tilde{a} \in A$ and $m < \tilde{a}$. Therefore $m \in B^c$, by definition of $B^c$. Therefore(@eq-equiv-cut-complete-2) implies
 $$
 m \leq s \,,
 $$
-which contradicts $s < m$. Therefore $s$ is an upper bound of $A$.
+which contradicts $s < m$. Hence $s$ is an upper bound of $A$, concluding the proof of Claim.
+
 
 *Conclusion*. We have shown that $s$ is an upper bound of $A$. Condition  
 (@eq-equiv-cut-complete-2) tells us that 
 $$
 s \leq y \,, \,\, \forall y \in B \,.
 $$
-Recalling that $B$ is the set of upper bounds of $A$, this means that $s$ is the least upper bound of $A$, that is, 
+Recalling that $B$ is the set of upper bounds of $A$, this means that $s$ is the smallest upper bound of $A$, that is, 
 $$
 s = \sup A \in K \,.
 $$
@@ -1480,13 +1545,13 @@ $$
 K = A \cup B\,, \quad A \cap B = \emptyset \,,
 $$
 $$
-a \leq b \,, \quad \forall a \in A \,, \,\, b \in B \,.
+a \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
 $${#eq-equiv-cut-complete-3}
-Since $B \neq \emptyset$, from (@eq-equiv-cut-complete-3) it follows that $A$ is bounded above: just take any element $b \in B$ in estimate (@eq-equiv-cut-complete-3) to see it. Since $A \neq \emptyset$, by Completeness we have
+Since $B \neq \emptyset$, from (@eq-equiv-cut-complete-3) it follows that $A$ is bounded above: indeed, every element of $B$ is an upper bound for $A$, thanks to (@eq-equiv-cut-complete-3). Since $A \neq \emptyset$, by the Axiom of Completeness we have
 $$
 s = \sup A \in K \,.
 $$
-In particular 
+In particular, by definition of supremum, we have 
 $$
 a \leq s \,, \,\, \forall \, a \in A \,. 
 $$
@@ -1514,16 +1579,16 @@ showing that $s$ is a separator of $(A,B)$. Thus $K$ has the Cut Property.
 
 ## Axioms of Real Numbers
 
-We now have all the key elements to introduce the Real Numbers $\R$. These ingredients are
+We now have all the key elements to introduce the Real Numbers $\R$. These ingredients are:
 
-- Definition of **ordered field**
-- The **Cut Property** or **Axiom of Completeness**
+- Definition of **ordered field**,
+- The **Cut Property** or **Axiom of Completeness**.
 
 The definition of $\R$ is given in an axiomatic way.
 
 
 ::: Definition
-### System of Real Numbers $\R$
+### System of Real Numbers $\R$   {#definition-R}
 
 A system of Real Numbers is a set $\R$ satisfying the following properties:
 
@@ -1615,7 +1680,7 @@ The multiplication satisifes: $\, \forall \, x,y,z \in \R$
 
 
 ::: Remark
-Since **Cut Property** and **Axiom of Completeness** are equivalent by Theorem \ref{theorem-cut-complete}, one can replace the Cut Property at Point 5 with:  
+Since **Cut Property** and **Axiom of Completeness** are equivalent by Theorem \ref{theorem-cut-complete}, one can replace the Cut Property in Definition \ref{definition-R} Point 5  with:  
 
 5. **Axiom of Completeness** holds:
     - (AC) For every $A \subset \R$ non-empty and bounded above 

@@ -66,13 +66,13 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Corollary {
   --color1: #f4cce0;
@@ -82,23 +82,35 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Conjecture {
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -110,23 +122,11 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -242,12 +242,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link active" data-scroll-target="#archimedean-property"><span class="header-section-number">4.1</span> Archimedean Property</a></li>
-  <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link" data-scroll-target="#nested-interval-property"><span class="header-section-number">4.2</span> Nested Interval Property</a></li>
-  <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</a></li>
-  <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
-  <li><a href="#existence-of-square-roots" id="toc-existence-of-square-roots" class="nav-link" data-scroll-target="#existence-of-square-roots"><span class="header-section-number">4.5</span> Existence of Square Roots</a></li>
-  <li><a href="#cardinality" id="toc-cardinality" class="nav-link" data-scroll-target="#cardinality"><span class="header-section-number">4.6</span> Cardinality</a></li>
+  <li><a href="#special-subsets-of-mathbbr" id="toc-special-subsets-of-mathbbr" class="nav-link active" data-scroll-target="#special-subsets-of-mathbbr"><span class="header-section-number">4.1</span> Special subsets of <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#archimedean-property" id="toc-archimedean-property" class="nav-link" data-scroll-target="#archimedean-property"><span class="header-section-number">4.2</span> Archimedean Property</a></li>
+  <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link" data-scroll-target="#nested-interval-property"><span class="header-section-number">4.3</span> Nested Interval Property</a></li>
+  <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">4.4</span> Revisiting Sup and inf</a></li>
+  <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.5</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
+  <li><a href="#existence-of-square-roots" id="toc-existence-of-square-roots" class="nav-link" data-scroll-target="#existence-of-square-roots"><span class="header-section-number">4.6</span> Existence of Square Roots</a></li>
+  <li><a href="#cardinality" id="toc-cardinality" class="nav-link" data-scroll-target="#cardinality"><span class="header-section-number">4.7</span> Cardinality</a></li>
   </ul>
 </nav>
     </div>
@@ -272,9 +273,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> as a <strong>complete ordered field</strong>, let us investigate some of the properties of <span class="math inline">\(\mathbb{R}\)</span>. These will be consequence of the axioms of the real numbers, particulaly of the <strong>Axiom of Completeness</strong>.</p>
-<section id="archimedean-property" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">4.1</span> Archimedean Property</h2>
-<p>The first propery of <span class="math inline">\(\mathbb{R}\)</span> we investigate is the Archimedean property. This is on of the most useful properties of <span class="math inline">\(\mathbb{R}\)</span>, and it essentially states that the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span> is not bounded above in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<section id="special-subsets-of-mathbbr" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="special-subsets-of-mathbbr"><span class="header-section-number">4.1</span> Special subsets of <span class="math inline">\(\mathbb{R}\)</span></h2>
+</section>
+<section id="archimedean-property" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">4.2</span> Archimedean Property</h2>
+<p>The Archimedean property is one of the most useful properties of <span class="math inline">\(\mathbb{R}\)</span>, and it essentially states that the set of natural numbers <span class="math inline">\(\mathbb{N}\)</span> is not bounded above in <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <p>More precisley, the Archimedean Property says two things:</p>
 <ol type="1">
 <li><p>For any <span class="math inline">\(x \in \mathbb{R}\)</span> we can always find a natural number <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
@@ -391,8 +395,8 @@ nx &gt; y \,,
 </div></details>
 </div>
 </section>
-<section id="nested-interval-property" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="nested-interval-property"><span class="header-section-number">4.2</span> Nested Interval Property</h2>
+<section id="nested-interval-property" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="nested-interval-property"><span class="header-section-number">4.3</span> Nested Interval Property</h2>
 <p>Another consequence of the axiom of completeness is the <strong>Nested Interval Property</strong>. This is yet another way of saying the same thing: <span class="math inline">\(\mathbb{R}\)</span> does not have <strong>gaps</strong>.</p>
 <p>Let us look at a construction. Suppose given some closed intervals <span class="math display">\[
 I_n := [a_n,b_n] = \{   x \in \mathbb{R}\, \colon \,a_n \leq x \leq b_n   \} \,,
@@ -476,8 +480,8 @@ x \in I_n \,, \quad \forall \, n \in \mathbb{N}\,.
 </div></details>
 </div>
 </section>
-<section id="revisiting-sup-and-inf" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</h2>
+<section id="revisiting-sup-and-inf" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">4.4</span> Revisiting Sup and inf</h2>
 <p>We now investigate some of the properties of supremum and infimum in <span class="math inline">\(\mathbb{R}\)</span>. The first property is an alternative characterization of the supremum, which we will often use.</p>
 <div id="proposition-supremum-characterization" class="Proposition" title="Characterization of Supremum">
 <details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 7: </strong>Characterization of Supremum</summary><div>
@@ -641,11 +645,16 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 </div></details>
 </div>
 </section>
-<section id="density-of-mathbbq-in-mathbbr" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
-<p>The result we discuss below is so important that it deserves its own section: We are going to show that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. This means that for every given number <span class="math inline">\(x \in \mathbb{R}\)</span>, there exists a rational number <span class="math inline">\(r \in \mathbb{Q}\)</span> which is arbitrarily close to <span class="math inline">\(x\)</span>. In other words, <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together: For every pair of <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>, there exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
+<section id="density-of-mathbbq-in-mathbbr" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.5</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
+<p>In this section we show that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. Density can be explained in two equivalent ways:</p>
+<ul>
+<li><p>For every given number <span class="math inline">\(x \in \mathbb{R}\)</span>, there exists a rational number <span class="math inline">\(r \in \mathbb{Q}\)</span> which is arbitrarily close to <span class="math inline">\(x\)</span>.</p></li>
+<li><p>For every pair of <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>, there exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
 a &lt; r &lt; b \,.
-\]</span> Let us prove this statement.</p>
+\]</span></p></li>
+</ul>
+<p>In other words, the above statements are saying that <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together. Let us give a proof of this statement.</p>
 <div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
 a &lt; r &lt; b \,.
@@ -654,7 +663,7 @@ a &lt; r &lt; b \,.
 </div>
 <p>The density result of Theorem <a href="chap_4.html#theorem-density">13</a> has a surprising corollary. Indeed, we have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <div id="Question-14" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 14</strong></summary><div>How many gaps are there in <span class="math inline">\(\mathbb{Q}\)</span>? In other words, how many irrational numbers are out there?<p></p>
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 14</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
 </div></details>
 </div>
 <p>The answer is that there are as many irrational numbers as there are real numbers. Moreover for every pair of real numbers, we can always find and irrational number in between.</p>
@@ -669,11 +678,11 @@ a &lt; t &lt; b \,.
 </div></details>
 </div>
 </section>
-<section id="existence-of-square-roots" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="existence-of-square-roots"><span class="header-section-number">4.5</span> Existence of Square Roots</h2>
+<section id="existence-of-square-roots" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="existence-of-square-roots"><span class="header-section-number">4.6</span> Existence of Square Roots</h2>
 </section>
-<section id="cardinality" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="cardinality"><span class="header-section-number">4.6</span> Cardinality</h2>
+<section id="cardinality" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="cardinality"><span class="header-section-number">4.7</span> Cardinality</h2>
 <p>Brief. Use Dommers</p>
 
 

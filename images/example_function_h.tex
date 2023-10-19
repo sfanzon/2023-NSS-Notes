@@ -7,7 +7,7 @@
 \begin{tikzpicture}
   % Ellipse A
   \draw (0,0) ellipse (2cm and 2.5cm);
-  \node at (0, 3) {$A$};
+ magenta, thick
   \fill (0, 1) circle (2pt) node[above] {$a_1$};
   \fill (0, -1) circle (2pt) node[below] {$a_2$};
   
@@ -19,7 +19,7 @@
   \fill (7, -1.5) circle (2pt) node[below] {$b_3$};
  
    % Arrow from a_1 to b_2
-  \draw[->][red] (0.3, 1) -- (6.7, 1.47);
+  \draw[->][magenta, thick] (0.3, 1) -- (6.7, 1.47);
   
      
     % Label "f" on top of the arrow

@@ -14,12 +14,17 @@ Now that we established the axiomatic definition of the Real Numbers $\R$ as a *
 
 
 
+## Special subsets of $\R$
+
+
+
+
+
 
 
 ## Archimedean Property
 
-
-The first propery of $\R$ we investigate is the Archimedean property. This is on of the most useful properties of $\R$, and it essentially states that the set of natural numbers $\N$ is not bounded above in $\R$. 
+The Archimedean property is one of the most useful properties of $\R$, and it essentially states that the set of natural numbers $\N$ is not bounded above in $\R$. 
 
 
 More precisley, the Archimedean Property says two things:
@@ -702,14 +707,18 @@ As $\inf A = 0$ by Part 2, we conclude $\min A = 0$. As $\min A \in A$, we obtai
 ## Density of $\Q$ in $\R$
 
 
-The result we discuss below is so important that it deserves its own section: We are going to
-show that $\Q$ is dense in $\R$. This means that for every given number $x \in \R$, there exists
-a rational number $r \in \Q$ which is arbitrarily close to $x$. In other words, $\Q$ and 
-$\R$ are tightly knitted together: For every pair of $a,b \in \R$ with $a<b$, there exists $r \in \Q$ such that
+In this section we show that $\Q$ is dense in $\R$. Density can be explained in two equivalent ways:
+
+- For every given number $x \in \R$, there exists
+a rational number $r \in \Q$ which is arbitrarily close to $x$. 
+
+- For every pair of $a,b \in \R$ with $a<b$, there exists $r \in \Q$ such that
 $$
 a < r < b \,.
 $$
-Let us prove this statement.
+
+In other words, the above statements are saying that $\Q$ and $\R$ are tightly knitted together. 
+Let us give a proof of this statement.
 
 
 ::: Theorem 
@@ -728,7 +737,7 @@ constructed the real numbers $\R$ so that they would fill the **gaps** of $\Q$.
 
 ::: Question
 
-How many gaps are there in $\Q$? In other words, how many irrational numbers are out there?
+How many gaps does $\Q$ have? In other words, how many irrational numbers are out there?
 
 :::
 
