@@ -1741,4 +1741,4 @@ $\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves $+$, $\c
 We have only postulated the existence of $\R$. Does such complete ordered field actually exist? 
 :::
 
-The answer is **YES**, and there are several models for such $\R$. If time allows, we will look into one of these models at the end of the module.
+The answer is **YES**, and there are several equivalent models for such $\R$. If time allows, we will look into one of these models at the end of the module.

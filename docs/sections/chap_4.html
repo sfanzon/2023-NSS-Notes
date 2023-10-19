@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Theorem {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -74,27 +74,35 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Corollary {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Axiom {
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -102,31 +110,23 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Definition {
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.Warning {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -297,12 +297,16 @@ n &gt; x \,.
 </div>
 <div id="Remark-1" class="Remark">
 <details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 1</strong></summary><div>
-<p>The Archimedean property might sound trivial. However it far from trivial. Indeed there are examples of ordered fields <span class="math inline">\(K\)</span> that satisfy:</p>
+<p>The Archimedean property might sound trivial. However there are examples of ordered fields <span class="math inline">\(K\)</span> that satisfy:</p>
 <ol type="1">
 <li><span class="math inline">\(\mathbb{N}\subset K\)</span>.</li>
 <li><span class="math inline">\(K\)</span> does not have the Archimedean property.</li>
 <li>In particular, <span class="math inline">\(\mathbb{N}\)</span> is bounded above in <span class="math inline">\(K\)</span>.</li>
 </ol>
+<p>Of course such fields <span class="math inline">\(K\)</span> cannot be complete.</p>
+<blockquote class="blockquote">
+<p>If <span class="math inline">\(K\)</span> is complete, then <span class="math inline">\(K\)</span> is essentially <span class="math inline">\(\mathbb{R}\)</span>, and we are going to prove the Archimedean Property holds in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</blockquote>
 </div></details>
 </div>
 <p>Let us proceed with the precise statement of the Archimedean property in <span class="math inline">\(\mathbb{R}\)</span>.</p>
@@ -438,11 +442,15 @@ I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
 \bigcap_{n=1}^\infty I_n := \{  x \in \mathbb{R}\, \colon \,x \in I_n \,, \forall \, n \in \mathbb{N}\}  \,.
 \]</span> We want to prove (<a href="#eq-theorem-nested-proof-0"><span>4.5</span></a>). This means we need to find a real number <span class="math inline">\(x\)</span> such that <span id="eq-theorem-nested-proof-1"><span class="math display">\[
 x \in I_n \,, \quad  \forall \, n \in \mathbb{N}\,.
-\tag{4.6}\]</span></span> In particular (<a href="#eq-theorem-nested-proof-1"><span>4.6</span></a>) is saying that it should hold <span class="math display">\[
+\tag{4.6}\]</span></span><p></p>
+<blockquote class="blockquote">
+<p>Idea of the Proof: Condition (<a href="#eq-theorem-nested-proof-1"><span>4.6</span></a>) is saying that it should hold <span class="math display">\[
 x \geq a_n \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> We might be tempted to choose <span class="math inline">\(x\)</span> to be any of the <span class="math inline">\(b_n\)</span>. This choice would indeed satisy the above. However (<a href="#eq-theorem-nested-proof-1"><span>4.6</span></a>) also implies that <span class="math display">\[
 x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
-\]</span> Therefore <span class="math inline">\(x\)</span> has to be larger than all the <span class="math inline">\(a_n\)</span>, but not too large. This suggests that <span class="math inline">\(x\)</span> should be defined as a supremum. Define the set <span class="math display">\[
+\]</span> Therefore <span class="math inline">\(x\)</span> has to be larger than all the <span class="math inline">\(a_n\)</span>, but not too large. This suggests that <span class="math inline">\(x\)</span> should be defined as a supremum.</p>
+</blockquote>
+<p>Define the set <span class="math display">\[
 A:= \{ a_n \, \colon \,n \in \mathbb{N}\} \,.
 \]</span> The set <span class="math inline">\(A\)</span> is non-empty and is bounded above by any of the <span class="math inline">\(b_n\)</span>. Therefore there exists <span class="math display">\[
 x = \sup \ A \,.
@@ -456,7 +464,7 @@ x \leq b_n \,.
 x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> In total we have <span class="math display">\[
 a_n \leq x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,,
-\]</span> showing that <span class="math inline">\(x\)</span> satisfies (<a href="#eq-theorem-nested-proof-1"><span>4.6</span></a>). Therefore (<a href="#eq-theorem-nested-proof-0"><span>4.5</span></a>) holds and the proof is concluded.<p></p>
+\]</span> showing that <span class="math inline">\(x\)</span> satisfies (<a href="#eq-theorem-nested-proof-1"><span>4.6</span></a>). Therefore (<a href="#eq-theorem-nested-proof-0"><span>4.5</span></a>) holds and the proof is concluded.</p>
 </div></details>
 </div>
 <div id="Important*-4" class="Important">
@@ -474,7 +482,7 @@ I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
 x \in I_n \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> By definition of <span class="math inline">\(I_n\)</span> the above reads <span id="eq-example-nested"><span class="math display">\[
 0 &lt; x &lt; \frac1n  \,, \quad \forall \, n \in \mathbb{N}\,.
-\tag{4.8}\]</span></span> Since <span class="math inline">\(x&gt;0\)</span>, by the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\tag{4.8}\]</span></span> Since <span class="math inline">\(x&gt;0\)</span>, by the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 0 &lt; \frac{1}{n_0} &lt; x \,.
 \]</span> The above contradicts (<a href="#eq-example-nested"><span>4.8</span></a>). Therefore (<a href="#eq-example-nested-2"><span>4.7</span></a>) holds.<p></p>
 </div></details>
@@ -482,7 +490,7 @@ x \in I_n \,, \quad \forall \, n \in \mathbb{N}\,.
 </section>
 <section id="revisiting-sup-and-inf" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">4.4</span> Revisiting Sup and inf</h2>
-<p>We now investigate some of the properties of supremum and infimum in <span class="math inline">\(\mathbb{R}\)</span>. The first property is an alternative characterization of the supremum, which we will often use.</p>
+<p>We now investigate some of the properties of supremum and infimum in <span class="math inline">\(\mathbb{R}\)</span>. The first property is an alternative characterization of the supremum, which we will often use. A sketch of such characterization is in <a href="#fig-alternative-sup">Figure&nbsp;<span>4.4</span></a> below.</p>
 <div id="proposition-supremum-characterization" class="Proposition" title="Characterization of Supremum">
 <details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 7: </strong>Characterization of Supremum</summary><div>
 <p>Let <span class="math inline">\(A \subset \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(s \in \mathbb{R}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
@@ -494,8 +502,14 @@ s - \varepsilon&lt; x \,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-5" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1</em>. Assume that <span class="math display">\[
+<div id="fig-alternative-sup" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/alternative_supremum.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4.4: Let <span class="math inline">\(s = \sup A\)</span>. Then for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exist <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(s-\varepsilon&lt;x\)</span>.</figcaption>
+</figure>
+</div>
+<div id="proof-of-proposition" class="Proof" title="Proof of Proposition 7">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Proposition 7</summary><div><em>Step 1</em>. Assume that <span class="math display">\[
 s = \sup A \,.
 \]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span> be arbitrary. We clearly have that <span id="eq-proof-sup-alt-1"><span class="math display">\[
 s - \varepsilon&lt; s \,.
@@ -531,6 +545,13 @@ x &lt; i + \varepsilon\,.
 </ol>
 </div></details>
 </div>
+<p>A sketch of the characterization in Proposition <a href="chap_4.html#prop-supremum-infimum">8</a> can be found in <a href="#fig-alternative-inf">Figure&nbsp;<span>4.5</span></a> below.</p>
+<div id="fig-alternative-inf" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/alternative_infimum.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4.5: Let <span class="math inline">\(i = \inf A\)</span>. Then for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exist <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(x&lt;i+\varepsilon\)</span>.</figcaption>
+</figure>
+</div>
 <p>With the above characterizations of supremum and infimum, it is now easier to prove that some candidate number is the supremum or infimum of some set. As an example, let us characterize supremum and infimum of an open interval of <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="proposition-interval-inf-sup" class="Proposition">
 <p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
@@ -543,10 +564,14 @@ A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
 <div id="Proof*-6" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We will only prove that <span class="math display">\[
 \inf A = a \,,
-\]</span> since the proof of <span class="math inline">\(\sup A = b\)</span> is similar.<p></p>
-<p>By definition of <span class="math inline">\(A\)</span>, we have that <span class="math inline">\(a\)</span> is a lower bound for <span class="math inline">\(A\)</span>, since <span class="math display">\[
+\]</span> since the proof of <span class="math display">\[
+\sup A = b
+\]</span> is similar.<p></p>
+<p>By definition of <span class="math inline">\(A\)</span>, we have that <span class="math display">\[
 a &lt; x \,, \quad \forall \, x \in A \,.
-\]</span> We need to prove that <span class="math inline">\(a\)</span> is the largest lower bound of <span class="math inline">\(A\)</span>. To this end, let <span class="math inline">\(L\)</span> be a lower bound for <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
+\]</span> The above says that <span class="math inline">\(a\)</span> is a lower bound for <span class="math inline">\(A\)</span>.</p>
+<p><em>Claim. <span class="math inline">\(a\)</span> is the largest lower bound of <span class="math inline">\(A\)</span></em>.</p>
+<p><em>Proof of Claim.</em> Let <span class="math inline">\(L\)</span> be a lower bound for <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
 L \leq x \,, \quad \forall \, x \in A \,.
 \]</span> We have to prove that <span id="eq-interval-inf-sup-proof"><span class="math display">\[
 L \leq a \,.

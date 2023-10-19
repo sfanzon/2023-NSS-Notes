@@ -263,7 +263,7 @@
 
  [**Proposition 4.7**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
 
- [**Proof**](#Proof*-4.5)\Pageref{Proof*-4.5}
+ [**Proof**](#proof-of-proposition): Proof of Proposition 4.7\Pageref{proof-of-proposition}
 
  [**Proposition 4.8**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
 
