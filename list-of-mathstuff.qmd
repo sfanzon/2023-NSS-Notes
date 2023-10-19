@@ -241,53 +241,79 @@
 
  [**Question 3.47**](#Question-3.47)\Pageref{Question-3.47}
 
- [**Remark 4.1**](#Remark-4.1)\Pageref{Remark-4.1}
+ [**Definition 4.1**](#inductive-set): Inductive set\Pageref{inductive-set}
 
- [**Theorem 4.2**](#theorem-archimedean): Archimedean Property\Pageref{theorem-archimedean}
+ [**Example 4.2**](#Example-4.2)\Pageref{Example-4.2}
+
+ [**Proposition 4.3**](#Proposition-4.3)\Pageref{Proposition-4.3}
 
  [**Proof**](#Proof*-4.1)\Pageref{Proof*-4.1}
 
- [**Theorem 4.3**](#theorem-archimedean-alternative): Archimedean Property (Alternative formulation)\Pageref{theorem-archimedean-alternative}
+ [**Definition 4.4**](#set-of-natural-numbers): Set of Natural Numbers\Pageref{set-of-natural-numbers}
+
+ [**Theorem 4.5**](#theorem-smallest-inductive): ${\mathbb{N}}_{\mathbb{R}}$ is the smallest inductive subset of $\mathbb{R}$\Pageref{theorem-smallest-inductive}
 
  [**Proof**](#Proof*-4.2)\Pageref{Proof*-4.2}
 
- [**Question 4.4**](#Question-4.4)\Pageref{Question-4.4}
-
- [**Theorem 4.5**](#theorem-nested): Nested Interval Property\Pageref{theorem-nested}
+ [**Theorem 4.6**](#Theorem-4.6)\Pageref{Theorem-4.6}
 
  [**Proof**](#Proof*-4.3)\Pageref{Proof*-4.3}
 
- [**Important**](#Important*-4.4)\Pageref{Important*-4.4}
+ [**Notation 4.7**](#Notation-4.7)\Pageref{Notation-4.7}
 
- [**Example 4.6**](#example-nested-open)\Pageref{example-nested-open}
+ [**Theorem 4.8**](#principle-of-induction-1): Principle of Induction\Pageref{principle-of-induction-1}
 
- [**Proposition 4.7**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
+ [**Proof**](#Proof*-4.4)\Pageref{Proof*-4.4}
 
- [**Proof**](#proof-of-proposition): Proof of Proposition 4.7\Pageref{proof-of-proposition}
+ [**Notation 4.9**](#Notation-4.9)\Pageref{Notation-4.9}
 
- [**Proposition 4.8**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
+ [**Remark 4.10**](#Remark-4.10)\Pageref{Remark-4.10}
 
- [**Proposition 4.9**](#proposition-interval-inf-sup)\Pageref{proposition-interval-inf-sup}
+ [**Theorem 4.11**](#theorem-archimedean): Archimedean Property\Pageref{theorem-archimedean}
+
+ [**Proof**](#Proof*-4.5)\Pageref{Proof*-4.5}
+
+ [**Theorem 4.12**](#theorem-archimedean-alternative): Archimedean Property (Alternative formulation)\Pageref{theorem-archimedean-alternative}
 
  [**Proof**](#Proof*-4.6)\Pageref{Proof*-4.6}
 
- [**Corollary 4.10**](#Corollary-4.10)\Pageref{Corollary-4.10}
+ [**Question 4.13**](#Question-4.13)\Pageref{Question-4.13}
+
+ [**Theorem 4.14**](#theorem-nested): Nested Interval Property\Pageref{theorem-nested}
 
  [**Proof**](#Proof*-4.7)\Pageref{Proof*-4.7}
 
- [**Corollary 4.11**](#Corollary-4.11)\Pageref{Corollary-4.11}
+ [**Important**](#Important*-4.8)\Pageref{Important*-4.8}
 
- [**Proposition 4.12**](#Proposition-4.12)\Pageref{Proposition-4.12}
+ [**Example 4.15**](#example-nested-open)\Pageref{example-nested-open}
 
- [**Proof**](#Proof*-4.8)\Pageref{Proof*-4.8}
+ [**Proposition 4.16**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
 
- [**Theorem 4.13**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+ [**Proof**](#proof-of-proposition): Proof of Proposition 4.16\Pageref{proof-of-proposition}
 
- [**Question 4.14**](#Question-4.14)\Pageref{Question-4.14}
+ [**Proposition 4.17**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
 
- [**Corollary 4.15**](#Corollary-4.15)\Pageref{Corollary-4.15}
+ [**Proposition 4.18**](#proposition-interval-inf-sup)\Pageref{proposition-interval-inf-sup}
 
- [**Proof**](#Proof*-4.9)\Pageref{Proof*-4.9}
+ [**Proof**](#Proof*-4.10)\Pageref{Proof*-4.10}
+
+ [**Corollary 4.19**](#Corollary-4.19)\Pageref{Corollary-4.19}
+
+ [**Proof**](#Proof*-4.11)\Pageref{Proof*-4.11}
+
+ [**Corollary 4.20**](#Corollary-4.20)\Pageref{Corollary-4.20}
+
+ [**Proposition 4.21**](#Proposition-4.21)\Pageref{Proposition-4.21}
+
+ [**Proof**](#Proof*-4.12)\Pageref{Proof*-4.12}
+
+ [**Theorem 4.22**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+
+ [**Question 4.23**](#Question-4.23)\Pageref{Question-4.23}
+
+ [**Corollary 4.24**](#Corollary-4.24)\Pageref{Corollary-4.24}
+
+ [**Proof**](#Proof*-4.13)\Pageref{Proof*-4.13}
 
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 

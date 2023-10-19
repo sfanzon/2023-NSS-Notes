@@ -66,35 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Lemma {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -106,11 +82,39 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Theorem {
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -118,17 +122,13 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Axiom {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 </style>
 
@@ -275,6 +275,164 @@ ul.task-list li input[type="checkbox"] {
 <p>Now that we established the axiomatic definition of the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> as a <strong>complete ordered field</strong>, let us investigate some of the properties of <span class="math inline">\(\mathbb{R}\)</span>. These will be consequence of the axioms of the real numbers, particulaly of the <strong>Axiom of Completeness</strong>.</p>
 <section id="special-subsets-of-mathbbr" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="special-subsets-of-mathbbr"><span class="header-section-number">4.1</span> Special subsets of <span class="math inline">\(\mathbb{R}\)</span></h2>
+<p>We have defined <span class="math inline">\(\mathbb{R}\)</span> as a complete ordered field. This was done axiomatically and in a non constructive way. What happens now to the sets <span class="math inline">\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}\)</span>? Are they well defined? Does it still hold that <span class="math display">\[
+\mathbb{N}\,, \mathbb{Z}\,, \mathbb{Q}\, \subset \mathbb{R}\,?
+\]</span> The definitions that we gave in Chapter 1 for <span class="math inline">\(\mathbb{N}, \mathbb{Z}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> are not related to the system of real numbers <span class="math inline">\(\mathbb{R}\)</span> we just introduced. To overcome this problem, we will have to define new sets <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}}, \,\, {\mathbb{Z}}_{\mathbb{R}}\,, \,\, {\mathbb{Q}}_{\mathbb{R}}
+\]</span> from scracth, starting from the axioms of <span class="math inline">\(\mathbb{R}\)</span>. We are using a new font to distinguish these new sets from the old ones.</p>
+<p>Let us start with the definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>. We have the intuition that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> should be <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} = \{ \mathbf{1}, \mathbf{2} , \mathbf{3} , \ldots \} \,.
+\]</span> Note that we are denoting the above numbers with bold symbols in order to distinguish them from the elements of <span class="math inline">\(\mathbb{R}\)</span>. The key property that we would like <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> to have is the following: <span class="math display">\[
+\mbox{Every } \mathbf{n} \in {\mathbb{N}}_{\mathbb{R}}  \, \mbox{ has a successor } \, (\mathbf{n+1}) \in {\mathbb{N}}_{\mathbb{R}} \,.
+\]</span> How do we ensure this property? We could start by defining <span class="math display">\[
+\mathbf{1}:=1\,,
+\]</span> with <span class="math inline">\(1\)</span> the neutral element of the multiplication in <span class="math inline">\(\mathbb{R}\)</span>, which exists by the field axiom (M2). We could then define <span class="math inline">\(\mathbf{2}\)</span> by setting <span class="math display">\[
+\mathbf{2} := 1 + 1 \,.
+\]</span> We need a formal definition to capture this idea. This is the concept of <strong>inductive set</strong>.</p>
+<div id="inductive-set" class="Definition" title="Inductive set">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Inductive set</summary><div>
+<p>Let <span class="math inline">\(S \subset \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is an inductive set if they are satisfied:</p>
+<ul>
+<li><span class="math inline">\(1 \in S\)</span>,</li>
+<li>If <span class="math inline">\(x \in S\)</span>, then <span class="math inline">\((x + 1) \in S\)</span>.</li>
+</ul>
+</div></details>
+</div>
+<p>Note that in the above definition we just used:</p>
+<ul>
+<li>The existence of the neutral element <span class="math inline">\(1\)</span>, given by axiom (M2).</li>
+<li>The operation of sum in <span class="math inline">\(\mathbb{R}\)</span>, which is again given as an axiom.</li>
+</ul>
+<div id="Example-2" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 2</strong></summary><div>
+<p>We have that</p>
+<ul>
+<li><span class="math inline">\(\mathbb{R}\)</span> is an inductive set.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Indeed we have <span class="math inline">\(1 \in \mathbb{R}\)</span> by axiom (M2). Moreover <span class="math inline">\((x + 1) \in \mathbb{R}\)</span> for every <span class="math inline">\(x \in \mathbb{R}\)</span>, by definition of sum <span class="math inline">\(+\)</span>.</p>
+</blockquote>
+<ul>
+<li>The set <span class="math inline">\(A=\{0,1\}\)</span> is not an inductive set.</li>
+</ul>
+<blockquote class="blockquote">
+<p>This is because <span class="math inline">\(1 \in A\)</span>, but <span class="math inline">\((1 + 1) \notin A\)</span>, since <span class="math inline">\(1 + 1 \neq 0\)</span>.</p>
+</blockquote>
+</div></details>
+</div>
+<p>Therefore <span class="math inline">\(\mathbb{R}\)</span> is an inductive set, showing that the definition of inductive set is not sufficient to fully describe our intuitive idea of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>. The right way to define <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is as follows: <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} \mbox{ is the smallest inductive subset of } \mathbb{R}\,.
+\]</span> To make the above definition formal we need a few observations.</p>
+<div id="Proposition-3" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 3</strong></summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be a collection of inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. Then <span class="math display">\[
+S := \bigcap_{M \in \mathcal{M}} \, M
+\]</span> is an inductive subset of <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-1" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We have to show that the two properties of inductive sets hold for <span class="math inline">\(S\)</span>:<p></p>
+<ul>
+<li><p>We have <span class="math inline">\(1 \in M\)</span> for every <span class="math inline">\(M \in \mathcal{M}\)</span>, since these are inductive sets. Thus <span class="math display">\[
+1 \in \bigcap_{M \in \mathcal{M}} \, M  = S \,.
+\]</span></p></li>
+<li><p>Suppose that <span class="math inline">\(x \in S\)</span>. By definition of <span class="math inline">\(S\)</span> this implies that <span class="math inline">\(x \in M\)</span> for all <span class="math inline">\(M \in \mathcal{M}\)</span>. Since <span class="math inline">\(M\)</span> is an inductive set, then <span class="math inline">\((x + 1) \in M\)</span>. Therefore <span class="math inline">\((x+1) \in M\)</span> for all <span class="math inline">\(M \in \mathcal{M}\)</span>, showing that <span class="math inline">\((x+1) \in S\)</span>.</p></li>
+</ul>
+<p>Therefore <span class="math inline">\(S\)</span> is an inductive set.</p>
+</div></details>
+</div>
+<p>We are now ready to define the natural numbers <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
+<div id="set-of-natural-numbers" class="Definition" title="Set of Natural Numbers">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 4: </strong>Set of Natural Numbers</summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be the collection of <strong>all</strong> inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. We define the set of natural numbers in <span class="math inline">\(\mathbb{R}\)</span> as <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} := \bigcap_{M \in \mathcal{M}} \, M \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Therefore <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the intersection of all the inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. From this definition it follows that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span>, as shown in the following theorem.</p>
+<div id="theorem-smallest-inductive" class="Theorem" title="{\mathbb{N}}_{\mathbb{R}} is the smallest inductive subset of \mathbb{R}">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 5: </strong><span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(C \subset \mathbb{R}\)</span> be an inductive subset. Then <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} \subset C \,.
+\]</span> In other words, <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive set in <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-2" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be the collection of <strong>all</strong> inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. Therefore, since <span class="math inline">\(C\)</span> is an inductive subset, we have <span class="math display">\[
+C \cap \bigcap_{M \in \mathcal{M}} M  = \bigcap_{M \in \mathcal{M}} M \,.
+\]</span> By definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> and the above observation we get <span class="math display">\[
+C \cap {\mathbb{N}}_{\mathbb{R}} = C \cap \bigcap_{M \in \mathcal{M}} M  = \bigcap_{M \in \mathcal{M}} M  = {\mathbb{N}}_{\mathbb{R}} \,.
+\]</span> Now, by definition of intersection of sets, we have <span class="math display">\[
+({\mathbb{N}}_{\mathbb{R}} \cap C) \subset C \,.
+\]</span> Since <span class="math display">\[
+({\mathbb{N}}_{\mathbb{R}} \cap C) = {\mathbb{N}}_{\mathbb{R}}\,,
+\]</span> we conclude that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}} \subset C\)</span>.<p></p>
+</div></details>
+</div>
+<p>The definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> guarantees that all numbers in <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> are larger than <span class="math inline">\(1\)</span>.</p>
+<div id="Theorem-6" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 6</strong></summary><div>Let <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Then <span class="math display">\[
+x \geq 1 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-3" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math display">\[
+C := \{ x \in \mathbb{R}\, \colon \,x \geq 1 \} \,.
+\]</span> We have that <span class="math inline">\(C\)</span> is an inductive subset of <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
+<blockquote class="blockquote">
+<p>By definition <span class="math inline">\(1 \in C\)</span>. Suppose now that <span class="math inline">\(x \in C\)</span>, so that <span class="math inline">\(x \geq 1\)</span>. Since <span class="math inline">\(1 \geq 0\)</span> as a consequence of the field axioms, we deduce that <span class="math display">\[
+x + 1 \geq x + 0 = x \geq 1 \,,
+\]</span> showing that <span class="math inline">\(x + 1 \geq 1\)</span>. Thus <span class="math inline">\((x + 1) \in C\)</span>.</p>
+</blockquote>
+<p>By Theorem <a href="chap_4.html#theorem-smallest-inductive">5</a> we conclude that <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} \subset C \,,
+\]</span> showing that <span class="math inline">\(x \geq 1\)</span> for all <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
+</div></details>
+</div>
+<div id="Notation-7" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 7</strong></summary><div>We have just shown that all the numebers <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span> satisfy <span class="math display">\[
+x \geq 1 \,.
+\]</span> Moreover by the fact that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is an inductive set, we know that <span class="math display">\[
+1 + 1 \in {\mathbb{N}}_{\mathbb{R}} \,,
+\]</span> since <span class="math inline">\(1 \in {\mathbb{N}}_{\mathbb{R}}\)</span>. We denote <span class="math display">\[
+2 := 1 + 1\,.
+\]</span> Similarly, we will have that <span class="math display">\[
+2 + 1 \in {\mathbb{N}}_{\mathbb{R}}\,,
+\]</span> since <span class="math inline">\(2 \in {\mathbb{N}}_{\mathbb{R}}\)</span>. We denote <span class="math display">\[
+3 := 2 + 1\,.
+\]</span> In this way we give a name to all the numbers in <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>.<p></p>
+</div></details>
+</div>
+<p>Another consequence of the definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> and the field axioms is the Principle of Induction.</p>
+<div id="principle-of-induction" class="Theorem" title="Principle of Induction">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 8: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(\alpha(x)\)</span> be a statement depending on <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Assume that<p></p>
+<ol type="1">
+<li><span class="math inline">\(\alpha(1)\)</span> is true.</li>
+<li>If <span class="math inline">\(\alpha(n)\)</span> is true then also <span class="math inline">\(\alpha(n+1)\)</span> is true.</li>
+</ol>
+<p>Then <span class="math inline">\(\alpha(n)\)</span> is true for all <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
+</div></details>
+</div>
+<div id="Proof*-4" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math display">\[
+C:=\{  x \in {\mathbb{N}}_{\mathbb{R}} \, \colon \,\alpha(n) \mbox{ is true} \} \,.
+\]</span> We have that <span class="math inline">\(C\)</span> is an inductive subset of <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
+<blockquote class="blockquote">
+<p>Indeed: - <span class="math inline">\(1 \in C\)</span> since <span class="math inline">\(\alpha(1)\)</span> is true by assumption. - If <span class="math inline">\(n \in C\)</span> then <span class="math inline">\(\alpha(n)\)</span> is true. By assumption <span class="math inline">\(\alpha(n+1)\)</span> is true. Therefore <span class="math inline">\((n+1) \in C\)</span>.</p>
+</blockquote>
+<p>By Theorem <a href="chap_4.html#theorem-smallest-inductive">5</a> we conclude that <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} \subset C\,.
+\]</span> As by definition <span class="math inline">\(C \subset {\mathbb{N}}_{\mathbb{R}}\)</span>, we have proven that <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} = C \,,
+\]</span> showing that <span class="math inline">\(\alpha(n)\)</span> is true for all <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
+</div></details>
+</div>
+<div id="Notation-9" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 9</strong></summary><div>From now on we denote <span class="math display">\[
+\mathbb{N}:= {\mathbb{N}}_{\mathbb{R}} \,,  \quad
+\mathbb{Z}:= {\mathbb{Z}}_{\mathbb{R}} \,,  \quad
+\mathbb{Q}:= {\mathbb{Q}}_{\mathbb{R}} \,.  \quad
+\]</span><p></p>
+</div></details>
+</div>
 </section>
 <section id="archimedean-property" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="archimedean-property"><span class="header-section-number">4.2</span> Archimedean Property</h2>
@@ -295,8 +453,8 @@ n &gt; x \,.
 <figcaption class="figure-caption">Figure&nbsp;4.1: For any <span class="math inline">\(x&gt;0\)</span> we can find <span class="math inline">\(n,m \in \mathbb{N}\)</span> such that <span class="math inline">\(1/m&lt;x&lt;n\)</span>.</figcaption>
 </figure>
 </div>
-<div id="Remark-1" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 1</strong></summary><div>
+<div id="Remark-10" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 10</strong></summary><div>
 <p>The Archimedean property might sound trivial. However there are examples of ordered fields <span class="math inline">\(K\)</span> that satisfy:</p>
 <ol type="1">
 <li><span class="math inline">\(\mathbb{N}\subset K\)</span>.</li>
@@ -311,7 +469,7 @@ n &gt; x \,.
 </div>
 <p>Let us proceed with the precise statement of the Archimedean property in <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="theorem-archimedean" class="Theorem" title="Archimedean Property">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 2: </strong>Archimedean Property</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 11: </strong>Archimedean Property</summary><div>
 <p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> be given. Then:</p>
 <ol type="1">
 <li><p>There exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
@@ -323,7 +481,7 @@ n &gt; x \,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-1" class="Proof">
+<div id="Proof*-5" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> Let <span class="math inline">\(x \in \mathbb{R}\)</span>. Suppose by contradiction that there is no <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
 n &gt; x  \,.
 \]</span> This means that <span id="eq-archimedean-proof-2"><span class="math display">\[
@@ -367,12 +525,12 @@ nx &gt; y \,.
 </figure>
 </div>
 <div id="theorem-archimedean-alternative" class="Theorem" title="Archimedean Property (Alternative formulation)">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 3: </strong>Archimedean Property (Alternative formulation)</summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(0&lt;x&lt;y\)</span>. There exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 12: </strong>Archimedean Property (Alternative formulation)</summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(0&lt;x&lt;y\)</span>. There exists <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
 nx &gt; y \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-2" class="Proof">
+<div id="Proof*-6" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction that there does not exist some <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
 nx &gt; y \,.
 \]</span> This means that <span id="eq-archimedean-proof-4"><span class="math display">\[
@@ -418,8 +576,8 @@ I_1 \supset I_2 \supset I_3 \supset \ldots I_n \supset \ldots
 \]</span> For finite intersections we clearly have <span class="math display">\[
 \bigcap_{n=1}^k  I_n = I_k \,,
 \]</span> that is, intersecting the first <span class="math inline">\(k\)</span> intervals yields <span class="math inline">\(I_k\)</span>, the smallest interval in the sequence.</p>
-<div id="Question-4" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 4</strong></summary><div>Consider the infinite intersection<p></p>
+<div id="Question-13" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 13</strong></summary><div>Consider the infinite intersection<p></p>
 <p><span class="math display">\[
 \bigcap_{n=1}^\infty I_n := \{  x \in \mathbb{R}\, \colon \,x \in I_n \,, \forall \, n \in \mathbb{N}\}  \,.
 \]</span></p>
@@ -428,7 +586,7 @@ I_1 \supset I_2 \supset I_3 \supset \ldots I_n \supset \ldots
 </div>
 <p>The answer is that the infinite intersection is not empty, because <span class="math inline">\(\mathbb{R}\)</span> was constructed in a way that it does not have gaps.</p>
 <div id="theorem-nested" class="Theorem" title="Nested Interval Property">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 5: </strong>Nested Interval Property</summary><div>For each <span class="math inline">\(n \in \mathbb{N}\)</span> assume given a closed interval <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 14: </strong>Nested Interval Property</summary><div>For each <span class="math inline">\(n \in \mathbb{N}\)</span> assume given a closed interval <span class="math display">\[
 I_n := [a_n,b_n] = \{   x \in \mathbb{R}\, \colon \,a_n \leq x \leq b_n   \} \,.
 \]</span> Suppose that the intervals are nested, that is, <span class="math display">\[
 I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
@@ -437,7 +595,7 @@ I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
 \tag{4.5}\]</span></span><p></p>
 </div></details>
 </div>
-<div id="Proof*-3" class="Proof">
+<div id="Proof*-7" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>By definition we have <span class="math display">\[
 \bigcap_{n=1}^\infty I_n := \{  x \in \mathbb{R}\, \colon \,x \in I_n \,, \forall \, n \in \mathbb{N}\}  \,.
 \]</span> We want to prove (<a href="#eq-theorem-nested-proof-0"><span>4.5</span></a>). This means we need to find a real number <span class="math inline">\(x\)</span> such that <span id="eq-theorem-nested-proof-1"><span class="math display">\[
@@ -467,12 +625,12 @@ a_n \leq x \leq b_n \,, \quad \forall \, n \in \mathbb{N}\,,
 \]</span> showing that <span class="math inline">\(x\)</span> satisfies (<a href="#eq-theorem-nested-proof-1"><span>4.6</span></a>). Therefore (<a href="#eq-theorem-nested-proof-0"><span>4.5</span></a>) holds and the proof is concluded.</p>
 </div></details>
 </div>
-<div id="Important*-4" class="Important">
-<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The assumption that <span class="math inline">\(I_n\)</span> is <strong>closed</strong> is crucial in Theorem <a href="chap_4.html#theorem-nested">5</a>. Without such assumption the thesis of Theorem <a href="chap_4.html#theorem-nested">5</a> does not hold in general, as seen in Example <a href="chap_4.html#example-nested-open">6</a> below.<p></p>
+<div id="Important*-8" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The assumption that <span class="math inline">\(I_n\)</span> is <strong>closed</strong> is crucial in Theorem <a href="chap_4.html#theorem-nested">14</a>. Without such assumption the thesis of Theorem <a href="chap_4.html#theorem-nested">14</a> does not hold in general, as seen in Example <a href="chap_4.html#example-nested-open">15</a> below.<p></p>
 </div></details>
 </div>
 <div id="example-nested-open" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>Consider the <strong>open</strong> intervals <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 15</strong></summary><div>Consider the <strong>open</strong> intervals <span class="math display">\[
 I_n := \left( 0, \frac1n \right) \,.
 \]</span> These are clearly nested <span class="math display">\[
 I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
@@ -482,7 +640,7 @@ I_n \supset I_{n+1}\,, \quad \forall \, n \in \mathbb{N}\,.
 x \in I_n \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> By definition of <span class="math inline">\(I_n\)</span> the above reads <span id="eq-example-nested"><span class="math display">\[
 0 &lt; x &lt; \frac1n  \,, \quad \forall \, n \in \mathbb{N}\,.
-\tag{4.8}\]</span></span> Since <span class="math inline">\(x&gt;0\)</span>, by the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\tag{4.8}\]</span></span> Since <span class="math inline">\(x&gt;0\)</span>, by the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">11</a> Point 2, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
 0 &lt; \frac{1}{n_0} &lt; x \,.
 \]</span> The above contradicts (<a href="#eq-example-nested"><span>4.8</span></a>). Therefore (<a href="#eq-example-nested-2"><span>4.7</span></a>) holds.<p></p>
 </div></details>
@@ -492,7 +650,7 @@ x \in I_n \,, \quad \forall \, n \in \mathbb{N}\,.
 <h2 data-number="4.4" class="anchored" data-anchor-id="revisiting-sup-and-inf"><span class="header-section-number">4.4</span> Revisiting Sup and inf</h2>
 <p>We now investigate some of the properties of supremum and infimum in <span class="math inline">\(\mathbb{R}\)</span>. The first property is an alternative characterization of the supremum, which we will often use. A sketch of such characterization is in <a href="#fig-alternative-sup">Figure&nbsp;<span>4.4</span></a> below.</p>
 <div id="proposition-supremum-characterization" class="Proposition" title="Characterization of Supremum">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 7: </strong>Characterization of Supremum</summary><div>
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 16: </strong>Characterization of Supremum</summary><div>
 <p>Let <span class="math inline">\(A \subset \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(s \in \mathbb{R}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
 <ol type="1">
 <li><span class="math inline">\(s = \sup A\)</span></li>
@@ -508,8 +666,8 @@ s - \varepsilon&lt; x \,.
 <figcaption class="figure-caption">Figure&nbsp;4.4: Let <span class="math inline">\(s = \sup A\)</span>. Then for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exist <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(s-\varepsilon&lt;x\)</span>.</figcaption>
 </figure>
 </div>
-<div id="proof-of-proposition" class="Proof" title="Proof of Proposition 7">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Proposition 7</summary><div><em>Step 1</em>. Assume that <span class="math display">\[
+<div id="proof-of-proposition" class="Proof" title="Proof of Proposition 16">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Proposition 16</summary><div><em>Step 1</em>. Assume that <span class="math display">\[
 s = \sup A \,.
 \]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span> be arbitrary. We clearly have that <span id="eq-proof-sup-alt-1"><span class="math display">\[
 s - \varepsilon&lt; s \,.
@@ -518,7 +676,7 @@ s \leq (s - \varepsilon)\,,
 \]</span> since <span class="math inline">\(s\)</span> is the smallest upper bound. The above contradicts (<a href="#eq-proof-sup-alt-1"><span>4.9</span></a>), and therefore <span class="math inline">\((s-\varepsilon)\)</span> is not an upper bound for <span class="math inline">\(A\)</span>. Hence there exists some <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
 s - \varepsilon&lt; x  \, ,
 \]</span> concluding.<p></p>
-<p><em>Step 2</em>. Assume that Point 2 in the statement of Proposition <a href="chap_4.html#proposition-supremum-characterization">7</a> holds. By assumption we have that <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Suppose by contradiction that <span class="math display">\[
+<p><em>Step 2</em>. Assume that Point 2 in the statement of Proposition <a href="chap_4.html#proposition-supremum-characterization">16</a> holds. By assumption we have that <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Suppose by contradiction that <span class="math display">\[
 s \neq \sup A \,.
 \]</span> This is equivalent to the statement <span id="eq-proof-sup-alt-2"><span class="math display">\[
 s \, \mbox{ is not the smallest upper bound of } \, A.
@@ -533,9 +691,9 @@ s - s + b &lt; x \quad \implies \quad b &lt; x \,.
 \]</span> Since <span class="math inline">\(b\)</span> is an upper bound for <span class="math inline">\(A\)</span> and <span class="math inline">\(x \in A\)</span>, the above is a contradiction. Therefore (<a href="#eq-proof-sup-alt-2"><span>4.10</span></a>) is false, and <span class="math inline">\(s\)</span> is the smallest upper bound of <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(s = \sup A\)</span>.</p>
 </div></details>
 </div>
-<p>The analogue of Proposition <a href="chap_4.html#proposition-supremum-characterization">7</a> is as follows. The proof is left as an exercise.</p>
+<p>The analogue of Proposition <a href="chap_4.html#proposition-supremum-characterization">16</a> is as follows. The proof is left as an exercise.</p>
 <div id="prop-supremum-infimum" class="Proposition" title="Characterization of Infimum">
-<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 8: </strong>Characterization of Infimum</summary><div>
+<details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 17: </strong>Characterization of Infimum</summary><div>
 <p>Let <span class="math inline">\(A \subset \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(i \in \mathbb{R}\)</span> is a lower bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
 <ol type="1">
 <li><span class="math inline">\(i = \inf A\)</span></li>
@@ -545,7 +703,7 @@ x &lt; i + \varepsilon\,.
 </ol>
 </div></details>
 </div>
-<p>A sketch of the characterization in Proposition <a href="chap_4.html#prop-supremum-infimum">8</a> can be found in <a href="#fig-alternative-inf">Figure&nbsp;<span>4.5</span></a> below.</p>
+<p>A sketch of the characterization in Proposition <a href="chap_4.html#prop-supremum-infimum">17</a> can be found in <a href="#fig-alternative-inf">Figure&nbsp;<span>4.5</span></a> below.</p>
 <div id="fig-alternative-inf" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../images/alternative_infimum.png" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -554,14 +712,14 @@ x &lt; i + \varepsilon\,.
 </div>
 <p>With the above characterizations of supremum and infimum, it is now easier to prove that some candidate number is the supremum or infimum of some set. As an example, let us characterize supremum and infimum of an open interval of <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="proposition-interval-inf-sup" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 18</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
 A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
 \]</span> Then <span class="math display">\[
 \inf A = a \,, \quad \sup A = b \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-6" class="Proof">
+<div id="Proof*-10" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We will only prove that <span class="math display">\[
 \inf A = a \,,
 \]</span> since the proof of <span class="math display">\[
@@ -609,26 +767,26 @@ L \leq M \,.
 </div></details>
 </div>
 <p>As a corollary of the above we have that the maximum and minimum of an open interval do not exist.</p>
-<div id="Corollary-10" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 10</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+<div id="Corollary-19" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 19</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
 A:= (a,b) = \{ x \in \mathbb{R}\, \colon \,a &lt; x &lt; b \}\,.
 \]</span> Then <span class="math inline">\(\min A\)</span> and <span class="math inline">\(\max A\)</span> do not exist.<p></p>
 </div></details>
 </div>
-<div id="Proof*-7" class="Proof">
+<div id="Proof*-11" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction that <span class="math inline">\(\min A\)</span> exists. We have shown that if the minimum of a set exists, then it must be <span class="math display">\[
 \min A = \inf A \,.
 \]</span> Since <span class="math display">\[
 \inf A = a\,,
-\]</span> by Proposition <a href="chap_4.html#proposition-interval-inf-sup">9</a>, we would obtain that <span class="math display">\[
+\]</span> by Proposition <a href="chap_4.html#proposition-interval-inf-sup">18</a>, we would obtain that <span class="math display">\[
 \min A = a \,.
 \]</span> By definition <span class="math inline">\(\min A \in A\)</span>, so that <span class="math inline">\(a \in A\)</span>. This is contradiction. Then <span class="math inline">\(\min A\)</span> does not exist.<p></p>
 <p>The proof that <span class="math inline">\(\max A\)</span> does not exist is similar, and is left as an exercise.</p>
 </div></details>
 </div>
 <p>We can also consider intervals for which one or both of the sides are closed.</p>
-<div id="Corollary-11" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 11</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
+<div id="Corollary-20" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 20</strong></summary><div>Let <span class="math inline">\(a, b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>. Let <span class="math display">\[
 A:= [a,b) = \{ x \in \mathbb{R}\, \colon \,a \leq x &lt; b \}\,.
 \]</span> Then <span class="math display">\[
 \min A = \inf A = a \,, \quad \sup A = b \,,
@@ -636,15 +794,15 @@ A:= [a,b) = \{ x \in \mathbb{R}\, \colon \,a \leq x &lt; b \}\,.
 </div></details>
 </div>
 <p>The proof is very similar to the ones above, and is left to the reader for exercise. Let us now compute supremum and infimum of a set which is not an interval.</p>
-<div id="Proposition-12" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 12</strong></summary><div>Define the set <span class="math display">\[
+<div id="Proposition-21" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 21</strong></summary><div>Define the set <span class="math display">\[
 A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 \]</span> Then <span class="math display">\[
 \inf A = 0 \,, \quad \sup A = \max A = 1 \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-8" class="Proof">
+<div id="Proof*-12" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We have <span class="math display">\[
 \frac1n \leq 1 \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> Since <span class="math inline">\(1 \in A\)</span>, we conclude that <span class="math display">\[
@@ -675,30 +833,30 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 <p>In this section we show that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. Density can be explained in two equivalent ways:</p>
 <ul>
 <li><p>For every given number <span class="math inline">\(x \in \mathbb{R}\)</span>, there exists a rational number <span class="math inline">\(r \in \mathbb{Q}\)</span> which is arbitrarily close to <span class="math inline">\(x\)</span>.</p></li>
-<li><p>For every pair of <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>, there exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
+<li><p>For every pair of numbers <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>, there exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
 a &lt; r &lt; b \,.
 \]</span></p></li>
 </ul>
 <p>In other words, the above statements are saying that <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together. Let us give a proof of this statement.</p>
 <div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 22: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
 a &lt; r &lt; b \,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>The density result of Theorem <a href="chap_4.html#theorem-density">13</a> has a surprising corollary. Indeed, we have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
-<div id="Question-14" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 14</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
+<p>The density result of Theorem <a href="chap_4.html#theorem-density">22</a> has a surprising corollary. Indeed, we have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<div id="Question-23" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 23</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
 </div></details>
 </div>
 <p>The answer is that there are as many irrational numbers as there are real numbers. Moreover for every pair of real numbers, we can always find and irrational number in between.</p>
-<div id="Corollary-15" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 15</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(t \in (\mathbb{R}\smallsetminus \mathbb{Q})\)</span> such that <span class="math display">\[
+<div id="Corollary-24" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 24</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(t \in (\mathbb{R}\smallsetminus \mathbb{Q})\)</span> such that <span class="math display">\[
 a &lt; t &lt; b \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-9" class="Proof">
+<div id="Proof*-13" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Abbott<p></p>
 </div></details>
 </div>
