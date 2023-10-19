@@ -66,25 +66,57 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Theorem {
   --color1: #f4cce0;
@@ -94,41 +126,9 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 </style>
 
@@ -1228,12 +1228,18 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>.<br>
 We need to prove that <span class="math inline">\(K\)</span> is complete. To this end, consider <span class="math inline">\(A \subset K\)</span> non-empty and bounded above. Define the set of upper bounds of <span class="math inline">\(A\)</span>: <span class="math display">\[
 B := \{ b \in K \, \colon \,b \geq a \,, \,\, \forall a \in A \} \,.
-\]</span> We have <span class="math inline">\(B \neq \emptyset\)</span>, since <span class="math inline">\(A\)</span> is bounded above.<p></p>
+\]</span><p></p>
 <p><em>Claim. The pair <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span>.</em></p>
 <p><em>Proof of Claim</em>.<br>
-<span class="math inline">\((B^c,B)\)</span> forms a partition of <span class="math inline">\(K\)</span>, since <span class="math inline">\(B^c \neq \emptyset\)</span>. Thus <span class="math inline">\(B \neq \emptyset\)</span> and <span class="math display">\[
+<span class="math inline">\((B^c,B)\)</span> forms a partition of <span class="math inline">\(K\)</span>.</p>
+<blockquote class="blockquote">
+<p>Indeed, we have <span class="math inline">\(B \neq \emptyset\)</span>, since <span class="math inline">\(A\)</span> is bounded above. Further, we have <span class="math inline">\(B \neq K\)</span>: this is because otherwise every point of <span class="math inline">\(K\)</span> would be an upper bound of <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(A\)</span> would be empty. Hence <span class="math display">\[
+B \neq \emptyset \,, \quad B \neq K \,,
+\]</span> which shows that <span class="math inline">\(B^c \neq \emptyset\)</span> and <span class="math display">\[
 K = B^c \cup B \,, \quad B^c \cap B =  \emptyset \,.
-\]</span> Moreover we have <span id="eq-equiv-cut-complete-1"><span class="math display">\[
+\]</span> Then <span class="math inline">\((B^c,B)\)</span> is a partition of <span class="math inline">\(K\)</span>.</p>
+</blockquote>
+<p>Moreover we have <span id="eq-equiv-cut-complete-1"><span class="math display">\[
 x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
 \tag{3.18}\]</span></span> To show the above, let <span class="math inline">\(x \in B^c\)</span> and <span class="math inline">\(y \in B\)</span>. By definition of <span class="math inline">\(B\)</span> we have that elements of <span class="math inline">\(B^c\)</span> are not upper bounds of <span class="math inline">\(A\)</span>. Therefore <span class="math inline">\(x\)</span> is not an upper bound. This means there exists <span class="math inline">\(\tilde{a} \in A\)</span> which is larger than <span class="math inline">\(x\)</span>, that is, <span class="math display">\[
 x \leq \tilde{a} \,.

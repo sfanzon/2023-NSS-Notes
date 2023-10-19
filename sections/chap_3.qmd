@@ -1398,17 +1398,25 @@ We need to prove that $K$ is complete. To this end, consider $A \subset K$ non-e
 $$
 B := \{ b \in K \divider b \geq a \,, \,\, \forall a \in A \} \,.
 $$
-We have $B \neq \emptyset$, since $A$ is bounded above. 
+
 
 
 *Claim. The pair $(B^c,B)$ is a cut of $K$.*  
 
 
 *Proof of Claim*.  
-$(B^c,B)$ forms a partition of $K$, since $B^c \neq \emptyset$. Thus $B \neq \emptyset$ and 
+$(B^c,B)$ forms a partition of $K$. 
+
+> Indeed, we have $B \neq \emptyset$, since $A$ is bounded above. Further, we have $B \neq K$: this is because otherwise every point of $K$ would be an upper bound of $A$. Thus $A$ would be empty. Hence 
+$$
+B \neq \emptyset \,, \quad B \neq K \,,
+$$
+which shows that $B^c \neq \emptyset$ and
 $$
 K = B^c \cup B \,, \quad B^c \cap B =  \emptyset \,.
 $$
+Then $(B^c,B)$ is a partition of $K$.
+
 Moreover we have
 $$
 x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.

@@ -100,19 +100,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -120,31 +128,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Important {
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Corollary {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
 }
 .Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -152,15 +156,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Warning {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -310,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="6.1" class="anchored" data-anchor-id="example-herons-method"><span class="header-section-number">6.1</span> Example: Heron’s Method</h2>
 <p>The first explicit algorithm for approximating <span class="math display">\[
 \sqrt{x}
-\]</span> for <span class="math inline">\(x &gt; 0\)</span> is known <strong>Heron’s method</strong>, after the first-century Greek mathematician <a href="https://en.wikipedia.org/wiki/Hero_of_Alexandria">Heron of Alexandria</a> who described the method in his AD 60 work Metrica, see reference to <a href="https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method">Wikipedia page</a>.</p>
+\]</span> for <span class="math inline">\(x &gt; 0\)</span> is known as <strong>Heron’s method</strong>, after the first-century Greek mathematician <a href="https://en.wikipedia.org/wiki/Hero_of_Alexandria">Heron of Alexandria</a> who described the method in his AD 60 work Metrica, see reference to <a href="https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method">Wikipedia page</a>.</p>
 <p>Let us see what is the idea of the algorithm:</p>
 <ul>
 <li>Suppose that <span class="math inline">\(a_1\)</span> is an approximation of <span class="math inline">\(\sqrt{x}\)</span> from above, that is, <span id="eq-heron"><span class="math display">\[

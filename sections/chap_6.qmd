@@ -22,7 +22,7 @@ The first explicit algorithm for approximating
 $$
 \sqrt{x}
 $$ 
-for $x > 0$ is known **Heron's method**, after the first-century Greek mathematician [Heron of Alexandria](https://en.wikipedia.org/wiki/Hero_of_Alexandria) who described the method in his AD 60 work Metrica, see reference to
+for $x > 0$ is known as **Heron's method**, after the first-century Greek mathematician [Heron of Alexandria](https://en.wikipedia.org/wiki/Hero_of_Alexandria) who described the method in his AD 60 work Metrica, see reference to
 [Wikipedia page](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
 
 Let us see what is the idea of the algorithm:
