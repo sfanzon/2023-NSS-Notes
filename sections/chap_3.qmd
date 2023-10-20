@@ -345,11 +345,11 @@ $$
 x + \tilde{y} = 0 
 $$
 since $\tilde{y}$ is an additive inverse of $x$. Therefore we can use commutativity and associativity and of $+$, see property (A1), and the fact that $0$ is the neutral element of $+$, to infer
-\begin{align}
+\begin{align*}
 y & = y + 0 = y + (x + \tilde{y}) \\ 
   & = (y + x) + \tilde{y} = (x + y) + \tilde{y} \\
   & = 0 + \tilde{y} = \tilde{y} \,,    
-\end{align}
+\end{align*}
 concluding that $y = \tilde{y}$. Thus there is a unique additive inverse of $x$, and 
 $$
 y = \tilde{y} = -x \,,
@@ -685,12 +685,12 @@ $$
 \tilde{L}>0 \,.
 $${#eq-separator-contradiction-3}
 We now want to show that there is a choice of $n$ such that $\tilde{L}^2 < 2$, which will lead to a contradiction. Indeed, we can estimate
-\begin{align}
+\begin{align*}
 \tilde{L}^2 & = \left( L + \frac1n \right)^2 \\
             & = L^2 + \frac{1}{n^2} + 2 \frac{L}{n} \\
             & < L^2 + \frac{1}{n} + 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}<\frac{1}{n^2}  \right) \\
             & = L^2 + \frac{2L + 1}{n} \,. 
-\end{align}
+\end{align*}
 If we now impose that 
 $$
 L^2 + \frac{2L + 1}{n} < 2 \,,
@@ -735,13 +735,13 @@ $$
 \tilde{L} \in \Q \,, \quad \tilde{L} < L \,.
 $${#eq-separator-contradiction-7}
 We now show that $n$ can be chosen so that $\tilde{L} \in B$. Indeed
-\begin{align}
+\begin{align*}
 \tilde{L}^2  & = \left(  L - \frac1n   \right)^2 \\
              & = L^2 + \frac{1}{n^2} - 2 \frac{L}{n} \\
              & > L^2 - \frac{1}{n^2} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} > - \frac{1}{n^2}  \right) \\
              & > L^2 - \frac{1}{n} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} > - \frac{1}{n}  \right) \\
              & = L^2 - \frac{1 + 2L}{n} \,.
-\end{align}
+\end{align*}
 Now we impose 
 $$
 L^2 - \frac{1 + 2L}{n} > 2 
@@ -1223,12 +1223,12 @@ $$
 \tilde{s} := s + \frac{1}{n}
 $$
 with $n \in \N$, $n \neq 0$ to be chosen later. Then
-\begin{align}
+\begin{align*}
 \tilde{s}^2 & = \left( s + \frac1n \right)^2 \\
             & = s^2 + \frac{1}{n^2} + 2 \frac{s}{n} \\
             & < s^2 + \frac{1}{n} + 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}<\frac{1}{n^2}  \right) \\
             & = s^2 + \frac{2s + 1}{n} \,. 
-\end{align}
+\end{align*}
 If we now impose that 
 $$
 s^2 + \frac{2s + 1}{n} < 2 \,,
@@ -1269,13 +1269,13 @@ $$
 \tilde{s} := s - \frac{1}{n} \,.
 $$
 We have
-\begin{align}
+\begin{align*}
 \tilde{s}^2  & = \left(  s - \frac1n   \right)^2 \\
              & = s^2 + \frac{1}{n^2} - 2 \frac{s}{n} \\
              & > s^2 - \frac{1}{n^2} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} > - \frac{1}{n^2}  \right) \\
              & > s^2 - \frac{1}{n} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} > - \frac{1}{n}  \right) \\
              & = s^2 - \frac{1 + 2s}{n} \,.
-\end{align}
+\end{align*}
 Now we impose 
 $$
 s^2 - \frac{1 + 2s}{n} > 2 
@@ -1765,10 +1765,9 @@ $$
 from scracth, starting from the axioms of $\R$. Note that we are using the subscript $\R$ to distinguish
 these new sets from the old ones.
 
-
 ### Natural numbers 
 
-Let us start with the definition of ${\N}_{\R}$. We have the intuition that ${\N}_{\R}$ should be
+Let us start with the definition of ${\N}_{\R}$. We would like ${\N}_{\R}$ to be
 $$
 {\N}_{\R} = \{ \mathbf{1}, \mathbf{2} , \mathbf{3} , \ldots \} \,.
 $$
@@ -1780,7 +1779,7 @@ How do we ensure this property? We could start by defining
 $$
 \mathbf{1}:=1\,,
 $$
-with $1$ the neutral element of the multiplication in $\R$, which exists by the field axiom (M2). We could then define $\mathbf{2}$ by setting
+with $1$ the neutral element of the multiplication in $\R$, which exists by the field axiom (M2) in Defintion \ref{definition-R}. We could then define $\mathbf{2}$ by setting
 $$
 \mathbf{2} := 1 + 1 \,.
 $$
@@ -1854,7 +1853,7 @@ Therefore $S$ is an inductive set.
 We are now ready to define the natural numbers ${\N}_{\R}$.
 
 ::: Definition
-### Set of Natural Numbers
+### Set of Natural Numbers  {#definition-natural-numbers}
 
 Let $\mathcal{M}$ be the collection of **all** inductive subsets of $\R$. 
 We define the set of natural numbers in $\R$ as 
@@ -1968,12 +1967,15 @@ In this way we give a name to all the numbers in ${\N}_{\R}$.
 
 
 
-Another consequence of the definition of ${\N}_{\R}$ and the field axioms is the 
-Principle of Induction.
+
+### Principle of induction
+
+
+The Principle of Induction is a consequence of the definition of ${\N}_{\R}$, see Definition \ref{definition-natural-numbers}, and of the field axioms of $\R$ in Definition \ref{definition-R}. 
 
 
 ::: Theorem
-### Principle of Induction
+### Principle of Induction   {#theorem-induction-new}
 
 Let $\alpha(x)$ be a statement depending on $n \in {\N}_{\R}$. Assume that 
 
@@ -1993,9 +1995,10 @@ C:=\{  x \in {\N}_{\R} \divider \alpha(n) \mbox{ is true} \} \,.
 $$
 We have that $C$ is an inductive subset of $\R$. 
 
-> Indeed:
-- $1 \in C$ since $\alpha(1)$ is true by assumption.
-- If $n \in C$ then $\alpha(n)$ is true. By assumption $\alpha(n+1)$ is true. Therefore $(n+1) \in C$.
+> Indeed:  
+>
+> - $1 \in C$ since $\alpha(1)$ is true by assumption.
+> - If $n \in C$ then $\alpha(n)$ is true. By assumption $\alpha(n+1)$ is true. Therefore $(n+1) \in C$.
 
 
 By Theorem \ref{theorem-smallest-inductive} we conclude that
@@ -2009,6 +2012,226 @@ $$
 showing that $\alpha(n)$ is true for all $n \in {\N}_{\R}$.
 
 :::
+
+
+
+
+
+As a consequence of the principle of induction, we can prove that ${\N}_{\R}$ is closed 
+under the field operations of sum and multiplication. 
+
+
+::: {.Theorem #theorem-N-closed}
+
+
+For all $n,m \in {\N}_{\R}$ we have:
+
+1. ${\N}_{\R}$ is closed under addition, that is, 
+$$
+m + n \in {\N}_{\R} \,.
+$$
+
+2. ${\N}_{\R}$ is closed under multiplication, that is, 
+$$
+m \cdot n \in {\N}_{\R} \,,
+$$
+
+3. If $m > n$ there exists $k \in {\N}_{\R}$ such that
+$$
+m = n + k \,.
+$$
+
+:::
+
+
+::: Proof
+
+We only prove the first point, the other statements are left as an exercise. Fix $m \in {\N}_{\R}$. We prove that 
+$$
+m + n \in {\N}_{\R} \,, \quad  \forall \, n \in {\N}_{\R} \,,
+$${#eq-proof-sum-closed}
+by using induction.
+
+- Induction base: We have $m+1 \in {\N}_{\R}$, since $m \in {\N}_{\R}$ and ${\N}_{\R}$ is an inductive set.
+- Inductive hypothesis: Suppose $m+n \in {\N}_{\R}$. Since ${\N}_{\R}$ is an inductive set, we have $(m+n)+ 1 \in {\N}_{\R}$. By associativity of the sum, see axiom (A1), we get 
+$$
+m + (n + 1) = ( m + n ) + 1 \in {\N}_{\R} \,,
+$$
+which is the desired theis.
+
+By the Induction Principle of Theorem \ref{theorem-induction-new} we conclude (@eq-proof-sum-closed).
+
+
+:::
+
+
+As a consequence of the above theorem, we see that the restriction of the operations of sum and multiplication to ${\N}_{\R}$ are still binary operations: 
+$$
++ \, \colon {\N}_{\R} \times {\N}_{\R} \to {\N}_{\R} \,, \quad
+\cdot \, \colon {\N}_{\R} \times {\N}_{\R} \to {\N}_{\R} \,.
+$$
+
+Equipped with the above operations, ${\N}_{\R}$ satisfies the following properties.
+
+
+::: Theorem
+
+$({\N}_{\R}, + , \cdot, \leq )$ satisfies the following axioms from Definition \ref{definition-R}:
+
+- (A1).
+- (M1), (M2).
+- (O1)-(O4).
+- (AM), (AO), (MO).
+
+:::
+
+The proof is trivial, as it follows immediately from the inclusion of ${\N}_{\R}$ in $\R$.
+
+
+
+
+### Integers
+
+We have seen in Theorem \ref{theorem-N-closed} that ${\N}_{\R}$ is closed under addition.
+However ${\N}_{\R}$ is not closed under subtraction. We therefore define the set 
+of **integers** ${\Z}_{\R}$ in a way that we can perform subtraction of any two
+natural numbers. 
+
+
+::: Definition 
+### Set of Integers
+The set of integers in $\R$ is defined by
+$$
+{\Z}_{\R} := \{  m - n \divider n,m \in {\N}_{\R}   \} \,.
+$$
+:::
+
+
+In the definition of ${\Z}_{\R}$ we denote by $-n$ the inverse of $n$ in $\R$, which exists 
+by the field axiom (A3) in Definition \ref{definition-R}. The following characterization explains the relationship between ${\Z}_{\R}$ and ${\N}_{\R}$.
+
+::: Theorem
+
+It holds
+$$
+{\Z}_{\R} = \{  -n \divider n \in {\N}_{\R}   \}  \cup \{0\}  \cup  {\N}_{\R}  \,.
+$$
+
+:::
+
+::: Proof
+
+Define the set
+$$
+M:=  \{  -n \divider n \in {\N}_{\R}   \}  \cup \{0\}  \cup  {\N}_{\R}  \,.
+$$
+
+- $M \subset {\Z}_{\R}$:  Suppose $m \in M$. We have 3 cases:
+
+    - If $m \in \{ -n \divider n \in {\N}_{\R}\}$ then there exists $n \in {\N}_{\R}$ such that 
+    $m=-n$. Thus
+    $$
+    m = -n = 1 - (n+1) \in {\Z}_{\R} \,,
+    $$
+    since $1 \in {\N}_{\R}$ and $n+1 \in {\N}_{\R}$ because $n \in {\N}_{\R}$.
+    - If $m=0$ then 
+    $$
+    m = 0 = 1 - 1 \in {\Z}_{\R}\,,
+    $$
+    as $1 \in {\N}_{\R}$.
+    - If $m \in {\N}_{\R}$ then
+    $$
+    m =  (m + 1) - 1 \in {\Z}_{\R}  \,,
+    $$
+    since $1 \in {\N}_{\R}$ and $m+1 \in {\N}_{\R}$, given that $m \in {\N}_{\R}$.
+
+  In all 3 cases we have shown that $m \in {\Z}_{\R}$, proving that $M \subset {\Z}_{\R}$.
+
+- ${\Z}_{\R} \subset M$: Let $z \in {\Z}_{\R}$. Then $z = m - n$ for some $n,m \in {\N}_{\R}$. We have 3 cases:
+
+    - If $m=n$ then 
+    $$
+    z = m - n = m - m \stackrel{(A3)}{=} 0 \in M \,.
+    $$
+    - If $m>n$, by Theorem \ref{theorem-N-closed} there exists $k \in {\N}_{\R}$ such that
+    $m = k + n$. Therefore 
+    \begin{align*}
+    z & = m - n = (k + n) - n  \\
+      & \stackrel{(A1)}{=} k + (n-n) \stackrel{(A3)}{=} k + 0 \\
+      & \stackrel{(A2)}{=} k   \in M \,,
+    \end{align*}
+    since $k \in {\N}_{\R}$.
+    - If $m<n$, by Theorem \ref{theorem-N-closed} there exists $k \in {\N}_{\R}$ such that
+    $n = k + m$. Therefore 
+    $$
+    z = m - n = - k  \in M \,,
+    $$
+    since $k \in {\N}_{\R}$, where again we have used (implicitly) the field axioms (A1), (A2) and (A3).
+
+Therefore ${\Z}_{\R} = M$.
+:::
+
+
+Like we did with ${\N}_{\R}$, we can also show that ${\Z}_{\R}$ is closed under
+the operations of sum and multiplication. 
+
+
+::: {.Theorem #theorem-Z-closed}
+
+
+For all $n,m \in {\Z}_{\R}$ we have:
+
+1. ${\Z}_{\R}$ is closed under addition, that is, 
+$$
+m + n \in {\Z}_{\R} \,.
+$$
+
+2. ${\Z}_{\R}$ is closed under multiplication, that is, 
+$$
+m \cdot n \in {\Z}_{\R} \,,
+$$
+
+
+:::
+
+
+The proof is left as an exercise. As a consequence of Theorem \ref{theorem-Z-closed} we have that the restriction of the operations of sum and multiplication to ${\Z}_{\R}$ are still binary operations: 
+$$
++ \, \colon {\Z}_{\R} \times {\Z}_{\R} \to {\Z}_{\R} \,, \quad
+\cdot \, \colon {\Z}_{\R} \times {\Z}_{\R} \to {\Z}_{\R} \,.
+$$
+
+Equipped with the above operations, ${\Z}_{\R}$ satisfies the following properties.
+
+
+::: Theorem
+
+$({\Z}_{\R}, + , \cdot, \leq )$ satisfies the following axioms from Definition \ref{definition-R}:
+
+- (A1), (A2), (A3).
+- (M1), (M2).
+- (O1)-(O4).
+- (AM), (AO), (MO).
+
+:::
+
+
+::: Proof
+
+The fact that 
+$$
+\mbox{(A1), (A2), (M1), (M2), (O1)-(O4), (AM), (AO), (MO)}
+$$
+are satisfied descends immediately from the inclusion
+$$
+{\Z}_{\R} \subset \R \,.
+$$
+We are left to prove (A3). 
+
+:::
+
+
+
 
 
 

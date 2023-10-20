@@ -241,79 +241,97 @@
 
  [**Question 3.47**](#Question-3.47)\Pageref{Question-3.47}
 
- [**Definition 4.1**](#inductive-set): Inductive set\Pageref{inductive-set}
+ [**Definition 3.48**](#inductive-set): Inductive set\Pageref{inductive-set}
 
- [**Example 4.2**](#Example-4.2)\Pageref{Example-4.2}
+ [**Example 3.49**](#Example-3.49)\Pageref{Example-3.49}
 
- [**Proposition 4.3**](#Proposition-4.3)\Pageref{Proposition-4.3}
+ [**Proposition 3.50**](#Proposition-3.50)\Pageref{Proposition-3.50}
+
+ [**Proof**](#Proof*-3.15)\Pageref{Proof*-3.15}
+
+ [**Definition 3.51**](#definition-natural-numbers): Set of Natural Numbers\Pageref{definition-natural-numbers}
+
+ [**Theorem 3.52**](#theorem-smallest-inductive): ${\mathbb{N}}_{\mathbb{R}}$ is the smallest inductive subset of $\mathbb{R}$\Pageref{theorem-smallest-inductive}
+
+ [**Proof**](#Proof*-3.16)\Pageref{Proof*-3.16}
+
+ [**Theorem 3.53**](#Theorem-3.53)\Pageref{Theorem-3.53}
+
+ [**Proof**](#Proof*-3.17)\Pageref{Proof*-3.17}
+
+ [**Notation 3.54**](#Notation-3.54)\Pageref{Notation-3.54}
+
+ [**Theorem 3.55**](#theorem-induction-new): Principle of Induction\Pageref{theorem-induction-new}
+
+ [**Proof**](#Proof*-3.18)\Pageref{Proof*-3.18}
+
+ [**Theorem 3.56**](#theorem-N-closed)\Pageref{theorem-N-closed}
+
+ [**Proof**](#Proof*-3.19)\Pageref{Proof*-3.19}
+
+ [**Theorem 3.57**](#Theorem-3.57)\Pageref{Theorem-3.57}
+
+ [**Definition 3.58**](#set-of-integers): Set of Integers\Pageref{set-of-integers}
+
+ [**Theorem 3.59**](#Theorem-3.59)\Pageref{Theorem-3.59}
+
+ [**Proof**](#Proof*-3.20)\Pageref{Proof*-3.20}
+
+ [**Theorem 3.60**](#theorem-Z-closed)\Pageref{theorem-Z-closed}
+
+ [**Theorem 3.61**](#Theorem-3.61)\Pageref{Theorem-3.61}
+
+ [**Proof**](#Proof*-3.21)\Pageref{Proof*-3.21}
+
+ [**Notation 3.62**](#Notation-3.62)\Pageref{Notation-3.62}
+
+ [**Remark 4.1**](#Remark-4.1)\Pageref{Remark-4.1}
+
+ [**Theorem 4.2**](#theorem-archimedean): Archimedean Property\Pageref{theorem-archimedean}
 
  [**Proof**](#Proof*-4.1)\Pageref{Proof*-4.1}
 
- [**Definition 4.4**](#set-of-natural-numbers): Set of Natural Numbers\Pageref{set-of-natural-numbers}
-
- [**Theorem 4.5**](#theorem-smallest-inductive): ${\mathbb{N}}_{\mathbb{R}}$ is the smallest inductive subset of $\mathbb{R}$\Pageref{theorem-smallest-inductive}
+ [**Theorem 4.3**](#theorem-archimedean-alternative): Archimedean Property (Alternative formulation)\Pageref{theorem-archimedean-alternative}
 
  [**Proof**](#Proof*-4.2)\Pageref{Proof*-4.2}
 
- [**Theorem 4.6**](#Theorem-4.6)\Pageref{Theorem-4.6}
+ [**Question 4.4**](#Question-4.4)\Pageref{Question-4.4}
+
+ [**Theorem 4.5**](#theorem-nested): Nested Interval Property\Pageref{theorem-nested}
 
  [**Proof**](#Proof*-4.3)\Pageref{Proof*-4.3}
 
- [**Notation 4.7**](#Notation-4.7)\Pageref{Notation-4.7}
+ [**Important**](#Important*-4.4)\Pageref{Important*-4.4}
 
- [**Theorem 4.8**](#principle-of-induction-1): Principle of Induction\Pageref{principle-of-induction-1}
+ [**Example 4.6**](#example-nested-open)\Pageref{example-nested-open}
 
- [**Proof**](#Proof*-4.4)\Pageref{Proof*-4.4}
-
- [**Notation 4.9**](#Notation-4.9)\Pageref{Notation-4.9}
-
- [**Remark 4.10**](#Remark-4.10)\Pageref{Remark-4.10}
-
- [**Theorem 4.11**](#theorem-archimedean): Archimedean Property\Pageref{theorem-archimedean}
-
- [**Proof**](#Proof*-4.5)\Pageref{Proof*-4.5}
-
- [**Theorem 4.12**](#theorem-archimedean-alternative): Archimedean Property (Alternative formulation)\Pageref{theorem-archimedean-alternative}
-
- [**Proof**](#Proof*-4.6)\Pageref{Proof*-4.6}
-
- [**Question 4.13**](#Question-4.13)\Pageref{Question-4.13}
-
- [**Theorem 4.14**](#theorem-nested): Nested Interval Property\Pageref{theorem-nested}
-
- [**Proof**](#Proof*-4.7)\Pageref{Proof*-4.7}
-
- [**Important**](#Important*-4.8)\Pageref{Important*-4.8}
-
- [**Example 4.15**](#example-nested-open)\Pageref{example-nested-open}
-
- [**Proposition 4.16**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
+ [**Proposition 4.7**](#proposition-supremum-characterization): Characterization of Supremum\Pageref{proposition-supremum-characterization}
 
  [**Proof**](#proof-of-proposition): Proof of Proposition 4.16\Pageref{proof-of-proposition}
 
- [**Proposition 4.17**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
+ [**Proposition 4.8**](#prop-supremum-infimum): Characterization of Infimum\Pageref{prop-supremum-infimum}
 
- [**Proposition 4.18**](#proposition-interval-inf-sup)\Pageref{proposition-interval-inf-sup}
+ [**Proposition 4.9**](#proposition-interval-inf-sup)\Pageref{proposition-interval-inf-sup}
 
- [**Proof**](#Proof*-4.10)\Pageref{Proof*-4.10}
+ [**Proof**](#Proof*-4.6)\Pageref{Proof*-4.6}
 
- [**Corollary 4.19**](#Corollary-4.19)\Pageref{Corollary-4.19}
+ [**Corollary 4.10**](#Corollary-4.10)\Pageref{Corollary-4.10}
 
- [**Proof**](#Proof*-4.11)\Pageref{Proof*-4.11}
+ [**Proof**](#Proof*-4.7)\Pageref{Proof*-4.7}
 
- [**Corollary 4.20**](#Corollary-4.20)\Pageref{Corollary-4.20}
+ [**Corollary 4.11**](#Corollary-4.11)\Pageref{Corollary-4.11}
 
- [**Proposition 4.21**](#Proposition-4.21)\Pageref{Proposition-4.21}
+ [**Proposition 4.12**](#Proposition-4.12)\Pageref{Proposition-4.12}
 
- [**Proof**](#Proof*-4.12)\Pageref{Proof*-4.12}
+ [**Proof**](#Proof*-4.8)\Pageref{Proof*-4.8}
 
- [**Theorem 4.22**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+ [**Theorem 4.13**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
 
- [**Question 4.23**](#Question-4.23)\Pageref{Question-4.23}
+ [**Question 4.14**](#Question-4.14)\Pageref{Question-4.14}
 
- [**Corollary 4.24**](#Corollary-4.24)\Pageref{Corollary-4.24}
+ [**Corollary 4.15**](#Corollary-4.15)\Pageref{Corollary-4.15}
 
- [**Proof**](#Proof*-4.13)\Pageref{Proof*-4.13}
+ [**Proof**](#Proof*-4.9)\Pageref{Proof*-4.9}
 
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 
