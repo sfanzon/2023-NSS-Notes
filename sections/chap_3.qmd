@@ -1718,27 +1718,316 @@ $$
 $$ 
 is an **ordered field**
 
-In particular we have:
-
-- $(\N, + , \cdot)$ is **not a field**
-- $(\Z, + , \cdot)$ is **not a field**
-- $(\Q, + , \cdot)$ is a **field**
-- $(\Q,+, \cdot,\geq)$ is an **ordered field**
-- $(\R,+, \cdot,\geq)$ is a **complete ordered field**: that is, an ordered field in which the **Cut Property** (CP) or **Axiom of Completeness** (AC) hold
+In particular we have that
+$$
+(\R,+, \cdot,\leq)
+$$ 
+is a **complete ordered field**: that is, an ordered field in which the **Cut Property** (CP) or **Axiom of Completeness** (AC) hold
 :::
 
 
 
 ::: Important
-It can be shown that $(\R,+, \cdot,\geq)$ is the **only** complete ordered field.   
+It can be shown that $(\R,+, \cdot,\leq)$ is the **only** complete ordered field.   
+
+> The above has to be intended in the following sense: if $(K,+, \cdot,\geq)$ is another complete ordered field, then $K$ *looks like* $\R$. Mathematically this means that there exists an invertible map 
+$\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves the operations $+$, $\cdot$ and the order $\leq$.
+
 :::
 
-The above has to be intended in the following sense: if $(K,+, \cdot,\geq)$ is another complete ordered field, then $K$ *looks like* $\R$. Mathematically this means that there exists an invertible map 
-$\Psi \ \colon \R \to K$, called isomorphism of fields, which preserves $+$, $\cdot$ and $\leq$.
+
 
 
 ::: Question
 We have only postulated the existence of $\R$. Does such complete ordered field actually exist? 
 :::
 
-The answer is **YES**, and there are several equivalent models for such $\R$. If time allows, we will look into one of these models at the end of the module.
+The answer is **YES**. There are several equivalent models for the system $\R$. If time allows, we will look into one of these models at the end of the module.
+
+
+
+
+
+## Special subsets of $\R$
+
+
+In Definition \ref{definition-R} we have introduced $\R$ as a complete ordered field. This was done axiomatically and in a non 
+constructive way. What happens now to the sets $\N, \Z, \Q$? Are they well defined? 
+Does it still hold that
+$$
+\N \,, \Z \,, \Q \, \subset \R \,?
+$$
+The definitions that we gave in @sec-chap-1 for $\N, \Z$ and $\Q$ are 
+not related to the system of real numbers $\R$ we just introduced. To overcome this problem, we will have to define new sets
+$$
+{\N}_{\R}, \,\, {\Z}_{\R}\,, \,\, {\Q}_{\R}
+$$ 
+from scracth, starting from the axioms of $\R$. Note that we are using the subscript $\R$ to distinguish
+these new sets from the old ones.
+
+
+### Natural numbers 
+
+Let us start with the definition of ${\N}_{\R}$. We have the intuition that ${\N}_{\R}$ should be
+$$
+{\N}_{\R} = \{ \mathbf{1}, \mathbf{2} , \mathbf{3} , \ldots \} \,.
+$$
+Note that we are denoting the above numbers with bold symbols in order to distinguish them from the elements of $\R$. The key property that we would like ${\N}_{\R}$ to have is the following:
+$$
+\mbox{Every } \mathbf{n} \in {\N}_{\R}  \, \mbox{ has a successor } \, (\mathbf{n+1}) \in {\N}_{\R} \,.
+$$
+How do we ensure this property? We could start by defining
+$$
+\mathbf{1}:=1\,,
+$$
+with $1$ the neutral element of the multiplication in $\R$, which exists by the field axiom (M2). We could then define $\mathbf{2}$ by setting
+$$
+\mathbf{2} := 1 + 1 \,.
+$$
+We need a formal definition to capture this idea. This is the concept of **inductive set**.
+
+
+::: Definition
+### Inductive set
+Let $S \subset \R$. We say that $S$ is an inductive set if they are satisfied:
+
+- $1 \in S$,
+- If $x \in S$, then $(x + 1) \in S$.
+
+:::
+
+
+Note that in the above definition we just used:
+
+- The existence of the neutral element $1$, given by axiom (M2). 
+- The operation of sum in $\R$, which is again given as an axiom.
+
+
+::: Example
+
+We have that
+
+- $\R$ is an inductive set.
+
+> Indeed we have $1 \in \R$ by axiom (M2). Moreover $(x + 1) \in \R$ for every $x \in \R$, by 
+definition of sum $+$.
+
+- The set $A=\{0,1\}$ is not an inductive set.
+
+> This is because $1 \in A$, but $(1 + 1) \notin A$, since $1 + 1 \neq 0$.
+:::
+
+
+Therefore $\R$ is an inductive set, showing that the definition of inductive set is not
+sufficient to fully describe our intuitive idea of ${\N}_{\R}$. The right way to define ${\N}_{\R}$ is as follows:
+$$
+{\N}_{\R} \mbox{ is the smallest inductive subset of } \R \,.
+$$
+To make the above definition formal we need a few observations.
+
+::: Proposition
+
+Let $\mathcal{M}$ be a collection of inductive subsets of $\R$. Then
+$$
+S := \bigcap_{M \in \mathcal{M}} \, M 
+$$
+is an inductive subset of $\R$.
+
+:::
+
+
+::: Proof
+
+We have to show that the two properties of inductive sets hold for $S$:
+
+- We have $1 \in M$ for every $M \in \mathcal{M}$, since these are inductive sets. Thus
+$$
+1 \in \bigcap_{M \in \mathcal{M}} \, M  = S \,.
+$$
+
+- Suppose that $x \in S$. By definition of $S$ this implies that $x \in M$ for all $M \in \mathcal{M}$. Since $M$ is an inductive set, then $(x + 1) \in M$. Therefore $(x+1) \in M$ for all $M \in \mathcal{M}$, showing that $(x+1) \in S$.
+
+Therefore $S$ is an inductive set.
+:::
+
+
+We are now ready to define the natural numbers ${\N}_{\R}$.
+
+::: Definition
+### Set of Natural Numbers
+
+Let $\mathcal{M}$ be the collection of **all** inductive subsets of $\R$. 
+We define the set of natural numbers in $\R$ as 
+$$
+{\N}_{\R} := \bigcap_{M \in \mathcal{M}} \, M \,.
+$$
+
+:::
+
+Therefore ${\N}_{\R}$ is the intersection of all the inductive subsets of $\R$. From
+this definition it follows that ${\N}_{\R}$ is the smallest inductive subset of $\R$, as
+shown in the following theorem.
+
+
+::: Theorem  
+### ${\N}_{\R}$ is the smallest inductive subset of $\R$   {#theorem-smallest-inductive}
+
+Let $C \subset \R$ be an inductive subset. Then
+$$
+{\N}_{\R} \subset C \,.
+$$
+In other words, ${\N}_{\R}$ is the smallest inductive set in $\R$.
+:::
+
+
+::: Proof
+
+Let $\mathcal{M}$ be the collection of **all** inductive subsets of $\R$. Therefore, since
+$C$ is an inductive subset, we have
+$$
+C \cap \bigcap_{M \in \mathcal{M}} M  = \bigcap_{M \in \mathcal{M}} M \,.
+$$
+By definition of ${\N}_{\R}$ and the above observation we get
+$$
+C \cap {\N}_{\R} = C \cap \bigcap_{M \in \mathcal{M}} M  = \bigcap_{M \in \mathcal{M}} M  = {\N}_{\R} \,.
+$$
+Now, by definition of intersection of sets, we have
+$$
+({\N}_{\R} \cap C) \subset C \,.
+$$
+Since 
+$$
+({\N}_{\R} \cap C) = {\N}_{\R}\,,
+$$
+we conclude that ${\N}_{\R} \subset C$.
+:::
+
+
+The definition of ${\N}_{\R}$ guarantees that all numbers in ${\N}_{\R}$ are larger than $1$.
+
+
+::: Theorem
+
+Let $x \in {\N}_{\R}$. Then
+$$
+x \geq 1 \,.
+$$
+
+:::
+
+
+::: Proof
+
+Define the set 
+$$
+C := \{ x \in \R \divider x \geq 1 \} \,.
+$$
+We have that $C$ is an inductive subset of $\R$.
+
+> By definition $1 \in C$. Suppose now that $x \in C$, so that $x \geq 1$. Since $1 \geq 0$ as a consequence of the field axioms, we deduce that 
+$$
+x + 1 \geq x + 0 = x \geq 1 \,,
+$$
+showing that $x + 1 \geq 1$. Thus $(x + 1) \in C$. 
+
+
+By Theorem \ref{theorem-smallest-inductive} we conclude that
+$$
+{\N}_{\R} \subset C \,,
+$$
+showing that $x \geq 1$ for all $x \in {\N}_{\R}$.
+
+:::
+
+
+::: Notation
+
+We have just shown that all the numebers $x \in {\N}_{\R}$ satisfy
+$$
+x \geq 1 \,.
+$$
+Moreover by the fact that ${\N}_{\R}$ is an inductive set, we know that 
+$$
+1 + 1 \in {\N}_{\R} \,,
+$$
+since $1 \in {\N}_{\R}$. We denote 
+$$
+2 := 1 + 1\,. 
+$$
+Similarly, we will have that 
+$$
+2 + 1 \in {\N}_{\R}\,,
+$$
+since $2 \in {\N}_{\R}$. We denote 
+$$
+3 := 2 + 1\,.
+$$
+In this way we give a name to all the numbers in ${\N}_{\R}$.
+
+:::
+
+
+
+Another consequence of the definition of ${\N}_{\R}$ and the field axioms is the 
+Principle of Induction.
+
+
+::: Theorem
+### Principle of Induction
+
+Let $\alpha(x)$ be a statement depending on $n \in {\N}_{\R}$. Assume that 
+
+1. $\alpha(1)$ is true.
+2. If $\alpha(n)$ is true then also $\alpha(n+1)$ is true.
+
+Then $\alpha(n)$ is true for all $n \in {\N}_{\R}$.
+
+:::
+
+
+::: Proof
+
+Define the set 
+$$
+C:=\{  x \in {\N}_{\R} \divider \alpha(n) \mbox{ is true} \} \,. 
+$$
+We have that $C$ is an inductive subset of $\R$. 
+
+> Indeed:
+- $1 \in C$ since $\alpha(1)$ is true by assumption.
+- If $n \in C$ then $\alpha(n)$ is true. By assumption $\alpha(n+1)$ is true. Therefore $(n+1) \in C$.
+
+
+By Theorem \ref{theorem-smallest-inductive} we conclude that
+$$
+{\N}_{\R} \subset C\,.
+$$
+As by definition $C \subset {\N}_{\R}$, we have proven that 
+$$
+{\N}_{\R} = C \,,
+$$
+showing that $\alpha(n)$ is true for all $n \in {\N}_{\R}$.
+
+:::
+
+
+
+::: Notation
+
+From now on we denote 
+$$
+\N := {\N}_{\R} \,,  \quad 
+\Z := {\Z}_{\R} \,,  \quad 
+\Q := {\Q}_{\R} \,,  \quad 
+$$
+dropping the subscript $\R$.
+:::
+
+
+
+
+
+- $(\N, + , \cdot)$ is **not a field**
+- $(\Z, + , \cdot)$ is **not a field**
+- $(\Q, + , \cdot)$ is a **field**
+- $(\Q,+, \cdot,\geq)$ is an **ordered field**
