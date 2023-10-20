@@ -255,7 +255,7 @@
 
  [**Proof**](#Proof*-3.16)\Pageref{Proof*-3.16}
 
- [**Theorem 3.53**](#Theorem-3.53)\Pageref{Theorem-3.53}
+ [**Theorem 3.53**](#theorem-n-1)\Pageref{theorem-n-1}
 
  [**Proof**](#Proof*-3.17)\Pageref{Proof*-3.17}
 
@@ -273,17 +273,27 @@
 
  [**Definition 3.58**](#set-of-integers): Set of Integers\Pageref{set-of-integers}
 
- [**Theorem 3.59**](#Theorem-3.59)\Pageref{Theorem-3.59}
+ [**Theorem 3.59**](#theorem-equivalent-Z)\Pageref{theorem-equivalent-Z}
 
  [**Proof**](#Proof*-3.20)\Pageref{Proof*-3.20}
 
  [**Theorem 3.60**](#theorem-Z-closed)\Pageref{theorem-Z-closed}
 
- [**Theorem 3.61**](#Theorem-3.61)\Pageref{Theorem-3.61}
+ [**Theorem 3.61**](#theorem-Z-axioms)\Pageref{theorem-Z-axioms}
 
  [**Proof**](#Proof*-3.21)\Pageref{Proof*-3.21}
 
- [**Notation 3.62**](#Notation-3.62)\Pageref{Notation-3.62}
+ [**Remark 3.62**](#remark-Z-axioms)\Pageref{remark-Z-axioms}
+
+ [**Definition 3.63**](#set-of-rational-numbers): Set of Rational Numbers\Pageref{set-of-rational-numbers}
+
+ [**Theorem 3.64**](#Theorem-3.64)\Pageref{Theorem-3.64}
+
+ [**Proof**](#Proof*-3.22)\Pageref{Proof*-3.22}
+
+ [**Theorem 3.65**](#Theorem-3.65)\Pageref{Theorem-3.65}
+
+ [**Notation 3.66**](#Notation-3.66)\Pageref{Notation-3.66}
 
  [**Remark 4.1**](#Remark-4.1)\Pageref{Remark-4.1}
 

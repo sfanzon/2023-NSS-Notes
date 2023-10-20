@@ -1905,7 +1905,7 @@ we conclude that ${\N}_{\R} \subset C$.
 The definition of ${\N}_{\R}$ guarantees that all numbers in ${\N}_{\R}$ are larger than $1$.
 
 
-::: Theorem
+::: {.Theorem   #theorem-n-1} 
 
 Let $x \in {\N}_{\R}$. Then
 $$
@@ -2110,7 +2110,7 @@ $$
 In the definition of ${\Z}_{\R}$ we denote by $-n$ the inverse of $n$ in $\R$, which exists 
 by the field axiom (A3) in Definition \ref{definition-R}. The following characterization explains the relationship between ${\Z}_{\R}$ and ${\N}_{\R}$.
 
-::: Theorem
+::: {.Theorem  #theorem-equivalent-Z}
 
 It holds
 $$
@@ -2204,7 +2204,7 @@ $$
 Equipped with the above operations, ${\Z}_{\R}$ satisfies the following properties.
 
 
-::: Theorem
+::: {.Theorem #theorem-Z-axioms}
 
 $({\Z}_{\R}, + , \cdot, \leq )$ satisfies the following axioms from Definition \ref{definition-R}:
 
@@ -2226,12 +2226,142 @@ are satisfied descends immediately from the inclusion
 $$
 {\Z}_{\R} \subset \R \,.
 $$
-We are left to prove (A3). 
+We are left to prove (A3). This is non-trivial because a priori the additive inverse $-z$ 
+of some $z \in {\Z}_{\R}$ belongs to $\R$. We need to check that $- z \in {\Z}_{\R}$. Indeed, since 
+$z \in {\Z}_{\R}$, there exist $n,m \in {\N}_{\R}$ such that $z = m - n$. Define $y:= n - m$. We have that $y \in {\Z}_{\R}$ and
+$$
+z + y = (m - n) + (n - m) = (m - m) + (n - n) = 0 \,.
+$$
+Therefore $y$ is the inverse of $z$ and $y \in {\Z}_{\R}$, proving that the sum in ${\Z}_{\R}$ 
+satisfies (A3).
 
 :::
 
 
 
+
+::: {.Remark #remark-Z-axioms}
+
+${\Z}_{\R}$ does not satisfy (M3).
+
+> For example, let us show that $2 \in {\Z}_{\R}$ has no inverse in ${\Z}_{\R}$. Indeed, let 
+$m \in {\Z}_{\R}$. By Theorem \ref{theorem-equivalent-Z} we have 3 cases:
+>
+>  - $m \in {\N}_{\R}$: Since $2 > 1$ we have
+>$$
+>2 \cdot m > 1 \cdot m  \geq 1
+>$$
+>where in the last inequality we used that $m \geq 1$ for all $m \in {\N}_{\R}$, as shown in 
+>Theorem \ref{theorem-n-1}. The above shows that 
+>$$
+>2 \cdot m > 1\,,
+>$$
+>and therefore $m$ cannot be the inverse of $2$.
+>
+>  - $m=0$: Then $2 \cdot m = 0$, so that $m$ cannot be the inverse of $2$.
+>   - $m = -n$ with $n \in {\N}_{\R}$. Then
+> $$
+> 2 \cdot m = 2 \cdot (-n) < 0 \,,
+> $$
+> so that $m$ cannot be the inverse of $2$.
+>
+> As we have exhausted all the possibilities, we conclude that $2$ does not have a
+> multiplicative inverse in ${\N}_{\R}$.
+
+
+:::
+
+
+
+
+### Rational numbers
+
+In Theorem \ref{theorem-Z-axioms} and \ref{remark-Z-axioms} we have seen that ${\Z}_{\R}$ satisfy
+all the field axiom, except for (M3). We therefore extend ${\Z}_{\R}$ in a way 
+that the extension contains multiplicative inverses. The extension is the set of 
+rational numbers ${\Q}_{\R}$.
+
+::: Definition
+### Set of Rational Numbers
+
+The set of rational numbers in $\R$ is
+$$
+{\Q}_{\R} := \left\{   \frac{m}{n} \divider m \in {\Z}_{\R}\,, \,\, n \in {\N}_{\R}     \right\} \,.
+$$
+
+:::
+
+Notice that in the above definition we are just using the field axiom (M3), with 
+$$
+\frac{m}{n} := m \cdot n^{-1} \,.
+$$
+The inverse of $n$ exists because we are assuming $n \in {\N}_{\R}$, and therefore 
+$n$ cannot be $0$, as a consequence of Theorem \ref{theorem-n-1}.
+
+
+
+The set ${\Q}_{\R}$ is closed under addition and multiplication (exercise). Therefore they
+are well defined the operations:
+$$
++ \, \colon {\Q}_{\R} \times {\Q}_{\R} \to {\Q}_{\R} \,, \quad
+\cdot \, \colon {\Q}_{\R} \times {\Q}_{\R} \to {\Q}_{\R} \,.
+$$
+
+
+::: Theorem 
+
+$({\Q}_{\R}, + , \cdot, \leq)$ is an ordered field.
+
+:::
+
+::: Proof
+
+All the field properties, except for (M3), follow from the inclusion
+$$
+{\Q}_{\R} \subset \R
+$$
+and from the field properties of $\R$. To check (M3), let $q \in {\Q}_{\R}$ with $q \neq 0$. Therefore
+$q = m/n$ for $m \in {\Z}_{\R}$, $n \in {\N}_{\R}$. As $q \neq 0$ and $n \neq 0$, see Theorem
+\ref{theorem-n-1}, we deduce that $m \neq 0$. We have two cases:
+
+- $m>0$: In this case $m \in {\N}_{\R}$ by Theorem \ref{theorem-equivalent-Z}. Therefore 
+$$
+p = \frac{n}{m} \in {\Q}_{\R} 
+$$
+by definition, since $n,m \in {\N}_{\R}$. By commutativity we have 
+$$
+q \cdot p = \frac{m}{n} \cdot \frac{n}{m} = 1 \,.
+$$
+- $m<0$: Then $m=-x$ with $x \in {\N}_{\R}$ by Theorem \ref{theorem-equivalent-Z}. Therefore 
+$$
+p = \frac{-n}{x} \in {\Q}_{\R} 
+$$
+by definition, since $-n \in {\Z}_{\R}$ and $x \in {\N}_{\R}$. By commutativity we have 
+$$
+q \cdot p = \frac{m}{n} \cdot \frac{-n}{x} = \frac{m}{n} \cdot \frac{-n}{-m} = 1 \,.
+$$
+
+Therefore $q$ always admits a multiplicative inverse $q^{-1}$ belonging to ${\Q}_{\R}$, 
+proving (M3).
+
+:::
+
+
+
+The set ${\Q}_{\R}$ does not have the Cut Property or the Axiom of Completeness. 
+
+
+::: Theorem
+
+${\Q}_{\R}$ is not complete.
+
+:::
+
+
+The proof of the above Theorem is a one to one copy of the proof of Theorem 
+\ref{theorem-Q-not-complete}: indeed the proof of Theorem 
+\ref{theorem-Q-not-complete} only makes use of field 
+axioms, and thus it applies to ${\Q}_{\R}$.
 
 
 
@@ -2244,13 +2374,5 @@ $$
 \Q := {\Q}_{\R} \,,  \quad 
 $$
 dropping the subscript $\R$.
+
 :::
-
-
-
-
-
-- $(\N, + , \cdot)$ is **not a field**
-- $(\Z, + , \cdot)$ is **not a field**
-- $(\Q, + , \cdot)$ is a **field**
-- $(\Q,+, \cdot,\geq)$ is an **ordered field**
