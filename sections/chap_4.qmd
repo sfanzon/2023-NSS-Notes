@@ -724,33 +724,69 @@ As $\inf A = 0$ by Part 2, we conclude $\min A = 0$. As $\min A \in A$, we obtai
 ## Density of $\Q$ in $\R$
 
 
-In this section we show that $\Q$ is dense in $\R$. Density can be explained in two equivalent ways:
+A set $S$ is dense in $\R$ if the elements of $S$ are arbitrarily close
+to the elements of $\R$. 
 
-- For every given number $x \in \R$, there exists
-a rational number $r \in \Q$ which is arbitrarily close to $x$. 
+::: Definition
+### Dense set
 
-- For every pair of numbers $a,b \in \R$ with $a<b$, there exists $r \in \Q$ such that
+Let $S \subset \R$. We say that $S$ is dense in $\R$ if for every $x \in \R$ and $\e \in \R$ with $\e>0$, there exist $q \in \Q$ such that 
 $$
-a < r < b \,.
-$$
-
-In other words, the above statements are saying that $\Q$ and $\R$ are tightly knitted together. 
-Let us give a proof of this statement.
-
-
-::: Theorem 
-### Density of $\Q$ in $\R$    {#theorem-density}
-
-Let $a,b \in \R$, with $a<b$. There exists $r \in \Q$ such that
-$$
-a < r < b \,.
+|x - q| < \e \,.
 $$
 
 :::
 
 
-The density result of Theorem \ref{theorem-density} has a surprising corollary. Indeed, we have
-constructed the real numbers $\R$ so that they would fill the **gaps** of $\Q$. 
+In other words, the above definition is saying that $S$ and $\R$ are tightly knitted together. An equivalent definition of dense set is 
+given below.
+
+
+::: Remark
+Let $S \subset \R$. They are equivalent: 
+
+- $S$ is dense in $\R$.
+- For every pair of numbers $x,y \in \R$ with $x<y$, there exists $q \in \Q$ such that
+$$
+x < q < y \,.
+$$
+
+:::
+
+
+
+We now prove that $\Q$ is dense in $\R$. 
+
+
+
+
+::: Theorem 
+### Density of $\Q$ in $\R$    {#theorem-density}
+
+Let $x,y \in \R$, with $x<y$. There exists $q \in \Q$ such that
+$$
+x < q < y \,.
+$$
+
+:::
+
+
+
+![Let $n \in \N$ be such that $1/n<|y-x|$. Then take $m$ so that $m/n \in (x,y)$.](/images/density_proof.png){#fig-density-proof width=80%}
+
+
+We have constructed the real numbers $\R$ so that they would fill the **gaps** of $\Q$. Formally, these gaps are the numbers in $\R \smallsetminus \Q$. Let us give a name to this set.
+
+::: Definition
+### Irrational numbers
+
+The set of irrational numbers in $\R$ is
+$$
+\mathcal{I} := \R \smallsetminus \Q \,.
+$$
+
+:::
+
 
 ::: Question
 
@@ -758,17 +794,15 @@ How many gaps does $\Q$ have? In other words, how many irrational numbers are ou
 
 :::
 
+The answer is quite surprising, and is a corollary of the density result of Theorem \ref{theorem-density}: The irrational numbers are dense in $\R$.
 
-The answer is that there are as many irrational numbers 
-as there are real numbers. Moreover for every pair of real numbers, we can always find
-and irrational number in between.
 
 
 ::: Corollary
 
-Let $a,b \in \R$, with $a<b$. There exists $t \in (\R \smallsetminus \Q)$ such that
+Let $x,y \in \R$, with $x<y$. There exists $t \in \mathcal{I}$ such that
 $$
-a < t < b \,.
+x < t < y \,.
 $$
 
 :::
@@ -776,9 +810,29 @@ $$
 
 ::: Proof 
 
-Abbott
+Consider 
+$$
+\widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
+$$
+Since $x<y$, we have
+$$
+\widetilde{x} < \widetilde{y} \,.
+$$
+By Theorem \ref{theorem-density} there exists $q \in \Q$ such that
+$$
+\widetilde{x} < q < \widetilde{y} \,.
+$$
+Adding $\sqrt{2}$ to the above inequalities we get
+$$
+x < t < y \,, \quad t := q + \sqrt{2} \,.
+$${#eq-density-proof}
+We claim that $t \in \mathcal{I}$. Indeed, suppose by contradiction $t \in \Q$. Then 
+$$
+\sqrt{2} = t - q \in \Q\,,
+$$
+since $t,q \in \Q$, and $\Q$ is closed under summation. Since $\sqrt{2} \in \mathcal{I}$, we obtain a contradiction. Thus $t \in \mathcal{I}$ and
+(@eq-density-proof) is our thesis.
 :::
-
 
 
 

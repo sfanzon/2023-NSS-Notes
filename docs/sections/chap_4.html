@@ -66,21 +66,13 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Proof {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
 }
 .Conjecture {
   --color1: #f4cce0;
@@ -90,7 +82,31 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -98,31 +114,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
-.Lemma {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -668,34 +668,68 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 </section>
 <section id="density-of-mathbbq-in-mathbbr" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
-<p>In this section we show that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>. Density can be explained in two equivalent ways:</p>
-<ul>
-<li><p>For every given number <span class="math inline">\(x \in \mathbb{R}\)</span>, there exists a rational number <span class="math inline">\(r \in \mathbb{Q}\)</span> which is arbitrarily close to <span class="math inline">\(x\)</span>.</p></li>
-<li><p>For every pair of numbers <span class="math inline">\(a,b \in \mathbb{R}\)</span> with <span class="math inline">\(a&lt;b\)</span>, there exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
-a &lt; r &lt; b \,.
-\]</span></p></li>
-</ul>
-<p>In other words, the above statements are saying that <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together. Let us give a proof of this statement.</p>
-<div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(r \in \mathbb{Q}\)</span> such that <span class="math display">\[
-a &lt; r &lt; b \,.
+<p>A set <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if the elements of <span class="math inline">\(S\)</span> are arbitrarily close to the elements of <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="dense-set" class="Definition" title="Dense set">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Dense set</summary><div>Let <span class="math inline">\(S \subset \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if for every <span class="math inline">\(x \in \mathbb{R}\)</span> and <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span> with <span class="math inline">\(\varepsilon&gt;0\)</span>, there exist <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+|x - q| &lt; \varepsilon\,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>The density result of Theorem <a href="chap_4.html#theorem-density">13</a> has a surprising corollary. Indeed, we have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
-<div id="Question-14" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 14</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
+<p>In other words, the above definition is saying that <span class="math inline">\(S\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together. An equivalent definition of dense set is given below.</p>
+<div id="Remark-14" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 14</strong></summary><div>
+<p>Let <span class="math inline">\(S \subset \mathbb{R}\)</span>. They are equivalent:</p>
+<ul>
+<li><span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</li>
+<li>For every pair of numbers <span class="math inline">\(x,y \in \mathbb{R}\)</span> with <span class="math inline">\(x&lt;y\)</span>, there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+x &lt; q &lt; y \,.
+\]</span></li>
+</ul>
 </div></details>
 </div>
-<p>The answer is that there are as many irrational numbers as there are real numbers. Moreover for every pair of real numbers, we can always find and irrational number in between.</p>
-<div id="Corollary-15" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 15</strong></summary><div>Let <span class="math inline">\(a,b \in \mathbb{R}\)</span>, with <span class="math inline">\(a&lt;b\)</span>. There exists <span class="math inline">\(t \in (\mathbb{R}\smallsetminus \mathbb{Q})\)</span> such that <span class="math display">\[
-a &lt; t &lt; b \,.
+<p>We now prove that <span class="math inline">\(\mathbb{Q}\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="theorem-density" class="Theorem" title="Density of \mathbb{Q} in \mathbb{R}">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+x &lt; q &lt; y \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="fig-density-proof" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/density_proof.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4.6: Let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span class="math inline">\(1/n&lt;|y-x|\)</span>. Then take <span class="math inline">\(m\)</span> so that <span class="math inline">\(m/n \in (x,y)\)</span>.</figcaption>
+</figure>
+</div>
+<p>We have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>. Formally, these gaps are the numbers in <span class="math inline">\(\mathbb{R}\smallsetminus \mathbb{Q}\)</span>. Let us give a name to this set.</p>
+<div id="irrational-numbers" class="Definition" title="Irrational numbers">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Irrational numbers</summary><div>The set of irrational numbers in <span class="math inline">\(\mathbb{R}\)</span> is <span class="math display">\[
+\mathcal{I} := \mathbb{R}\smallsetminus \mathbb{Q}\,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Question-17" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 17</strong></summary><div>How many gaps does <span class="math inline">\(\mathbb{Q}\)</span> have? In other words, how many irrational numbers are out there?<p></p>
+</div></details>
+</div>
+<p>The answer is quite surprising, and is a corollary of the density result of Theorem <a href="chap_4.html#theorem-density">15</a>: The irrational numbers are dense in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="Corollary-18" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 18</strong></summary><div>Let <span class="math inline">\(x,y \in \mathbb{R}\)</span>, with <span class="math inline">\(x&lt;y\)</span>. There exists <span class="math inline">\(t \in \mathcal{I}\)</span> such that <span class="math display">\[
+x &lt; t &lt; y \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="Proof*-9" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Abbott<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Consider <span class="math display">\[
+\widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
+\]</span> Since <span class="math inline">\(x&lt;y\)</span>, we have <span class="math display">\[
+\widetilde{x} &lt; \widetilde{y} \,.
+\]</span> By Theorem <a href="chap_4.html#theorem-density">15</a> there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+\widetilde{x} &lt; q &lt; \widetilde{y} \,.
+\]</span> Adding <span class="math inline">\(\sqrt{2}\)</span> to the above inequalities we get <span id="eq-density-proof"><span class="math display">\[
+x &lt; t &lt; y \,, \quad t := q + \sqrt{2} \,.
+\tag{4.14}\]</span></span> We claim that <span class="math inline">\(t \in \mathcal{I}\)</span>. Indeed, suppose by contradiction <span class="math inline">\(t \in \mathbb{Q}\)</span>. Then <span class="math display">\[
+\sqrt{2} = t - q \in \mathbb{Q}\,,
+\]</span> since <span class="math inline">\(t,q \in \mathbb{Q}\)</span>, and <span class="math inline">\(\mathbb{Q}\)</span> is closed under summation. Since <span class="math inline">\(\sqrt{2} \in \mathcal{I}\)</span>, we obtain a contradiction. Thus <span class="math inline">\(t \in \mathcal{I}\)</span> and (<a href="#eq-density-proof"><span>4.14</span></a>) is our thesis.<p></p>
 </div></details>
 </div>
 </section>

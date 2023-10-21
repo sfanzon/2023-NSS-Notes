@@ -335,11 +335,17 @@
 
  [**Proof**](#Proof*-4.8)\Pageref{Proof*-4.8}
 
- [**Theorem 4.13**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+ [**Definition 4.13**](#dense-set): Dense set\Pageref{dense-set}
 
- [**Question 4.14**](#Question-4.14)\Pageref{Question-4.14}
+ [**Remark 4.14**](#Remark-4.14)\Pageref{Remark-4.14}
 
- [**Corollary 4.15**](#Corollary-4.15)\Pageref{Corollary-4.15}
+ [**Theorem 4.15**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
+
+ [**Definition 4.16**](#irrational-numbers): Irrational numbers\Pageref{irrational-numbers}
+
+ [**Question 4.17**](#Question-4.17)\Pageref{Question-4.17}
+
+ [**Corollary 4.18**](#Corollary-4.18)\Pageref{Corollary-4.18}
 
  [**Proof**](#Proof*-4.9)\Pageref{Proof*-4.9}
 
