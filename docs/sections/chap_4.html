@@ -66,41 +66,13 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
 .Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
 }
 .Corollary {
   --color1: #f4cce0;
@@ -110,15 +82,11 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -126,9 +94,41 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 </style>
 
@@ -899,6 +899,188 @@ L_{n_0} &lt; \alpha = \sup A \,,
 </section>
 <section id="cardinality" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="cardinality"><span class="header-section-number">4.6</span> Cardinality</h2>
+<p>We have proven that the sets or rational numbers <span class="math inline">\(\mathbb{Q}\)</span> and irrational numbers <span class="math inline">\(\mathcal{I}\)</span> are both dense in <span class="math inline">\(\mathbb{R}\)</span>, with <span class="math display">\[
+\mathbb{R}= \mathbb{Q}\cup \mathcal{I} \,.
+\]</span> From this result we might think that <span class="math inline">\(\mathbb{R}\)</span> is obtained by mixing <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathcal{I}\)</span> in equal proportions. This is however false. We will see that <span class="math inline">\(\mathbb{R}\)</span> has much more elements than <span class="math inline">\(\mathbb{Q}\)</span>. Therefore also the set of irrational numbers <span class="math inline">\(\mathcal{I}\)</span> is much larger than <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<p>To make the above discussion precise, we need to define what we mean by size of a set. For this, we need the concept of bijective function.</p>
+<div id="bijective-function" class="Definition" title="Bijective function">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 21: </strong>Bijective function</summary><div>
+<p>Let <span class="math inline">\(X,Y\)</span> be sets and <span class="math inline">\(f \colon X \to Y\)</span> be a function. We say that:</p>
+<ul>
+<li><span class="math inline">\(f\)</span> is <strong>injective</strong> if it holds: <span class="math display">\[
+f(x)=f(y) \quad \implies \quad x = y \,.
+\]</span></li>
+<li><span class="math inline">\(f\)</span> is <strong>surjective</strong> if it holds: <span class="math display">\[
+\forall y \in Y \,, \,\, \exists \, x \in X \, \text{ s.t. } \, f(x) = y \,.
+\]</span></li>
+<li><span class="math inline">\(f\)</span> is <strong>bijective</strong> if it is both <strong>injective</strong> and <strong>surjective</strong>.</li>
+</ul>
+</div></details>
+</div>
+<p>In other words: A function <span class="math inline">\(f \colon X \to Y\)</span> is</p>
+<ul>
+<li>injective if any two different elements in <span class="math inline">\(X\)</span> are mapped into two different elements in <span class="math inline">\(Y\)</span>.</li>
+<li>surjective if every element in <span class="math inline">\(Y\)</span> has at least one element in <span class="math inline">\(X\)</span> associated via <span class="math inline">\(f\)</span>.</li>
+<li>bijective if to each element in <span class="math inline">\(X\)</span> we associate one and only one element in <span class="math inline">\(Y\)</span> via <span class="math inline">\(f\)</span>.</li>
+</ul>
+<div id="injectivity" class="Example" title="Injectivity">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 22: </strong>Injectivity</summary><div>
+<p>Consider the sets <span class="math display">\[
+X = \{ 1, 2, 3 \} \,, \quad  
+Y = \{ a,b,c,d,e\} \,.
+\]</span></p>
+<ul>
+<li><p>The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
+f(1)=c \,, \quad f(2) = a \,, \quad f(3) = e \,,
+\]</span> is injective.</p></li>
+<li><p>The function <span class="math inline">\(g \colon X \to Y\)</span> defined by <span class="math display">\[
+g(1)=c \,, \quad g(2) = a \,, \quad g(3) = c \,,
+\]</span> is not injective, since <span class="math display">\[
+g(1) = g(3) = c \,, \quad 1 \neq 3 \,.
+\]</span></p></li>
+<li><p>The function <span class="math inline">\(h \colon \mathbb{R}\to \mathbb{R}\)</span> defined by <span class="math display">\[
+h(x) = x^2
+\]</span> is not injective, since <span class="math display">\[
+h(1) = h(-1) = 1 \,, \quad 1 \neq - 1 \,.
+\]</span></p></li>
+<li><p>The function <span class="math inline">\(l \colon \mathbb{R}\to \mathbb{R}\)</span> defined by <span class="math display">\[
+l(x) = 2x
+\]</span> is injective, since <span class="math display">\[
+l(x) = l(y) \quad \implies \quad 2x = 2y \quad \implies \quad x = y \,.
+\]</span></p></li>
+</ul>
+</div></details>
+</div>
+<div id="surjectivity" class="Example" title="Surjectivity">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 23: </strong>Surjectivity</summary><div>
+<p>Consider the sets <span class="math display">\[
+X = \{ 1, 2, 3 ,4\} \,, \quad  
+Y = \{ a,b,c\} \,.
+\]</span></p>
+<ul>
+<li><p>The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
+f(1)=c \,, \quad f(2) = a \,, \quad f(3) = a \,, \quad f(4) = b \,,
+\]</span> is surjective.</p></li>
+<li><p>The function <span class="math inline">\(g \colon X \to Y\)</span> defined by <span class="math display">\[
+g(1)=a \,, \quad g(2) = a \,, \quad g(3) = c \,, \quad g(4) = a \,,
+\]</span> is not surjective, since there is no element <span class="math inline">\(x \in X\)</span> such that <span class="math display">\[
+g(x) = b \,.
+\]</span></p></li>
+<li><p>The function <span class="math inline">\(h \colon \mathbb{R}\to \mathbb{R}\)</span> defined by <span class="math display">\[
+h(x) = x^2
+\]</span> is not surjective, since there is no <span class="math inline">\(x \in \mathbb{R}\)</span> such that <span class="math display">\[
+h(x) =  x^2 = -1  \,.
+\]</span></p></li>
+<li><p>The function <span class="math inline">\(l \colon \mathbb{R}\to [0 , \infty)\)</span> defined by <span class="math display">\[
+l(x) = x^2
+\]</span> is surjective, since for every <span class="math inline">\(y \geq 0\)</span> there exists <span class="math inline">\(x \in \mathbb{R}\)</span> such that <span class="math display">\[
+l(x)= x^2 = y\,.
+\]</span> This is true by Theorem <a href="chap_4.html#theorem_existence_root">19</a>.</p></li>
+</ul>
+</div></details>
+</div>
+<div id="bijectivity" class="Example" title="Bijectivity">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 24: </strong>Bijectivity</summary><div>
+<ul>
+<li><p>Let <span class="math inline">\(X = \{ 1, 2, 3 \}, Y = \{ a,b,c\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
+f(1)=c \,, \quad f(2) = a \,, \quad f(3) = b \,,
+\]</span> is bijective, since it is both injective and surjective.</p></li>
+<li><p>Let <span class="math inline">\(X = \{ 1, 2, 3 \}, Y = \{ a,b\}\)</span>. The function <span class="math inline">\(g \colon X \to Y\)</span> defined by <span class="math display">\[
+g(1)=a \,, \quad g(2) = b \,, \quad g(3) = b \,,
+\]</span> is not bijective, since it is not injective: we have <span class="math display">\[
+g(2) = g(3) = b \, \quad 2 \neq 3 \,.
+\]</span></p></li>
+<li><p>Let <span class="math inline">\(X = \{ 1, 2 \}, Y = \{ a,b,c\}\)</span>. The function <span class="math inline">\(h \colon \mathbb{R}\to \mathbb{R}\)</span> defined by <span class="math display">\[
+h(1) = a \,, \quad h(2) = c \,,
+\]</span> is not bijective, since it is not surjective: there is no <span class="math inline">\(x \in X\)</span> such that <span class="math display">\[
+h(x) =  b  \,.
+\]</span></p></li>
+<li><p>Let <span class="math inline">\(X = \{ 1, 2 , 3\}, Y = \{ a,b,c\}\)</span>. The function <span class="math inline">\(l \colon \mathbb{R}\to [0 , \infty)\)</span> defined by <span class="math display">\[
+l(1) = a \,, \quad l(2) = a \,, \quad l(3) = b \,,
+\]</span> is not bijective, as it is neither injective nor surjective.</p></li>
+</ul>
+</div></details>
+</div>
+<p>We are ready to define the size of a set.</p>
+<div id="cardinality-finite-countable-uncountable" class="Definition" title="Cardinality, finite, countable, uncountable">
+
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Cardinality, finite, countable, uncountable</summary><div>
+<p>Let <span class="math inline">\(X\)</span> be a set. The <strong>cardinality</strong> of <span class="math inline">\(X\)</span> is the number of elements in <span class="math inline">\(X\)</span>. We denote the cardinality of <span class="math inline">\(X\)</span> by <span class="math display">\[
+|X| := \# \, \mbox{ of elements in } \, X \,.
+\]</span> Further, we say that:</p>
+<ul>
+<li><p><span class="math inline">\(X\)</span> is <strong>finite</strong> if there exists a natural number <span class="math inline">\(n \in \mathbb{N}\)</span> and a bijection <span class="math display">\[
+f \colon X \to \{1,2,\ldots, n \} \,.
+\]</span> In particular <span class="math display">\[
+|X| = n \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(X\)</span> is <strong>countable</strong> if there exists a bijection <span class="math display">\[
+f \colon X \to \mathbb{N}\,.
+\]</span> In this case we denote the cardinality of <span class="math inline">\(X\)</span> by <span class="math display">\[
+|X| = |\mathbb{N}| \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(X\)</span> is <strong>uncountable</strong> if <span class="math inline">\(X\)</span> is neither finite, nor countable.</p></li>
+</ul>
+</div></details>
+</div>
+<p>In other words: A set <span class="math inline">\(X\)</span> is</p>
+<ul>
+<li><p>finite, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
+X = \{ x_1 , \ldots, x_n \}
+\]</span> for some <span class="math inline">\(n \in \mathbb{N}\)</span>.</p></li>
+<li><p>countable, if <span class="math inline">\(X\)</span> can be listed as <span class="math display">\[
+X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,.
+\]</span></p></li>
+<li><p>uncountable, if <span class="math inline">\(X\)</span> cannot be listed.</p></li>
+</ul>
+<div id="Example-26" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 26</strong></summary><div>
+<ol type="1">
+<li><p>Let <span class="math inline">\(X = \{a,b,c\}\)</span> and <span class="math inline">\(Y=\{ 1,2,3\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
+f(1)=a \,, \quad f(2) = b \,, \quad f(3) = c \,,
+\]</span> is bijective. Therefore <span class="math inline">\(X\)</span> is finite, with <span class="math inline">\(|X| = 3\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(X = \mathbb{N}\)</span>. The function <span class="math inline">\(f \colon X \to \mathbb{N}\)</span> defined by <span class="math display">\[
+f(n):=n \,,
+\]</span> is bijective. Therefore <span class="math inline">\(X = \mathbb{N}\)</span> is countable.</p></li>
+<li><p>Let <span class="math inline">\(X\)</span> be the set of even numbers <span class="math display">\[
+X = \{ 2n \, \colon \,n \in \mathbb{N}\} \,.
+\]</span> Define the map <span class="math inline">\(f \colon X \to \mathbb{N}\)</span> by <span class="math display">\[
+f(m):= \frac{m}{2} \,.
+\]</span> We have that:</p>
+<ul>
+<li><span class="math inline">\(f\)</span> is injective: <span class="math inline">\(f(m)=f(k)\)</span> implies that <span class="math inline">\(m/2=k/2\)</span> which implies <span class="math inline">\(m=k\)</span>.</li>
+<li><span class="math inline">\(f\)</span> is surjective: If <span class="math inline">\(n \in \mathbb{N}\)</span>, then <span class="math inline">\(f(2n)=n\)</span>.</li>
+</ul>
+<p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(X\)</span> is countable and <span class="math inline">\(|X|=|\mathbb{N}|\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(X = \mathbb{Z}\)</span> the set of integers. Define <span class="math display">\[
+f(n):=
+\begin{cases}
+\dfrac{n}{2}  &amp; \,\, \mbox{ if } \, n \, \mbox{ even }  \\
+-\dfrac{n+1}{2}  &amp; \,\, \mbox{ if } \, n \, \mbox{ odd }  
+\end{cases}
+\]</span> For example <span class="math display">\[\begin{align*}
+f(0) &amp; = 0 \,, \quad f(1) = -1 \,, \quad f(2) = 1 \,, \quad f(3) = -2 \,, \\
+f(4) &amp; = 2 \,, \quad f(5) = -3 \,, \quad f(6) = 3 \,, \quad f(7) = -4 \,.
+\end{align*}\]</span> We have:</p>
+<ul>
+<li><p><span class="math inline">\(f\)</span> is injective: Indeed, suppose that <span class="math inline">\(m \neq n\)</span>. If <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> are both even or both odd we have, respectively <span class="math display">\[\begin{align*}
+f(m) = \frac{m}{2} &amp; \neq \frac{n}{2} = f(n)  \\
+f(m) =  -\frac{m+1}{2} &amp; \neq  - \frac{n+1}{2} = f(n) \,.
+\end{align*}\]</span> If instead <span class="math inline">\(m\)</span> is even and <span class="math inline">\(n\)</span> is odd, we get <span class="math display">\[
+f(m) = \frac{m}{2} \neq  - \frac{n+1}{2} = f(n)  \,,
+\]</span> since the LHS is positive and the RHS is negative. The case when <span class="math inline">\(m\)</span> is odd and <span class="math inline">\(n\)</span> even is similar.</p></li>
+<li><p><span class="math inline">\(f\)</span> is surjective: Let <span class="math inline">\(z \in \mathbb{Z}\)</span>. If <span class="math inline">\(z \geq 0\)</span>, then <span class="math inline">\(m:=2z\)</span> belongs to <span class="math inline">\(\mathbb{N}\)</span>, is even, and <span class="math display">\[
+f(m) = f(2z) = z \,.
+\]</span> If instead <span class="math inline">\(z &lt; 0\)</span>, then <span class="math inline">\(m := -2z -1\)</span> belongs to <span class="math inline">\(\mathbb{N}\)</span>, is odd, and <span class="math display">\[
+f(m) = f(-2z-1) = z \,.
+\]</span></p></li>
+</ul>
+<p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(\mathbb{Z}\)</span> is countable and so <span class="math display">\[
+|\mathbb{Z}| =| \mathbb{N}| \,.
+\]</span></p></li>
+</ol>
+</div></details>
+</div>
 
 
 </section>

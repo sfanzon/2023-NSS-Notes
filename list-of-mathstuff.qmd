@@ -357,6 +357,18 @@
 
  [**Definition 4.20**](#k-th-root-of-a-number): $k$-th root of a number\Pageref{k-th-root-of-a-number}
 
+ [**Definition 4.21**](#bijective-function): Bijective function\Pageref{bijective-function}
+
+ [**Example 4.22**](#injectivity): Injectivity\Pageref{injectivity}
+
+ [**Example 4.23**](#surjectivity): Surjectivity\Pageref{surjectivity}
+
+ [**Example 4.24**](#bijectivity): Bijectivity\Pageref{bijectivity}
+
+ [**Definition 4.25**](#cardinality-finite-countable-uncountable): Cardinality, finite, countable, uncountable\Pageref{cardinality-finite-countable-uncountable}
+
+ [**Example 4.26**](#Example-4.26)\Pageref{Example-4.26}
+
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 
  [**Proof**](#Proof*-6.1)\Pageref{Proof*-6.1}
