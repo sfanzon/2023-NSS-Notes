@@ -1397,6 +1397,59 @@ $$
 
 
 
+
+::: Question
+
+Is there an intermediate cardinality between finite and countable? 
+
+:::
+
+The answer is no, as shown in the next proposition.
+
+
+::: {.Proposition #proposition-countable-subset}
+
+Let $X$ be a countable set and $A \subset X$. Then either $A$ is finite or countable.
+
+:::
+
+::: Proof
+
+If $A$ is finite we are done. Therefore suppose $A$ is not finite.
+Since $X$ is countable there exists a bijection $f \colon \N \to X$.
+Let $n_1 \in \N$ be such that
+$$
+n_1 = \min \{ n \in \N \st f(n) \in A \} \,.
+$$
+Note that $n_1$ exists since $f$ is surjective.
+Define 
+$$
+g(1) := f(n_1) \,.
+$$
+Now let 
+$$
+n_2 = \min \{ n  \in \N \st n > n_1 \,, \,\, f(n) \in A \} \,.
+$$
+Notice that $n_2$ exists, since $f$ is surjective and $A$ is not finite. Set
+$$
+g(2):=f(n_2) \,.
+$$
+Iterating, we define
+$$
+n_k = \min \{ n \in \N \st n>n_{k-1} \,, \,\, f(n) \in A \}
+$$
+and 
+$$
+g(k) := f(n_k) \,.
+$$
+In this way we have defined a function $g \colon \N \to A$. As $g$ was 
+defined thourgh $f$, and $f$ is injective, we have that $g$ is injective. Moreover $g$ is surjective by construction. Hence $g$ is bijective, showing that $A$ is countable.
+
+:::
+
+
+
+
 ::: Example
 
 
@@ -1463,9 +1516,34 @@ We have:
     f(m) = f(-2z-1) = z \,.
     $$
     
-   Therefore $f$ is bijective, showing that $\Z$ is countable and so
+   Therefore $f$ is bijective, showing that $\Z$ is countable and
    $$
    |\Z| =| \N| \,. 
    $$
+
+:::
+
+
+
+
+We have seen that the sets
+$$
+\N \,, \quad \Z \,, \quad \Q \,,
+$$
+are all countable. What about $\R$?
+
+
+::: Theorem
+### $\R$ is uncountable
+
+The set of Real Numbers $\R$ is **uncountable**.
+
+:::
+
+We give two proofs of this theorem.
+
+::: Proof
+
+We give two proofs.
 
 :::

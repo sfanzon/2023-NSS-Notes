@@ -66,46 +66,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
@@ -118,17 +78,57 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -1033,8 +1033,33 @@ X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,.
 \]</span></p></li>
 <li><p>uncountable, if <span class="math inline">\(X\)</span> cannot be listed.</p></li>
 </ul>
-<div id="Example-26" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 26</strong></summary><div>
+<div id="Question-26" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 26</strong></summary><div>Is there an intermediate cardinality between finite and countable?<p></p>
+</div></details>
+</div>
+<p>The answer is no, as shown in the next proposition.</p>
+<div id="proposition-countable-subset" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 27</strong></summary><div>Let <span class="math inline">\(X\)</span> be a countable set and <span class="math inline">\(A \subset X\)</span>. Then either <span class="math inline">\(A\)</span> is finite or countable.<p></p>
+</div></details>
+</div>
+<div id="Proof*-12" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>If <span class="math inline">\(A\)</span> is finite we are done. Therefore suppose <span class="math inline">\(A\)</span> is not finite. Since <span class="math inline">\(X\)</span> is countable there exists a bijection <span class="math inline">\(f \colon \mathbb{N}\to X\)</span>. Let <span class="math inline">\(n_1 \in \mathbb{N}\)</span> be such that <span class="math display">\[
+n_1 = \min \{ n \in \mathbb{N}\, \text{ s.t. } \, f(n) \in A \} \,.
+\]</span> Note that <span class="math inline">\(n_1\)</span> exists since <span class="math inline">\(f\)</span> is surjective. Define <span class="math display">\[
+g(1) := f(n_1) \,.
+\]</span> Now let <span class="math display">\[
+n_2 = \min \{ n  \in \mathbb{N}\, \text{ s.t. } \, n &gt; n_1 \,, \,\, f(n) \in A \} \,.
+\]</span> Notice that <span class="math inline">\(n_2\)</span> exists, since <span class="math inline">\(f\)</span> is surjective and <span class="math inline">\(A\)</span> is not finite. Set <span class="math display">\[
+g(2):=f(n_2) \,.
+\]</span> Iterating, we define <span class="math display">\[
+n_k = \min \{ n \in \mathbb{N}\, \text{ s.t. } \, n&gt;n_{k-1} \,, \,\, f(n) \in A \}
+\]</span> and <span class="math display">\[
+g(k) := f(n_k) \,.
+\]</span> In this way we have defined a function <span class="math inline">\(g \colon \mathbb{N}\to A\)</span>. As <span class="math inline">\(g\)</span> was defined thourgh <span class="math inline">\(f\)</span>, and <span class="math inline">\(f\)</span> is injective, we have that <span class="math inline">\(g\)</span> is injective. Moreover <span class="math inline">\(g\)</span> is surjective by construction. Hence <span class="math inline">\(g\)</span> is bijective, showing that <span class="math inline">\(A\)</span> is countable.<p></p>
+</div></details>
+</div>
+<div id="Example-28" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 28</strong></summary><div>
 <ol type="1">
 <li><p>Let <span class="math inline">\(X = \{a,b,c\}\)</span> and <span class="math inline">\(Y=\{ 1,2,3\}\)</span>. The function <span class="math inline">\(f \colon X \to Y\)</span> defined by <span class="math display">\[
 f(1)=a \,, \quad f(2) = b \,, \quad f(3) = c \,,
@@ -1075,10 +1100,22 @@ f(m) = f(2z) = z \,.
 f(m) = f(-2z-1) = z \,.
 \]</span></p></li>
 </ul>
-<p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(\mathbb{Z}\)</span> is countable and so <span class="math display">\[
+<p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(\mathbb{Z}\)</span> is countable and <span class="math display">\[
 |\mathbb{Z}| =| \mathbb{N}| \,.
 \]</span></p></li>
 </ol>
+</div></details>
+</div>
+<p>We have seen that the sets <span class="math display">\[
+\mathbb{N}\,, \quad \mathbb{Z}\,, \quad \mathbb{Q}\,,
+\]</span> are all countable. What about <span class="math inline">\(\mathbb{R}\)</span>?</p>
+<div id="mathbbr-is-uncountable" class="Theorem" title="\mathbb{R} is uncountable">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 29: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
+</div></details>
+</div>
+<p>We give two proofs of this theorem.</p>
+<div id="Proof*-13" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We give two proofs.<p></p>
 </div></details>
 </div>
 
