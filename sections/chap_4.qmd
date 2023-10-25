@@ -1480,7 +1480,7 @@ We have that:
     
     Therefore $f$ is bijective, showing that $X$ is countable and $|X|=|\N|$.
 
-4. Let $X = \Z$ the set of integers. Define 
+4. Let $X = \Z$ the set of integers. Define $f \colon \N \to \Z$ by 
 $$
 f(n):= 
 \begin{cases}
@@ -1526,7 +1526,94 @@ We have:
 
 
 
-We have seen that the sets
+We have seen that the sets $\N$ and $\Z$ are countable. What about $\Q$?
+To study this case, we need the following result.
+
+
+
+
+:::  {.Proposition  #proposition-countable-union}
+
+Let the set $A_n$ be countable for all $n \in \N$. Define
+$$
+A = \bigcup_{n \in \N} \, A_n \, .
+$$
+Then $A$ is countable.
+
+:::
+
+::: Proof
+
+Since each $A_i$ is countable, we 
+can list their elements as
+$$
+A_i = \{ a_k^i \divider k \in \N  \} = \{   a_1^i , \, a_2^i , \, a_3^i , \, a_4^i , \, \ldots \} \,.
+$$
+The proof that $A$ is countable is based on a diagonal argument by
+Georg Cantor, see [Wikipedia page](https://en.wikipedia.org/wiki/Cantor's_diagonal_argument0). 
+The idea of th is that we can list the elements of the sets
+$A_i$ in an infinite square: In the first row we put the elements
+of $A_1$, in the second row the elements of $A_2$, and so on. Therefore
+the $i$-th row contains the elements of $A_i$. This procedure is 
+illustrated in @fig-diagonal-argument.
+Therefore this infinite square contains all the elements of $A$.
+We then list all the elements of the square by looking at the diagonals, as shown in @fig-diagonal-argument. This procedure 
+defines a function $f \colon \N \to A$. For example the first few terms
+of $f$ are
+$$
+f(1) = a_1^1 \,, \quad f(2) = a_2^1 \,, \quad f(3) = a_1^2 \,, \quad 
+f(4) = a_1^3 \,.
+$$
+Since $f$ is injective and surjective, we have that $A$ is countable.
+
+:::
+
+
+
+![The i-th row contains all the elements $a_1^i,a_2^i,a_3^i, \ldots$ of the countable set $A_i$. We define the function $f \colon \N \to A$ by going throgh the square diagonally.](/images/diagonal_argument.png){#fig-diagonal-argument width=70%}
+
+
+
+
+
+::: Theorem
+### $\Q$ is countable  {#theorem-Q-countable}
+
+The set of rational numbers $\Q$ is countable. 
+
+:::
+
+
+::: Proof
+
+For $i \in \N$ define the sets
+$$
+L_i := \left\{ \frac{m}{i}  \divider m \in \Z    \right\} \,.
+$$
+We have that $f \colon L_i \to \Z$ defined by 
+$$
+f \left(\frac{m}{i}\right) := m
+$$
+is a bijection. As $\Z$ is countable, we deduce that $L_i$ is 
+countable. Therefore the set $L$ defined by
+$$
+L:= \bigcup_{i \in \N} \, L_i
+$$
+is countable by Proposition \ref{proposition-countable-union}. Clearly
+we have
+$$
+\Q \subset L \,.
+$$
+Since $\Q$ is not finite, by Proposition \ref{proposition-countable-subset} we conclude that $\Q$ is countable.
+
+:::
+
+
+
+
+
+
+We have proven that the sets
 $$
 \N \,, \quad \Z \,, \quad \Q \,,
 $$
@@ -1534,16 +1621,86 @@ are all countable. What about $\R$?
 
 
 ::: Theorem
-### $\R$ is uncountable
+### $\R$ is uncountable  {#theorem-R-uncountable}
 
 The set of Real Numbers $\R$ is **uncountable**.
 
 :::
 
-We give two proofs of this theorem.
+
 
 ::: Proof
 
-We give two proofs.
+Suppose by contradiction $\R$ is countable. Then there exists a bijection $f \colon \N \to \R$, meaning that we can list the elements of $\R$ as
+$$
+\R = \{ x_1 , x_2 , x_3 , x_4 , x_5 , \ldots \} \,.
+$$
+Let $I_1$ be a closed interval such that
+$$
+x_1 \notin I_1 \,.
+$$
+Let $I_2$ be another closed interval, contained in $I_1$, and such 
+that $x_2 \notin I_2$. Such interval exists, because $I_1$ contains
+two disjoint closed intervals: hence $x_2$ can be at most in one of these
+two intervals. To summarize, we have
+$$
+x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subset I_1 \,.
+$$
+We can iterate this procedure, and construct a sequence of nested
+intervals $I_n$ such that
+$$
+I_{n+1} \subset I_n \,, \quad  x_n \notin I_n \,,
+$$
+for all $n \in \N$, see @fig-R-uncountable. Since $x_k \notin I_k$, we 
+conclude that
+$$
+x_k \notin \bigcap_{n =1}^\infty \, I_n \,, \quad \forall \, k \in \N \,.
+$$
+As the points $x_k$ are all the elements of $\R$, we conclude that
+$$
+\bigcap_{n =1}^\infty \, I_n = \emptyset \,.
+$$
+However the Nested Interval Property of Theorem \ref{theorem-nested} implies that 
+$$
+\bigcap_{n =1}^\infty \, I_n \neq \emptyset \,,
+$$
+yielding a contradiction. Therefore $\R$ is uncountable.
+
+
+:::
+
+
+
+![The intervals $I_n$ are nested, and can be chosen so that $x_n \notin I_n$.](/images/R_uncountable.png){#fig-R-uncountable width=80%}
+
+
+
+As a corollary we obtain that also the irrational numbers are 
+uncountable.
+
+
+::: Theorem
+
+The set of irrational numbers 
+$$
+\mathcal{I}:=\R \smallsetminus \Q
+$$
+is uncountable.
+
+:::
+
+
+::: Proof
+
+In Theorems \ref{theorem-Q-countable}, \ref{theorem-R-uncountable} we have shown that $\R$ in uncountable and $\Q$ is countable. Suppose by contradiction that $\mathcal{I}$ is countable. Then
+$$
+\Q \cup \mathcal{I} 
+$$
+is countable by Proposition \ref{proposition-countable-union}, being union of countable sets. Since by definition
+$$
+\R = \Q \cup \mathcal{I} \,,
+$$
+we conclude that $\R$ is countable. Contradiction.
+
 
 :::

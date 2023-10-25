@@ -375,9 +375,21 @@
 
  [**Example 4.28**](#Example-4.28)\Pageref{Example-4.28}
 
- [**Theorem 4.29**](#mathbbr-is-uncountable): $\mathbb{R}$ is uncountable\Pageref{mathbbr-is-uncountable}
+ [**Proposition 4.29**](#proposition-countable-union)\Pageref{proposition-countable-union}
 
  [**Proof**](#Proof*-4.13)\Pageref{Proof*-4.13}
+
+ [**Theorem 4.30**](#theorem-Q-countable): $\mathbb{Q}$ is countable\Pageref{theorem-Q-countable}
+
+ [**Proof**](#Proof*-4.14)\Pageref{Proof*-4.14}
+
+ [**Theorem 4.31**](#theorem-R-uncountable): $\mathbb{R}$ is uncountable\Pageref{theorem-R-uncountable}
+
+ [**Proof**](#Proof*-4.15)\Pageref{Proof*-4.15}
+
+ [**Theorem 4.32**](#Theorem-4.32)\Pageref{Theorem-4.32}
+
+ [**Proof**](#Proof*-4.16)\Pageref{Proof*-4.16}
 
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 

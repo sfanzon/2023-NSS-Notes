@@ -66,51 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Proof {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
 .Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -118,17 +78,57 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 </style>
 
@@ -1077,7 +1077,7 @@ f(m):= \frac{m}{2} \,.
 <li><span class="math inline">\(f\)</span> is surjective: If <span class="math inline">\(n \in \mathbb{N}\)</span>, then <span class="math inline">\(f(2n)=n\)</span>.</li>
 </ul>
 <p>Therefore <span class="math inline">\(f\)</span> is bijective, showing that <span class="math inline">\(X\)</span> is countable and <span class="math inline">\(|X|=|\mathbb{N}|\)</span>.</p></li>
-<li><p>Let <span class="math inline">\(X = \mathbb{Z}\)</span> the set of integers. Define <span class="math display">\[
+<li><p>Let <span class="math inline">\(X = \mathbb{Z}\)</span> the set of integers. Define <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{Z}\)</span> by <span class="math display">\[
 f(n):=
 \begin{cases}
 \dfrac{n}{2}  &amp; \,\, \mbox{ if } \, n \, \mbox{ even }  \\
@@ -1106,16 +1106,88 @@ f(m) = f(-2z-1) = z \,.
 </ol>
 </div></details>
 </div>
-<p>We have seen that the sets <span class="math display">\[
-\mathbb{N}\,, \quad \mathbb{Z}\,, \quad \mathbb{Q}\,,
-\]</span> are all countable. What about <span class="math inline">\(\mathbb{R}\)</span>?</p>
-<div id="mathbbr-is-uncountable" class="Theorem" title="\mathbb{R} is uncountable">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 29: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
+<p>We have seen that the sets <span class="math inline">\(\mathbb{N}\)</span> and <span class="math inline">\(\mathbb{Z}\)</span> are countable. What about <span class="math inline">\(\mathbb{Q}\)</span>? To study this case, we need the following result.</p>
+<div id="proposition-countable-union" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 29</strong></summary><div>Let the set <span class="math inline">\(A_n\)</span> be countable for all <span class="math inline">\(n \in \mathbb{N}\)</span>. Define <span class="math display">\[
+A = \bigcup_{n \in \mathbb{N}} \, A_n \, .
+\]</span> Then <span class="math inline">\(A\)</span> is countable.<p></p>
 </div></details>
 </div>
-<p>We give two proofs of this theorem.</p>
 <div id="Proof*-13" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We give two proofs.<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Since each <span class="math inline">\(A_i\)</span> is countable, we can list their elements as <span class="math display">\[
+A_i = \{ a_k^i \, \colon \,k \in \mathbb{N}\} = \{   a_1^i , \, a_2^i , \, a_3^i , \, a_4^i , \, \ldots \} \,.
+\]</span> The proof that <span class="math inline">\(A\)</span> is countable is based on a diagonal argument by Georg Cantor, see <a href="https://en.wikipedia.org/wiki/Cantor's_diagonal_argument0">Wikipedia page</a>. The idea of th is that we can list the elements of the sets <span class="math inline">\(A_i\)</span> in an infinite square: In the first row we put the elements of <span class="math inline">\(A_1\)</span>, in the second row the elements of <span class="math inline">\(A_2\)</span>, and so on. Therefore the <span class="math inline">\(i\)</span>-th row contains the elements of <span class="math inline">\(A_i\)</span>. This procedure is illustrated in <a href="#fig-diagonal-argument">Figure&nbsp;<span>4.7</span></a>. Therefore this infinite square contains all the elements of <span class="math inline">\(A\)</span>. We then list all the elements of the square by looking at the diagonals, as shown in <a href="#fig-diagonal-argument">Figure&nbsp;<span>4.7</span></a>. This procedure defines a function <span class="math inline">\(f \colon \mathbb{N}\to A\)</span>. For example the first few terms of <span class="math inline">\(f\)</span> are <span class="math display">\[
+f(1) = a_1^1 \,, \quad f(2) = a_2^1 \,, \quad f(3) = a_1^2 \,, \quad
+f(4) = a_1^3 \,.
+\]</span> Since <span class="math inline">\(f\)</span> is injective and surjective, we have that <span class="math inline">\(A\)</span> is countable.<p></p>
+</div></details>
+</div>
+<div id="fig-diagonal-argument" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/diagonal_argument.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4.7: The i-th row contains all the elements <span class="math inline">\(a_1^i,a_2^i,a_3^i, \ldots\)</span> of the countable set <span class="math inline">\(A_i\)</span>. We define the function <span class="math inline">\(f \colon \mathbb{N}\to A\)</span> by going throgh the square diagonally.</figcaption>
+</figure>
+</div>
+<div id="theorem-Q-countable" class="Theorem" title="\mathbb{Q} is countable">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 30: </strong><span class="math inline">\(\mathbb{Q}\)</span> is countable</summary><div>The set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+</div></details>
+</div>
+<div id="Proof*-14" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For <span class="math inline">\(i \in \mathbb{N}\)</span> define the sets <span class="math display">\[
+L_i := \left\{ \frac{m}{i}  \, \colon \,m \in \mathbb{Z}\right\} \,.
+\]</span> We have that <span class="math inline">\(f \colon L_i \to \mathbb{Z}\)</span> defined by <span class="math display">\[
+f \left(\frac{m}{i}\right) := m
+\]</span> is a bijection. As <span class="math inline">\(\mathbb{Z}\)</span> is countable, we deduce that <span class="math inline">\(L_i\)</span> is countable. Therefore the set <span class="math inline">\(L\)</span> defined by <span class="math display">\[
+L:= \bigcup_{i \in \mathbb{N}} \, L_i
+\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">29</a>. Clearly we have <span class="math display">\[
+\mathbb{Q}\subset L \,.
+\]</span> Since <span class="math inline">\(\mathbb{Q}\)</span> is not finite, by Proposition <a href="chap_4.html#proposition-countable-subset">27</a> we conclude that <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
+</div></details>
+</div>
+<p>We have proven that the sets <span class="math display">\[
+\mathbb{N}\,, \quad \mathbb{Z}\,, \quad \mathbb{Q}\,,
+\]</span> are all countable. What about <span class="math inline">\(\mathbb{R}\)</span>?</p>
+<div id="theorem-R-uncountable" class="Theorem" title="\mathbb{R} is uncountable">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 31: </strong><span class="math inline">\(\mathbb{R}\)</span> is uncountable</summary><div>The set of Real Numbers <span class="math inline">\(\mathbb{R}\)</span> is <strong>uncountable</strong>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-15" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose by contradiction <span class="math inline">\(\mathbb{R}\)</span> is countable. Then there exists a bijection <span class="math inline">\(f \colon \mathbb{N}\to \mathbb{R}\)</span>, meaning that we can list the elements of <span class="math inline">\(\mathbb{R}\)</span> as <span class="math display">\[
+\mathbb{R}= \{ x_1 , x_2 , x_3 , x_4 , x_5 , \ldots \} \,.
+\]</span> Let <span class="math inline">\(I_1\)</span> be a closed interval such that <span class="math display">\[
+x_1 \notin I_1 \,.
+\]</span> Let <span class="math inline">\(I_2\)</span> be another closed interval, contained in <span class="math inline">\(I_1\)</span>, and such that <span class="math inline">\(x_2 \notin I_2\)</span>. Such interval exists, because <span class="math inline">\(I_1\)</span> contains two disjoint closed intervals: hence <span class="math inline">\(x_2\)</span> can be at most in one of these two intervals. To summarize, we have <span class="math display">\[
+x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subset I_1 \,.
+\]</span> We can iterate this procedure, and construct a sequence of nested intervals <span class="math inline">\(I_n\)</span> such that <span class="math display">\[
+I_{n+1} \subset I_n \,, \quad  x_n \notin I_n \,,
+\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, see <a href="#fig-R-uncountable">Figure&nbsp;<span>4.8</span></a>. Since <span class="math inline">\(x_k \notin I_k\)</span>, we conclude that <span class="math display">\[
+x_k \notin \bigcap_{n =1}^\infty \, I_n \,, \quad \forall \, k \in \mathbb{N}\,.
+\]</span> As the points <span class="math inline">\(x_k\)</span> are all the elements of <span class="math inline">\(\mathbb{R}\)</span>, we conclude that <span class="math display">\[
+\bigcap_{n =1}^\infty \, I_n = \emptyset \,.
+\]</span> However the Nested Interval Property of Theorem <a href="chap_4.html#theorem-nested">5</a> implies that <span class="math display">\[
+\bigcap_{n =1}^\infty \, I_n \neq \emptyset \,,
+\]</span> yielding a contradiction. Therefore <span class="math inline">\(\mathbb{R}\)</span> is uncountable.<p></p>
+</div></details>
+</div>
+<div id="fig-R-uncountable" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/R_uncountable.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4.8: The intervals <span class="math inline">\(I_n\)</span> are nested, and can be chosen so that <span class="math inline">\(x_n \notin I_n\)</span>.</figcaption>
+</figure>
+</div>
+<p>As a corollary we obtain that also the irrational numbers are uncountable.</p>
+<div id="Theorem-32" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 32</strong></summary><div>The set of irrational numbers <span class="math display">\[
+\mathcal{I}:=\mathbb{R}\smallsetminus \mathbb{Q}
+\]</span> is uncountable.<p></p>
+</div></details>
+</div>
+<div id="Proof*-16" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>In Theorems <a href="chap_4.html#theorem-Q-countable">30</a>, <a href="chap_4.html#theorem-R-uncountable">31</a> we have shown that <span class="math inline">\(\mathbb{R}\)</span> in uncountable and <span class="math inline">\(\mathbb{Q}\)</span> is countable. Suppose by contradiction that <span class="math inline">\(\mathcal{I}\)</span> is countable. Then <span class="math display">\[
+\mathbb{Q}\cup \mathcal{I}
+\]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">29</a>, being union of countable sets. Since by definition <span class="math display">\[
+\mathbb{R}= \mathbb{Q}\cup \mathcal{I} \,,
+\]</span> we conclude that <span class="math inline">\(\mathbb{R}\)</span> is countable. Contradiction.<p></p>
 </div></details>
 </div>
 
