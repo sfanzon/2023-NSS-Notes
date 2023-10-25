@@ -322,37 +322,37 @@ Let $(K,+,\cdot)$ be a field. Then
 :::
 
 ::: Proof
-1. Suppose that $0 \in K$ and $\tilde{0} \in K$ are both neutral element of $+$, that is, they both satisfy (A2). Then 
+1. Suppose that $0 \in K$ and $\widetilde{0} \in K$ are both neutral element of $+$, that is, they both satisfy (A2). Then 
 $$
-0 + \tilde{0} = 0
+0 + \widetilde{0} = 0
 $$
-since $\tilde{0}$ is a neutral element for $+$. Moreover
+since $\widetilde{0}$ is a neutral element for $+$. Moreover
 $$
-\tilde{0} + 0 = \tilde{0}
+\widetilde{0} + 0 = \widetilde{0}
 $$
 since $0$ is a neutral element for $+$. By commutativity of $+$, see property (A1), we have
 $$
-0 = 0 + \tilde{0} = \tilde{0} + 0 = \tilde{0} \,,
+0 = 0 + \widetilde{0} = \widetilde{0} + 0 = \widetilde{0} \,,
 $$
-showing that $0 = \tilde{0}$. Hence the neutral element for $+$ is unique.
+showing that $0 = \widetilde{0}$. Hence the neutral element for $+$ is unique.
 2. Exercise.
-3. Let $x \in K$ and suppose that $y, \tilde{y} \in K$ are both additive inverses of $x$, that is, they both satisfy (A3). Therefore
+3. Let $x \in K$ and suppose that $y, \widetilde{y} \in K$ are both additive inverses of $x$, that is, they both satisfy (A3). Therefore
 $$
 x + y = 0
 $$
 since $y$ is an additive inverse of $x$ and
 $$
-x + \tilde{y} = 0 
+x + \widetilde{y} = 0 
 $$
-since $\tilde{y}$ is an additive inverse of $x$. Therefore we can use commutativity and associativity and of $+$, see property (A1), and the fact that $0$ is the neutral element of $+$, to infer
+since $\widetilde{y}$ is an additive inverse of $x$. Therefore we can use commutativity and associativity and of $+$, see property (A1), and the fact that $0$ is the neutral element of $+$, to infer
 \begin{align*}
-y & = y + 0 = y + (x + \tilde{y}) \\ 
-  & = (y + x) + \tilde{y} = (x + y) + \tilde{y} \\
-  & = 0 + \tilde{y} = \tilde{y} \,,    
+y & = y + 0 = y + (x + \widetilde{y}) \\ 
+  & = (y + x) + \widetilde{y} = (x + y) + \widetilde{y} \\
+  & = 0 + \widetilde{y} = \widetilde{y} \,,    
 \end{align*}
-concluding that $y = \tilde{y}$. Thus there is a unique additive inverse of $x$, and 
+concluding that $y = \widetilde{y}$. Thus there is a unique additive inverse of $x$, and 
 $$
-y = \tilde{y} = -x \,,
+y = \widetilde{y} = -x \,,
 $$
 with $-x$ the element from property (A3).
 4. Exercise.
@@ -557,6 +557,8 @@ $\Q$ does not have the cut property. More explicitly, there exist a cut $(A,B)$ 
 :::
 
 ::: Remark
+### Ideas for the proof of Theorem \ref{theorem-Q-cut}    {#remark-idea-proof-cut}
+
 Before proceeding with the proof, let us summarize the ideas behind it:  
 We will consider the cut $(A,B)$ in (@eq-cut-Q). We then assume by contradiction that $(A,B)$ admits a separator $L \in \Q$, so that 
 $$
@@ -564,31 +566,67 @@ a \leq L \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B \,.
 $${#eq-theorem-Q-cut}
 Since $(A,B)$ is a partition of $\Q$, then either $L \in A$ or $L \in B$. These will both lead to a contradiction:
 
-- If $L \in A$, then by definition we will have
+- If $L \in A$, by definition of $A$ we have
 $$
 L < \sqrt{2} \,.
 $$
-Now the idea is that $\sqrt{2} \notin \Q$, and hence we can always find some $\tilde{L} \in \Q$ such that 
+We want to contradict the fact that $L$ is a separator for the cut $(A,B)$. 
+The idea is that $\sqrt{2} \notin \Q$, and therefore it is possible to find a rational 
+number $\widetilde{L}$ such that
 $$
-L < \tilde{L} < \sqrt{2} \,.
-$$ {#eq-theorem-Q-cut-2}
-Therefore $\tilde{L} \in A$, and (@eq-theorem-Q-cut) implies 
+L < \widetilde{L} < \sqrt{2} \,.
 $$
-\tilde{L} \leq L \,,
+How do we find such $\widetilde{L}$ in practice? We look for a
+number $\widetilde{L}_n$ of the form
+$$
+\widetilde{L}_n = 1 + \frac{1}{n}
+$$
+for some $n \in \N$ to be suitably chosen later. Clearly $\widetilde{L}_n \in \Q$ and
+$$
+L < \widetilde{L}_n 
+$$
+for all $n \in \N$. We need to prove that we can find $n_0 \in \N$ such that 
+$$
+L < \widetilde{L}_{n_0} < \sqrt{2} \,.
+$${#eq-theorem-Q-cut-2}
+This is indeed possible: There exists $n_0 \in \N$ such that (@eq-theorem-Q-cut-2) holds. 
+From (@eq-theorem-Q-cut-2) we see that $\widetilde{L}_{n_0} \in A$. Since $L$ is 
+a separator, from (@eq-theorem-Q-cut) we obtain
+$$
+\widetilde{L}_{n_0} \leq L \,,
 $$
 which contradicts (@eq-theorem-Q-cut-2).
 
-- If $L \in B$, then by definition we will have
+- If $L \in B$, by definition of $B$ we have
 $$
  \sqrt{2} < L \,.
 $$
-Similarly, as $\sqrt{2} \notin \Q$, we can find $\tilde{L} \in \Q$ such that 
+The idea is the same as above: Since $\sqrt{2} \notin \Q$, we can find $\widetilde{L} \in \Q$ such that 
 $$
-\sqrt{2} < \tilde{L} < L \,.
+\sqrt{2} < \widetilde{L} < L \,.
 $$
-Arguing as above we find a contradiction.
+Since we want $\widetilde{L}$ to be a rational number smaller than $L$, we look
+for $\widetilde{L}$ of the form
+$$
+\widetilde{L}_n := L - \frac{1}{n} \,,
+$$
+for a suitable $n \in \N$. This satisfies $\widetilde{L}_n \in \Q$ and
+$$
+\widetilde{L}_n < L \,,
+$$
+for all $n \in \N$. We then find $n_0 \in \N$ such that
+$$
+\sqrt{2} < \widetilde{L}_{n_0} < L \,.
+$${#eq-theorem-Q-cut-3}
+The above shows that $\widetilde{L}_{n_0} \in B$. As $L$ is a separator, we find that
+$$
+L \leq \widetilde{L}_{n_0}  \,,
+$$
+which contradicts (@eq-theorem-Q-cut-3).
 
-Therefore both $L \in A$ and $L \in B$ lead to a contradiction. We conclude that $(A,B)$ has no separator in $\Q$.
+
+Therefore, both cases $L \in A$ or $L \in B$ lead to a contradiction. Since these are 
+all the possibilities, we conclude that the cut $(A,B)$ has no separator in $\Q$.
 :::
 
 
@@ -674,19 +712,19 @@ L \geq 0 \,\, \mbox{ and } \,\, L^2 < 2 \,.
 $${#eq-separator-contradiction-hp-1}
 Set 
 $$
-\tilde{L} := L + \frac1n
+\widetilde{L} := L + \frac1n
 $$
 for $n \in \N$, $n \neq 0$ to be chosen later. Clearly we have
 $$
-\tilde{L} \in \Q   \,\,\, \mbox{ and } \,\,\, L < \tilde{L}  \,. 
+\widetilde{L} \in \Q   \,\,\, \mbox{ and } \,\,\, L < \widetilde{L}  \,. 
 $${#eq-separator-contradiction-2}
 From (@eq-separator-contradiction-1) and (@eq-separator-contradiction-2) we have also
 $$
-\tilde{L}>0 \,.
+\widetilde{L}>0 \,.
 $${#eq-separator-contradiction-3}
-We now want to show that there is a choice of $n$ such that $\tilde{L}^2 < 2$, which will lead to a contradiction. Indeed, we can estimate
+We now want to show that there is a choice of $n$ such that $\widetilde{L}^2 < 2$, which will lead to a contradiction. Indeed, we can estimate
 \begin{align*}
-\tilde{L}^2 & = \left( L + \frac1n \right)^2 \\
+\widetilde{L}^2 & = \left( L + \frac1n \right)^2 \\
             & = L^2 + \frac{1}{n^2} + 2 \frac{L}{n} \\
             & < L^2 + \frac{1}{n} + 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}<\frac{1}{n^2}  \right) \\
             & = L^2 + \frac{2L + 1}{n} \,. 
@@ -705,15 +743,15 @@ n >\frac{2L + 1}{2 - L^2} \,.
 $$
 Therefore we have just shown that 
 $$
-n >\frac{2L + 1}{2 - L^2}  \,\, \implies \,\, \tilde{L}^2 < 2 \,.
+n >\frac{2L + 1}{2 - L^2}  \,\, \implies \,\, \widetilde{L}^2 < 2 \,.
 $$
-Together with (@eq-separator-contradiction-3) this implies $\tilde{L} \in A$. Therefore we have
+Together with (@eq-separator-contradiction-3) this implies $\widetilde{L} \in A$. Therefore we have
 $$
-\tilde{L} \leq L
+\widetilde{L} \leq L
 $$
 by (@eq-separator-contradiction-hp-0). On the other hand it also holds 
 $$
-\tilde{L} > L
+\widetilde{L} > L
 $$
 by (@eq-separator-contradiction-2), and therefore we have a contradiction. Thus $L \notin A$.
 
@@ -728,15 +766,15 @@ L \leq b \,,  \,\, \forall \, b \in B \,.
 $${#eq-separator-contradiction-6}
 Define now 
 $$
-\tilde{L} := L - \frac1n
+\widetilde{L} := L - \frac1n
 $$
 with $n \in \N$, $n \neq 0$ to be chosen later. Clearly we have
 $$
-\tilde{L} \in \Q \,, \quad \tilde{L} < L \,.
+\widetilde{L} \in \Q \,, \quad \widetilde{L} < L \,.
 $${#eq-separator-contradiction-7}
-We now show that $n$ can be chosen so that $\tilde{L} \in B$. Indeed
+We now show that $n$ can be chosen so that $\widetilde{L} \in B$. Indeed
 \begin{align*}
-\tilde{L}^2  & = \left(  L - \frac1n   \right)^2 \\
+\widetilde{L}^2  & = \left(  L - \frac1n   \right)^2 \\
              & = L^2 + \frac{1}{n^2} - 2 \frac{L}{n} \\
              & > L^2 - \frac{1}{n^2} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} > - \frac{1}{n^2}  \right) \\
              & > L^2 - \frac{1}{n} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} > - \frac{1}{n}  \right) \\
@@ -756,11 +794,11 @@ n > \frac{1+2L}{L^2 - 2} \,.
 $$
 In total, we have just shown that 
 $$
- n > \frac{1+2L}{L^2 - 2} \quad \implies \quad \tilde{L}^2 > 2\,,
+ n > \frac{1+2L}{L^2 - 2} \quad \implies \quad \widetilde{L}^2 > 2\,,
 $$
-proving that $\tilde{L} \in B$. Therefore by (@eq-separator-contradiction-6) we get
+proving that $\widetilde{L} \in B$. Therefore by (@eq-separator-contradiction-6) we get
 $$
-L \leq \tilde{L} \,.
+L \leq \widetilde{L} \,.
 $$
 This contradicts (@eq-separator-contradiction-7).
 
@@ -1220,11 +1258,11 @@ s  \geq 0\,, \quad s^2 < 2 \,.
 $${#eq-sup-contradiction-3}
 Define 
 $$
-\tilde{s} := s + \frac{1}{n}
+\widetilde{s} := s + \frac{1}{n}
 $$
 with $n \in \N$, $n \neq 0$ to be chosen later. Then
 \begin{align*}
-\tilde{s}^2 & = \left( s + \frac1n \right)^2 \\
+\widetilde{s}^2 & = \left( s + \frac1n \right)^2 \\
             & = s^2 + \frac{1}{n^2} + 2 \frac{s}{n} \\
             & < s^2 + \frac{1}{n} + 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}<\frac{1}{n^2}  \right) \\
             & = s^2 + \frac{2s + 1}{n} \,. 
@@ -1243,19 +1281,19 @@ n >\frac{2s + 1}{2 - s^2} \,.
 $$
 To summarize, we have just shown that 
 $$
-n >\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \tilde{s}^2 < 2 \,.
+n >\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \widetilde{s}^2 < 2 \,.
 $$
-Moreover $\tilde{s} := (s + 1/n) \in \Q$. Therefore
+Moreover $\widetilde{s} := (s + 1/n) \in \Q$. Therefore
 $$
-\tilde{s} \in A \,.
+\widetilde{s} \in A \,.
 $$
 Since $s = \sup A$, we then have
 $$
-\tilde{s} \leq s \,.
+\widetilde{s} \leq s \,.
 $$
 However 
 $$
-\tilde{s} := s + \frac{1}{n} > s \,,
+\widetilde{s} := s + \frac{1}{n} > s \,,
 $$
 yielding a contradiction. Thus $s \in A$ is not possible. 
 
@@ -1266,11 +1304,11 @@ s > 0 \,, \quad s^2 > 2 \,.
 $${#eq-sup-contradiction-4}  
 Define 
 $$
-\tilde{s} := s - \frac{1}{n} \,.
+\widetilde{s} := s - \frac{1}{n} \,.
 $$
 We have
 \begin{align*}
-\tilde{s}^2  & = \left(  s - \frac1n   \right)^2 \\
+\widetilde{s}^2  & = \left(  s - \frac1n   \right)^2 \\
              & = s^2 + \frac{1}{n^2} - 2 \frac{s}{n} \\
              & > s^2 - \frac{1}{n^2} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} > - \frac{1}{n^2}  \right) \\
              & > s^2 - \frac{1}{n} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} > - \frac{1}{n}  \right) \\
@@ -1290,19 +1328,19 @@ n > \frac{1+2s}{s^2 - 2} \,.
 $$
 In total, we have just shown that 
 $$
- n > \frac{1+2s}{s^2 - 2} \quad \implies \quad \tilde{s}^2 > 2\,.
+ n > \frac{1+2s}{s^2 - 2} \quad \implies \quad \widetilde{s}^2 > 2\,.
 $$
-Therefore $\tilde{s} \notin A$, and by definition of $A$ we have
+Therefore $\widetilde{s} \notin A$, and by definition of $A$ we have
 $$
-\tilde{s} \geq q \,, \quad \forall q \in A\,.
+\widetilde{s} \geq q \,, \quad \forall q \in A\,.
 $$
-Moreover $\tilde{s} := (s - 1/n) \in \Q$. Therefore $\tilde{s}$ is an upper bound of $A$ in $\Q$. Since $s=\sup A$ is the smallest upper bound, see (@eq-sup-contradiction-2), it follows
+Moreover $\widetilde{s} := (s - 1/n) \in \Q$. Therefore $\widetilde{s}$ is an upper bound of $A$ in $\Q$. Since $s=\sup A$ is the smallest upper bound, see (@eq-sup-contradiction-2), it follows
 $$
-s \leq \tilde{s} \,.
+s \leq \widetilde{s} \,.
 $$
 However 
 $$
-\tilde{s} := s - \frac{1}{n} < s \,,
+\widetilde{s} := s - \frac{1}{n} < s \,,
 $$
 obtaining a contradiction. Then $s \notin A$. 
 
@@ -1477,9 +1515,9 @@ $$
 x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
 $${#eq-equiv-cut-complete-1}
 
-> To show the above, let $x \in B^c$ and $y \in B$. By definition of $B$ we have that elements of $B^c$ are not upper bounds of $A$. Therefore $x$ is not an upper bound. This means there exists $\tilde{a} \in A$ which is larger than $x$, that is,
+> To show the above, let $x \in B^c$ and $y \in B$. By definition of $B$ we have that elements of $B^c$ are not upper bounds of $A$. Therefore $x$ is not an upper bound. This means there exists $\widetilde{a} \in A$ which is larger than $x$, that is,
 $$
-x \leq \tilde{a} \,.
+x \leq \widetilde{a} \,.
 $$
 Since $y \in B$, then $y$ is an upper bound for $A$, so that 
 $$
@@ -1487,7 +1525,7 @@ a \leq y \,, \,\, \forall a \in A\,.
 $$
 Therefore 
 $$
-x \leq \tilde{a} \leq y \,,
+x \leq \widetilde{a} \leq y \,,
 $$
 concluding (@eq-equiv-cut-complete-1).
 
@@ -1501,25 +1539,25 @@ $${#eq-equiv-cut-complete-2}
 *Claim. $s$ is an upper bound for $A$.*  
 
 *Proof of Claim.*  
-Suppose by contradiction that $s$ is not an upper bound for $A$. Therefore by definition of upper bound, there exists $\tilde{a} \in A$ such that 
+Suppose by contradiction that $s$ is not an upper bound for $A$. Therefore by definition of upper bound, there exists $\widetilde{a} \in A$ such that 
 $$
-s < \tilde{a} \,.
+s < \widetilde{a} \,.
 $$
-Consider the mid-point between $s$ and $\tilde{a}$, that is, 
+Consider the mid-point between $s$ and $\widetilde{a}$, that is, 
 $$
-m:=\frac{s + \tilde{a}}{2} \in K \,.
+m:=\frac{s + \widetilde{a}}{2} \in K \,.
 $$
-Since $m$ is the mid-point between $s$ and $\tilde{a}$, and $s < \tilde{a}$, it holds
+Since $m$ is the mid-point between $s$ and $\widetilde{a}$, and $s < \widetilde{a}$, it holds
 $$
-s < m < \tilde{a} \,.
-$$
-
-> Indeed, since $s < \tilde{a}$ then
-$$
-s = \frac{2s}{2} < \frac{s + \tilde{a}}{2} < \frac{2 \tilde{a}}{2} = \tilde{a} \,.
+s < m < \widetilde{a} \,.
 $$
 
-In particular the above tells us that $m$ is not an upper bound for $A$, given that $\tilde{a} \in A$ and $m < \tilde{a}$. Therefore $m \in B^c$, by definition of $B^c$. Therefore(@eq-equiv-cut-complete-2) implies
+> Indeed, since $s < \widetilde{a}$ then
+$$
+s = \frac{2s}{2} < \frac{s + \widetilde{a}}{2} < \frac{2 \widetilde{a}}{2} = \widetilde{a} \,.
+$$
+
+In particular the above tells us that $m$ is not an upper bound for $A$, given that $\widetilde{a} \in A$ and $m < \widetilde{a}$. Therefore $m \in B^c$, by definition of $B^c$. Therefore(@eq-equiv-cut-complete-2) implies
 $$
 m \leq s \,,
 $$

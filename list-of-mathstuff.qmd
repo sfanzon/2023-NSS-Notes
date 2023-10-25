@@ -161,7 +161,7 @@
 
  [**Theorem 3.20**](#theorem-Q-cut): $\mathbb{Q}$ does not have the cut property.\Pageref{theorem-Q-cut}
 
- [**Remark 3.21**](#Remark-3.21)\Pageref{Remark-3.21}
+ [**Remark 3.21**](#remark-idea-proof-cut): Ideas for the proof of Theorem 3.20\Pageref{remark-idea-proof-cut}
 
  [**Proof**](#proof-of-theorem-2): Proof of Theorem 3.20\Pageref{proof-of-theorem-2}
 
@@ -341,13 +341,21 @@
 
  [**Theorem 4.15**](#theorem-density): Density of $\mathbb{Q}$ in $\mathbb{R}$\Pageref{theorem-density}
 
+ [**Proof**](#Proof*-4.9)\Pageref{Proof*-4.9}
+
  [**Definition 4.16**](#irrational-numbers): Irrational numbers\Pageref{irrational-numbers}
 
  [**Question 4.17**](#Question-4.17)\Pageref{Question-4.17}
 
  [**Corollary 4.18**](#Corollary-4.18)\Pageref{Corollary-4.18}
 
- [**Proof**](#Proof*-4.9)\Pageref{Proof*-4.9}
+ [**Proof**](#Proof*-4.10)\Pageref{Proof*-4.10}
+
+ [**Theorem 4.19**](#theorem_existence_root): Existence of $k$-th roots\Pageref{theorem_existence_root}
+
+ [**Proof**](#proof-of-theorem-4): Proof of Theorem 4.19\Pageref{proof-of-theorem-4}
+
+ [**Definition 4.20**](#k-th-root-of-a-number): $k$-th root of a number\Pageref{k-th-root-of-a-number}
 
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 

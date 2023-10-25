@@ -66,19 +66,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Corollary {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
-.Conjecture {
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -86,47 +86,47 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Axiom {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -246,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#nested-interval-property" id="toc-nested-interval-property" class="nav-link" data-scroll-target="#nested-interval-property"><span class="header-section-number">4.2</span> Nested Interval Property</a></li>
   <li><a href="#revisiting-sup-and-inf" id="toc-revisiting-sup-and-inf" class="nav-link" data-scroll-target="#revisiting-sup-and-inf"><span class="header-section-number">4.3</span> Revisiting Sup and inf</a></li>
   <li><a href="#density-of-mathbbq-in-mathbbr" id="toc-density-of-mathbbq-in-mathbbr" class="nav-link" data-scroll-target="#density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></a></li>
-  <li><a href="#existence-of-square-roots" id="toc-existence-of-square-roots" class="nav-link" data-scroll-target="#existence-of-square-roots"><span class="header-section-number">4.5</span> Existence of Square Roots</a></li>
+  <li><a href="#existence-of-k-th-roots" id="toc-existence-of-k-th-roots" class="nav-link" data-scroll-target="#existence-of-k-th-roots"><span class="header-section-number">4.5</span> Existence of <span class="math inline">\(k\)</span>-th Roots</a></li>
   <li><a href="#cardinality" id="toc-cardinality" class="nav-link" data-scroll-target="#cardinality"><span class="header-section-number">4.6</span> Cardinality</a></li>
   </ul>
 </nav>
@@ -697,8 +697,37 @@ x &lt; q &lt; y \,.
 <div id="fig-density-proof" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../images/density_proof.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.6: Let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span class="math inline">\(1/n&lt;|y-x|\)</span>. Then take <span class="math inline">\(m\)</span> so that <span class="math inline">\(m/n \in (x,y)\)</span>.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;4.6: Let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span class="math inline">\(1/n&lt; y-x\)</span>. Then take <span class="math inline">\(m\)</span> so that <span class="math inline">\(m/n \in (x,y)\)</span>.</figcaption>
 </figure>
+</div>
+<div id="Proof*-9" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We need to find <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span id="eq-proof-density-1"><span class="math display">\[
+x &lt; q &lt; y \,.
+\tag{4.14}\]</span></span> By definition of <span class="math inline">\(\mathbb{Q}\)</span>, we have that <span class="math inline">\(q\)</span> has to be <span class="math inline">\(q=m/n\)</span> for <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span>. Therefore (<a href="#eq-proof-density-1"><span>4.14</span></a>) is equivalent to finding <span class="math inline">\(m \in \mathbb{Z}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span id="eq-proof-density-2"><span class="math display">\[
+x &lt; \frac{m}{n} &lt; y \,.
+\tag{4.15}\]</span></span> The idea is to proceed as in <a href="#fig-density-proof">Figure&nbsp;<span>4.6</span></a>: We take <span class="math inline">\(n\)</span> such that <span class="math inline">\(1/n\)</span> is small enough so that we can make <span class="math inline">\(m\)</span> <em>jumps</em> of size <span class="math inline">\(1/n\)</span> and end up between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.<br>
+To this end, let <span class="math inline">\(n \in \mathbb{N}\)</span> be such that <span id="eq-proof-density-3"><span class="math display">\[
+\frac{1}{n} &lt; y - x \,.
+\tag{4.16}\]</span></span> Such <span class="math inline">\(n\)</span> exists thanks to the Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 2. Inequality (<a href="#eq-proof-density-2"><span>4.15</span></a>) is equivalent to <span class="math display">\[
+nx &lt; m &lt; ny \,.
+\]</span> Take <span class="math inline">\(m \in \mathbb{Z}\)</span> such that <span id="eq-proof-density-4"><span class="math display">\[
+m-1 \leq nx &lt; m \,.
+\tag{4.17}\]</span></span><p></p>
+<blockquote class="blockquote">
+<p>Why does such <span class="math inline">\(m\)</span> exist? Because by Archimedean Property in Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(m' \in \mathbb{Z}\)</span> such that <span class="math display">\[
+m' &gt; nx
+\]</span> We can then choose <span class="math inline">\(m\)</span> to be the smallest element in <span class="math inline">\(\mathbb{Z}\)</span> such that <span class="math inline">\(m &gt; nx\)</span>. Such <span class="math inline">\(m\)</span> satisfies (<a href="#eq-proof-density-4"><span>4.17</span></a>).</p>
+</blockquote>
+<p>The second inequality in (<a href="#eq-proof-density-4"><span>4.17</span></a>) implies <span class="math display">\[
+x &lt; \frac{m}{n} \,,
+\]</span> which is the first inequality in (<a href="#eq-proof-density-2"><span>4.15</span></a>). Now note that (<a href="#eq-proof-density-3"><span>4.16</span></a>) is equivalent to <span class="math inline">\(x &lt; y - 1/n\)</span>. We can use the latter and the first inequality in (<a href="#eq-proof-density-4"><span>4.17</span></a>) to estimate <span class="math display">\[\begin{align*}
+m &amp; \leq 1 + nx \\
+  &amp; &lt; 1 + n \left(   y - \frac{1}{n}  \right ) \\
+  &amp; = ny \,,
+\end{align*}\]</span> which yields <span class="math display">\[
+\frac{m}{n} &lt; y \,.
+\]</span> Therefore the second inequality in (<a href="#eq-proof-density-2"><span>4.15</span></a>) is proven, concluding the proof.</p>
+</div></details>
 </div>
 <p>We have constructed the real numbers <span class="math inline">\(\mathbb{R}\)</span> so that they would fill the <strong>gaps</strong> of <span class="math inline">\(\mathbb{Q}\)</span>. Formally, these gaps are the numbers in <span class="math inline">\(\mathbb{R}\smallsetminus \mathbb{Q}\)</span>. Let us give a name to this set.</p>
 <div id="irrational-numbers" class="Definition" title="Irrational numbers">
@@ -718,7 +747,7 @@ x &lt; t &lt; y \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-9" class="Proof">
+<div id="Proof*-10" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Consider <span class="math display">\[
 \widetilde{x}:=x - \sqrt{2}\,, \quad \widetilde{y} :=y - \sqrt{2} \,.
 \]</span> Since <span class="math inline">\(x&lt;y\)</span>, we have <span class="math display">\[
@@ -727,18 +756,149 @@ x &lt; t &lt; y \,.
 \widetilde{x} &lt; q &lt; \widetilde{y} \,.
 \]</span> Adding <span class="math inline">\(\sqrt{2}\)</span> to the above inequalities we get <span id="eq-density-proof"><span class="math display">\[
 x &lt; t &lt; y \,, \quad t := q + \sqrt{2} \,.
-\tag{4.14}\]</span></span> We claim that <span class="math inline">\(t \in \mathcal{I}\)</span>. Indeed, suppose by contradiction <span class="math inline">\(t \in \mathbb{Q}\)</span>. Then <span class="math display">\[
+\tag{4.18}\]</span></span> We claim that <span class="math inline">\(t \in \mathcal{I}\)</span>. Indeed, suppose by contradiction <span class="math inline">\(t \in \mathbb{Q}\)</span>. Then <span class="math display">\[
 \sqrt{2} = t - q \in \mathbb{Q}\,,
-\]</span> since <span class="math inline">\(t,q \in \mathbb{Q}\)</span>, and <span class="math inline">\(\mathbb{Q}\)</span> is closed under summation. Since <span class="math inline">\(\sqrt{2} \in \mathcal{I}\)</span>, we obtain a contradiction. Thus <span class="math inline">\(t \in \mathcal{I}\)</span> and (<a href="#eq-density-proof"><span>4.14</span></a>) is our thesis.<p></p>
+\]</span> since <span class="math inline">\(t,q \in \mathbb{Q}\)</span>, and <span class="math inline">\(\mathbb{Q}\)</span> is closed under summation. Since <span class="math inline">\(\sqrt{2} \in \mathcal{I}\)</span>, we obtain a contradiction. Thus <span class="math inline">\(t \in \mathcal{I}\)</span> and (<a href="#eq-density-proof"><span>4.18</span></a>) is our thesis.<p></p>
 </div></details>
 </div>
 </section>
-<section id="existence-of-square-roots" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="existence-of-square-roots"><span class="header-section-number">4.5</span> Existence of Square Roots</h2>
+<section id="existence-of-k-th-roots" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="existence-of-k-th-roots"><span class="header-section-number">4.5</span> Existence of <span class="math inline">\(k\)</span>-th Roots</h2>
+<p>We have started our discussion by proving that <span id="eq-sqrt2-existence"><span class="math display">\[
+\sqrt{2} \notin \mathbb{Q}\,.
+\tag{4.19}\]</span></span> We have shown that (<a href="#eq-sqrt2-existence"><span>4.19</span></a>) implies that the set <span class="math display">\[
+A := \{ q \in \mathbb{Q}\, \colon \,q^2 &lt; 2 \}
+\]</span> does not have a supremum in <span class="math inline">\(\mathbb{Q}\)</span>. We then introduced the Real Numbers <span class="math inline">\(\mathbb{R}\)</span> so that each non-empty and bounded above set would have a supremum. As the set <span class="math inline">\(A\)</span> is non-empty and bounded above, there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha = \sup A \,.
+\]</span> We are going to prove that <span class="math display">\[
+\alpha^2 = 2 \,,
+\]</span> which means that in <span class="math inline">\(\mathbb{R}\)</span> we can take the square root of <span class="math inline">\(2\)</span>. More in general, with the same fudamental idea, we can prove that for each <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>, there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha^k = x \,.
+\]</span></p>
+<div id="theorem_existence_root" class="Theorem" title="Existence of k-th roots">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 19: </strong>Existence of <span class="math inline">\(k\)</span>-th roots</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. There exists a unique <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha^k = x \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>The proof of Theorem <a href="chap_4.html#theorem_existence_root">19</a> rests on similar ideas to the ones used to prove that <span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 19">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 19</summary><div><em>Part 1: Uniqueness.</em><p></p>
+<p>Suppose <span class="math inline">\(\alpha_1,\alpha_2 \in \mathbb{R}\)</span> are such that <span class="math display">\[
+\alpha_1^k = \alpha_2^k = x \,.
+\]</span> If <span class="math inline">\(\alpha_1 \neq \alpha_2\)</span>, then <span class="math display">\[
+\alpha_1^k \neq \alpha_2^k \,,
+\]</span> obtaining a contradiction. Therefore <span class="math inline">\(\alpha_1 = \alpha_2\)</span>.</p>
+<p><em>Part 2: Existence.</em></p>
+<p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span>. If <span class="math inline">\(x = 0\)</span> there is nothing to prove, as <span class="math display">\[
+0^k = 0 \,,
+\]</span> so that <span class="math inline">\(\alpha = 0\)</span>. Therefore we can assume <span class="math inline">\(x&gt;0\)</span>. Define the subset of <span class="math inline">\(\mathbb{R}\)</span> <span class="math display">\[
+A := \{  t \in \mathbb{R}\, \colon \,t^k &lt; x  \} \,.
+\]</span> Clearly <span class="math inline">\(A\)</span> is non-empty and bounded above.</p>
+<blockquote class="blockquote">
+<p>An upper bound is given, for example, by <span class="math inline">\(b := x + 1\)</span>. Indeed, since we are assuming <span class="math inline">\(x \geq 0\)</span>, then <span class="math inline">\(x+1 \geq 1\)</span>. In particular we have <span class="math display">\[
+(x+1)^k \geq x + 1 \,.
+\]</span> Let <span class="math inline">\(t \in A\)</span>. Then <span class="math display">\[
+t^k &lt; x &lt; x + 1 &lt; (x+1)^k ,
+\]</span> showing that <span class="math inline">\(t&lt; x+1\)</span>.</p>
+</blockquote>
+<p>By the Axiom of Completeness of <span class="math inline">\(\mathbb{R}\)</span>, there exists <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha = \sup A \,.
+\]</span> We claim that <span id="eq-existence-root-proof-1"><span class="math display">\[
+\alpha^k = x \,.
+\tag{4.20}\]</span></span> Suppose by contradiction that (<a href="#eq-existence-root-proof-1"><span>4.20</span></a>) does not hold. We will need the formula: For all <span class="math inline">\(a,b \in \mathbb{R}\)</span> it holds <span id="eq-existence-root-proof-2"><span class="math display">\[
+a^k-b^k = (a - b)( a^{k-1} + a^{k-2} b + a^{k-3}b^k + \ldots + a b^{k-2} + b^{k-1} ) \,.  
+\tag{4.21}\]</span></span> Formula (<a href="#eq-existence-root-proof-2"><span>4.21</span></a>) can be easily proven by induction on <span class="math inline">\(k\)</span>. Since we are assuming that (<a href="#eq-existence-root-proof-1"><span>4.20</span></a>) does not hold, we have two cases:</p>
+<ul>
+<li><p><span class="math inline">\(\alpha^k &lt; x\)</span>: We know that <span class="math inline">\(\alpha\)</span> is the supremum of <span class="math inline">\(A\)</span>. We would like to violate this, by finding a number <span class="math inline">\(L\)</span> which is larger than <span class="math inline">\(\alpha\)</span>, but still belongs to <span class="math inline">\(A\)</span>. This means <span class="math inline">\(L\)</span> has to satisfy <span class="math display">\[
+\alpha &lt; L  \,, \quad L^k &lt; x \,.
+\]</span> We look for <span class="math inline">\(L\)</span> of the form <span class="math display">\[
+L_n := \alpha + \frac{1}{n}
+\]</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> to be chosen later. Clearly <span id="eq-existence-root-proof-3"><span class="math display">\[
+\alpha &lt; L_n \,,
+\tag{4.22}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We now search for <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+L_{n_0}^k &lt; x \,.  
+\]</span> Using formula (<a href="#eq-existence-root-proof-2"><span>4.21</span></a>) with <span class="math inline">\(a = \alpha\)</span> and <span class="math inline">\(b = L_{n_0}\)</span> we obtain <span id="eq-existence-root-proof-4"><span class="math display">\[
+L_{n_0}^k - \alpha^k = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha +
+                      \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \,.
+\tag{4.23}\]</span></span> Now notice that (<a href="#eq-existence-root-proof-3"><span>4.22</span></a>) implies <span class="math display">\[
+\alpha^j &lt; L_{n_0}^j
+\]</span> for all <span class="math inline">\(j \in \mathbb{N}\)</span>. Using this estimate on all the terms <span class="math inline">\(\alpha^j\)</span> appearing in the RHS of (<a href="#eq-existence-root-proof-4"><span>4.23</span></a>) we obtain <span class="math display">\[\begin{align*}
+L_{n_0}^k - \alpha^k &amp; = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha +
+                      \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \\
+                    &amp; &lt; \frac{1}{n_0} \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} L_{n_0} +
+                    \ldots + L_{n_0} L_{n_0}^{k-2} + L_{n_0}^{k-1} \right) \\
+                    &amp; = \frac{k}{n_0} \, L_{n_0}^{k-1}
+\end{align*}\]</span> Rearranging the above we get <span id="eq-existence-root-proof-5"><span class="math display">\[
+L_{n_0}^k &lt; \frac{k}{n_0} \, L_{n_0}^{k-1}  + \alpha^k \,.
+\tag{4.24}\]</span></span> Now note that <span class="math display">\[
+L_{n_0} = \alpha + \frac{1}{n_0} &lt; \alpha + 1 \,.
+\]</span> Therefore <span class="math display">\[
+L_{n_0}^{k-1} &lt; (\alpha + 1)^{k-1} \,,
+\]</span> and from (<a href="#eq-existence-root-proof-5"><span>4.24</span></a>) we obtain <span class="math display">\[
+L_{n_0}^k &lt; \frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k \,.
+\]</span> We wanted to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> so that <span class="math inline">\(L_{n_0}^k &lt; x\)</span>. Therefore we impose <span class="math display">\[
+\frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k  &lt; x \,,
+\]</span> and find that the above is satisfied for <span id="eq-existence-root-proof-6"><span class="math display">\[
+n_0 &gt; \frac{ k (\alpha + 1)^{k-1} }{ x - \alpha^k } \,.
+\tag{4.25}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6"><span>4.25</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &lt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6"><span>4.25</span></a>).<br>
+We have therefore shown the existence of <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\alpha &lt; L_{n_0}  \,, \quad  L_{n_0}^k &lt; x \,.
+\]</span> The above says that <span class="math inline">\(L_{n_0} \in A\)</span> and that <span class="math display">\[
+L_{n_0} &gt; \alpha = \sup A \,,
+\]</span> which is a contradiction, as <span class="math inline">\(\sup A\)</span> is an upper bound for <span class="math inline">\(A\)</span>.</p></li>
+<li><p><span class="math inline">\(\alpha^k &gt; x\)</span>: We know that <span class="math inline">\(\alpha\)</span> is the supremum of <span class="math inline">\(A\)</span>. We would like to find a contradiction, by finding an upper bound <span class="math inline">\(L\)</span> for <span class="math inline">\(A\)</span> which is smaller than <span class="math inline">\(\alpha\)</span>. This means <span class="math inline">\(L\)</span> has to satisfy <span class="math display">\[
+L &lt; \alpha   \,, \quad L^k &gt; x \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p>Such <span class="math inline">\(L\)</span> is an upper bound for <span class="math inline">\(A\)</span>: If <span class="math inline">\(t \in A\)</span> then <span class="math display">\[
+t^k &lt; x &lt; L^k \quad \implies \quad t &lt; L \,.
+\]</span></p>
+</blockquote>
+<p>We therefore look for <span class="math inline">\(L\)</span> of the form <span class="math display">\[
+L_n := \alpha - \frac{1}{n}
+\]</span> for <span class="math inline">\(n \in \mathbb{N}\)</span> to be chosen later. In this way <span id="eq-existence-root-proof-3bis"><span class="math display">\[
+L_n  &lt; \alpha \,,
+\tag{4.26}\]</span></span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We now search for <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+L_{n_0}^k &gt; x \,.  
+\]</span> Using formula (<a href="#eq-existence-root-proof-2"><span>4.21</span></a>) with <span class="math inline">\(a = L_{n_0}\)</span> and <span class="math inline">\(b = \alpha\)</span> we obtain <span id="eq-existence-root-proof-4bis"><span class="math display">\[
+\alpha^k - L_{n_0}^k  = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} +
+                      \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1} \right) \,.
+\tag{4.27}\]</span></span> Now notice that (<a href="#eq-existence-root-proof-3bis"><span>4.26</span></a>) implies <span class="math display">\[
+L_{n_0}^j &lt; \alpha^j
+\]</span> for all <span class="math inline">\(j \in \mathbb{N}\)</span>. Using this estimate on all the terms <span class="math inline">\(L_{n_0}^j\)</span> appearing in the RHS of (<a href="#eq-existence-root-proof-4bis"><span>4.27</span></a>) we obtain <span class="math display">\[\begin{align*}
+\alpha^k - L_{n_0}^k  &amp; = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} +
+                      \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1}  \right) \\
+                    &amp; &lt; \frac{1}{n_0} \left(  \alpha^{k-1} + \alpha^{k-2} \alpha +
+                    \ldots + \alpha \alpha^{k-2} + \alpha^{k-1} \right) \\
+                    &amp; = \frac{k}{n_0} \, \alpha^{k-1}
+\end{align*}\]</span> Rearranging the above we get <span class="math display">\[
+L_{n_0}^k &gt; \alpha^k - \frac{k}{n_0} \, \alpha^{k-1}  \,.
+\]</span> We wanted to find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> so that <span class="math inline">\(L_{n_0}^k &gt; x\)</span>. Therefore we impose <span class="math display">\[
+\alpha^k - \frac{k}{n_0} \, \alpha^{k-1} &gt; x \,,
+\]</span> and find that the above is satisfied for <span id="eq-existence-root-proof-6bis"><span class="math display">\[
+n_0 &gt; \frac{ k \alpha^{k-1} }{ \alpha^k - x} \,.
+\tag{4.28}\]</span></span> Notice that the RHS in (<a href="#eq-existence-root-proof-6bis"><span>4.28</span></a>) is a positive real number, since <span class="math inline">\(\alpha^k &gt; x\)</span> by assumption. Therefore, by the Archimedean Property of Theorem <a href="chap_4.html#theorem-archimedean">2</a> Point 1, there exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> satisfying (<a href="#eq-existence-root-proof-6bis"><span>4.28</span></a>).<br>
+We have therefore shown the existence of <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span class="math display">\[
+L_{n_0} &lt; \alpha \,, \quad  L_{n_0}^k &gt; x \,.
+\]</span> Condition <span class="math inline">\(L_{n_0}^k &gt; x\)</span> says that <span class="math inline">\(L_{n_0}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. At the same time it holds <span class="math display">\[
+L_{n_0} &lt; \alpha = \sup A \,,
+\]</span> which is a contradiction, as <span class="math inline">\(\sup A\)</span> is the smallest upper bound for <span class="math inline">\(A\)</span>.</p></li>
+</ul>
+<p>Therefore, both cases <span class="math inline">\(\alpha^k &gt; x\)</span> and <span class="math inline">\(\alpha^k &lt; x\)</span> lead to a contradiction. Hence <span class="math inline">\(\alpha^k =x\)</span>, concluding.</p>
+</div></details>
+</div>
+<div id="k-th-root-of-a-number" class="Definition" title="k-th root of a number">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong><span class="math inline">\(k\)</span>-th root of a number</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(k \in \mathbb{N}\)</span>. The real number <span class="math inline">\(\alpha\)</span> such that <span class="math display">\[
+\alpha^k = x
+\]</span> is called the <strong><span class="math inline">\(k\)</span>-th root</strong> of <span class="math inline">\(x\)</span>, and is denoted by <span class="math display">\[
+\sqrt[k]{x} := \alpha  \,.
+\]</span><p></p>
+</div></details>
+</div>
 </section>
 <section id="cardinality" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="cardinality"><span class="header-section-number">4.6</span> Cardinality</h2>
-<p>Brief. Use Dommers</p>
 
 
 </section>

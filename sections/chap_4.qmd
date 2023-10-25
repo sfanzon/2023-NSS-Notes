@@ -772,7 +772,62 @@ $$
 
 
 
-![Let $n \in \N$ be such that $1/n<|y-x|$. Then take $m$ so that $m/n \in (x,y)$.](/images/density_proof.png){#fig-density-proof width=80%}
+![Let $n \in \N$ be such that $1/n< y-x$. Then take $m$ so that $m/n \in (x,y)$.](/images/density_proof.png){#fig-density-proof width=80%}
+
+
+
+::: Proof
+
+
+We need to find $q \in \Q$ such that 
+$$
+x < q < y \,.
+$${#eq-proof-density-1}
+By definition of $\Q$, we have that $q$ has to be $q=m/n$ for $m \in \Z$ and $n \in \N$. 
+Therefore (@eq-proof-density-1) is equivalent to finding $m \in \Z$ and $n \in \N$ such that
+$$
+x < \frac{m}{n} < y \,.
+$${#eq-proof-density-2}
+The idea is to proceed as in @fig-density-proof: We take $n$ such that $1/n$ is small enough
+so that we can make $m$ *jumps* of size $1/n$ and end up between $x$ and $y$.  
+To this end, let $n \in \N$ be such that
+$$
+\frac{1}{n} < y - x \,.
+$${#eq-proof-density-3}
+Such $n$ exists thanks to the Archimedean Property in Theorem \ref{theorem-archimedean} Point 2.
+Inequality (@eq-proof-density-2) is equivalent to 
+$$
+nx < m < ny \,.
+$$
+Take $m \in \Z$ such that
+$$
+m-1 \leq nx < m \,.
+$${#eq-proof-density-4}
+
+> Why does such $m$ exist? Because by Archimedean Property in Theorem \ref{theorem-archimedean} Point 1, there exists $m' \in \Z$ such that 
+$$
+m' > nx
+$$ 
+We can then choose $m$ to be the smallest element in $\Z$ such that $m >  nx$. Such $m$ satisfies (@eq-proof-density-4).  
+
+The second inequality in (@eq-proof-density-4) implies 
+$$
+x < \frac{m}{n} \,,
+$$
+which is the first inequality in (@eq-proof-density-2). Now note that (@eq-proof-density-3) is equivalent to $x < y - 1/n$. We can use the latter and the first inequality in (@eq-proof-density-4)
+to estimate
+\begin{align*}
+m & \leq 1 + nx \\
+  & < 1 + n \left(   y - \frac{1}{n}  \right ) \\
+  & = ny \,,
+\end{align*}
+which yields
+$$
+\frac{m}{n} < y \,.
+$$
+Therefore the second inequality in (@eq-proof-density-2) is proven, concluding the proof.
+
+:::
 
 
 We have constructed the real numbers $\R$ so that they would fill the **gaps** of $\Q$. Formally, these gaps are the numbers in $\R \smallsetminus \Q$. Let us give a name to this set.
@@ -838,7 +893,276 @@ since $t,q \in \Q$, and $\Q$ is closed under summation. Since $\sqrt{2} \in \mat
 
 
 
-## Existence of Square Roots
+
+
+## Existence of $k$-th Roots
+
+
+We have started our discussion by proving that
+$$
+\sqrt{2} \notin \Q \,.
+$${#eq-sqrt2-existence}
+We have shown that (@eq-sqrt2-existence) implies that the set 
+$$
+A := \{ q \in \Q \divider q^2 < 2 \} 
+$$
+does not have a supremum in $\Q$. We then introduced the Real Numbers $\R$ so that each 
+non-empty and bounded above set would have a supremum. As the set $A$ is non-empty and bounded above,
+there exists $\alpha \in \R$ such that
+$$
+\alpha = \sup A \,.
+$$
+We are going to prove that
+$$
+\alpha^2 = 2 \,,
+$$
+which means that in $\R$ we can take the square root of $2$. More in general, with the same
+fudamental idea, we can prove that for each $x \in \R$ with $x \geq 0$ and $k \in \N$, 
+there exists $\alpha \in \R$ such that
+$$
+\alpha^k = x \,.
+$$
+
+
+::: Theorem
+### Existence of $k$-th roots   {#theorem_existence_root}
+
+Let $x \in \R$ with $x \geq 0$ and $k \in \N$. There exists a unique $\alpha \in \R$ such that 
+$$
+\alpha^k = x \,.
+$$
+
+
+:::
+
+
+The proof of Theorem \ref{theorem_existence_root} rests on similar ideas to the ones 
+used to prove that $\Q$ does not have the cut property.
+
+::: Proof
+### Proof of Theorem \ref{theorem_existence_root}
+
+*Part 1: Uniqueness.* 
+
+Suppose $\alpha_1,\alpha_2 \in \R$ are such that
+$$
+\alpha_1^k = \alpha_2^k = x \,.
+$$
+If $\alpha_1 \neq \alpha_2$, then
+$$
+\alpha_1^k \neq \alpha_2^k \,,
+$$
+obtaining a contradiction. Therefore $\alpha_1 = \alpha_2$.
+
+
+*Part 2: Existence.*
+
+Let $x \in \R$ with $x \geq 0$. If $x = 0$ there is nothing to prove, as
+$$
+0^k = 0 \,,
+$$
+so that $\alpha = 0$. Therefore we can assume $x>0$. Define the subset of $\R$
+$$
+A := \{  t \in \R \divider  t^k < x  \} \,.
+$$
+Clearly $A$ is non-empty and bounded above. 
+
+> An upper bound is given, for example, by $b := x + 1$. Indeed, since we are assuming 
+$x \geq 0$, then $x+1 \geq 1$. In particular we have 
+$$
+(x+1)^k \geq x + 1 \,.
+$$
+Let $t \in A$. Then
+$$
+t^k < x < x + 1 < (x+1)^k ,
+$$
+showing that $t< x+1$. 
+
+
+By the Axiom of Completeness of $\R$, there exists $\alpha \in \R$ such that 
+$$
+\alpha = \sup A \,.
+$$
+We claim that 
+$$
+\alpha^k = x \,.
+$${#eq-existence-root-proof-1}
+Suppose by contradiction that (@eq-existence-root-proof-1) does not hold. 
+We will need the formula: For all $a,b \in \R$ it holds
+$$
+a^k-b^k = (a - b)( a^{k-1} + a^{k-2} b + a^{k-3}b^k + \ldots + a b^{k-2} + b^{k-1} ) \,.  
+$${#eq-existence-root-proof-2}
+Formula (@eq-existence-root-proof-2) can be easily proven by induction on $k$.
+Since we are assuming that (@eq-existence-root-proof-1) does not hold, we have two cases:
+
+- $\alpha^k < x$: We know that $\alpha$ is the supremum of $A$. We would like to violate this, by
+finding a number $L$ which is larger than $\alpha$, but still belongs to $A$. This means
+$L$ has to satisfy
+$$
+\alpha < L  \,, \quad L^k < x \,.
+$$
+We look for $L$ of the form
+$$
+L_n := \alpha + \frac{1}{n} 
+$$
+for $n \in \N$ to be chosen later. Clearly
+$$
+\alpha < L_n \,,
+$${#eq-existence-root-proof-3}
+for all $n \in \N$. We now search for $n_0 \in \N$ such that
+$$
+L_{n_0}^k < x \,.  
+$$
+Using formula (@eq-existence-root-proof-2) with  $a = \alpha$ and $b = L_{n_0}$ we obtain
+$$
+L_{n_0}^k - \alpha^k = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha + 
+                        \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \,.
+$${#eq-existence-root-proof-4}
+Now notice that (@eq-existence-root-proof-3) implies
+$$
+\alpha^j < L_{n_0}^j
+$$
+for all $j \in \N$. Using this estimate on all the terms $\alpha^j$ appearing 
+in the RHS of (@eq-existence-root-proof-4) we obtain
+\begin{align*}
+ L_{n_0}^k - \alpha^k & = \frac{1}{n_0}  \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} \alpha + 
+                        \ldots  + L_{n_0}\alpha^{k-2} + \alpha^{k-1} \right) \\ 
+                      & < \frac{1}{n_0} \left(  L_{n_0}^{k-1} + L_{n_0}^{k-2} L_{n_0} + 
+                      \ldots + L_{n_0} L_{n_0}^{k-2} + L_{n_0}^{k-1} \right) \\
+                      & = \frac{k}{n_0} \, L_{n_0}^{k-1} 
+\end{align*}
+Rearranging the above we get
+$$
+L_{n_0}^k < \frac{k}{n_0} \, L_{n_0}^{k-1}  + \alpha^k \,.
+$${#eq-existence-root-proof-5}
+Now note that 
+$$
+L_{n_0} = \alpha + \frac{1}{n_0} < \alpha + 1 \,.
+$$
+Therefore 
+$$
+L_{n_0}^{k-1} < (\alpha + 1)^{k-1} \,,
+$$
+and from (@eq-existence-root-proof-5) we obtain
+$$
+L_{n_0}^k < \frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k \,.
+$$
+We wanted to find $n_0 \in \N$ so that $L_{n_0}^k < x$. Therefore we impose 
+$$
+\frac{k}{n_0} \, (\alpha + 1)^{k-1} + \alpha^k  < x \,,
+$$
+and find that the above is satisfied for
+$$
+n_0 > \frac{ k (\alpha + 1)^{k-1} }{ x - \alpha^k } \,.
+$${#eq-existence-root-proof-6}
+Notice that the RHS in (@eq-existence-root-proof-6) is a positive real number, since $\alpha^k < x$ by assumption. 
+Therefore, by the Archimedean Property of Theorem \ref{theorem-archimedean} Point 1,
+there exists $n_0 \in \N$ satisfying (@eq-existence-root-proof-6).  
+We have therefore shown the existence of $n_0 \in \N$ such that 
+$$
+\alpha < L_{n_0}  \,, \quad  L_{n_0}^k < x \,.
+$$
+The above says that $L_{n_0} \in A$ and that 
+$$
+L_{n_0} > \alpha = \sup A \,,
+$$
+which is a contradiction, as $\sup A$ is an upper bound for $A$.
+
+
+
+- $\alpha^k > x$: We know that $\alpha$ is the supremum of $A$. We would like to find a contradiction, by finding an upper bound $L$ for $A$ which is smaller than $\alpha$. This means
+$L$ has to satisfy
+$$
+L < \alpha   \,, \quad L^k > x \,.
+$$
+
+  > Such $L$ is an upper bound for $A$: If $t \in A$ then
+  >$$
+  >t^k < x < L^k \quad \implies \quad t < L \,.
+  >$$
+
+  We therefore look for $L$ of the form
+$$
+L_n := \alpha - \frac{1}{n} 
+$$
+for $n \in \N$ to be chosen later. In this way
+$$
+L_n  < \alpha \,,
+$${#eq-existence-root-proof-3bis}
+for all $n \in \N$. We now search for $n_0 \in \N$ such that
+$$
+L_{n_0}^k > x \,.  
+$$
+Using formula (@eq-existence-root-proof-2) with $a = L_{n_0}$ and $b = \alpha$ we obtain
+$$
+\alpha^k - L_{n_0}^k  = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} + 
+                        \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1} \right) \,.
+$${#eq-existence-root-proof-4bis}
+Now notice that (@eq-existence-root-proof-3bis) implies
+$$
+L_{n_0}^j < \alpha^j 
+$$
+for all $j \in \N$. Using this estimate on all the terms $L_{n_0}^j$ appearing 
+in the RHS of (@eq-existence-root-proof-4bis) we obtain
+\begin{align*}
+\alpha^k - L_{n_0}^k  & = \frac{1}{n_0}  \left(  \alpha^{k-1} + \alpha^{k-2} L_{n_0} + 
+                        \ldots  + \alpha L_{n_0}^{k-2} + L_{n_0}^{k-1}  \right) \\ 
+                      & < \frac{1}{n_0} \left(  \alpha^{k-1} + \alpha^{k-2} \alpha + 
+                      \ldots + \alpha \alpha^{k-2} + \alpha^{k-1} \right) \\
+                      & = \frac{k}{n_0} \, \alpha^{k-1} 
+\end{align*}
+Rearranging the above we get
+$$
+L_{n_0}^k > \alpha^k - \frac{k}{n_0} \, \alpha^{k-1}  \,.
+$$
+We wanted to find $n_0 \in \N$ so that $L_{n_0}^k > x$. Therefore we impose 
+$$
+\alpha^k - \frac{k}{n_0} \, \alpha^{k-1} > x \,,
+$$
+and find that the above is satisfied for
+$$
+n_0 > \frac{ k \alpha^{k-1} }{ \alpha^k - x} \,.
+$${#eq-existence-root-proof-6bis}
+Notice that the RHS in (@eq-existence-root-proof-6bis) is a positive real number, since $\alpha^k > x$ by assumption. 
+Therefore, by the Archimedean Property of Theorem \ref{theorem-archimedean} Point 1,
+there exists $n_0 \in \N$ satisfying (@eq-existence-root-proof-6bis).  
+We have therefore shown the existence of $n_0 \in \N$ such that 
+$$
+L_{n_0} < \alpha \,, \quad  L_{n_0}^k > x \,.
+$$
+Condition $L_{n_0}^k > x$ says that $L_{n_0}$ is an upper bound for $A$. At the same
+time it holds
+$$
+L_{n_0} < \alpha = \sup A \,,
+$$
+which is a contradiction, as $\sup A$ is the smallest upper bound for $A$.
+
+
+
+
+Therefore, both cases $\alpha^k > x$ and $\alpha^k < x$ lead to a contradiction. Hence
+$\alpha^k =x$, concluding.
+
+:::
+
+
+
+::: Definition
+### $k$-th root of a number
+ 
+Let $x \in \R$ with $x \geq 0$ and $k \in \N$. The real number $\alpha$ such that
+$$
+\alpha^k = x 
+$$
+is called the **$k$-th root** of $x$, and is denoted by
+$$
+\sqrt[k]{x} := \alpha  \,.
+$$
+
+
+:::
+
+
 
 
 
@@ -847,5 +1171,5 @@ since $t,q \in \Q$, and $\Q$ is closed under summation. Since $\sqrt{2} \in \mat
 
 ## Cardinality
 
-Brief. Use Dommers
+
 

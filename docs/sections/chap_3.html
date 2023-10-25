@@ -66,15 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Theorem {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -82,9 +78,37 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Corollary {
   --color1: #f4cce0;
@@ -94,41 +118,17 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Conjecture {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 </style>
 
@@ -514,24 +514,24 @@ x/y := x \cdot y^{-1}\,, \quad \forall \, x , y \in K \,, \,\, y \neq 0 \,,
 <div id="Proof*-1" class="Proof">
 <details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>
 <ol type="1">
-<li>Suppose that <span class="math inline">\(0 \in K\)</span> and <span class="math inline">\(\tilde{0} \in K\)</span> are both neutral element of <span class="math inline">\(+\)</span>, that is, they both satisfy (A2). Then <span class="math display">\[
-0 + \tilde{0} = 0
-\]</span> since <span class="math inline">\(\tilde{0}\)</span> is a neutral element for <span class="math inline">\(+\)</span>. Moreover <span class="math display">\[
-\tilde{0} + 0 = \tilde{0}
+<li>Suppose that <span class="math inline">\(0 \in K\)</span> and <span class="math inline">\(\widetilde{0} \in K\)</span> are both neutral element of <span class="math inline">\(+\)</span>, that is, they both satisfy (A2). Then <span class="math display">\[
+0 + \widetilde{0} = 0
+\]</span> since <span class="math inline">\(\widetilde{0}\)</span> is a neutral element for <span class="math inline">\(+\)</span>. Moreover <span class="math display">\[
+\widetilde{0} + 0 = \widetilde{0}
 \]</span> since <span class="math inline">\(0\)</span> is a neutral element for <span class="math inline">\(+\)</span>. By commutativity of <span class="math inline">\(+\)</span>, see property (A1), we have <span class="math display">\[
-0 = 0 + \tilde{0} = \tilde{0} + 0 = \tilde{0} \,,
-\]</span> showing that <span class="math inline">\(0 = \tilde{0}\)</span>. Hence the neutral element for <span class="math inline">\(+\)</span> is unique.</li>
+0 = 0 + \widetilde{0} = \widetilde{0} + 0 = \widetilde{0} \,,
+\]</span> showing that <span class="math inline">\(0 = \widetilde{0}\)</span>. Hence the neutral element for <span class="math inline">\(+\)</span> is unique.</li>
 <li>Exercise.</li>
-<li>Let <span class="math inline">\(x \in K\)</span> and suppose that <span class="math inline">\(y, \tilde{y} \in K\)</span> are both additive inverses of <span class="math inline">\(x\)</span>, that is, they both satisfy (A3). Therefore <span class="math display">\[
+<li>Let <span class="math inline">\(x \in K\)</span> and suppose that <span class="math inline">\(y, \widetilde{y} \in K\)</span> are both additive inverses of <span class="math inline">\(x\)</span>, that is, they both satisfy (A3). Therefore <span class="math display">\[
 x + y = 0
 \]</span> since <span class="math inline">\(y\)</span> is an additive inverse of <span class="math inline">\(x\)</span> and <span class="math display">\[
-x + \tilde{y} = 0
-\]</span> since <span class="math inline">\(\tilde{y}\)</span> is an additive inverse of <span class="math inline">\(x\)</span>. Therefore we can use commutativity and associativity and of <span class="math inline">\(+\)</span>, see property (A1), and the fact that <span class="math inline">\(0\)</span> is the neutral element of <span class="math inline">\(+\)</span>, to infer <span class="math display">\[\begin{align*}
-y &amp; = y + 0 = y + (x + \tilde{y}) \\
-  &amp; = (y + x) + \tilde{y} = (x + y) + \tilde{y} \\
-  &amp; = 0 + \tilde{y} = \tilde{y} \,,    
-\end{align*}\]</span> concluding that <span class="math inline">\(y = \tilde{y}\)</span>. Thus there is a unique additive inverse of <span class="math inline">\(x\)</span>, and <span class="math display">\[
-y = \tilde{y} = -x \,,
+x + \widetilde{y} = 0
+\]</span> since <span class="math inline">\(\widetilde{y}\)</span> is an additive inverse of <span class="math inline">\(x\)</span>. Therefore we can use commutativity and associativity and of <span class="math inline">\(+\)</span>, see property (A1), and the fact that <span class="math inline">\(0\)</span> is the neutral element of <span class="math inline">\(+\)</span>, to infer <span class="math display">\[\begin{align*}
+y &amp; = y + 0 = y + (x + \widetilde{y}) \\
+  &amp; = (y + x) + \widetilde{y} = (x + y) + \widetilde{y} \\
+  &amp; = 0 + \widetilde{y} = \widetilde{y} \,,    
+\end{align*}\]</span> concluding that <span class="math inline">\(y = \widetilde{y}\)</span>. Thus there is a unique additive inverse of <span class="math inline">\(x\)</span>, and <span class="math display">\[
+y = \widetilde{y} = -x \,,
 \]</span> with <span class="math inline">\(-x\)</span> the element from property (A3).</li>
 <li>Exercise.</li>
 </ol>
@@ -685,26 +685,40 @@ a \leq \sqrt{2}  \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B 
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 20: </strong><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property.</summary><div><span class="math inline">\(\mathbb{Q}\)</span> does not have the cut property. More explicitly, there exist a cut <span class="math inline">\((A,B)\)</span> of <span class="math inline">\(\mathbb{Q}\)</span> which has no separator.<p></p>
 </div></details>
 </div>
-<div id="Remark-21" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 21</strong></summary><div>Before proceeding with the proof, let us summarize the ideas behind it:<br>
+<div id="remark-idea-proof-cut" class="Remark" title="Ideas for the proof of Theorem 20">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 21: </strong>Ideas for the proof of Theorem 20</summary><div>Before proceeding with the proof, let us summarize the ideas behind it:<br>
 We will consider the cut <span class="math inline">\((A,B)\)</span> in (<a href="#eq-cut-Q"><span>3.1</span></a>). We then assume by contradiction that <span class="math inline">\((A,B)\)</span> admits a separator <span class="math inline">\(L \in \mathbb{Q}\)</span>, so that <span id="eq-theorem-Q-cut"><span class="math display">\[
 a \leq L \leq b \,, \quad \forall \, a \in A\,, \,\, \forall \, b \in B \,.
 \tag{3.2}\]</span></span> Since <span class="math inline">\((A,B)\)</span> is a partition of <span class="math inline">\(\mathbb{Q}\)</span>, then either <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span>. These will both lead to a contradiction:<p></p>
 <ul>
-<li><p>If <span class="math inline">\(L \in A\)</span>, then by definition we will have <span class="math display">\[
+<li><p>If <span class="math inline">\(L \in A\)</span>, by definition of <span class="math inline">\(A\)</span> we have <span class="math display">\[
 L &lt; \sqrt{2} \,.
-\]</span> Now the idea is that <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, and hence we can always find some <span class="math inline">\(\tilde{L} \in \mathbb{Q}\)</span> such that <span id="eq-theorem-Q-cut-2"><span class="math display">\[
-L &lt; \tilde{L} &lt; \sqrt{2} \,.
-\tag{3.3}\]</span></span> Therefore <span class="math inline">\(\tilde{L} \in A\)</span>, and (<a href="#eq-theorem-Q-cut"><span>3.2</span></a>) implies <span class="math display">\[
-\tilde{L} \leq L \,,
+\]</span> We want to contradict the fact that <span class="math inline">\(L\)</span> is a separator for the cut <span class="math inline">\((A,B)\)</span>. The idea is that <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, and therefore it is possible to find a rational number <span class="math inline">\(\widetilde{L}\)</span> such that <span class="math display">\[
+L &lt; \widetilde{L} &lt; \sqrt{2} \,.
+\]</span> How do we find such <span class="math inline">\(\widetilde{L}\)</span> in practice? We look for a number <span class="math inline">\(\widetilde{L}_n\)</span> of the form <span class="math display">\[
+\widetilde{L}_n = 1 + \frac{1}{n}
+\]</span> for some <span class="math inline">\(n \in \mathbb{N}\)</span> to be suitably chosen later. Clearly <span class="math inline">\(\widetilde{L}_n \in \mathbb{Q}\)</span> and <span class="math display">\[
+L &lt; \widetilde{L}_n
+\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We need to prove that we can find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span id="eq-theorem-Q-cut-2"><span class="math display">\[
+L &lt; \widetilde{L}_{n_0} &lt; \sqrt{2} \,.
+\tag{3.3}\]</span></span> This is indeed possible: There exists <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that (<a href="#eq-theorem-Q-cut-2"><span>3.3</span></a>) holds. From (<a href="#eq-theorem-Q-cut-2"><span>3.3</span></a>) we see that <span class="math inline">\(\widetilde{L}_{n_0} \in A\)</span>. Since <span class="math inline">\(L\)</span> is a separator, from (<a href="#eq-theorem-Q-cut"><span>3.2</span></a>) we obtain <span class="math display">\[
+\widetilde{L}_{n_0} \leq L \,,
 \]</span> which contradicts (<a href="#eq-theorem-Q-cut-2"><span>3.3</span></a>).</p></li>
-<li><p>If <span class="math inline">\(L \in B\)</span>, then by definition we will have <span class="math display">\[
+<li><p>If <span class="math inline">\(L \in B\)</span>, by definition of <span class="math inline">\(B\)</span> we have <span class="math display">\[
 \sqrt{2} &lt; L \,.
-\]</span> Similarly, as <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, we can find <span class="math inline">\(\tilde{L} \in \mathbb{Q}\)</span> such that <span class="math display">\[
-\sqrt{2} &lt; \tilde{L} &lt; L \,.
-\]</span> Arguing as above we find a contradiction.</p></li>
+\]</span> The idea is the same as above: Since <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, we can find <span class="math inline">\(\widetilde{L} \in \mathbb{Q}\)</span> such that <span class="math display">\[
+\sqrt{2} &lt; \widetilde{L} &lt; L \,.
+\]</span> Since we want <span class="math inline">\(\widetilde{L}\)</span> to be a rational number smaller than <span class="math inline">\(L\)</span>, we look for <span class="math inline">\(\widetilde{L}\)</span> of the form <span class="math display">\[
+\widetilde{L}_n := L - \frac{1}{n} \,,
+\]</span> for a suitable <span class="math inline">\(n \in \mathbb{N}\)</span>. This satisfies <span class="math inline">\(\widetilde{L}_n \in \mathbb{Q}\)</span> and <span class="math display">\[
+\widetilde{L}_n &lt; L \,,
+\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. We then find <span class="math inline">\(n_0 \in \mathbb{N}\)</span> such that <span id="eq-theorem-Q-cut-3"><span class="math display">\[
+\sqrt{2} &lt; \widetilde{L}_{n_0} &lt; L \,.
+\tag{3.4}\]</span></span> The above shows that <span class="math inline">\(\widetilde{L}_{n_0} \in B\)</span>. As <span class="math inline">\(L\)</span> is a separator, we find that <span class="math display">\[
+L \leq \widetilde{L}_{n_0}  \,,
+\]</span> which contradicts (<a href="#eq-theorem-Q-cut-3"><span>3.4</span></a>).</p></li>
 </ul>
-<p>Therefore both <span class="math inline">\(L \in A\)</span> and <span class="math inline">\(L \in B\)</span> lead to a contradiction. We conclude that <span class="math inline">\((A,B)\)</span> has no separator in <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<p>Therefore, both cases <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span> lead to a contradiction. Since these are all the possibilities, we conclude that the cut <span class="math inline">\((A,B)\)</span> has no separator in <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 </div></details>
 </div>
 <p>Time to make the ideas in the above remark rigorous.</p>
@@ -743,24 +757,24 @@ Suppose by contradiction that <span class="math inline">\((A,B)\)</span> admits 
 L \in \mathbb{Q}\,.
 \]</span> By definition this means <span id="eq-separator-contradiction"><span class="math display">\[
 a \leq L \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
-\tag{3.4}\]</span></span> Since <span class="math display">\[
+\tag{3.5}\]</span></span> Since <span class="math display">\[
 L \in \mathbb{Q}\,, \quad \mathbb{Q}= A \cup B \,, \quad  A \cap B = \emptyset \,,
 \]</span> then either <span class="math inline">\(L \in A\)</span> or <span class="math inline">\(L \in B\)</span>. We will see that both these possibilities lead to a contradiction:</p>
 <p><em>Case 1: <span class="math inline">\(L \in A\)</span>.</em><br>
-By (<a href="#eq-separator-contradiction"><span>3.4</span></a>) we know that <span id="eq-separator-contradiction-hp-0"><span class="math display">\[
+By (<a href="#eq-separator-contradiction"><span>3.5</span></a>) we know that <span id="eq-separator-contradiction-hp-0"><span class="math display">\[
 a \leq L \,, \quad \forall \, a \in A \,.
-\tag{3.5}\]</span></span> In particular the above implies <span id="eq-separator-contradiction-1"><span class="math display">\[
+\tag{3.6}\]</span></span> In particular the above implies <span id="eq-separator-contradiction-1"><span class="math display">\[
 L \geq 0
-\tag{3.6}\]</span></span> since <span class="math inline">\(0 \in A\)</span>. Therefore we must have <span class="math inline">\(L \in A_2\)</span>, that is, <span id="eq-separator-contradiction-hp-1"><span class="math display">\[
+\tag{3.7}\]</span></span> since <span class="math inline">\(0 \in A\)</span>. Therefore we must have <span class="math inline">\(L \in A_2\)</span>, that is, <span id="eq-separator-contradiction-hp-1"><span class="math display">\[
 L \geq 0 \,\, \mbox{ and } \,\, L^2 &lt; 2 \,.
-\tag{3.7}\]</span></span> Set <span class="math display">\[
-\tilde{L} := L + \frac1n
+\tag{3.8}\]</span></span> Set <span class="math display">\[
+\widetilde{L} := L + \frac1n
 \]</span> for <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Clearly we have <span id="eq-separator-contradiction-2"><span class="math display">\[
-\tilde{L} \in \mathbb{Q}\,\,\, \mbox{ and } \,\,\, L &lt; \tilde{L}  \,.
-\tag{3.8}\]</span></span> From (<a href="#eq-separator-contradiction-1"><span>3.6</span></a>) and (<a href="#eq-separator-contradiction-2"><span>3.8</span></a>) we have also <span id="eq-separator-contradiction-3"><span class="math display">\[
-\tilde{L}&gt;0 \,.
-\tag{3.9}\]</span></span> We now want to show that there is a choice of <span class="math inline">\(n\)</span> such that <span class="math inline">\(\tilde{L}^2 &lt; 2\)</span>, which will lead to a contradiction. Indeed, we can estimate <span class="math display">\[\begin{align*}
-\tilde{L}^2 &amp; = \left( L + \frac1n \right)^2 \\
+\widetilde{L} \in \mathbb{Q}\,\,\, \mbox{ and } \,\,\, L &lt; \widetilde{L}  \,.
+\tag{3.9}\]</span></span> From (<a href="#eq-separator-contradiction-1"><span>3.7</span></a>) and (<a href="#eq-separator-contradiction-2"><span>3.9</span></a>) we have also <span id="eq-separator-contradiction-3"><span class="math display">\[
+\widetilde{L}&gt;0 \,.
+\tag{3.10}\]</span></span> We now want to show that there is a choice of <span class="math inline">\(n\)</span> such that <span class="math inline">\(\widetilde{L}^2 &lt; 2\)</span>, which will lead to a contradiction. Indeed, we can estimate <span class="math display">\[\begin{align*}
+\widetilde{L}^2 &amp; = \left( L + \frac1n \right)^2 \\
             &amp; = L^2 + \frac{1}{n^2} + 2 \frac{L}{n} \\
             &amp; &lt; L^2 + \frac{1}{n} + 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}&lt;\frac{1}{n^2}  \right) \\
             &amp; = L^2 + \frac{2L + 1}{n} \,.
@@ -768,26 +782,26 @@ L \geq 0 \,\, \mbox{ and } \,\, L^2 &lt; 2 \,.
 L^2 + \frac{2L + 1}{n} &lt; 2 \,,
 \]</span> we can rearrange the above and obtain <span class="math display">\[
 n(2 - L^2) &gt; 2L + 1 \,.
-\]</span> Now note that <span class="math inline">\(L^2 &lt; 2\)</span> by assumption (<a href="#eq-separator-contradiction-hp-1"><span>3.7</span></a>). Thus we can divived by <span class="math inline">\((2 - L^2)\)</span> and obtain <span class="math display">\[
+\]</span> Now note that <span class="math inline">\(L^2 &lt; 2\)</span> by assumption (<a href="#eq-separator-contradiction-hp-1"><span>3.8</span></a>). Thus we can divived by <span class="math inline">\((2 - L^2)\)</span> and obtain <span class="math display">\[
 n &gt;\frac{2L + 1}{2 - L^2} \,.
 \]</span> Therefore we have just shown that <span class="math display">\[
-n &gt;\frac{2L + 1}{2 - L^2}  \,\, \implies \,\, \tilde{L}^2 &lt; 2 \,.
-\]</span> Together with (<a href="#eq-separator-contradiction-3"><span>3.9</span></a>) this implies <span class="math inline">\(\tilde{L} \in A\)</span>. Therefore we have <span class="math display">\[
-\tilde{L} \leq L
-\]</span> by (<a href="#eq-separator-contradiction-hp-0"><span>3.5</span></a>). On the other hand it also holds <span class="math display">\[
-\tilde{L} &gt; L
-\]</span> by (<a href="#eq-separator-contradiction-2"><span>3.8</span></a>), and therefore we have a contradiction. Thus <span class="math inline">\(L \notin A\)</span>.</p>
+n &gt;\frac{2L + 1}{2 - L^2}  \,\, \implies \,\, \widetilde{L}^2 &lt; 2 \,.
+\]</span> Together with (<a href="#eq-separator-contradiction-3"><span>3.10</span></a>) this implies <span class="math inline">\(\widetilde{L} \in A\)</span>. Therefore we have <span class="math display">\[
+\widetilde{L} \leq L
+\]</span> by (<a href="#eq-separator-contradiction-hp-0"><span>3.6</span></a>). On the other hand it also holds <span class="math display">\[
+\widetilde{L} &gt; L
+\]</span> by (<a href="#eq-separator-contradiction-2"><span>3.9</span></a>), and therefore we have a contradiction. Thus <span class="math inline">\(L \notin A\)</span>.</p>
 <p><em>Case 2: <span class="math inline">\(L \in B\)</span>.</em><br>
 As <span class="math inline">\(L \in B\)</span>, we have by definition <span id="eq-separator-contradiction-5"><span class="math display">\[
 L &gt; 0 \,, \quad L^2 &gt; 2 \,.
-\tag{3.10}\]</span></span> Moreover since <span class="math inline">\(L\)</span> is a separator, see (<a href="#eq-separator-contradiction"><span>3.4</span></a>), in particular <span id="eq-separator-contradiction-6"><span class="math display">\[
+\tag{3.11}\]</span></span> Moreover since <span class="math inline">\(L\)</span> is a separator, see (<a href="#eq-separator-contradiction"><span>3.5</span></a>), in particular <span id="eq-separator-contradiction-6"><span class="math display">\[
 L \leq b \,,  \,\, \forall \, b \in B \,.
-\tag{3.11}\]</span></span> Define now <span class="math display">\[
-\tilde{L} := L - \frac1n
+\tag{3.12}\]</span></span> Define now <span class="math display">\[
+\widetilde{L} := L - \frac1n
 \]</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Clearly we have <span id="eq-separator-contradiction-7"><span class="math display">\[
-\tilde{L} \in \mathbb{Q}\,, \quad \tilde{L} &lt; L \,.
-\tag{3.12}\]</span></span> We now show that <span class="math inline">\(n\)</span> can be chosen so that <span class="math inline">\(\tilde{L} \in B\)</span>. Indeed <span class="math display">\[\begin{align*}
-\tilde{L}^2  &amp; = \left(  L - \frac1n   \right)^2 \\
+\widetilde{L} \in \mathbb{Q}\,, \quad \widetilde{L} &lt; L \,.
+\tag{3.13}\]</span></span> We now show that <span class="math inline">\(n\)</span> can be chosen so that <span class="math inline">\(\widetilde{L} \in B\)</span>. Indeed <span class="math display">\[\begin{align*}
+\widetilde{L}^2  &amp; = \left(  L - \frac1n   \right)^2 \\
              &amp; = L^2 + \frac{1}{n^2} - 2 \frac{L}{n} \\
              &amp; &gt; L^2 - \frac{1}{n^2} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} &gt; - \frac{1}{n^2}  \right) \\
              &amp; &gt; L^2 - \frac{1}{n} - 2 \frac{L}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} &gt; - \frac{1}{n}  \right) \\
@@ -796,13 +810,13 @@ L \leq b \,,  \,\, \forall \, b \in B \,.
 L^2 - \frac{1 + 2L}{n} &gt; 2
 \]</span> which is equivalent to <span class="math display">\[
 n(L^2 - 2) &gt; 1 + 2L \,.
-\]</span> Since we are assuming <span class="math inline">\(L \in B\)</span>, then <span class="math inline">\(L^2 &gt; 2\)</span>, see (<a href="#eq-separator-contradiction-5"><span>3.10</span></a>). Therefore we can divide by <span class="math inline">\((L^2 -2)\)</span> and get <span class="math display">\[
+\]</span> Since we are assuming <span class="math inline">\(L \in B\)</span>, then <span class="math inline">\(L^2 &gt; 2\)</span>, see (<a href="#eq-separator-contradiction-5"><span>3.11</span></a>). Therefore we can divide by <span class="math inline">\((L^2 -2)\)</span> and get <span class="math display">\[
 n &gt; \frac{1+2L}{L^2 - 2} \,.
 \]</span> In total, we have just shown that <span class="math display">\[
-n &gt; \frac{1+2L}{L^2 - 2} \quad \implies \quad \tilde{L}^2 &gt; 2\,,
-\]</span> proving that <span class="math inline">\(\tilde{L} \in B\)</span>. Therefore by (<a href="#eq-separator-contradiction-6"><span>3.11</span></a>) we get <span class="math display">\[
-L \leq \tilde{L} \,.
-\]</span> This contradicts (<a href="#eq-separator-contradiction-7"><span>3.12</span></a>).</p>
+n &gt; \frac{1+2L}{L^2 - 2} \quad \implies \quad \widetilde{L}^2 &gt; 2\,,
+\]</span> proving that <span class="math inline">\(\widetilde{L} \in B\)</span>. Therefore by (<a href="#eq-separator-contradiction-6"><span>3.12</span></a>) we get <span class="math display">\[
+L \leq \widetilde{L} \,.
+\]</span> This contradicts (<a href="#eq-separator-contradiction-7"><span>3.13</span></a>).</p>
 <p><em>Conclusion:</em><br>
 We have seen that assuming that <span class="math inline">\((A,B)\)</span> has a separator <span class="math inline">\(L \in \mathbb{Q}\)</span> leads to a contradiction. Thus the cut <span class="math inline">\((A,B)\)</span> has no separator.</p>
 </div></details>
@@ -1088,7 +1102,7 @@ B = [0,1] \cap \mathbb{Q}
 </div>
 <p>The answer to the above question is <strong>NO</strong>. Like we did with the Cut Property, the counterexample can be found in the set of rational numbers <span class="math inline">\(\mathbb{Q}\)</span>. A set bounded above for which the supremum does nor exist is, for example, <span id="eq-no-sup-in-Q"><span class="math display">\[
 A = [0, \sqrt{2}) \cap \mathbb{Q}\,.
-\tag{3.13}\]</span></span></p>
+\tag{3.14}\]</span></span></p>
 <div id="theorem-Q-not-complete" class="Theorem">
 <details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 36</strong></summary><div>
 <p>There exists a set <span class="math inline">\(A \subset \mathbb{Q}\)</span> such that</p>
@@ -1101,7 +1115,7 @@ A = [0, \sqrt{2}) \cap \mathbb{Q}\,.
 </div>
 <p>The proof uses the same ideas we used for showing that <span class="math inline">\(\mathbb{Q}\)</span> does not have the Cut Property.</p>
 <div id="Proof*-11" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math inline">\(A\)</span> as in (<a href="#eq-no-sup-in-Q"><span>3.13</span></a>). Equivalently, this can be written as <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the set <span class="math inline">\(A\)</span> as in (<a href="#eq-no-sup-in-Q"><span>3.14</span></a>). Equivalently, this can be written as <span class="math display">\[
 A = \{ q \in \mathbb{Q}\, \colon \,q \geq 0 \,, \,\, q^2 &lt; 2 \} \,.
 \]</span><p></p>
 <p><em>Step 1. <span class="math inline">\(A\)</span> is bounded above.</em><br>
@@ -1115,18 +1129,18 @@ Assume by contradiction that <span class="math display">\[
 s = \sup A \in \mathbb{Q}
 \]</span> exists. By definition it holds <span id="eq-sup-contradiction-1"><span class="math display">\[
 s \geq q \,, \quad \forall \, q \in A
-\tag{3.14}\]</span></span> <span id="eq-sup-contradiction-2"><span class="math display">\[
+\tag{3.15}\]</span></span> <span id="eq-sup-contradiction-2"><span class="math display">\[
 b \geq q \,, \, \forall \, q \in A \,\, \implies \,\,
 s \leq b
-\tag{3.15}\]</span></span> There are two possibilities: <span class="math inline">\(s \in A\)</span> or <span class="math inline">\(s \notin A\)</span>:</p>
+\tag{3.16}\]</span></span> There are two possibilities: <span class="math inline">\(s \in A\)</span> or <span class="math inline">\(s \notin A\)</span>:</p>
 <ul>
 <li><p><em>Case 1. <span class="math inline">\(s \in A\)</span></em>.<br>
 If <span class="math inline">\(s \in A\)</span> by definition <span id="eq-sup-contradiction-3"><span class="math display">\[
 s  \geq 0\,, \quad s^2 &lt; 2 \,.
-\tag{3.16}\]</span></span> Define <span class="math display">\[
-\tilde{s} := s + \frac{1}{n}
+\tag{3.17}\]</span></span> Define <span class="math display">\[
+\widetilde{s} := s + \frac{1}{n}
 \]</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(n \neq 0\)</span> to be chosen later. Then <span class="math display">\[\begin{align*}
-\tilde{s}^2 &amp; = \left( s + \frac1n \right)^2 \\
+\widetilde{s}^2 &amp; = \left( s + \frac1n \right)^2 \\
           &amp; = s^2 + \frac{1}{n^2} + 2 \frac{s}{n} \\
           &amp; &lt; s^2 + \frac{1}{n} + 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n}&lt;\frac{1}{n^2}  \right) \\
           &amp; = s^2 + \frac{2s + 1}{n} \,.
@@ -1134,25 +1148,25 @@ s  \geq 0\,, \quad s^2 &lt; 2 \,.
 s^2 + \frac{2s + 1}{n} &lt; 2 \,,
 \]</span> we can rearrange the above and obtain <span class="math display">\[
 n(2 - s^2) &gt; 2s + 1 \,.
-\]</span> Now note that <span class="math inline">\(s^2 &lt; 2\)</span> by assumption (<a href="#eq-sup-contradiction-3"><span>3.16</span></a>). Thus we can divide by <span class="math inline">\((2 - s^2)\)</span> and obtain <span class="math display">\[
+\]</span> Now note that <span class="math inline">\(s^2 &lt; 2\)</span> by assumption (<a href="#eq-sup-contradiction-3"><span>3.17</span></a>). Thus we can divide by <span class="math inline">\((2 - s^2)\)</span> and obtain <span class="math display">\[
 n &gt;\frac{2s + 1}{2 - s^2} \,.
 \]</span> To summarize, we have just shown that <span class="math display">\[
-n &gt;\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \tilde{s}^2 &lt; 2 \,.
-\]</span> Moreover <span class="math inline">\(\tilde{s} := (s + 1/n) \in \mathbb{Q}\)</span>. Therefore <span class="math display">\[
-\tilde{s} \in A \,.
+n &gt;\frac{2s + 1}{2 - s^2}  \,\, \implies \,\, \widetilde{s}^2 &lt; 2 \,.
+\]</span> Moreover <span class="math inline">\(\widetilde{s} := (s + 1/n) \in \mathbb{Q}\)</span>. Therefore <span class="math display">\[
+\widetilde{s} \in A \,.
 \]</span> Since <span class="math inline">\(s = \sup A\)</span>, we then have <span class="math display">\[
-\tilde{s} \leq s \,.
+\widetilde{s} \leq s \,.
 \]</span> However <span class="math display">\[
-\tilde{s} := s + \frac{1}{n} &gt; s \,,
+\widetilde{s} := s + \frac{1}{n} &gt; s \,,
 \]</span> yielding a contradiction. Thus <span class="math inline">\(s \in A\)</span> is not possible.</p></li>
 <li><p><em>Case 2. <span class="math inline">\(s \notin A\)</span></em>.<br>
 If <span class="math inline">\(s \notin A\)</span>, by the fact that <span class="math inline">\(s = \sup A\)</span> and by definition of <span class="math inline">\(A\)</span> we get <span id="eq-sup-contradiction-4"><span class="math display">\[
 s &gt; 0 \,, \quad s^2 &gt; 2 \,.
-\tag{3.17}\]</span></span><br>
+\tag{3.18}\]</span></span><br>
 Define <span class="math display">\[
-\tilde{s} := s - \frac{1}{n} \,.
+\widetilde{s} := s - \frac{1}{n} \,.
 \]</span> We have <span class="math display">\[\begin{align*}
-\tilde{s}^2  &amp; = \left(  s - \frac1n   \right)^2 \\
+\widetilde{s}^2  &amp; = \left(  s - \frac1n   \right)^2 \\
            &amp; = s^2 + \frac{1}{n^2} - 2 \frac{s}{n} \\
            &amp; &gt; s^2 - \frac{1}{n^2} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, \frac{1}{n^2} &gt; - \frac{1}{n^2}  \right) \\
            &amp; &gt; s^2 - \frac{1}{n} - 2 \frac{s}{n}   \qquad  \left(\mbox{using } \, -\frac{1}{n^2} &gt; - \frac{1}{n}  \right) \\
@@ -1161,16 +1175,16 @@ Define <span class="math display">\[
 s^2 - \frac{1 + 2s}{n} &gt; 2
 \]</span> which is equivalent to <span class="math display">\[
 n(s^2 - 2) &gt; 1 + 2s \,.
-\]</span> By (<a href="#eq-sup-contradiction-4"><span>3.17</span></a>) we have <span class="math inline">\(s^2 &gt; 2\)</span>. Therefore we can divide by <span class="math inline">\((s^2 -2)\)</span> and get <span class="math display">\[
+\]</span> By (<a href="#eq-sup-contradiction-4"><span>3.18</span></a>) we have <span class="math inline">\(s^2 &gt; 2\)</span>. Therefore we can divide by <span class="math inline">\((s^2 -2)\)</span> and get <span class="math display">\[
 n &gt; \frac{1+2s}{s^2 - 2} \,.
 \]</span> In total, we have just shown that <span class="math display">\[
-n &gt; \frac{1+2s}{s^2 - 2} \quad \implies \quad \tilde{s}^2 &gt; 2\,.
-\]</span> Therefore <span class="math inline">\(\tilde{s} \notin A\)</span>, and by definition of <span class="math inline">\(A\)</span> we have <span class="math display">\[
-\tilde{s} \geq q \,, \quad \forall q \in A\,.
-\]</span> Moreover <span class="math inline">\(\tilde{s} := (s - 1/n) \in \mathbb{Q}\)</span>. Therefore <span class="math inline">\(\tilde{s}\)</span> is an upper bound of <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathbb{Q}\)</span>. Since <span class="math inline">\(s=\sup A\)</span> is the smallest upper bound, see (<a href="#eq-sup-contradiction-2"><span>3.15</span></a>), it follows <span class="math display">\[
-s \leq \tilde{s} \,.
+n &gt; \frac{1+2s}{s^2 - 2} \quad \implies \quad \widetilde{s}^2 &gt; 2\,.
+\]</span> Therefore <span class="math inline">\(\widetilde{s} \notin A\)</span>, and by definition of <span class="math inline">\(A\)</span> we have <span class="math display">\[
+\widetilde{s} \geq q \,, \quad \forall q \in A\,.
+\]</span> Moreover <span class="math inline">\(\widetilde{s} := (s - 1/n) \in \mathbb{Q}\)</span>. Therefore <span class="math inline">\(\widetilde{s}\)</span> is an upper bound of <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathbb{Q}\)</span>. Since <span class="math inline">\(s=\sup A\)</span> is the smallest upper bound, see (<a href="#eq-sup-contradiction-2"><span>3.16</span></a>), it follows <span class="math display">\[
+s \leq \widetilde{s} \,.
 \]</span> However <span class="math display">\[
-\tilde{s} := s - \frac{1}{n} &lt; s \,,
+\widetilde{s} := s - \frac{1}{n} &lt; s \,,
 \]</span> obtaining a contradiction. Then <span class="math inline">\(s \notin A\)</span>.</p></li>
 </ul>
 <p><em>Conclusion.</em><br>
@@ -1292,40 +1306,40 @@ K = B^c \cup B \,, \quad B^c \cap B =  \emptyset \,.
 <ul>
 <li>We have <span id="eq-equiv-cut-complete-1"><span class="math display">\[
 x \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
-\tag{3.18}\]</span></span></li>
+\tag{3.19}\]</span></span></li>
 </ul>
 <blockquote class="blockquote">
-<p>To show the above, let <span class="math inline">\(x \in B^c\)</span> and <span class="math inline">\(y \in B\)</span>. By definition of <span class="math inline">\(B\)</span> we have that elements of <span class="math inline">\(B^c\)</span> are not upper bounds of <span class="math inline">\(A\)</span>. Therefore <span class="math inline">\(x\)</span> is not an upper bound. This means there exists <span class="math inline">\(\tilde{a} \in A\)</span> which is larger than <span class="math inline">\(x\)</span>, that is, <span class="math display">\[
-x \leq \tilde{a} \,.
+<p>To show the above, let <span class="math inline">\(x \in B^c\)</span> and <span class="math inline">\(y \in B\)</span>. By definition of <span class="math inline">\(B\)</span> we have that elements of <span class="math inline">\(B^c\)</span> are not upper bounds of <span class="math inline">\(A\)</span>. Therefore <span class="math inline">\(x\)</span> is not an upper bound. This means there exists <span class="math inline">\(\widetilde{a} \in A\)</span> which is larger than <span class="math inline">\(x\)</span>, that is, <span class="math display">\[
+x \leq \widetilde{a} \,.
 \]</span> Since <span class="math inline">\(y \in B\)</span>, then <span class="math inline">\(y\)</span> is an upper bound for <span class="math inline">\(A\)</span>, so that <span class="math display">\[
 a \leq y \,, \,\, \forall a \in A\,.
 \]</span> Therefore <span class="math display">\[
-x \leq \tilde{a} \leq y \,,
-\]</span> concluding (<a href="#eq-equiv-cut-complete-1"><span>3.18</span></a>).</p>
+x \leq \widetilde{a} \leq y \,,
+\]</span> concluding (<a href="#eq-equiv-cut-complete-1"><span>3.19</span></a>).</p>
 </blockquote>
 <p>Thus <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span> and the claim is proven.</p>
 <p>Since <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span>, by the Cut Property there exists a separator <span class="math inline">\(s \in K\)</span> such that <span id="eq-equiv-cut-complete-2"><span class="math display">\[
 x \leq s \leq y \,, \quad \forall \, x \in B^c\,, \,\forall \, y \in B \,.
-\tag{3.19}\]</span></span></p>
+\tag{3.20}\]</span></span></p>
 <p><em>Claim. <span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>.</em></p>
 <p><em>Proof of Claim.</em><br>
-Suppose by contradiction that <span class="math inline">\(s\)</span> is not an upper bound for <span class="math inline">\(A\)</span>. Therefore by definition of upper bound, there exists <span class="math inline">\(\tilde{a} \in A\)</span> such that <span class="math display">\[
-s &lt; \tilde{a} \,.
-\]</span> Consider the mid-point between <span class="math inline">\(s\)</span> and <span class="math inline">\(\tilde{a}\)</span>, that is, <span class="math display">\[
-m:=\frac{s + \tilde{a}}{2} \in K \,.
-\]</span> Since <span class="math inline">\(m\)</span> is the mid-point between <span class="math inline">\(s\)</span> and <span class="math inline">\(\tilde{a}\)</span>, and <span class="math inline">\(s &lt; \tilde{a}\)</span>, it holds <span class="math display">\[
-s &lt; m &lt; \tilde{a} \,.
+Suppose by contradiction that <span class="math inline">\(s\)</span> is not an upper bound for <span class="math inline">\(A\)</span>. Therefore by definition of upper bound, there exists <span class="math inline">\(\widetilde{a} \in A\)</span> such that <span class="math display">\[
+s &lt; \widetilde{a} \,.
+\]</span> Consider the mid-point between <span class="math inline">\(s\)</span> and <span class="math inline">\(\widetilde{a}\)</span>, that is, <span class="math display">\[
+m:=\frac{s + \widetilde{a}}{2} \in K \,.
+\]</span> Since <span class="math inline">\(m\)</span> is the mid-point between <span class="math inline">\(s\)</span> and <span class="math inline">\(\widetilde{a}\)</span>, and <span class="math inline">\(s &lt; \widetilde{a}\)</span>, it holds <span class="math display">\[
+s &lt; m &lt; \widetilde{a} \,.
 \]</span></p>
 <blockquote class="blockquote">
-<p>Indeed, since <span class="math inline">\(s &lt; \tilde{a}\)</span> then <span class="math display">\[
-s = \frac{2s}{2} &lt; \frac{s + \tilde{a}}{2} &lt; \frac{2 \tilde{a}}{2} = \tilde{a} \,.
+<p>Indeed, since <span class="math inline">\(s &lt; \widetilde{a}\)</span> then <span class="math display">\[
+s = \frac{2s}{2} &lt; \frac{s + \widetilde{a}}{2} &lt; \frac{2 \widetilde{a}}{2} = \widetilde{a} \,.
 \]</span></p>
 </blockquote>
-<p>In particular the above tells us that <span class="math inline">\(m\)</span> is not an upper bound for <span class="math inline">\(A\)</span>, given that <span class="math inline">\(\tilde{a} \in A\)</span> and <span class="math inline">\(m &lt; \tilde{a}\)</span>. Therefore <span class="math inline">\(m \in B^c\)</span>, by definition of <span class="math inline">\(B^c\)</span>. Therefore(<a href="#eq-equiv-cut-complete-2"><span>3.19</span></a>) implies <span class="math display">\[
+<p>In particular the above tells us that <span class="math inline">\(m\)</span> is not an upper bound for <span class="math inline">\(A\)</span>, given that <span class="math inline">\(\widetilde{a} \in A\)</span> and <span class="math inline">\(m &lt; \widetilde{a}\)</span>. Therefore <span class="math inline">\(m \in B^c\)</span>, by definition of <span class="math inline">\(B^c\)</span>. Therefore(<a href="#eq-equiv-cut-complete-2"><span>3.20</span></a>) implies <span class="math display">\[
 m \leq s \,,
 \]</span> which contradicts <span class="math inline">\(s &lt; m\)</span>. Hence <span class="math inline">\(s\)</span> is an upper bound of <span class="math inline">\(A\)</span>, concluding the proof of Claim.</p>
 <p><em>Conclusion</em>. We have shown that <span class="math inline">\(s\)</span> is an upper bound of <span class="math inline">\(A\)</span>. Condition<br>
-(<a href="#eq-equiv-cut-complete-2"><span>3.19</span></a>) tells us that <span class="math display">\[
+(<a href="#eq-equiv-cut-complete-2"><span>3.20</span></a>) tells us that <span class="math display">\[
 s \leq y \,, \,\, \forall y \in B \,.
 \]</span> Recalling that <span class="math inline">\(B\)</span> is the set of upper bounds of <span class="math inline">\(A\)</span>, this means that <span class="math inline">\(s\)</span> is the smallest upper bound of <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
 s = \sup A \in K \,.
@@ -1337,17 +1351,17 @@ A \neq \emptyset\,, \quad B \neq \emptyset \,,
 K = A \cup B\,, \quad A \cap B = \emptyset \,,
 \]</span> <span id="eq-equiv-cut-complete-3"><span class="math display">\[
 a \leq b \,, \quad \forall a \in A \,, \,\, \forall \, b \in B \,.
-\tag{3.20}\]</span></span> Since <span class="math inline">\(B \neq \emptyset\)</span>, from (<a href="#eq-equiv-cut-complete-3"><span>3.20</span></a>) it follows that <span class="math inline">\(A\)</span> is bounded above: indeed, every element of <span class="math inline">\(B\)</span> is an upper bound for <span class="math inline">\(A\)</span>, thanks to (<a href="#eq-equiv-cut-complete-3"><span>3.20</span></a>). Since <span class="math inline">\(A \neq \emptyset\)</span>, by the Axiom of Completeness we have <span class="math display">\[
+\tag{3.21}\]</span></span> Since <span class="math inline">\(B \neq \emptyset\)</span>, from (<a href="#eq-equiv-cut-complete-3"><span>3.21</span></a>) it follows that <span class="math inline">\(A\)</span> is bounded above: indeed, every element of <span class="math inline">\(B\)</span> is an upper bound for <span class="math inline">\(A\)</span>, thanks to (<a href="#eq-equiv-cut-complete-3"><span>3.21</span></a>). Since <span class="math inline">\(A \neq \emptyset\)</span>, by the Axiom of Completeness we have <span class="math display">\[
 s = \sup A \in K \,.
 \]</span> In particular, by definition of supremum, we have <span class="math display">\[
 a \leq s \,, \,\, \forall \, a \in A \,.
-\]</span> Let now <span class="math inline">\(b \in B\)</span> be arbitrary. From (<a href="#eq-equiv-cut-complete-3"><span>3.20</span></a>) we have that <span id="eq-equiv-cut-complete-4"><span class="math display">\[
+\]</span> Let now <span class="math inline">\(b \in B\)</span> be arbitrary. From (<a href="#eq-equiv-cut-complete-3"><span>3.21</span></a>) we have that <span id="eq-equiv-cut-complete-4"><span class="math display">\[
 a \leq b \,, \,\, \forall \, a \in A \,.
-\tag{3.21}\]</span></span> Therefore <span class="math inline">\(b\)</span> is an upper bound of <span class="math inline">\(A\)</span>. Since <span class="math inline">\(s = \sup A\)</span>, we have that <span class="math inline">\(s\)</span> is the smallest upper bound, and so <span class="math display">\[
+\tag{3.22}\]</span></span> Therefore <span class="math inline">\(b\)</span> is an upper bound of <span class="math inline">\(A\)</span>. Since <span class="math inline">\(s = \sup A\)</span>, we have that <span class="math inline">\(s\)</span> is the smallest upper bound, and so <span class="math display">\[
 s \leq b \,.
 \]</span> Given that <span class="math inline">\(b \in B\)</span> was arbitrary, it actually holds <span id="eq-equiv-cut-complete-5"><span class="math display">\[
 s \leq b \,, \,\, \forall \,  b \in B \,.
-\tag{3.22}\]</span></span> From (<a href="#eq-equiv-cut-complete-4"><span>3.21</span></a>) and (<a href="#eq-equiv-cut-complete-5"><span>3.22</span></a>) we therefore have <span class="math display">\[
+\tag{3.23}\]</span></span> From (<a href="#eq-equiv-cut-complete-4"><span>3.22</span></a>) and (<a href="#eq-equiv-cut-complete-5"><span>3.23</span></a>) we therefore have <span class="math display">\[
 a \leq s \leq b \,, \,\, \forall a \in A \,,  \, \forall \, b \in B \,,
 \]</span> showing that <span class="math inline">\(s\)</span> is a separator of <span class="math inline">\((A,B)\)</span>. Thus <span class="math inline">\(K\)</span> has the Cut Property.</p>
 </div></details>
@@ -1663,14 +1677,14 @@ m = n + k \,.
 <div id="Proof*-19" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We only prove the first point, the other statements are left as an exercise. Fix <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span>. We prove that <span id="eq-proof-sum-closed"><span class="math display">\[
 m + n \in {\mathbb{N}}_{\mathbb{R}} \,, \quad  \forall \, n \in {\mathbb{N}}_{\mathbb{R}} \,,
-\tag{3.23}\]</span></span> by using induction.<p></p>
+\tag{3.24}\]</span></span> by using induction.<p></p>
 <ul>
 <li>Induction base: We have <span class="math inline">\(m+1 \in {\mathbb{N}}_{\mathbb{R}}\)</span>, since <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span> and <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is an inductive set.</li>
 <li>Inductive hypothesis: Suppose <span class="math inline">\(m+n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Since <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is an inductive set, we have <span class="math inline">\((m+n)+ 1 \in {\mathbb{N}}_{\mathbb{R}}\)</span>. By associativity of the sum, see axiom (A1), we get <span class="math display">\[
 m + (n + 1) = ( m + n ) + 1 \in {\mathbb{N}}_{\mathbb{R}} \,,
 \]</span> which is the desired theis.</li>
 </ul>
-<p>By the Induction Principle of Theorem <a href="chap_3.html#theorem-induction-new">55</a> we conclude (<a href="#eq-proof-sum-closed"><span>3.23</span></a>).</p>
+<p>By the Induction Principle of Theorem <a href="chap_3.html#theorem-induction-new">55</a> we conclude (<a href="#eq-proof-sum-closed"><span>3.24</span></a>).</p>
 </div></details>
 </div>
 <p>As a consequence of the above theorem, we see that the restriction of the operations of sum and multiplication to <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> are still binary operations: <span class="math display">\[
