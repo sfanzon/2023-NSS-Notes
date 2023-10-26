@@ -251,7 +251,7 @@
 
  [**Definition 3.51**](#definition-natural-numbers): Set of Natural Numbers\Pageref{definition-natural-numbers}
 
- [**Theorem 3.52**](#theorem-smallest-inductive): ${\mathbb{N}}_{\mathbb{R}}$ is the smallest inductive subset of $\mathbb{R}$\Pageref{theorem-smallest-inductive}
+ [**Proposition 3.52**](#proposition-smallest-inductive): ${\mathbb{N}}_{\mathbb{R}}$ is the smallest inductive subset of $\mathbb{R}$\Pageref{proposition-smallest-inductive}
 
  [**Proof**](#Proof*-3.16)\Pageref{Proof*-3.16}
 

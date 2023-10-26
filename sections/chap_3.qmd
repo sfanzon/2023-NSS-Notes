@@ -472,7 +472,7 @@ This means that $\Q$ has **gaps**, and cannot be represented as a **continuous**
 
 Let $S$ be a non-empty set. The pair $(A,B)$ is a **partition** of $S$ if
 $$
-A , B \subset S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
+A , B \subseteq S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
 $$
 and
 $$
@@ -654,7 +654,7 @@ $$
 *Step 1. $(A,B)$ is a cut of $\Q$*:  
 We need to prove the following:
 
-1. $(A,B)$ is a partition of $\Q$. This is because $A , B \subset \Q$ with $A \neq \emptyset$ and $B \neq \emptyset$. Moreover 
+1. $(A,B)$ is a partition of $\Q$. This is because $A , B \subseteq \Q$ with $A \neq \emptyset$ and $B \neq \emptyset$. Moreover 
 $A \cap B = \emptyset$ and
 $$
 A \cup B = \Q\,,
@@ -856,7 +856,7 @@ We start by defining the supremum. First we need the notion of upper bound of a 
 ::: Definition
 ### Upper bound and bounded above
 
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$:
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$:
 
 1. We say that $b \in K$ is an **upper bound** for $A$ if
 $$
@@ -871,7 +871,7 @@ $$
 ::: Definition 
 ### Supremum
 
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. A number $s \in K$ is called **least upper bound** or **supremum** of $A$ if:
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. A number $s \in K$ is called **least upper bound** or **supremum** of $A$ if:
 
 i. $s$ is an upper bound for $A$,
 ii. $s$ is the smallest upper bound of $A$, that is, 
@@ -881,7 +881,7 @@ ii. $s$ is the smallest upper bound of $A$, that is,
 :::
 
 ::: Notation
-We will almost always prefer the name supremum to least upper bound. For $A \subset K$ the supremum is denoted by
+We will almost always prefer the name supremum to least upper bound. For $A \subseteq K$ the supremum is denoted by
 $$
 s := \sup \ A \,.
 $$
@@ -889,12 +889,12 @@ $$
 
 
 ::: Remark
-Note that if a set $A \subset K$ in **NOT** bounded above, then the supremum does not exist, as there are no upper bounds of $A$. 
+Note that if a set $A \subseteq K$ in **NOT** bounded above, then the supremum does not exist, as there are no upper bounds of $A$. 
 :::
 
 
 ::: Proposition
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. If 
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. If 
 $$
 \sup A
 $$
@@ -962,7 +962,7 @@ $$
 
 ::: Definition 
 ### Maximum
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. A number $M \in K$ is called the **maximum** of $A$ if:
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. A number $M \in K$ is called the **maximum** of $A$ if:
 $$
 M \in A   \,\, \mbox{ and } \,\, a \leq M  \,, \, \forall a \in A \,.
 $$
@@ -975,7 +975,7 @@ $$
 
 
 ::: Proposition
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. If the maximum of $A$ exists, then also the supremum exists, and
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. If the maximum of $A$ exists, then also the supremum exists, and
 $$
 \sup A = \max A \,.
 $$
@@ -1040,7 +1040,7 @@ We now introduce the definitions of lower bound, infimum, minimum. These are the
 ::: Definition
 ### Upper bound, bounded below, infimum, minimum
 
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$:
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$:
 
 1. We say that $l \in K$ is a **lower bound** for $A$ if
 $$
@@ -1076,7 +1076,7 @@ $$
 
 
 ::: Proposition
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$:
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$:
 
 1. If $\inf A$ exists, then it is unique.
 2. If the minimum of $A$ exists, then also the infimum exists, and
@@ -1146,7 +1146,7 @@ $$
 
 
 ::: Proposition
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. If $\inf A$ and $\sup A$ exist, then
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. If $\inf A$ and $\sup A$ exist, then
 $$
 \inf A \leq a \leq \sup A \,, \quad \forall a \in A \,.
 $$
@@ -1169,7 +1169,7 @@ We conclude with another simple proposition. The proof is again left to the read
 ::: Proposition
 ### Relationship between sup and inf {#proposition-inf-sup}
 
-Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subset K$. 
+Let $(K,+,\cdot,\leq)$ be an ordered field and $A \subseteq K$. 
 Define 
 $$
 - A := \{ - a \divider a \in A \} \,.
@@ -1197,7 +1197,7 @@ We have introduced the concepts of supremum and infimum on an ordered field $K$.
 
 
 ::: Question
-Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subset K$ is non-empty and bounded above. Does
+Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subseteq K$ is non-empty and bounded above. Does
 $$
 \sup A 
 $$
@@ -1211,7 +1211,7 @@ $${#eq-no-sup-in-Q}
 
 
 ::: {.Theorem  #theorem-Q-not-complete}
-There exists a set $A \subset \Q$ such that 
+There exists a set $A \subseteq \Q$ such that 
 
 - $A$ is non-empty,
 - $A$ is bounded above,
@@ -1352,7 +1352,7 @@ The above theorem shows that the supremum does not necessarily exist. What about
 
 
 ::: Question
-Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subset K$ is non-empty and bounded below. Does
+Suppose $(K,+,\cdot, \leq)$ is an ordered field, and that $A \subseteq K$ is non-empty and bounded below. Does
 $$
 \inf A 
 $$
@@ -1374,7 +1374,7 @@ Thus infimum and supremum do not exist in general. The fields for which all the 
 
 Let $(K,+,\cdot,\leq)$ be an ordered field. We say that $K$ is **complete** if it holds the property:
 
-- (AC) For every $A \subset K$ non-empty and bounded above 
+- (AC) For every $A \subseteq K$ non-empty and bounded above 
 $$
 \sup A \in K \,.
 $$
@@ -1394,14 +1394,14 @@ Notice that if the **Axiom of Completeness** holds, then also the infimum exists
 
 
 ::: Proposition
-Let $(K,+,\cdot,\leq)$ be a complete ordered field. Suppose that $A \subset K$ is non-empty and bounded below. Then 
+Let $(K,+,\cdot,\leq)$ be a complete ordered field. Suppose that $A \subseteq K$ is non-empty and bounded below. Then 
 $$
 \inf A \in K\,.
 $$
 :::
 
 ::: Proof
-Suppose that $A \subset K$ is non-empty and bounded below. Then 
+Suppose that $A \subseteq K$ is non-empty and bounded below. Then 
 $$
 -A:= \{ -a \divider a \in A   \}
 $$
@@ -1438,7 +1438,7 @@ The proof of Theorem \ref{theorem-cut-complete} is rather long, but the ideas ar
 
 *Step 1. Cut Property $\implies$ Completeness*. Suppose $K$ has the Cut Property. To prove that $K$ is Complete, we need to: 
 
-- Consider an arbitrary set $A \subset K$ such that $A \neq \emptyset$ and $A$ is bounded above.
+- Consider an arbitrary set $A \subseteq K$ such that $A \neq \emptyset$ and $A$ is bounded above.
 
 - Show that $A$ has a supremum.  
 
@@ -1490,7 +1490,7 @@ Keeping the above ideas in mind, let us proceed with the proof.
 ### Proof of Theorem \ref{theorem-cut-complete}
 
 *Step 1. Cut Property $\implies$ Completeness*.  
-We need to prove that $K$ is complete. To this end, consider $A \subset K$ non-empty and bounded above. Define the set of upper bounds of $A$:
+We need to prove that $K$ is complete. To this end, consider $A \subseteq K$ non-empty and bounded above. Define the set of upper bounds of $A$:
 $$
 B := \{ b \in K \divider b \geq a \,, \,\, \forall a \in A \} \,.
 $$
@@ -1721,7 +1721,7 @@ The multiplication satisifes: $\, \forall \, x,y,z \in \R$
 Since **Cut Property** and **Axiom of Completeness** are equivalent by Theorem \ref{theorem-cut-complete}, one can replace the Cut Property in Definition \ref{definition-R} Point 5  with:  
 
 5. **Axiom of Completeness** holds:
-    - (AC) For every $A \subset \R$ non-empty and bounded above 
+    - (AC) For every $A \subseteq \R$ non-empty and bounded above 
     $$
     \sup A \in \R
     $$ 
@@ -1793,7 +1793,7 @@ In Definition \ref{definition-R} we have introduced $\R$ as a complete ordered f
 constructive way. What happens now to the sets $\N, \Z, \Q$? Are they well defined? 
 Does it still hold that
 $$
-\N \,, \Z \,, \Q \, \subset \R \,?
+\N \,, \Z \,, \Q \, \subseteq \R \,?
 $$
 The definitions that we gave in @sec-chap-1 for $\N, \Z$ and $\Q$ are 
 not related to the system of real numbers $\R$ we just introduced. To overcome this problem, we will have to define new sets
@@ -1826,7 +1826,7 @@ We need a formal definition to capture this idea. This is the concept of **induc
 
 ::: Definition
 ### Inductive set
-Let $S \subset \R$. We say that $S$ is an inductive set if they are satisfied:
+Let $S \subseteq \R$. We say that $S$ is an inductive set if they are satisfied:
 
 - $1 \in S$,
 - If $x \in S$, then $(x + 1) \in S$.
@@ -1903,15 +1903,15 @@ $$
 
 Therefore ${\N}_{\R}$ is the intersection of all the inductive subsets of $\R$. From
 this definition it follows that ${\N}_{\R}$ is the smallest inductive subset of $\R$, as
-shown in the following theorem.
+shown in the following proposition.
 
 
-::: Theorem  
-### ${\N}_{\R}$ is the smallest inductive subset of $\R$   {#theorem-smallest-inductive}
+::: Proposition  
+### ${\N}_{\R}$ is the smallest inductive subset of $\R$   {#proposition-smallest-inductive}
 
-Let $C \subset \R$ be an inductive subset. Then
+Let $C \subseteq \R$ be an inductive subset. Then
 $$
-{\N}_{\R} \subset C \,.
+{\N}_{\R} \subseteq C \,.
 $$
 In other words, ${\N}_{\R}$ is the smallest inductive set in $\R$.
 :::
@@ -1919,24 +1919,14 @@ In other words, ${\N}_{\R}$ is the smallest inductive set in $\R$.
 
 ::: Proof
 
-Let $\mathcal{M}$ be the collection of **all** inductive subsets of $\R$. Therefore, since
-$C$ is an inductive subset, we have
+Let $\mathcal{M}$ be the collection of **all** inductive subsets of $\R$.
+By definition
 $$
-C \cap \bigcap_{M \in \mathcal{M}} M  = \bigcap_{M \in \mathcal{M}} M \,.
+{\N}_{\R} = \bigcap_{M \in \mathcal{M}} \, M \,.
 $$
-By definition of ${\N}_{\R}$ and the above observation we get
-$$
-C \cap {\N}_{\R} = C \cap \bigcap_{M \in \mathcal{M}} M  = \bigcap_{M \in \mathcal{M}} M  = {\N}_{\R} \,.
-$$
-Now, by definition of intersection of sets, we have
-$$
-({\N}_{\R} \cap C) \subset C \,.
-$$
-Since 
-$$
-({\N}_{\R} \cap C) = {\N}_{\R}\,,
-$$
-we conclude that ${\N}_{\R} \subset C$.
+Let $x \in {\N}_{\R}$, then $x \in M$ for all $M \in \mathcal{M}$. Since
+$C \in \mathcal{M}$ then $x \in C$. This shows ${\N}_{\R} \subseteq C$.
+
 :::
 
 
@@ -1968,9 +1958,9 @@ $$
 showing that $x + 1 \geq 1$. Thus $(x + 1) \in C$. 
 
 
-By Theorem \ref{theorem-smallest-inductive} we conclude that
+By Proposition \ref{proposition-smallest-inductive} we conclude that
 $$
-{\N}_{\R} \subset C \,,
+{\N}_{\R} \subseteq C \,,
 $$
 showing that $x \geq 1$ for all $x \in {\N}_{\R}$.
 
@@ -2039,11 +2029,11 @@ We have that $C$ is an inductive subset of $\R$.
 > - If $n \in C$ then $\alpha(n)$ is true. By assumption $\alpha(n+1)$ is true. Therefore $(n+1) \in C$.
 
 
-By Theorem \ref{theorem-smallest-inductive} we conclude that
+By Proposition \ref{proposition-smallest-inductive} we conclude that
 $$
-{\N}_{\R} \subset C\,.
+{\N}_{\R} \subseteq C\,.
 $$
-As by definition $C \subset {\N}_{\R}$, we have proven that 
+As by definition $C \subseteq {\N}_{\R}$, we have proven that 
 $$
 {\N}_{\R} = C \,,
 $$
@@ -2164,7 +2154,7 @@ $$
 M:=  \{  -n \divider n \in {\N}_{\R}   \}  \cup \{0\}  \cup  {\N}_{\R}  \,.
 $$
 
-- $M \subset {\Z}_{\R}$:  Suppose $m \in M$. We have 3 cases:
+- $M \subseteq {\Z}_{\R}$:  Suppose $m \in M$. We have 3 cases:
 
     - If $m \in \{ -n \divider n \in {\N}_{\R}\}$ then there exists $n \in {\N}_{\R}$ such that 
     $m=-n$. Thus
@@ -2183,9 +2173,9 @@ $$
     $$
     since $1 \in {\N}_{\R}$ and $m+1 \in {\N}_{\R}$, given that $m \in {\N}_{\R}$.
 
-  In all 3 cases we have shown that $m \in {\Z}_{\R}$, proving that $M \subset {\Z}_{\R}$.
+  In all 3 cases we have shown that $m \in {\Z}_{\R}$, proving that $M \subseteq {\Z}_{\R}$.
 
-- ${\Z}_{\R} \subset M$: Let $z \in {\Z}_{\R}$. Then $z = m - n$ for some $n,m \in {\N}_{\R}$. We have 3 cases:
+- ${\Z}_{\R} \subseteq M$: Let $z \in {\Z}_{\R}$. Then $z = m - n$ for some $n,m \in {\N}_{\R}$. We have 3 cases:
 
     - If $m=n$ then 
     $$
@@ -2262,7 +2252,7 @@ $$
 $$
 are satisfied descends immediately from the inclusion
 $$
-{\Z}_{\R} \subset \R \,.
+{\Z}_{\R} \subseteq \R \,.
 $$
 We are left to prove (A3). This is non-trivial because a priori the additive inverse $-z$ 
 of some $z \in {\Z}_{\R}$ belongs to $\R$. We need to check that $- z \in {\Z}_{\R}$. Indeed, since 
@@ -2356,7 +2346,7 @@ $({\Q}_{\R}, + , \cdot, \leq)$ is an ordered field.
 
 All the field properties, except for (M3), follow from the inclusion
 $$
-{\Q}_{\R} \subset \R
+{\Q}_{\R} \subseteq \R
 $$
 and from the field properties of $\R$. To check (M3), let $q \in {\Q}_{\R}$ with $q \neq 0$. Therefore
 $q = m/n$ for $m \in {\Z}_{\R}$, $n \in {\N}_{\R}$. As $q \neq 0$ and $n \neq 0$, see Theorem

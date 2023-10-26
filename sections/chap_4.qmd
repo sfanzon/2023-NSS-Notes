@@ -42,7 +42,7 @@ The situation is depicted in @fig-archimedean.
 ::: Remark
 The Archimedean property might sound trivial. However there are examples of ordered fields $K$ that satisfy:
 
-1. $\N \subset K$.
+1. $\N \subseteq K$.
 2. $K$ does not have the Archimedean property.
 3. In particular, $\N$ is bounded above in $K$. 
 
@@ -401,7 +401,7 @@ The first property is an alternative characterization of the supremum, which we 
 ::: Proposition 
 ### Characterization of Supremum  {#proposition-supremum-characterization}
 
-Let $A \subset \R$ be a non-empty set. Suppose that $s \in \R$ is an upper bound for $A$. They 
+Let $A \subseteq \R$ be a non-empty set. Suppose that $s \in \R$ is an upper bound for $A$. They 
 are equivalent:
 
 1. $s = \sup A$
@@ -477,7 +477,7 @@ The analogue of Proposition \ref{proposition-supremum-characterization} is as fo
 ::: Proposition 
 ### Characterization of Infimum  {#prop-supremum-infimum}
 
-Let $A \subset \R$ be a non-empty set. Suppose that $i \in \R$ is a lower bound for $A$. They 
+Let $A \subseteq \R$ be a non-empty set. Suppose that $i \in \R$ is a lower bound for $A$. They 
 are equivalent:
 
 1. $i = \inf A$
@@ -730,7 +730,7 @@ to the elements of $\R$.
 ::: Definition
 ### Dense set
 
-Let $S \subset \R$. We say that $S$ is dense in $\R$ if for every $x \in \R$ and $\e \in \R$ with $\e>0$, there exist $q \in \Q$ such that 
+Let $S \subseteq \R$. We say that $S$ is dense in $\R$ if for every $x \in \R$ and $\e \in \R$ with $\e>0$, there exist $q \in \Q$ such that 
 $$
 |x - q| < \e \,.
 $$
@@ -743,7 +743,7 @@ given below.
 
 
 ::: Remark
-Let $S \subset \R$. They are equivalent: 
+Let $S \subseteq \R$. They are equivalent: 
 
 - $S$ is dense in $\R$.
 - For every pair of numbers $x,y \in \R$ with $x<y$, there exists $q \in \Q$ such that
@@ -1409,7 +1409,7 @@ The answer is no, as shown in the next proposition.
 
 ::: {.Proposition #proposition-countable-subset}
 
-Let $X$ be a countable set and $A \subset X$. Then either $A$ is finite or countable.
+Let $X$ be a countable set and $A \subseteq X$. Then either $A$ is finite or countable.
 
 :::
 
@@ -1602,7 +1602,7 @@ $$
 is countable by Proposition \ref{proposition-countable-union}. Clearly
 we have
 $$
-\Q \subset L \,.
+\Q \subseteq L \,.
 $$
 Since $\Q$ is not finite, by Proposition \ref{proposition-countable-subset} we conclude that $\Q$ is countable.
 
@@ -1644,12 +1644,12 @@ that $x_2 \notin I_2$. Such interval exists, because $I_1$ contains
 two disjoint closed intervals: hence $x_2$ can be at most in one of these
 two intervals. To summarize, we have
 $$
-x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subset I_1 \,.
+x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subseteq I_1 \,.
 $$
 We can iterate this procedure, and construct a sequence of nested
 intervals $I_n$ such that
 $$
-I_{n+1} \subset I_n \,, \quad  x_n \notin I_n \,,
+I_{n+1} \subseteq I_n \,, \quad  x_n \notin I_n \,,
 $$
 for all $n \in \N$, see @fig-R-uncountable. Since $x_k \notin I_k$, we 
 conclude that

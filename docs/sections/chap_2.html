@@ -66,29 +66,21 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Proof {
   --color1: #f1f1f2;
@@ -98,27 +90,19 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.Important {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -126,9 +110,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -415,39 +415,45 @@ O \cup E &amp; = \mathbb{N}\,, \,\, O \cap D = \emptyset \,.
 </section>
 <section id="inclusion-and-equality" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="inclusion-and-equality"><span class="header-section-number">2.3.2</span> Inclusion and equality</h3>
-<p>Given two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we say that <span class="math inline">\(A\)</span> is <strong>contained</strong> in <span class="math inline">\(B\)</span> if all the elements of <span class="math inline">\(A\)</span> are also contained in <span class="math inline">\(B\)</span>. This will be denoted with the <strong>inclusion</strong> symbol <span class="math inline">\(\subset\)</span>, that is, <span class="math display">\[
-A \subset B \,.
+<p>Given two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we say that <span class="math inline">\(A\)</span> is <strong>contained</strong> in <span class="math inline">\(B\)</span> if all the elements of <span class="math inline">\(A\)</span> are also contained in <span class="math inline">\(B\)</span>. This will be denoted with the <strong>inclusion</strong> symbol <span class="math inline">\(\subseteq\)</span>, that is, <span class="math display">\[
+A \subseteq B \,.
 \]</span> In this case we say that</p>
 <ul>
 <li><span class="math inline">\(A\)</span> is a <strong>subset</strong> of <span class="math inline">\(B\)</span>,</li>
 <li><span class="math inline">\(B\)</span> is a <strong>superset</strong> of <span class="math inline">\(A\)</span>.</li>
 </ul>
-<p>The inclusion <span class="math inline">\(A \subset B\)</span> is equivalent to the implication: <span class="math display">\[
+<p>The inclusion <span class="math inline">\(A \subseteq B\)</span> is equivalent to the implication: <span class="math display">\[
 x \in A \,\, \implies \,\, x \in B
 \]</span> for all <span class="math inline">\(x \in A\)</span>. The symbol <span class="math inline">\(\implies\)</span> reads <strong>implies</strong>, and denotes the fact that the first condition implies the second.</p>
 <div id="Example-5" class="Example">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 5</strong></summary><div>Given two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> we always have <span class="math display">\[\begin{gather}
-(A \cap B) \subset A \,, \,\, (A \cap B) \subset B \,,\\
-A \subset (A \cup B) \,, \,\, B \subset (A \cup B) \,.
+(A \cap B) \subseteq A \,, \,\, (A \cap B) \subseteq B \,,\\
+A \subseteq (A \cup B) \,, \,\, B \subseteq (A \cup B) \,.
 \end{gather}\]</span><p></p>
 </div></details>
 </div>
 <p>We say that two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are equal if they contain the <strong>same</strong> elements. We denote equality by the symbol <span class="math display">\[
 A=B \,.
+\]</span> If <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(A \neq B\)</span>, we write <span class="math display">\[
+A \subset B \quad \mbox{ or } \quad A \subsetneq B \,.
 \]</span></p>
 <div id="Example-6" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>The sets <span class="math display">\[
-A =\{ 1,2,3 \}
-\]</span> and <span class="math display">\[
-B= \{ 3 ,1,2\}
-\]</span> are equal. This is because they contain exactly the same elements: <strong>order</strong> does not matter when talking about sets.<p></p>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 6</strong></summary><div>
+<ol type="1">
+<li><p>The sets <span class="math display">\[
+A =\{ 1,2,3 \} \,, \quad B= \{ 3 ,1,2\}
+\]</span> are equal, that is <span class="math inline">\(A=B\)</span>. This is because they contain exactly the same elements: <strong>order</strong> does not matter when talking about sets.</p></li>
+<li><p>Consider the sets <span class="math display">\[
+A =\{ 1,2 \} \,, \quad B = \{ 1, 2 ,5 \} \,.
+\]</span> Then <span class="math inline">\(A\)</span> is contained in <span class="math inline">\(B\)</span>, but <span class="math inline">\(A\)</span> is not equal to <span class="math inline">\(B\)</span>. Therefore we write <span class="math inline">\(A \subset B\)</span> or <span class="math inline">\(A \subsetneq B\)</span>.</p></li>
+</ol>
 </div></details>
 </div>
 <div id="Proposition-Equality-Sets" class="Proposition">
 <p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 7</strong></summary><div>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be sets. Then <span class="math display">\[
 A=B
 \]</span> <strong>if and only if</strong> <span class="math display">\[
-A \subset B \,\, \text{ and } \,\, B \subset A \,.
+A \subseteq B \,\, \text{ and } \,\, B \subseteq A \,.
 \]</span><p></p>
 </div></details>
 </div>
@@ -456,19 +462,19 @@ A \subset B \,\, \text{ and } \,\, B \subset A \,.
 <p>The proof is almost trivial. However it is a good exercise in basic logic, so let us do it.</p>
 <ol type="1">
 <li><p>First implication <span class="math inline">\(\implies\)</span>:<br>
-Suppose that <span class="math inline">\(A=B\)</span>. Let us show that <span class="math inline">\(A\subset B\)</span>. Since <span class="math inline">\(A = B\)</span>, this means that all the elements of <span class="math inline">\(A\)</span> are also contained in <span class="math inline">\(B\)</span>. Therefore if we take <span class="math inline">\(x \in A\)</span> we have <span class="math display">\[
+Suppose that <span class="math inline">\(A=B\)</span>. Let us show that <span class="math inline">\(A\subseteq B\)</span>. Since <span class="math inline">\(A = B\)</span>, this means that all the elements of <span class="math inline">\(A\)</span> are also contained in <span class="math inline">\(B\)</span>. Therefore if we take <span class="math inline">\(x \in A\)</span> we have <span class="math display">\[
 x \in A \,\, \implies \,\, x \in B \,.
-\]</span> This shows <span class="math inline">\(A \subset B\)</span>. The proof of <span class="math inline">\(B \subset A\)</span> is similar.</p></li>
+\]</span> This shows <span class="math inline">\(A \subseteq B\)</span>. The proof of <span class="math inline">\(B \subseteq A\)</span> is similar.</p></li>
 <li><p>Second implication <span class="math inline">\(\impliedby\)</span>:<br>
-Suppose that <span class="math inline">\(A \subset B\)</span> and <span class="math inline">\(B \subset A\)</span>. We need to show <span class="math inline">\(A=B\)</span>, that is, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same elements. To this end let <span class="math inline">\(x \in A\)</span>. Since <span class="math inline">\(A \subset B\)</span> then we have <span class="math inline">\(x \in B\)</span>. Thus <span class="math inline">\(B\)</span> contains all the elements of <span class="math inline">\(A\)</span>. Since we are also assuming <span class="math inline">\(B \subset A\)</span>, this means that <span class="math inline">\(A\)</span> contains all the elements of <span class="math inline">\(B\)</span>. Hence <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> contain the same elements, and <span class="math inline">\(A=B\)</span>.</p></li>
+Suppose that <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq A\)</span>. We need to show <span class="math inline">\(A=B\)</span>, that is, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same elements. To this end let <span class="math inline">\(x \in A\)</span>. Since <span class="math inline">\(A \subseteq B\)</span> then we have <span class="math inline">\(x \in B\)</span>. Thus <span class="math inline">\(B\)</span> contains all the elements of <span class="math inline">\(A\)</span>. Since we are also assuming <span class="math inline">\(B \subseteq A\)</span>, this means that <span class="math inline">\(A\)</span> contains all the elements of <span class="math inline">\(B\)</span>. Hence <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> contain the same elements, and <span class="math inline">\(A=B\)</span>.</p></li>
 </ol>
 </div></details>
 </div>
-<p>The above proposition is very useful when we need to <strong>prove</strong> that two sets are equal: rather than showing directly that <span class="math inline">\(A = B\)</span>, we can prove that <span class="math inline">\(A \subset B\)</span> and <span class="math inline">\(B \subset A\)</span>.</p>
+<p>The above proposition is very useful when we need to <strong>prove</strong> that two sets are equal: rather than showing directly that <span class="math inline">\(A = B\)</span>, we can prove that <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq A\)</span>.</p>
 </section>
 <section id="infinite-unions-and-intersections" class="level3" data-number="2.3.3">
 <h3 data-number="2.3.3" class="anchored" data-anchor-id="infinite-unions-and-intersections"><span class="header-section-number">2.3.3</span> Infinite unions and intersections</h3>
-<p>Suppose given a set <span class="math inline">\(\Omega\)</span>, and a family of sets <span class="math inline">\(A_n \subset \Omega\)</span>, where <span class="math inline">\(n \in \mathbb{N}\)</span>. Then we can define the <strong>infinte union</strong> <span class="math display">\[
+<p>Suppose given a set <span class="math inline">\(\Omega\)</span>, and a family of sets <span class="math inline">\(A_n \subseteq \Omega\)</span>, where <span class="math inline">\(n \in \mathbb{N}\)</span>. Then we can define the <strong>infinte union</strong> <span class="math display">\[
 \bigcup_{n \in \mathbb{N}} A_n := \{ x \in \Omega \, \colon \, x \in A_n \,\, \text{ for at least one } \,\, n \in \mathbb{N}\} \,.
 \]</span> The <strong>infinte intersection</strong> is defined as <span class="math display">\[
 \bigcap_{n \in \mathbb{N}} A_n := \{ x \in \Omega \, \colon \, x \in A_n \,\, \text{ for all } \,\, n \in \mathbb{N}\} \,.
@@ -482,10 +488,10 @@ A_3 &amp; := \{ 3 , 4 , 5, 6, \ldots \} \\
 A_n &amp; := \{ n, n+1, n+2, n+3,  \ldots \} \,,
 \end{align}\]</span> for arbitrary <span class="math inline">\(n \in \mathbb{N}\)</span>. Then <span id="eq-infinite-union"><span class="math display">\[
 \bigcup_{n \in \mathbb{N}} A_n = \mathbb{N}\,.
-\tag{2.2}\]</span></span> The above equality can be easily proven using Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>. Indeed, assume that <span class="math inline">\(m \in \cup_n A_n\)</span>. Then <span class="math inline">\(m \in A_n\)</span> for at least one <span class="math inline">\(n \in \mathbb{N}\)</span>. Since <span class="math inline">\(A_n \subset \mathbb{N}\)</span>, we conclude that <span class="math inline">\(m \in \mathbb{N}\)</span>. This shows <span class="math display">\[
-\bigcup_{n \in \mathbb{N}} A_n \subset \mathbb{N}\,.
+\tag{2.2}\]</span></span> The above equality can be easily proven using Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>. Indeed, assume that <span class="math inline">\(m \in \cup_n A_n\)</span>. Then <span class="math inline">\(m \in A_n\)</span> for at least one <span class="math inline">\(n \in \mathbb{N}\)</span>. Since <span class="math inline">\(A_n \subseteq \mathbb{N}\)</span>, we conclude that <span class="math inline">\(m \in \mathbb{N}\)</span>. This shows <span class="math display">\[
+\bigcup_{n \in \mathbb{N}} A_n \subseteq \mathbb{N}\,.
 \]</span> Conversely, suppose that <span class="math inline">\(m \in \mathbb{N}\)</span>. By definition <span class="math inline">\(m \in A_m\)</span>. Hence there exists at least one index <span class="math inline">\(n\)</span>, <span class="math inline">\(n=m\)</span> in this case, such that <span class="math inline">\(m \in A_n\)</span>. Then by definition <span class="math inline">\(m \in \cup_{n \in \mathbb{N}} A_n\)</span>, showing that <span class="math display">\[
-\mathbb{N}\subset \bigcup_{n \in \mathbb{N}} A_n \,.
+\mathbb{N}\subseteq \bigcup_{n \in \mathbb{N}} A_n \,.
 \]</span> Hence we conclude (<a href="#eq-infinite-union"><span>2.2</span></a>) by Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>.<br>
 We also have that <span id="eq-infinite-intersection"><span class="math display">\[
 \bigcap_{n \in \mathbb{N}} A_n = \emptyset \,.
@@ -503,20 +509,20 @@ B \smallsetminus A := \{ x \in \Omega \, \colon \, x \in B \, \text{ and } \, x 
 A^c := \Omega \smallsetminus A := \{ x \in \Omega \, \colon \, x \notin A \} \,.
 \]</span></p>
 <div id="Remark-9" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 9</strong></summary><div>Suppose that <span class="math inline">\(A \subset \Omega\)</span>. Then <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> form a <strong>partition</strong> of <span class="math inline">\(\Omega\)</span>, in the sense that <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 9</strong></summary><div>Suppose that <span class="math inline">\(A \subseteq \Omega\)</span>. Then <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> form a <strong>partition</strong> of <span class="math inline">\(\Omega\)</span>, in the sense that <span class="math display">\[
 A \cup A^c = \Omega  \,\, \text{ and } \,\,  A \cap A^c = \emptyset \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="Example-10" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 10</strong></summary><div>
-<p>Suppose <span class="math inline">\(A, B \subset \Omega\)</span>. Then <span class="math display">\[
-A \subset B  \iff B^c \subset A^c \,.
+<p>Suppose <span class="math inline">\(A, B \subseteq \Omega\)</span>. Then <span class="math display">\[
+A \subseteq B  \iff B^c \subseteq A^c \,.
 \]</span></p>
 <p>Let us prove the above claim:</p>
 <ul>
 <li><p>First implication <span class="math inline">\(\implies\)</span>:<br>
-Suppose that <span class="math inline">\(A \subset B\)</span>. We need to show that <span class="math inline">\(B^c \subset A^c\)</span>. Hence, assume <span class="math inline">\(x \in B^c\)</span>. By definition this means that <span class="math inline">\(x \notin B\)</span>. Now notice that we cannot have that <span class="math inline">\(x \in A\)</span>. Indeed, assume <span class="math inline">\(x \in A\)</span>. By assumption we have <span class="math inline">\(A \subset B\)</span>, hence <span class="math inline">\(x \in B\)</span>. But we had assumed <span class="math inline">\(x \in B\)</span>, contradiction. Therefore it must be that <span class="math inline">\(x \notin A\)</span>. Thus <span class="math inline">\(B^c \subset A^c\)</span>.</p></li>
+Suppose that <span class="math inline">\(A \subseteq B\)</span>. We need to show that <span class="math inline">\(B^c \subseteq A^c\)</span>. Hence, assume <span class="math inline">\(x \in B^c\)</span>. By definition this means that <span class="math inline">\(x \notin B\)</span>. Now notice that we cannot have that <span class="math inline">\(x \in A\)</span>. Indeed, assume <span class="math inline">\(x \in A\)</span>. By assumption we have <span class="math inline">\(A \subseteq B\)</span>, hence <span class="math inline">\(x \in B\)</span>. But we had assumed <span class="math inline">\(x \in B\)</span>, contradiction. Therefore it must be that <span class="math inline">\(x \notin A\)</span>. Thus <span class="math inline">\(B^c \subseteq A^c\)</span>.</p></li>
 <li><p>Second implication <span class="math inline">\(\impliedby\)</span>:<br>
 Essentially the same proof, hence we omit it.<br>
 </p></li>
@@ -525,7 +531,7 @@ Essentially the same proof, hence we omit it.<br>
 </div>
 <p>We conclude by stating the De Morgan’s Laws. The proof will be left as an exercise.</p>
 <div id="de-morgans-laws" class="Proposition" title="De Morgan’s Laws">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 11: </strong>De Morgan’s Laws</summary><div>Suppose <span class="math inline">\(A,B \subset \Omega\)</span>. Then <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 11: </strong>De Morgan’s Laws</summary><div>Suppose <span class="math inline">\(A,B \subseteq \Omega\)</span>. Then <span class="math display">\[
 (A \cap B)^c = A^c \cup B^c
 \]</span> and <span class="math display">\[
 (A \cup B)^c = A^c \cap B^c  \,.
@@ -536,7 +542,7 @@ Essentially the same proof, hence we omit it.<br>
 <section id="power-set" class="level3" data-number="2.3.5">
 <h3 data-number="2.3.5" class="anchored" data-anchor-id="power-set"><span class="header-section-number">2.3.5</span> Power set</h3>
 <p>Let <span class="math inline">\(\Omega\)</span> be an arbitray set. We define the <strong>power set</strong> of <span class="math inline">\(\Omega\)</span> as <span class="math display">\[
-\mathcal{P}(\Omega) := \{ A \, \colon \,A \subset \Omega \}\,,
+\mathcal{P}(\Omega) := \{ A \, \colon \,A \subseteq \Omega \}\,,
 \]</span> that is, the power set of <span class="math inline">\(\Omega\)</span> is the set of all subsets of <span class="math inline">\(\Omega\)</span>.</p>
 <div id="Remark-12" class="Remark">
 <details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 12</strong></summary><div>
@@ -592,7 +598,7 @@ a=\tilde{a}\,, \qquad b = \tilde{b} \,.
 <section id="equivalence-relation" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="equivalence-relation"><span class="header-section-number">2.4</span> Equivalence relation</h2>
 <p>Suppose <span class="math inline">\(A\)</span> is a set. A <strong>binary relation</strong> <span class="math inline">\(R\)</span> on <span class="math inline">\(A\)</span> is a subset <span class="math display">\[
-R \subset A \times A \,.
+R \subseteq A \times A \,.
 \]</span></p>
 <div id="equivalence-relation-1" class="Definition" title="Equivalence relation">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 14: </strong>Equivalence relation</summary><div>A binary relation <span class="math inline">\(R\)</span> is called an <strong>equivalence relation</strong> if it satisfies the following properties:<p></p>
@@ -719,21 +725,21 @@ x + n \,, \, \forall \, n \in \mathbb{Z}\,.
 <p>An example of partial order is the operation of <strong>set inclusion</strong>.</p>
 <div id="set-inclusion-is-a-partial-order" class="Example" title="Set inclusion is a partial order">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 20: </strong>Set inclusion is a partial order</summary><div>Consider an arbitrary non-empty set <span class="math inline">\(\Omega\)</span> and consider its <strong>power set</strong> <span class="math display">\[
-\mathcal{P}(\Omega) = \{ A \, \colon \,A \subset \Omega  \}\,.
+\mathcal{P}(\Omega) = \{ A \, \colon \,A \subseteq \Omega  \}\,.
 \]</span> The inclusion defines <strong>binary relation</strong> on <span class="math inline">\(\mathcal{P}(\Omega) \times \mathcal{P}(\Omega)\)</span>, via <span class="math display">\[
-R:=\{ (A,B) \in \mathcal{P}(\Omega) \times \mathcal{P}(\Omega) \, \colon \, A \subset B  \} \,.
+R:=\{ (A,B) \in \mathcal{P}(\Omega) \times \mathcal{P}(\Omega) \, \colon \, A \subseteq B  \} \,.
 \]</span> Let us check that <span class="math inline">\(R\)</span> is an <strong>order relation</strong>:<p></p>
 <ol type="1">
-<li><p>Reflexive: It holds, since <span class="math inline">\(A \subset A\)</span> for all <span class="math inline">\(A \in \mathcal{P}(\Omega)\)</span>,</p></li>
-<li><p>Transitive: If <span class="math inline">\(A \subset B\)</span> and <span class="math inline">\(B \subset C\)</span>, then by definition of inclusion <span class="math inline">\(A \subset C\)</span>.</p></li>
-<li><p>Antisymmetric: If <span class="math inline">\(A \subset B\)</span> and <span class="math inline">\(B \subset A\)</span>, then <span class="math inline">\(A=B\)</span> by Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>.</p></li>
+<li><p>Reflexive: It holds, since <span class="math inline">\(A \subseteq A\)</span> for all <span class="math inline">\(A \in \mathcal{P}(\Omega)\)</span>,</p></li>
+<li><p>Transitive: If <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq C\)</span>, then by definition of inclusion <span class="math inline">\(A \subseteq C\)</span>.</p></li>
+<li><p>Antisymmetric: If <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq A\)</span>, then <span class="math inline">\(A=B\)</span> by Proposition <a href="chap_2.html#Proposition-Equality-Sets">7</a>.</p></li>
 </ol>
 <p>Therefore <span class="math inline">\(R\)</span> is a <strong>partial order</strong> on <span class="math inline">\(\mathcal{P}(\Omega)\)</span>. Note that in general <span class="math inline">\(R\)</span> is <strong>not</strong> a total order. For example if we consider <span class="math display">\[
 \Omega = \{x, y\}\,.
 \]</span> Thus <span class="math display">\[
 \mathcal{P}(\Omega)  = \{ \emptyset , \, \{x\} , \, \{y\} , \, \{x,y\} \}\,.
 \]</span> If we pick <span class="math inline">\(A=\{x\}\)</span> and <span class="math inline">\(B=\{y\}\)</span> then <span class="math inline">\(A \cap B = \emptyset\)</span>, meaning that <span class="math display">\[
-A \not\subset B \,, \quad  B \not\subset A \,,
+A \not\subseteq B \,, \quad  B \not\subseteq A \,,
 \]</span> showing that <span class="math inline">\(R\)</span> is not a total order.</p>
 </div></details>
 </div>
@@ -824,7 +830,7 @@ x \mapsto f(x) \,.
 <ul>
 <li>The set <span class="math inline">\(A\)</span> is called the <strong>domain</strong> of <span class="math inline">\(f\)</span>,</li>
 <li>The <strong>range</strong> of <span class="math inline">\(f\)</span> is the set <span class="math display">\[
-\{ y \in B \, \colon \,y = f(x) \, \mbox{ for some }\, x \in A \} \subset B \,.
+\{ y \in B \, \colon \,y = f(x) \, \mbox{ for some }\, x \in A \} \subseteq B \,.
 \]</span></li>
 </ul>
 </div></details>
@@ -847,7 +853,7 @@ A = \{ a_1,a_2 \} \,, \quad B=\{b_1,b_2,b_3\} \,.
 <li>Define <span class="math inline">\(f \ \colon A \to B\)</span> by setting <span class="math display">\[
 f(a_1) = b_1 \,, \quad f(a_2) = b_1 \,.
 \]</span> In this way <span class="math inline">\(f\)</span> is a function, with domain <span class="math inline">\(A\)</span> and range <span class="math display">\[
-f(A) = \{ b_1 \} \subset B \,.
+f(A) = \{ b_1 \} \subseteq B \,.
 \]</span></li>
 <li>Define <span class="math inline">\(g \ \colon A \to B\)</span> by setting <span class="math display">\[
 g(a_1) = b_2 \,, \quad g(a_1) = b_3 \,, \quad g(a_2) = b_3
@@ -1200,7 +1206,7 @@ a \neq b \,.
 <h2 data-number="2.11" class="anchored" data-anchor-id="induction"><span class="header-section-number">2.11</span> Induction</h2>
 <p>Another technique for carrying out proofs is <strong>induction</strong>, which we take as an axiom.</p>
 <div id="principle-of-induction" class="Axiom" title="Principle of Induction">
-<p></p><details class="Axiom fbx-simplebox fbx-default" open=""><summary><strong>Axiom 39: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(S \subset \mathbb{N}\)</span>. Suppose that<p></p>
+<p></p><details class="Axiom fbx-simplebox fbx-default" open=""><summary><strong>Axiom 39: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(S \subseteq \mathbb{N}\)</span>. Suppose that<p></p>
 <ol type="1">
 <li>We have <span class="math inline">\(1 \in S\)</span>, and</li>
 <li>Whenever <span class="math inline">\(n \in S\)</span>, then <span class="math inline">\((n+1) \in S\)</span>.</li>

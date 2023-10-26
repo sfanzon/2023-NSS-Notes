@@ -66,31 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -98,9 +74,33 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Important {
   --color1: #f4cce0;
@@ -110,25 +110,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 </style>
 
@@ -295,7 +295,7 @@ n &gt; x \,.
 <details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 1</strong></summary><div>
 <p>The Archimedean property might sound trivial. However there are examples of ordered fields <span class="math inline">\(K\)</span> that satisfy:</p>
 <ol type="1">
-<li><span class="math inline">\(\mathbb{N}\subset K\)</span>.</li>
+<li><span class="math inline">\(\mathbb{N}\subseteq K\)</span>.</li>
 <li><span class="math inline">\(K\)</span> does not have the Archimedean property.</li>
 <li>In particular, <span class="math inline">\(\mathbb{N}\)</span> is bounded above in <span class="math inline">\(K\)</span>.</li>
 </ol>
@@ -489,7 +489,7 @@ x \in I_n \,, \quad \forall \, n \in \mathbb{N}\,.
 <p>We now investigate some of the properties of supremum and infimum in <span class="math inline">\(\mathbb{R}\)</span>. The first property is an alternative characterization of the supremum, which we will often use. A sketch of such characterization is in <a href="#fig-alternative-sup">Figure&nbsp;<span>4.4</span></a> below.</p>
 <div id="proposition-supremum-characterization" class="Proposition" title="Characterization of Supremum">
 <details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 7: </strong>Characterization of Supremum</summary><div>
-<p>Let <span class="math inline">\(A \subset \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(s \in \mathbb{R}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
+<p>Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(s \in \mathbb{R}\)</span> is an upper bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
 <ol type="1">
 <li><span class="math inline">\(s = \sup A\)</span></li>
 <li>For every <span class="math inline">\(\varepsilon&gt; 0\)</span> there exists <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
@@ -532,7 +532,7 @@ s - s + b &lt; x \quad \implies \quad b &lt; x \,.
 <p>The analogue of Proposition <a href="chap_4.html#proposition-supremum-characterization">7</a> is as follows. The proof is left as an exercise.</p>
 <div id="prop-supremum-infimum" class="Proposition" title="Characterization of Infimum">
 <details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 8: </strong>Characterization of Infimum</summary><div>
-<p>Let <span class="math inline">\(A \subset \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(i \in \mathbb{R}\)</span> is a lower bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
+<p>Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be a non-empty set. Suppose that <span class="math inline">\(i \in \mathbb{R}\)</span> is a lower bound for <span class="math inline">\(A\)</span>. They are equivalent:</p>
 <ol type="1">
 <li><span class="math inline">\(i = \inf A\)</span></li>
 <li>For every <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span>, with <span class="math inline">\(\varepsilon&gt; 0\)</span>, there exists <span class="math inline">\(x \in A\)</span> such that <span class="math display">\[
@@ -670,7 +670,7 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 <h2 data-number="4.4" class="anchored" data-anchor-id="density-of-mathbbq-in-mathbbr"><span class="header-section-number">4.4</span> Density of <span class="math inline">\(\mathbb{Q}\)</span> in <span class="math inline">\(\mathbb{R}\)</span></h2>
 <p>A set <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if the elements of <span class="math inline">\(S\)</span> are arbitrarily close to the elements of <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="dense-set" class="Definition" title="Dense set">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Dense set</summary><div>Let <span class="math inline">\(S \subset \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if for every <span class="math inline">\(x \in \mathbb{R}\)</span> and <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span> with <span class="math inline">\(\varepsilon&gt;0\)</span>, there exist <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Dense set</summary><div>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span> if for every <span class="math inline">\(x \in \mathbb{R}\)</span> and <span class="math inline">\(\varepsilon\in \mathbb{R}\)</span> with <span class="math inline">\(\varepsilon&gt;0\)</span>, there exist <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
 |x - q| &lt; \varepsilon\,.
 \]</span><p></p>
 </div></details>
@@ -678,7 +678,7 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 <p>In other words, the above definition is saying that <span class="math inline">\(S\)</span> and <span class="math inline">\(\mathbb{R}\)</span> are tightly knitted together. An equivalent definition of dense set is given below.</p>
 <div id="Remark-14" class="Remark">
 <details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 14</strong></summary><div>
-<p>Let <span class="math inline">\(S \subset \mathbb{R}\)</span>. They are equivalent:</p>
+<p>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. They are equivalent:</p>
 <ul>
 <li><span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</li>
 <li>For every pair of numbers <span class="math inline">\(x,y \in \mathbb{R}\)</span> with <span class="math inline">\(x&lt;y\)</span>, there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
@@ -1039,7 +1039,7 @@ X = \{ x_n \, \colon \,n \in \mathbb{N}\} \,.
 </div>
 <p>The answer is no, as shown in the next proposition.</p>
 <div id="proposition-countable-subset" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 27</strong></summary><div>Let <span class="math inline">\(X\)</span> be a countable set and <span class="math inline">\(A \subset X\)</span>. Then either <span class="math inline">\(A\)</span> is finite or countable.<p></p>
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 27</strong></summary><div>Let <span class="math inline">\(X\)</span> be a countable set and <span class="math inline">\(A \subseteq X\)</span>. Then either <span class="math inline">\(A\)</span> is finite or countable.<p></p>
 </div></details>
 </div>
 <div id="Proof*-12" class="Proof">
@@ -1140,7 +1140,7 @@ f \left(\frac{m}{i}\right) := m
 \]</span> is a bijection. As <span class="math inline">\(\mathbb{Z}\)</span> is countable, we deduce that <span class="math inline">\(L_i\)</span> is countable. Therefore the set <span class="math inline">\(L\)</span> defined by <span class="math display">\[
 L:= \bigcup_{i \in \mathbb{N}} \, L_i
 \]</span> is countable by Proposition <a href="chap_4.html#proposition-countable-union">29</a>. Clearly we have <span class="math display">\[
-\mathbb{Q}\subset L \,.
+\mathbb{Q}\subseteq L \,.
 \]</span> Since <span class="math inline">\(\mathbb{Q}\)</span> is not finite, by Proposition <a href="chap_4.html#proposition-countable-subset">27</a> we conclude that <span class="math inline">\(\mathbb{Q}\)</span> is countable.<p></p>
 </div></details>
 </div>
@@ -1157,9 +1157,9 @@ L:= \bigcup_{i \in \mathbb{N}} \, L_i
 \]</span> Let <span class="math inline">\(I_1\)</span> be a closed interval such that <span class="math display">\[
 x_1 \notin I_1 \,.
 \]</span> Let <span class="math inline">\(I_2\)</span> be another closed interval, contained in <span class="math inline">\(I_1\)</span>, and such that <span class="math inline">\(x_2 \notin I_2\)</span>. Such interval exists, because <span class="math inline">\(I_1\)</span> contains two disjoint closed intervals: hence <span class="math inline">\(x_2\)</span> can be at most in one of these two intervals. To summarize, we have <span class="math display">\[
-x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subset I_1 \,.
+x_1 \notin I_1 \,, \quad x_2 \notin I_2 \,, \quad I_2 \subseteq I_1 \,.
 \]</span> We can iterate this procedure, and construct a sequence of nested intervals <span class="math inline">\(I_n\)</span> such that <span class="math display">\[
-I_{n+1} \subset I_n \,, \quad  x_n \notin I_n \,,
+I_{n+1} \subseteq I_n \,, \quad  x_n \notin I_n \,,
 \]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, see <a href="#fig-R-uncountable">Figure&nbsp;<span>4.8</span></a>. Since <span class="math inline">\(x_k \notin I_k\)</span>, we conclude that <span class="math display">\[
 x_k \notin \bigcap_{n =1}^\infty \, I_n \,, \quad \forall \, k \in \mathbb{N}\,.
 \]</span> As the points <span class="math inline">\(x_k\)</span> are all the elements of <span class="math inline">\(\mathbb{R}\)</span>, we conclude that <span class="math display">\[

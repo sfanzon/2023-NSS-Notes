@@ -202,16 +202,16 @@ O \cup E & = \N \,, \,\, O \cap D = \emptyset \,.
 ### Inclusion and equality
 
 
-Given two sets $A$ and $B$, we say that $A$ is **contained** in $B$ if all the elements of $A$ are also contained in $B$. This will be denoted with the **inclusion** symbol $\subset$, that is,
+Given two sets $A$ and $B$, we say that $A$ is **contained** in $B$ if all the elements of $A$ are also contained in $B$. This will be denoted with the **inclusion** symbol $\subseteq$, that is,
 $$
-A \subset B \,.
+A \subseteq B \,.
 $$
 In this case we say that 
 
 - $A$ is a **subset** of $B$, 
 - $B$ is a **superset** of $A$.
 
-The inclusion $A \subset B$ is equivalent to the implication:
+The inclusion $A \subseteq B$ is equivalent to the implication:
 $$
 x \in A \,\, \implies \,\, x \in B 
 $$
@@ -222,8 +222,8 @@ for all $x \in A$. The symbol $\implies$ reads **implies**, and denotes the fact
 
 Given two sets $A$ and $B$ we always have
 \begin{gather}
-(A \cap B) \subset A \,, \,\, (A \cap B) \subset B \,,\\
-A \subset (A \cup B) \,, \,\, B \subset (A \cup B) \,.
+(A \cap B) \subseteq A \,, \,\, (A \cap B) \subseteq B \,,\\
+A \subseteq (A \cup B) \,, \,\, B \subseteq (A \cup B) \,.
 \end{gather}
 
 :::
@@ -233,19 +233,27 @@ We say that two sets $A$ and $B$ are equal if they contain the **same** elements
 $$
 A=B \,.
 $$
+If $A \subseteq B$ and $A \neq B$, we write
+$$
+A \subset B \quad \mbox{ or } \quad A \subsetneq B \,.
+$$
+
 
 
 ::: Example
 
-The sets 
+1. The sets 
 $$
-A =\{ 1,2,3 \}
+A =\{ 1,2,3 \} \,, \quad B= \{ 3 ,1,2\}
 $$
-and 
+are equal, that is $A=B$. This is because they contain exactly the same elements: **order** does not matter when talking about sets. 
+
+2. Consider the sets
 $$
-B= \{ 3 ,1,2\}
+A =\{ 1,2 \} \,, \quad B = \{ 1, 2 ,5 \} \,.
 $$
-are equal. This is because they contain exactly the same elements: **order** does not matter when talking about sets. 
+Then $A$ is contained in $B$, but $A$ is not equal to $B$. Therefore
+we write $A \subset B$ or $A \subsetneq B$.
 
 :::
 
@@ -257,7 +265,7 @@ A=B
 $$
 **if and only if**
 $$
-A \subset B \,\, \text{ and } \,\, B \subset A \,.
+A \subseteq B \,\, \text{ and } \,\, B \subseteq A \,.
 $$
 
 :::
@@ -269,26 +277,26 @@ The proof is almost trivial. However it is a good exercise in basic logic, so le
 
 
 1. First implication $\implies$:  
-Suppose that $A=B$. Let us show that $A\subset B$. Since $A = B$, this means that all the elements of $A$ are also contained in $B$. Therefore if we take $x \in A$ we have
+Suppose that $A=B$. Let us show that $A\subseteq B$. Since $A = B$, this means that all the elements of $A$ are also contained in $B$. Therefore if we take $x \in A$ we have
 $$
 x \in A \,\, \implies \,\, x \in B \,.
 $$
-This shows $A \subset B$. The proof of $B \subset A$ is similar. 
+This shows $A \subseteq B$. The proof of $B \subseteq A$ is similar. 
 
 2. Second implication $\impliedby$:  
-Suppose that $A \subset B$ and $B \subset A$. We need to show $A=B$, that is, $A$ and $B$ have the same elements. To this end let $x \in A$. Since $A \subset B$ then we have $x \in B$. Thus $B$ contains all the elements of $A$. Since we are also assuming $B \subset A$, this means that $A$ contains all the elements of $B$. Hence $A$ and $B$ contain the same elements, and $A=B$.
+Suppose that $A \subseteq B$ and $B \subseteq A$. We need to show $A=B$, that is, $A$ and $B$ have the same elements. To this end let $x \in A$. Since $A \subseteq B$ then we have $x \in B$. Thus $B$ contains all the elements of $A$. Since we are also assuming $B \subseteq A$, this means that $A$ contains all the elements of $B$. Hence $A$ and $B$ contain the same elements, and $A=B$.
 
 :::
 
 
-The above proposition is very useful when we need to **prove** that two sets are equal: rather than showing directly that $A = B$, we can prove that $A \subset B$ and $B \subset A$. 
+The above proposition is very useful when we need to **prove** that two sets are equal: rather than showing directly that $A = B$, we can prove that $A \subseteq B$ and $B \subseteq A$. 
 
 
 
 
 ### Infinite unions and intersections
 
-Suppose given a set $\Omega$, and a family of sets $A_n \subset \Omega$, where $n \in \N$. Then we can define the **infinte union**
+Suppose given a set $\Omega$, and a family of sets $A_n \subseteq \Omega$, where $n \in \N$. Then we can define the **infinte union**
 $$
 \bigcup_{n \in \N} A_n := \{ x \in \Omega \, \colon \, x \in A_n \,\, \text{ for at least one } \,\, n \in \N \} \,.
 $$
@@ -311,13 +319,13 @@ for arbitrary $n \in \N$. Then
 $$
 \bigcup_{n \in \N} A_n = \N \,.
 $$ {#eq-infinite-union}
-The above equality can be easily proven using Proposition \ref{Proposition-Equality-Sets}. Indeed, assume that $m \in \cup_n A_n$. Then $m \in A_n$ for at least one $n \in \N$. Since $A_n \subset \N$, we conclude that $m \in \N$. This shows 
+The above equality can be easily proven using Proposition \ref{Proposition-Equality-Sets}. Indeed, assume that $m \in \cup_n A_n$. Then $m \in A_n$ for at least one $n \in \N$. Since $A_n \subseteq \N$, we conclude that $m \in \N$. This shows 
 $$
-\bigcup_{n \in \N} A_n \subset \N \,.
+\bigcup_{n \in \N} A_n \subseteq \N \,.
 $$
 Conversely, suppose that $m \in \N$. By definition $m \in A_m$. Hence there exists at least one index $n$, $n=m$ in this case, such that $m \in A_n$. Then by definition $m \in \cup_{n \in \N} A_n$, showing that
 $$
-\N \subset \bigcup_{n \in \N} A_n \,.
+\N \subseteq \bigcup_{n \in \N} A_n \,.
 $$
 Hence we conclude (@eq-infinite-union) by Proposition \ref{Proposition-Equality-Sets}.  
 We also have that
@@ -348,7 +356,7 @@ $$
 
 ::: Remark
 
-Suppose that $A \subset \Omega$. Then $A$ and $A^c$ form a **partition** of $\Omega$, in the sense that
+Suppose that $A \subseteq \Omega$. Then $A$ and $A^c$ form a **partition** of $\Omega$, in the sense that
 $$
 A \cup A^c = \Omega  \,\, \text{ and } \,\,  A \cap A^c = \emptyset \,.
 $$
@@ -357,15 +365,15 @@ $$
 
 ::: Example
 
-Suppose $A, B \subset \Omega$. Then
+Suppose $A, B \subseteq \Omega$. Then
 $$
-A \subset B  \iff B^c \subset A^c \,.
+A \subseteq B  \iff B^c \subseteq A^c \,.
 $$
 
 Let us prove the above claim:
 
 - First implication $\implies$:  
-Suppose that $A \subset B$. We need to show that $B^c \subset A^c$. Hence, assume $x \in B^c$. By definition this means that $x \notin B$. Now notice that we cannot have that $x \in A$. Indeed, assume $x \in A$.  By assumption we have $A \subset B$, hence $x \in B$. But we had assumed $x \in B$, contradiction. Therefore it must be that $x \notin A$. Thus $B^c \subset A^c$.
+Suppose that $A \subseteq B$. We need to show that $B^c \subseteq A^c$. Hence, assume $x \in B^c$. By definition this means that $x \notin B$. Now notice that we cannot have that $x \in A$. Indeed, assume $x \in A$.  By assumption we have $A \subseteq B$, hence $x \in B$. But we had assumed $x \in B$, contradiction. Therefore it must be that $x \notin A$. Thus $B^c \subseteq A^c$.
 
 - Second implication $\impliedby$:  
 Essentially the same proof, hence we omit it.  
@@ -376,7 +384,7 @@ We conclude by stating the De Morgan's Laws. The proof will be left as an exerci
 ::: Proposition
 ## De Morgan's Laws
 
-Suppose $A,B \subset \Omega$. Then
+Suppose $A,B \subseteq \Omega$. Then
 $$
 (A \cap B)^c = A^c \cup B^c 
 $$
@@ -394,7 +402,7 @@ $$
 
 Let $\Omega$ be an arbitray set. We define the **power set** of $\Omega$ as 
 $$
-\mathcal{P}(\Omega) := \{ A \divider A \subset \Omega \}\,,
+\mathcal{P}(\Omega) := \{ A \divider A \subseteq \Omega \}\,,
 $$
 that is, the power set of $\Omega$ is the set of all subsets of $\Omega$. 
 
@@ -468,7 +476,7 @@ $$
 
 Suppose $A$ is a set. A **binary relation** $R$ on $A$ is a subset 
 $$
-R \subset A \times A \,.
+R \subseteq A \times A \,.
 $$
 
 ::: Definition
@@ -670,19 +678,19 @@ An example of partial order is the operation of **set inclusion**.
 
 Consider an arbitrary non-empty set $\Omega$ and consider its **power set**
 $$
-\mathcal{P}(\Omega) = \{ A \divider A \subset \Omega  \}\,.
+\mathcal{P}(\Omega) = \{ A \divider A \subseteq \Omega  \}\,.
 $$
 The inclusion defines **binary relation** on $\mathcal{P}(\Omega) \times \mathcal{P}(\Omega)$, via
 $$
-R:=\{ (A,B) \in \mathcal{P}(\Omega) \times \mathcal{P}(\Omega) \, \colon \, A \subset B  \} \,.
+R:=\{ (A,B) \in \mathcal{P}(\Omega) \times \mathcal{P}(\Omega) \, \colon \, A \subseteq B  \} \,.
 $$
 Let us check that $R$ is an **order relation**:
 
-1. Reflexive: It holds, since $A \subset A$ for all $A \in \mathcal{P}(\Omega)$,
+1. Reflexive: It holds, since $A \subseteq A$ for all $A \in \mathcal{P}(\Omega)$,
 
-2. Transitive: If $A \subset B$ and $B \subset C$, then by definition of inclusion $A \subset C$.
+2. Transitive: If $A \subseteq B$ and $B \subseteq C$, then by definition of inclusion $A \subseteq C$.
 
-3. Antisymmetric: If $A \subset B$ and $B \subset A$, then $A=B$ by Proposition \ref{Proposition-Equality-Sets}.
+3. Antisymmetric: If $A \subseteq B$ and $B \subseteq A$, then $A=B$ by Proposition \ref{Proposition-Equality-Sets}.
 
 Therefore $R$ is a **partial order** on $\mathcal{P}(\Omega)$. Note that in general $R$ is **not** a total order. For example if we consider
 $$
@@ -694,7 +702,7 @@ $$
 $$
 If we pick $A=\{x\}$ and $B=\{y\}$ then $A \cap B = \emptyset$, meaning that 
 $$
-A \not\subset B \,, \quad  B \not\subset A \,,
+A \not\subseteq B \,, \quad  B \not\subseteq A \,,
 $$
 showing that $R$ is not a total order.
 :::
@@ -811,7 +819,7 @@ In addition:
 - The set $A$ is called the **domain** of $f$,
 - The **range** of $f$ is the set
 $$
-\{ y \in B \divider y = f(x) \, \mbox{ for some }\, x \in A \} \subset B \,.
+\{ y \in B \divider y = f(x) \, \mbox{ for some }\, x \in A \} \subseteq B \,.
 $$
 :::
 
@@ -836,7 +844,7 @@ f(a_1) = b_1 \,, \quad f(a_2) = b_1 \,.
 $$
 In this way $f$ is a function, with domain $A$ and range
 $$
-f(A) = \{ b_1 \} \subset B \,.
+f(A) = \{ b_1 \} \subseteq B \,.
 $$
 - Define $g \ \colon A \to B$ by setting 
 $$
@@ -1333,7 +1341,7 @@ Another technique for carrying out proofs is **induction**, which we take as an 
 ::: Axiom 
 ### Principle of Induction
 
-Let $S \subset  \N$. Suppose that 
+Let $S \subseteq  \N$. Suppose that 
 
 1. We have $1 \in S$, and
 2. Whenever $n \in S$, then $(n+1) \in S$.

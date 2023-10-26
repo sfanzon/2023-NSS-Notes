@@ -66,39 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -106,15 +74,23 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Important {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Question {
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -122,13 +98,37 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -623,7 +623,7 @@ x \geq 0, \, y \geq 0  \,\, \implies \,\, x \cdot y  \geq 0
 \]</span> This means that <span class="math inline">\(\mathbb{Q}\)</span> has <strong>gaps</strong>, and cannot be represented as a <strong>continuous</strong> line. The rigorous definition of <strong>lack of gaps</strong> needs the concept of <strong>cut</strong> of a set.</p>
 <div id="partition-of-a-set" class="Definition" title="Partition of a set">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 15: </strong>Partition of a set</summary><div>Let <span class="math inline">\(S\)</span> be a non-empty set. The pair <span class="math inline">\((A,B)\)</span> is a <strong>partition</strong> of <span class="math inline">\(S\)</span> if <span class="math display">\[
-A , B \subset S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
+A , B \subseteq S\,, \quad  A \neq \emptyset\,, \quad B \neq \emptyset \,,
 \]</span> and <span class="math display">\[
 S = A \cup B \,, \quad
 A \cap B = \emptyset \, .
@@ -735,7 +735,7 @@ B = \{ q \in \mathbb{Q}\, \colon \,q &gt; 0, \,\, q^2 &gt; 2  \} \,.
 <p><em>Step 1. <span class="math inline">\((A,B)\)</span> is a cut of <span class="math inline">\(\mathbb{Q}\)</span></em>:<br>
 We need to prove the following:</p>
 <ol type="1">
-<li><span class="math inline">\((A,B)\)</span> is a partition of <span class="math inline">\(\mathbb{Q}\)</span>. This is because <span class="math inline">\(A , B \subset \mathbb{Q}\)</span> with <span class="math inline">\(A \neq \emptyset\)</span> and <span class="math inline">\(B \neq \emptyset\)</span>. Moreover <span class="math inline">\(A \cap B = \emptyset\)</span> and <span class="math display">\[
+<li><span class="math inline">\((A,B)\)</span> is a partition of <span class="math inline">\(\mathbb{Q}\)</span>. This is because <span class="math inline">\(A , B \subseteq \mathbb{Q}\)</span> with <span class="math inline">\(A \neq \emptyset\)</span> and <span class="math inline">\(B \neq \emptyset\)</span>. Moreover <span class="math inline">\(A \cap B = \emptyset\)</span> and <span class="math display">\[
 A \cup B = \mathbb{Q}\,,
 \]</span> given that <span class="math inline">\(\sqrt{2} \notin \mathbb{Q}\)</span>, and so there is no element <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math inline">\(q^2 = 2\)</span>.</li>
 <li>It holds <span class="math display">\[
@@ -854,7 +854,7 @@ A = [0,1) \cap \mathbb{Q}\,.
 <p>We start by defining the supremum. First we need the notion of upper bound of a set.</p>
 <div id="upper-bound-and-bounded-above" class="Definition" title="Upper bound and bounded above">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 24: </strong>Upper bound and bounded above</summary><div>
-<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>:</p>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>:</p>
 <ol type="1">
 <li>We say that <span class="math inline">\(b \in K\)</span> is an <strong>upper bound</strong> for <span class="math inline">\(A\)</span> if <span class="math display">\[
 a \leq b \,, \quad \forall \, a \in A \,.
@@ -865,7 +865,7 @@ a \leq b \,, \quad \forall \, a \in A \,.
 </div>
 <div id="supremum" class="Definition" title="Supremum">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 25: </strong>Supremum</summary><div>
-<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. A number <span class="math inline">\(s \in K\)</span> is called <strong>least upper bound</strong> or <strong>supremum</strong> of <span class="math inline">\(A\)</span> if:</p>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. A number <span class="math inline">\(s \in K\)</span> is called <strong>least upper bound</strong> or <strong>supremum</strong> of <span class="math inline">\(A\)</span> if:</p>
 <ol type="i">
 <li><span class="math inline">\(s\)</span> is an upper bound for <span class="math inline">\(A\)</span>,</li>
 <li><span class="math inline">\(s\)</span> is the smallest upper bound of <span class="math inline">\(A\)</span>, that is, <span class="math display">\[
@@ -875,17 +875,17 @@ a \leq b \,, \quad \forall \, a \in A \,.
 </div></details>
 </div>
 <div id="Notation-26" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 26</strong></summary><div>We will almost always prefer the name supremum to least upper bound. For <span class="math inline">\(A \subset K\)</span> the supremum is denoted by <span class="math display">\[
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 26</strong></summary><div>We will almost always prefer the name supremum to least upper bound. For <span class="math inline">\(A \subseteq K\)</span> the supremum is denoted by <span class="math display">\[
 s := \sup \ A \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="Remark-27" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 27</strong></summary><div>Note that if a set <span class="math inline">\(A \subset K\)</span> in <strong>NOT</strong> bounded above, then the supremum does not exist, as there are no upper bounds of <span class="math inline">\(A\)</span>.<p></p>
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 27</strong></summary><div>Note that if a set <span class="math inline">\(A \subseteq K\)</span> in <strong>NOT</strong> bounded above, then the supremum does not exist, as there are no upper bounds of <span class="math inline">\(A\)</span>.<p></p>
 </div></details>
 </div>
 <div id="Proposition-28" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 28</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 28</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. If <span class="math display">\[
 \sup A
 \]</span> exists, then it is unique.<p></p>
 </div></details>
@@ -935,7 +935,7 @@ A = [0,\sqrt{2})  \cap \mathbb{Q}\,.
 </figure>
 </div>
 <div id="maximum" class="Definition" title="Maximum">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29: </strong>Maximum</summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. A number <span class="math inline">\(M \in K\)</span> is called the <strong>maximum</strong> of <span class="math inline">\(A\)</span> if: <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29: </strong>Maximum</summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. A number <span class="math inline">\(M \in K\)</span> is called the <strong>maximum</strong> of <span class="math inline">\(A\)</span> if: <span class="math display">\[
 M \in A   \,\, \mbox{ and } \,\, a \leq M  \,, \, \forall a \in A \,.
 \]</span> We denote the maximum by <span class="math display">\[
 M = \max A \,.
@@ -943,7 +943,7 @@ M = \max A \,.
 </div></details>
 </div>
 <div id="Proposition-30" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 30</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If the maximum of <span class="math inline">\(A\)</span> exists, then also the supremum exists, and <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 30</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. If the maximum of <span class="math inline">\(A\)</span> exists, then also the supremum exists, and <span class="math display">\[
 \sup A = \max A \,.
 \]</span><p></p>
 </div></details>
@@ -984,7 +984,7 @@ B = [0,1] \cap \mathbb{Q}
 <p>We now introduce the definitions of lower bound, infimum, minimum. These are the counterpart of upper bound, supremum and maximum, respectively.</p>
 <div id="upper-bound-bounded-below-infimum-minimum" class="Definition" title="Upper bound, bounded below, infimum, minimum">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 31: </strong>Upper bound, bounded below, infimum, minimum</summary><div>
-<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>:</p>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>:</p>
 <ol type="1">
 <li><p>We say that <span class="math inline">\(l \in K\)</span> is a <strong>lower bound</strong> for <span class="math inline">\(A\)</span> if <span class="math display">\[
 l \leq a \,, \quad \forall \, a \in A \,.
@@ -1015,7 +1015,7 @@ m = \min A \,.
 </div>
 <div id="Proposition-32" class="Proposition">
 <details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 32</strong></summary><div>
-<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>:</p>
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>:</p>
 <ol type="1">
 <li>If <span class="math inline">\(\inf A\)</span> exists, then it is unique.</li>
 <li>If the minimum of <span class="math inline">\(A\)</span> exists, then also the infimum exists, and <span class="math display">\[
@@ -1061,7 +1061,7 @@ B = [0,1] \cap \mathbb{Q}
 </div></details>
 </div>
 <div id="Proposition-33" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 33</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. If <span class="math inline">\(\inf A\)</span> and <span class="math inline">\(\sup A\)</span> exist, then <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 33</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. If <span class="math inline">\(\inf A\)</span> and <span class="math inline">\(\sup A\)</span> exist, then <span class="math display">\[
 \inf A \leq a \leq \sup A \,, \quad \forall a \in A \,.
 \]</span><p></p>
 </div></details>
@@ -1076,7 +1076,7 @@ B = [0,1] \cap \mathbb{Q}
 <p>We conclude with another simple proposition. The proof is again left to the reader.</p>
 <div id="proposition-inf-sup" class="Proposition" title="Relationship between sup and inf">
 <details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 34: </strong>Relationship between sup and inf</summary><div>
-<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subset K\)</span>. Define <span class="math display">\[
+<p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field and <span class="math inline">\(A \subseteq K\)</span>. Define <span class="math display">\[
 - A := \{ - a \, \colon \,a \in A \} \,.
 \]</span> It holds:</p>
 <ul>
@@ -1095,7 +1095,7 @@ B = [0,1] \cap \mathbb{Q}
 <h2 data-number="3.5" class="anchored" data-anchor-id="completeness"><span class="header-section-number">3.5</span> Completeness</h2>
 <p>We have introduced the concepts of supremum and infimum on an ordered field <span class="math inline">\(K\)</span>.</p>
 <div id="Question-35" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 35</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subset K\)</span> is non-empty and bounded above. Does <span class="math display">\[
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 35</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded above. Does <span class="math display">\[
 \sup A
 \]</span> always exist?<p></p>
 </div></details>
@@ -1105,7 +1105,7 @@ A = [0, \sqrt{2}) \cap \mathbb{Q}\,.
 \tag{3.14}\]</span></span></p>
 <div id="theorem-Q-not-complete" class="Theorem">
 <details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 36</strong></summary><div>
-<p>There exists a set <span class="math inline">\(A \subset \mathbb{Q}\)</span> such that</p>
+<p>There exists a set <span class="math inline">\(A \subseteq \mathbb{Q}\)</span> such that</p>
 <ul>
 <li><span class="math inline">\(A\)</span> is non-empty,</li>
 <li><span class="math inline">\(A\)</span> is bounded above,</li>
@@ -1193,7 +1193,7 @@ We have assumed by contradiction that <span class="math inline">\(s = \sup A\)</
 </div>
 <p>The above theorem shows that the supremum does not necessarily exist. What about the infimum?</p>
 <div id="Question-37" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 37</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subset K\)</span> is non-empty and bounded below. Does <span class="math display">\[
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 37</strong></summary><div>Suppose <span class="math inline">\((K,+,\cdot, \leq)\)</span> is an ordered field, and that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded below. Does <span class="math display">\[
 \inf A
 \]</span> always exist?<p></p>
 </div></details>
@@ -1206,7 +1206,7 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 38: </strong>Completeness</summary><div>
 <p>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be an ordered field. We say that <span class="math inline">\(K\)</span> is <strong>complete</strong> if it holds the property:</p>
 <ul>
-<li>(AC) For every <span class="math inline">\(A \subset K\)</span> non-empty and bounded above <span class="math display">\[
+<li>(AC) For every <span class="math inline">\(A \subseteq K\)</span> non-empty and bounded above <span class="math display">\[
 \sup A \in K \,.
 \]</span></li>
 </ul>
@@ -1223,13 +1223,13 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 </div>
 <p>Notice that if the <strong>Axiom of Completeness</strong> holds, then also the infimum exists. This is shown in the following proposition.</p>
 <div id="Proposition-40" class="Proposition">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 40</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be a complete ordered field. Suppose that <span class="math inline">\(A \subset K\)</span> is non-empty and bounded below. Then <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 40</strong></summary><div>Let <span class="math inline">\((K,+,\cdot,\leq)\)</span> be a complete ordered field. Suppose that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded below. Then <span class="math display">\[
 \inf A \in K\,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="Proof*-12" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose that <span class="math inline">\(A \subset K\)</span> is non-empty and bounded below. Then <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose that <span class="math inline">\(A \subseteq K\)</span> is non-empty and bounded below. Then <span class="math display">\[
 -A:= \{ -a \, \colon \,a \in A   \}
 \]</span> is non-empty and bounded above. By completeness we have that <span class="math inline">\(\sup(-A)\)</span> exists in <span class="math inline">\(K\)</span>. But then Proposition <a href="chap_3.html#proposition-inf-sup">34</a> implies that <span class="math inline">\(\inf A\)</span> exists in <span class="math inline">\(K\)</span>, with <span class="math display">\[
 \inf A = - \sup (-A)\,.
@@ -1253,7 +1253,7 @@ A = (\sqrt{2}, 10] \cap \mathbb{Q}\,.
 <p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42: </strong>Ideas for proving Theorem 41</summary><div>The proof of Theorem <a href="chap_3.html#theorem-cut-complete">41</a> is rather long, but the ideas are simple:<p></p>
 <p><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>. Suppose <span class="math inline">\(K\)</span> has the Cut Property. To prove that <span class="math inline">\(K\)</span> is Complete, we need to:</p>
 <ul>
-<li><p>Consider an arbitrary set <span class="math inline">\(A \subset K\)</span> such that <span class="math inline">\(A \neq \emptyset\)</span> and <span class="math inline">\(A\)</span> is bounded above.</p></li>
+<li><p>Consider an arbitrary set <span class="math inline">\(A \subseteq K\)</span> such that <span class="math inline">\(A \neq \emptyset\)</span> and <span class="math inline">\(A\)</span> is bounded above.</p></li>
 <li><p>Show that <span class="math inline">\(A\)</span> has a supremum.</p></li>
 </ul>
 <p>To achieve this, consider the set <span class="math display">\[
@@ -1290,7 +1290,7 @@ s := \sup A
 <p>Keeping the above ideas in mind, let us proceed with the proof.</p>
 <div id="proof-of-theorem-1" class="Proof" title="Proof of Theorem 41">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 41</summary><div><em>Step 1. Cut Property <span class="math inline">\(\implies\)</span> Completeness</em>.<br>
-We need to prove that <span class="math inline">\(K\)</span> is complete. To this end, consider <span class="math inline">\(A \subset K\)</span> non-empty and bounded above. Define the set of upper bounds of <span class="math inline">\(A\)</span>: <span class="math display">\[
+We need to prove that <span class="math inline">\(K\)</span> is complete. To this end, consider <span class="math inline">\(A \subseteq K\)</span> non-empty and bounded above. Define the set of upper bounds of <span class="math inline">\(A\)</span>: <span class="math display">\[
 B := \{ b \in K \, \colon \,b \geq a \,, \,\, \forall a \in A \} \,.
 \]</span><p></p>
 <p><em>Claim. The pair <span class="math inline">\((B^c,B)\)</span> is a cut of <span class="math inline">\(K\)</span>.</em></p>
@@ -1454,7 +1454,7 @@ a \leq s \leq b \,, \quad \forall \, a \in A \,, \,\forall \, b \in B
 <ol start="5" type="1">
 <li><strong>Axiom of Completeness</strong> holds:
 <ul>
-<li>(AC) For every <span class="math inline">\(A \subset \mathbb{R}\)</span> non-empty and bounded above <span class="math display">\[
+<li>(AC) For every <span class="math inline">\(A \subseteq \mathbb{R}\)</span> non-empty and bounded above <span class="math display">\[
 \sup A \in \mathbb{R}
 \]</span></li>
 </ul></li>
@@ -1499,7 +1499,7 @@ x^{-1} = \frac{1}{x} \,.
 <section id="special-subsets-of-mathbbr" class="level2" data-number="3.8">
 <h2 data-number="3.8" class="anchored" data-anchor-id="special-subsets-of-mathbbr"><span class="header-section-number">3.8</span> Special subsets of <span class="math inline">\(\mathbb{R}\)</span></h2>
 <p>In Definition <a href="chap_3.html#definition-R">43</a> we have introduced <span class="math inline">\(\mathbb{R}\)</span> as a complete ordered field. This was done axiomatically and in a non constructive way. What happens now to the sets <span class="math inline">\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}\)</span>? Are they well defined? Does it still hold that <span class="math display">\[
-\mathbb{N}\,, \mathbb{Z}\,, \mathbb{Q}\, \subset \mathbb{R}\,?
+\mathbb{N}\,, \mathbb{Z}\,, \mathbb{Q}\, \subseteq \mathbb{R}\,?
 \]</span> The definitions that we gave in <a href="chap_1.html"><span>Chapter&nbsp;1</span></a> for <span class="math inline">\(\mathbb{N}, \mathbb{Z}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> are not related to the system of real numbers <span class="math inline">\(\mathbb{R}\)</span> we just introduced. To overcome this problem, we will have to define new sets <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}}, \,\, {\mathbb{Z}}_{\mathbb{R}}\,, \,\, {\mathbb{Q}}_{\mathbb{R}}
 \]</span> from scracth, starting from the axioms of <span class="math inline">\(\mathbb{R}\)</span>. Note that we are using the subscript <span class="math inline">\(\mathbb{R}\)</span> to distinguish these new sets from the old ones.</p>
@@ -1516,7 +1516,7 @@ x^{-1} = \frac{1}{x} \,.
 \]</span> We need a formal definition to capture this idea. This is the concept of <strong>inductive set</strong>.</p>
 <div id="inductive-set" class="Definition" title="Inductive set">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 48: </strong>Inductive set</summary><div>
-<p>Let <span class="math inline">\(S \subset \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is an inductive set if they are satisfied:</p>
+<p>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. We say that <span class="math inline">\(S\)</span> is an inductive set if they are satisfied:</p>
 <ul>
 <li><span class="math inline">\(1 \in S\)</span>,</li>
 <li>If <span class="math inline">\(x \in S\)</span>, then <span class="math inline">\((x + 1) \in S\)</span>.</li>
@@ -1572,23 +1572,17 @@ S := \bigcap_{M \in \mathcal{M}} \, M
 \]</span><p></p>
 </div></details>
 </div>
-<p>Therefore <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the intersection of all the inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. From this definition it follows that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span>, as shown in the following theorem.</p>
-<div id="theorem-smallest-inductive" class="Theorem" title="{\mathbb{N}}_{\mathbb{R}} is the smallest inductive subset of \mathbb{R}">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 52: </strong><span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(C \subset \mathbb{R}\)</span> be an inductive subset. Then <span class="math display">\[
-{\mathbb{N}}_{\mathbb{R}} \subset C \,.
+<p>Therefore <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the intersection of all the inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. From this definition it follows that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span>, as shown in the following proposition.</p>
+<div id="proposition-smallest-inductive" class="Proposition" title="{\mathbb{N}}_{\mathbb{R}} is the smallest inductive subset of \mathbb{R}">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 52: </strong><span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive subset of <span class="math inline">\(\mathbb{R}\)</span></summary><div>Let <span class="math inline">\(C \subseteq \mathbb{R}\)</span> be an inductive subset. Then <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} \subseteq C \,.
 \]</span> In other words, <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> is the smallest inductive set in <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
 </div></details>
 </div>
 <div id="Proof*-16" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be the collection of <strong>all</strong> inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. Therefore, since <span class="math inline">\(C\)</span> is an inductive subset, we have <span class="math display">\[
-C \cap \bigcap_{M \in \mathcal{M}} M  = \bigcap_{M \in \mathcal{M}} M \,.
-\]</span> By definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> and the above observation we get <span class="math display">\[
-C \cap {\mathbb{N}}_{\mathbb{R}} = C \cap \bigcap_{M \in \mathcal{M}} M  = \bigcap_{M \in \mathcal{M}} M  = {\mathbb{N}}_{\mathbb{R}} \,.
-\]</span> Now, by definition of intersection of sets, we have <span class="math display">\[
-({\mathbb{N}}_{\mathbb{R}} \cap C) \subset C \,.
-\]</span> Since <span class="math display">\[
-({\mathbb{N}}_{\mathbb{R}} \cap C) = {\mathbb{N}}_{\mathbb{R}}\,,
-\]</span> we conclude that <span class="math inline">\({\mathbb{N}}_{\mathbb{R}} \subset C\)</span>.<p></p>
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(\mathcal{M}\)</span> be the collection of <strong>all</strong> inductive subsets of <span class="math inline">\(\mathbb{R}\)</span>. By definition <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} = \bigcap_{M \in \mathcal{M}} \, M \,.
+\]</span> Let <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>, then <span class="math inline">\(x \in M\)</span> for all <span class="math inline">\(M \in \mathcal{M}\)</span>. Since <span class="math inline">\(C \in \mathcal{M}\)</span> then <span class="math inline">\(x \in C\)</span>. This shows <span class="math inline">\({\mathbb{N}}_{\mathbb{R}} \subseteq C\)</span>.<p></p>
 </div></details>
 </div>
 <p>The definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> guarantees that all numbers in <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span> are larger than <span class="math inline">\(1\)</span>.</p>
@@ -1607,8 +1601,8 @@ C := \{ x \in \mathbb{R}\, \colon \,x \geq 1 \} \,.
 x + 1 \geq x + 0 = x \geq 1 \,,
 \]</span> showing that <span class="math inline">\(x + 1 \geq 1\)</span>. Thus <span class="math inline">\((x + 1) \in C\)</span>.</p>
 </blockquote>
-<p>By Theorem <a href="chap_3.html#theorem-smallest-inductive">52</a> we conclude that <span class="math display">\[
-{\mathbb{N}}_{\mathbb{R}} \subset C \,,
+<p>By Proposition <a href="chap_3.html#proposition-smallest-inductive">52</a> we conclude that <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} \subseteq C \,,
 \]</span> showing that <span class="math inline">\(x \geq 1\)</span> for all <span class="math inline">\(x \in {\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
 </div></details>
 </div>
@@ -1650,9 +1644,9 @@ C:=\{  x \in {\mathbb{N}}_{\mathbb{R}} \, \colon \,\alpha(n) \mbox{ is true} \} 
 <li>If <span class="math inline">\(n \in C\)</span> then <span class="math inline">\(\alpha(n)\)</span> is true. By assumption <span class="math inline">\(\alpha(n+1)\)</span> is true. Therefore <span class="math inline">\((n+1) \in C\)</span>.</li>
 </ul>
 </blockquote>
-<p>By Theorem <a href="chap_3.html#theorem-smallest-inductive">52</a> we conclude that <span class="math display">\[
-{\mathbb{N}}_{\mathbb{R}} \subset C\,.
-\]</span> As by definition <span class="math inline">\(C \subset {\mathbb{N}}_{\mathbb{R}}\)</span>, we have proven that <span class="math display">\[
+<p>By Proposition <a href="chap_3.html#proposition-smallest-inductive">52</a> we conclude that <span class="math display">\[
+{\mathbb{N}}_{\mathbb{R}} \subseteq C\,.
+\]</span> As by definition <span class="math inline">\(C \subseteq {\mathbb{N}}_{\mathbb{R}}\)</span>, we have proven that <span class="math display">\[
 {\mathbb{N}}_{\mathbb{R}} = C \,,
 \]</span> showing that <span class="math inline">\(\alpha(n)\)</span> is true for all <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>.</p>
 </div></details>
@@ -1726,7 +1720,7 @@ m + (n + 1) = ( m + n ) + 1 \in {\mathbb{N}}_{\mathbb{R}} \,,
 M:=  \{  -n \, \colon \,n \in {\mathbb{N}}_{\mathbb{R}}   \}  \cup \{0\}  \cup  {\mathbb{N}}_{\mathbb{R}}  \,.
 \]</span><p></p>
 <ul>
-<li><p><span class="math inline">\(M \subset {\mathbb{Z}}_{\mathbb{R}}\)</span>: Suppose <span class="math inline">\(m \in M\)</span>. We have 3 cases:</p>
+<li><p><span class="math inline">\(M \subseteq {\mathbb{Z}}_{\mathbb{R}}\)</span>: Suppose <span class="math inline">\(m \in M\)</span>. We have 3 cases:</p>
 <ul>
 <li>If <span class="math inline">\(m \in \{ -n \, \colon \,n \in {\mathbb{N}}_{\mathbb{R}}\}\)</span> then there exists <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span> such that <span class="math inline">\(m=-n\)</span>. Thus <span class="math display">\[
   m = -n = 1 - (n+1) \in {\mathbb{Z}}_{\mathbb{R}} \,,
@@ -1738,8 +1732,8 @@ M:=  \{  -n \, \colon \,n \in {\mathbb{N}}_{\mathbb{R}}   \}  \cup \{0\}  \cup  
   m =  (m + 1) - 1 \in {\mathbb{Z}}_{\mathbb{R}}  \,,
   \]</span> since <span class="math inline">\(1 \in {\mathbb{N}}_{\mathbb{R}}\)</span> and <span class="math inline">\(m+1 \in {\mathbb{N}}_{\mathbb{R}}\)</span>, given that <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span>.</li>
 </ul>
-<p>In all 3 cases we have shown that <span class="math inline">\(m \in {\mathbb{Z}}_{\mathbb{R}}\)</span>, proving that <span class="math inline">\(M \subset {\mathbb{Z}}_{\mathbb{R}}\)</span>.</p></li>
-<li><p><span class="math inline">\({\mathbb{Z}}_{\mathbb{R}} \subset M\)</span>: Let <span class="math inline">\(z \in {\mathbb{Z}}_{\mathbb{R}}\)</span>. Then <span class="math inline">\(z = m - n\)</span> for some <span class="math inline">\(n,m \in {\mathbb{N}}_{\mathbb{R}}\)</span>. We have 3 cases:</p>
+<p>In all 3 cases we have shown that <span class="math inline">\(m \in {\mathbb{Z}}_{\mathbb{R}}\)</span>, proving that <span class="math inline">\(M \subseteq {\mathbb{Z}}_{\mathbb{R}}\)</span>.</p></li>
+<li><p><span class="math inline">\({\mathbb{Z}}_{\mathbb{R}} \subseteq M\)</span>: Let <span class="math inline">\(z \in {\mathbb{Z}}_{\mathbb{R}}\)</span>. Then <span class="math inline">\(z = m - n\)</span> for some <span class="math inline">\(n,m \in {\mathbb{N}}_{\mathbb{R}}\)</span>. We have 3 cases:</p>
 <ul>
 <li>If <span class="math inline">\(m=n\)</span> then <span class="math display">\[
   z = m - n = m - m \stackrel{(A3)}{=} 0 \in M \,.
@@ -1791,7 +1785,7 @@ m \cdot n \in {\mathbb{Z}}_{\mathbb{R}} \,,
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>The fact that <span class="math display">\[
 \mbox{(A1), (A2), (M1), (M2), (O1)-(O4), (AM), (AO), (MO)}
 \]</span> are satisfied descends immediately from the inclusion <span class="math display">\[
-{\mathbb{Z}}_{\mathbb{R}} \subset \mathbb{R}\,.
+{\mathbb{Z}}_{\mathbb{R}} \subseteq \mathbb{R}\,.
 \]</span> We are left to prove (A3). This is non-trivial because a priori the additive inverse <span class="math inline">\(-z\)</span> of some <span class="math inline">\(z \in {\mathbb{Z}}_{\mathbb{R}}\)</span> belongs to <span class="math inline">\(\mathbb{R}\)</span>. We need to check that <span class="math inline">\(- z \in {\mathbb{Z}}_{\mathbb{R}}\)</span>. Indeed, since <span class="math inline">\(z \in {\mathbb{Z}}_{\mathbb{R}}\)</span>, there exist <span class="math inline">\(n,m \in {\mathbb{N}}_{\mathbb{R}}\)</span> such that <span class="math inline">\(z = m - n\)</span>. Define <span class="math inline">\(y:= n - m\)</span>. We have that <span class="math inline">\(y \in {\mathbb{Z}}_{\mathbb{R}}\)</span> and <span class="math display">\[
 z + y = (m - n) + (n - m) = (m - m) + (n - n) = 0 \,.
 \]</span> Therefore <span class="math inline">\(y\)</span> is the inverse of <span class="math inline">\(z\)</span> and <span class="math inline">\(y \in {\mathbb{Z}}_{\mathbb{R}}\)</span>, proving that the sum in <span class="math inline">\({\mathbb{Z}}_{\mathbb{R}}\)</span> satisfies (A3).<p></p>
@@ -1840,7 +1834,7 @@ z + y = (m - n) + (n - m) = (m - m) + (n - n) = 0 \,.
 </div>
 <div id="Proof*-22" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>All the field properties, except for (M3), follow from the inclusion <span class="math display">\[
-{\mathbb{Q}}_{\mathbb{R}} \subset \mathbb{R}
+{\mathbb{Q}}_{\mathbb{R}} \subseteq \mathbb{R}
 \]</span> and from the field properties of <span class="math inline">\(\mathbb{R}\)</span>. To check (M3), let <span class="math inline">\(q \in {\mathbb{Q}}_{\mathbb{R}}\)</span> with <span class="math inline">\(q \neq 0\)</span>. Therefore <span class="math inline">\(q = m/n\)</span> for <span class="math inline">\(m \in {\mathbb{Z}}_{\mathbb{R}}\)</span>, <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. As <span class="math inline">\(q \neq 0\)</span> and <span class="math inline">\(n \neq 0\)</span>, see Theorem <a href="chap_3.html#theorem-n-1">53</a>, we deduce that <span class="math inline">\(m \neq 0\)</span>. We have two cases:<p></p>
 <ul>
 <li><span class="math inline">\(m&gt;0\)</span>: In this case <span class="math inline">\(m \in {\mathbb{N}}_{\mathbb{R}}\)</span> by Theorem <a href="chap_3.html#theorem-equivalent-Z">59</a>. Therefore <span class="math display">\[
