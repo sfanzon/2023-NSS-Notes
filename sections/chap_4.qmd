@@ -676,10 +676,13 @@ $$
 $$
 \frac1n \leq 1 \,, \quad \forall \, n \in \N \,.
 $$
-Since $1 \in A$, we conclude that 
+Therefore $1$ is an upper bound for $A$. Let us prove it is the least upper bound:
+let $b$ be an upper bound for $A$. Since $1 \in A$ and $b$ is an upper bound, we have
+$1 \leq b$. Hence $1$ is the least upper bound, and
 $$
-\max A = \sup A = 1 \,.
+\sup A = \max A =  1 \,.
 $$
+
 
 
 *Part 2.* We have
@@ -746,9 +749,9 @@ given below.
 Let $S \subseteq \R$. They are equivalent: 
 
 - $S$ is dense in $\R$.
-- For every pair of numbers $x,y \in \R$ with $x<y$, there exists $q \in \Q$ such that
+- For every pair of numbers $x,y \in \R$ with $x<y$, there exists $s \in S$ such that
 $$
-x < q < y \,.
+x < s < y \,.
 $$
 
 :::

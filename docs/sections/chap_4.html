@@ -66,51 +66,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -118,17 +86,49 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -643,8 +643,8 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 <div id="Proof*-8" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We have <span class="math display">\[
 \frac1n \leq 1 \,, \quad \forall \, n \in \mathbb{N}\,.
-\]</span> Since <span class="math inline">\(1 \in A\)</span>, we conclude that <span class="math display">\[
-\max A = \sup A = 1 \,.
+\]</span> Therefore <span class="math inline">\(1\)</span> is an upper bound for <span class="math inline">\(A\)</span>. Let us prove it is the least upper bound: let <span class="math inline">\(b\)</span> be an upper bound for <span class="math inline">\(A\)</span>. Since <span class="math inline">\(1 \in A\)</span> and <span class="math inline">\(b\)</span> is an upper bound, we have <span class="math inline">\(1 \leq b\)</span>. Hence <span class="math inline">\(1\)</span> is the least upper bound, and <span class="math display">\[
+\sup A = \max A =  1 \,.
 \]</span><p></p>
 <p><em>Part 2.</em> We have <span class="math display">\[
 \frac1n &gt; 0 \,, \quad \forall \, n \in \mathbb{N}\,,
@@ -681,8 +681,8 @@ A :=  \left\{ \frac1n \, \colon \,n \in \mathbb{N}\right\} \,.
 <p>Let <span class="math inline">\(S \subseteq \mathbb{R}\)</span>. They are equivalent:</p>
 <ul>
 <li><span class="math inline">\(S\)</span> is dense in <span class="math inline">\(\mathbb{R}\)</span>.</li>
-<li>For every pair of numbers <span class="math inline">\(x,y \in \mathbb{R}\)</span> with <span class="math inline">\(x&lt;y\)</span>, there exists <span class="math inline">\(q \in \mathbb{Q}\)</span> such that <span class="math display">\[
-x &lt; q &lt; y \,.
+<li>For every pair of numbers <span class="math inline">\(x,y \in \mathbb{R}\)</span> with <span class="math inline">\(x&lt;y\)</span>, there exists <span class="math inline">\(s \in S\)</span> such that <span class="math display">\[
+x &lt; s &lt; y \,.
 \]</span></li>
 </ul>
 </div></details>

@@ -2005,7 +2005,7 @@ The Principle of Induction is a consequence of the definition of ${\N}_{\R}$, se
 ::: Theorem
 ### Principle of Induction   {#theorem-induction-new}
 
-Let $\alpha(x)$ be a statement depending on $n \in {\N}_{\R}$. Assume that 
+Let $\alpha(n)$ be a statement depending on $n \in {\N}_{\R}$. Assume that 
 
 1. $\alpha(1)$ is true.
 2. If $\alpha(n)$ is true then also $\alpha(n+1)$ is true.

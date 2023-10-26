@@ -66,39 +66,27 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Question {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
 }
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -106,27 +94,39 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -1625,7 +1625,7 @@ x \geq 1 \,.
 <h3 data-number="3.8.2" class="anchored" data-anchor-id="principle-of-induction"><span class="header-section-number">3.8.2</span> Principle of induction</h3>
 <p>The Principle of Induction is a consequence of the definition of <span class="math inline">\({\mathbb{N}}_{\mathbb{R}}\)</span>, see Definition <a href="chap_3.html#definition-natural-numbers">51</a>, and of the field axioms of <span class="math inline">\(\mathbb{R}\)</span> in Definition <a href="chap_3.html#definition-R">43</a>.</p>
 <div id="theorem-induction-new" class="Theorem" title="Principle of Induction">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 55: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(\alpha(x)\)</span> be a statement depending on <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Assume that<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 55: </strong>Principle of Induction</summary><div>Let <span class="math inline">\(\alpha(n)\)</span> be a statement depending on <span class="math inline">\(n \in {\mathbb{N}}_{\mathbb{R}}\)</span>. Assume that<p></p>
 <ol type="1">
 <li><span class="math inline">\(\alpha(1)\)</span> is true.</li>
 <li>If <span class="math inline">\(\alpha(n)\)</span> is true then also <span class="math inline">\(\alpha(n+1)\)</span> is true.</li>
