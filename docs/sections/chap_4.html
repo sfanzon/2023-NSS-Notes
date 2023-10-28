@@ -66,27 +66,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Lemma {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -94,31 +86,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -126,9 +102,33 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
 .Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 </style>
 
@@ -1055,7 +1055,14 @@ g(2):=f(n_2) \,.
 n_k = \min \{ n \in \mathbb{N}\, \text{ s.t. } \, n&gt;n_{k-1} \,, \,\, f(n) \in A \}
 \]</span> and <span class="math display">\[
 g(k) := f(n_k) \,.
-\]</span> In this way we have defined a function <span class="math inline">\(g \colon \mathbb{N}\to A\)</span>. As <span class="math inline">\(g\)</span> was defined thourgh <span class="math inline">\(f\)</span>, and <span class="math inline">\(f\)</span> is injective, we have that <span class="math inline">\(g\)</span> is injective. Moreover <span class="math inline">\(g\)</span> is surjective by construction. Hence <span class="math inline">\(g\)</span> is bijective, showing that <span class="math inline">\(A\)</span> is countable.<p></p>
+\]</span> In this way we have defined a function <span class="math inline">\(g \colon \mathbb{N}\to A\)</span>. We have:<p></p>
+<ul>
+<li><span class="math inline">\(g\)</span> is injective: This is because <span class="math inline">\(g\)</span> was defined thourgh <span class="math inline">\(f\)</span>, and <span class="math inline">\(f\)</span> is injective.</li>
+<li><span class="math inline">\(g\)</span> is surjective: If <span class="math inline">\(x \in A\)</span>, by surjectivity of <span class="math inline">\(f\)</span> there exists <span class="math inline">\(\widetilde{n} \in \mathbb{N}\)</span> such that <span class="math inline">\(f(\widetilde{n})=x\)</span>. Therefore <span class="math display">\[
+\widetilde{n} \in  \{ n \in \mathbb{N}\, \text{ s.t. } \, f(n) \in A \} \,,
+\]</span> so that <span class="math inline">\(n_k= \widetilde{n}\)</span>, for some <span class="math inline">\(k \geq \widetilde{n}-1\)</span>.</li>
+</ul>
+<p>Hence <span class="math inline">\(g\)</span> is bijective, showing that <span class="math inline">\(A\)</span> is countable.</p>
 </div></details>
 </div>
 <div id="Example-28" class="Example">

@@ -1445,8 +1445,18 @@ and
 $$
 g(k) := f(n_k) \,.
 $$
-In this way we have defined a function $g \colon \N \to A$. As $g$ was 
-defined thourgh $f$, and $f$ is injective, we have that $g$ is injective. Moreover $g$ is surjective by construction. Hence $g$ is bijective, showing that $A$ is countable.
+In this way we have defined a function $g \colon \N \to A$. We have:
+
+- $g$ is injective: This is because $g$ was defined thourgh $f$, and $f$ is injective.
+- $g$ is surjective: If $x \in A$, by surjectivity of $f$ there exists $\widetilde{n} \in \N$ such 
+that $f(\widetilde{n})=x$. Therefore
+$$
+\widetilde{n} \in  \{ n \in \N \st f(n) \in A \} \,,
+$$
+so that $n_k= \widetilde{n}$, for some $k \geq \widetilde{n}-1$.
+
+
+Hence $g$ is bijective, showing that $A$ is countable.
 
 :::
 

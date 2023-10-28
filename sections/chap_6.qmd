@@ -12,7 +12,12 @@ $
 
 Coming soon
 
-$\R$
+
+
+
+## Example: Euler's Number
+
+## Recurrence relations
 
 
 ## Example: Heron's Method

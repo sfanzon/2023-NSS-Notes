@@ -104,15 +104,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   --color1: #bce5de;
   --color2: #21aa93;
 }
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
-.Corollary {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -124,27 +136,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -152,17 +148,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 </style>
 
@@ -276,11 +276,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#example-herons-method" id="toc-example-herons-method" class="nav-link active" data-scroll-target="#example-herons-method"><span class="header-section-number">6.1</span> Example: Heron’s Method</a>
+  <li><a href="#example-eulers-number" id="toc-example-eulers-number" class="nav-link active" data-scroll-target="#example-eulers-number"><span class="header-section-number">6.1</span> Example: Euler’s Number</a></li>
+  <li><a href="#recurrence-relations" id="toc-recurrence-relations" class="nav-link" data-scroll-target="#recurrence-relations"><span class="header-section-number">6.2</span> Recurrence relations</a></li>
+  <li><a href="#example-herons-method" id="toc-example-herons-method" class="nav-link" data-scroll-target="#example-herons-method"><span class="header-section-number">6.3</span> Example: Heron’s Method</a>
   <ul class="collapse">
-  <li><a href="#coding-the-algorithm" id="toc-coding-the-algorithm" class="nav-link" data-scroll-target="#coding-the-algorithm"><span class="header-section-number">6.1.1</span> Coding the Algorithm</a></li>
+  <li><a href="#coding-the-algorithm" id="toc-coding-the-algorithm" class="nav-link" data-scroll-target="#coding-the-algorithm"><span class="header-section-number">6.3.1</span> Coding the Algorithm</a></li>
   </ul></li>
-  <li><a href="#fibonacci-sequence" id="toc-fibonacci-sequence" class="nav-link" data-scroll-target="#fibonacci-sequence"><span class="header-section-number">6.2</span> Fibonacci Sequence</a></li>
+  <li><a href="#fibonacci-sequence" id="toc-fibonacci-sequence" class="nav-link" data-scroll-target="#fibonacci-sequence"><span class="header-section-number">6.4</span> Fibonacci Sequence</a></li>
   </ul>
 </nav>
     </div>
@@ -305,9 +307,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <p>Coming soon</p>
-<p><span class="math inline">\(\mathbb{R}\)</span></p>
-<section id="example-herons-method" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="example-herons-method"><span class="header-section-number">6.1</span> Example: Heron’s Method</h2>
+<section id="example-eulers-number" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="example-eulers-number"><span class="header-section-number">6.1</span> Example: Euler’s Number</h2>
+</section>
+<section id="recurrence-relations" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="recurrence-relations"><span class="header-section-number">6.2</span> Recurrence relations</h2>
+</section>
+<section id="example-herons-method" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="example-herons-method"><span class="header-section-number">6.3</span> Example: Heron’s Method</h2>
 <p>The first explicit algorithm for approximating <span class="math display">\[
 \sqrt{x}
 \]</span> for <span class="math inline">\(x &gt; 0\)</span> is known as <strong>Heron’s method</strong>, after the first-century Greek mathematician <a href="https://en.wikipedia.org/wiki/Hero_of_Alexandria">Heron of Alexandria</a> who described the method in his AD 60 work Metrica, see reference to <a href="https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method">Wikipedia page</a>.</p>
@@ -420,8 +427,8 @@ a_{n+1} - \sqrt{x} &lt; \frac{1}{2^n} (a_1 - \sqrt{x})
 \]</span> Therefore the RHS of (<a href="#eq-heron-final"><span>6.10</span></a>) converges to <span class="math inline">\(\sqrt{x}\)</span> as <span class="math inline">\(n \to \infty\)</span>. Applying the Squeeze Theorem to (<a href="#eq-heron-final"><span>6.10</span></a>) we conclude that <span class="math inline">\(a_n \to \sqrt{x}\)</span> as <span class="math inline">\(n \to \infty\)</span>.<p></p>
 </div></details>
 </div>
-<section id="coding-the-algorithm" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="coding-the-algorithm"><span class="header-section-number">6.1.1</span> Coding the Algorithm</h3>
+<section id="coding-the-algorithm" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="coding-the-algorithm"><span class="header-section-number">6.3.1</span> Coding the Algorithm</h3>
 <p>Heron’s Algorithm can be easily coded in Python. For example, see the function below:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># x is the number for which to compute sqrt(x)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># guess is the point a_1</span></span>
@@ -446,8 +453,8 @@ a_{n+1} - \sqrt{x} &lt; \frac{1}{2^n} (a_1 - \sqrt{x})
 <p>That is a pretty good approximation in just <span class="math inline">\(3\)</span> iterations!</p>
 </section>
 </section>
-<section id="fibonacci-sequence" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="fibonacci-sequence"><span class="header-section-number">6.2</span> Fibonacci Sequence</h2>
+<section id="fibonacci-sequence" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="fibonacci-sequence"><span class="header-section-number">6.4</span> Fibonacci Sequence</h2>
 
 
 </section>

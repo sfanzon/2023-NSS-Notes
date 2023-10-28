@@ -66,15 +66,55 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
 .Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -86,49 +126,9 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
 .Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
 }
 </style>
 
@@ -238,7 +238,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#definition-of-mathbbc" id="toc-definition-of-mathbbc" class="nav-link active" data-scroll-target="#definition-of-mathbbc"><span class="header-section-number">5.1</span> Definition of <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -260,9 +266,141 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Coming soon</p>
+<p>We have seen that <span class="math inline">\(\sqrt{x}\)</span> exists in <span class="math inline">\(\mathbb{R}\)</span> for all for <span class="math inline">\(x \geq 0\)</span>. We defined <span class="math display">\[
+\sqrt{x}:= \alpha \,, \quad \alpha := \sup \{ t \in \mathbb{R}\, \colon \,t^2 &lt; x  \}\,,
+\]</span> and proved that <span class="math display">\[
+\alpha^2 = x \,.
+\]</span> This procedure is only possible if <span class="math inline">\(x \geq 0\)</span>: there does not exist, e.g., a number <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
+\alpha^{2}=-1 \,.
+\]</span> To overcome this difficulty, the <strong>imaginary numbers</strong> or <strong>complex numbers</strong> were introduced. We define <span class="math inline">\(i\)</span> to be that <em>number</em> such that <span class="math display">\[
+i^{2}=-1 \,.
+\]</span> Formally, we can also think of <span class="math inline">\(i=\sqrt{-1}\)</span>. We can use this to define, for <span class="math inline">\(x&lt;0\)</span>, <span class="math display">\[
+\sqrt{x}: = i \sqrt{-x} \,.
+\]</span> Note that <span class="math inline">\(\sqrt{-x}\)</span> is properly defined in <span class="math inline">\(\mathbb{R}\)</span>, because <span class="math inline">\(-x&gt;0\)</span> if <span class="math inline">\(x&lt;0\)</span>.</p>
+<section id="definition-of-mathbbc" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="definition-of-mathbbc"><span class="header-section-number">5.1</span> Definition of <span class="math inline">\(\mathbb{C}\)</span></h2>
+<p>We would like to be able to do calculations with the newly introduced complex numbers, and investigate their properties. We can introduce them rigorously as a field, as we did for <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="complex-numbers" class="Definition" title="Complex Numbers">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Complex Numbers</summary><div>The set of complex numbers <span class="math inline">\(\mathbb{C}\)</span> is defined as<p></p>
+<p><span class="math display">\[
+\mathbb{C}:= \mathbb{R}\oplus i \mathbb{R}:= \{x \oplus i y  \, \colon \,x, y \in \mathbb{R}\} \,.
+\]</span></p>
+</div></details>
+</div>
+<p>In the above the symbol <span class="math inline">\(\oplus\)</span> is used to denote the pair <span class="math display">\[
+x \oplus i y = (x,y)
+\]</span> with <span class="math inline">\(x,y \in \mathbb{R}\)</span>. This means that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> play different <em>roles</em>.</p>
+<div id="Definition-2" class="Definition">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2</strong></summary><div>
+<p>For a complex number <span class="math display">\[
+z = x \oplus i y  \in \mathbb{C}
+\]</span> we say that</p>
+<ul>
+<li><span class="math inline">\(x\)</span> is the <strong>real part</strong> of <span class="math inline">\(z\)</span>, and denote it by <span class="math display">\[
+x = \operatorname{Re}(z)
+\]</span></li>
+<li><span class="math inline">\(y\)</span> is the <strong>imaginary part</strong> of <span class="math inline">\(z\)</span>, and denote it by <span class="math display">\[
+y = \operatorname{Im}(z)
+\]</span></li>
+</ul>
+<p>We say that</p>
+<ul>
+<li>If <span class="math inline">\(\operatorname{Re}z = 0\)</span> then <span class="math inline">\(z\)</span> is a <strong>purely imaginary</strong> number.</li>
+<li>If <span class="math inline">\(\operatorname{Im}z = 0\)</span> then <span class="math inline">\(z\)</span> is a <strong>real</strong> number.</li>
+</ul>
+</div></details>
+</div>
+<p>In order to make the set <span class="math inline">\(\mathbb{C}\)</span> into a field, we first have to define the two binary operations of addition <span class="math inline">\(+\)</span> and multiplication <span class="math inline">\(\cdot\)</span>, <span class="math display">\[
++ , \cdot \,\, \colon \mathbb{C}\times \mathbb{C}\to \mathbb{C}\,.
+\]</span> Then we need to prove that these operations satisfy all the field axioms.</p>
+<div id="addition-in-mathbbc" class="Definition" title="Addition in \mathbb{C}">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 3: </strong>Addition in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
+z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
+\]</span> for some <span class="math inline">\(x_1,x_2,y_1,y_2 \in \mathbb{R}\)</span>. We define the sum of <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as <span class="math display">\[
+z_1 + z_2 = \left( x_{1} \oplus i y_{1} \right)+ \left(x_{2} \oplus i y_{2} \right):=\left(x_{1}+x_{2}\right) \oplus i  \left(y_{1}+y_{2}\right)
+\]</span> where the <span class="math inline">\(+\)</span> symbol on the right hand side is the addition operator in <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
+</div></details>
+</div>
+<p>Clearly, <span class="math inline">\(z_1 + z_2\)</span> as defined above is an element of <span class="math inline">\(\mathbb{C}\)</span>. Therefore <span class="math inline">\(+\)</span> defines a binary operation over <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<div id="Notation-4" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 4</strong></summary><div>From the above definition, we have that, for all <span class="math inline">\(x, y \in \mathbb{R}\)</span>,<p></p>
+<p><span class="math display">\[
+(x \oplus i 0 )+(0 \oplus i y)= x \oplus i y .
+\]</span> To simplify notation, we will write <span class="math display">\[
+x \oplus i 0 = x \,, \quad \,  0 \oplus i y  = i y
+\]</span> and <span class="math display">\[
+x \oplus i y = x + i y \,.
+\]</span> We will also often swap <span class="math inline">\(i\)</span> and <span class="math inline">\(y\)</span>, writing equivalently <span class="math display">\[
+x + i y = x + y i \,.
+\]</span></p>
+</div></details>
+</div>
+<p>We now want to define multiplication between complex numbers. This has to keep into account that <span class="math display">\[
+i^{2}=i \cdot i=-1 \,.
+\]</span> Let us do some formal calculations: For <span class="math inline">\(z_1 = x_1 + i y_1, z_2 = x_2 + i y_2\)</span> we have</p>
+<p><span class="math display">\[\begin{align*}
+z_1 \cdot z_2 &amp; = \left(x_{1}+i y_{1}  \right) \cdot \left(x_{2}+ i y_{2} \right) \\
+&amp; = x_{1} \cdot x_{2} + x_{1} \cdot i y_{2} + x_{2} \cdot i y_{1} + y_{1} \cdot i^2 y_{2}   \\
+&amp; = \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2} \right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right)  
+\end{align*}\]</span></p>
+<p>The above motivates the following definition of multiplication.</p>
+<div id="multiplication-in-mathbbc" class="Definition" title="Multiplication in \mathbb{C}">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 5: </strong>Multiplication in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
+z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
+\]</span> for some <span class="math inline">\(x_1,x_2,y_1,y_2 \in \mathbb{R}\)</span>. We define the multiplication of <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as <span class="math display">\[
+z_1 \cdot z_2 = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) := \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2}\right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right) \,,
+\]</span> where the operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span> on the right hand side are the operations in <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
+</div></details>
+</div>
+<p>Clearly, <span class="math inline">\(z_1 \cdot z_2\)</span> as defined above is an element of <span class="math inline">\(\mathbb{C}\)</span>. Therefore <span class="math inline">\(\cdot\)</span> defines a binary operation over <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<div id="remark-complex-i" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 6</strong></summary><div>To check that we have given a good definition of product, we should have that <span class="math display">\[
+i^2 = - 1\,,
+\]</span> as expected. Indeed:<p></p>
+<p><span class="math display">\[\begin{align*}
+i^{2} &amp; = (0+ 1 i) \cdot (0+ 1 i) \\
+      &amp; = (0 \cdot 0 - 1 \cdot 1) + (0 \cdot 1 + 0 \cdot 1) i = - 1 \,.
+\end{align*}\]</span></p>
+</div></details>
+</div>
+<div id="Important*-1" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>In view of Remark <a href="chap_5.html#remark-complex-i">6</a>, we see that the formal calculations we have done above are compatible with the definition of multiplication of complex numbers. Therefore, it is not necessary to memorize the formula, but it suffices to carry out calculations as usual, and replace <span class="math inline">\(i^{2}\)</span> by <span class="math inline">\(-1\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Example-7" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 7</strong></summary><div>Suppose we want to multiply the complex numbers <span class="math display">\[
+z =  -2+3 i \,, \quad w = 1- i \,.
+\]</span> Using the definition we compute <span class="math display">\[\begin{align*}
+z \cdot w &amp; = (-2+3 i) \cdot (1 -  i) \\
+            &amp; = (-2-(-3))+(2+3) i \\
+            &amp; = 1 + 5 i \, .
+\end{align*}\]</span> Alternatively, we can proceed without using the definition, and replacing <span class="math inline">\(i^2\)</span> with <span class="math inline">\(-1\)</span>: <span class="math display">\[\begin{align*}
+z \cdot w &amp; = (-2+3 i) \cdot (1 -  i) \\
+            &amp; = - 2 + 2i + 3i - 3 i^2  \\
+            &amp; = (-2  + 3 ) + (  2 + 3 ) i \\
+            &amp; = 1 + 5 i \, .
+\end{align*}\]</span><p></p>
+</div></details>
+</div>
+<p>We now want to check that <span class="math display">\[
+(\mathbb{C}, + , \cdot)
+\]</span> is a field. All the field axioms are trivial to check, except for the existence of additive and multiplicative inverses.</p>
+<div id="additive-inverse-in-mathbbc" class="Proposition" title="Additive inverse in \mathbb{C}">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 8: </strong>Additive inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>The neutral element of addition in <span class="math inline">\(\mathbb{C}\)</span> is the number <span class="math display">\[
+0 := 0 + 0 i \,.
+\]</span> For any <span class="math inline">\(z = x + i y \in \mathbb{C}\)</span>, the unique inverse is given by <span class="math display">\[
+- z := -x - i y \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>The proof is immediate and is left as an exercise. The multiplication requires more care.</p>
+<div id="additive-inverse-in-mathbbc-1" class="Proposition" title="Additive inverse in \mathbb{C}">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9: </strong>Additive inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>g<p></p>
+</div></details>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

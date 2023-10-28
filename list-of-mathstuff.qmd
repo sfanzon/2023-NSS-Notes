@@ -391,6 +391,26 @@
 
  [**Proof**](#Proof*-4.16)\Pageref{Proof*-4.16}
 
+ [**Definition 5.1**](#complex-numbers-1): Complex Numbers\Pageref{complex-numbers-1}
+
+ [**Definition 5.2**](#Definition-5.2)\Pageref{Definition-5.2}
+
+ [**Definition 5.3**](#addition-in-mathbbc): Addition in $\mathbb{C}$\Pageref{addition-in-mathbbc}
+
+ [**Notation 5.4**](#Notation-5.4)\Pageref{Notation-5.4}
+
+ [**Definition 5.5**](#multiplication-in-mathbbc): Multiplication in $\mathbb{C}$\Pageref{multiplication-in-mathbbc}
+
+ [**Remark 5.6**](#remark-complex-i)\Pageref{remark-complex-i}
+
+ [**Important**](#Important*-5.1)\Pageref{Important*-5.1}
+
+ [**Example 5.7**](#Example-5.7)\Pageref{Example-5.7}
+
+ [**Proposition 5.8**](#additive-inverse-in-mathbbc): Additive inverse in $\mathbb{C}$\Pageref{additive-inverse-in-mathbbc}
+
+ [**Proposition 5.9**](#additive-inverse-in-mathbbc-1): Additive inverse in $\mathbb{C}$\Pageref{additive-inverse-in-mathbbc-1}
+
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 
  [**Proof**](#Proof*-6.1)\Pageref{Proof*-6.1}
