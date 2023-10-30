@@ -66,55 +66,23 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
 .Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
 }
 .Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
 .Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -122,13 +90,45 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 </style>
 
@@ -242,7 +242,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#definition-of-mathbbc" id="toc-definition-of-mathbbc" class="nav-link active" data-scroll-target="#definition-of-mathbbc"><span class="header-section-number">5.1</span> Definition of <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  <li><a href="#the-field-mathbbc" id="toc-the-field-mathbbc" class="nav-link active" data-scroll-target="#the-field-mathbbc"><span class="header-section-number">5.1</span> The field <span class="math inline">\(\mathbb{C}\)</span></a>
+  <ul class="collapse">
+  <li><a href="#division-in-mathbbc" id="toc-division-in-mathbbc" class="nav-link" data-scroll-target="#division-in-mathbbc"><span class="header-section-number">5.1.1</span> Division in <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  <li><a href="#mathbbc-is-not-ordered" id="toc-mathbbc-is-not-ordered" class="nav-link" data-scroll-target="#mathbbc-is-not-ordered"><span class="header-section-number">5.1.2</span> <span class="math inline">\(\mathbb{C}\)</span> is not ordered</a></li>
+  <li><a href="#completeness-of-mathbbc" id="toc-completeness-of-mathbbc" class="nav-link" data-scroll-target="#completeness-of-mathbbc"><span class="header-section-number">5.1.3</span> Completeness of <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  </ul></li>
+  <li><a href="#complex-conjugates" id="toc-complex-conjugates" class="nav-link" data-scroll-target="#complex-conjugates"><span class="header-section-number">5.2</span> Complex conjugates</a></li>
+  <li><a href="#the-complex-plane" id="toc-the-complex-plane" class="nav-link" data-scroll-target="#the-complex-plane"><span class="header-section-number">5.3</span> The complex plane</a></li>
   </ul>
 </nav>
     </div>
@@ -277,8 +284,8 @@ i^{2}=-1 \,.
 \]</span> Formally, we can also think of <span class="math inline">\(i=\sqrt{-1}\)</span>. We can use this to define, for <span class="math inline">\(x&lt;0\)</span>, <span class="math display">\[
 \sqrt{x}: = i \sqrt{-x} \,.
 \]</span> Note that <span class="math inline">\(\sqrt{-x}\)</span> is properly defined in <span class="math inline">\(\mathbb{R}\)</span>, because <span class="math inline">\(-x&gt;0\)</span> if <span class="math inline">\(x&lt;0\)</span>.</p>
-<section id="definition-of-mathbbc" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="definition-of-mathbbc"><span class="header-section-number">5.1</span> Definition of <span class="math inline">\(\mathbb{C}\)</span></h2>
+<section id="the-field-mathbbc" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="the-field-mathbbc"><span class="header-section-number">5.1</span> The field <span class="math inline">\(\mathbb{C}\)</span></h2>
 <p>We would like to be able to do calculations with the newly introduced complex numbers, and investigate their properties. We can introduce them rigorously as a field, as we did for <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="complex-numbers" class="Definition" title="Complex Numbers">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Complex Numbers</summary><div>The set of complex numbers <span class="math inline">\(\mathbb{C}\)</span> is defined as<p></p>
@@ -313,7 +320,7 @@ y = \operatorname{Im}(z)
 <p>In order to make the set <span class="math inline">\(\mathbb{C}\)</span> into a field, we first have to define the two binary operations of addition <span class="math inline">\(+\)</span> and multiplication <span class="math inline">\(\cdot\)</span>, <span class="math display">\[
 + , \cdot \,\, \colon \mathbb{C}\times \mathbb{C}\to \mathbb{C}\,.
 \]</span> Then we need to prove that these operations satisfy all the field axioms.</p>
-<div id="addition-in-mathbbc" class="Definition" title="Addition in \mathbb{C}">
+<div id="definition-addition-C" class="Definition" title="Addition in \mathbb{C}">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 3: </strong>Addition in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
 z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
 \]</span> for some <span class="math inline">\(x_1,x_2,y_1,y_2 \in \mathbb{R}\)</span>. We define the sum of <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as <span class="math display">\[
@@ -335,17 +342,21 @@ x + i y = x + y i \,.
 \]</span></p>
 </div></details>
 </div>
-<p>We now want to define multiplication between complex numbers. This has to keep into account that <span class="math display">\[
+<p>We now want to define multiplication between complex numbers.</p>
+<div id="remark-formal-multiplication" class="Remark" title="Formal calculation for multiplication in \mathbb{C}">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 5: </strong>Formal calculation for multiplication in <span class="math inline">\(\mathbb{C}\)</span></summary><div>How to define multiplication in <span class="math inline">\(\mathbb{C}\)</span>? Whatever the definition may be, at least it has to give that that <span class="math display">\[
 i^{2}=i \cdot i=-1 \,.
-\]</span> Let us do some formal calculations: For <span class="math inline">\(z_1 = x_1 + i y_1, z_2 = x_2 + i y_2\)</span> we have</p>
+\]</span> Keeping the above in mind, let us do some formal calculations: For <span class="math inline">\(z_1 = x_1 + i y_1, z_2 = x_2 + i y_2\)</span> we have<p></p>
 <p><span class="math display">\[\begin{align*}
 z_1 \cdot z_2 &amp; = \left(x_{1}+i y_{1}  \right) \cdot \left(x_{2}+ i y_{2} \right) \\
 &amp; = x_{1} \cdot x_{2} + x_{1} \cdot i y_{2} + x_{2} \cdot i y_{1} + y_{1} \cdot i^2 y_{2}   \\
 &amp; = \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2} \right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right)  
 \end{align*}\]</span></p>
-<p>The above motivates the following definition of multiplication.</p>
-<div id="multiplication-in-mathbbc" class="Definition" title="Multiplication in \mathbb{C}">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 5: </strong>Multiplication in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
+</div></details>
+</div>
+<p>Remark <a href="chap_5.html#remark-formal-multiplication">5</a> motivates the following definition of multiplication.</p>
+<div id="definition-multiplication-C" class="Definition" title="Multiplication in \mathbb{C}">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 6: </strong>Multiplication in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
 z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
 \]</span> for some <span class="math inline">\(x_1,x_2,y_1,y_2 \in \mathbb{R}\)</span>. We define the multiplication of <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as <span class="math display">\[
 z_1 \cdot z_2 = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) := \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2}\right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right) \,,
@@ -354,7 +365,7 @@ z_1 \cdot z_2 = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) :=
 </div>
 <p>Clearly, <span class="math inline">\(z_1 \cdot z_2\)</span> as defined above is an element of <span class="math inline">\(\mathbb{C}\)</span>. Therefore <span class="math inline">\(\cdot\)</span> defines a binary operation over <span class="math inline">\(\mathbb{C}\)</span>.</p>
 <div id="remark-complex-i" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 6</strong></summary><div>To check that we have given a good definition of product, we should have that <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 7</strong></summary><div>To check that we have given a good definition of product, we should have that <span class="math display">\[
 i^2 = - 1\,,
 \]</span> as expected. Indeed:<p></p>
 <p><span class="math display">\[\begin{align*}
@@ -364,17 +375,17 @@ i^{2} &amp; = (0+ 1 i) \cdot (0+ 1 i) \\
 </div></details>
 </div>
 <div id="Important*-1" class="Important">
-<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>In view of Remark <a href="chap_5.html#remark-complex-i">6</a>, we see that the formal calculations we have done above are compatible with the definition of multiplication of complex numbers. Therefore, it is not necessary to memorize the formula, but it suffices to carry out calculations as usual, and replace <span class="math inline">\(i^{2}\)</span> by <span class="math inline">\(-1\)</span>.<p></p>
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>In view of Remark <a href="chap_5.html#remark-complex-i">7</a>, we see that he formal calculations in Remark <a href="chap_5.html#remark-formal-multiplication">5</a> are compatible with the definition of multiplication of complex numbers. Therefore, it is not necessary to memorize the multiplication formula, but it suffices to carry out calculations as usual, and replace <span class="math inline">\(i^{2}\)</span> by <span class="math inline">\(-1\)</span>.<p></p>
 </div></details>
 </div>
-<div id="Example-7" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 7</strong></summary><div>Suppose we want to multiply the complex numbers <span class="math display">\[
+<div id="Example-8" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 8</strong></summary><div>Suppose we want to multiply the complex numbers <span class="math display">\[
 z =  -2+3 i \,, \quad w = 1- i \,.
 \]</span> Using the definition we compute <span class="math display">\[\begin{align*}
 z \cdot w &amp; = (-2+3 i) \cdot (1 -  i) \\
             &amp; = (-2-(-3))+(2+3) i \\
             &amp; = 1 + 5 i \, .
-\end{align*}\]</span> Alternatively, we can proceed without using the definition, and replacing <span class="math inline">\(i^2\)</span> with <span class="math inline">\(-1\)</span>: <span class="math display">\[\begin{align*}
+\end{align*}\]</span> Alternatively, we can proceed formally as in Remark <a href="chap_5.html#remark-formal-multiplication">5</a>. We just need to recall that <span class="math inline">\(i^2\)</span> has to be replaced with <span class="math inline">\(-1\)</span>: <span class="math display">\[\begin{align*}
 z \cdot w &amp; = (-2+3 i) \cdot (1 -  i) \\
             &amp; = - 2 + 2i + 3i - 3 i^2  \\
             &amp; = (-2  + 3 ) + (  2 + 3 ) i \\
@@ -385,19 +396,254 @@ z \cdot w &amp; = (-2+3 i) \cdot (1 -  i) \\
 <p>We now want to check that <span class="math display">\[
 (\mathbb{C}, + , \cdot)
 \]</span> is a field. All the field axioms are trivial to check, except for the existence of additive and multiplicative inverses.</p>
-<div id="additive-inverse-in-mathbbc" class="Proposition" title="Additive inverse in \mathbb{C}">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 8: </strong>Additive inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>The neutral element of addition in <span class="math inline">\(\mathbb{C}\)</span> is the number <span class="math display">\[
+<div id="proposition-C-additive-inverse" class="Proposition" title="Additive inverse in \mathbb{C}">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9: </strong>Additive inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>The neutral element of addition in <span class="math inline">\(\mathbb{C}\)</span> is the number <span class="math display">\[
 0 := 0 + 0 i \,.
-\]</span> For any <span class="math inline">\(z = x + i y \in \mathbb{C}\)</span>, the unique inverse is given by <span class="math display">\[
+\]</span> For any <span class="math inline">\(z = x + i y \in \mathbb{C}\)</span>, the unique additive inverse is given by <span class="math display">\[
 - z := -x - i y \,.
 \]</span><p></p>
 </div></details>
 </div>
 <p>The proof is immediate and is left as an exercise. The multiplication requires more care.</p>
-<div id="additive-inverse-in-mathbbc-1" class="Proposition" title="Additive inverse in \mathbb{C}">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9: </strong>Additive inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>g<p></p>
+<div id="remark-formal-inverse" class="Remark" title="Formal calculation for multiplicative inverse">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 10: </strong>Formal calculation for multiplicative inverse</summary><div>Let us first carry our some formal calculations. Let <span class="math display">\[
+z = x+iy \in \mathbb{C}\,, \quad z \neq 0 \,.
+\]</span> First, note that <span class="math display">\[
+z \cdot 1 = (x + iy) \cdot (1 + 0 i)  = x + iy = z \,,
+\]</span> and therefore <span class="math inline">\(1\)</span> is the neutral element of multiplication. Thus, the inverse of <span class="math inline">\(z\)</span> should be a complex number <span class="math inline">\(z^{-1} \in \mathbb{C}\)</span> such that <span class="math display">\[
+z \cdot z^{-1} = 1 \,.
+\]</span> We would like to define <span class="math display">\[
+z^{-1} = \frac{1}{x + iy} \,.
+\]</span> Such number does not belong to <span class="math inline">\(\mathbb{C}\)</span>, as it is not of the form <span class="math inline">\(a + ib\)</span> for some <span class="math inline">\(a,b \in \mathbb{R}\)</span>. However it is what the inverse should look like. Proceeding formally: <span class="math display">\[\begin{align*}
+\frac{1}{x+ i y} &amp; = \frac{1}{x+ iy} \cdot 1 \\
+                &amp; = \frac{1}{x+ i y} \cdot \frac{x- i y}{x - i y} \\
+                &amp; =\frac{x - i y}{x^{2}-(iy)^{2}} \\
+                &amp; =\frac{x- iy}{x^{2}+y^{2}} \\
+                &amp; = \frac{x}{x^{2}+y^{2}}+i \, \frac{-y}{x^{2}+y^{2}} \,.
+\end{align*}\]</span> The right hand side is an element of <span class="math inline">\(\mathbb{C}\)</span>, and looks like a good candidate for <span class="math inline">\(z^{-1}\)</span>.<p></p>
 </div></details>
 </div>
+<p>Motivated by the above remark, we define inverses in <span class="math inline">\(\mathbb{C}\)</span> in the following way.</p>
+<div id="proposition-C-multiplicative-inverse" class="Proposition" title="Multiplicative inverse in \mathbb{C}">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 11: </strong>Multiplicative inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>The neutral element of multiplication in <span class="math inline">\(\mathbb{C}\)</span> is the number <span class="math display">\[
+1 := 1 + 0 i \,.
+\]</span> For any <span class="math inline">\(z = x + i y \in \mathbb{C}\)</span>, the unique multiplicative inverse is given by <span class="math display">\[
+z^{-1} := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-2" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>It is immediate to check that <span class="math inline">\(1\)</span> is the neutral element of multiplication in <span class="math inline">\(\mathbb{C}\)</span>. For the remaining part of the statement, set <span class="math display">\[
+w := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
+\]</span> We need to check that <span class="math inline">\(z \cdot w = 1\)</span> <span class="math display">\[\begin{align*}
+z \cdot w &amp; = (x+i y) \cdot \left(\frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \right) \\
+&amp; = \left(\frac{x^{2}}{x^{2}+y^{2}} - \frac{y \cdot(-y)}{x^{2}+y^{2}}\right) + i \, \left(\frac{x \cdot(-y)}{x^{2}+y^{2}}+\frac{x y}{x^{2}+y^{2}}\right) \\
+&amp; =1 \,,
+\end{align*}\]</span> so indeed <span class="math inline">\(z^{-1}=w\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Important*-3" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>It is not necessary to memorize the formula for <span class="math inline">\(z^{-1}\)</span>. Indeed one can just remember the trick of multiplying by <span class="math display">\[
+1 = \frac{x - iy }{x - iy} \,,
+\]</span> and proceed formally, as done in Remark <a href="chap_5.html#remark-formal-inverse">10</a>.<p></p>
+</div></details>
+</div>
+<div id="Example-12" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 12</strong></summary><div>Let <span class="math inline">\(z = 3 + 2 i\)</span>. We want to compute <span class="math inline">\(z^{-1}\)</span>. By the formula in Propostion <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a> we immediately get <span class="math display">\[
+z^{-1} = \frac{3}{3^{2}+2^{2}} +  \, \frac{-2}{3^{2}+2^{2}} \, i =
+\frac{3}{13}-\frac{2}{13} \, i  \,.
+\]</span> Alternatively, we can proceed formally as in Remark <a href="chap_5.html#remark-formal-inverse">10</a> <span class="math display">\[\begin{align*}
+(3+2 i)^{-1} &amp; = \frac{1}{3+2 i} \\
+             &amp; = \frac{1}{3+2 i} \, \frac{3-2 i}{3-2 i} \\
+             &amp; = \frac{3-2 i}{3^2+2^2} \\
+             &amp; = \frac{3}{13}-\frac{2}{13} i  \,,
+\end{align*}\]</span> and obtain the same result.<p></p>
+</div></details>
+</div>
+<p>We can now prove that <span class="math inline">\(\mathbb{C}\)</span> is a field.</p>
+<div id="Theorem-13" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13</strong></summary><div><span class="math inline">\((\mathbb{C},+, \cdot)\)</span> is a field.<p></p>
+</div></details>
+</div>
+<div id="Proof*-4" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We need to check that all field axioms hold. For the addition we have<p></p>
+<ul>
+<li><p>(A1) To show that <span class="math inline">\(+\)</span> is commutative, note that <span class="math display">\[\begin{align*}
+(x+iy)+(a+ ib) &amp; = (x+a)+ i (y+b) \\
+             &amp; = (a + x)+ i (b+y) \\
+             &amp; = (a + i b ) + (x + i y) \,,
+\end{align*}\]</span> where we used Definition <a href="chap_5.html#definition-addition-C">3</a> in the first and last equality, and the commutative property of the real numbers (which holds since by definition <span class="math inline">\(\mathbb{R}\)</span> is a field) in the second equality. Associativity can be checked in the same way.</p></li>
+<li><p>(A2) The neutral element of addition is <span class="math inline">\(0\)</span>, as stated in Proposition <a href="chap_5.html#proposition-C-additive-inverse">9</a>.</p></li>
+<li><p>(A3) Existence of additive inverses is given by Proposition <a href="chap_5.html#proposition-C-additive-inverse">9</a>.</p></li>
+</ul>
+<p>For multiplication we have:</p>
+<ul>
+<li><p>(M1) Commutativity and associativity of product in <span class="math inline">\(\mathbb{C}\)</span> can be checked using Definition <a href="chap_5.html#definition-multiplication-C">6</a> and commutativity and associativity of sum and multiplication in <span class="math inline">\(\mathbb{R}\)</span>.</p></li>
+<li><p>(M2) The neutral element of multiplication is <span class="math inline">\(1\)</span>, as stated in Propostion <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a>.</p></li>
+<li><p>(M3) Existence of multiplicative inverses is guaranteed by Proposition <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a>.</p></li>
+</ul>
+<p>Finally one should check the associative property (AM). This is left as an exercise.</p>
+</div></details>
+</div>
+<section id="division-in-mathbbc" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="division-in-mathbbc"><span class="header-section-number">5.1.1</span> Division in <span class="math inline">\(\mathbb{C}\)</span></h3>
+<p>Suppose we want to divide two complex numbers <span class="math inline">\(w,z \in \mathbb{C}, z \neq 0\)</span>, with <span class="math display">\[
+z = x + i y \,, \quad w = a + ib \,.
+\]</span> We have two options:</p>
+<ol type="1">
+<li><p>Use the formula for the inverse from Proposition <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a> and compute <span class="math display">\[
+z^{-1} := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
+\]</span> Then we use the multiplication formula of Definition <a href="chap_5.html#definition-multiplication-C">6</a> to compute <span class="math display">\[\begin{align*}
+\frac{w}{z} &amp; = w \cdot z^{-1} \\
+         &amp; = (a + i b) \, \cdot \left( \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}}   \right) \\
+         &amp; = \frac{ (ax + by) + i (bx - ay) }{ x^2 + y^2 }
+\end{align*}\]</span></p></li>
+<li><p>Proceed formally as in Remark <a href="chap_5.html#remark-formal-inverse">10</a>, using the multiplication by <span class="math inline">\(1\)</span> trick. We would have <span class="math display">\[\begin{align*}
+\frac{w}{z} &amp; = \frac{ a + i b }{ x + i y } \\
+         &amp; = \frac{ a + i b }{ x + i y } \, \frac{ x - i y }{ x - i y } \\
+         &amp; = \frac{ (ax + by) + i (bx - ay) }{ x^2 + y^2 }
+\end{align*}\]</span></p></li>
+</ol>
+<div id="Example-14" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14</strong></summary><div>
+<p>Let <span class="math inline">\(w=1+i\)</span> and <span class="math inline">\(z=3-i\)</span>. We compute <span class="math inline">\(\frac{w}{z}\)</span> using the two options we have:</p>
+<ol type="1">
+<li><p>Using the formula for the inverse from Proposition <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a> we compute <span class="math display">\[\begin{align*}
+z^{-1} &amp; = \frac{x}{x^{2}+y^{2}} + i \, \frac{-y}{x^{2}+y^{2}} \\
+    &amp; = \frac{3}{3^2 + 1^2} - i \, \frac{-1}{3^2 + 1^2} \\
+    &amp; = \frac{3}{10} + \frac{1}{10} \, i
+\end{align*}\]</span> and therefore <span class="math display">\[\begin{align*}
+\frac{w}{z} &amp; = w \cdot z^{-1} \\
+         &amp; = (1 + i) \, \left(  \frac{3}{10} + \frac{1}{10} \, i \right) \\
+         &amp; = \left(\frac{3}{10}-\frac{1}{10}\right)+\left(\frac{1}{10}+\frac{3}{10}\right) i \\
+         &amp; = \frac{2}{10}+\frac{4}{10} i \\
+         &amp; = \frac{1}{5}+\frac{2}{5} i
+\end{align*}\]</span></p></li>
+<li><p>We proceed formally, using the multiplication by <span class="math inline">\(1\)</span> trick. We have <span class="math display">\[\begin{align*}
+\frac{w}{z} &amp; = \frac{1+i}{3-i}  \\
+         &amp; = \frac{1+i}{3-i} \frac{3+i}{3+i} \\
+         &amp; = \frac{3-1+(3+1) i}{3^2+1^2} \\
+         &amp; =\frac{2}{10}+\frac{4}{10} i \\
+         &amp; = \frac{1}{5}+\frac{2}{5} i
+\end{align*}\]</span></p></li>
+</ol>
+</div></details>
+</div>
+</section>
+<section id="mathbbc-is-not-ordered" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="mathbbc-is-not-ordered"><span class="header-section-number">5.1.2</span> <span class="math inline">\(\mathbb{C}\)</span> is not ordered</h3>
+<p>We have seen that <span class="math inline">\((\mathbb{C},+,\cdot)\)</span> is a field. One might wonder whether <span class="math inline">\(\mathbb{C}\)</span> is also an ordered field. It turns out that this is not the case.</p>
+<div id="theorem-C-order" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15</strong></summary><div>The field <span class="math inline">\((\mathbb{C},+,\cdot)\)</span> is not ordered.<p></p>
+</div></details>
+</div>
+<div id="Proof*-5" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose that <span class="math inline">\(\mathbb{C}\)</span> is an ordered field, that is, there exists an order relation <span class="math inline">\(\leq\)</span> on <span class="math inline">\(\mathbb{C}\)</span> compatible with the operations <span class="math inline">\(+\)</span> and <span class="math inline">\(\cdot\)</span>. By axiom (MO) it follows that for all elements <span class="math inline">\(z \in \mathbb{C}, z \neq 0\)</span>, we have that <span class="math inline">\(z^{2}&gt;0\)</span>. But since <span class="math inline">\(i^{2}=-1&lt;0\)</span>, we get a contradiction.<p></p>
+</div></details>
+</div>
+<p>Hence, it is not possible to compare two complex numbers.</p>
+</section>
+<section id="completeness-of-mathbbc" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="completeness-of-mathbbc"><span class="header-section-number">5.1.3</span> Completeness of <span class="math inline">\(\mathbb{C}\)</span></h3>
+<p>One might also wonder whether <span class="math inline">\(\mathbb{C}\)</span> is complete. Our definition of completeness uses the notion of supremum, which only makes sense if the field is ordered. This is not the case for <span class="math inline">\(\mathbb{C}\)</span> as we have seen in Theorem <a href="chap_5.html#theorem-C-order">15</a>.</p>
+<p>Still, it is possible to give a different definition of completeness using the notion of Cauchy sequence. In ordered fields, this new definition of completeness is equivalent to the definition which uses the supremum.</p>
+<p>The new definition of completeness with Cauchy sequences also makes sense in non-ordered fields. We will see that <span class="math inline">\(\mathbb{C}\)</span> is a complete field, according to this new definition.</p>
+</section>
+</section>
+<section id="complex-conjugates" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="complex-conjugates"><span class="header-section-number">5.2</span> Complex conjugates</h2>
+<p>When computing inverses, we used the trick to multiply by <span class="math inline">\(1\)</span>: <span class="math display">\[
+z^{-1} = \frac{1}{z} \cdot 1 = \frac{1}{x + i y}  \cdot \frac{x-iy}{x-iy} \,.
+\]</span> The complex number <span class="math inline">\(x-iy\)</span> is obtained by changing the sign to the imaginary part of <span class="math inline">\(z = x+iy\)</span>. We give a name to this operation.</p>
+<div id="complex-conjugate" class="Definition" title="Complex conjugate">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Complex conjugate</summary><div>Let <span class="math inline">\(z=x+iy\)</span>. We call the <strong>complex conjugate</strong> of <span class="math inline">\(z\)</span>, denoted by <span class="math inline">\(\bar{z}\)</span>, the complex number<p></p>
+<p><span class="math display">\[
+\bar{z}=x- i y \, .
+\]</span></p>
+</div></details>
+</div>
+<div id="Example-17" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 17</strong></summary><div>We have the following conjugates: <span class="math display">\[\begin{align*}
+&amp;\overline{3+4 i}  = 3 - 4 i \, , &amp; \quad &amp; \overline{3-4 i} = 3+4 i\,, \\
+&amp; \overline{-3+4 i}  = -3 - 4 i \,, &amp; \quad &amp; \overline{-3-4 i}=-3+4 i \,, \\ &amp; \overline{3}  = 3 \, , &amp; \quad &amp; \overline{4 i}=-4 i \, .
+\end{align*}\]</span><p></p>
+</div></details>
+</div>
+<p>Complex conjugates have the following properties:</p>
+<div id="Theorem-18" class="Theorem">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 18</strong></summary><div>
+<p>For all <span class="math inline">\(z_1, z_2 \in \mathbb{C}\)</span> it holds:</p>
+<ul>
+<li><p><span class="math inline">\(\overline{z_1 + z_2 }=\overline{z_1}+\overline{z_2}\)</span></p></li>
+<li><p><span class="math inline">\(\overline{z_1 \cdot z_2}=\overline{z_1} \cdot \overline{z_2}\)</span></p></li>
+</ul>
+</div></details>
+</div>
+<div id="Proof*-6" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(z_{1}, z_{2} \in \mathbb{C}\)</span>. Then <span class="math display">\[
+z_{1}=x_{1}+i y_{1}  \,, \quad  z_{2} = x_{2} + i y_{2}  \,,
+\]</span> for some <span class="math inline">\(x_{1}, y_{1}, x_{2}, y_{2} \in \mathbb{R}\)</span>.<p></p>
+<ul>
+<li><p>Using the definition of addition in <span class="math inline">\(\mathbb{C}\)</span> and of conjugate, <span class="math display">\[\begin{align*}
+\overline{z_{1}+z_{2}} &amp; =\overline{\left(x_{1}+i y_{1} \right)+\left(x_{2}+ i y_{2} \right)} \\
+&amp; =\overline{\left(x_{1}+x_{2}\right)+ i \left(y_{1}+y_{2}\right)} \\
+&amp; =\left(x_{1}+x_{2}\right)- i \left(y_{1}+y_{2}\right) \\
+&amp; =\left(x_{1}- i y_{1} \right) +  \left(x_{2}-i y_{2} \right) \\
+&amp; =\overline{x_{1}+ i y_{1} } + \overline{x_{2}+i y_{2} } \\
+&amp; =\overline{z_{1}}+\overline{z_{2}} \,.
+\end{align*}\]</span></p></li>
+<li><p>Using the definition of multiplication in <span class="math inline">\(\mathbb{C}\)</span> and of conjugate,</p></li>
+</ul>
+<p><span class="math display">\[\begin{align*}
+\overline{z_{1} \cdot z_{2}} &amp; = \overline{\left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right)} \\
+&amp; = \overline{\left(x_{1} x_{2}-y_{1} y_{2}\right)+ i \left(x_{1} y_{2}+x_{2} y_{1}\right)} \\
+&amp; = \left(x_{1} x_{2}-y_{1} y_{2}\right)- i \left(x_{1} y_{2}+x_{2} y_{1}\right)  \\
+&amp; =\left(x_{1}-i y_{1} \right) \cdot\left(x_{2}- i y_{2} \right) \\
+&amp; =\overline{z_{1}} \cdot \overline{z_{2}}
+\end{align*}\]</span></p>
+</div></details>
+</div>
+<div id="Example-19" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 19</strong></summary><div>
+<p>Let <span class="math inline">\(z_{1}=3-4 i\)</span> and <span class="math inline">\(z_{2}=-2+5 i\)</span>. Then</p>
+<ul>
+<li><p>Let us check that <span class="math display">\[
+\overline{z_{1}+z_{2}}=\overline{z_{1}}+\overline{z_{2}}
+\]</span> Indeed, we have <span class="math display">\[
+z_1 + z_2 = 1 + i  \quad \implies \quad \overline{z_1 + z_2} = 1 - i \, .
+\]</span> On the other hand <span class="math display">\[
+\overline{z_{1}} =  3 + 4i \,, \quad
+\overline{z_{2}} = -2 -5i \quad \implies \quad
+\overline{z_{1}} + \overline{z_{2}}= 1-i \,.
+\]</span></p></li>
+<li><p>Let us check that <span class="math display">\[
+\overline{z_{1} \cdot z_{2}}=\overline{z_{1}} \cdot \overline{z_{2}}
+\]</span> Indeed, <span class="math display">\[\begin{align*}
+z_{1} \cdot z_{2} &amp; = (3+4i) \cdot (-2 + 5i) \\
+                &amp; = (- 6 + 20)+ (8 + 15 )i \\
+                &amp; = 14 + 23 i
+\end{align*}\]</span> so that <span class="math display">\[
+\overline{z_{1} \cdot z_{2}} = 14 - 23 i
+\]</span> On the other hand: <span class="math display">\[\begin{align*}
+\overline{z_{1}} \cdot \overline{z_{2}} &amp; =(3+4 i) \cdot(-2-5 i) \\
+                                      &amp; = (-6+20)+(-15-8) i \\
+                                      &amp; = 14 - 23 i
+\end{align*}\]</span></p></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="the-complex-plane" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="the-complex-plane"><span class="header-section-number">5.3</span> The complex plane</h2>
+<p>We can depict real numbers as a point somewhere on the (one-dimensional) real line. We can then, for example, say that the distance between to real numbers <span class="math inline">\(x, y \in \mathbb{R}\)</span> on this real line is given by <span class="math inline">\(|x-y|\)</span>. We would like to do something similar for the complex numbers, but it is difficult to draw imaginary distances.</p>
+<p>However, we have seen that any complex number <span class="math inline">\(z \in \mathbb{C}\)</span> can be written as <span class="math inline">\(z=a+b i\)</span> for some <span class="math inline">\(a, b \in \mathbb{R}\)</span>. Hence, we can depict any number <span class="math inline">\(z=a+b i\)</span> in the two-dimensional plane at the point with (Cartesian) coordinates <span class="math inline">\((a, b)\)</span>. This two-dimensional plane in which we can depict all complex numbers is called the complex plane with the origin <span class="math inline">\((0,0)\)</span> depicting the complex number <span class="math inline">\(0+0 i=0\)</span>.</p>
+<p>We can now also speak about the distance between two complex numbers in this complex plane.</p>
+<p>Let us start with the distance between a complex number <span class="math inline">\(z=a+b i\)</span> and 0 . By the theorem of Pythagoras this distance is given by <span class="math inline">\(\sqrt{a^{2}+b^{2}}\)</span>. These distances play an important role in mathematics, so we give it a name:</p>
+<p>Definition 1.10.15. The modulus of a complex number <span class="math inline">\(z=a+b i\)</span> is given by</p>
+<p><span class="math display">\[
+|z|=\sqrt{a^{2}+b^{2}} .
+\]</span></p>
+<p>Note that the distance between two point in the complex plane is always a nonnegative real number. It is important to only square the imaginary part of <span class="math inline">\(z\)</span>, i.e., <span class="math inline">\(\operatorname{Im}(z)=b\)</span>, and not square <span class="math inline">\(b i\)</span>. It is a common mistake to compute <span class="math inline">\(\sqrt{a^{2}+(b i)^{2}}=\sqrt{a^{2}-b^{2}}\)</span>, but it is easy to see that this is wrong since one can end up with the square root of negative numbers.</p>
 
 
 </section>

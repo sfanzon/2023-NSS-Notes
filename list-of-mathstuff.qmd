@@ -395,21 +395,51 @@
 
  [**Definition 5.2**](#Definition-5.2)\Pageref{Definition-5.2}
 
- [**Definition 5.3**](#addition-in-mathbbc): Addition in $\mathbb{C}$\Pageref{addition-in-mathbbc}
+ [**Definition 5.3**](#definition-addition-C): Addition in $\mathbb{C}$\Pageref{definition-addition-C}
 
  [**Notation 5.4**](#Notation-5.4)\Pageref{Notation-5.4}
 
- [**Definition 5.5**](#multiplication-in-mathbbc): Multiplication in $\mathbb{C}$\Pageref{multiplication-in-mathbbc}
+ [**Remark 5.5**](#remark-formal-multiplication): Formal calculation for multiplication in $\mathbb{C}$\Pageref{remark-formal-multiplication}
 
- [**Remark 5.6**](#remark-complex-i)\Pageref{remark-complex-i}
+ [**Definition 5.6**](#definition-multiplication-C): Multiplication in $\mathbb{C}$\Pageref{definition-multiplication-C}
+
+ [**Remark 5.7**](#remark-complex-i)\Pageref{remark-complex-i}
 
  [**Important**](#Important*-5.1)\Pageref{Important*-5.1}
 
- [**Example 5.7**](#Example-5.7)\Pageref{Example-5.7}
+ [**Example 5.8**](#Example-5.8)\Pageref{Example-5.8}
 
- [**Proposition 5.8**](#additive-inverse-in-mathbbc): Additive inverse in $\mathbb{C}$\Pageref{additive-inverse-in-mathbbc}
+ [**Proposition 5.9**](#proposition-C-additive-inverse): Additive inverse in $\mathbb{C}$\Pageref{proposition-C-additive-inverse}
 
- [**Proposition 5.9**](#additive-inverse-in-mathbbc-1): Additive inverse in $\mathbb{C}$\Pageref{additive-inverse-in-mathbbc-1}
+ [**Remark 5.10**](#remark-formal-inverse): Formal calculation for multiplicative inverse\Pageref{remark-formal-inverse}
+
+ [**Proposition 5.11**](#proposition-C-multiplicative-inverse): Multiplicative inverse in $\mathbb{C}$\Pageref{proposition-C-multiplicative-inverse}
+
+ [**Proof**](#Proof*-5.2)\Pageref{Proof*-5.2}
+
+ [**Important**](#Important*-5.3)\Pageref{Important*-5.3}
+
+ [**Example 5.12**](#Example-5.12)\Pageref{Example-5.12}
+
+ [**Theorem 5.13**](#Theorem-5.13)\Pageref{Theorem-5.13}
+
+ [**Proof**](#Proof*-5.4)\Pageref{Proof*-5.4}
+
+ [**Example 5.14**](#Example-5.14)\Pageref{Example-5.14}
+
+ [**Theorem 5.15**](#theorem-C-order)\Pageref{theorem-C-order}
+
+ [**Proof**](#Proof*-5.5)\Pageref{Proof*-5.5}
+
+ [**Definition 5.16**](#complex-conjugate): Complex conjugate\Pageref{complex-conjugate}
+
+ [**Example 5.17**](#Example-5.17)\Pageref{Example-5.17}
+
+ [**Theorem 5.18**](#Theorem-5.18)\Pageref{Theorem-5.18}
+
+ [**Proof**](#Proof*-5.6)\Pageref{Proof*-5.6}
+
+ [**Example 5.19**](#Example-5.19)\Pageref{Example-5.19}
 
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 

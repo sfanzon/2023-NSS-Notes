@@ -37,7 +37,7 @@ Note that $\sqrt{-x}$ is properly defined in $\mathbb{R}$, because
 $-x>0$ if $x<0$. 
 
 
-## Definition of $\C$
+## The field $\C$
 
 
 We would like to be able to do calculations with the newly introduced complex numbers, and investigate their properties. We can introduce them
@@ -95,7 +95,7 @@ Then we need to prove that these operations satisfy all the field axioms.
 
 
 ::: Definition
-### Addition in $\C$
+### Addition in $\C$   {#definition-addition-C}
 
 Let $z_1,z_2 \in \C$, so that 
 $$
@@ -138,12 +138,20 @@ $$
 :::
 
 
-We now want to define multiplication between complex numbers. This has to keep into account
+We now want to define multiplication between complex numbers. 
+
+
+::: Remark 
+### Formal calculation for multiplication in $\C$  {#remark-formal-multiplication}
+
+How to define multiplication in $\C$? Whatever the definition may be, 
+at least it has to give that
 that 
 $$
 i^{2}=i \cdot i=-1 \,.
 $$
-Let us do some formal calculations: For $z_1 = x_1 + i y_1, z_2 = x_2 + i y_2$ we have
+Keeping the above in mind, let us do some formal calculations: 
+For $z_1 = x_1 + i y_1, z_2 = x_2 + i y_2$ we have
 
 \begin{align*}
 z_1 \cdot z_2 & = \left(x_{1}+i y_{1}  \right) \cdot \left(x_{2}+ i y_{2} \right) \\
@@ -151,11 +159,13 @@ z_1 \cdot z_2 & = \left(x_{1}+i y_{1}  \right) \cdot \left(x_{2}+ i y_{2} \right
 & = \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2} \right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right)  
 \end{align*}
 
-The above motivates the following definition of multiplication.
+:::
+
+Remark \ref{remark-formal-multiplication} motivates the following definition of multiplication.
 
 
 ::: Definition
-### Multiplication in $\C$ 
+### Multiplication in $\C$   {#definition-multiplication-C}
 
 Let $z_1,z_2 \in \C$, so that 
 $$
@@ -194,9 +204,8 @@ i^{2} & = (0+ 1 i) \cdot (0+ 1 i) \\
 
 ::: Important
 
-In view of Remark \ref{remark-complex-i}, we see that 
-the formal calculations we have done above are compatible with 
-the definition of multiplication of complex numbers. Therefore, it is not necessary to memorize the formula, but it suffices to carry out calculations as usual, and replace $i^{2}$ by $-1$.
+In view of Remark \ref{remark-complex-i}, we see that he formal calculations in Remark \ref{remark-formal-multiplication} are compatible with 
+the definition of multiplication of complex numbers. Therefore, it is not necessary to memorize the multiplication formula, but it suffices to carry out calculations as usual, and replace $i^{2}$ by $-1$.
 
 :::
 
@@ -215,8 +224,9 @@ z \cdot w & = (-2+3 i) \cdot (1 -  i) \\
             & = (-2-(-3))+(2+3) i \\
             & = 1 + 5 i \, .
 \end{align*}
-Alternatively, we can proceed without using the definition,
-and replacing $i^2$ with $-1$:
+Alternatively, we can proceed formally as in Remark 
+\ref{remark-formal-multiplication}. We just need to recall that
+$i^2$ has to be replaced with $-1$:
 \begin{align*}
 z \cdot w & = (-2+3 i) \cdot (1 -  i) \\ 
             & = - 2 + 2i + 3i - 3 i^2  \\
@@ -237,13 +247,13 @@ the existence of additive and multiplicative inverses.
 
 
 ::: Proposition
-### Additive inverse in $\C$
+### Additive inverse in $\C$  {#proposition-C-additive-inverse}
 
 The neutral element of addition in $\C$ is the number
 $$
 0 := 0 + 0 i \,.
 $$
-For any $z = x + i y \in \C$, the unique inverse is given by
+For any $z = x + i y \in \C$, the unique additive inverse is given by
 $$
 - z := -x - i y \,.
 $$
@@ -253,12 +263,394 @@ $$
 
 
 The proof is immediate and is left as an exercise. The multiplication
-requires more care.
+requires more care. 
 
 
-::: Proposition
-### Additive inverse in $\C$
+::: Remark
+### Formal calculation for multiplicative inverse  {#remark-formal-inverse}
 
-g
+Let us first carry our some formal 
+calculations. Let 
+$$
+z = x+iy \in \C \,, \quad z \neq 0 \,.
+$$
+First, note that 
+$$
+z \cdot 1 = (x + iy) \cdot (1 + 0 i)  = x + iy = z \,,
+$$
+and therefore $1$ is the neutral element of multiplication.
+Thus, the inverse of $z$ should be a complex number $z^{-1} \in \C$ 
+such that
+$$
+z \cdot z^{-1} = 1 \,.
+$$
+We would like to define
+$$
+z^{-1} = \frac{1}{x + iy} \,.
+$$
+Such number does not belong to $\C$, as it is not of
+the form $a + ib$ for some $a,b \in \R$. However it is what 
+the inverse should look like. Proceeding formally:
+\begin{align*}
+\frac{1}{x+ i y} & = \frac{1}{x+ iy} \cdot 1 \\
+                & = \frac{1}{x+ i y} \cdot \frac{x- i y}{x - i y} \\
+                & =\frac{x - i y}{x^{2}-(iy)^{2}} \\
+                & =\frac{x- iy}{x^{2}+y^{2}} \\
+                & = \frac{x}{x^{2}+y^{2}}+i \, \frac{-y}{x^{2}+y^{2}} \,.
+\end{align*}
+The right hand side is an element of $\C$, and looks like a good candidate for $z^{-1}$.
 
 :::
+
+Motivated by the above remark, we define inverses in $\C$ in the following way.
+
+::: Proposition
+### Multiplicative inverse in $\C$  {#proposition-C-multiplicative-inverse}
+
+The neutral element of multiplication in $\C$ is the number
+$$
+1 := 1 + 0 i \,.
+$$
+For any $z = x + i y \in \C$, the unique multiplicative inverse is given by 
+$$
+z^{-1} := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
+$$
+
+:::
+
+
+::: Proof
+It is immediate to check that $1$ is the neutral element of 
+multiplication in $\C$. For the remaining part of the statement, set
+$$
+w := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
+$$
+We need to check that $z \cdot w = 1$
+\begin{align*}
+z \cdot w & = (x+i y) \cdot \left(\frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \right) \\
+& = \left(\frac{x^{2}}{x^{2}+y^{2}} - \frac{y \cdot(-y)}{x^{2}+y^{2}}\right) + i \, \left(\frac{x \cdot(-y)}{x^{2}+y^{2}}+\frac{x y}{x^{2}+y^{2}}\right) \\
+& =1 \,,
+\end{align*}
+so indeed $z^{-1}=w$.
+
+:::
+
+
+::: Important
+
+It is not necessary to memorize the formula for $z^{-1}$. Indeed one can just remember the trick of multiplying by 
+$$
+1 = \frac{x - iy }{x - iy} \,,
+$$
+and proceed formally, as done in Remark \ref{remark-formal-inverse}.
+
+:::
+
+::: Example
+Let $z = 3 + 2 i$. We want to compute $z^{-1}$. By the formula in Propostion \ref{proposition-C-multiplicative-inverse} we immediately get
+$$
+z^{-1} = \frac{3}{3^{2}+2^{2}} +  \, \frac{-2}{3^{2}+2^{2}} \, i = 
+\frac{3}{13}-\frac{2}{13} \, i  \,.
+$$
+Alternatively, we can proceed formally as in Remark \ref{remark-formal-inverse}
+\begin{align*}
+(3+2 i)^{-1} & = \frac{1}{3+2 i} \\ 
+             & = \frac{1}{3+2 i} \, \frac{3-2 i}{3-2 i} \\
+             & = \frac{3-2 i}{3^2+2^2} \\
+             & = \frac{3}{13}-\frac{2}{13} i  \,,
+\end{align*}
+and obtain the same result.
+:::
+
+
+
+We can now prove that $\C$ is a field.
+
+::: Theorem 
+
+$(\C,+, \cdot)$ is a field.
+
+:::
+
+
+::: Proof
+
+We need to check that all field axioms hold. For the addition we have
+
+- (A1) To show that $+$ is commutative, note that
+\begin{align*}
+(x+iy)+(a+ ib) & = (x+a)+ i (y+b) \\
+               & = (a + x)+ i (b+y) \\
+               & = (a + i b ) + (x + i y) \,,
+\end{align*}
+where we used Definition \ref{definition-addition-C} in the first and last equality, and the commutative property of the real numbers (which holds since by definition $\R$ is a field) in the second equality. Associativity can be checked in the same way.
+
+- (A2) The neutral element of addition is $0$, as stated in Proposition \ref{proposition-C-additive-inverse}.
+
+- (A3) Existence of additive inverses is given by Proposition \ref{proposition-C-additive-inverse}.
+
+
+For multiplication we have:
+
+- (M1) Commutativity and associativity of product in $\C$ can be checked
+using Definition \ref{definition-multiplication-C} and commutativity and associativity of sum and multiplication in $\R$.
+
+- (M2) The neutral element of multiplication is $1$, as stated in 
+Propostion \ref{proposition-C-multiplicative-inverse}.
+
+- (M3) Existence of multiplicative inverses is guaranteed by Proposition \ref{proposition-C-multiplicative-inverse}.
+
+Finally one should check the associative property (AM). This is left as
+an exercise.
+
+:::
+
+
+
+
+
+### Division in $\C$
+
+
+Suppose we want to divide two complex numbers $w,z \in \mathbb{C}, z \neq 0$, with
+$$
+z = x + i y \,, \quad w = a + ib \,.
+$$
+We have two options:
+
+1. Use the formula for the inverse from Proposition \ref{proposition-C-multiplicative-inverse} and compute
+$$
+z^{-1} := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
+$$
+Then we use the multiplication formula of Definition \ref{definition-multiplication-C} to compute
+\begin{align*}
+\frac{w}{z} & = w \cdot z^{-1} \\
+            & = (a + i b) \, \cdot \left( \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}}   \right) \\
+            & = \frac{ (ax + by) + i (bx - ay) }{ x^2 + y^2 }
+\end{align*}
+
+2. Proceed formally as in Remark \ref{remark-formal-inverse}, using the 
+multiplication by $1$ trick. We would have
+\begin{align*}
+\frac{w}{z} & = \frac{ a + i b }{ x + i y } \\
+            & = \frac{ a + i b }{ x + i y } \, \frac{ x - i y }{ x - i y } \\
+            & = \frac{ (ax + by) + i (bx - ay) }{ x^2 + y^2 }
+\end{align*}
+
+
+
+::: Example
+
+Let $w=1+i$ and $z=3-i$. We compute $\frac{w}{z}$ using the two options we have:
+
+1. Using the formula for the inverse from Proposition \ref{proposition-C-multiplicative-inverse} we compute
+\begin{align*}
+z^{-1} & = \frac{x}{x^{2}+y^{2}} + i \, \frac{-y}{x^{2}+y^{2}} \\
+       & = \frac{3}{3^2 + 1^2} - i \, \frac{-1}{3^2 + 1^2} \\
+       & = \frac{3}{10} + \frac{1}{10} \, i
+\end{align*}
+and therefore
+\begin{align*}
+\frac{w}{z} & = w \cdot z^{-1} \\
+            & = (1 + i) \, \left(  \frac{3}{10} + \frac{1}{10} \, i \right) \\
+            & = \left(\frac{3}{10}-\frac{1}{10}\right)+\left(\frac{1}{10}+\frac{3}{10}\right) i \\
+            & = \frac{2}{10}+\frac{4}{10} i \\
+            & = \frac{1}{5}+\frac{2}{5} i
+\end{align*}
+
+2. We proceed formally, using the 
+multiplication by $1$ trick. We have
+\begin{align*}
+\frac{w}{z} & = \frac{1+i}{3-i}  \\
+            & = \frac{1+i}{3-i} \frac{3+i}{3+i} \\
+            & = \frac{3-1+(3+1) i}{3^2+1^2} \\
+            & =\frac{2}{10}+\frac{4}{10} i \\
+            & = \frac{1}{5}+\frac{2}{5} i
+\end{align*}
+
+
+:::
+
+
+
+
+### $\C$ is not ordered
+
+We have seen that $(\C,+,\cdot)$ is a field. One might wonder whether $\C$ is also an ordered field. It turns out that this is not the case.
+
+::: {.Theorem #theorem-C-order}
+
+The field $(\C,+,\cdot)$ is not ordered.
+
+:::
+
+
+::: Proof
+Suppose that $\C$ is an ordered field, that is, there 
+exists an order relation $\leq$ on $\C$ compatible with 
+the operations $+$ and $\cdot$. By axiom (MO) it follows that for all elements $z \in \C, z \neq 0$, we have that $z^{2}>0$. But since $i^{2}=-1<0$, we get a contradiction.
+
+:::
+
+Hence, it is not possible to compare two complex numbers.
+
+
+
+### Completeness of $\C$
+
+One might also wonder whether $\C$ is complete. Our definition of completeness uses the notion of supremum, which only makes sense if the field is ordered. This is not the case for $\C$ as we have seen in Theorem \ref{theorem-C-order}.
+
+Still, it is possible to give a different definition of completeness using the notion of Cauchy sequence. In ordered fields, this new definition of completeness is equivalent to the definition which uses the supremum. 
+
+The new definition of completeness with Cauchy sequences also makes sense in non-ordered fields. We will see that $\C$ is a complete field, according to this new definition.
+
+
+
+
+
+## Complex conjugates
+
+
+When computing inverses, we used the trick to multiply by $1$:
+$$
+z^{-1} = \frac{1}{z} \cdot 1 = \frac{1}{x + i y}  \cdot \frac{x-iy}{x-iy} \,.
+$$
+The complex number $x-iy$ is obtained by changing the sign to the
+imaginary part of $z = x+iy$. We give a name to this operation.
+
+::: Definition 
+### Complex conjugate
+
+Let $z=x+iy$. We call the **complex conjugate** of $z$, denoted by $\bar{z}$, the complex number
+
+$$
+\bar{z}=x- i y \, .
+$$
+
+
+:::
+
+
+
+::: Example 
+
+We have the following conjugates:
+\begin{align*}
+&\overline{3+4 i}  = 3 - 4 i \, , & \quad & \overline{3-4 i} = 3+4 i\,, \\
+& \overline{-3+4 i}  = -3 - 4 i \,, & \quad & \overline{-3-4 i}=-3+4 i \,, \\ & \overline{3}  = 3 \, , & \quad & \overline{4 i}=-4 i \, .
+\end{align*}
+
+:::
+
+
+
+Complex conjugates have the following properties:
+
+
+::: Theorem 
+
+For all $z_1, z_2 \in \mathbb{C}$ it holds:
+
+- $\overline{z_1 +  z_2 }=\overline{z_1}+\overline{z_2}$
+
+- $\overline{z_1 \cdot z_2}=\overline{z_1} \cdot \overline{z_2}$ 
+
+:::
+
+
+::: Proof
+Let $z_{1}, z_{2} \in \C$. Then 
+$$
+z_{1}=x_{1}+i y_{1}  \,, \quad  z_{2} = x_{2} + i y_{2}  \,, 
+$$
+for some $x_{1}, y_{1}, x_{2}, y_{2} \in \R$.
+
+- Using the definition of addition in $\C$ and of conjugate,
+\begin{align*}
+\overline{z_{1}+z_{2}} & =\overline{\left(x_{1}+i y_{1} \right)+\left(x_{2}+ i y_{2} \right)} \\ 
+& =\overline{\left(x_{1}+x_{2}\right)+ i \left(y_{1}+y_{2}\right)} \\
+& =\left(x_{1}+x_{2}\right)- i \left(y_{1}+y_{2}\right) \\
+& =\left(x_{1}- i y_{1} \right) +  \left(x_{2}-i y_{2} \right) \\
+& =\overline{x_{1}+ i y_{1} } + \overline{x_{2}+i y_{2} } \\
+& =\overline{z_{1}}+\overline{z_{2}} \,.
+\end{align*}
+
+- Using the definition of multiplication in $\C$ and of conjugate,
+
+\begin{align*}
+\overline{z_{1} \cdot z_{2}} & = \overline{\left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right)} \\
+& = \overline{\left(x_{1} x_{2}-y_{1} y_{2}\right)+ i \left(x_{1} y_{2}+x_{2} y_{1}\right)} \\
+& = \left(x_{1} x_{2}-y_{1} y_{2}\right)- i \left(x_{1} y_{2}+x_{2} y_{1}\right)  \\
+& =\left(x_{1}-i y_{1} \right) \cdot\left(x_{2}- i y_{2} \right) \\
+& =\overline{z_{1}} \cdot \overline{z_{2}}
+\end{align*}
+
+:::
+
+
+
+
+::: Example
+Let $z_{1}=3-4 i$ and $z_{2}=-2+5 i$. Then
+
+- Let us check that
+$$
+\overline{z_{1}+z_{2}}=\overline{z_{1}}+\overline{z_{2}}
+$$
+Indeed, we have
+$$
+z_1 + z_2 = 1 + i  \quad \implies \quad \overline{z_1 + z_2} = 1 - i \, .
+$$
+On the other hand
+$$
+\overline{z_{1}} =  3 + 4i \,, \quad 
+\overline{z_{2}} = -2 -5i \quad \implies \quad
+\overline{z_{1}} + \overline{z_{2}}= 1-i \,.
+$$
+
+- Let us check that
+$$
+\overline{z_{1} \cdot z_{2}}=\overline{z_{1}} \cdot \overline{z_{2}}
+$$
+Indeed, 
+\begin{align*}
+z_{1} \cdot z_{2} & = (3+4i) \cdot (-2 + 5i) \\
+                  & = (- 6 + 20)+ (8 + 15 )i \\
+                  & = 14 + 23 i
+\end{align*}
+so that
+$$
+\overline{z_{1} \cdot z_{2}} = 14 - 23 i
+$$
+On the other hand:
+\begin{align*}
+\overline{z_{1}} \cdot \overline{z_{2}} & =(3+4 i) \cdot(-2-5 i) \\
+                                        & = (-6+20)+(-15-8) i \\
+                                        & = 14 - 23 i
+\end{align*}
+
+
+:::
+
+
+
+
+## The complex plane
+
+We can depict real numbers as a point somewhere on the (one-dimensional) real line. We can then, for example, say that the distance between to real numbers $x, y \in \mathbb{R}$ on this real line is given by $|x-y|$. We would like to do something similar for the complex numbers, but it is difficult to draw imaginary distances.
+
+However, we have seen that any complex number $z \in \mathbb{C}$ can be written as $z=a+b i$ for some $a, b \in \mathbb{R}$. Hence, we can depict any number $z=a+b i$ in the two-dimensional plane at the point with (Cartesian) coordinates $(a, b)$. This two-dimensional plane in which we can depict all complex numbers is called the complex plane with the origin $(0,0)$ depicting the complex number $0+0 i=0$.
+
+\section{Distances and modulus}
+
+We can now also speak about the distance between two complex numbers in this complex plane.
+
+Let us start with the distance between a complex number $z=a+b i$ and 0 . By the theorem of Pythagoras this distance is given by $\sqrt{a^{2}+b^{2}}$. These distances play an important role in mathematics, so we give it a name:
+
+Definition 1.10.15. The modulus of a complex number $z=a+b i$ is given by
+
+$$
+|z|=\sqrt{a^{2}+b^{2}} .
+$$
+
+Note that the distance between two point in the complex plane is always a nonnegative real number. It is important to only square the imaginary part of $z$, i.e., $\operatorname{Im}(z)=b$, and not square $b i$. It is a common mistake to compute $\sqrt{a^{2}+(b i)^{2}}=\sqrt{a^{2}-b^{2}}$, but it is easy to see that this is wrong since one can end up with the square root of negative numbers.
