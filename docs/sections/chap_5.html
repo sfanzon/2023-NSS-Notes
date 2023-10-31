@@ -66,47 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Lemma {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
 }
 .Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -118,7 +82,27 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
 .Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -126,9 +110,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 </style>
 
@@ -249,7 +249,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#completeness-of-mathbbc" id="toc-completeness-of-mathbbc" class="nav-link" data-scroll-target="#completeness-of-mathbbc"><span class="header-section-number">5.1.3</span> Completeness of <span class="math inline">\(\mathbb{C}\)</span></a></li>
   </ul></li>
   <li><a href="#complex-conjugates" id="toc-complex-conjugates" class="nav-link" data-scroll-target="#complex-conjugates"><span class="header-section-number">5.2</span> Complex conjugates</a></li>
-  <li><a href="#the-complex-plane" id="toc-the-complex-plane" class="nav-link" data-scroll-target="#the-complex-plane"><span class="header-section-number">5.3</span> The complex plane</a></li>
+  <li><a href="#the-complex-plane" id="toc-the-complex-plane" class="nav-link" data-scroll-target="#the-complex-plane"><span class="header-section-number">5.3</span> The complex plane</a>
+  <ul class="collapse">
+  <li><a href="#distance-on-mathbbc" id="toc-distance-on-mathbbc" class="nav-link" data-scroll-target="#distance-on-mathbbc"><span class="header-section-number">5.3.1</span> Distance on <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  <li><a href="#properties-of-modulus" id="toc-properties-of-modulus" class="nav-link" data-scroll-target="#properties-of-modulus"><span class="header-section-number">5.3.2</span> Properties of modulus</a></li>
+  </ul></li>
+  <li><a href="#polar-coordinates" id="toc-polar-coordinates" class="nav-link" data-scroll-target="#polar-coordinates"><span class="header-section-number">5.4</span> Polar coordinates</a></li>
   </ul>
 </nav>
     </div>
@@ -635,15 +640,274 @@ z_{1} \cdot z_{2} &amp; = (3+4i) \cdot (-2 + 5i) \\
 </section>
 <section id="the-complex-plane" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="the-complex-plane"><span class="header-section-number">5.3</span> The complex plane</h2>
-<p>We can depict real numbers as a point somewhere on the (one-dimensional) real line. We can then, for example, say that the distance between to real numbers <span class="math inline">\(x, y \in \mathbb{R}\)</span> on this real line is given by <span class="math inline">\(|x-y|\)</span>. We would like to do something similar for the complex numbers, but it is difficult to draw imaginary distances.</p>
-<p>However, we have seen that any complex number <span class="math inline">\(z \in \mathbb{C}\)</span> can be written as <span class="math inline">\(z=a+b i\)</span> for some <span class="math inline">\(a, b \in \mathbb{R}\)</span>. Hence, we can depict any number <span class="math inline">\(z=a+b i\)</span> in the two-dimensional plane at the point with (Cartesian) coordinates <span class="math inline">\((a, b)\)</span>. This two-dimensional plane in which we can depict all complex numbers is called the complex plane with the origin <span class="math inline">\((0,0)\)</span> depicting the complex number <span class="math inline">\(0+0 i=0\)</span>.</p>
-<p>We can now also speak about the distance between two complex numbers in this complex plane.</p>
-<p>Let us start with the distance between a complex number <span class="math inline">\(z=a+b i\)</span> and 0 . By the theorem of Pythagoras this distance is given by <span class="math inline">\(\sqrt{a^{2}+b^{2}}\)</span>. These distances play an important role in mathematics, so we give it a name:</p>
-<p>Definition 1.10.15. The modulus of a complex number <span class="math inline">\(z=a+b i\)</span> is given by</p>
-<p><span class="math display">\[
-|z|=\sqrt{a^{2}+b^{2}} .
+<p>We can depict a real number <span class="math inline">\(x\)</span> as a point on the one-dimensional real line <span class="math inline">\(\mathbb{R}\)</span>. The distance between two real numbers <span class="math inline">\(x, y \in \mathbb{R}\)</span> on the real line is given by <span class="math inline">\(|x-y|\)</span>, see <a href="#fig-real-line">Figure&nbsp;<span>5.1</span></a>.</p>
+<div id="fig-real-line" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/real_line.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.1: Two points <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the real line <span class="math inline">\(\mathbb{R}\)</span>. Their distance is <span class="math inline">\(|x-y|\)</span>.</figcaption>
+</figure>
+</div>
+<p>We would like to do something similar for the complex numbers, but the point <span class="math display">\[
+z = x + iy \,, \quad x , \, y \in \mathbb{R}\,.
+\]</span> We therefore depict <span class="math inline">\(z= z + i y\)</span> in the two-dimensional plane at the point with (Cartesian) coordinates <span class="math inline">\((x, y)\)</span>. This two-dimensional plane in which we can depict all complex numbers is called the <strong>complex plane</strong>. The origin of such plane, with coordinates <span class="math inline">\((0,0)\)</span>, corresponds to the complex number <span class="math display">\[
+0+0 i = 0 \,,
+\]</span> see <a href="#fig-complex-plane">Figure&nbsp;<span>5.2</span></a>.</p>
+<div id="fig-complex-plane" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/complex_plane.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.2: A point <span class="math inline">\(z = x + iy \in \mathbb{C}\)</span> can be represented on the complex plane by the point of coordinates <span class="math inline">\((x,y)\)</span>. The distance between <span class="math inline">\(z\)</span> and <span class="math inline">\(0\)</span> is given by <span class="math inline">\(|z| = \sqrt{z^2 + y^2}\)</span>.</figcaption>
+</figure>
+</div>
+<section id="distance-on-mathbbc" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="distance-on-mathbbc"><span class="header-section-number">5.3.1</span> Distance on <span class="math inline">\(\mathbb{C}\)</span></h3>
+<p>The Cartesian representation allows us to introduce a distance between two complex numbers. Let us start with the distance between a complex number <span class="math inline">\(z=x+i y\)</span> and <span class="math inline">\(0\)</span>. By Pythagoras Theorem this distance is given by <span class="math display">\[
+\sqrt{x^{2}+y^{2}} \,,
+\]</span> see <a href="#fig-complex-plane">Figure&nbsp;<span>5.2</span></a>. We give a name to this quantity.</p>
+<div id="modulus" class="Definition" title="Modulus">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>Modulus</summary><div>The <strong>modulus</strong> of a complex number <span class="math inline">\(z=x+i y\)</span> is defined by <span class="math display">\[
+|z|: = \sqrt{x^{2}+y^{2}} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Note that the distance between <span class="math inline">\(z\)</span> and <span class="math inline">\(0\)</span> is always a non-negative number.</p>
+<div id="modulus-of-real-numbers" class="Remark" title="Modulus of Real numbers">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 21: </strong>Modulus of Real numbers</summary><div>A real number <span class="math inline">\(x \in \mathbb{R}\)</span> can be written as <span class="math display">\[
+x = x+ 0 i \in \mathbb{C}\,.
+\]</span> Hence the modulus of <span class="math inline">\(x\)</span> is given by <span class="math display">\[
+|x|=\sqrt{x^{2}+0^{2}}=\sqrt{x^{2}} \,.
+\]</span> The above coincides with the absolute value of <span class="math inline">\(x\)</span>. This explains why the notation for modulus in <span class="math inline">\(\mathbb{C}\)</span> is the same as the one for absolute value in <span class="math inline">\(\mathbb{R}\)</span>.<p></p>
+</div></details>
+</div>
+<p>We can now define the distance between two complex numbers.</p>
+<div id="distance-in-mathbbc" class="Definition" title="Distance in \mathbb{C}">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 22: </strong>Distance in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Given <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, we define the <strong>distance</strong> between <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as the quantity <span class="math display">\[
+|z_1 - z_2| \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>The geometric intuition of why the quantity <span class="math inline">\(|z_1 - z_2|\)</span> is defined as the distance between <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> is given in <a href="#fig-complex-plane-distance">Figure&nbsp;<span>5.3</span></a>.</p>
+<div id="fig-complex-plane-distance" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/complex_plane_distance.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.3: The difference <span class="math inline">\(z_1 - z_2\)</span> of the two points <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span> is given by the magenta vector. We define <span class="math inline">\(|z_1-z_2|\)</span> as the distance between <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span>.</figcaption>
+</figure>
+</div>
+<div id="Theorem-23" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 23</strong></summary><div>Given <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, we have <span class="math display">\[
+|z_1 - z_2|  = \sqrt{ (x_1 - x_2)^2 + (y_1 - y_2)^2 }  \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-7" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We have <span class="math display">\[
+z_1 - z_2 = (x_1 - x_2) + i (y_1 - y_2) \,.
+\]</span> Therefore, by definition of modulus, <span class="math display">\[
+|z_1 - z_2|  = \sqrt{ (x_1 - x_2)^2 + (y_1 - y_2)^2 } \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Example-24" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 24</strong></summary><div>The distance between <span class="math display">\[
+z = 2-4 i \,, \quad
+w = -5+i
+\]</span> is given by <span class="math display">\[\begin{align*}
+|z- w|  &amp; = |(2-4 i)-(-5+i)| \\
+        &amp; = |7-5 i| \\
+        &amp; =\sqrt{7^{2}+(-5)^{2}} \\
+        &amp; =\sqrt{74}
+\end{align*}\]</span><p></p>
+</div></details>
+</div>
+</section>
+<section id="properties-of-modulus" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="properties-of-modulus"><span class="header-section-number">5.3.2</span> Properties of modulus</h3>
+<p>The modulus has the following properties.</p>
+<div id="Theorem-25" class="Theorem">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25</strong></summary><div>
+<p>Let <span class="math inline">\(z, z_{1}, z_{2} \in \mathbb{C}\)</span>. Then</p>
+<ol type="1">
+<li><p><span class="math inline">\(\left|z_1 \cdot z_2\right|=\left|z_{1}\right|\left|z_{2}\right|\)</span></p></li>
+<li><p><span class="math inline">\(\left|z^{n}\right|=|z|^{n}\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span></p></li>
+<li><p><span class="math inline">\(z \cdot \bar{z}=|z|^{2}\)</span></p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-8" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We have <span class="math display">\[\begin{align*}
+z_1 \cdot z_2 &amp; = (x_1 + i y_1) \cdot (x_2 + i y_2) \\
+              &amp; = (x_1 x_2 - y_1 y_2) + i (x_2 y_1 + x_1 y_2)
+\end{align*}\]</span> and therefore <span class="math display">\[\begin{align*}
+|z_1 \cdot z_2| &amp; = \sqrt{ (x_1 x_2 - y_1 y_2)^2 + (x_2 y_1 + x_1 y_2)^2 }\\
+                &amp; = \sqrt{ x_1^2 x_2^2 + y_1^2 y_2^2 + x_2^2 y_1^2 + x_1^2 y_2^2 } \,.
+\end{align*}\]</span> On the other hand, <span class="math display">\[
+|z_1| = \sqrt{x_1^2 + y_1^2} \,, \quad
+|z_2| = \sqrt{x_2^2 + y_2^2}
+\]</span> so that <span class="math display">\[\begin{align*}
+|z_1| |z_2| &amp; = \sqrt{x_1^2 + y_1^2} \sqrt{x_2^2 + y_2^2}  \\
+&amp; = \sqrt{ x_1^2 x_2^2 + y_1^2 y_2^2 + x_2^2 y_1^2 + x_1^2 y_2^2 }
+\end{align*}\]</span> proving that <span class="math inline">\(\left|z_1 \cdot z_2\right|=\left|z_{1}\right|\left|z_{2}\right|\)</span>.<p></p>
+<p><em>Part 2.</em> Exercise. It easily follows from Point 1 and induction.</p>
+<p><em>Part 3.</em> Let <span class="math inline">\(z=x+ i y\)</span> for some <span class="math inline">\(x, y \in \mathbb{R}\)</span>. Then,</p>
+<p><span class="math display">\[\begin{align*}
+z \cdot \bar{z} &amp; = (x+i y)(x- i y) \\
+                &amp; = x^{2}-(i y )^{2} \\
+                &amp; = x^{2}+y^{2} \\
+                &amp; =|z|^{2}
+\end{align*}\]</span></p>
+</div></details>
+</div>
+<p>The modulus in <span class="math inline">\(\mathbb{C}\)</span> satisfies the triangle inequality.</p>
+<div id="triangle-inequality-in-mathbbc" class="Theorem" title="Triangle inequality in \mathbb{C}">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26: </strong>Triangle inequality in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
+<p>For all <span class="math inline">\(x, y, z \in \mathbb{C}\)</span>,</p>
+<ol type="1">
+<li><p><span class="math inline">\(|x+y| \leq|x|+|y|\)</span></p></li>
+<li><p><span class="math inline">\(|x-z| \leq|x-y|+|y-z|\)</span></p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-9" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> Suppose that <span class="math inline">\(x=a+ib\)</span> and <span class="math inline">\(y=c+ i d\)</span> for <span class="math inline">\(a, b, c, d \in \mathbb{R}\)</span>. Then, <span class="math display">\[
+|x+y|=|(a+c)+i (b+d) |=\sqrt{(a+c)^{2}+(b+d)^{2}} \,.
+\]</span> Therefore the inequality <span id="eq-triangle-complex-1"><span class="math display">\[
+|x+y| \leq|x|+|y|
+\tag{5.1}\]</span></span> is equivalent to <span id="eq-triangle-complex-2"><span class="math display">\[
+\sqrt{(a+c)^{2}+(b+d)^{2}} \leq \sqrt{a^2 + b^2} + \sqrt{c^2 + d^2}\,.
+\tag{5.2}\]</span></span> Now note that, for <span class="math inline">\(A,B \in \mathbb{R}\)</span>, we have that <span id="eq-triangle-complex-4"><span class="math display">\[
+A^2 \leq B^2 \quad \implies \quad  |A| \leq |B| \,.
+\tag{5.3}\]</span></span> In the two reverse implications <span class="math inline">\(\impliedby\)</span> below we will use (<a href="#eq-triangle-complex-4"><span>5.3</span></a>): <span class="math display">\[\begin{align*}
+&amp; \, \sqrt{(a+c)^{2}+(b+d)^{2}} \leq \sqrt{a^{2}+b^{2}}+\sqrt{c^{2}+d^{2}} \\
+\impliedby &amp;  \, (a+c)^{2}+(b+d)^{2} \leq\left(\sqrt{a^{2}+b^{2}}+\sqrt{c^{2}+d^{2}}\right)^{2} \\
+\iff &amp; \, a^{2}+2 a c+c^{2}+b^{2}+2 b d+d^{2} \leq a^{2}+b^{2}+2 \sqrt{a^{2}+b^{2}} \sqrt{c^{2}+d^{2}}+c^{2}+d^{2} \\
+\iff &amp; \, a c+b d \leq \sqrt{a^{2}+b^{2}} \sqrt{c^{2}+d^{2}} \\
+\impliedby &amp; \, (a c+b d)^{2} \leq\left(a^{2}+b^{2}\right)\left(c^{2}+d^{2}\right) \\
+\iff &amp; \, a^{2} c^{2}+2 a b c d+b^{2} d^{2} \leq a^{2} c^{2}+a^{2} d^{2}+b^{2} c^{2}+b^{2} d^{2} \\
+\iff &amp; \, a^{2} d^{2}+b^{2} c^{2}-2 a b c d \geq 0 \\
+\iff &amp; \, (a d-b c)^{2} \geq 0 .
+\end{align*}\]</span><p></p>
+<p>This last statement is clearly true, since <span class="math inline">\(a d-b c \in \mathbb{R}\)</span>. Therefore (<a href="#eq-triangle-complex-2"><span>5.2</span></a>) holds, and so (<a href="#eq-triangle-complex-1"><span>5.1</span></a>) follows.</p>
+<p><em>Part 2.</em> Using (<a href="#eq-triangle-complex-1"><span>5.1</span></a>) we estimate <span class="math display">\[
+|x-z|=|x-y+y-z| \leq|x-y|+|y-z| .
 \]</span></p>
-<p>Note that the distance between two point in the complex plane is always a nonnegative real number. It is important to only square the imaginary part of <span class="math inline">\(z\)</span>, i.e., <span class="math inline">\(\operatorname{Im}(z)=b\)</span>, and not square <span class="math inline">\(b i\)</span>. It is a common mistake to compute <span class="math inline">\(\sqrt{a^{2}+(b i)^{2}}=\sqrt{a^{2}-b^{2}}\)</span>, but it is easy to see that this is wrong since one can end up with the square root of negative numbers.</p>
+</div></details>
+</div>
+<div id="geometric-interpretation-of-triangle-inequality" class="Remark" title="Geometric interpretation of triangle inequality">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 27: </strong>Geometric interpretation of triangle inequality</summary><div>We finally have a justification of why the inequality <span class="math display">\[
+|x-z| \leq |x-y| + |y - z|
+\]</span> is called <strong>triangle inequality</strong>: By drawing three points <span class="math inline">\(x, y, z \in \mathbb{C}\)</span> in the complex plane, the distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(z\)</span> is shorter than the distance to go from <span class="math inline">\(x\)</span> to <span class="math inline">\(z\)</span> via the point <span class="math inline">\(y\)</span>, see <a href="#fig-triangle-inequality-C">Figure&nbsp;<span>5.4</span></a>.<p></p>
+</div></details>
+</div>
+<div id="fig-triangle-inequality-C" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/complex_plane_triangle.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.4: Let <span class="math inline">\(x,y,z \in \mathbb{C}\)</span>. The distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(z\)</span> is shorter than the distance to go from <span class="math inline">\(x\)</span> to <span class="math inline">\(z\)</span> via the point <span class="math inline">\(y\)</span>.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="polar-coordinates" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="polar-coordinates"><span class="header-section-number">5.4</span> Polar coordinates</h2>
+<p>We have seen that we can identify a complex number <span class="math inline">\(z=x+iy\)</span> by a point in the complex plane with Cartesian coordinates <span class="math inline">\((x, y)\)</span>. We can also specify the point <span class="math inline">\((x,y)\)</span> by using the so-called polar coordinates <span class="math inline">\((\rho, \theta)\)</span>, where</p>
+<ul>
+<li><p><span class="math inline">\(\rho\)</span> is the distance between <span class="math inline">\(z\)</span> and the origin <span class="math display">\[
+\rho = |z| = \sqrt{x^2 + y^2}
+\]</span></p></li>
+<li><p><span class="math inline">\(\theta\)</span> is the angle between the line connecting the origin and <span class="math inline">\(z\)</span> and the positive real axis, see <a href="#fig-polar-coordinates">Figure&nbsp;<span>5.5</span></a>.</p></li>
+</ul>
+<div id="fig-polar-coordinates" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/polar_coordinates.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.5: Polar coordinates <span class="math inline">\((\rho,\theta)\)</span> for the complex number <span class="math inline">\(z \in \mathbb{C}\)</span>.</figcaption>
+</figure>
+</div>
+<p>We give such angle a name.</p>
+<div id="argument" class="Definition" title="Argument">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 28: </strong>Argument</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span>. The angle <span class="math inline">\(\theta\)</span> between the line connecting the origin and <span class="math inline">\(z\)</span> and the positive real axis is called the <strong>argument</strong> of <span class="math inline">\(z\)</span>, and is denoted by <span class="math display">\[
+\theta := \arg (z) \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Warning*-10" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>We always use angles in radians, not degrees. Make sure your calculator is set to radians if you want to use it to compute angles.<p></p>
+</div></details>
+</div>
+<div id="principal-value" class="Remark" title="Principal Value">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 29: </strong>Principal Value</summary><div>The argument of a complex number is not uniquely defined. We can always add an integer number of times <span class="math inline">\(2 \pi\)</span> to the argument to specify the same point. We usually use the convention to choose the argument in the interval <span class="math inline">\((-\pi, \pi]\)</span>. This is called the <strong>principal value</strong>. Therefore the complex numbers in the upper half plane have a positive argument, and in the lower half plane have a negative argument.<p></p>
+</div></details>
+</div>
+<div id="Example-30" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 30</strong></summary><div>We have the following arguments: <span class="math display">\[\begin{align*}
+&amp; \arg (1) = 0  &amp; \quad &amp; \arg (i) = \frac{\pi}{2}  \\
+&amp; \arg (-1) = \pi   &amp; \quad &amp; \arg (-i) = -\frac{\pi}{2}  \\
+&amp; \arg (1+i)=\frac{1}{4} \pi &amp; \quad &amp;  \arg (-1-i)=-\frac{3}{4} \pi
+\end{align*}\]</span><p></p>
+</div></details>
+</div>
+<p>We can represent non-zero complex numbers in polar coordinates.</p>
+<div id="theorem-polar-coordinates" class="Theorem" title="Polar coordinates">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 31: </strong>Polar coordinates</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span> with <span class="math inline">\(z = x + i y\)</span> and <span class="math inline">\(z \neq 0\)</span>. Then <span class="math display">\[
+x = \rho \cos(\theta) \,, \quad y = \rho \sin(\theta) \,,
+\]</span> where <span class="math display">\[
+\rho = \sqrt{x^2 + y^2} \,, \quad
+\theta = \arg(z) \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>The proof of Theorem <a href="chap_5.html#theorem-polar-coordinates">31</a> is trivial, and is based on basic trigonometry and definition of <span class="math inline">\(\arg(z)\)</span>. Complex numbers in polar form can be useful. We give a name to such polar form.</p>
+<div id="trigonometric-form" class="Definition" title="Trigonometric form">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 32: </strong>Trigonometric form</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span>. The trigonometric form of <span class="math inline">\(z\)</span> is <span class="math display">\[
+z = \rho \left[ \cos (\theta)+i \sin (\theta) \right] \,,
+\]</span> where <span class="math display">\[
+\rho = \sqrt{x^2 + y^2} \,, \quad
+\theta = \arg(z) \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Let us make an example.</p>
+<div id="Example-33" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div>Suppose that we have polar coordinates <span class="math display">\[
+\rho = \sqrt{8}\,, \quad   \theta = \frac{3}{4} \pi
+\]</span> We compute <span class="math display">\[\begin{gather*}
+x = \rho \cos (\theta) = \sqrt{8} \cos \left( \frac{3}{4} \pi \right) = - \frac{\sqrt{8}\sqrt{2}}{2} = -2 \\
+y = \rho \sin (\theta) = \sqrt{8} \sin \left( \frac{3}{4} \pi \right) =  \frac{\sqrt{8}\sqrt{2}}{2} = 2 \,.
+\end{gather*}\]</span> The complex number <span class="math inline">\(z\)</span> corresponding to the polar coordinates <span class="math inline">\((\rho,\theta)\)</span> is <span class="math display">\[
+z = x + i y = - 2 + 2 i \,.
+\]</span> The trigonometric form of <span class="math inline">\(z\)</span> is <span class="math display">\[
+z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3}{4} \pi \right)   \right] \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>As a consequence of Theorem <a href="chap_5.html#theorem-polar-coordinates">31</a> we obtain a formula for computing the argument.</p>
+<div id="corollary-arg" class="Corollary" title="Computing \arg(z)">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 34: </strong>Computing <span class="math inline">\(\arg(z)\)</span></summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span> with <span class="math inline">\(z = x + i y\)</span> and <span class="math inline">\(z \neq 0\)</span>. Then <span class="math display">\[
+\arg(z) =
+\begin{cases}
+\arctan \left(  \dfrac{y}{x}   \right)  &amp;  \,\, \mbox{ if }  x&gt;0 \\
+\arctan \left(  \dfrac{y}{x}   \right) + \pi   &amp;  \,\, \mbox{ if }  x&lt;0\,\, \mbox{and} \,\, y \geq 0 \\
+\arctan \left(  \dfrac{y}{x}   \right) - \pi   &amp;  \,\, \mbox{ if }  x&lt;0\,\, \mbox{and} \,\, y &lt; 0 \\
+\dfrac{\pi}{2}    &amp;  \,\, \mbox{ if }  x=0\,\, \mbox{and} \,\, y &gt; 0 \\
+-\dfrac{\pi}{2}    &amp;  \,\, \mbox{ if }  x=0\,\, \mbox{and} \,\, y &lt; 0 \\
+\end{cases}
+\]</span> where <span class="math inline">\(\arctan\)</span> is the inverse of <span class="math inline">\(\tan\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-11" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Using the polar coordinates formulas from Theorem <a href="chap_5.html#theorem-polar-coordinates">31</a> we have <span class="math display">\[
+\frac{y}{x} = \frac{\rho \sin(\theta)}{\rho \cos(\theta)}  = \tan (\theta) \,.
+\]</span> The thesis can be obtained by carefully inverting the tangent.<p></p>
+</div></details>
+</div>
+<div id="Example-35" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35</strong></summary><div>We want to compute the arguments of the complex numbers <span class="math display">\[
+3+4 i\,, \quad 3-4 i \,, \quad  -3+4 i \,, \quad -3-4 i \,.
+\]</span> Using the formula for <span class="math inline">\(\arg\)</span> in Corollary <a href="chap_5.html#corollary-arg">34</a> we have <span class="math display">\[\begin{align*}
+\arg (3+4 i) &amp; =\arctan \left(\frac{4}{3}\right) \\
+\arg (3-4 i) &amp; =\arctan \left(-\frac{4}{3}\right) = -\arctan \left(\frac{4}{3}\right)  \\
+\arg (-3+4 i) &amp; = \arctan \left(-\frac{4}{3}\right) + \pi = - \arctan \left(\frac{4}{3}\right) + \pi \\
+\arg (-3-4 i) &amp; = \arctan \left(\frac{4}{3}\right) - \pi
+\end{align*}\]</span><p></p>
+</div></details>
+</div>
 
 
 </section>

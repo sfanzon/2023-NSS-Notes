@@ -441,6 +441,48 @@
 
  [**Example 5.19**](#Example-5.19)\Pageref{Example-5.19}
 
+ [**Definition 5.20**](#modulus): Modulus\Pageref{modulus}
+
+ [**Remark 5.21**](#modulus-of-real-numbers): Modulus of Real numbers\Pageref{modulus-of-real-numbers}
+
+ [**Definition 5.22**](#distance-in-mathbbc): Distance in $\mathbb{C}$\Pageref{distance-in-mathbbc}
+
+ [**Theorem 5.23**](#Theorem-5.23)\Pageref{Theorem-5.23}
+
+ [**Proof**](#Proof*-5.7)\Pageref{Proof*-5.7}
+
+ [**Example 5.24**](#Example-5.24)\Pageref{Example-5.24}
+
+ [**Theorem 5.25**](#Theorem-5.25)\Pageref{Theorem-5.25}
+
+ [**Proof**](#Proof*-5.8)\Pageref{Proof*-5.8}
+
+ [**Theorem 5.26**](#triangle-inequality-in-mathbbc): Triangle inequality in $\mathbb{C}$\Pageref{triangle-inequality-in-mathbbc}
+
+ [**Proof**](#Proof*-5.9)\Pageref{Proof*-5.9}
+
+ [**Remark 5.27**](#geometric-interpretation-of-triangle-inequality): Geometric interpretation of triangle inequality\Pageref{geometric-interpretation-of-triangle-inequality}
+
+ [**Definition 5.28**](#argument): Argument\Pageref{argument}
+
+ [**Warning**](#Warning*-5.10)\Pageref{Warning*-5.10}
+
+ [**Remark 5.29**](#principal-value): Principal Value\Pageref{principal-value}
+
+ [**Example 5.30**](#Example-5.30)\Pageref{Example-5.30}
+
+ [**Theorem 5.31**](#theorem-polar-coordinates): Polar coordinates\Pageref{theorem-polar-coordinates}
+
+ [**Definition 5.32**](#trigonometric-form): Trigonometric form\Pageref{trigonometric-form}
+
+ [**Example 5.33**](#Example-5.33)\Pageref{Example-5.33}
+
+ [**Corollary 5.34**](#corollary-arg): Computing $\arg(z)$\Pageref{corollary-arg}
+
+ [**Proof**](#Proof*-5.11)\Pageref{Proof*-5.11}
+
+ [**Example 5.35**](#Example-5.35)\Pageref{Example-5.35}
+
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 
  [**Proof**](#Proof*-6.1)\Pageref{Proof*-6.1}

@@ -637,20 +637,429 @@ On the other hand:
 
 ## The complex plane
 
-We can depict real numbers as a point somewhere on the (one-dimensional) real line. We can then, for example, say that the distance between to real numbers $x, y \in \mathbb{R}$ on this real line is given by $|x-y|$. We would like to do something similar for the complex numbers, but it is difficult to draw imaginary distances.
+We can depict a real number $x$ as a point on the one-dimensional real line $\R$. The distance between two real numbers $x, y \in \R$ on the real line is given by $|x-y|$, see @fig-real-line. 
 
-However, we have seen that any complex number $z \in \mathbb{C}$ can be written as $z=a+b i$ for some $a, b \in \mathbb{R}$. Hence, we can depict any number $z=a+b i$ in the two-dimensional plane at the point with (Cartesian) coordinates $(a, b)$. This two-dimensional plane in which we can depict all complex numbers is called the complex plane with the origin $(0,0)$ depicting the complex number $0+0 i=0$.
+![Two points $x$ and $y$ on the real line $\R$. Their distance is $|x-y|$.](/images/real_line.png){#fig-real-line width=70%}
 
-\section{Distances and modulus}
 
-We can now also speak about the distance between two complex numbers in this complex plane.
 
-Let us start with the distance between a complex number $z=a+b i$ and 0 . By the theorem of Pythagoras this distance is given by $\sqrt{a^{2}+b^{2}}$. These distances play an important role in mathematics, so we give it a name:
-
-Definition 1.10.15. The modulus of a complex number $z=a+b i$ is given by
-
+We would like to do something similar for the complex numbers, but the point
 $$
-|z|=\sqrt{a^{2}+b^{2}} .
+z = x + iy \,, \quad x , \, y \in \R\,.
+$$
+We therefore depict $z= z + i y$ in the two-dimensional plane at the point with (Cartesian) coordinates $(x, y)$. This two-dimensional plane in which we can depict all complex numbers is called the **complex plane**. The 
+origin of such plane, with coordinates $(0,0)$, corresponds to the  complex number 
+$$
+0+0 i = 0 \,,
+$$
+see @fig-complex-plane. 
+
+![A point $z = x + iy \in \C$ can be represented on the complex plane by the point of coordinates $(x,y)$. The distance between $z$ and $0$ is given by $|z| = \sqrt{z^2 + y^2}$. ](/images/complex_plane.png){#fig-complex-plane width=60%}
+
+
+### Distance on $\C$
+
+The Cartesian representation allows us to introduce a distance between two complex numbers. Let us start with the distance between a complex number $z=x+i y$ and $0$. By Pythagoras Theorem this distance is given by 
+$$
+\sqrt{x^{2}+y^{2}} \,,
+$$
+see @fig-complex-plane. We give a name to this quantity.
+
+::: Definition
+### Modulus
+
+The **modulus** of a complex number $z=x+i y$ is defined by
+$$
+|z|: = \sqrt{x^{2}+y^{2}} \,.
+$$
+:::
+
+Note that the distance between $z$ and $0$ is always a non-negative number. 
+
+
+
+::: Remark
+### Modulus of Real numbers
+
+A real number $x \in \R$ can be written as 
+$$
+x = x+ 0 i \in \C \,.
+$$ 
+Hence the modulus of $x$ is given by 
+$$
+|x|=\sqrt{x^{2}+0^{2}}=\sqrt{x^{2}} \,.
+$$
+The above coincides with the absolute value of $x$. This explains why the notation for modulus in $\C$ is the same as the one for absolute value in $\R$.
+
+:::
+
+
+
+We can now define the distance between two complex numbers.
+
+::: Definition
+### Distance in $\C$
+
+Given $z_1,z_2 \in \C$, we define the **distance** between $z_1$ and 
+$z_2$ as the quantity
+$$
+|z_1 - z_2| \,.
 $$
 
-Note that the distance between two point in the complex plane is always a nonnegative real number. It is important to only square the imaginary part of $z$, i.e., $\operatorname{Im}(z)=b$, and not square $b i$. It is a common mistake to compute $\sqrt{a^{2}+(b i)^{2}}=\sqrt{a^{2}-b^{2}}$, but it is easy to see that this is wrong since one can end up with the square root of negative numbers.
+:::
+
+The geometric intuition of why the quantity $|z_1 - z_2|$ is defined as the distance between $z_1$ and $z_2$ is given in @fig-complex-plane-distance.
+
+![The difference $z_1 - z_2$ of the two points $z_1,z_2 \in \C$ is given by the magenta vector. We define $|z_1-z_2|$ as the distance between $z_1$ and $z_2$. ](/images/complex_plane_distance.png){#fig-complex-plane-distance width=60%}
+
+
+::: Theorem
+
+Given $z_1,z_2 \in \C$, we have
+$$
+|z_1 - z_2|  = \sqrt{ (x_1 - x_2)^2 + (y_1 - y_2)^2 }  \,.
+$$
+
+:::
+
+
+::: Proof
+
+
+We have
+$$
+z_1 - z_2 = (x_1 - x_2) + i (y_1 - y_2) \,.
+$$
+Therefore, by definition of modulus,
+$$
+|z_1 - z_2|  = \sqrt{ (x_1 - x_2)^2 + (y_1 - y_2)^2 } \,.
+$$
+
+:::
+
+
+
+::: Example
+
+The distance between 
+$$
+z = 2-4 i \,, \quad 
+w = -5+i
+$$ 
+is given by
+\begin{align*}
+|z- w|  & = |(2-4 i)-(-5+i)| \\
+        & = |7-5 i| \\
+        & =\sqrt{7^{2}+(-5)^{2}} \\
+        & =\sqrt{74}
+\end{align*}
+
+:::
+
+
+
+### Properties of modulus
+
+The modulus has the following properties.
+
+::: Theorem 
+
+Let $z, z_{1}, z_{2} \in \C$. Then
+
+1. $\left|z_1 \cdot z_2\right|=\left|z_{1}\right|\left|z_{2}\right|$
+
+2. $\left|z^{n}\right|=|z|^{n}$ for all $n \in \N$
+
+3. $z \cdot \bar{z}=|z|^{2}$
+
+:::
+
+::: Proof
+
+*Part 1.*
+We have
+\begin{align*}
+z_1 \cdot z_2 & = (x_1 + i y_1) \cdot (x_2 + i y_2) \\
+              & = (x_1 x_2 - y_1 y_2) + i (x_2 y_1 + x_1 y_2) 
+\end{align*}
+and therefore 
+\begin{align*}
+|z_1 \cdot z_2| & = \sqrt{ (x_1 x_2 - y_1 y_2)^2 + (x_2 y_1 + x_1 y_2)^2 }\\
+                & = \sqrt{ x_1^2 x_2^2 + y_1^2 y_2^2 + x_2^2 y_1^2 + x_1^2 y_2^2 } \,.
+\end{align*}
+On the other hand,
+$$
+|z_1| = \sqrt{x_1^2 + y_1^2} \,, \quad 
+|z_2| = \sqrt{x_2^2 + y_2^2}
+$$
+so that
+\begin{align*}
+|z_1| |z_2| & = \sqrt{x_1^2 + y_1^2} \sqrt{x_2^2 + y_2^2}  \\
+& = \sqrt{ x_1^2 x_2^2 + y_1^2 y_2^2 + x_2^2 y_1^2 + x_1^2 y_2^2 }
+\end{align*}
+proving that $\left|z_1 \cdot z_2\right|=\left|z_{1}\right|\left|z_{2}\right|$.
+
+*Part 2.* Exercise. It easily follows from Point 1 and induction.
+
+*Part 3.* Let $z=x+ i y$ for some $x, y \in \mathbb{R}$. Then,
+
+\begin{align*}
+z \cdot \bar{z} & = (x+i y)(x- i y) \\
+                & = x^{2}-(i y )^{2} \\
+                & = x^{2}+y^{2} \\
+                & =|z|^{2}
+\end{align*}
+
+:::
+
+
+The modulus in $\C$ satisfies the triangle inequality.
+
+
+::: Theorem 
+### Triangle inequality in $\C$ 
+
+For all $x, y, z \in \C$,
+
+1. $|x+y| \leq|x|+|y|$
+
+2. $|x-z| \leq|x-y|+|y-z|$
+
+:::
+
+
+::: Proof
+
+*Part 1.* Suppose that $x=a+ib$ and $y=c+ i d$ for $a, b, c, d \in \R$. Then,
+$$
+|x+y|=|(a+c)+i (b+d) |=\sqrt{(a+c)^{2}+(b+d)^{2}} \,.
+$$
+Therefore the inequality
+$$
+|x+y| \leq|x|+|y|
+$${#eq-triangle-complex-1}
+is equivalent to
+$$
+\sqrt{(a+c)^{2}+(b+d)^{2}} \leq \sqrt{a^2 + b^2} + \sqrt{c^2 + d^2}\,.
+$${#eq-triangle-complex-2}
+Now note that, for $A,B \in \R$, we have that
+$$
+A^2 \leq B^2 \quad \implies \quad  |A| \leq |B| \,.
+$${#eq-triangle-complex-4}
+In the two reverse implications $\impliedby$ below we will use (@eq-triangle-complex-4):
+\begin{align*}
+& \, \sqrt{(a+c)^{2}+(b+d)^{2}} \leq \sqrt{a^{2}+b^{2}}+\sqrt{c^{2}+d^{2}} \\
+\impliedby &  \, (a+c)^{2}+(b+d)^{2} \leq\left(\sqrt{a^{2}+b^{2}}+\sqrt{c^{2}+d^{2}}\right)^{2} \\
+\iff & \, a^{2}+2 a c+c^{2}+b^{2}+2 b d+d^{2} \leq a^{2}+b^{2}+2 \sqrt{a^{2}+b^{2}} \sqrt{c^{2}+d^{2}}+c^{2}+d^{2} \\
+\iff & \, a c+b d \leq \sqrt{a^{2}+b^{2}} \sqrt{c^{2}+d^{2}} \\
+\impliedby & \, (a c+b d)^{2} \leq\left(a^{2}+b^{2}\right)\left(c^{2}+d^{2}\right) \\
+\iff & \, a^{2} c^{2}+2 a b c d+b^{2} d^{2} \leq a^{2} c^{2}+a^{2} d^{2}+b^{2} c^{2}+b^{2} d^{2} \\
+\iff & \, a^{2} d^{2}+b^{2} c^{2}-2 a b c d \geq 0 \\
+\iff & \, (a d-b c)^{2} \geq 0 .
+\end{align*}
+
+This last statement is clearly true, since $a d-b c \in \R$. Therefore 
+(@eq-triangle-complex-2) holds, and so (@eq-triangle-complex-1) follows.
+
+
+
+
+*Part 2.* Using (@eq-triangle-complex-1) we estimate
+$$
+|x-z|=|x-y+y-z| \leq|x-y|+|y-z| .
+$$
+
+:::
+
+
+::: Remark
+### Geometric interpretation of triangle inequality
+
+We finally have a justification of why the inequality
+$$
+|x-z| \leq |x-y| + |y - z|
+$$
+is called **triangle inequality**: By drawing three points $x, y, z \in \C$ in the complex plane, the distance between $x$ and $z$ is shorter than the distance to go from $x$ to $z$ via the point $y$, see @fig-triangle-inequality-C.
+
+:::
+
+![Let $x,y,z \in \C$. The distance between $x$ and $z$ is shorter than the distance to go from $x$ to $z$ via the point $y$. ](/images/complex_plane_triangle.png){#fig-triangle-inequality-C width=60%}
+
+
+
+
+## Polar coordinates
+
+We have seen that we can identify a complex number $z=x+iy$ by a point in the complex plane with Cartesian coordinates $(x, y)$. We can also specify the point $(x,y)$ by using the so-called polar coordinates $(\rho, \theta)$, where
+
+- $\rho$ is the distance between $z$ and the origin
+$$
+\rho = |z| = \sqrt{x^2 + y^2} 
+$$
+
+- $\theta$ is the angle between the line connecting the origin and $z$ and the positive real axis, see @fig-polar-coordinates.
+
+
+![Polar coordinates $(\rho,\theta)$ for the complex number $z \in \C$. ](/images/polar_coordinates.png){#fig-polar-coordinates width=60%}
+
+
+We give such angle a name.
+
+::: Definition 
+### Argument
+
+Let $z \in \C$. The angle $\theta$ between the line connecting the origin and $z$ and the positive real axis is called the **argument** of $z$, and is denoted by
+$$
+\theta := \arg (z) \,.
+$$
+
+:::
+
+
+::: Warning
+
+We always use angles in radians, not degrees. Make sure your calculator is set to radians if you want to use it to compute angles.
+
+:::
+
+
+::: Remark
+### Principal Value
+
+The argument of a complex number is not uniquely defined. We can always add an integer number of times $2 \pi$ to the argument to specify the same point. We usually use the convention to choose the argument in the interval $(-\pi, \pi]$. This is called the **principal value**. Therefore the complex numbers in the upper half plane have a positive argument, and in the lower half plane have a negative argument.
+
+:::
+
+
+
+::: Example 
+We have the following arguments:
+\begin{align*}
+& \arg (1) = 0  & \quad & \arg (i) = \frac{\pi}{2}  \\
+& \arg (-1) = \pi   & \quad & \arg (-i) = -\frac{\pi}{2}  \\
+& \arg (1+i)=\frac{1}{4} \pi & \quad &  \arg (-1-i)=-\frac{3}{4} \pi
+\end{align*}
+
+:::
+
+
+
+We can represent non-zero complex numbers in polar coordinates.
+
+
+::: Theorem  
+### Polar coordinates {#theorem-polar-coordinates}
+
+Let $z \in \C$ with $z = x + i y$ and $z \neq 0$. Then
+$$
+x = \rho \cos(\theta) \,, \quad y = \rho \sin(\theta) \,,
+$$
+where 
+$$
+\rho = \sqrt{x^2 + y^2} \,, \quad 
+\theta = \arg(z) \,.
+$$
+
+
+:::
+
+The proof of Theorem \ref{theorem-polar-coordinates} is trivial, and is based on basic trigonometry and definition of $\arg(z)$. Complex numbers in polar form can be useful. We give
+a name to such polar form.
+
+::: Definition 
+### Trigonometric form
+
+Let $z \in \mathbb{C}$. The trigonometric form of $z$ is
+$$
+z = \rho \left[ \cos (\theta)+i \sin (\theta) \right] \,,
+$$
+where 
+$$
+\rho = \sqrt{x^2 + y^2} \,, \quad 
+\theta = \arg(z) \,.
+$$
+:::
+
+
+
+Let us make an example.
+
+
+::: Example 
+
+Suppose that we have polar coordinates
+$$
+\rho = \sqrt{8}\,, \quad   \theta = \frac{3}{4} \pi 
+$$ 
+We compute 
+\begin{gather*}
+x = \rho \cos (\theta) = \sqrt{8} \cos \left( \frac{3}{4} \pi \right) = - \frac{\sqrt{8}\sqrt{2}}{2} = -2 \\
+y = \rho \sin (\theta) = \sqrt{8} \sin \left( \frac{3}{4} \pi \right) =  \frac{\sqrt{8}\sqrt{2}}{2} = 2 \,.
+\end{gather*}
+The complex number $z$ corresponding to the polar coordinates
+$(\rho,\theta)$ is 
+$$
+z = x + i y = - 2 + 2 i \,.
+$$
+The trigonometric form of $z$ is
+$$
+z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3}{4} \pi \right)   \right] \,.
+$$
+:::
+
+
+As a consequence of Theorem \ref{theorem-polar-coordinates} we obtain a formula for computing the argument.
+
+
+
+::: Corollary
+### Computing $\arg(z)$   {#corollary-arg}
+
+Let $z \in \C$ with $z = x + i y$ and $z \neq 0$. Then
+$$
+\arg(z) = 
+\begin{cases}
+\arctan \left(  \dfrac{y}{x}   \right)  &  \,\, \mbox{ if }  x>0 \\
+\arctan \left(  \dfrac{y}{x}   \right) + \pi   &  \,\, \mbox{ if }  x<0\,\, \mbox{and} \,\, y \geq 0 \\
+\arctan \left(  \dfrac{y}{x}   \right) - \pi   &  \,\, \mbox{ if }  x<0\,\, \mbox{and} \,\, y < 0 \\
+\dfrac{\pi}{2}    &  \,\, \mbox{ if }  x=0\,\, \mbox{and} \,\, y > 0 \\
+-\dfrac{\pi}{2}    &  \,\, \mbox{ if }  x=0\,\, \mbox{and} \,\, y < 0 \\
+\end{cases}
+$$
+where $\arctan$ is the inverse of $\tan$.
+
+:::
+
+
+::: Proof
+
+Using the polar coordinates formulas from Theorem \ref{theorem-polar-coordinates} we have
+$$
+\frac{y}{x} = \frac{\rho \sin(\theta)}{\rho \cos(\theta)}  = \tan (\theta) \,.
+$$
+The thesis can be obtained by carefully inverting the tangent.
+:::
+
+
+
+::: Example 
+
+We want to compute the arguments of the complex numbers 
+$$
+3+4 i\,, \quad 3-4 i \,, \quad  -3+4 i \,, \quad -3-4 i \,.
+$$ 
+Using the formula for $\arg$ in Corollary \ref{corollary-arg} we have
+\begin{align*}
+\arg (3+4 i) & =\arctan \left(\frac{4}{3}\right) \\
+\arg (3-4 i) & =\arctan \left(-\frac{4}{3}\right) = -\arctan \left(\frac{4}{3}\right)  \\
+\arg (-3+4 i) & = \arctan \left(-\frac{4}{3}\right) + \pi = - \arctan \left(\frac{4}{3}\right) + \pi \\
+\arg (-3-4 i) & = \arctan \left(\frac{4}{3}\right) - \pi
+\end{align*}
+
+:::
+
+
+
+
+
+
