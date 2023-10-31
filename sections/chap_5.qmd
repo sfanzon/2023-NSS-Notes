@@ -926,7 +926,7 @@ We always use angles in radians, not degrees. Make sure your calculator is set t
 ::: Remark
 ### Principal Value
 
-The argument of a complex number is not uniquely defined. We can always add an integer number of times $2 \pi$ to the argument to specify the same point. We usually use the convention to choose the argument in the interval $(-\pi, \pi]$. This is called the **principal value**. Therefore the complex numbers in the upper half plane have a positive argument, and in the lower half plane have a negative argument.
+The argument of a complex number is not uniquely defined. We can always add an integer number of times $2 \pi$ to the argument to specify the same point. We usually use the convention to choose the argument in the interval $(-\pi, \pi]$. This is called the **principal value** of the argument function. Therefore the complex numbers in the upper half plane have a positive argument, and in the lower half plane have a negative argument.
 
 :::
 
@@ -971,13 +971,9 @@ a name to such polar form.
 
 Let $z \in \mathbb{C}$. The trigonometric form of $z$ is
 $$
-z = \rho \left[ \cos (\theta)+i \sin (\theta) \right] \,,
+z = |z| \left[ \cos (\theta)+i \sin (\theta) \right] \,,
 $$
-where 
-$$
-\rho = \sqrt{x^2 + y^2} \,, \quad 
-\theta = \arg(z) \,.
-$$
+where $\theta = \arg(z)$.
 :::
 
 
@@ -985,7 +981,7 @@ $$
 Let us make an example.
 
 
-::: Example 
+::: {.Example   #example-trigonometric-form} 
 
 Suppose that we have polar coordinates
 $$
@@ -1057,6 +1053,218 @@ Using the formula for $\arg$ in Corollary \ref{corollary-arg} we have
 \end{align*}
 
 :::
+
+
+
+
+
+
+## Exponential form
+
+We have seen that we can represent complex numbers in 
+
+- Cartesian form
+- Trigonometric form
+
+We now introduce a third way of representing complex numbers: the exponential form. For this, we need Euler's identity:
+
+
+::: Theorem 
+### Euler's identity   {#theorem-euler-identity}
+
+For all $\theta \in \R$ it holds
+$$
+e^{i \theta}=\cos (\theta)+ i \sin (\theta) \,.
+$$
+
+:::
+
+
+::: Proof 
+The proof of this theorem uses Taylor power series. Note that we have not introduced what series are, yet, so we just assume that everything below makes sense and actually exists. We have the following Taylor series at $x_{0}=0$ that you might know from calculus:
+\begin{align*}
+e^{x} & =1+x+\frac{x^{2}}{2 !}+\frac{x^{3}}{3 !}+\frac{x^{4}}{4 !}+\frac{x^{5}}{5 !}+\frac{x^{6}}{6 !}+\frac{x^{7}}{7 !}+\ldots \\
+\sin (x) & =\frac{x}{1 !}-\frac{x^{3}}{3 !}+\frac{x^{5}}{5 !}-\frac{x^{7}}{7 !}+\ldots \\
+\cos (x) & =1-\frac{x^{2}}{2 !}+\frac{x^{4}}{4 !}-\frac{x^{6}}{6 !}+\ldots
+\end{align*}
+
+The above identities also holds for $x \in \C$. Hence we can substitute $x=i \theta$ in the series for $e^{x}$ to obtain
+\begin{align*}
+e^{i \theta} & =1+i \theta+\frac{(i \theta)^{2}}{2 !}+\frac{(i \theta)^{3}}{3 !}+\frac{(i \theta)^{4}}{4 !}+\frac{(i \theta)^{5}}{5 !}+\frac{(i \theta)^{6}}{6 !}+\frac{(i \theta)^{7}}{7 !} \ldots \\
+& =1+i \theta-\frac{\theta^{2}}{2 !}-i \frac{\theta^{3}}{3 !}+\frac{\theta^{4}}{4 !}+i \frac{\theta^{5}}{5 !}-\frac{\theta^{6}}{6 !}-i \frac{\theta^{7}}{7 !}+\ldots \\
+& =\cos (\theta)+i \sin (\theta),
+\end{align*}
+
+where we used that $i^{2}=-1$ in the second equality, and the third equality follows by observing that all terms with an even power of $\theta$ are exactly the terms in the expansion of $\cos (\theta)$ and all terms with an odd power of $\theta$ are exactly the terms in the expansion of $\sin (\theta)$ multiplied by $i$.
+
+:::
+
+
+
+::: Theorem 
+For all $\theta \in \R$ it holds
+$$
+\left|e^{i \theta}\right|=1 \,.
+$$
+
+:::
+
+::: Proof
+
+ From Euler's identity in Theorem \ref{theorem-euler-identity} we get
+$$
+\left|e^{i \theta}\right|=|\cos (\theta)+i \sin (\theta)|=\sqrt{\cos ^{2}(\theta)+\sin ^{2}(\theta)}=1 \,.
+$$
+
+:::
+
+
+
+
+::: Theorem
+
+Let $z \in \C$ with $z = x+iy$ and $z \neq 0$. Then
+$$
+z = \rho e^{i\theta}\,,
+$$
+where 
+$$
+\rho = \sqrt{x^2 + y^2} = |z| \,, \quad 
+\theta = \arg(z) \,.
+$$
+
+:::
+
+
+::: Proof
+
+By Theorem \ref{theorem-polar-coordinates} we have
+$$
+x = \rho \cos(\theta)\,, \quad y = \rho \sin(\theta) \,.
+$$
+Hence 
+\begin{align*}
+z & = x + i y \\
+  & = \rho \cos(\theta) + i \rho \sin(\theta) \\
+  & = \rho e^{i\theta} \,,
+\end{align*}
+where in the last line we used Euler's identity in Theorem \ref{theorem-euler-identity}.
+:::
+
+
+
+::: Definition 
+### Exponential form
+
+A complex number $z \in \C$ is in **exponential form** if 
+$$
+z= \rho e^{i\theta} = |z| \, e^{i \arg(z)}  \,.
+$$
+
+:::
+
+
+
+::: {.Example #example-exponential-form}
+
+From Example \ref{example-trigonometric-form} we know that 
+$$
+z=-2+2 i
+$$ 
+can be written in trigonometric form as
+$$
+z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3}{4} \pi \right)   \right] \,.
+$$
+By Euler's identity we hence obtain the exponential form
+$$
+z=\sqrt{8} e^{i \frac{3}{4} \pi} \,.
+$$
+:::
+
+
+::: Remark
+### Periodicity of exponential
+
+For all $k \in \Z$ we have
+$$
+e^{i \theta}=e^{i(\theta+2 \pi k)} \,.
+$${#eq-exponential-periodic}
+As we did for the principal value of the argument, also for the exponential form we select $\theta \in(-\pi, \pi]$. In particular equation
+(@eq-exponential-periodic) is saying that the complex exponential is
+$2\pi$-periodic.
+
+> Equation (@eq-exponential-periodic) follows immediately by Euler's identity and periodicity of $\cos$ and $\sin$, since 
+\begin{align*}
+e^{i(\theta+2 \pi k)} & = \cos(\theta+2 \pi k) + i \sin (\theta+2 \pi k)  \\
+& = \cos(\theta) + i \sin (\theta) = e^{i \theta} \,.
+\end{align*}  
+
+:::
+
+
+The exponential for is very useful for computing powers of 
+complex numbers.
+
+
+::: Example 
+Suppose we want to compute $(-2+2 i)^{4}$. We could do this by means of the binomial theorem:
+\begin{align*}
+(-2+2 i)^{4} & =(-2)^{4}+\left(\begin{array}{l}
+4 \\
+1
+\end{array}\right)(-2)^{3} \cdot 2 i+\left(\begin{array}{l}
+4 \\
+2
+\end{array}\right)(-2)^{2} \cdot(2 i)^{2}+\left(\begin{array}{l}
+4 \\
+3
+\end{array}\right)(-2) \cdot(2 i)^{3}+(2 i)^{4} \\
+& =16-4 \cdot 8 \cdot 2 i-6 \cdot 4 \cdot 4+4 \cdot 2 \cdot 8 i+16 \\
+& =16-64 i-96+64 i+16=-64 \,.
+\end{align*}
+
+Using the exponential form simplifies this calculation. Indeed, we know
+that 
+$$
+-2+2 i = \sqrt{8} e^{i \frac{3}{4} \pi} 
+$$
+by Example \ref{example-exponential-form}. Hence
+$$
+(-2+2 i)^{4}=\left(\sqrt{8} e^{i \frac{3}{4} \pi}\right)^{4}=8^{2} e^{i 3 \pi}=-64 \,,
+$$
+where we used that 
+$$
+e^{i 3 \pi} = e^{i \pi} = \cos(\pi) + i \sin(\pi) = - 1
+$$
+by $2\pi$ periodicity of $e^z$ and Euler's identity. 
+:::
+
+
+
+::: Example 
+
+Suppose we want to compute 
+$$
+i^{i} \,.
+$$
+It is not even clear how to do this calculation in Cartesian form. However, we know that 
+$$
+|i| = 1 \,, \quad \arg(i) = \frac{\pi}{2} \,.
+$$
+Hence we can write $i$ in exponential form
+$$
+i= |i| e^{i\arg(i)} = e^{i \frac{\pi}{2}} \,.
+$$ 
+Therefore
+$$
+i^{i}=\left(e^{i \frac{\pi}{2}}\right)^{i}=e^{i^2\frac{\pi}{2}}=e^{-\frac{\pi}{2}} \,.
+$$
+
+:::
+
+
+
+
 
 
 

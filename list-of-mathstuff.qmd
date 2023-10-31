@@ -475,13 +475,35 @@
 
  [**Definition 5.32**](#trigonometric-form): Trigonometric form\Pageref{trigonometric-form}
 
- [**Example 5.33**](#Example-5.33)\Pageref{Example-5.33}
+ [**Example 5.33**](#example-trigonometric-form)\Pageref{example-trigonometric-form}
 
  [**Corollary 5.34**](#corollary-arg): Computing $\arg(z)$\Pageref{corollary-arg}
 
  [**Proof**](#Proof*-5.11)\Pageref{Proof*-5.11}
 
  [**Example 5.35**](#Example-5.35)\Pageref{Example-5.35}
+
+ [**Theorem 5.36**](#theorem-euler-identity): Euler’s identity\Pageref{theorem-euler-identity}
+
+ [**Proof**](#Proof*-5.12)\Pageref{Proof*-5.12}
+
+ [**Theorem 5.37**](#Theorem-5.37)\Pageref{Theorem-5.37}
+
+ [**Proof**](#Proof*-5.13)\Pageref{Proof*-5.13}
+
+ [**Theorem 5.38**](#Theorem-5.38)\Pageref{Theorem-5.38}
+
+ [**Proof**](#Proof*-5.14)\Pageref{Proof*-5.14}
+
+ [**Definition 5.39**](#exponential-form-1): Exponential form\Pageref{exponential-form-1}
+
+ [**Example 5.40**](#example-exponential-form)\Pageref{example-exponential-form}
+
+ [**Remark 5.41**](#periodicity-of-exponential): Periodicity of exponential\Pageref{periodicity-of-exponential}
+
+ [**Example 5.42**](#Example-5.42)\Pageref{Example-5.42}
+
+ [**Example 5.43**](#Example-5.43)\Pageref{Example-5.43}
 
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 
