@@ -391,119 +391,177 @@
 
  [**Proof**](#Proof*-4.16)\Pageref{Proof*-4.16}
 
- [**Definition 5.1**](#complex-numbers-1): Complex Numbers\Pageref{complex-numbers-1}
+ [**Question 5.1**](#Question-5.1)\Pageref{Question-5.1}
 
- [**Definition 5.2**](#Definition-5.2)\Pageref{Definition-5.2}
+ [**Definition 5.2**](#complex-numbers-1): Complex Numbers\Pageref{complex-numbers-1}
 
- [**Definition 5.3**](#definition-addition-C): Addition in $\mathbb{C}$\Pageref{definition-addition-C}
+ [**Definition 5.3**](#Definition-5.3)\Pageref{Definition-5.3}
 
- [**Notation 5.4**](#Notation-5.4)\Pageref{Notation-5.4}
+ [**Definition 5.4**](#definition-addition-C): Addition in $\mathbb{C}$\Pageref{definition-addition-C}
 
- [**Remark 5.5**](#remark-formal-multiplication): Formal calculation for multiplication in $\mathbb{C}$\Pageref{remark-formal-multiplication}
+ [**Notation 5.5**](#Notation-5.5)\Pageref{Notation-5.5}
 
- [**Definition 5.6**](#definition-multiplication-C): Multiplication in $\mathbb{C}$\Pageref{definition-multiplication-C}
+ [**Remark 5.6**](#remark-formal-multiplication): Formal calculation for multiplication in $\mathbb{C}$\Pageref{remark-formal-multiplication}
 
- [**Remark 5.7**](#remark-complex-i)\Pageref{remark-complex-i}
+ [**Definition 5.7**](#definition-multiplication-C): Multiplication in $\mathbb{C}$\Pageref{definition-multiplication-C}
+
+ [**Remark 5.8**](#remark-complex-i)\Pageref{remark-complex-i}
 
  [**Important**](#Important*-5.1)\Pageref{Important*-5.1}
 
- [**Example 5.8**](#Example-5.8)\Pageref{Example-5.8}
+ [**Example 5.9**](#Example-5.9)\Pageref{Example-5.9}
 
- [**Proposition 5.9**](#proposition-C-additive-inverse): Additive inverse in $\mathbb{C}$\Pageref{proposition-C-additive-inverse}
+ [**Proposition 5.10**](#proposition-C-additive-inverse): Additive inverse in $\mathbb{C}$\Pageref{proposition-C-additive-inverse}
 
- [**Remark 5.10**](#remark-formal-inverse): Formal calculation for multiplicative inverse\Pageref{remark-formal-inverse}
+ [**Remark 5.11**](#remark-formal-inverse): Formal calculation for multiplicative inverse\Pageref{remark-formal-inverse}
 
- [**Proposition 5.11**](#proposition-C-multiplicative-inverse): Multiplicative inverse in $\mathbb{C}$\Pageref{proposition-C-multiplicative-inverse}
+ [**Proposition 5.12**](#proposition-C-multiplicative-inverse): Multiplicative inverse in $\mathbb{C}$\Pageref{proposition-C-multiplicative-inverse}
 
  [**Proof**](#Proof*-5.2)\Pageref{Proof*-5.2}
 
  [**Important**](#Important*-5.3)\Pageref{Important*-5.3}
 
- [**Example 5.12**](#Example-5.12)\Pageref{Example-5.12}
+ [**Example 5.13**](#Example-5.13)\Pageref{Example-5.13}
 
- [**Theorem 5.13**](#Theorem-5.13)\Pageref{Theorem-5.13}
+ [**Theorem 5.14**](#Theorem-5.14)\Pageref{Theorem-5.14}
 
  [**Proof**](#Proof*-5.4)\Pageref{Proof*-5.4}
 
- [**Example 5.14**](#Example-5.14)\Pageref{Example-5.14}
+ [**Example 5.15**](#Example-5.15)\Pageref{Example-5.15}
 
- [**Theorem 5.15**](#theorem-C-order)\Pageref{theorem-C-order}
+ [**Theorem 5.16**](#theorem-C-order)\Pageref{theorem-C-order}
 
  [**Proof**](#Proof*-5.5)\Pageref{Proof*-5.5}
 
- [**Definition 5.16**](#complex-conjugate): Complex conjugate\Pageref{complex-conjugate}
+ [**Definition 5.17**](#complex-conjugate): Complex conjugate\Pageref{complex-conjugate}
 
- [**Example 5.17**](#Example-5.17)\Pageref{Example-5.17}
+ [**Example 5.18**](#Example-5.18)\Pageref{Example-5.18}
 
- [**Theorem 5.18**](#Theorem-5.18)\Pageref{Theorem-5.18}
+ [**Theorem 5.19**](#Theorem-5.19)\Pageref{Theorem-5.19}
 
  [**Proof**](#Proof*-5.6)\Pageref{Proof*-5.6}
 
- [**Example 5.19**](#Example-5.19)\Pageref{Example-5.19}
+ [**Example 5.20**](#Example-5.20)\Pageref{Example-5.20}
 
- [**Definition 5.20**](#modulus): Modulus\Pageref{modulus}
+ [**Definition 5.21**](#modulus): Modulus\Pageref{modulus}
 
- [**Remark 5.21**](#modulus-of-real-numbers): Modulus of Real numbers\Pageref{modulus-of-real-numbers}
+ [**Remark 5.22**](#modulus-of-real-numbers): Modulus of Real numbers\Pageref{modulus-of-real-numbers}
 
- [**Definition 5.22**](#distance-in-mathbbc): Distance in $\mathbb{C}$\Pageref{distance-in-mathbbc}
+ [**Definition 5.23**](#distance-in-mathbbc): Distance in $\mathbb{C}$\Pageref{distance-in-mathbbc}
 
- [**Theorem 5.23**](#Theorem-5.23)\Pageref{Theorem-5.23}
+ [**Theorem 5.24**](#Theorem-5.24)\Pageref{Theorem-5.24}
 
  [**Proof**](#Proof*-5.7)\Pageref{Proof*-5.7}
 
- [**Example 5.24**](#Example-5.24)\Pageref{Example-5.24}
+ [**Example 5.25**](#Example-5.25)\Pageref{Example-5.25}
 
- [**Theorem 5.25**](#Theorem-5.25)\Pageref{Theorem-5.25}
+ [**Theorem 5.26**](#Theorem-5.26)\Pageref{Theorem-5.26}
 
  [**Proof**](#Proof*-5.8)\Pageref{Proof*-5.8}
 
- [**Theorem 5.26**](#triangle-inequality-in-mathbbc): Triangle inequality in $\mathbb{C}$\Pageref{triangle-inequality-in-mathbbc}
+ [**Theorem 5.27**](#triangle-inequality-in-mathbbc): Triangle inequality in $\mathbb{C}$\Pageref{triangle-inequality-in-mathbbc}
 
  [**Proof**](#Proof*-5.9)\Pageref{Proof*-5.9}
 
- [**Remark 5.27**](#geometric-interpretation-of-triangle-inequality): Geometric interpretation of triangle inequality\Pageref{geometric-interpretation-of-triangle-inequality}
+ [**Remark 5.28**](#geometric-interpretation-of-triangle-inequality): Geometric interpretation of triangle inequality\Pageref{geometric-interpretation-of-triangle-inequality}
 
- [**Definition 5.28**](#argument): Argument\Pageref{argument}
+ [**Definition 5.29**](#argument): Argument\Pageref{argument}
 
  [**Warning**](#Warning*-5.10)\Pageref{Warning*-5.10}
 
- [**Remark 5.29**](#principal-value): Principal Value\Pageref{principal-value}
+ [**Remark 5.30**](#principal-value): Principal Value\Pageref{principal-value}
 
- [**Example 5.30**](#Example-5.30)\Pageref{Example-5.30}
+ [**Example 5.31**](#Example-5.31)\Pageref{Example-5.31}
 
- [**Theorem 5.31**](#theorem-polar-coordinates): Polar coordinates\Pageref{theorem-polar-coordinates}
+ [**Theorem 5.32**](#theorem-polar-coordinates): Polar coordinates\Pageref{theorem-polar-coordinates}
 
- [**Definition 5.32**](#trigonometric-form): Trigonometric form\Pageref{trigonometric-form}
+ [**Definition 5.33**](#trigonometric-form): Trigonometric form\Pageref{trigonometric-form}
 
- [**Example 5.33**](#example-trigonometric-form)\Pageref{example-trigonometric-form}
+ [**Example 5.34**](#example-trigonometric-form)\Pageref{example-trigonometric-form}
 
- [**Corollary 5.34**](#corollary-arg): Computing $\arg(z)$\Pageref{corollary-arg}
+ [**Corollary 5.35**](#corollary-arg): Computing $\arg(z)$\Pageref{corollary-arg}
 
  [**Proof**](#Proof*-5.11)\Pageref{Proof*-5.11}
 
- [**Example 5.35**](#Example-5.35)\Pageref{Example-5.35}
+ [**Example 5.36**](#Example-5.36)\Pageref{Example-5.36}
 
- [**Theorem 5.36**](#theorem-euler-identity): Euler’s identity\Pageref{theorem-euler-identity}
+ [**Theorem 5.37**](#theorem-euler-identity): Euler’s identity\Pageref{theorem-euler-identity}
 
  [**Proof**](#Proof*-5.12)\Pageref{Proof*-5.12}
 
- [**Theorem 5.37**](#Theorem-5.37)\Pageref{Theorem-5.37}
+ [**Theorem 5.38**](#Theorem-5.38)\Pageref{Theorem-5.38}
 
  [**Proof**](#Proof*-5.13)\Pageref{Proof*-5.13}
 
- [**Theorem 5.38**](#Theorem-5.38)\Pageref{Theorem-5.38}
+ [**Theorem 5.39**](#Theorem-5.39)\Pageref{Theorem-5.39}
 
  [**Proof**](#Proof*-5.14)\Pageref{Proof*-5.14}
 
- [**Definition 5.39**](#exponential-form-1): Exponential form\Pageref{exponential-form-1}
+ [**Definition 5.40**](#exponential-form-1): Exponential form\Pageref{exponential-form-1}
 
- [**Example 5.40**](#example-exponential-form)\Pageref{example-exponential-form}
+ [**Example 5.41**](#example-exponential-form)\Pageref{example-exponential-form}
 
- [**Remark 5.41**](#periodicity-of-exponential): Periodicity of exponential\Pageref{periodicity-of-exponential}
+ [**Remark 5.42**](#periodicity-of-exponential): Periodicity of exponential\Pageref{periodicity-of-exponential}
 
- [**Example 5.42**](#Example-5.42)\Pageref{Example-5.42}
+ [**Proposition 5.43**](#proposition-complex-exponential)\Pageref{proposition-complex-exponential}
 
- [**Example 5.43**](#Example-5.43)\Pageref{Example-5.43}
+ [**Example 5.44**](#Example-5.44)\Pageref{Example-5.44}
+
+ [**Example 5.45**](#Example-5.45)\Pageref{Example-5.45}
+
+ [**Question 5.46**](#Question-5.46)\Pageref{Question-5.46}
+
+ [**Theorem 5.47**](#theorem-fta): Fundamental theorem of algebra\Pageref{theorem-fta}
+
+ [**Example 5.48**](#Example-5.48)\Pageref{Example-5.48}
+
+ [**Example 5.49**](#example-degree-4)\Pageref{example-degree-4}
+
+ [**Definition 5.50**](#Definition-5.50)\Pageref{Definition-5.50}
+
+ [**Example 5.51**](#example-multiplicity)\Pageref{example-multiplicity}
+
+ [**Question 5.52**](#Question-5.52)\Pageref{Question-5.52}
+
+ [**Theorem 5.53**](#theorem-abel-ruffini): Abel-Ruffini\Pageref{theorem-abel-ruffini}
+
+ [**Proposition 5.54**](#proposition-quadratic-formula): Quadratic formula\Pageref{proposition-quadratic-formula}
+
+ [**Example 5.55**](#Example-5.55)\Pageref{Example-5.55}
+
+ [**Example 5.56**](#Example-5.56)\Pageref{Example-5.56}
+
+ [**Example 5.57**](#Example-5.57)\Pageref{Example-5.57}
+
+ [**Question 5.58**](#Question-5.58)\Pageref{Question-5.58}
+
+ [**Proposition 5.59**](#proposition-quadratic-formula-C): Generalization of quadratci formula\Pageref{proposition-quadratic-formula-C}
+
+ [**Remark 5.60**](#Remark-5.60)\Pageref{Remark-5.60}
+
+ [**Example 5.61**](#Example-5.61)\Pageref{Example-5.61}
+
+ [**Remark 5.62**](#polynomial-equations-of-order-n34): Polynomial equations of order $n=3,4$\Pageref{polynomial-equations-of-order-n34}
+
+ [**Example 5.63**](#Example-5.63)\Pageref{Example-5.63}
+
+ [**Example 5.64**](#Example-5.64)\Pageref{Example-5.64}
+
+ [**Problem**](#Problem*-5.15)\Pageref{Problem*-5.15}
+
+ [**Question 5.65**](#Question-5.65)\Pageref{Question-5.65}
+
+ [**Example 5.66**](#Example-5.66)\Pageref{Example-5.66}
+
+ [**Theorem 5.67**](#Theorem-5.67)\Pageref{Theorem-5.67}
+
+ [**Proof**](#Proof*-5.16)\Pageref{Proof*-5.16}
+
+ [**Definition 5.68**](#Definition-5.68)\Pageref{Definition-5.68}
+
+ [**Example 5.69**](#Example-5.69)\Pageref{Example-5.69}
+
+ [**Example 5.70**](#Example-5.70)\Pageref{Example-5.70}
 
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 

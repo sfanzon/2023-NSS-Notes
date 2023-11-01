@@ -66,41 +66,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Question {
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
 }
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
 }
 .Lemma {
   --color1: #f4cce0;
@@ -110,25 +86,53 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Warning {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -256,6 +260,9 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#polar-coordinates" id="toc-polar-coordinates" class="nav-link" data-scroll-target="#polar-coordinates"><span class="header-section-number">5.4</span> Polar coordinates</a></li>
   <li><a href="#exponential-form" id="toc-exponential-form" class="nav-link" data-scroll-target="#exponential-form"><span class="header-section-number">5.5</span> Exponential form</a></li>
+  <li><a href="#fundamental-theorem-of-algebra" id="toc-fundamental-theorem-of-algebra" class="nav-link" data-scroll-target="#fundamental-theorem-of-algebra"><span class="header-section-number">5.6</span> Fundamental Theorem of Algebra</a></li>
+  <li><a href="#solving-polynomial-equations" id="toc-solving-polynomial-equations" class="nav-link" data-scroll-target="#solving-polynomial-equations"><span class="header-section-number">5.7</span> Solving polynomial equations</a></li>
+  <li><a href="#roots-of-unity" id="toc-roots-of-unity" class="nav-link" data-scroll-target="#roots-of-unity"><span class="header-section-number">5.8</span> Roots of unity</a></li>
   </ul>
 </nav>
     </div>
@@ -283,18 +290,25 @@ ul.task-list li input[type="checkbox"] {
 \sqrt{x}:= \alpha \,, \quad \alpha := \sup \{ t \in \mathbb{R}\, \colon \,t^2 &lt; x  \}\,,
 \]</span> and proved that <span class="math display">\[
 \alpha^2 = x \,.
-\]</span> This procedure is only possible if <span class="math inline">\(x \geq 0\)</span>: there does not exist, e.g., a number <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span class="math display">\[
-\alpha^{2}=-1 \,.
-\]</span> To overcome this difficulty, the <strong>imaginary numbers</strong> or <strong>complex numbers</strong> were introduced. We define <span class="math inline">\(i\)</span> to be that <em>number</em> such that <span class="math display">\[
+\]</span> This procedure was possible for <span class="math inline">\(x \geq 0\)</span>.</p>
+<div id="Question-1" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 1</strong></summary><div>Is there a number <span class="math inline">\(\alpha \in \mathbb{R}\)</span> such that <span id="eq-complex-intro-1"><span class="math display">\[
+\alpha^{2}=-1  \,\, ?
+\tag{5.1}\]</span></span><p></p>
+</div></details>
+</div>
+<p>The answer to the above question is no. This is because <span class="math inline">\(\mathbb{R}\)</span> is an ordered field, and from axiom (MO) it follows that: <span class="math display">\[
+x^2 \geq 0 \,, \quad \forall \, x \in \mathbb{R}\,.
+\]</span> However we would still like to solve equation (<a href="#eq-complex-intro-1"><span>5.1</span></a>) somehow. To do this, we introduce the <strong>imaginary numbers</strong> or <strong>complex numbers</strong>. We define <span class="math inline">\(i\)</span> to be that <em>number</em> such that <span class="math display">\[
 i^{2}=-1 \,.
-\]</span> Formally, we can also think of <span class="math inline">\(i=\sqrt{-1}\)</span>. We can use this to define, for <span class="math inline">\(x&lt;0\)</span>, <span class="math display">\[
+\]</span> Formally, we can also think of <span class="math inline">\(i=\sqrt{-1}\)</span>. We can use this speacial number to define the square root of a negative number <span class="math inline">\(x&lt;0\)</span>: <span class="math display">\[
 \sqrt{x}: = i \sqrt{-x} \,.
 \]</span> Note that <span class="math inline">\(\sqrt{-x}\)</span> is properly defined in <span class="math inline">\(\mathbb{R}\)</span>, because <span class="math inline">\(-x&gt;0\)</span> if <span class="math inline">\(x&lt;0\)</span>.</p>
 <section id="the-field-mathbbc" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="the-field-mathbbc"><span class="header-section-number">5.1</span> The field <span class="math inline">\(\mathbb{C}\)</span></h2>
 <p>We would like to be able to do calculations with the newly introduced complex numbers, and investigate their properties. We can introduce them rigorously as a field, as we did for <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <div id="complex-numbers" class="Definition" title="Complex Numbers">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Complex Numbers</summary><div>The set of complex numbers <span class="math inline">\(\mathbb{C}\)</span> is defined as<p></p>
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2: </strong>Complex Numbers</summary><div>The set of complex numbers <span class="math inline">\(\mathbb{C}\)</span> is defined as<p></p>
 <p><span class="math display">\[
 \mathbb{C}:= \mathbb{R}\oplus i \mathbb{R}:= \{x \oplus i y  \, \colon \,x, y \in \mathbb{R}\} \,.
 \]</span></p>
@@ -303,8 +317,8 @@ i^{2}=-1 \,.
 <p>In the above the symbol <span class="math inline">\(\oplus\)</span> is used to denote the pair <span class="math display">\[
 x \oplus i y = (x,y)
 \]</span> with <span class="math inline">\(x,y \in \mathbb{R}\)</span>. This means that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> play different <em>roles</em>.</p>
-<div id="Definition-2" class="Definition">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2</strong></summary><div>
+<div id="Definition-3" class="Definition">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 3</strong></summary><div>
 <p>For a complex number <span class="math display">\[
 z = x \oplus i y  \in \mathbb{C}
 \]</span> we say that</p>
@@ -327,7 +341,7 @@ y = \operatorname{Im}(z)
 + , \cdot \,\, \colon \mathbb{C}\times \mathbb{C}\to \mathbb{C}\,.
 \]</span> Then we need to prove that these operations satisfy all the field axioms.</p>
 <div id="definition-addition-C" class="Definition" title="Addition in \mathbb{C}">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 3: </strong>Addition in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 4: </strong>Addition in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
 z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
 \]</span> for some <span class="math inline">\(x_1,x_2,y_1,y_2 \in \mathbb{R}\)</span>. We define the sum of <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as <span class="math display">\[
 z_1 + z_2 = \left( x_{1} \oplus i y_{1} \right)+ \left(x_{2} \oplus i y_{2} \right):=\left(x_{1}+x_{2}\right) \oplus i  \left(y_{1}+y_{2}\right)
@@ -335,8 +349,8 @@ z_1 + z_2 = \left( x_{1} \oplus i y_{1} \right)+ \left(x_{2} \oplus i y_{2} \rig
 </div></details>
 </div>
 <p>Clearly, <span class="math inline">\(z_1 + z_2\)</span> as defined above is an element of <span class="math inline">\(\mathbb{C}\)</span>. Therefore <span class="math inline">\(+\)</span> defines a binary operation over <span class="math inline">\(\mathbb{C}\)</span>.</p>
-<div id="Notation-4" class="Notation">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 4</strong></summary><div>From the above definition, we have that, for all <span class="math inline">\(x, y \in \mathbb{R}\)</span>,<p></p>
+<div id="Notation-5" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 5</strong></summary><div>From the above definition, we have that, for all <span class="math inline">\(x, y \in \mathbb{R}\)</span>,<p></p>
 <p><span class="math display">\[
 (x \oplus i 0 )+(0 \oplus i y)= x \oplus i y .
 \]</span> To simplify notation, we will write <span class="math display">\[
@@ -350,7 +364,7 @@ x + i y = x + y i \,.
 </div>
 <p>We now want to define multiplication between complex numbers.</p>
 <div id="remark-formal-multiplication" class="Remark" title="Formal calculation for multiplication in \mathbb{C}">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 5: </strong>Formal calculation for multiplication in <span class="math inline">\(\mathbb{C}\)</span></summary><div>How to define multiplication in <span class="math inline">\(\mathbb{C}\)</span>? Whatever the definition may be, at least it has to give that that <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 6: </strong>Formal calculation for multiplication in <span class="math inline">\(\mathbb{C}\)</span></summary><div>How to define multiplication in <span class="math inline">\(\mathbb{C}\)</span>? Whatever the definition may be, at least it has to give that that <span class="math display">\[
 i^{2}=i \cdot i=-1 \,.
 \]</span> Keeping the above in mind, let us do some formal calculations: For <span class="math inline">\(z_1 = x_1 + i y_1, z_2 = x_2 + i y_2\)</span> we have<p></p>
 <p><span class="math display">\[\begin{align*}
@@ -360,9 +374,9 @@ z_1 \cdot z_2 &amp; = \left(x_{1}+i y_{1}  \right) \cdot \left(x_{2}+ i y_{2} \r
 \end{align*}\]</span></p>
 </div></details>
 </div>
-<p>Remark <a href="chap_5.html#remark-formal-multiplication">5</a> motivates the following definition of multiplication.</p>
+<p>Remark <a href="chap_5.html#remark-formal-multiplication">6</a> motivates the following definition of multiplication.</p>
 <div id="definition-multiplication-C" class="Definition" title="Multiplication in \mathbb{C}">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 6: </strong>Multiplication in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 7: </strong>Multiplication in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, so that <span class="math display">\[
 z_1 = x_1 \oplus i y_1 \,\,, \quad z_2 = x_2 \oplus i  y_2 \,\, ,
 \]</span> for some <span class="math inline">\(x_1,x_2,y_1,y_2 \in \mathbb{R}\)</span>. We define the multiplication of <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as <span class="math display">\[
 z_1 \cdot z_2 = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) := \left(x_{1} \cdot x_{2} - y_{1} \cdot y_{2}\right) + i \left(x_{1} \cdot y_{2} + x_{2} \cdot y_{1} \right) \,,
@@ -371,7 +385,7 @@ z_1 \cdot z_2 = \left(x_{1}+i y_{1} \right) \cdot\left(x_{2}+ i y_{2} \right) :=
 </div>
 <p>Clearly, <span class="math inline">\(z_1 \cdot z_2\)</span> as defined above is an element of <span class="math inline">\(\mathbb{C}\)</span>. Therefore <span class="math inline">\(\cdot\)</span> defines a binary operation over <span class="math inline">\(\mathbb{C}\)</span>.</p>
 <div id="remark-complex-i" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 7</strong></summary><div>To check that we have given a good definition of product, we should have that <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 8</strong></summary><div>To check that we have given a good definition of product, we should have that <span class="math display">\[
 i^2 = - 1\,,
 \]</span> as expected. Indeed:<p></p>
 <p><span class="math display">\[\begin{align*}
@@ -381,17 +395,17 @@ i^{2} &amp; = (0+ 1 i) \cdot (0+ 1 i) \\
 </div></details>
 </div>
 <div id="Important*-1" class="Important">
-<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>In view of Remark <a href="chap_5.html#remark-complex-i">7</a>, we see that he formal calculations in Remark <a href="chap_5.html#remark-formal-multiplication">5</a> are compatible with the definition of multiplication of complex numbers. Therefore, it is not necessary to memorize the multiplication formula, but it suffices to carry out calculations as usual, and replace <span class="math inline">\(i^{2}\)</span> by <span class="math inline">\(-1\)</span>.<p></p>
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>In view of Remark <a href="chap_5.html#remark-complex-i">8</a>, we see that he formal calculations in Remark <a href="chap_5.html#remark-formal-multiplication">6</a> are compatible with the definition of multiplication of complex numbers. Therefore, it is not necessary to memorize the multiplication formula, but it suffices to carry out calculations as usual, and replace <span class="math inline">\(i^{2}\)</span> by <span class="math inline">\(-1\)</span>.<p></p>
 </div></details>
 </div>
-<div id="Example-8" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 8</strong></summary><div>Suppose we want to multiply the complex numbers <span class="math display">\[
+<div id="Example-9" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 9</strong></summary><div>Suppose we want to multiply the complex numbers <span class="math display">\[
 z =  -2+3 i \,, \quad w = 1- i \,.
 \]</span> Using the definition we compute <span class="math display">\[\begin{align*}
 z \cdot w &amp; = (-2+3 i) \cdot (1 -  i) \\
             &amp; = (-2-(-3))+(2+3) i \\
             &amp; = 1 + 5 i \, .
-\end{align*}\]</span> Alternatively, we can proceed formally as in Remark <a href="chap_5.html#remark-formal-multiplication">5</a>. We just need to recall that <span class="math inline">\(i^2\)</span> has to be replaced with <span class="math inline">\(-1\)</span>: <span class="math display">\[\begin{align*}
+\end{align*}\]</span> Alternatively, we can proceed formally as in Remark <a href="chap_5.html#remark-formal-multiplication">6</a>. We just need to recall that <span class="math inline">\(i^2\)</span> has to be replaced with <span class="math inline">\(-1\)</span>: <span class="math display">\[\begin{align*}
 z \cdot w &amp; = (-2+3 i) \cdot (1 -  i) \\
             &amp; = - 2 + 2i + 3i - 3 i^2  \\
             &amp; = (-2  + 3 ) + (  2 + 3 ) i \\
@@ -403,7 +417,7 @@ z \cdot w &amp; = (-2+3 i) \cdot (1 -  i) \\
 (\mathbb{C}, + , \cdot)
 \]</span> is a field. All the field axioms are trivial to check, except for the existence of additive and multiplicative inverses.</p>
 <div id="proposition-C-additive-inverse" class="Proposition" title="Additive inverse in \mathbb{C}">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 9: </strong>Additive inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>The neutral element of addition in <span class="math inline">\(\mathbb{C}\)</span> is the number <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 10: </strong>Additive inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>The neutral element of addition in <span class="math inline">\(\mathbb{C}\)</span> is the number <span class="math display">\[
 0 := 0 + 0 i \,.
 \]</span> For any <span class="math inline">\(z = x + i y \in \mathbb{C}\)</span>, the unique additive inverse is given by <span class="math display">\[
 - z := -x - i y \,.
@@ -412,7 +426,7 @@ z \cdot w &amp; = (-2+3 i) \cdot (1 -  i) \\
 </div>
 <p>The proof is immediate and is left as an exercise. The multiplication requires more care.</p>
 <div id="remark-formal-inverse" class="Remark" title="Formal calculation for multiplicative inverse">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 10: </strong>Formal calculation for multiplicative inverse</summary><div>Let us first carry our some formal calculations. Let <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 11: </strong>Formal calculation for multiplicative inverse</summary><div>Let us first carry our some formal calculations. Let <span class="math display">\[
 z = x+iy \in \mathbb{C}\,, \quad z \neq 0 \,.
 \]</span> First, note that <span class="math display">\[
 z \cdot 1 = (x + iy) \cdot (1 + 0 i)  = x + iy = z \,,
@@ -431,7 +445,7 @@ z^{-1} = \frac{1}{x + iy} \,.
 </div>
 <p>Motivated by the above remark, we define inverses in <span class="math inline">\(\mathbb{C}\)</span> in the following way.</p>
 <div id="proposition-C-multiplicative-inverse" class="Proposition" title="Multiplicative inverse in \mathbb{C}">
-<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 11: </strong>Multiplicative inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>The neutral element of multiplication in <span class="math inline">\(\mathbb{C}\)</span> is the number <span class="math display">\[
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 12: </strong>Multiplicative inverse in <span class="math inline">\(\mathbb{C}\)</span></summary><div>The neutral element of multiplication in <span class="math inline">\(\mathbb{C}\)</span> is the number <span class="math display">\[
 1 := 1 + 0 i \,.
 \]</span> For any <span class="math inline">\(z = x + i y \in \mathbb{C}\)</span>, the unique multiplicative inverse is given by <span class="math display">\[
 z^{-1} := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
@@ -451,14 +465,14 @@ z \cdot w &amp; = (x+i y) \cdot \left(\frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2
 <div id="Important*-3" class="Important">
 <p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>It is not necessary to memorize the formula for <span class="math inline">\(z^{-1}\)</span>. Indeed one can just remember the trick of multiplying by <span class="math display">\[
 1 = \frac{x - iy }{x - iy} \,,
-\]</span> and proceed formally, as done in Remark <a href="chap_5.html#remark-formal-inverse">10</a>.<p></p>
+\]</span> and proceed formally, as done in Remark <a href="chap_5.html#remark-formal-inverse">11</a>.<p></p>
 </div></details>
 </div>
-<div id="Example-12" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 12</strong></summary><div>Let <span class="math inline">\(z = 3 + 2 i\)</span>. We want to compute <span class="math inline">\(z^{-1}\)</span>. By the formula in Propostion <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a> we immediately get <span class="math display">\[
+<div id="Example-13" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 13</strong></summary><div>Let <span class="math inline">\(z = 3 + 2 i\)</span>. We want to compute <span class="math inline">\(z^{-1}\)</span>. By the formula in Propostion <a href="chap_5.html#proposition-C-multiplicative-inverse">12</a> we immediately get <span class="math display">\[
 z^{-1} = \frac{3}{3^{2}+2^{2}} +  \, \frac{-2}{3^{2}+2^{2}} \, i =
 \frac{3}{13}-\frac{2}{13} \, i  \,.
-\]</span> Alternatively, we can proceed formally as in Remark <a href="chap_5.html#remark-formal-inverse">10</a> <span class="math display">\[\begin{align*}
+\]</span> Alternatively, we can proceed formally as in Remark <a href="chap_5.html#remark-formal-inverse">11</a> <span class="math display">\[\begin{align*}
 (3+2 i)^{-1} &amp; = \frac{1}{3+2 i} \\
              &amp; = \frac{1}{3+2 i} \, \frac{3-2 i}{3-2 i} \\
              &amp; = \frac{3-2 i}{3^2+2^2} \\
@@ -467,8 +481,8 @@ z^{-1} = \frac{3}{3^{2}+2^{2}} +  \, \frac{-2}{3^{2}+2^{2}} \, i =
 </div></details>
 </div>
 <p>We can now prove that <span class="math inline">\(\mathbb{C}\)</span> is a field.</p>
-<div id="Theorem-13" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13</strong></summary><div><span class="math inline">\((\mathbb{C},+, \cdot)\)</span> is a field.<p></p>
+<div id="Theorem-14" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 14</strong></summary><div><span class="math inline">\((\mathbb{C},+, \cdot)\)</span> is a field.<p></p>
 </div></details>
 </div>
 <div id="Proof*-4" class="Proof">
@@ -478,15 +492,15 @@ z^{-1} = \frac{3}{3^{2}+2^{2}} +  \, \frac{-2}{3^{2}+2^{2}} \, i =
 (x+iy)+(a+ ib) &amp; = (x+a)+ i (y+b) \\
              &amp; = (a + x)+ i (b+y) \\
              &amp; = (a + i b ) + (x + i y) \,,
-\end{align*}\]</span> where we used Definition <a href="chap_5.html#definition-addition-C">3</a> in the first and last equality, and the commutative property of the real numbers (which holds since by definition <span class="math inline">\(\mathbb{R}\)</span> is a field) in the second equality. Associativity can be checked in the same way.</p></li>
-<li><p>(A2) The neutral element of addition is <span class="math inline">\(0\)</span>, as stated in Proposition <a href="chap_5.html#proposition-C-additive-inverse">9</a>.</p></li>
-<li><p>(A3) Existence of additive inverses is given by Proposition <a href="chap_5.html#proposition-C-additive-inverse">9</a>.</p></li>
+\end{align*}\]</span> where we used Definition <a href="chap_5.html#definition-addition-C">4</a> in the first and last equality, and the commutative property of the real numbers (which holds since by definition <span class="math inline">\(\mathbb{R}\)</span> is a field) in the second equality. Associativity can be checked in the same way.</p></li>
+<li><p>(A2) The neutral element of addition is <span class="math inline">\(0\)</span>, as stated in Proposition <a href="chap_5.html#proposition-C-additive-inverse">10</a>.</p></li>
+<li><p>(A3) Existence of additive inverses is given by Proposition <a href="chap_5.html#proposition-C-additive-inverse">10</a>.</p></li>
 </ul>
 <p>For multiplication we have:</p>
 <ul>
-<li><p>(M1) Commutativity and associativity of product in <span class="math inline">\(\mathbb{C}\)</span> can be checked using Definition <a href="chap_5.html#definition-multiplication-C">6</a> and commutativity and associativity of sum and multiplication in <span class="math inline">\(\mathbb{R}\)</span>.</p></li>
-<li><p>(M2) The neutral element of multiplication is <span class="math inline">\(1\)</span>, as stated in Propostion <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a>.</p></li>
-<li><p>(M3) Existence of multiplicative inverses is guaranteed by Proposition <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a>.</p></li>
+<li><p>(M1) Commutativity and associativity of product in <span class="math inline">\(\mathbb{C}\)</span> can be checked using Definition <a href="chap_5.html#definition-multiplication-C">7</a> and commutativity and associativity of sum and multiplication in <span class="math inline">\(\mathbb{R}\)</span>.</p></li>
+<li><p>(M2) The neutral element of multiplication is <span class="math inline">\(1\)</span>, as stated in Propostion <a href="chap_5.html#proposition-C-multiplicative-inverse">12</a>.</p></li>
+<li><p>(M3) Existence of multiplicative inverses is guaranteed by Proposition <a href="chap_5.html#proposition-C-multiplicative-inverse">12</a>.</p></li>
 </ul>
 <p>Finally one should check the associative property (AM). This is left as an exercise.</p>
 </div></details>
@@ -497,24 +511,24 @@ z^{-1} = \frac{3}{3^{2}+2^{2}} +  \, \frac{-2}{3^{2}+2^{2}} \, i =
 z = x + i y \,, \quad w = a + ib \,.
 \]</span> We have two options:</p>
 <ol type="1">
-<li><p>Use the formula for the inverse from Proposition <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a> and compute <span class="math display">\[
+<li><p>Use the formula for the inverse from Proposition <a href="chap_5.html#proposition-C-multiplicative-inverse">12</a> and compute <span class="math display">\[
 z^{-1} := \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}} \,.
-\]</span> Then we use the multiplication formula of Definition <a href="chap_5.html#definition-multiplication-C">6</a> to compute <span class="math display">\[\begin{align*}
+\]</span> Then we use the multiplication formula of Definition <a href="chap_5.html#definition-multiplication-C">7</a> to compute <span class="math display">\[\begin{align*}
 \frac{w}{z} &amp; = w \cdot z^{-1} \\
          &amp; = (a + i b) \, \cdot \left( \frac{x}{x^{2}+y^{2}}+ i \, \frac{-y}{x^{2}+y^{2}}   \right) \\
          &amp; = \frac{ (ax + by) + i (bx - ay) }{ x^2 + y^2 }
 \end{align*}\]</span></p></li>
-<li><p>Proceed formally as in Remark <a href="chap_5.html#remark-formal-inverse">10</a>, using the multiplication by <span class="math inline">\(1\)</span> trick. We would have <span class="math display">\[\begin{align*}
+<li><p>Proceed formally as in Remark <a href="chap_5.html#remark-formal-inverse">11</a>, using the multiplication by <span class="math inline">\(1\)</span> trick. We would have <span class="math display">\[\begin{align*}
 \frac{w}{z} &amp; = \frac{ a + i b }{ x + i y } \\
          &amp; = \frac{ a + i b }{ x + i y } \, \frac{ x - i y }{ x - i y } \\
          &amp; = \frac{ (ax + by) + i (bx - ay) }{ x^2 + y^2 }
 \end{align*}\]</span></p></li>
 </ol>
-<div id="Example-14" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14</strong></summary><div>
+<div id="Example-15" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 15</strong></summary><div>
 <p>Let <span class="math inline">\(w=1+i\)</span> and <span class="math inline">\(z=3-i\)</span>. We compute <span class="math inline">\(\frac{w}{z}\)</span> using the two options we have:</p>
 <ol type="1">
-<li><p>Using the formula for the inverse from Proposition <a href="chap_5.html#proposition-C-multiplicative-inverse">11</a> we compute <span class="math display">\[\begin{align*}
+<li><p>Using the formula for the inverse from Proposition <a href="chap_5.html#proposition-C-multiplicative-inverse">12</a> we compute <span class="math display">\[\begin{align*}
 z^{-1} &amp; = \frac{x}{x^{2}+y^{2}} + i \, \frac{-y}{x^{2}+y^{2}} \\
     &amp; = \frac{3}{3^2 + 1^2} - i \, \frac{-1}{3^2 + 1^2} \\
     &amp; = \frac{3}{10} + \frac{1}{10} \, i
@@ -540,7 +554,7 @@ z^{-1} &amp; = \frac{x}{x^{2}+y^{2}} + i \, \frac{-y}{x^{2}+y^{2}} \\
 <h3 data-number="5.1.2" class="anchored" data-anchor-id="mathbbc-is-not-ordered"><span class="header-section-number">5.1.2</span> <span class="math inline">\(\mathbb{C}\)</span> is not ordered</h3>
 <p>We have seen that <span class="math inline">\((\mathbb{C},+,\cdot)\)</span> is a field. One might wonder whether <span class="math inline">\(\mathbb{C}\)</span> is also an ordered field. It turns out that this is not the case.</p>
 <div id="theorem-C-order" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15</strong></summary><div>The field <span class="math inline">\((\mathbb{C},+,\cdot)\)</span> is not ordered.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 16</strong></summary><div>The field <span class="math inline">\((\mathbb{C},+,\cdot)\)</span> is not ordered.<p></p>
 </div></details>
 </div>
 <div id="Proof*-5" class="Proof">
@@ -551,7 +565,7 @@ z^{-1} &amp; = \frac{x}{x^{2}+y^{2}} + i \, \frac{-y}{x^{2}+y^{2}} \\
 </section>
 <section id="completeness-of-mathbbc" class="level3" data-number="5.1.3">
 <h3 data-number="5.1.3" class="anchored" data-anchor-id="completeness-of-mathbbc"><span class="header-section-number">5.1.3</span> Completeness of <span class="math inline">\(\mathbb{C}\)</span></h3>
-<p>One might also wonder whether <span class="math inline">\(\mathbb{C}\)</span> is complete. Our definition of completeness uses the notion of supremum, which only makes sense if the field is ordered. This is not the case for <span class="math inline">\(\mathbb{C}\)</span> as we have seen in Theorem <a href="chap_5.html#theorem-C-order">15</a>.</p>
+<p>One might also wonder whether <span class="math inline">\(\mathbb{C}\)</span> is complete. Our definition of completeness uses the notion of supremum, which only makes sense if the field is ordered. This is not the case for <span class="math inline">\(\mathbb{C}\)</span> as we have seen in Theorem <a href="chap_5.html#theorem-C-order">16</a>.</p>
 <p>Still, it is possible to give a different definition of completeness using the notion of Cauchy sequence. In ordered fields, this new definition of completeness is equivalent to the definition which uses the supremum.</p>
 <p>The new definition of completeness with Cauchy sequences also makes sense in non-ordered fields. We will see that <span class="math inline">\(\mathbb{C}\)</span> is a complete field, according to this new definition.</p>
 </section>
@@ -562,22 +576,22 @@ z^{-1} &amp; = \frac{x}{x^{2}+y^{2}} + i \, \frac{-y}{x^{2}+y^{2}} \\
 z^{-1} = \frac{1}{z} \cdot 1 = \frac{1}{x + i y}  \cdot \frac{x-iy}{x-iy} \,.
 \]</span> The complex number <span class="math inline">\(x-iy\)</span> is obtained by changing the sign to the imaginary part of <span class="math inline">\(z = x+iy\)</span>. We give a name to this operation.</p>
 <div id="complex-conjugate" class="Definition" title="Complex conjugate">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 16: </strong>Complex conjugate</summary><div>Let <span class="math inline">\(z=x+iy\)</span>. We call the <strong>complex conjugate</strong> of <span class="math inline">\(z\)</span>, denoted by <span class="math inline">\(\bar{z}\)</span>, the complex number<p></p>
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17: </strong>Complex conjugate</summary><div>Let <span class="math inline">\(z=x+iy\)</span>. We call the <strong>complex conjugate</strong> of <span class="math inline">\(z\)</span>, denoted by <span class="math inline">\(\bar{z}\)</span>, the complex number<p></p>
 <p><span class="math display">\[
 \bar{z}=x- i y \, .
 \]</span></p>
 </div></details>
 </div>
-<div id="Example-17" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 17</strong></summary><div>We have the following conjugates: <span class="math display">\[\begin{align*}
+<div id="Example-18" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 18</strong></summary><div>We have the following conjugates: <span class="math display">\[\begin{align*}
 &amp;\overline{3+4 i}  = 3 - 4 i \, , &amp; \quad &amp; \overline{3-4 i} = 3+4 i\,, \\
 &amp; \overline{-3+4 i}  = -3 - 4 i \,, &amp; \quad &amp; \overline{-3-4 i}=-3+4 i \,, \\ &amp; \overline{3}  = 3 \, , &amp; \quad &amp; \overline{4 i}=-4 i \, .
 \end{align*}\]</span><p></p>
 </div></details>
 </div>
 <p>Complex conjugates have the following properties:</p>
-<div id="Theorem-18" class="Theorem">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 18</strong></summary><div>
+<div id="Theorem-19" class="Theorem">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 19</strong></summary><div>
 <p>For all <span class="math inline">\(z_1, z_2 \in \mathbb{C}\)</span> it holds:</p>
 <ul>
 <li><p><span class="math inline">\(\overline{z_1 + z_2 }=\overline{z_1}+\overline{z_2}\)</span></p></li>
@@ -609,8 +623,8 @@ z_{1}=x_{1}+i y_{1}  \,, \quad  z_{2} = x_{2} + i y_{2}  \,,
 \end{align*}\]</span></p>
 </div></details>
 </div>
-<div id="Example-19" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 19</strong></summary><div>
+<div id="Example-20" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 20</strong></summary><div>
 <p>Let <span class="math inline">\(z_{1}=3-4 i\)</span> and <span class="math inline">\(z_{2}=-2+5 i\)</span>. Then</p>
 <ul>
 <li><p>Let us check that <span class="math display">\[
@@ -665,14 +679,14 @@ z = x + iy \,, \quad x , \, y \in \mathbb{R}\,.
 \sqrt{x^{2}+y^{2}} \,,
 \]</span> see <a href="#fig-complex-plane">Figure&nbsp;<span>5.2</span></a>. We give a name to this quantity.</p>
 <div id="modulus" class="Definition" title="Modulus">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>Modulus</summary><div>The <strong>modulus</strong> of a complex number <span class="math inline">\(z=x+i y\)</span> is defined by <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 21: </strong>Modulus</summary><div>The <strong>modulus</strong> of a complex number <span class="math inline">\(z=x+i y\)</span> is defined by <span class="math display">\[
 |z|: = \sqrt{x^{2}+y^{2}} \,.
 \]</span><p></p>
 </div></details>
 </div>
 <p>Note that the distance between <span class="math inline">\(z\)</span> and <span class="math inline">\(0\)</span> is always a non-negative number.</p>
 <div id="modulus-of-real-numbers" class="Remark" title="Modulus of Real numbers">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 21: </strong>Modulus of Real numbers</summary><div>A real number <span class="math inline">\(x \in \mathbb{R}\)</span> can be written as <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 22: </strong>Modulus of Real numbers</summary><div>A real number <span class="math inline">\(x \in \mathbb{R}\)</span> can be written as <span class="math display">\[
 x = x+ 0 i \in \mathbb{C}\,.
 \]</span> Hence the modulus of <span class="math inline">\(x\)</span> is given by <span class="math display">\[
 |x|=\sqrt{x^{2}+0^{2}}=\sqrt{x^{2}} \,.
@@ -681,7 +695,7 @@ x = x+ 0 i \in \mathbb{C}\,.
 </div>
 <p>We can now define the distance between two complex numbers.</p>
 <div id="distance-in-mathbbc" class="Definition" title="Distance in \mathbb{C}">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 22: </strong>Distance in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Given <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, we define the <strong>distance</strong> between <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as the quantity <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 23: </strong>Distance in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Given <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, we define the <strong>distance</strong> between <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> as the quantity <span class="math display">\[
 |z_1 - z_2| \,.
 \]</span><p></p>
 </div></details>
@@ -693,8 +707,8 @@ x = x+ 0 i \in \mathbb{C}\,.
 <figcaption class="figure-caption">Figure&nbsp;5.3: The difference <span class="math inline">\(z_1 - z_2\)</span> of the two points <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span> is given by the magenta vector. We define <span class="math inline">\(|z_1-z_2|\)</span> as the distance between <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span>.</figcaption>
 </figure>
 </div>
-<div id="Theorem-23" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 23</strong></summary><div>Given <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, we have <span class="math display">\[
+<div id="Theorem-24" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 24</strong></summary><div>Given <span class="math inline">\(z_1,z_2 \in \mathbb{C}\)</span>, we have <span class="math display">\[
 |z_1 - z_2|  = \sqrt{ (x_1 - x_2)^2 + (y_1 - y_2)^2 }  \,.
 \]</span><p></p>
 </div></details>
@@ -707,8 +721,8 @@ z_1 - z_2 = (x_1 - x_2) + i (y_1 - y_2) \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Example-24" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 24</strong></summary><div>The distance between <span class="math display">\[
+<div id="Example-25" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 25</strong></summary><div>The distance between <span class="math display">\[
 z = 2-4 i \,, \quad
 w = -5+i
 \]</span> is given by <span class="math display">\[\begin{align*}
@@ -723,8 +737,8 @@ w = -5+i
 <section id="properties-of-modulus" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="properties-of-modulus"><span class="header-section-number">5.3.2</span> Properties of modulus</h3>
 <p>The modulus has the following properties.</p>
-<div id="Theorem-25" class="Theorem">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25</strong></summary><div>
+<div id="Theorem-26" class="Theorem">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26</strong></summary><div>
 <p>Let <span class="math inline">\(z, z_{1}, z_{2} \in \mathbb{C}\)</span>. Then</p>
 <ol type="1">
 <li><p><span class="math inline">\(\left|z_1 \cdot z_2\right|=\left|z_{1}\right|\left|z_{2}\right|\)</span></p></li>
@@ -759,7 +773,7 @@ z \cdot \bar{z} &amp; = (x+i y)(x- i y) \\
 </div>
 <p>The modulus in <span class="math inline">\(\mathbb{C}\)</span> satisfies the triangle inequality.</p>
 <div id="triangle-inequality-in-mathbbc" class="Theorem" title="Triangle inequality in \mathbb{C}">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26: </strong>Triangle inequality in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 27: </strong>Triangle inequality in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
 <p>For all <span class="math inline">\(x, y, z \in \mathbb{C}\)</span>,</p>
 <ol type="1">
 <li><p><span class="math inline">\(|x+y| \leq|x|+|y|\)</span></p></li>
@@ -772,11 +786,11 @@ z \cdot \bar{z} &amp; = (x+i y)(x- i y) \\
 |x+y|=|(a+c)+i (b+d) |=\sqrt{(a+c)^{2}+(b+d)^{2}} \,.
 \]</span> Therefore the inequality <span id="eq-triangle-complex-1"><span class="math display">\[
 |x+y| \leq|x|+|y|
-\tag{5.1}\]</span></span> is equivalent to <span id="eq-triangle-complex-2"><span class="math display">\[
+\tag{5.2}\]</span></span> is equivalent to <span id="eq-triangle-complex-2"><span class="math display">\[
 \sqrt{(a+c)^{2}+(b+d)^{2}} \leq \sqrt{a^2 + b^2} + \sqrt{c^2 + d^2}\,.
-\tag{5.2}\]</span></span> Now note that, for <span class="math inline">\(A,B \in \mathbb{R}\)</span>, we have that <span id="eq-triangle-complex-4"><span class="math display">\[
+\tag{5.3}\]</span></span> Now note that, for <span class="math inline">\(A,B \in \mathbb{R}\)</span>, we have that <span id="eq-triangle-complex-4"><span class="math display">\[
 A^2 \leq B^2 \quad \implies \quad  |A| \leq |B| \,.
-\tag{5.3}\]</span></span> In the two reverse implications <span class="math inline">\(\impliedby\)</span> below we will use (<a href="#eq-triangle-complex-4"><span>5.3</span></a>): <span class="math display">\[\begin{align*}
+\tag{5.4}\]</span></span> In the two reverse implications <span class="math inline">\(\impliedby\)</span> below we will use (<a href="#eq-triangle-complex-4"><span>5.4</span></a>): <span class="math display">\[\begin{align*}
 &amp; \, \sqrt{(a+c)^{2}+(b+d)^{2}} \leq \sqrt{a^{2}+b^{2}}+\sqrt{c^{2}+d^{2}} \\
 \impliedby &amp;  \, (a+c)^{2}+(b+d)^{2} \leq\left(\sqrt{a^{2}+b^{2}}+\sqrt{c^{2}+d^{2}}\right)^{2} \\
 \iff &amp; \, a^{2}+2 a c+c^{2}+b^{2}+2 b d+d^{2} \leq a^{2}+b^{2}+2 \sqrt{a^{2}+b^{2}} \sqrt{c^{2}+d^{2}}+c^{2}+d^{2} \\
@@ -786,14 +800,14 @@ A^2 \leq B^2 \quad \implies \quad  |A| \leq |B| \,.
 \iff &amp; \, a^{2} d^{2}+b^{2} c^{2}-2 a b c d \geq 0 \\
 \iff &amp; \, (a d-b c)^{2} \geq 0 .
 \end{align*}\]</span><p></p>
-<p>This last statement is clearly true, since <span class="math inline">\(a d-b c \in \mathbb{R}\)</span>. Therefore (<a href="#eq-triangle-complex-2"><span>5.2</span></a>) holds, and so (<a href="#eq-triangle-complex-1"><span>5.1</span></a>) follows.</p>
-<p><em>Part 2.</em> Using (<a href="#eq-triangle-complex-1"><span>5.1</span></a>) we estimate <span class="math display">\[
+<p>This last statement is clearly true, since <span class="math inline">\(a d-b c \in \mathbb{R}\)</span>. Therefore (<a href="#eq-triangle-complex-2"><span>5.3</span></a>) holds, and so (<a href="#eq-triangle-complex-1"><span>5.2</span></a>) follows.</p>
+<p><em>Part 2.</em> Using (<a href="#eq-triangle-complex-1"><span>5.2</span></a>) we estimate <span class="math display">\[
 |x-z|=|x-y+y-z| \leq|x-y|+|y-z| .
 \]</span></p>
 </div></details>
 </div>
 <div id="geometric-interpretation-of-triangle-inequality" class="Remark" title="Geometric interpretation of triangle inequality">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 27: </strong>Geometric interpretation of triangle inequality</summary><div>We finally have a justification of why the inequality <span class="math display">\[
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 28: </strong>Geometric interpretation of triangle inequality</summary><div>We finally have a justification of why the inequality <span class="math display">\[
 |x-z| \leq |x-y| + |y - z|
 \]</span> is called <strong>triangle inequality</strong>: By drawing three points <span class="math inline">\(x, y, z \in \mathbb{C}\)</span> in the complex plane, the distance between <span class="math inline">\(x\)</span> and <span class="math inline">\(z\)</span> is shorter than the distance to go from <span class="math inline">\(x\)</span> to <span class="math inline">\(z\)</span> via the point <span class="math inline">\(y\)</span>, see <a href="#fig-triangle-inequality-C">Figure&nbsp;<span>5.4</span></a>.<p></p>
 </div></details>
@@ -823,7 +837,7 @@ A^2 \leq B^2 \quad \implies \quad  |A| \leq |B| \,.
 </div>
 <p>We give such angle a name.</p>
 <div id="argument" class="Definition" title="Argument">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 28: </strong>Argument</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span>. The angle <span class="math inline">\(\theta\)</span> between the line connecting the origin and <span class="math inline">\(z\)</span> and the positive real axis is called the <strong>argument</strong> of <span class="math inline">\(z\)</span>, and is denoted by <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 29: </strong>Argument</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span>. The angle <span class="math inline">\(\theta\)</span> between the line connecting the origin and <span class="math inline">\(z\)</span> and the positive real axis is called the <strong>argument</strong> of <span class="math inline">\(z\)</span>, and is denoted by <span class="math display">\[
 \theta := \arg (z) \,.
 \]</span><p></p>
 </div></details>
@@ -833,11 +847,11 @@ A^2 \leq B^2 \quad \implies \quad  |A| \leq |B| \,.
 </div></details>
 </div>
 <div id="principal-value" class="Remark" title="Principal Value">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 29: </strong>Principal Value</summary><div>The argument of a complex number is not uniquely defined. We can always add an integer number of times <span class="math inline">\(2 \pi\)</span> to the argument to specify the same point. We usually use the convention to choose the argument in the interval <span class="math inline">\((-\pi, \pi]\)</span>. This is called the <strong>principal value</strong> of the argument function. Therefore the complex numbers in the upper half plane have a positive argument, and in the lower half plane have a negative argument.<p></p>
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 30: </strong>Principal Value</summary><div>The argument of a complex number is not uniquely defined. We can always add an integer number of times <span class="math inline">\(2 \pi\)</span> to the argument to specify the same point. We usually use the convention to choose the argument in the interval <span class="math inline">\((-\pi, \pi]\)</span>. This is called the <strong>principal value</strong> of the argument function. Therefore the complex numbers in the upper half plane have a positive argument, and in the lower half plane have a negative argument.<p></p>
 </div></details>
 </div>
-<div id="Example-30" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 30</strong></summary><div>We have the following arguments: <span class="math display">\[\begin{align*}
+<div id="Example-31" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 31</strong></summary><div>We have the following arguments: <span class="math display">\[\begin{align*}
 &amp; \arg (1) = 0  &amp; \quad &amp; \arg (i) = \frac{\pi}{2}  \\
 &amp; \arg (-1) = \pi   &amp; \quad &amp; \arg (-i) = -\frac{\pi}{2}  \\
 &amp; \arg (1+i)=\frac{1}{4} \pi &amp; \quad &amp;  \arg (-1-i)=-\frac{3}{4} \pi
@@ -846,7 +860,7 @@ A^2 \leq B^2 \quad \implies \quad  |A| \leq |B| \,.
 </div>
 <p>We can represent non-zero complex numbers in polar coordinates.</p>
 <div id="theorem-polar-coordinates" class="Theorem" title="Polar coordinates">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 31: </strong>Polar coordinates</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span> with <span class="math inline">\(z = x + i y\)</span> and <span class="math inline">\(z \neq 0\)</span>. Then <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 32: </strong>Polar coordinates</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span> with <span class="math inline">\(z = x + i y\)</span> and <span class="math inline">\(z \neq 0\)</span>. Then <span class="math display">\[
 x = \rho \cos(\theta) \,, \quad y = \rho \sin(\theta) \,,
 \]</span> where <span class="math display">\[
 \rho = \sqrt{x^2 + y^2} \,, \quad
@@ -854,16 +868,16 @@ x = \rho \cos(\theta) \,, \quad y = \rho \sin(\theta) \,,
 \]</span><p></p>
 </div></details>
 </div>
-<p>The proof of Theorem <a href="chap_5.html#theorem-polar-coordinates">31</a> is trivial, and is based on basic trigonometry and definition of <span class="math inline">\(\arg(z)\)</span>. Complex numbers in polar form can be useful. We give a name to such polar form.</p>
+<p>The proof of Theorem <a href="chap_5.html#theorem-polar-coordinates">32</a> is trivial, and is based on basic trigonometry and definition of <span class="math inline">\(\arg(z)\)</span>. Complex numbers in polar form can be useful. We give a name to such polar form.</p>
 <div id="trigonometric-form" class="Definition" title="Trigonometric form">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 32: </strong>Trigonometric form</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span>. The trigonometric form of <span class="math inline">\(z\)</span> is <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 33: </strong>Trigonometric form</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span>. The trigonometric form of <span class="math inline">\(z\)</span> is <span class="math display">\[
 z = |z| \left[ \cos (\theta)+i \sin (\theta) \right] \,,
 \]</span> where <span class="math inline">\(\theta = \arg(z)\)</span>.<p></p>
 </div></details>
 </div>
 <p>Let us make an example.</p>
 <div id="example-trigonometric-form" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div>Suppose that we have polar coordinates <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 34</strong></summary><div>Suppose that we have polar coordinates <span class="math display">\[
 \rho = \sqrt{8}\,, \quad   \theta = \frac{3}{4} \pi
 \]</span> We compute <span class="math display">\[\begin{gather*}
 x = \rho \cos (\theta) = \sqrt{8} \cos \left( \frac{3}{4} \pi \right) = - \frac{\sqrt{8}\sqrt{2}}{2} = -2 \\
@@ -875,9 +889,9 @@ z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3
 \]</span><p></p>
 </div></details>
 </div>
-<p>As a consequence of Theorem <a href="chap_5.html#theorem-polar-coordinates">31</a> we obtain a formula for computing the argument.</p>
+<p>As a consequence of Theorem <a href="chap_5.html#theorem-polar-coordinates">32</a> we obtain a formula for computing the argument.</p>
 <div id="corollary-arg" class="Corollary" title="Computing \arg(z)">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 34: </strong>Computing <span class="math inline">\(\arg(z)\)</span></summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span> with <span class="math inline">\(z = x + i y\)</span> and <span class="math inline">\(z \neq 0\)</span>. Then <span class="math display">\[
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 35: </strong>Computing <span class="math inline">\(\arg(z)\)</span></summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span> with <span class="math inline">\(z = x + i y\)</span> and <span class="math inline">\(z \neq 0\)</span>. Then <span class="math display">\[
 \arg(z) =
 \begin{cases}
 \arctan \left(  \dfrac{y}{x}   \right)  &amp;  \,\, \mbox{ if }  x&gt;0 \\
@@ -890,15 +904,15 @@ z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3
 </div></details>
 </div>
 <div id="Proof*-11" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Using the polar coordinates formulas from Theorem <a href="chap_5.html#theorem-polar-coordinates">31</a> we have <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Using the polar coordinates formulas from Theorem <a href="chap_5.html#theorem-polar-coordinates">32</a> we have <span class="math display">\[
 \frac{y}{x} = \frac{\rho \sin(\theta)}{\rho \cos(\theta)}  = \tan (\theta) \,.
 \]</span> The thesis can be obtained by carefully inverting the tangent.<p></p>
 </div></details>
 </div>
-<div id="Example-35" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35</strong></summary><div>We want to compute the arguments of the complex numbers <span class="math display">\[
+<div id="Example-36" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 36</strong></summary><div>We want to compute the arguments of the complex numbers <span class="math display">\[
 3+4 i\,, \quad 3-4 i \,, \quad  -3+4 i \,, \quad -3-4 i \,.
-\]</span> Using the formula for <span class="math inline">\(\arg\)</span> in Corollary <a href="chap_5.html#corollary-arg">34</a> we have <span class="math display">\[\begin{align*}
+\]</span> Using the formula for <span class="math inline">\(\arg\)</span> in Corollary <a href="chap_5.html#corollary-arg">35</a> we have <span class="math display">\[\begin{align*}
 \arg (3+4 i) &amp; =\arctan \left(\frac{4}{3}\right) \\
 \arg (3-4 i) &amp; =\arctan \left(-\frac{4}{3}\right) = -\arctan \left(\frac{4}{3}\right)  \\
 \arg (-3+4 i) &amp; = \arctan \left(-\frac{4}{3}\right) + \pi = - \arctan \left(\frac{4}{3}\right) + \pi \\
@@ -916,7 +930,7 @@ z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3
 </ul>
 <p>We now introduce a third way of representing complex numbers: the exponential form. For this, we need Euler’s identity:</p>
 <div id="theorem-euler-identity" class="Theorem" title="Euler’s identity">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 36: </strong>Euler’s identity</summary><div>For all <span class="math inline">\(\theta \in \mathbb{R}\)</span> it holds <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 37: </strong>Euler’s identity</summary><div>For all <span class="math inline">\(\theta \in \mathbb{R}\)</span> it holds <span class="math display">\[
 e^{i \theta}=\cos (\theta)+ i \sin (\theta) \,.
 \]</span><p></p>
 </div></details>
@@ -935,20 +949,20 @@ e^{i \theta} &amp; =1+i \theta+\frac{(i \theta)^{2}}{2 !}+\frac{(i \theta)^{3}}{
 <p>where we used that <span class="math inline">\(i^{2}=-1\)</span> in the second equality, and the third equality follows by observing that all terms with an even power of <span class="math inline">\(\theta\)</span> are exactly the terms in the expansion of <span class="math inline">\(\cos (\theta)\)</span> and all terms with an odd power of <span class="math inline">\(\theta\)</span> are exactly the terms in the expansion of <span class="math inline">\(\sin (\theta)\)</span> multiplied by <span class="math inline">\(i\)</span>.</p>
 </div></details>
 </div>
-<div id="Theorem-37" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 37</strong></summary><div>For all <span class="math inline">\(\theta \in \mathbb{R}\)</span> it holds <span class="math display">\[
+<div id="Theorem-38" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 38</strong></summary><div>For all <span class="math inline">\(\theta \in \mathbb{R}\)</span> it holds <span class="math display">\[
 \left|e^{i \theta}\right|=1 \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="Proof*-13" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>From Euler’s identity in Theorem <a href="chap_5.html#theorem-euler-identity">36</a> we get <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>From Euler’s identity in Theorem <a href="chap_5.html#theorem-euler-identity">37</a> we get <span class="math display">\[
 \left|e^{i \theta}\right|=|\cos (\theta)+i \sin (\theta)|=\sqrt{\cos ^{2}(\theta)+\sin ^{2}(\theta)}=1 \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Theorem-38" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 38</strong></summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span> with <span class="math inline">\(z = x+iy\)</span> and <span class="math inline">\(z \neq 0\)</span>. Then <span class="math display">\[
+<div id="Theorem-39" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 39</strong></summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span> with <span class="math inline">\(z = x+iy\)</span> and <span class="math inline">\(z \neq 0\)</span>. Then <span class="math display">\[
 z = \rho e^{i\theta}\,,
 \]</span> where <span class="math display">\[
 \rho = \sqrt{x^2 + y^2} = |z| \,, \quad
@@ -957,23 +971,23 @@ z = \rho e^{i\theta}\,,
 </div></details>
 </div>
 <div id="Proof*-14" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>By Theorem <a href="chap_5.html#theorem-polar-coordinates">31</a> we have <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>By Theorem <a href="chap_5.html#theorem-polar-coordinates">32</a> we have <span class="math display">\[
 x = \rho \cos(\theta)\,, \quad y = \rho \sin(\theta) \,.
 \]</span> Hence <span class="math display">\[\begin{align*}
 z &amp; = x + i y \\
   &amp; = \rho \cos(\theta) + i \rho \sin(\theta) \\
   &amp; = \rho e^{i\theta} \,,
-\end{align*}\]</span> where in the last line we used Euler’s identity in Theorem <a href="chap_5.html#theorem-euler-identity">36</a>.<p></p>
+\end{align*}\]</span> where in the last line we used Euler’s identity in Theorem <a href="chap_5.html#theorem-euler-identity">37</a>.<p></p>
 </div></details>
 </div>
 <div id="exponential-form-1" class="Definition" title="Exponential form">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 39: </strong>Exponential form</summary><div>A complex number <span class="math inline">\(z \in \mathbb{C}\)</span> is in <strong>exponential form</strong> if <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 40: </strong>Exponential form</summary><div>A complex number <span class="math inline">\(z \in \mathbb{C}\)</span> is in <strong>exponential form</strong> if <span class="math display">\[
 z= \rho e^{i\theta} = |z| \, e^{i \arg(z)}  \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="example-exponential-form" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 40</strong></summary><div>From Example <a href="chap_5.html#example-trigonometric-form">33</a> we know that <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 41</strong></summary><div>From Example <a href="chap_5.html#example-trigonometric-form">34</a> we know that <span class="math display">\[
 z=-2+2 i
 \]</span> can be written in trigonometric form as <span class="math display">\[
 z = \sqrt{8}  \left[ \cos \left( \frac{3}{4} \pi \right) + i \sin \left( \frac{3}{4} \pi \right)   \right] \,.
@@ -983,21 +997,33 @@ z=\sqrt{8} e^{i \frac{3}{4} \pi} \,.
 </div></details>
 </div>
 <div id="periodicity-of-exponential" class="Remark" title="Periodicity of exponential">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 41: </strong>Periodicity of exponential</summary><div>
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 42: </strong>Periodicity of exponential</summary><div>
 <p>For all <span class="math inline">\(k \in \mathbb{Z}\)</span> we have <span id="eq-exponential-periodic"><span class="math display">\[
 e^{i \theta}=e^{i(\theta+2 \pi k)} \,.
-\tag{5.4}\]</span></span> As we did for the principal value of the argument, also for the exponential form we select <span class="math inline">\(\theta \in(-\pi, \pi]\)</span>. In particular equation (<a href="#eq-exponential-periodic"><span>5.4</span></a>) is saying that the complex exponential is <span class="math inline">\(2\pi\)</span>-periodic.</p>
+\tag{5.5}\]</span></span> As we did for the principal value of the argument, also for the exponential form we select <span class="math inline">\(\theta \in(-\pi, \pi]\)</span>. In particular equation (<a href="#eq-exponential-periodic"><span>5.5</span></a>) is saying that the complex exponential is <span class="math inline">\(2\pi\)</span>-periodic.</p>
 <blockquote class="blockquote">
-<p>Equation (<a href="#eq-exponential-periodic"><span>5.4</span></a>) follows immediately by Euler’s identity and periodicity of <span class="math inline">\(\cos\)</span> and <span class="math inline">\(\sin\)</span>, since <span class="math display">\[\begin{align*}
+<p>Equation (<a href="#eq-exponential-periodic"><span>5.5</span></a>) follows immediately by Euler’s identity and periodicity of <span class="math inline">\(\cos\)</span> and <span class="math inline">\(\sin\)</span>, since <span class="math display">\[\begin{align*}
 e^{i(\theta+2 \pi k)} &amp; = \cos(\theta+2 \pi k) + i \sin (\theta+2 \pi k)  \\
 &amp; = \cos(\theta) + i \sin (\theta) = e^{i \theta} \,.
 \end{align*}\]</span></p>
 </blockquote>
 </div></details>
 </div>
-<p>The exponential for is very useful for computing powers of complex numbers.</p>
-<div id="Example-42" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 42</strong></summary><div>Suppose we want to compute <span class="math inline">\((-2+2 i)^{4}\)</span>. We could do this by means of the binomial theorem: <span class="math display">\[\begin{align*}
+<p>The exponential for is very useful for computing products and powers of complex numbers.</p>
+<div id="proposition-complex-exponential" class="Proposition">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 43</strong></summary><div>Let <span class="math inline">\(z, z_1,z_2 \in \mathbb{C}\)</span> and suppose that <span class="math display">\[
+z= \rho e^{i \theta} \,, \quad
+z_1 = \rho_1 e^{i \theta_1}\,, \quad
+z_2 = \rho_2 e^{i \theta_2}\,.
+\]</span> We have <span class="math display">\[
+z_1 \cdot z_2 = \rho_1 \rho_2 e^{i (\theta_1 + \theta_2)}  \,, \quad
+z^n = \rho^n  e^{i n \theta} \,,
+\]</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>.<p></p>
+</div></details>
+</div>
+<p>The proof follows immediately by the properties of the exponential. Let us see some applications of Propostion <a href="chap_5.html#proposition-complex-exponential">43</a>.</p>
+<div id="Example-44" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 44</strong></summary><div>Suppose we want to compute <span class="math inline">\((-2+2 i)^{4}\)</span>. We could do this by means of the binomial theorem: <span class="math display">\[\begin{align*}
 (-2+2 i)^{4} &amp; =(-2)^{4}+\left(\begin{array}{l}
 4 \\
 1
@@ -1013,15 +1039,15 @@ e^{i(\theta+2 \pi k)} &amp; = \cos(\theta+2 \pi k) + i \sin (\theta+2 \pi k)  \\
 \end{align*}\]</span><p></p>
 <p>Using the exponential form simplifies this calculation. Indeed, we know that <span class="math display">\[
 -2+2 i = \sqrt{8} e^{i \frac{3}{4} \pi}
-\]</span> by Example <a href="chap_5.html#example-exponential-form">40</a>. Hence <span class="math display">\[
+\]</span> by Example <a href="chap_5.html#example-exponential-form">41</a>. Hence <span class="math display">\[
 (-2+2 i)^{4}=\left(\sqrt{8} e^{i \frac{3}{4} \pi}\right)^{4}=8^{2} e^{i 3 \pi}=-64 \,,
 \]</span> where we used that <span class="math display">\[
 e^{i 3 \pi} = e^{i \pi} = \cos(\pi) + i \sin(\pi) = - 1
 \]</span> by <span class="math inline">\(2\pi\)</span> periodicity of <span class="math inline">\(e^z\)</span> and Euler’s identity.</p>
 </div></details>
 </div>
-<div id="Example-43" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 43</strong></summary><div>Suppose we want to compute <span class="math display">\[
+<div id="Example-45" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 45</strong></summary><div>Suppose we want to compute <span class="math display">\[
 i^{i} \,.
 \]</span> It is not even clear how to do this calculation in Cartesian form. However, we know that <span class="math display">\[
 |i| = 1 \,, \quad \arg(i) = \frac{\pi}{2} \,.
@@ -1029,6 +1055,350 @@ i^{i} \,.
 i= |i| e^{i\arg(i)} = e^{i \frac{\pi}{2}} \,.
 \]</span> Therefore <span class="math display">\[
 i^{i}=\left(e^{i \frac{\pi}{2}}\right)^{i}=e^{i^2\frac{\pi}{2}}=e^{-\frac{\pi}{2}} \,.
+\]</span><p></p>
+</div></details>
+</div>
+</section>
+<section id="fundamental-theorem-of-algebra" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="fundamental-theorem-of-algebra"><span class="header-section-number">5.6</span> Fundamental Theorem of Algebra</h2>
+<p>We started the introduction to complex numbers with the following question:</p>
+<div id="Question-46" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 46</strong></summary><div>Is there a number <span class="math inline">\(x \in \mathbb{R}\)</span> such that <span id="eq-introduction-complex"><span class="math display">\[
+x^{2}=-1 \,\, ?
+\tag{5.6}\]</span></span><p></p>
+</div></details>
+</div>
+<p>The answer is no. For this reason we introduced the complex number <span class="math inline">\(i\)</span>, which satisfies <span class="math display">\[
+i^{2}=-1 \,.
+\]</span> Therefore (<a href="#eq-introduction-complex"><span>5.6</span></a>) has solution in <span class="math inline">\(\mathbb{C}\)</span>, with <span class="math inline">\(x = i\)</span>. We also have that <span class="math display">\[
+(-i)^{2}=(-1)^{2} i^{2}=-1 \,.
+\]</span> Hence (<a href="#eq-introduction-complex"><span>5.6</span></a>) has two solutions in <span class="math inline">\(\mathbb{C}\)</span>, given by <span class="math display">\[
+x_1 = i \,, \quad x_2 = - i \,.
+\]</span></p>
+<p>It turns out that the set <span class="math inline">\(\mathbb{C}\)</span> is so large that we are not only able to solve (<a href="#eq-introduction-complex"><span>5.6</span></a>), but in fact any polynomial equation.</p>
+<div id="theorem-fta" class="Theorem" title="Fundamental theorem of algebra">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 47: </strong>Fundamental theorem of algebra</summary><div>Let <span class="math inline">\(p_{n}(x)\)</span> be a polynomial of degree <span class="math inline">\(n\)</span> with complex coefficients, i.e., <span class="math display">\[
+p_{n}(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\ldots+a_{1} x+a_{0},
+\]</span> for some coefficients <span class="math inline">\(a_{n}, \ldots, a_{0} \in \mathbb{C}\)</span> with <span class="math inline">\(a_{n} \neq 0\)</span>. Then there exist <span class="math inline">\(z_{1}, \ldots, z_{n} \in \mathbb{C}\)</span> such that <span id="eq-fta-0"><span class="math display">\[
+p_{n}(x)=a_{n}\left(x-z_{1}\right)\left(x-z_{2}\right) \cdots\left(x-z_{n}\right) \,.
+\tag{5.7}\]</span></span> Hence, the polynomial equation <span id="eq-fta"><span class="math display">\[
+a_{n} x^{n}+a_{n-1} x^{n-1}+\ldots+a_{1} x+a_{0}=0
+\tag{5.8}\]</span></span> has solutions <span class="math inline">\(z_{1}, \ldots, z_{n}\)</span>.<p></p>
+</div></details>
+</div>
+<p>Theorem <a href="chap_5.html#theorem-fta">47</a> says that every polynomial of degree <span class="math inline">\(n\)</span> has <span class="math inline">\(n\)</span> zeros, sometimes also called roots, i.e., <span class="math inline">\(n\)</span> solutions to (<a href="#eq-fta"><span>5.8</span></a>). We call the expression (<a href="#eq-fta-0"><span>5.7</span></a>) a factorization of the polynomial <span class="math inline">\(p_n\)</span>.</p>
+<p>Several proofs of Theorem <a href="chap_5.html#theorem-fta">47</a> exist in the literature, but they all use mathematical tools which are out of reach for now. Therefore we will not show a proof. For example one can prove Theorem <a href="chap_5.html#theorem-fta">47</a> by</p>
+<ul>
+<li>Liouville’s theorem (complex analysis)</li>
+<li>Homotopy arguments (general topology)</li>
+<li>Fundamental Theorem of Galois Theory (algebra)</li>
+</ul>
+<div id="Example-48" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 48</strong></summary><div>The equation <span id="eq-fta-example-1"><span class="math display">\[
+x^{2}=-1
+\tag{5.9}\]</span></span> is equivalent to <span class="math display">\[
+p(x) = 0 \,, \quad p(x):=x^{2}+1  \,.
+\]</span> Since <span class="math inline">\(p\)</span> has degree <span class="math inline">\(n=2\)</span>, the Fundamental Theorem of Algebra tells us that there are two solutions to (<a href="#eq-fta-example-1"><span>5.9</span></a>). We have already seen that these two solutions are <span class="math inline">\(x=i\)</span> and <span class="math inline">\(x=-i\)</span>. Then <span class="math display">\[
+p(x) = x^{2} + 1 = (x-i)(x+i) \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="example-degree-4" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 49</strong></summary><div>Suppose we want to solve <span id="eq-fta-example-2"><span class="math display">\[
+x^{4}-1=0 \,.
+\tag{5.10}\]</span></span> The associated polynomial equation is <span class="math display">\[
+p(x) = 0 \,, \quad p(x) := x^4 + 1 \,.
+\]</span> Since <span class="math inline">\(p\)</span> has degree <span class="math inline">\(n=4\)</span>, the Fundamental Theorem of Algebra tells us that there are <span class="math inline">\(4\)</span> solutions to (<a href="#eq-fta-example-2"><span>5.10</span></a>).<p></p>
+<p>Let us find such solutions. We have <span class="math display">\[
+x^{4}-1=0  \quad \iff \quad \left(x^{2}\right)^{2}=1 \quad \iff
+\quad x^{2} = \pm 1  \,.
+\]</span> This means that we can have <span class="math display">\[
+x^{2}=1 \,,
+\]</span> in which case <span class="math inline">\(x=1\)</span> or <span class="math inline">\(x=-1\)</span>, or we can have <span class="math display">\[
+x^{2}=-1 \,,
+\]</span> in which case <span class="math inline">\(x=i\)</span> or <span class="math inline">\(x=-i\)</span>. Hence, the four solutions of (<a href="#eq-fta-example-2"><span>5.10</span></a>) are given by <span class="math inline">\(x=1,-1, i,-i\)</span> and <span class="math display">\[
+p(x) = x^4 + 1 = (x-1)(x+1)(x-i)(x+i) \,.
+\]</span></p>
+</div></details>
+</div>
+<div id="Definition-50" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 50</strong></summary><div>If a complex number <span class="math inline">\(z\)</span> shows up <span class="math inline">\(k\)</span> times on the right hand side of (<a href="#eq-fta-0"><span>5.7</span></a>) for some <span class="math inline">\(k \in \mathbb{N}\)</span>, then we say that <span class="math inline">\(z\)</span> is a solution to (<a href="#eq-fta"><span>5.8</span></a>) with multiplicity <span class="math inline">\(k\)</span>.<p></p>
+</div></details>
+</div>
+<div id="example-multiplicity" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 51</strong></summary><div>
+<p>The equation <span class="math display">\[
+(x-1)(x-2)^{2}(x+i)^{3}=0
+\]</span> has 6 solutions:</p>
+<ul>
+<li><span class="math inline">\(x=1\)</span> with multiplicity <span class="math inline">\(1\)</span></li>
+<li><span class="math inline">\(x=2\)</span> with multiplicity <span class="math inline">\(2\)</span></li>
+<li><span class="math inline">\(x=-i\)</span> with multiplicity <span class="math inline">\(3\)</span></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="solving-polynomial-equations" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="solving-polynomial-equations"><span class="header-section-number">5.7</span> Solving polynomial equations</h2>
+<p>The non-factorized version of the polynomial <span class="math display">\[
+p(x) = (x-1)(x-2)^{2}(x+i)^{3}
+\]</span> from Example <a href="chap_5.html#example-multiplicity">51</a> is <span class="math display">\[\begin{align*}
+p(x) = &amp; x^{6}-(5-3 i) x^{5}+(5-15 i) x^{4} \\
+&amp; + (11+23 i) x^{3}-(24+7 i) x^{2}+(12-8 i) x+4 i
+\end{align*}\]</span> We therefore have the following natural question.</p>
+<div id="Question-52" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 52</strong></summary><div>The Fundamental Theorem of Algebra states that <span id="eq-abel-ruffini"><span class="math display">\[
+p_n(x) = 0
+\tag{5.11}\]</span></span> has <span class="math inline">\(n\)</span> complex solutions. How do we find such solutions?<p></p>
+</div></details>
+</div>
+<p>The answer is that there is no general way to solve (<a href="#eq-abel-ruffini"><span>5.11</span></a>) when <span class="math inline">\(n \geq 5\)</span>. This is the content of the Abel-Ruffini Theorem.</p>
+<div id="theorem-abel-ruffini" class="Theorem" title="Abel-Ruffini">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 53: </strong>Abel-Ruffini</summary><div>There is no elementary solution formula to the polynomial equation <span class="math display">\[
+p_n(x) = 0
+\]</span> with <span class="math inline">\(p_n\)</span> polynomial of degree <span class="math inline">\(n\)</span>, with <span class="math inline">\(n \geq 5\)</span>.<p></p>
+</div></details>
+</div>
+<p>Similarly to the Fundamental Theorem of Algebra, the proof of the Abel-Ruffini Theorem is out of reach for our current mathematical knowledge. A proof can be carried out, for example, using Galois Theory.</p>
+<p>There are however explicit formulas for solving (<a href="#eq-abel-ruffini"><span>5.11</span></a>) when <span class="math inline">\(p_n\)</span> has degree <span class="math inline">\(n=2,3,4\)</span>. For <span class="math inline">\(n=2\)</span> we can use the well-known quadratic formula.</p>
+<div id="proposition-quadratic-formula" class="Proposition" title="Quadratic formula">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 54: </strong>Quadratic formula</summary><div>Let <span class="math inline">\(a, b, c \in \mathbb{R}, a \neq 0\)</span> and consider the equation <span id="eq-quadratic-formula"><span class="math display">\[
+a x^{2}+b x+c=0 \,.
+\tag{5.12}\]</span></span> Define <span class="math display">\[
+\Delta := b^2 - 4 ac \,.
+\]</span> The following hold:<p></p>
+<ul>
+<li>If <span class="math inline">\(\Delta &gt; 0\)</span> then (<a href="#eq-quadratic-formula"><span>5.12</span></a>) has two distinct real solutions given by <span class="math display">\[
+x_1 = \frac{-b - \sqrt{\Delta}}{2 a} \,,
+\quad
+x_2 = \frac{-b + \sqrt{\Delta}}{2 a} \,.
+\]</span></li>
+<li>If <span class="math inline">\(\Delta = 0\)</span> then (<a href="#eq-quadratic-formula"><span>5.12</span></a>) has one solution with multiplicity <span class="math inline">\(2\)</span>. Such solution is given by <span class="math display">\[
+x_1 = \frac{-b}{2 a} \,.
+\]</span></li>
+<li>If <span class="math inline">\(\Delta &lt; 0\)</span> then (<a href="#eq-quadratic-formula"><span>5.12</span></a>) has two distinct complex solutions given by <span class="math display">\[
+x_1 = \frac{-b - i\sqrt{-\Delta}}{2 a} \,,
+\quad
+x_2 = \frac{-b + i\sqrt{-\Delta}}{2 a} \,,
+\]</span> where <span class="math inline">\(\sqrt{-\Delta}\)</span> is a real number, since <span class="math inline">\(-\Delta&gt;0\)</span>.</li>
+</ul>
+<p>Moreover, if <span class="math inline">\(\Delta \neq 0\)</span> we have <span class="math display">\[
+a x^{2}+b x+c = a (x-x_1)(x-x_2) \,,
+\]</span> while if <span class="math inline">\(\Delta = 0\)</span> then <span class="math display">\[
+a x^{2}+b x+c = a (x-x_1)^2 \,.
+\]</span></p>
+</div></details>
+</div>
+<div id="Example-55" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 55</strong></summary><div>Suppose we want to solve <span class="math display">\[
+3 x^{2}-6 x+2 = 0 \,.
+\]</span> We have that <span class="math display">\[
+\Delta = (-6)^{2}-4 \cdot 3 \cdot 2 = 12 &gt; 0
+\]</span> Therefore the equation has two distinct real solutions, given by <span class="math display">\[
+x=\frac{-(-6) \pm \sqrt{12}}{2 \cdot 3}=\frac{6 \pm \sqrt{12}}{6}=1 \pm \frac{\sqrt{3}}{3}
+\]</span> In particular we have the factorization <span class="math display">\[
+3 x^{2}-6 x+2  = 3 \left( x - 1 - \frac{\sqrt{3}}{3} \right) \left( x - 1 + \frac{\sqrt{3}}{3} \right) \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Example-56" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 56</strong></summary><div>Suppose we want to solve <span class="math display">\[
+4 x^{2}-8 x+4=0 \,.
+\]</span> We have that <span class="math display">\[
+\Delta = (-8)^{2}-4 \cdot 4 \cdot 4 = 0 \,.
+\]</span> Therefore there exists one solution with multiplicity <span class="math inline">\(2\)</span>. This is given by <span class="math display">\[
+x=\frac{-(-8)}{2 \cdot 4} = 1 \,.
+\]</span> In particular we have the factorization <span class="math display">\[
+4 x^{2}-8 x+4 = 4 (x-1)^2 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Example-57" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 57</strong></summary><div>Consider <span class="math display">\[
+x^{2}+2 x+3=0 \,.
+\]</span> We have <span class="math display">\[
+\Delta = 2^{2}-4 \cdot 1 \cdot 3 = - 8 &lt; 0 \,.
+\]</span> Therefore there are two complex solutions given by <span class="math display">\[
+x=\frac{-2 \pm i \sqrt{8}}{2 \cdot 1} = -1 \pm i \sqrt{2}  \,.
+\]</span> In particular we have the factorization <span class="math display">\[
+x^{2}+2 x+3 = (x + 1 - i \sqrt{2}) (x +1 + i\sqrt{2}) \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>So far we have considered the polynomial equation <span class="math display">\[
+ax^2 + bx + c = 0 \,,
+\]</span> for <span class="math inline">\(a,b,c \in \mathbb{R}\)</span> and <span class="math inline">\(a \neq 0\)</span>.</p>
+<div id="Question-58" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 58</strong></summary><div>What if <span class="math inline">\(a,b,c \in \mathbb{C}\)</span>?<p></p>
+</div></details>
+</div>
+<p>If <span class="math inline">\(a, b, c \in \mathbb{C}\)</span> then we might have <span class="math display">\[
+\Delta := b^{2}-4 a c \in \mathbb{C}\,.
+\]</span> Therefore it is not clear how to compute <span class="math display">\[
+\sqrt{\Delta} \,.
+\]</span> However, we can still use the quadratic equation.</p>
+<div id="proposition-quadratic-formula-C" class="Proposition" title="Generalization of quadratci formula">
+<p></p><details class="Proposition fbx-simplebox fbx-default" open=""><summary><strong>Proposition 59: </strong>Generalization of quadratci formula</summary><div>Let <span class="math inline">\(a, b, c \in \mathbb{C}, a \neq 0\)</span>. The two solutions to <span class="math display">\[
+a x^{2}+b x+c=0
+\]</span> are given by <span class="math display">\[
+x_1 = \frac{-b + S_1}{2 a} \,,
+\quad
+x_2 = \frac{-b + S_2}{2 a} \,,
+\]</span> where <span class="math inline">\(S_1\)</span> and <span class="math inline">\(S_2\)</span> are the two solutions to <span class="math display">\[
+z^2 = \Delta \,, \quad \Delta := b^2 - 4ac \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Remark-60" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 60</strong></summary><div>Suppose that <span class="math inline">\(\Delta \in \mathbb{R}\)</span>. The equation <span class="math display">\[
+z^2 = \Delta
+\]</span> has the following solutions:<p></p>
+<ul>
+<li>If <span class="math inline">\(\Delta&gt;0\)</span> there are two real solutions <span class="math display">\[
+S_1 =  -\sqrt{\Delta} \,, \quad S_2 = \sqrt{\Delta}
+\]</span></li>
+<li>If <span class="math inline">\(\Delta = 0\)</span> then <span class="math inline">\(0\)</span> is the only solution with multiplicity <span class="math inline">\(2\)</span>. Hence <span class="math display">\[
+S_1 = S_2 = 0   
+\]</span></li>
+<li>If <span class="math inline">\(\Delta&lt;0\)</span> there are two complex solutions <span class="math display">\[
+S_1 = - i  \sqrt{-\Delta} \,, \quad
+S_2 =  i  \sqrt{-\Delta}
+\]</span></li>
+</ul>
+<p>Therefore the solutions <span class="math display">\[
+x_1 = \frac{-b + S_1}{2 a} \,,
+\quad
+x_2 = \frac{-b + S_2}{2 a} \,,
+\]</span> given in Proposition <a href="chap_5.html#proposition-quadratic-formula">54</a> coincide with the ones given in Proposition <a href="chap_5.html#proposition-quadratic-formula-C">59</a>.</p>
+</div></details>
+</div>
+<div id="Example-61" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 61</strong></summary><div>Let us see an application of Proposition <a href="chap_5.html#proposition-quadratic-formula-C">59</a>. Consider the equation <span id="eq-example-complex-delta"><span class="math display">\[
+\frac{1}{2} x^{2}-(3+i) x+(4-i)=0 \,.
+\tag{5.13}\]</span></span> We have <span class="math display">\[\begin{align*}
+\Delta &amp; = (-(3+i))^{2}-4 \cdot \frac{1}{2} \cdot(4-i) \\
+       &amp; = 8+6 i-8+2 i \\
+       &amp; =8 i \,.
+\end{align*}\]</span> Therefore <span class="math inline">\(\Delta \in \mathbb{C}\)</span>. We have to find solutions <span class="math inline">\(S_1\)</span> and <span class="math inline">\(S_2\)</span> to the equation <span id="eq-example-complex-delta-2"><span class="math display">\[
+z^2 = \Delta = 8i \,.
+\tag{5.14}\]</span></span> We look for solutions of the form <span class="math inline">\(z=x+ i y\)</span>. Then we must have that <span class="math display">\[
+z^{2}=(a+ ib)^{2}=a^{2}-b^{2}+2 a b i = 8 i \,.
+\]</span> Thus <span class="math display">\[
+a^{2}-b^{2}=0 \,, \quad 2 a b = 8  \,.
+\]</span> From the first equation we conclude that <span class="math inline">\(|a|=|b|\)</span>. From the second equation we have that <span class="math inline">\(ab=4\)</span>, and therefore <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> must have the same sign. Hence <span class="math inline">\(a=b\)</span>, and <span class="math display">\[
+2 a b = 8 \quad \implies \quad a = b = \pm 2 \,.
+\]</span> From this we conclude that the solutions to (<a href="#eq-example-complex-delta-2"><span>5.14</span></a>) are <span class="math display">\[
+S_{1} = 2+2 i \,, \quad  S_{2}=-2-2 i \,.
+\]</span> Hence the solutions to (<a href="#eq-example-complex-delta"><span>5.13</span></a>) are <span class="math display">\[\begin{align*}
+x_1 &amp; = \frac{3+i+S_{1}}{2 \cdot \frac{1}{2}}  = 3 + i + S_{1} \\
+    &amp; = 3 + i + 2 + 2i = 5 + 3i \,,
+\end{align*}\]</span> and <span class="math display">\[\begin{align*}
+x_2 &amp; = \frac{3+i+S_{2}}{2 \cdot \frac{1}{2}}  = 3+i+S_{2} \\
+    &amp; = 3+i -2 - 2i  = 1 - i \,.
+\end{align*}\]</span><p></p>
+</div></details>
+</div>
+<p>In the above example it was a bit laborious to compute <span class="math inline">\(S_{1}\)</span> and <span class="math inline">\(S_{2}\)</span>. In the next section we will see an easier way to solve problems of the form <span class="math inline">\(z^2 = \Delta\)</span>.</p>
+<div id="polynomial-equations-of-order-n34" class="Remark" title="Polynomial equations of order n=3,4">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 62: </strong>Polynomial equations of order <span class="math inline">\(n=3,4\)</span></summary><div>For polynomial equations <span class="math display">\[
+p_n(x) = 0
+\]</span> with <span class="math inline">\(p_n\)</span> of degree <span class="math inline">\(n=3,4\)</span> similar methods exist. However the solution formulas for such equations are really complicated, and we do not cover them here.<p></p>
+<p>Still, it is sometimes possible to solve equations of degree higher than 2, in case it is obvious from inspection that a certain number is a solution, e.g., when <span class="math inline">\(x=-1,0,1\)</span> is a solution.</p>
+</div></details>
+</div>
+<div id="Example-63" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 63</strong></summary><div>Consider the equation <span class="math display">\[
+x^{3}-7 x^{2}+6 x=0 \,.
+\]</span> It is clear that <span class="math inline">\(x=0\)</span> is a solution and that we can write <span class="math display">\[
+x^{3}-7 x^{2}+6 x=x\left(x^{2}-7 x+6\right) \,.
+\]</span> We could now use the quadratic formula to find the remaining two roots, but we can also directly observe that also <span class="math inline">\(x=1\)</span> is a solution, so that <span class="math inline">\(x-1\)</span> divides <span class="math inline">\(x^{2}-7 x+6\)</span>. Using polynomial long division, we find that <span class="math display">\[
+\frac{x^{2}-7 x+6}{x-1}=x-6 \,.
+\]</span> Therefor the last solution is <span class="math inline">\(x=6\)</span>, and <span class="math display">\[
+x^{3}-7 x^{2}+6 x=x(x-1)(x-6) \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Example-64" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 64</strong></summary><div>Suppose we want to solve <span class="math display">\[
+x^{3}-7 x+6=0 \,.
+\]</span> It is easy to see <span class="math inline">\(x=1\)</span> is a solution. This means that <span class="math inline">\(x-1\)</span> divides <span class="math inline">\(x^{3}-7 x+6\)</span>, so we can compute by using polynomial long division,<p></p>
+<p><span class="math display">\[
+\frac{x^{3}-7 x+6}{x-1}=x^{2}+x-6 \,.
+\]</span> For the remaining two solutions, we can use the quadratic formula to obtain that also <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=-3\)</span> are solutions. Thus <span class="math display">\[
+x^{3}-7 x+6 = (x-1)(x-2)(x+3) \,.
+\]</span></p>
+</div></details>
+</div>
+</section>
+<section id="roots-of-unity" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="roots-of-unity"><span class="header-section-number">5.8</span> Roots of unity</h2>
+<div id="Problem*-15" class="Problem">
+<p></p><details class="Problem fbx-simplebox fbx-default" open=""><summary><strong>Problem</strong></summary><div>Let <span class="math inline">\(n \in \mathbb{N}\)</span>. We want to find all complex solutions to <span id="eq-root-unity"><span class="math display">\[
+z^{n}=1 \,.
+\tag{5.15}\]</span></span><p></p>
+</div></details>
+</div>
+<p>Note that <span class="math inline">\(z=1\)</span> is always a solution to (<a href="#eq-root-unity"><span>5.15</span></a>) if <span class="math inline">\(n\)</span> is even. In such case also <span class="math inline">\(z=-1\)</span> is a solution. If we were only looking for solutions in <span class="math inline">\(\mathbb{R}\)</span>, these two would be the only solutions.</p>
+<p>However, the Fundamental Theorem of Algebra, see Theorem <a href="chap_5.html#theorem-fta">47</a>, tells us that there are <span class="math inline">\(n\)</span> complex solutions to (<a href="#eq-root-unity"><span>5.15</span></a>).</p>
+<div id="Question-65" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 65</strong></summary><div>Is there a way to find all <span class="math inline">\(n\)</span> solutions?<p></p>
+</div></details>
+</div>
+<div id="Example-66" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 66</strong></summary><div>We have seen in Example <a href="chap_5.html#example-degree-4">49</a> that the solutions to <span class="math display">\[
+x^{4}=1
+\]</span> are <span class="math inline">\(x=\)</span> <span class="math inline">\(-1,1, i,-i\)</span>. However we deduced this with a procedure which does not seem to generalize well to other exponents.<p></p>
+</div></details>
+</div>
+<p>The trick to find all <span class="math inline">\(n\)</span> solutions to (<a href="#eq-root-unity"><span>5.15</span></a>) is to use the exponential form.</p>
+<div id="Theorem-67" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 67</strong></summary><div>Let <span class="math inline">\(n \in \mathbb{N}\)</span> and consider the equation <span id="eq-root-unity-1"><span class="math display">\[
+z^{n}=1 \,.
+\tag{5.16}\]</span></span> All the <span class="math inline">\(n\)</span> solutions to (<a href="#eq-root-unity-1"><span>5.16</span></a>) are given by <span class="math display">\[
+z_k = \exp \left(i \frac{2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
+\]</span> where <span class="math inline">\(\exp(x)\)</span> denotes <span class="math inline">\(e^x\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-16" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Rewrite <span class="math inline">\(1\)</span> in exponential form: <span class="math display">\[
+1=|1|e^{i \arg(1)} =e^{i 2 \pi k} \, , \quad k \in \mathbb{Z}\,.
+\]</span> Therefore (<a href="#eq-root-unity-1"><span>5.16</span></a>) is equivalent to <span class="math display">\[
+z^n = e^{i 2 \pi k} \,.
+\]</span> Now we can take the <span class="math inline">\(n\)</span>-th root on both sides of the above equation to get that <span class="math display">\[
+z=\exp \left(i \frac{2 \pi k}{n}\right), \quad k \in \mathbb{Z}\,.
+\]</span> By choosing the values for <span class="math inline">\(k\)</span> <span class="math display">\[
+k = 0, \ldots, n-1 \,,
+\]</span> we obtain <span class="math inline">\(n\)</span> different solutions.<p></p>
+</div></details>
+</div>
+<div id="Definition-68" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 68</strong></summary><div>The solutions to <span class="math display">\[
+z^{n}=1
+\]</span> are called the <strong>roots of unity</strong>.<p></p>
+</div></details>
+</div>
+<div id="Example-69" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 69</strong></summary><div>The solutions to <span class="math display">\[
+z^{4}=1
+\]</span> are given by <span class="math display">\[
+z_k = \exp \left(i \frac{2 \pi k}{4} \right) = \exp \left(i \frac{\pi k}{2} \right)  \,.
+\]</span> By taking <span class="math inline">\(k=0,1,2,3\)</span>, we obtain the four solutions <span class="math display">\[\begin{align*}
+z_0 &amp; = e^{i 0} = 1 \,, &amp; \quad &amp; z_1 = e^{i \frac{\pi}{2}}=i \,, \\
+z_2 &amp; = e^{i \pi}=-1 \,, &amp; \quad &amp; z_3 = e^{i \frac{3 \pi}{2}}=-i \, .
+\end{align*}\]</span> Note that for <span class="math inline">\(k=4\)</span> we would again get the solution <span class="math inline">\(z=e^{i 2 \pi}=1\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Example-70" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 70</strong></summary><div>The solutions to <span class="math display">\[
+z^{3}=1
+\]</span> are given by <span class="math display">\[
+z_k = \exp \left( i \frac{2 \pi k}{3} \right) \,.
+\]</span> By taking <span class="math inline">\(k=0,1,2\)</span>, we obtain the three solutions <span class="math display">\[
+z_0=e^{i 0}=1, \quad z_1=e^{i \frac{2 \pi}{3}}, \quad z_2=e^{i \frac{4 \pi}{3}} .
+\]</span> We can also convert <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> to trigonometric form: <span class="math display">\[
+z_1 = e^{i \frac{2 \pi}{3}}=\cos \left(\frac{2 \pi}{3}\right)+i \sin \left(\frac{2 \pi}{3}\right)=-\frac{1}{2}+\frac{\sqrt{3}}{2} i
+\]</span> and <span class="math display">\[
+z_2 = e^{i \frac{4 \pi}{3}}=\cos \left(\frac{4 \pi}{3}\right)+i \sin \left(\frac{4 \pi}{3}\right)=-\frac{1}{2}-\frac{\sqrt{3}}{2} i
 \]</span><p></p>
 </div></details>
 </div>

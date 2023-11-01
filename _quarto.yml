@@ -170,6 +170,10 @@ custom-numbered-blocks:
       group: thmlike
       numbered: false
 
+    Problem: 
+      group: thmlike
+      numbered: false
+
     Definition:
       group: thmlike
       colors: [c6e6ed, 1995ad]
