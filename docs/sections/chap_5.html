@@ -66,15 +66,23 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Warning {
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -82,39 +90,19 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Axiom {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
+.Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -122,15 +110,27 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
-.Problem {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -263,6 +263,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#fundamental-theorem-of-algebra" id="toc-fundamental-theorem-of-algebra" class="nav-link" data-scroll-target="#fundamental-theorem-of-algebra"><span class="header-section-number">5.6</span> Fundamental Theorem of Algebra</a></li>
   <li><a href="#solving-polynomial-equations" id="toc-solving-polynomial-equations" class="nav-link" data-scroll-target="#solving-polynomial-equations"><span class="header-section-number">5.7</span> Solving polynomial equations</a></li>
   <li><a href="#roots-of-unity" id="toc-roots-of-unity" class="nav-link" data-scroll-target="#roots-of-unity"><span class="header-section-number">5.8</span> Roots of unity</a></li>
+  <li><a href="#roots-in-mathbbc" id="toc-roots-in-mathbbc" class="nav-link" data-scroll-target="#roots-in-mathbbc"><span class="header-section-number">5.9</span> Roots in <span class="math inline">\(\mathbb{C}\)</span></a></li>
   </ul>
 </nav>
     </div>
@@ -1364,11 +1365,9 @@ z_k = \exp \left(i \frac{2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
 1=|1|e^{i \arg(1)} =e^{i 2 \pi k} \, , \quad k \in \mathbb{Z}\,.
 \]</span> Therefore (<a href="#eq-root-unity-1"><span>5.16</span></a>) is equivalent to <span class="math display">\[
 z^n = e^{i 2 \pi k} \,.
-\]</span> Now we can take the <span class="math inline">\(n\)</span>-th root on both sides of the above equation to get that <span class="math display">\[
-z=\exp \left(i \frac{2 \pi k}{n}\right), \quad k \in \mathbb{Z}\,.
-\]</span> By choosing the values for <span class="math inline">\(k\)</span> <span class="math display">\[
-k = 0, \ldots, n-1 \,,
-\]</span> we obtain <span class="math inline">\(n\)</span> different solutions.<p></p>
+\]</span> By the properties of the exponential, we see that the above is solved by <span class="math display">\[
+z_k = \exp \left(i \frac{2 \pi k}{n}\right), \quad k \in \mathbb{Z}\,.
+\]</span> By choosing <span class="math inline">\(k = 0, \ldots, n-1\)</span> we obtain <span class="math inline">\(n\)</span> different solutions.<p></p>
 </div></details>
 </div>
 <div id="Definition-68" class="Definition">
@@ -1400,6 +1399,65 @@ z_1 = e^{i \frac{2 \pi}{3}}=\cos \left(\frac{2 \pi}{3}\right)+i \sin \left(\frac
 \]</span> and <span class="math display">\[
 z_2 = e^{i \frac{4 \pi}{3}}=\cos \left(\frac{4 \pi}{3}\right)+i \sin \left(\frac{4 \pi}{3}\right)=-\frac{1}{2}-\frac{\sqrt{3}}{2} i
 \]</span><p></p>
+</div></details>
+</div>
+</section>
+<section id="roots-in-mathbbc" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="roots-in-mathbbc"><span class="header-section-number">5.9</span> Roots in <span class="math inline">\(\mathbb{C}\)</span></h2>
+<div id="Problem*-17" class="Problem">
+<p></p><details class="Problem fbx-simplebox fbx-default" open=""><summary><strong>Problem</strong></summary><div>Let <span class="math inline">\(n \in \mathbb{N}\)</span> and <span class="math inline">\(c \in \mathbb{C}\)</span>. We want to find the <span class="math inline">\(n\)</span>-th roots of <span class="math inline">\(c\)</span>. This means we want to find all complex solutions to <span class="math display">\[
+z^{n}=c \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>The Fundamental Theorem of Algebra ensures that the above has <span class="math inline">\(n\)</span> complex solutions. To find these solutions, we pass to the exponential form.</p>
+<div id="Theorem-71" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 71</strong></summary><div>Let <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math inline">\(c \in \mathbb{C}\)</span> and consider the equation <span id="eq-root-C"><span class="math display">\[
+z^{n}=c \,.
+\tag{5.17}\]</span></span> All the <span class="math inline">\(n\)</span> solutions to (<a href="#eq-root-C"><span>5.17</span></a>) are given by <span class="math display">\[
+z_k = \sqrt[n]{|c|} \, \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
+\]</span> where <span class="math inline">\(\sqrt[n]{|c|}\)</span> is the <span class="math inline">\(n\)</span>-th root of the real number <span class="math inline">\(|c|\)</span>, and <span class="math inline">\(\theta = \arg(c)\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Proof*-18" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Write <span class="math inline">\(c\)</span> in exponential form: <span class="math display">\[
+c=|c|e^{i \theta} =|c| e^{i(\theta + 2 \pi k)} \, , \quad k \in \mathbb{Z}\,,
+\]</span> where <span class="math inline">\(\theta = \arg(c)\)</span>. Therefore (<a href="#eq-root-C"><span>5.17</span></a>) is equivalent to <span class="math display">\[
+z^n = |c| e^{i(\theta + 2 \pi k)} \,.
+\]</span> By the properties of the exponential, we see that the above is solved by <span class="math display">\[
+z_k= \sqrt[n]{|c|} \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right), \quad k \in \mathbb{Z}\,.
+\]</span> By choosing <span class="math inline">\(k = 0, \ldots, n-1\)</span> we obtain <span class="math inline">\(n\)</span> different solutions.<p></p>
+</div></details>
+</div>
+<div id="Example-72" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 72</strong></summary><div>We want to find all the <span class="math inline">\(z \in \mathbb{C}\)</span> such that <span class="math display">\[
+z^{5}=-32 \,.
+\]</span> Let <span class="math inline">\(c = -32\)</span>. We have <span class="math display">\[
+|c| = |-32|=32=2^{5}\,, \quad \theta = \arg (-32)=\pi \,.
+\]</span> Hence, the solutions are given by <span class="math display">\[
+z_k =  \left(2^{5}\right)^{\frac{1}{5}} \exp \left(i \pi \, \frac{1+2 k}{5} \right) \,, \quad k \in \mathbb{Z}\,.
+\]</span><p></p>
+<p>By taking <span class="math inline">\(k=0,1,2,3,4\)</span> we get the solutions <span class="math display">\[\begin{align*}
+z_0 &amp; = 2 e^{i \frac{\pi}{5}} \,  &amp; \quad &amp; z_1 = 2 e^{i \frac{3 \pi}{5}}  \\
+z_2 &amp; = 2 e^{i \pi}=-2 \,  &amp; \quad &amp; z_3=2 e^{i \frac{7 \pi}{5}}  \\
+z_4 &amp;= 2 e^{i \frac{9 \pi}{5}}  &amp; \quad &amp;
+\end{align*}\]</span></p>
+</div></details>
+</div>
+<div id="Example-73" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 73</strong></summary><div>We want to find all the <span class="math inline">\(z \in \mathbb{C}\)</span> such that <span class="math display">\[
+z^{4}=9\left(\cos \left(\frac{\pi}{3}\right)+i \sin \left(\frac{\pi}{3}\right)\right) \,.
+\]</span> Set <span class="math display">\[
+c:=9\left(\cos \left(\frac{\pi}{3}\right)+i \sin \left(\frac{\pi}{3}\right)\right) \,.
+\]</span> The complex number <span class="math inline">\(c\)</span> is already in the trigonometric form, so that we can immediately obtain <span class="math display">\[
+|c| = 9 \,, \quad \theta = \arg(c) = \frac{\pi}{3} \,.
+\]</span> Hence the solutions are given by <span class="math display">\[\begin{align*}
+z_k &amp; = \sqrt[4]{9} \, \exp \left( i \,  \frac{ \pi/3 + 2 \pi k}{4} \right) \\
+&amp; = \sqrt{3} \exp \left(  i \pi \, \frac{1+6 k}{12} \right)
+\end{align*}\]</span> for <span class="math inline">\(k \in \mathbb{Z}\)</span>. Choosing <span class="math inline">\(k=0,1,2,3\)</span> gives the <span class="math inline">\(4\)</span> solutions <span class="math display">\[\begin{align*}
+z_0 &amp; = \sqrt{3} e^{i \pi \frac{1}{12}} &amp; \quad &amp; z_1 = \sqrt{3} e^{i \pi \frac{7}{12}} \\
+z_2 &amp; = \sqrt{3} e^{i \pi \frac{13}{12}}  &amp; \quad &amp;  z_3 = \sqrt{3} e^{i \pi \frac{19}{12}}
+\end{align*}\]</span><p></p>
 </div></details>
 </div>
 

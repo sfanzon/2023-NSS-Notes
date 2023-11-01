@@ -563,6 +563,16 @@
 
  [**Example 5.70**](#Example-5.70)\Pageref{Example-5.70}
 
+ [**Problem**](#Problem*-5.17)\Pageref{Problem*-5.17}
+
+ [**Theorem 5.71**](#Theorem-5.71)\Pageref{Theorem-5.71}
+
+ [**Proof**](#Proof*-5.18)\Pageref{Proof*-5.18}
+
+ [**Example 5.72**](#Example-5.72)\Pageref{Example-5.72}
+
+ [**Example 5.73**](#Example-5.73)\Pageref{Example-5.73}
+
  [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
 
  [**Proof**](#Proof*-6.1)\Pageref{Proof*-6.1}

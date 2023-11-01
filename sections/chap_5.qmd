@@ -1832,15 +1832,11 @@ Therefore (@eq-root-unity-1) is equivalent to
 $$
 z^n = e^{i 2 \pi k} \,.
 $$
-Now we can take the $n$-th root on both sides of the above equation to get that
+By the properties of the exponential, we see that the above is solved by
 $$
-z=\exp \left(i \frac{2 \pi k}{n}\right), \quad k \in \Z \,.
+z_k = \exp \left(i \frac{2 \pi k}{n}\right), \quad k \in \Z \,.
 $$
-By choosing the values for $k$
-$$
-k = 0, \ldots, n-1 \,,
-$$
-we obtain $n$ different solutions.
+By choosing $k = 0, \ldots, n-1$ we obtain $n$ different solutions.
 
 
 :::
@@ -1901,6 +1897,116 @@ z_2 = e^{i \frac{4 \pi}{3}}=\cos \left(\frac{4 \pi}{3}\right)+i \sin \left(\frac
 $$
 
 :::
+
+
+
+
+## Roots in $\C$
+
+
+::: Problem 
+
+Let $n \in \N$ and $c \in \C$. We want to find the $n$-th roots of $c$. This means we want to find all complex solutions to
+$$
+z^{n}=c \,.
+$$
+
+:::
+
+The Fundamental Theorem of Algebra ensures that the above has $n$ 
+complex solutions. To find these solutions, we pass to the exponential
+form.
+
+
+::: Theorem
+
+Let $n \in \N$, $c \in \C$ and consider the equation
+$$
+z^{n}=c \,.
+$${#eq-root-C}
+All the $n$ solutions to (@eq-root-C) are given by
+$$
+z_k = \sqrt[n]{|c|} \, \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right) \,, \quad k = 0, \ldots, n-1 \,,
+$$
+where $\sqrt[n]{|c|}$ is the $n$-th root of the real number $|c|$, and $\theta = \arg(c)$.
+
+:::
+
+::: Proof
+
+Write $c$ in exponential form:
+$$
+c=|c|e^{i \theta} =|c| e^{i(\theta + 2 \pi k)} \, , \quad k \in \Z \,,
+$$
+where $\theta = \arg(c)$. Therefore (@eq-root-C) is equivalent to
+$$
+z^n = |c| e^{i(\theta + 2 \pi k)} \,.
+$$
+By the properties of the exponential, we see that the above is solved by
+$$
+z_k= \sqrt[n]{|c|} \exp \left(i \, \frac{\theta + 2 \pi k}{n}\right), \quad k \in \Z \,.
+$$
+By choosing $k = 0, \ldots, n-1$ we obtain $n$ different solutions.
+
+
+:::
+
+
+
+
+::: Example 
+We want to find all the $z \in \C$ such that
+$$
+z^{5}=-32 \,.
+$$
+Let $c = -32$. We have
+$$
+|c| = |-32|=32=2^{5}\,, \quad \theta = \arg (-32)=\pi \,.
+$$ 
+Hence, the solutions are given by
+$$
+z_k =  \left(2^{5}\right)^{\frac{1}{5}} \exp \left(i \pi \, \frac{1+2 k}{5} \right) \,, \quad k \in \Z \,.
+$$
+
+By taking $k=0,1,2,3,4$ we get the solutions
+\begin{align*}
+z_0 & = 2 e^{i \frac{\pi}{5}} \,  & \quad & z_1 = 2 e^{i \frac{3 \pi}{5}}  \\ 
+z_2 & = 2 e^{i \pi}=-2 \,  & \quad & z_3=2 e^{i \frac{7 \pi}{5}}  \\
+z_4 &= 2 e^{i \frac{9 \pi}{5}}  & \quad & 
+\end{align*}
+
+:::
+
+
+::: Example 
+We want to find all the $z \in \C$ such that
+$$
+z^{4}=9\left(\cos \left(\frac{\pi}{3}\right)+i \sin \left(\frac{\pi}{3}\right)\right) \,.
+$$
+Set 
+$$
+c:=9\left(\cos \left(\frac{\pi}{3}\right)+i \sin \left(\frac{\pi}{3}\right)\right) \,.
+$$
+The complex number $c$ is already in the trigonometric form, so that we can immediately obtain
+$$
+|c| = 9 \,, \quad \theta = \arg(c) = \frac{\pi}{3} \,.
+$$
+Hence the solutions are given by
+\begin{align*}
+z_k & = \sqrt[4]{9} \, \exp \left( i \,  \frac{ \pi/3 + 2 \pi k}{4} \right) \\
+& = \sqrt{3} \exp \left(  i \pi \, \frac{1+6 k}{12} \right) 
+\end{align*}
+for $k \in \Z$. Choosing $k=0,1,2,3$ gives the $4$ solutions
+\begin{align*}
+z_0 & = \sqrt{3} e^{i \pi \frac{1}{12}} & \quad & z_1 = \sqrt{3} e^{i \pi \frac{7}{12}} \\
+z_2 & = \sqrt{3} e^{i \pi \frac{13}{12}}  & \quad &  z_3 = \sqrt{3} e^{i \pi \frac{19}{12}} 
+\end{align*}
+
+:::
+
+
+
+
 
 
 
