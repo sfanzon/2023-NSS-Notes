@@ -572,19 +572,3 @@
  [**Example 5.72**](#Example-5.72)\Pageref{Example-5.72}
 
  [**Example 5.73**](#Example-5.73)\Pageref{Example-5.73}
-
- [**Proposition 6.1**](#proposition-heron)\Pageref{proposition-heron}
-
- [**Proof**](#Proof*-6.1)\Pageref{Proof*-6.1}
-
- [**Proposition 6.2**](#proposition-heron-error): Error estimate\Pageref{proposition-heron-error}
-
- [**Proof**](#Proof*-6.2)\Pageref{Proof*-6.2}
-
- [**Proposition 6.3**](#proposition-heron-error-exp)\Pageref{proposition-heron-error-exp}
-
- [**Proof**](#Proof*-6.3)\Pageref{Proof*-6.3}
-
- [**Theorem 6.4**](#convergence-of-herons-algorithm): Convergence of Heron’s Algorithm\Pageref{convergence-of-herons-algorithm}
-
- [**Proof**](#Proof*-6.4)\Pageref{Proof*-6.4}

@@ -10,14 +10,18 @@ $
 
 # Sequences
 
-Coming soon
+See Sequences.pdf file on Canvas
 
 
 
 
 ## Example: Euler's Number
 
+
+
+
 ## Recurrence relations
+
 
 
 ## Example: Heron's Method
