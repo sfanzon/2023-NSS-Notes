@@ -66,27 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Theorem {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -94,21 +74,41 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Axiom {
   --color1: #f4cce0;
@@ -118,19 +118,19 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -1301,22 +1301,40 @@ x^{3}-7 x^{2}+6 x=0 \,.
 \]</span> It is clear that <span class="math inline">\(x=0\)</span> is a solution and that we can write <span class="math display">\[
 x^{3}-7 x^{2}+6 x=x\left(x^{2}-7 x+6\right) \,.
 \]</span> We could now use the quadratic formula to find the remaining two roots, but we can also directly observe that also <span class="math inline">\(x=1\)</span> is a solution, so that <span class="math inline">\(x-1\)</span> divides <span class="math inline">\(x^{2}-7 x+6\)</span>. Using polynomial long division, we find that <span class="math display">\[
-\frac{x^{2}-7 x+6}{x-1}=x-6 \,.
-\]</span> Therefor the last solution is <span class="math inline">\(x=6\)</span>, and <span class="math display">\[
+\frac{x^{2}-7 x+6}{x-1}=x-6 \,,
+\]</span> see <a href="#fig-polynomial">Figure&nbsp;<span>5.6</span></a>. Therefore the last solution is <span class="math inline">\(x=6\)</span>, and <span class="math display">\[
 x^{3}-7 x^{2}+6 x=x(x-1)(x-6) \,.
 \]</span><p></p>
 </div></details>
+</div>
+<div id="fig-polynomial" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/polynomial_1.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.6: Polynomial long division between <span class="math inline">\(x^{2}-7 x+6\)</span> and <span class="math inline">\(x-1\)</span>.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/polynomial.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Example of polynomial long division between <span class="math inline">\(6x^3+5x^2-7\)</span> and <span class="math inline">\(3x^2-2x-1\)</span>.</figcaption>
+</figure>
 </div>
 <div id="Example-64" class="Example">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 64</strong></summary><div>Suppose we want to solve <span class="math display">\[
 x^{3}-7 x+6=0 \,.
 \]</span> It is easy to see <span class="math inline">\(x=1\)</span> is a solution. This means that <span class="math inline">\(x-1\)</span> divides <span class="math inline">\(x^{3}-7 x+6\)</span>, so we can compute by using polynomial long division,<p></p>
 <p><span class="math display">\[
-\frac{x^{3}-7 x+6}{x-1}=x^{2}+x-6 \,.
-\]</span> For the remaining two solutions, we can use the quadratic formula to obtain that also <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=-3\)</span> are solutions. Thus <span class="math display">\[
+\frac{x^{3}-7 x+6}{x-1}=x^{2}+x-6 \,,
+\]</span> see <a href="#fig-polynomial-1">Figure&nbsp;<span>5.7</span></a>. For the remaining two solutions, we can use the quadratic formula to obtain that also <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=-3\)</span> are solutions. Thus <span class="math display">\[
 x^{3}-7 x+6 = (x-1)(x-2)(x+3) \,.
 \]</span></p>
 </div></details>
+</div>
+<div id="fig-polynomial-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../images/polynomial_2.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.7: Polynomial long division between <span class="math inline">\(x^{3}-7 x+6\)</span> and <span class="math inline">\(x-1\)</span>.</figcaption>
+</figure>
 </div>
 </section>
 <section id="roots-of-unity" class="level2" data-number="5.8">

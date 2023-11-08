@@ -10,7 +10,7 @@ $
 
 # Sequences
 
-See Sequences.pdf file on Canvas
+Use dommers, Marcellini and Abbot
 
 
 
@@ -18,10 +18,12 @@ See Sequences.pdf file on Canvas
 ## Example: Euler's Number
 
 
+Marcellini
 
 
 ## Recurrence relations
 
+Marcellini
 
 
 ## Example: Heron's Method
