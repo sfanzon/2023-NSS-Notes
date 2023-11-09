@@ -66,19 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Question {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Warning {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -86,27 +78,27 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Theorem {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
-.Corollary {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Problem {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -114,7 +106,23 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -122,15 +130,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -1096,22 +1096,30 @@ p(x) = x^{2} + 1 = (x-i)(x+i) \,.
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 49</strong></summary><div>Suppose we want to solve <span id="eq-fta-example-2"><span class="math display">\[
 x^{4}-1=0 \,.
 \tag{5.10}\]</span></span> The associated polynomial equation is <span class="math display">\[
-p(x) = 0 \,, \quad p(x) := x^4 + 1 \,.
+p(x) = 0 \,, \quad p(x) := x^4 - 1 \,.
 \]</span> Since <span class="math inline">\(p\)</span> has degree <span class="math inline">\(n=4\)</span>, the Fundamental Theorem of Algebra tells us that there are <span class="math inline">\(4\)</span> solutions to (<a href="#eq-fta-example-2"><span>5.10</span></a>).<p></p>
-<p>Let us find such solutions. We have <span class="math display">\[
-x^{4}-1=0  \quad \iff \quad \left(x^{2}\right)^{2}=1 \quad \iff
-\quad x^{2} = \pm 1  \,.
-\]</span> This means that we can have <span class="math display">\[
-x^{2}=1 \,,
-\]</span> in which case <span class="math inline">\(x=1\)</span> or <span class="math inline">\(x=-1\)</span>, or we can have <span class="math display">\[
-x^{2}=-1 \,,
-\]</span> in which case <span class="math inline">\(x=i\)</span> or <span class="math inline">\(x=-i\)</span>. Hence, the four solutions of (<a href="#eq-fta-example-2"><span>5.10</span></a>) are given by <span class="math inline">\(x=1,-1, i,-i\)</span> and <span class="math display">\[
-p(x) = x^4 + 1 = (x-1)(x+1)(x-i)(x+i) \,.
+<p>Let us find such solutions. We use the well known formula <span class="math display">\[
+a^2-b^2 = (a+b)(a-b) \,, \quad \forall \, a,b \in \mathbb{R}\,,
+\]</span> to factorize <span class="math inline">\(p\)</span>. We get: <span class="math display">\[
+p(x) = (x^4-1) = (x^2+1)(x^2-1) \,.
+\]</span> We know that <span class="math display">\[
+x^2 + 1 = 0
+\]</span> has solutions <span class="math inline">\(x = \pm i\)</span>. Instead<br>
+<span class="math display">\[
+x^2 - 1 = 0
+\]</span> has solutions <span class="math inline">\(x = \pm 1\)</span>. Hence, the four solutions of (<a href="#eq-fta-example-2"><span>5.10</span></a>) are given by <span class="math inline">\(x=1,-1, i,-i\)</span> and <span class="math display">\[
+p(x) = x^4 - 1 = (x-1)(x+1)(x-i)(x+i) \,.
 \]</span></p>
 </div></details>
 </div>
 <div id="Definition-50" class="Definition">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 50</strong></summary><div>If a complex number <span class="math inline">\(z\)</span> shows up <span class="math inline">\(k\)</span> times on the right hand side of (<a href="#eq-fta-0"><span>5.7</span></a>) for some <span class="math inline">\(k \in \mathbb{N}\)</span>, then we say that <span class="math inline">\(z\)</span> is a solution to (<a href="#eq-fta"><span>5.8</span></a>) with multiplicity <span class="math inline">\(k\)</span>.<p></p>
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 50</strong></summary><div>Suppose that the polynomial <span class="math inline">\(p_n\)</span> factorizes as <span class="math display">\[
+p_n(x) = a_n (x-z_1)^{k_1} (x-z_2)^{k_2} \cdots (x-z_m)^{k_m}
+\]</span> with <span class="math inline">\(a_n \neq 0\)</span>, <span class="math inline">\(z_1,\ldots, z_m \in \mathbb{C}\)</span> and <span class="math inline">\(k_1, \ldots , k_m \in \mathbb{N}\)</span>, <span class="math inline">\(k_i \geq 1\)</span>. In this case <span class="math inline">\(p_n\)</span> has degree <span class="math display">\[
+n = k_1 + \ldots + k_m = \sum_{i=1}^m k_i \,.
+\]</span> We have that <span class="math inline">\(z_i\)</span> is solves the equation <span class="math display">\[
+p_n(x) = 0
+\]</span> exactly <span class="math inline">\(k_i\)</span> times. We call <span class="math inline">\(k_i\)</span> the <strong>multiplicity</strong> of the solution <span class="math inline">\(z_i\)</span>.<p></p>
 </div></details>
 </div>
 <div id="example-multiplicity" class="Example">

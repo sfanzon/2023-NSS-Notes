@@ -1376,26 +1376,29 @@ x^{4}-1=0 \,.
 $${#eq-fta-example-2}
 The associated polynomial equation is 
 $$
-p(x) = 0 \,, \quad p(x) := x^4 + 1 \,. 
+p(x) = 0 \,, \quad p(x) := x^4 - 1 \,. 
 $$
 Since $p$ has degree $n=4$, the Fundamental Theorem of Algebra tells us that there are $4$ solutions to (@eq-fta-example-2).
 
-Let us find such solutions. We have
+Let us find such solutions. We use the well known formula
 $$
-x^{4}-1=0  \quad \iff \quad \left(x^{2}\right)^{2}=1 \quad \iff 
-\quad x^{2} = \pm 1  \,.
+a^2-b^2 = (a+b)(a-b) \,, \quad \forall \, a,b \in \R \,,
 $$
-This means that we can have
+to factorize $p$. We get:
 $$
-x^{2}=1 \,,
-$$ 
-in which case $x=1$ or $x=-1$, or we can have 
+p(x) = (x^4-1) = (x^2+1)(x^2-1) \,.
 $$
-x^{2}=-1 \,,
-$$ 
-in which case $x=i$ or $x=-i$. Hence, the four solutions of (@eq-fta-example-2) are given by $x=1,-1, i,-i$ and 
+We know that 
 $$
-p(x) = x^4 + 1 = (x-1)(x+1)(x-i)(x+i) \,.
+x^2 + 1 = 0 
+$$
+has solutions $x = \pm i$. Instead  
+$$
+x^2 - 1 = 0 
+$$
+has solutions $x = \pm 1$. Hence, the four solutions of (@eq-fta-example-2) are given by $x=1,-1, i,-i$ and 
+$$
+p(x) = x^4 - 1 = (x-1)(x+1)(x-i)(x+i) \,.
 $$
 
 :::
@@ -1403,9 +1406,19 @@ $$
 
 ::: Definition
 
-If a complex number $z$ shows up $k$ times on the right hand side of 
-(@eq-fta-0) for some $k \in \mathbb{N}$, then we say that $z$ is a solution to (@eq-fta) with multiplicity $k$.
-
+Suppose that the polynomial $p_n$ factorizes as 
+$$
+p_n(x) = a_n (x-z_1)^{k_1} (x-z_2)^{k_2} \cdots (x-z_m)^{k_m} 
+$$
+with $a_n \neq 0$, $z_1,\ldots, z_m \in \C$ and $k_1, \ldots , k_m \in \N$, $k_i \geq 1$. In this case $p_n$ has degree
+$$
+n = k_1 + \ldots + k_m = \sum_{i=1}^m k_i \,.
+$$
+We have that $z_i$ is solves the equation
+$$
+p_n(x) = 0
+$$
+exactly $k_i$ times. We call $k_i$ the **multiplicity** of the solution $z_i$.
 :::
 
 ::: {.Example  #example-multiplicity}
