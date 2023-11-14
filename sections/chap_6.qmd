@@ -10,9 +10,793 @@ $
 
 # Sequences
 
-Use dommers, Marcellini and Abbot
 
 
+A sequence is an infinite list of real numbers. For example, the following are sequences:
+
+
+- $(1,2,3,4, \ldots)$
+
+- $(-1,1,-1,1, \ldots)$
+
+- $\left(1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}, \ldots\right)$
+
+
+::: Remark
+
+- The order of elements is a sequence matters. 
+
+> For example
+>$$
+>(1,2,3,4,5,6, \ldots) \neq(2,1,4,3,6,5, \ldots)
+>$$
+
+- A sequence is not a set. 
+
+> For example 
+>$$
+>\{-1,1,-1,1,-1,1, \ldots\}=\{-1,1\}
+>$$
+>but we cannot make a similar statement for the sequence 
+>$$
+>(-1,1,-1,1,-1,1, \ldots) \,.
+>$$
+
+- The above notation is ambiguous.
+
+> For example the sequence 
+>$$
+>(1,2,3,4, \ldots)
+>$$
+can continue as
+>
+>$$
+>(1,2,3,4,1,2,3,4,1,2,3,4, \ldots) \,.
+>$$
+
+- In the sequence 
+$$
+\left(1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}, \ldots\right)
+$$
+the elements get smaller and smaller, and closer and closer to $0$. We say that this sequence converges to $0$, or has $0$ as a limit. 
+
+
+:::
+
+
+We would like to make the notions of sequence and convergence more precise.
+
+
+## Sequences of Real Numbers
+
+
+We start with the definition of sequence of Real numbers.
+
+
+::: Definition 
+### Sequence of Real numbers
+
+A sequence $a$ in $\R$ is a map
+$$
+a \colon \N \to \R \,.
+$$
+For $n \in \N$, we denote the $n$-th element of the sequence $a$ by 
+$$
+a_{n}=a(n)
+$$ 
+and write the sequence as 
+$$
+\left(a_{n}\right)_{n \in \N} \,.
+$$
+:::
+
+
+::: Notation
+
+We will sometimes omit the subscript $n \in \N$ and simply write 
+$$
+\left(a_{n}\right) \,.
+$$ 
+In certain situations, we will also write
+$$
+\left(a_{n}\right)_{n=1}^{\infty} \,.
+$$
+
+
+:::
+
+
+
+
+::: Example 
+
+- In general $\left(a_{n}\right)_{n \in \N}$ is the sequence 
+$$
+\left(a_{1}, a_{2}, a_{3}, \ldots\right)\,.
+$$
+
+- Consider the sequence 
+$$
+a \colon \N \to \N \, , \quad  n \mapsto 2 n \,.
+$$
+This is also a sequence of real numbers. It can be written as 
+$$
+(2 n)_{n \in \N}
+$$
+and it represents the sequence of even numbers 
+$$
+(2,4,6,8,10, \ldots) \,.
+$$
+
+- Let 
+$$
+a_{n}=(-1)^{n}
+$$
+Then $\left(a_{n}\right)$ is the sequence 
+$$
+(-1,1,-1,1,-1,1, \ldots) \,.
+$$
+
+- $\left(\frac{1}{n}\right)_{n \in \N}$ is the sequence 
+$$
+\left(1, \frac{1}{2}, \frac{1}{4}, \frac{1}{5}, \ldots\right) \,.
+$$
+
+
+:::
+
+
+
+### Convergent sequences
+
+
+We have notice that the sequence $\left(\frac{1}{n}\right)_{n \in \N}$ gets close to $0$ as $n$ gets large. We would like to say that $a_{n}$ converges to $0$ as $n$ tends to infinity.
+
+To make this precise, we first have to say what it means for two numbers to be *close*. For this we use the notion of absolute value, and say that:
+
+- $x$ and $y$ are close if $|x-y|$ is small. 
+- $|x-y|$ is called the distance between $x$ and $y$
+- For $x$ to be close to $0$, we need that $|x-0|=|x|$ is small.
+
+Saying that $|x|$ is *small* is not very precise. Let us now give the formal definition of convergent sequence.
+
+::: Definition 
+### Convergent sequence  {#definition-convergent-sequence}
+
+We say that a sequence $\left(a_{n}\right)_{n \in \N}$ in $\mathbb{R}$ **converges** to $a \in \mathbb{R}$ or equivalently has limit $a$, denoted by
+
+$$
+\lim _{n \rightarrow \infty} a_{n}=a \text {, }
+$$
+
+if for all $\e \in \mathbb{R}, \e>0$, there exists an $N \in \N$ such that for all $n \in \N, n \geq N$ it holds that 
+$$
+\left|a_{n}-a\right| < \e \,.
+$$
+Using quantifiers, we can write this as
+$$
+\forall \, \e>0 , \, \exists \, N \in \N \st \forall \, n \geq N \,, \,\left|a_{n}-a\right| < \e \,.
+$$
+
+If there exists $a \in \R$ such that $\lim _{n \rightarrow \infty} a_{n}=a$, then we say that the sequence $\left(a_{n}\right)_{n \in \N}$ is **convergent**.
+
+:::
+
+
+::: Remark
+
+- Informally, Definition \ref{definition-convergent-sequence} says that, no matter how small we choose $\e$ (as long as it is strictly positive), we always have that $a_{n}$ has a distance to $a$ of less than or equal to $\e$ from a certain point onwards (i.e., from $N$ onward). The sequence $\left(a_{n}\right)$ may fluctuate wildly in the beginning, but from $N$ onward it should stay within a distance of $\e$ of $a$.
+
+- In general $N$ depends on $\e$. If $\e$ is chosen smaller, we might have to take $N$ larger: this means we need to wait longer before the sequence stays within a distance $\e$ from $a$.
+
+:::
+
+
+We now prove that the sequence
+$$
+a_n = \frac1n
+$$
+converges to $0$, according to Definition \ref{definition-convergent-sequence}.
+
+::: {.Theorem #theorem-one-over-n}
+
+The sequence $\left(\frac{1}{n}\right)_{n \in \N}$ converges to $0$ , i.e.,
+
+$$
+\lim_{n \rightarrow \infty} \frac{1}{n}=0 \,.
+$$
+
+:::
+
+We give two proofs of the above theorem:
+
+- Long proof, with all the details.
+- Short proof, with less details, but still acceptable. 
+
+::: Proof 
+### Proof of Theorem \ref{theorem-one-over-n} (Long version)
+
+We have to show that
+
+$$
+\lim _{n \rightarrow \infty} \frac{1}{n}=0,
+$$
+
+which by definition is equivalent to showing that
+
+$$
+\forall \, \e>0 \,, \, \exists \, N \in \N \st  \forall  \, n \geq N \,, \, \left|\frac{1}{n}-0\right| < \e \,.
+$${#eq-one-over-n}
+
+Let $\e \in \mathbb{R}$ with $\e>0$. Choose $N \in \N$ such that 
+$$
+N > \frac{1}{\e}\,.
+$$
+Such natural number $N$ exists thanks to the Archimedean property. The above implies
+$$
+\frac{1}{N} < \e \,,
+$${#eq-one-over-n-1}
+Let $n \in \N$ with $n \geq N$. By (@eq-one-over-n-1) we have
+$$
+\frac{1}{n} \leq \frac{1}{N} < \e \,.
+$$
+From this we deduce
+$$
+\left|\frac{1}{n}-0\right|=\frac{1}{n} \leq \frac{1}{N} < \e
+$$
+
+Since $n \in \N, n \geq N$ was arbitrary, we have proven that 
+$$
+\left|\frac{1}{n}-0\right| < \e \,, \quad \forall \, n \geq N \,.
+$${#eq-one-over-n-2}
+Condition (@eq-one-over-n-2) holds for all $\e>0$, for the choice of $N \in \N$ such that
+$$
+N > \frac{1}{\e} \,.
+$$
+We have hence shown (@eq-one-over-n), and the proof is concluded.
+
+:::
+
+As the above proof is quite long and includes lots of details, it is acceptable to shorten it. For example:
+
+- We skip some intermediate steps.
+- We do not mention the Archimedean property.
+- We leave out the conclusion when it is obvious that the statement has been proven. 
+
+
+
+
+::: Proof 
+### Proof of Theorem \ref{theorem-one-over-n} (Short version)
+
+We have to show that
+
+$$
+\forall \, \e>0 \,, \, \exists \, N \in \N \st  \forall  \, n \geq N \,, \, \left|\frac{1}{n}-0\right| < \e \,.
+$$
+
+Let $\e>0$. Choose $N \in \N$ such that 
+$$
+N > \frac{1}{\e}\,.
+$$
+Let $n \geq N$. Then
+$$
+\left|\frac{1}{n}-0\right|=\frac{1}{n} \leq \frac{1}{N} < \e \,.
+$$
+
+:::
+
+
+In Theorem \ref{theorem-one-over-n} we showed that 
+$$
+\lim_{n \to \infty} \, \frac{1}{n} = 0 \,.
+$$
+We can generalise this statement to prove that 
+$$
+\lim_{n \to \infty} \, \frac{1}{n^{p}} = 0
+$$
+for any $p>0$ fixed.
+
+
+::: Theorem 
+For all $p>0$, the sequence $\left(\frac{1}{n^{p}}\right)_{n \in \N}$ converges to $0$ , i.e.,
+
+$$
+\lim _{n \rightarrow \infty} \frac{1}{n^{p}}=0
+$$
+:::
+
+::: Proof
+
+Let $p>0$. We have to show that
+$$
+\forall \e>0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|\frac{1}{n^{p}}-0\right| < \e \,.
+$$
+Let $\e>0$. Choose $N \in \N$ such that 
+$$
+N > \frac{1}{\e^{1 / p}} \,.
+$${#eq-theorem-one-over-np-1}
+Let $n \geq N$. Since $p>0$, we have $n^{p} \geq N^{p}$, which implies 
+$$
+\frac{1}{n^p} \leq \frac{1}{N^p} \,.
+$$
+By (@eq-theorem-one-over-np-1) we deduce
+$$
+\frac{1}{N^p} < \e \,.
+$$
+Then
+$$
+\left|\frac{1}{n^{p}}-0\right|=\frac{1}{n^{p}} \leq \frac{1}{N^{p}} < \e \,.
+$$
+
+:::
+
+::: Question
+Why did we choose $N \in \N$ such that
+$$
+N > \frac{1}{\e^p}
+$$
+in the above proof?
+:::
+
+The answer is: because it works. Finding a number $N$ that makes the proof work requires some *rough work*: Specifically, such rough work consists in finding $N \in \N$ such that the inequality
+$$
+|a_N - a | < \e 
+$$
+is satisfied. 
+
+
+::: Important 
+
+Any *rough work* required to prove convergence must be shown before the formal proof (in assignments). 
+
+:::
+
+
+
+
+::: Example 
+
+Prove that, as $n \rightarrow \infty$,
+
+$$
+\frac{n}{2n+3} \longrightarrow \frac{1}{2} \,.
+$$
+
+*Part 1. Rough Work.*
+
+Let $\e>0$. We want to find $N \in \N$ such that
+$$
+\left|\frac{n}{2n+3}-\frac{1}{2}\right| < \e \,, \quad \forall \, n \geq N \,.
+$$
+To this end, we compute:
+\begin{align*}
+\left|\frac{n}{2 n+3}-\frac{1}{2}\right| & 
+=\left|\frac{2n -(2n + 3)}{2(2n +3)}\right| \\
+& =\left|\frac{- 3}{4n + 6}\right| \\
+& = \frac{3}{4n + 6} \,.
+\end{align*}
+Therefore 
+\begin{align*}
+\left|\frac{n}{2n+3}-\frac{1}{2}\right| < \e
+\quad \iff &  \quad
+\frac{3}{4n + 6} < \e \\
+\quad \iff &  \quad
+\frac{4n + 6}{3} > \frac{1}{\e} \\
+\quad \iff &  \quad
+4n + 6 > \frac{3}{\e} \\
+\quad \iff &  \quad
+4n  > \frac{3}{\e} - 6 \\
+\quad \iff &  \quad
+n  > \frac{3}{4\e} - \frac{6}{4} \,.
+\end{align*}
+Looking at the above equivalences, it is clear that $N \in \N$ has to be chosen so that
+$$
+N  > \frac{3}{4\e} - \frac{6}{4} \,.
+$$
+
+
+*Part 2. Formal Proof.* We have to show that
+$$
+\forall \e>0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|\frac{n}{2n+3}-\frac{1}{2}\right| < \e  \,.
+$$
+Let $\e>0$. Choose $N \in \N$ such that
+$$
+N > \frac{3}{4\e} - \frac{6}{4}   \,.
+$${#eq-example-limit-1}
+By the rough work shown above, inequality (@eq-example-limit-1) is equivalent to 
+$$
+ \frac{3}{4N + 6} < \e \,.
+$$
+Let $n \geq N$. Then
+\begin{align*}
+\left|\frac{n}{2n+3}-\frac{1}{2}\right| 
+& = \left|\frac{- 3 }{2(2 n+3)}\right| \\
+& = \frac{3}{4 n+ 6 } \\
+& \leq \frac{3}{4 N+ 6 } \\
+& < \e \,,
+\end{align*}
+where in the third line we used that $n \geq N$.
+
+:::
+
+
+
+
+
+### Divergent sequences
+
+
+The opposite of convergent sequences are divergent sequences.
+
+::: Definition
+### Divergent sequence
+
+We say that a sequence $\left(a_{n}\right)_{n \in \N}$ in $\R$ is **divergent** if it is not convergent.
+
+:::
+
+
+
+::: Remark
+
+Proving that a sequence $(a_n)$ is divergent is more complicated than showing it is convergent: To show that $(a_n)$ is divergent, we need to show that 
+$(a_n)$ cannot converge to $a$ for any $a \in \R$.
+
+In other words, we have to show that there does not exist an $a \in \mathbb{R}$ such that 
+$$
+\lim _{n \rightarrow \infty} \, a_n = a  \,.
+$$
+Using quantifiers, this means
+$$
+\nexists \, a \in \R \st \forall \, \e>0 \,, \, 
+\exists \, N \in \N \st \forall \, n \geq N \,, \,
+\left|a_{n}-a\right| < \e \,.
+$$
+The above is equivalent to showing that
+$$
+\forall \, a \in \R \,, \, \exists \, \e > 0 \st  \forall \, N \in \N \,, \, \exists \, n \geq N \st \left|a_{n}-a\right| \geq \e \,.
+$$
+
+:::
+
+
+
+::: Theorem
+Let $\left(a_{n}\right)$ be the sequence defined by
+$$
+a_{n}=(-1)^{n} \,.
+$$
+Then $\left(a_{n}\right)$ does not converge. 
+
+:::
+
+::: Proof
+
+To prove that $\left(a_{n}\right)$ does not converge, we have to show that 
+$$
+\forall \, a \in \R \,, \, \exists \, \e > 0 \st  \forall \, N \in \N \,, \, \exists \, n \geq N \st \left|a_{n}-a\right| \geq \e \,.
+$$
+Let $a \in \R$. Choose 
+$$
+\e=\frac{1}{2} \,.
+$$ 
+Let $N \in \N$. We distinguish two cases:
+
+- $a \geq 0$: Choose $n=2 N+1$. Note that $n \geq N$. Then
+\begin{align*}
+\left|a_{n}-a\right| & = \left|a_{2 N+1}-a\right| \\
+& = \left|(-1)^{2 N+1}-a\right| \\
+& =|-1-a| \\
+& =1+a \\
+& \geq 1 \\
+& > \frac{1}{2} = \e \,,
+\end{align*}
+where we used that $a \geq 0$, and therefore 
+$$
+|-1-a|=1+a \geq 1 \,.
+$$
+
+- $a<0$: Choose $n=2 N$. Note that $n \geq N$. Then
+\begin{align*}
+\left|a_{n}-a\right| & = \left|a_{2 N}-a\right| \\
+& =\left|(-1)^{2 N}-a\right| \\ 
+& = |1-a| \\
+& = 1-a \\
+& > 1 \\
+& > \frac{1}{2} = \e \,,
+\end{align*}
+where we used that $a < 0$, and therefore 
+$$
+|1-a|=1-a > 1 \,.
+$$
+
+
+:::
+
+
+
+### Uniqueness of limit
+
+
+In Definition \ref{definition-convergent-sequence} of convergence, we used the notation 
+$$
+\lim_{n \rightarrow \infty} a_{n}=a \,.
+$$ 
+The above notation makes sense only if the limit is unique, that is, if we do not have that  
+$$
+\lim_{n \rightarrow \infty} a_{n} = b \,,
+$$ 
+for some 
+$$
+a \neq b \,.
+$$
+In the next theorem we will show that the limit is unique, if it exists.
+
+::: Theorem 
+### Uniqueness of limit  {#theorem-uniqueness-limit}
+
+Let $\left(a_{n}\right)_{n \in \N}$ be a sequence. Suppose that 
+$$
+\lim_{n \rightarrow \infty} a_{n} = a \,, \quad 
+\lim_{n \rightarrow \infty} a_{n} = b \,.
+$$
+Then $a=b$.
+:::
+
+
+::: Proof
+
+Assume that, 
+$$
+\lim_{n \rightarrow \infty} a_{n} = a \,, \quad 
+\lim_{n \rightarrow \infty} a_{n} = b \,.
+$$
+Suppose by contradiction that
+$$
+a \neq b \,.
+$$
+Choose 
+$$
+\e := \frac{1}{2} \, |a-b| \,.
+$$
+Therefore $\e>0$, since $|a-b|>0$. By the convergence $a_{n} \rightarrow a$,
+$$
+\exists \, N_1 \in \N \st \forall \, n \geq N_1 \,, \, 
+\left|a_{n}-a\right| < \e \,.
+$$
+By the convergence $a_{n} \rightarrow b$,
+$$
+\exists \, N_2 \in \N \st \forall \, n \geq N_2 \,, \, 
+\left|a_{n} - b \right| < \e \,.
+$$
+Define
+$$
+N := \max \{ N_1, N_2 \} \,.
+$$
+Choose an $n \in \N$ such that $n \geq N$. In particular
+$$
+n \geq N_1 \,, \quad n \geq N_2 \,.
+$$
+Then
+\begin{align*}
+2 \e & = |a-b| \\
+& = \left|a-a_{n}+a_{n}-b\right| \\
+& \leq\left|a-a_{n}\right|+\left|a_{n}-b\right| \\
+& < \e + \e \\
+& = 2 \e \,,
+\end{align*}
+where we used the triangle inequality in the first inequality.
+Hence $2 \e < 2 \e$, which gives a contradiction.
+
+:::
+
+
+::: Example 
+
+Prove that
+
+$$
+\lim _{n \rightarrow \infty} \frac{n^{2}-1}{2 n^{2}-3}=\frac{1}{2}
+$$
+
+According to Theorem \ref{theorem-uniqueness-limit}, it suffices to show that the sequence 
+$$
+\left(\frac{n^{2}-1}{2 n^{2}-3}\right)_{n \in \N}
+$$ 
+converges to $\frac{1}{2}$, since then $\frac{1}{2}$ can be the only limit.
+
+
+*Part 1. Rough Work.*
+
+Let $\e>0$. We want to find $N \in \N$ such that
+$$
+\left|\frac{n^{2}-1}{2 n^{2}-3} - \frac{1}{2}\right| < \e \,, \quad \forall \, n \geq N \,.
+$$
+To this end, we compute:
+\begin{align*}
+\left|\frac{n^{2}-1}{2 n^{2}-3}-\frac{1}{2}\right| 
+& =\left|\frac{2\left(n^{2}-1\right)-\left(2 n^{2}-3\right)}{2\left(2 n^{2}-3\right)}\right| \\
+& =\left|\frac{1}{4 n^{2}-6}\right| \\
+& =\frac{1}{4 n^{2}-6} \\
+& =\frac{1}{3 n^{2}+n^{2}-6} \\
+& \leq \frac{1}{3 n^{2}} 
+\end{align*}
+which holds if $n \geq 3$, since in this case $n^2 - 6 \geq 0$.
+Therefore 
+\begin{align*}
+\left|\frac{n^{2}-1}{2 n^{2}-3}-\frac{1}{2}\right|  < \e
+\quad \impliedby &  \quad
+\frac{1}{3n^2} < \e \\
+\quad \iff &  \quad
+3n^2  > \frac{1}{\e} \\
+\quad \iff &  \quad
+n^2  > \frac{1}{3\e} \\
+\quad \iff &  \quad
+n  > \frac{1}{\sqrt{3\e}} \,.
+\end{align*}
+Looking at the above implications, it is clear that $N \in \N$ has to be chosen so that
+$$
+N  > \frac{1}{\sqrt{3\e}} \,.
+$$
+Moreover we need to recall that $N$ has to satisfy 
+$$
+N \geq 3
+$$ 
+for the estimates to hold.
+
+
+*Part 2. Formal Proof.* We have to show that
+$$
+\forall \e>0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|\frac{n^{2}-1}{2 n^{2}-3}-\frac{1}{2}\right| < \e  \,.
+$$
+Let $\e>0$. Choose $N \in \N$ such that
+$$
+N > \max \left\{ \frac{1}{\sqrt{3\e}}, 3 \right\}   \,.
+$$
+Let $n \geq N$. Then
+\begin{align*}
+\left|\frac{n^{2}-1}{2 n^{2}-3}-\frac{1}{2}\right| 
+& =\frac{1}{4 n^{2}-6} \\
+& =\frac{1}{3 n^{2}+n^{2}-6} \\
+& \leq \frac{1}{3 n^{2}} \\
+& \leq \frac{1}{3 N^{2}} \\
+& < \e \,,
+\end{align*}
+where we used that 
+$$
+n \geq N \geq 3 
+$$ 
+which implies 
+$$
+n^2 - 6 \geq 0\,,
+$$
+in the third line. The last inequality holds, since it is equivalent 
+to 
+$$
+N > \frac{1}{\sqrt{3 \e}} \,.
+$$
+
+:::
+
+
+
+
+### Bounded sequences
+
+
+An important property of sequences is boundedness. 
+
+::: Definition 
+### Bounded sequence  {#definition-bounded-sequence}
+
+A sequence $\left(a_{n}\right)_{n \in \N}$ is called **bounded** if there exists $M \in \R$ such that
+$$
+\left|a_{n}\right| \leq M \,, \quad \forall \, n \in \N \,.
+$$
+
+:::
+
+Definition \ref{definition-bounded-sequence} says that a sequence is bounded, if we can find some constant $M$ (which might be big, it only has to exist), such that for all elements of the sequence it holds that 
+$$
+\left|a_{n}\right| \leq M \,,
+$$
+or equivalently, that 
+$$
+-M \leq a_{n} \leq M \,.
+$$
+
+
+We now show that any sequence that converges is also bounded
+
+::: Theorem 
+
+If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges, then the sequence is bounded.
+
+:::
+
+
+Proof. Suppose the sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges. Let
+
+$$
+a:=\lim _{n \rightarrow \infty} a_{n}
+$$
+
+This limit exists, since we assumed it converges. Hence, we have that
+
+$$
+\forall \varepsilon>0: \exists n_{0} \in \mathbb{N}: \forall n \geq n_{0}:\left|a_{n}-a\right| \leq \varepsilon
+$$
+
+In particular, we can take $\varepsilon=1$ and let $n_{0}$ be that value such that, for all $n \geq n_{0}$, we have $\left|a_{n}-a\right| \leq 1$. Then we have for all $n \geq n_{0}$ that, by the triangle inequality,
+
+$$
+\left|a_{n}\right|=\left|a_{n}-a+a\right| \leq\left|a_{n}-a\right|+|a| \leq 1+|a| \text {. }
+$$
+
+If we choose
+
+$$
+M:=\max \left\{\left|a_{1}\right|,\left|a_{2}\right|, \ldots,\left|a_{n_{0}-1}\right|, 1+|a|\right\}
+$$
+
+(note that this maximum exists since we take the maximum of a finite number of elements) then we indeed have that for all $n \in \mathbb{N},\left|a_{n}\right| \leq M$.
+
+This proof basically says that the sequence can behave wildly in the beginning, but only up to a finite number $n_{0}$. After that it will stay close to the value of the limit, we is assumed to exist.
+
+Example 2.2.10. In Theorem 2.2.2 we show that the sequence $\left(\frac{1}{n}\right)_{n \in \mathbb{N}}$ converges (to 0). Hence, it follows from Theorem 2.2.9 that this sequence is bounded.
+
+Indeed, since $n \geq 1$ for all $n \in \mathbb{N}$, we have that, for all $n \in \mathbb{N}$,
+
+$$
+\left|\frac{1}{n}\right|=\frac{1}{n} \leq 1
+$$
+
+Remark. Note that this does not work in general for functions. You could for example say that for the function $f:(0, \infty) \rightarrow \mathbb{R}, x \mapsto \frac{1}{x}$ we have that $f(x) \rightarrow 0$ as $x \rightarrow \infty$, but $\frac{1}{x}$ is not bounded since it can get arbitrarily large for $x$ close to 0 . For sequences we do not have this problem, since $a_{n}$ is only specified for $n \in \mathbb{N}$.
+
+Taking the contrapositive of the statement in Theorem 2.2.9 we get the following corollary:
+
+Corollary 2.2.11. If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ is not bounded, then the sequence does not converge.
+
+We sometimes also say that in such a case the limit does not exist. We can use this to show that certain sequences do not converge.
+
+Theorem 2.2.12. For all $p>0$, the sequence $\left(n^{p}\right)_{n \in \mathbb{N}}$ does not converge.
+
+Proof. We first show that the sequence $\left(n^{p}\right)_{n \in \mathbb{N}}$ is unbounded. Let $p>0$. We need to show that
+
+$$
+\forall M \in \mathbb{R}: \exists n \in \mathbb{N}:\left|a_{n}\right|>M
+$$
+
+Let $M \in \mathbb{R}$. If $M \leq 0$, choose $n=1$, since then $a_{1}=1>0 \geq M$. If $M>0$, choose $n>M^{\frac{1}{p}}$, since then
+
+$$
+n^{p}>\left(M^{\frac{1}{p}}\right)^{p}=M .
+$$
+
+This proves that the sequence is unbounded and hence it follows from Corollary 2.2.11 that the sequence does not converge.
+
+Example 2.2.13. We show that the sequence $(\log n)_{n \in \mathbb{N}}$ does not converge, by showing that it is unbounded.
+
+Let $M \in \mathbb{R}$. If $M<0$, choose $n=1$, since then $\left|a_{1}\right| \geq 0>M$. If $M \geq 0$, then we want to find an $n \in \mathbb{N}$ such that $\log n>M$. We can choose $n \geq e^{M+1}$, so that this holds.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::: {.content-hidden}
+
+
+Use abbot, marcellini, and analisi sapienza note. For next year remove integral test and add cauchy condensation test.
 
 
 ## Example: Euler's Number
@@ -247,3 +1031,7 @@ That is a pretty good approximation in just $3$ iterations!
 
 ## Fibonacci Sequence
 
+
+
+
+:::
