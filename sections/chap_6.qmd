@@ -697,7 +697,7 @@ $$
 
 :::
 
-Definition \ref{definition-bounded-sequence} says that a sequence is bounded, if we can find some constant $M$ (which might be big, it only has to exist), such that for all elements of the sequence it holds that 
+Definition \ref{definition-bounded-sequence} says that a sequence is bounded, if we can find some constant $M$ (possibly very large), such that for all elements of the sequence it holds that 
 $$
 \left|a_{n}\right| \leq M \,,
 $$
@@ -709,78 +709,158 @@ $$
 
 We now show that any sequence that converges is also bounded
 
-::: Theorem 
+::: {.Theorem  #theorem-convergent-bounded}
 
 If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges, then the sequence is bounded.
 
 :::
 
 
-Proof. Suppose the sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges. Let
+::: Proof 
 
+Suppose the sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges and let
 $$
-a:=\lim _{n \rightarrow \infty} a_{n}
+a: = \lim_{n \rightarrow \infty} a_{n}
+$$
+By definition of convergence we have that
+$$
+\forall \, \e >0 \,, \, \exists N \in \N  \st  \forall \, n \geq N \,, \, \left|a_{n}-a \right| < \e \,.
+$$
+In particular, we can choose
+$$
+\e = 1
+$$ 
+and let $N \in \N$ be that value such that
+$$
+\left|a_{n}-a \right| < 1 \,, \quad \forall \, n \geq N \,.
+$$
+If $n \geq N$ we have, by the triangle inequality,
+\begin{align*}
+\left|a_{n}\right| & = \left|a_{n}-a+a\right| \\
+                   & \leq \left|a_{n}-a\right|+|a| \\
+                   & < 1+|a| \,.
+\end{align*}
+Set
+$$
+M:=\max \left\{\left|a_{1}\right|,\left|a_{2}\right|, \ldots,\left|a_{N-1}\right|, 1+|a|\right\} \,.
+$$
+Note that such maximum exists, being the set finite. Then 
+$$
+\left|a_{n}\right| \leq M \,, \quad \forall \, n \in \N \,,
+$$
+showing that $(a_n)$ is bounded.
+
+:::
+
+
+The choice of $M$ in the above proof says that the sequence can behave wildly for a finite number of terms. After that, it will stay close to the value of the limit, if the latter exists.
+
+::: Example
+
+In Theorem \ref{theorem-one-over-n} we have shown that 
+$$
+\lim_{n \to \infty} \,  \frac{1}{n} = 0 
+$$
+Hence, it follows from Theorem \ref{theorem-convergent-bounded} that the sequence $(1/n)$ is bounded.
+
+Indeed, we have that
+$$
+\left|\frac{1}{n}\right|=\frac{1}{n} \leq 1 \,, \quad \forall \, n \in \N \,,
+$$
+since $n \geq 1$ for all $n \in \N$.
+
+:::
+
+
+Taking the contrapositive of the statement in Theorem \ref{theorem-convergent-bounded} we get the following corollary:
+
+
+::: {.Corollary   #corollary-convergent-bounded}
+
+If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ is not bounded, then the sequence does not converge.
+
+:::
+
+
+::: Remark
+
+For a sequence $(a_n)$ to be unbounded, it means that
+$$
+\forall \, M \in \R \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
+$$
+The above is saying that no real number $M$ can be a bound for $|a_n|$, since there is always an index $n \in \N$ such that 
+$$
+|a_n| > M \,.
 $$
 
-This limit exists, since we assumed it converges. Hence, we have that
+:::
 
+
+We can use Corollary \ref{corollary-convergent-bounded} to show that certain sequences do not converge.
+
+
+::: Theorem 
+
+For all $p>0$, the sequence $\left(n^{p}\right)_{n \in \mathbb{N}}$ does not converge.
+
+:::
+
+
+::: Proof
+Let $p>0$. We prove that the sequence $\left(n^{p}\right)_{n \in \mathbb{N}}$ is unbounded, that is, 
 $$
-\forall \varepsilon>0: \exists n_{0} \in \mathbb{N}: \forall n \geq n_{0}:\left|a_{n}-a\right| \leq \varepsilon
+\forall \, M \in \R \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
 $$
+To this end, let $M \in \R$. We have two cases: 
 
-In particular, we can take $\varepsilon=1$ and let $n_{0}$ be that value such that, for all $n \geq n_{0}$, we have $\left|a_{n}-a\right| \leq 1$. Then we have for all $n \geq n_{0}$ that, by the triangle inequality,
-
+- $M \leq 0$: We choose $n=1$. Then 
 $$
-\left|a_{n}\right|=\left|a_{n}-a+a\right| \leq\left|a_{n}-a\right|+|a| \leq 1+|a| \text {. }
-$$
-
-If we choose
-
-$$
-M:=\max \left\{\left|a_{1}\right|,\left|a_{2}\right|, \ldots,\left|a_{n_{0}-1}\right|, 1+|a|\right\}
-$$
-
-(note that this maximum exists since we take the maximum of a finite number of elements) then we indeed have that for all $n \in \mathbb{N},\left|a_{n}\right| \leq M$.
-
-This proof basically says that the sequence can behave wildly in the beginning, but only up to a finite number $n_{0}$. After that it will stay close to the value of the limit, we is assumed to exist.
-
-Example 2.2.10. In Theorem 2.2.2 we show that the sequence $\left(\frac{1}{n}\right)_{n \in \mathbb{N}}$ converges (to 0). Hence, it follows from Theorem 2.2.9 that this sequence is bounded.
-
-Indeed, since $n \geq 1$ for all $n \in \mathbb{N}$, we have that, for all $n \in \mathbb{N}$,
-
-$$
-\left|\frac{1}{n}\right|=\frac{1}{n} \leq 1
+a_{1} = 1 >0 \geq M \,.
 $$
 
-Remark. Note that this does not work in general for functions. You could for example say that for the function $f:(0, \infty) \rightarrow \mathbb{R}, x \mapsto \frac{1}{x}$ we have that $f(x) \rightarrow 0$ as $x \rightarrow \infty$, but $\frac{1}{x}$ is not bounded since it can get arbitrarily large for $x$ close to 0 . For sequences we do not have this problem, since $a_{n}$ is only specified for $n \in \mathbb{N}$.
-
-Taking the contrapositive of the statement in Theorem 2.2.9 we get the following corollary:
-
-Corollary 2.2.11. If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ is not bounded, then the sequence does not converge.
-
-We sometimes also say that in such a case the limit does not exist. We can use this to show that certain sequences do not converge.
-
-Theorem 2.2.12. For all $p>0$, the sequence $\left(n^{p}\right)_{n \in \mathbb{N}}$ does not converge.
-
-Proof. We first show that the sequence $\left(n^{p}\right)_{n \in \mathbb{N}}$ is unbounded. Let $p>0$. We need to show that
-
+- $M>0$: We choose $n>M^{1/p}$, since then
 $$
-\forall M \in \mathbb{R}: \exists n \in \mathbb{N}:\left|a_{n}\right|>M
+a_n = n^{p}>\left(M^{1/p}\right)^{p}=M \,.
 $$
 
-Let $M \in \mathbb{R}$. If $M \leq 0$, choose $n=1$, since then $a_{1}=1>0 \geq M$. If $M>0$, choose $n>M^{\frac{1}{p}}$, since then
+This proves that the sequence $(n^p)$ is unbounded. Hence $(n^p)$ cannot converge, by Corollary \ref{corollary-convergent-bounded}.
 
+:::
+
+
+
+::: Theorem
+
+The sequence $(\log n)_{n \in \mathbb{N}}$ does not converge.
+
+:::
+
+
+::: Proof 
+
+Let us show that $(\log n)_{n \in \mathbb{N}}$ is unbounded, that is, 
 $$
-n^{p}>\left(M^{\frac{1}{p}}\right)^{p}=M .
+\forall \, M \in \R \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
+$$
+To this end let $M \in \R$. We have two cases:
+
+- $M<0$: We choose $n=1$, since then 
+$$
+\left|a_{1}\right| = 0 > M \,.
 $$
 
-This proves that the sequence is unbounded and hence it follows from Corollary 2.2.11 that the sequence does not converge.
+- $M \geq 0$: We choose $n \in \N$ such that 
+$$
+n \geq e^{M+1} \,.
+$$
+Then
+$$
+|a_n| = |\log n| \geq \left|   \log e^{M+1}   \right| = M + 1 > M \,.
+$$
 
-Example 2.2.13. We show that the sequence $(\log n)_{n \in \mathbb{N}}$ does not converge, by showing that it is unbounded.
+This proves that the sequence $(\log n)$ is unbounded. Hence $(\log n)$ cannot converge, by Corollary \ref{corollary-convergent-bounded}.
 
-Let $M \in \mathbb{R}$. If $M<0$, choose $n=1$, since then $\left|a_{1}\right| \geq 0>M$. If $M \geq 0$, then we want to find an $n \in \mathbb{N}$ such that $\log n>M$. We can choose $n \geq e^{M+1}$, so that this holds.
-
-
+:::
 
 
 

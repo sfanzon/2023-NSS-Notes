@@ -66,31 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
 .Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -98,27 +74,39 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
-.Proposition {
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Proof {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.Theorem {
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -126,13 +114,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -697,55 +697,100 @@ N &gt; \frac{1}{\sqrt{3 \varepsilon}} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>Definition <a href="chap_6.html#definition-bounded-sequence">16</a> says that a sequence is bounded, if we can find some constant <span class="math inline">\(M\)</span> (which might be big, it only has to exist), such that for all elements of the sequence it holds that <span class="math display">\[
+<p>Definition <a href="chap_6.html#definition-bounded-sequence">16</a> says that a sequence is bounded, if we can find some constant <span class="math inline">\(M\)</span> (possibly very large), such that for all elements of the sequence it holds that <span class="math display">\[
 \left|a_{n}\right| \leq M \,,
 \]</span> or equivalently, that <span class="math display">\[
 -M \leq a_{n} \leq M \,.
 \]</span></p>
 <p>We now show that any sequence that converges is also bounded</p>
-<div id="Theorem-17" class="Theorem">
+<div id="theorem-convergent-bounded" class="Theorem">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 17</strong></summary><div>If a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> converges, then the sequence is bounded.<p></p>
 </div></details>
 </div>
-<p>Proof. Suppose the sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> converges. Let</p>
-<p><span class="math display">\[
-a:=\lim _{n \rightarrow \infty} a_{n}
-\]</span></p>
-<p>This limit exists, since we assumed it converges. Hence, we have that</p>
-<p><span class="math display">\[
-\forall \varepsilon&gt;0: \exists n_{0} \in \mathbb{N}: \forall n \geq n_{0}:\left|a_{n}-a\right| \leq \varepsilon
-\]</span></p>
-<p>In particular, we can take <span class="math inline">\(\varepsilon=1\)</span> and let <span class="math inline">\(n_{0}\)</span> be that value such that, for all <span class="math inline">\(n \geq n_{0}\)</span>, we have <span class="math inline">\(\left|a_{n}-a\right| \leq 1\)</span>. Then we have for all <span class="math inline">\(n \geq n_{0}\)</span> that, by the triangle inequality,</p>
-<p><span class="math display">\[
-\left|a_{n}\right|=\left|a_{n}-a+a\right| \leq\left|a_{n}-a\right|+|a| \leq 1+|a| \text {. }
-\]</span></p>
-<p>If we choose</p>
-<p><span class="math display">\[
-M:=\max \left\{\left|a_{1}\right|,\left|a_{2}\right|, \ldots,\left|a_{n_{0}-1}\right|, 1+|a|\right\}
-\]</span></p>
-<p>(note that this maximum exists since we take the maximum of a finite number of elements) then we indeed have that for all <span class="math inline">\(n \in \mathbb{N},\left|a_{n}\right| \leq M\)</span>.</p>
-<p>This proof basically says that the sequence can behave wildly in the beginning, but only up to a finite number <span class="math inline">\(n_{0}\)</span>. After that it will stay close to the value of the limit, we is assumed to exist.</p>
-<p>Example 2.2.10. In Theorem 2.2.2 we show that the sequence <span class="math inline">\(\left(\frac{1}{n}\right)_{n \in \mathbb{N}}\)</span> converges (to 0). Hence, it follows from Theorem 2.2.9 that this sequence is bounded.</p>
-<p>Indeed, since <span class="math inline">\(n \geq 1\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, we have that, for all <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-\left|\frac{1}{n}\right|=\frac{1}{n} \leq 1
-\]</span></p>
-<p>Remark. Note that this does not work in general for functions. You could for example say that for the function <span class="math inline">\(f:(0, \infty) \rightarrow \mathbb{R}, x \mapsto \frac{1}{x}\)</span> we have that <span class="math inline">\(f(x) \rightarrow 0\)</span> as <span class="math inline">\(x \rightarrow \infty\)</span>, but <span class="math inline">\(\frac{1}{x}\)</span> is not bounded since it can get arbitrarily large for <span class="math inline">\(x\)</span> close to 0 . For sequences we do not have this problem, since <span class="math inline">\(a_{n}\)</span> is only specified for <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-<p>Taking the contrapositive of the statement in Theorem 2.2.9 we get the following corollary:</p>
-<p>Corollary 2.2.11. If a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is not bounded, then the sequence does not converge.</p>
-<p>We sometimes also say that in such a case the limit does not exist. We can use this to show that certain sequences do not converge.</p>
-<p>Theorem 2.2.12. For all <span class="math inline">\(p&gt;0\)</span>, the sequence <span class="math inline">\(\left(n^{p}\right)_{n \in \mathbb{N}}\)</span> does not converge.</p>
-<p>Proof. We first show that the sequence <span class="math inline">\(\left(n^{p}\right)_{n \in \mathbb{N}}\)</span> is unbounded. Let <span class="math inline">\(p&gt;0\)</span>. We need to show that</p>
-<p><span class="math display">\[
-\forall M \in \mathbb{R}: \exists n \in \mathbb{N}:\left|a_{n}\right|&gt;M
-\]</span></p>
-<p>Let <span class="math inline">\(M \in \mathbb{R}\)</span>. If <span class="math inline">\(M \leq 0\)</span>, choose <span class="math inline">\(n=1\)</span>, since then <span class="math inline">\(a_{1}=1&gt;0 \geq M\)</span>. If <span class="math inline">\(M&gt;0\)</span>, choose <span class="math inline">\(n&gt;M^{\frac{1}{p}}\)</span>, since then</p>
-<p><span class="math display">\[
-n^{p}&gt;\left(M^{\frac{1}{p}}\right)^{p}=M .
-\]</span></p>
-<p>This proves that the sequence is unbounded and hence it follows from Corollary 2.2.11 that the sequence does not converge.</p>
-<p>Example 2.2.13. We show that the sequence <span class="math inline">\((\log n)_{n \in \mathbb{N}}\)</span> does not converge, by showing that it is unbounded.</p>
-<p>Let <span class="math inline">\(M \in \mathbb{R}\)</span>. If <span class="math inline">\(M&lt;0\)</span>, choose <span class="math inline">\(n=1\)</span>, since then <span class="math inline">\(\left|a_{1}\right| \geq 0&gt;M\)</span>. If <span class="math inline">\(M \geq 0\)</span>, then we want to find an <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math inline">\(\log n&gt;M\)</span>. We can choose <span class="math inline">\(n \geq e^{M+1}\)</span>, so that this holds.</p>
+<div id="Proof*-7" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose the sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> converges and let <span class="math display">\[
+a: = \lim_{n \rightarrow \infty} a_{n}
+\]</span> By definition of convergence we have that <span class="math display">\[
+\forall \, \varepsilon&gt;0 \,, \, \exists N \in \mathbb{N}\, \text{ s.t. } \, \forall \, n \geq N \,, \, \left|a_{n}-a \right| &lt; \varepsilon\,.
+\]</span> In particular, we can choose <span class="math display">\[
+\varepsilon= 1
+\]</span> and let <span class="math inline">\(N \in \mathbb{N}\)</span> be that value such that <span class="math display">\[
+\left|a_{n}-a \right| &lt; 1 \,, \quad \forall \, n \geq N \,.
+\]</span> If <span class="math inline">\(n \geq N\)</span> we have, by the triangle inequality, <span class="math display">\[\begin{align*}
+\left|a_{n}\right| &amp; = \left|a_{n}-a+a\right| \\
+                   &amp; \leq \left|a_{n}-a\right|+|a| \\
+                   &amp; &lt; 1+|a| \,.
+\end{align*}\]</span> Set <span class="math display">\[
+M:=\max \left\{\left|a_{1}\right|,\left|a_{2}\right|, \ldots,\left|a_{N-1}\right|, 1+|a|\right\} \,.
+\]</span> Note that such maximum exists, being the set finite. Then <span class="math display">\[
+\left|a_{n}\right| \leq M \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> showing that <span class="math inline">\((a_n)\)</span> is bounded.<p></p>
+</div></details>
+</div>
+<p>The choice of <span class="math inline">\(M\)</span> in the above proof says that the sequence can behave wildly for a finite number of terms. After that, it will stay close to the value of the limit, if the latter exists.</p>
+<div id="Example-18" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 18</strong></summary><div>In Theorem <a href="chap_6.html#theorem-one-over-n">7</a> we have shown that <span class="math display">\[
+\lim_{n \to \infty} \,  \frac{1}{n} = 0
+\]</span> Hence, it follows from Theorem <a href="chap_6.html#theorem-convergent-bounded">17</a> that the sequence <span class="math inline">\((1/n)\)</span> is bounded.<p></p>
+<p>Indeed, we have that <span class="math display">\[
+\left|\frac{1}{n}\right|=\frac{1}{n} \leq 1 \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> since <span class="math inline">\(n \geq 1\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+</div></details>
+</div>
+<p>Taking the contrapositive of the statement in Theorem <a href="chap_6.html#theorem-convergent-bounded">17</a> we get the following corollary:</p>
+<div id="corollary-convergent-bounded" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 19</strong></summary><div>If a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is not bounded, then the sequence does not converge.<p></p>
+</div></details>
+</div>
+<div id="Remark-20" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 20</strong></summary><div>For a sequence <span class="math inline">\((a_n)\)</span> to be unbounded, it means that <span class="math display">\[
+\forall \, M \in \mathbb{R}\,, \,\,  \exists \, n \in \mathbb{N}\, \text{ s.t. } \, \left|a_{n}\right| &gt; M \,.
+\]</span> The above is saying that no real number <span class="math inline">\(M\)</span> can be a bound for <span class="math inline">\(|a_n|\)</span>, since there is always an index <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+|a_n| &gt; M \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>We can use Corollary <a href="chap_6.html#corollary-convergent-bounded">19</a> to show that certain sequences do not converge.</p>
+<div id="Theorem-21" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 21</strong></summary><div>For all <span class="math inline">\(p&gt;0\)</span>, the sequence <span class="math inline">\(\left(n^{p}\right)_{n \in \mathbb{N}}\)</span> does not converge.<p></p>
+</div></details>
+</div>
+<div id="Proof*-8" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(p&gt;0\)</span>. We prove that the sequence <span class="math inline">\(\left(n^{p}\right)_{n \in \mathbb{N}}\)</span> is unbounded, that is, <span class="math display">\[
+\forall \, M \in \mathbb{R}\,, \,\,  \exists \, n \in \mathbb{N}\, \text{ s.t. } \, \left|a_{n}\right| &gt; M \,.
+\]</span> To this end, let <span class="math inline">\(M \in \mathbb{R}\)</span>. We have two cases:<p></p>
+<ul>
+<li><p><span class="math inline">\(M \leq 0\)</span>: We choose <span class="math inline">\(n=1\)</span>. Then <span class="math display">\[
+a_{1} = 1 &gt;0 \geq M \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(M&gt;0\)</span>: We choose <span class="math inline">\(n&gt;M^{1/p}\)</span>, since then <span class="math display">\[
+a_n = n^{p}&gt;\left(M^{1/p}\right)^{p}=M \,.
+\]</span></p></li>
+</ul>
+<p>This proves that the sequence <span class="math inline">\((n^p)\)</span> is unbounded. Hence <span class="math inline">\((n^p)\)</span> cannot converge, by Corollary <a href="chap_6.html#corollary-convergent-bounded">19</a>.</p>
+</div></details>
+</div>
+<div id="Theorem-22" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 22</strong></summary><div>The sequence <span class="math inline">\((\log n)_{n \in \mathbb{N}}\)</span> does not converge.<p></p>
+</div></details>
+</div>
+<div id="Proof*-9" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let us show that <span class="math inline">\((\log n)_{n \in \mathbb{N}}\)</span> is unbounded, that is, <span class="math display">\[
+\forall \, M \in \mathbb{R}\,, \,\,  \exists \, n \in \mathbb{N}\, \text{ s.t. } \, \left|a_{n}\right| &gt; M \,.
+\]</span> To this end let <span class="math inline">\(M \in \mathbb{R}\)</span>. We have two cases:<p></p>
+<ul>
+<li><p><span class="math inline">\(M&lt;0\)</span>: We choose <span class="math inline">\(n=1\)</span>, since then <span class="math display">\[
+\left|a_{1}\right| = 0 &gt; M \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(M \geq 0\)</span>: We choose <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n \geq e^{M+1} \,.
+\]</span> Then <span class="math display">\[
+|a_n| = |\log n| \geq \left|   \log e^{M+1}   \right| = M + 1 &gt; M \,.
+\]</span></p></li>
+</ul>
+<p>This proves that the sequence <span class="math inline">\((\log n)\)</span> is unbounded. Hence <span class="math inline">\((\log n)\)</span> cannot converge, by Corollary <a href="chap_6.html#corollary-convergent-bounded">19</a>.</p>
+</div></details>
+</div>
 
 
 </section>
