@@ -591,7 +591,7 @@
 
  [**Proof**](#proof-of-theorem-short-version): Proof of Theorem 6.7 (Short version)\Pageref{proof-of-theorem-short-version}
 
- [**Theorem 6.8**](#Theorem-6.8)\Pageref{Theorem-6.8}
+ [**Theorem 6.8**](#theorem-one-over-np)\Pageref{theorem-one-over-np}
 
  [**Proof**](#Proof*-6.3)\Pageref{Proof*-6.3}
 
@@ -601,36 +601,70 @@
 
  [**Example 6.10**](#Example-6.10)\Pageref{Example-6.10}
 
- [**Definition 6.11**](#divergent-sequence): Divergent sequence\Pageref{divergent-sequence}
-
- [**Remark 6.12**](#Remark-6.12)\Pageref{Remark-6.12}
-
- [**Theorem 6.13**](#Theorem-6.13)\Pageref{Theorem-6.13}
+ [**Theorem 6.11**](#theorem-constant-sequence)\Pageref{theorem-constant-sequence}
 
  [**Proof**](#Proof*-6.5)\Pageref{Proof*-6.5}
 
- [**Theorem 6.14**](#theorem-uniqueness-limit): Uniqueness of limit\Pageref{theorem-uniqueness-limit}
+ [**Definition 6.12**](#divergent-sequence): Divergent sequence\Pageref{divergent-sequence}
+
+ [**Remark 6.13**](#Remark-6.13)\Pageref{Remark-6.13}
+
+ [**Theorem 6.14**](#theorem-1-minus-n)\Pageref{theorem-1-minus-n}
 
  [**Proof**](#Proof*-6.6)\Pageref{Proof*-6.6}
 
- [**Example 6.15**](#Example-6.15)\Pageref{Example-6.15}
-
- [**Definition 6.16**](#definition-bounded-sequence): Bounded sequence\Pageref{definition-bounded-sequence}
-
- [**Theorem 6.17**](#theorem-convergent-bounded)\Pageref{theorem-convergent-bounded}
+ [**Theorem 6.15**](#theorem-uniqueness-limit): Uniqueness of limit\Pageref{theorem-uniqueness-limit}
 
  [**Proof**](#Proof*-6.7)\Pageref{Proof*-6.7}
 
- [**Example 6.18**](#Example-6.18)\Pageref{Example-6.18}
+ [**Example 6.16**](#Example-6.16)\Pageref{Example-6.16}
 
- [**Corollary 6.19**](#corollary-convergent-bounded)\Pageref{corollary-convergent-bounded}
+ [**Definition 6.17**](#definition-bounded-sequence): Bounded sequence\Pageref{definition-bounded-sequence}
 
- [**Remark 6.20**](#Remark-6.20)\Pageref{Remark-6.20}
-
- [**Theorem 6.21**](#Theorem-6.21)\Pageref{Theorem-6.21}
+ [**Theorem 6.18**](#theorem-convergent-bounded)\Pageref{theorem-convergent-bounded}
 
  [**Proof**](#Proof*-6.8)\Pageref{Proof*-6.8}
 
- [**Theorem 6.22**](#Theorem-6.22)\Pageref{Theorem-6.22}
+ [**Example 6.19**](#Example-6.19)\Pageref{Example-6.19}
 
- [**Proof**](#Proof*-6.9)\Pageref{Proof*-6.9}
+ [**Warning**](#Warning*-6.9)\Pageref{Warning*-6.9}
+
+ [**Example 6.20**](#Example-6.20)\Pageref{Example-6.20}
+
+ [**Corollary 6.21**](#corollary-convergent-bounded)\Pageref{corollary-convergent-bounded}
+
+ [**Remark 6.22**](#Remark-6.22)\Pageref{Remark-6.22}
+
+ [**Theorem 6.23**](#Theorem-6.23)\Pageref{Theorem-6.23}
+
+ [**Proof**](#Proof*-6.10)\Pageref{Proof*-6.10}
+
+ [**Theorem 6.24**](#Theorem-6.24)\Pageref{Theorem-6.24}
+
+ [**Proof**](#Proof*-6.11)\Pageref{Proof*-6.11}
+
+ [**Theorem 6.25**](#theorem-algebra-limits): Algebra of limits\Pageref{theorem-algebra-limits}
+
+ [**Proof**](#Proof*-6.12)\Pageref{Proof*-6.12}
+
+ [**Example 6.26**](#example-limit-ploynomial)\Pageref{example-limit-ploynomial}
+
+ [**Important**](#Important*-6.13)\Pageref{Important*-6.13}
+
+ [**Example 6.27**](#example-algebra-of-limits-2)\Pageref{example-algebra-of-limits-2}
+
+ [**Example 6.28**](#Example-6.28)\Pageref{Example-6.28}
+
+ [**Warning**](#Warning*-6.14)\Pageref{Warning*-6.14}
+
+ [**Example 6.29**](#Example-6.29)\Pageref{Example-6.29}
+
+ [**Example 6.30**](#Example-6.30)\Pageref{Example-6.30}
+
+ [**Theorem 6.31**](#theorem-square-root-limit)\Pageref{theorem-square-root-limit}
+
+ [**Proof**](#Proof*-6.15)\Pageref{Proof*-6.15}
+
+ [**Example 6.32**](#Example-6.32)\Pageref{Example-6.32}
+
+ [**Example 6.33**](#Example-6.33)\Pageref{Example-6.33}

@@ -1,6 +1,7 @@
 project:
   type: book
   output-dir: docs
+  
 
 
 book:
@@ -74,6 +75,7 @@ format:
     fig-align: center
     fig-cap-location: bottom
     link-external-icon: true
+    number-sections: true
 
   
   pdf:

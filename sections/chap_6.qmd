@@ -8,7 +8,7 @@ $
 
 
 
-# Sequences
+# Sequences in $\mathbb{R}$
 
 
 
@@ -24,7 +24,7 @@ A sequence is an infinite list of real numbers. For example, the following are s
 
 ::: Remark
 
-- The order of elements is a sequence matters. 
+- The order of elements in a sequence matters. 
 
 > For example
 >$$
@@ -67,7 +67,7 @@ the elements get smaller and smaller, and closer and closer to $0$. We say that 
 We would like to make the notions of sequence and convergence more precise.
 
 
-## Sequences of Real Numbers
+## Definition of sequence
 
 
 We start with the definition of sequence of Real numbers.
@@ -147,7 +147,7 @@ $$
 
 
 
-### Convergent sequences
+## Convergent sequences
 
 
 We have notice that the sequence $\left(\frac{1}{n}\right)_{n \in \N}$ gets close to $0$ as $n$ gets large. We would like to say that $a_{n}$ converges to $0$ as $n$ tends to infinity.
@@ -298,7 +298,7 @@ $$
 for any $p>0$ fixed.
 
 
-::: Theorem 
+::: {.Theorem  #theorem-one-over-np}
 For all $p>0$, the sequence $\left(\frac{1}{n^{p}}\right)_{n \in \N}$ converges to $0$ , i.e.,
 
 $$
@@ -360,7 +360,7 @@ Any *rough work* required to prove convergence must be shown before the formal p
 Prove that, as $n \rightarrow \infty$,
 
 $$
-\frac{n}{2n+3} \longrightarrow \frac{1}{2} \,.
+\frac{n}{2n+3} \to \frac{1}{2} \,.
 $$
 
 *Part 1. Rough Work.*
@@ -421,10 +421,38 @@ where in the third line we used that $n \geq N$.
 :::
 
 
+We conclude by showing that constant sequences always converge.
+
+::: {.Theorem #theorem-constant-sequence}
+
+Let $c \in \R$ and define the constant sequence
+$$
+a_n := c \,, \quad \forall \, n \in \N \,.
+$$
+We have that 
+$$
+\lim_{n \to \infty} \, a_n = c \,.
+$$
+
+:::
+
+::: Proof
+
+We have to prove that
+$$
+\forall \e>0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|a_n - c \right| < \e  \,.
+$${#eq-constant-sequence}
+Let $\e>0$. We have
+$$
+\left|a_n - c \right| = \left|c - c \right| = 0 < \e \,, \quad \forall \, n \in \N \,.
+$$
+Therefore we can choose $N=1$ and (@eq-constant-sequence) is satisfied. 
+:::
 
 
 
-### Divergent sequences
+
+## Divergent sequences
 
 
 The opposite of convergent sequences are divergent sequences.
@@ -462,7 +490,7 @@ $$
 
 
 
-::: Theorem
+::: {.Theorem #theorem-1-minus-n}
 Let $\left(a_{n}\right)$ be the sequence defined by
 $$
 a_{n}=(-1)^{n} \,.
@@ -516,7 +544,7 @@ $$
 
 
 
-### Uniqueness of limit
+## Uniqueness of limit
 
 
 In Definition \ref{definition-convergent-sequence} of convergence, we used the notation 
@@ -682,22 +710,23 @@ $$
 
 
 
-### Bounded sequences
+## Bounded sequences
 
 
 An important property of sequences is boundedness. 
 
+
 ::: Definition 
 ### Bounded sequence  {#definition-bounded-sequence}
 
-A sequence $\left(a_{n}\right)_{n \in \N}$ is called **bounded** if there exists $M \in \R$ such that
+A sequence $\left(a_{n}\right)_{n \in \N}$ is called **bounded** if there exists a constant $M \in \R$, with $M>0$, such that
 $$
 \left|a_{n}\right| \leq M \,, \quad \forall \, n \in \N \,.
 $$
 
 :::
 
-Definition \ref{definition-bounded-sequence} says that a sequence is bounded, if we can find some constant $M$ (possibly very large), such that for all elements of the sequence it holds that 
+Definition \ref{definition-bounded-sequence} says that a sequence is bounded, if we can find some constant $M>0$ (possibly very large), such that for all elements of the sequence it holds that 
 $$
 \left|a_{n}\right| \leq M \,,
 $$
@@ -772,6 +801,29 @@ since $n \geq 1$ for all $n \in \N$.
 :::
 
 
+::: Warning
+
+The converse of Theorem \ref{theorem-convergent-bounded} does not hold: There exist sequences $(a_n)$ which are bounded, but not convergent.
+
+:::
+
+
+::: Example
+
+Define the sequence
+$$
+a_n = (-1)^n \,.
+$$
+We have proven in Theorem \ref{theorem-1-minus-n} that $(a_n)$ is not convergent. However
+$(a_n)$ is bounded, with $M=1$, since
+$$
+|a_n| = |(-1)^n| = 1 = M  \,, \quad \forall \, n \in \N \,.
+$$
+
+:::
+
+
+
 Taking the contrapositive of the statement in Theorem \ref{theorem-convergent-bounded} we get the following corollary:
 
 
@@ -786,9 +838,9 @@ If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ is not bounded, then the s
 
 For a sequence $(a_n)$ to be unbounded, it means that
 $$
-\forall \, M \in \R \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
+\forall \, M > 0 \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
 $$
-The above is saying that no real number $M$ can be a bound for $|a_n|$, since there is always an index $n \in \N$ such that 
+The above is saying that no real number $M>0$ can be a bound for $|a_n|$, since there is always an index $n \in \N$ such that 
 $$
 |a_n| > M \,.
 $$
@@ -809,20 +861,16 @@ For all $p>0$, the sequence $\left(n^{p}\right)_{n \in \mathbb{N}}$ does not con
 ::: Proof
 Let $p>0$. We prove that the sequence $\left(n^{p}\right)_{n \in \mathbb{N}}$ is unbounded, that is, 
 $$
-\forall \, M \in \R \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
+\forall \, M > 0 \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
 $$
-To this end, let $M \in \R$. We have two cases: 
-
-- $M \leq 0$: We choose $n=1$. Then 
+To this end, let $M > 0$. Choose $n \in \N$ such that 
 $$
-a_{1} = 1 >0 \geq M \,.
+n > M^{1/p} \,.
 $$
-
-- $M>0$: We choose $n>M^{1/p}$, since then
+Then
 $$
 a_n = n^{p}>\left(M^{1/p}\right)^{p}=M \,.
 $$
-
 This proves that the sequence $(n^p)$ is unbounded. Hence $(n^p)$ cannot converge, by Corollary \ref{corollary-convergent-bounded}.
 
 :::
@@ -840,16 +888,9 @@ The sequence $(\log n)_{n \in \mathbb{N}}$ does not converge.
 
 Let us show that $(\log n)_{n \in \mathbb{N}}$ is unbounded, that is, 
 $$
-\forall \, M \in \R \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
+\forall \, M > 0  \,, \,\,  \exists \, n \in \N \st \left|a_{n}\right| > M \,.
 $$
-To this end let $M \in \R$. We have two cases:
-
-- $M<0$: We choose $n=1$, since then 
-$$
-\left|a_{1}\right| = 0 > M \,.
-$$
-
-- $M \geq 0$: We choose $n \in \N$ such that 
+To this end let $M > 0$. Choose $n \in \N$ such that 
 $$
 n \geq e^{M+1} \,.
 $$
@@ -857,10 +898,600 @@ Then
 $$
 |a_n| = |\log n| \geq \left|   \log e^{M+1}   \right| = M + 1 > M \,.
 $$
-
 This proves that the sequence $(\log n)$ is unbounded. Hence $(\log n)$ cannot converge, by Corollary \ref{corollary-convergent-bounded}.
 
 :::
+
+
+
+
+## Algebra of limits
+
+Proving convergence using Definition \ref{definition-convergent-sequence} can be a tedious task. In this section we discuss how to prove convergence, starting from known convergence results.
+
+
+::: Theorem 
+### Algebra of limits {#theorem-algebra-limits} 
+
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ and $\left(b_{n}\right)_{n \in \mathbb{N}}$ be sequences in $\mathbb{R}$ and let $c \in \mathbb{R}$. Suppose that, for some $a, b \in \mathbb{R}$
+
+$$
+\lim _{n \rightarrow \infty} a_{n}=a \quad \text { and } \quad \lim _{n \rightarrow \infty} b_{n}=b \text {. }
+$$
+
+Then,
+
+1. Limit of sum is the sum of limits:
+$$
+\lim_{n \rightarrow \infty}\left(a_{n} \pm b_{n}\right)=a \pm b
+$$
+
+2. Limit of product is the product of limits: 
+$$
+\lim _{n \rightarrow \infty}\left(a_{n}  b_{n}\right) = a  b 
+$$
+
+3. If $b_{n} \neq 0$ for all $n \in \mathbb{N}$ and $b \neq 0$, then 
+$$
+\lim_{n \rightarrow \infty} \left(\frac{a_{n}}{b_{n}}\right)=\frac{a}{b} 
+$$
+
+:::
+
+
+
+
+::: Proof 
+
+
+ Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ and $\left(b_{n}\right)_{n \in \mathbb{N}}$ be sequences in $\mathbb{R}$ and let $c \in \mathbb{R}$. Suppose that, for some $a, b \in \mathbb{R}$
+$$
+\lim _{n \rightarrow \infty} a_{n}=a \,, \quad  \lim _{n \rightarrow \infty} b_{n}=b \,.
+$$
+
+
+*Proof of Point 1.* 
+
+We need to show that 
+$$
+\lim_{n \to \infty} (a_n \pm  b_n) = a \pm b \,.
+$$
+We only give a proof of the formula with $+$, since the case with $-$ follows with a very similar proof. Hence, we need to show that
+$$
+\forall \, \e > 0 \,, \, \exists  \, N \in \N \st \forall \, n \geq N \,, \, \left|(a_{n} + b_n) - (a+b)  \right| < \e \,.
+$$
+Let $\e>0$ and set
+$$
+\widetilde{\e} := \frac{\e}{2} \,.
+$$
+Since $a_{n} \rightarrow a$ and $\widetilde{\e}>0$, there exists $N_1 \in \N$ such that
+$$
+|a_n - a|< \widetilde{\e} \,, \quad \forall \, n \geq N_1 \,.
+$$
+Since $b_{n} \rightarrow b$ and $\widetilde{\e}>0$, there exists $N_2 \in \N$ such that
+$$
+|b_n - b|< \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,.
+$$
+Define
+$$
+N : = \max  \{ N_1, N_2 \} \,.
+$$
+For all $n \geq N$ we have, by the triangle inequality,
+\begin{align*}
+\left|\left(a_{n}+b_{n}\right)-(a+b)\right| 
+& = \left|\left(a_{n}-a\right) + \left(b_{n}-b\right)\right| \\
+& \leq \left|a_{n}-a\right|+\left|b_{n}-b\right| \\
+& < \widetilde{\e}+\widetilde{\e} \\
+& =\e \,.
+\end{align*}
+
+
+
+*Proof of Point 2.*
+
+
+We need to show that 
+$$
+\lim_{n \to \infty} (a_n  b_n) = a b  \,,
+$$
+which is equivalent to 
+$$
+\forall \, \e > 0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|a_{n} b_{n} - a b \right| < \e \,.
+$$
+Let $\e>0$. The sequence $\left(a_{n}\right)$ converges, and hence is bounded, by Theorem \ref{theorem-convergent-bounded}. This means there exists some $M>0$ such that 
+$$
+\left|a_{n}\right| \leq M \,, \quad \forall \, n \in \N \,.
+$$
+Define 
+$$
+\widetilde{\e} = \frac{\e}{ M + |b| } \,. 
+$$
+Since $a_{n} \rightarrow a$ and $\widetilde{\e} > 0$, there exists 
+$N_1 \in \N$ such that
+$$
+| a_n  - a | < \widetilde{\e} \,, \quad \forall \, n \geq N_1 \,.
+$$
+Since $b_{n} \rightarrow b$ and $\widetilde{\e} > 0$, there exists 
+$N_2 \in \N$ such that
+$$
+| b_n  - b | < \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,.
+$$
+Let 
+$$
+N:= \max\{ N_1, N_2 \} \,.
+$$
+For all $n \geq N$ we have
+\begin{align*}
+\left|a_{n}b_{n}-a b\right| 
+& = \left|a_{n} b_{n} - a_n  b + a_n  b - a  b \right| \\
+& \leq \left|a_{n}  b_{n} - a_n  b \right| + \left|a_n  b - a b \right| \\
+& =\left|a_{n}\right| \left|b_{n}-b\right|+ |b|  \left|a_{n}-a\right| \\
+& < M \, \widetilde{\e} +|b| \, \widetilde{\e} \\
+& = (M + |b|) \, \widetilde{\e} \\
+& = \e  \,.
+\end{align*}
+
+
+*Proof of Point 3.* 
+
+Suppose in addition that $b_n \neq 0$ and $b \neq 0$. We need to show that
+$$
+\lim_{n \to \infty} \, \frac{a_n}{b_n} = \frac{a}{b} \,,
+$$
+which is equivalent to
+$$
+\forall \, \e > 0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|\frac{a_{n}}{ b_{n}} - \frac{a}{b} \right| < \e \,.
+$$
+We suppose in addition that $b>0$. The proof is very similar for the case $b <0$. Let $\e > 0$. Set
+$$
+\delta := \frac{b}{2} \,.
+$$
+Since $b_n \to b$ and $\delta>0$, there exists $N_1 \in \N$ such that
+$$
+|b_n - b| < \delta \, \quad \forall \, n \geq N_1 \,.
+$$
+In particular we have
+$$
+b_n > b - \delta = b - \frac{b}{2} = \frac{b}{2}   \, \quad \forall \, n \geq N_1 \,.
+$$
+Define
+$$
+\widetilde{\e} := \frac{ b^2 }{ 2 (b + |a|)} \, \e \,.
+$$
+Since $\widetilde{\e}>0$ and $a_n \to a$, there exists $N_2 \in \N$ such that
+$$
+|a_n - a |< \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,.
+$$
+Since $\widetilde{\e}>0$ and $b_n \to b$, there exists $N_3 \in \N$ such that
+$$
+|b_n - b |< \widetilde{\e} \,, \quad \forall \, n \geq N_3 \,.
+$$
+Define
+$$
+N:= \max\{ N_1, N_2, N_3 \} \,.
+$$
+For all $n \geq N$ we have
+\begin{align*}
+\left|\frac{a_{n}}{ b_{n}} - \frac{a}{b} \right| & = 
+\left|\frac{a_{n} b - a b_n}{ b_{n} b }  \right| \\
+& = \frac{1}{ \left|b_{n} b \right|} \,  
+\left| a_{n}b - a b + a b - a b_n    \right| \\
+& = \frac{1}{ \left|b_{n} b \right|} \,  
+\left| (a_{n} - a) b + a(b-b_n)   \right| \\
+& \leq \frac{1}{ \left|b_{n} b \right|} \,  
+\left( |a_{n} - a| |b| + |a| |b-b_n| \right) \\
+& < \frac{1}{ \dfrac{b}{2} \, b } \, \left(  \widetilde{\e} \, b + \widetilde{\e} |a|   \right) \\
+& = \frac{2 (b + |a|) }{b^2} \, \widetilde{\e} \\
+& = \e \,.
+\end{align*}
+
+:::
+
+
+
+In the future we will refer to Theorem \ref{theorem-algebra-limits} as the *Algebra of Limits*. We now show how to use Theorem \ref{theorem-algebra-limits} for computing certain limits. 
+
+
+::: {.Example  #example-limit-ploynomial}
+Prove that 
+$$
+\lim_{n \to \infty} \, \frac{3 n}{7 n+4} = \frac{3}{7} \,.
+$$
+
+
+> *Proof*. We can rewrite
+$$
+\frac{3 n}{7 n+4}=\frac{3}{7+\dfrac{4}{n}}
+$$
+By Theorem \ref{theorem-constant-sequence} we know that
+$$
+3 \rightarrow 3\,,  \quad 4 \to 4 \,, \quad 7 \to 7 \,.
+$$
+From Theorem \ref{theorem-one-over-n}  we know that 
+$$
+\frac{1}{n} \rightarrow 0 \,.
+$$
+Hence, it follows from Theorem \ref{theorem-algebra-limits} Point 2 that 
+$$
+\frac{4}{n} = 4 \cdot \frac1n \rightarrow 4 \cdot 0 = 0 \,.
+$$
+By Theorem \ref{theorem-algebra-limits} Point 1 we have
+$$
+7 + \frac{4}{n} \rightarrow  7 + 0 = 7 \,.
+$$
+Finally we can use Theorem \ref{theorem-algebra-limits} Point 3 to infer
+$$
+\frac{3 n}{7 n+4}=\frac{3}{7+\dfrac{4}{n}} \rightarrow \frac{3}{7} \,.
+$$
+
+:::
+
+
+::: Important 
+
+The technique shown in Example \ref{example-limit-ploynomial} is useful to compute limits of fractions of polynomials. To identify the possible limit, if it exists, it is often best to divide by the largest power of $n$ in the denominator.
+
+:::
+
+
+
+::: {.Example #example-algebra-of-limits-2}
+Prove that
+$$
+\lim_{n \rightarrow \infty} \frac{n^{2}-1}{2 n^{2}-3} = \frac{1}{2} \,.
+$$
+
+> *Proof*. Factor $n^2$ to obtain
+$$
+\frac{n^{2}-1}{2 n^{2}-3} = \frac{1-\dfrac{1}{n^{2}}}{2-\dfrac{3}{n^{2}}} \,.
+$$
+By Theorem \ref{theorem-one-over-np} we have
+$$
+\frac{1}{n^2} \to 0 \,.
+$$
+We can then use the Algebra of Limits Theorem \ref{theorem-algebra-limits} Point 2 to infer
+$$
+\frac{3}{n^2} \to 3 \cdot 0 = 0
+$$
+and Theorem \ref{theorem-algebra-limits} Point 1 to get
+$$
+1 - \frac{1}{n^2} \to 1 - 0 = 1 \,, \quad 
+2 - \frac{3}{n^2} \to 2 - 0 = 2 \,.
+$$
+Finally we use Theorem \ref{theorem-algebra-limits} Point 3 and conclude
+$$
+ \frac{1-\dfrac{1}{n^{2}}}{2-\dfrac{3}{n^{2}}} \to \frac{1}{2} \,.
+$$
+Therefore
+$$
+\lim_{n \to \infty } \, \frac{n^{2}-1}{2 n^{2}-3} = \lim_{n \to \infty} \, \frac{1-\dfrac{1}{n^{2}}}{2-\dfrac{3}{n^{2}}} = \frac{1}{2} \,.
+$$
+
+:::
+
+
+
+We can also use the Algebra of Limits to prove that certain limits do not exist.
+
+
+
+::: Example 
+
+Prove that the sequence
+$$
+a_n = \frac{4 n^{3}+8 n+1}{7 n^{2}+2 n+1}
+$$
+does not converge.
+
+> *Proof*. To show that the sequence $\left(a_n\right)$ does not converge, we divide by the largest power in the denominator, which in this case is $n^2$
+\begin{align*}
+a_n & = \frac{4 n^{3}+8 n+1}{7 n^{2}+2 n+1} \\
+    & =\frac{4 n+ \dfrac{8}{n}  +  \dfrac{1}{n^{2}} }{7+  \dfrac{2}{n}  +  \dfrac{1}{n^{2}} } \\
+    & = \frac{b_n}{c_n}
+\end{align*}
+where we set 
+$$
+b_n := 4 n+ \dfrac{8}{n}  +  \dfrac{1}{n^{2}}\,, \quad
+c_n := 7 + \dfrac{2}{n}  +  \dfrac{1}{n^{2}} \,.
+$$
+Using the Algebra of Limits Theorem \ref{theorem-algebra-limits} we see that
+$$
+c_n = 7+  \dfrac{2}{n}  +  \dfrac{1}{n^{2}}  \to 7 \,.
+$$
+Suppose by contradiction that
+$$
+a_n \to a
+$$
+for some $a \in \R$. Then, by the Algebra of Limits Theorem \ref{theorem-algebra-limits} we would infer
+$$
+b_n = c_n \cdot a_n \to 7 a \,,
+$$
+concluding that $b_n$ is convergent to $7a$. We have that
+$$
+b_n = 4n + d_n \,, \quad d_n := \dfrac{8}{n}  +  \dfrac{1}{n^{2}} \,.
+$$
+Again by the Algebra of Limits Theorem \ref{theorem-algebra-limits} we get that 
+$$
+d_n =  \dfrac{8}{n}  +  \dfrac{1}{n^{2}} \to 0 \,,
+$$
+and hence
+$$
+4n = b_n - d_n \to 7a - 0 = 7a \,.
+$$
+This is a contradiction, since the sequence $(4n)$ is unbounded, and hence cannot be convergent. Hence $(a_n)$ is not convergent.
+:::
+
+
+
+::: Warning
+
+Consider the sequence 
+$$
+a_n = \frac{4 n^{3}+8 n+1}{7 n^{2}+2 n+1}
+$$
+from the previous example. We have proven that $(a_n)$ is not convergent, by making use of the Algebra of Limits. 
+
+Let us review a **faulty** argument to conclude that $(a_n)$ is not convergent. Write
+$$
+a_n = \frac{b_n}{c_n} \,, \quad b_n:= 4 n^{3}+8 n+1\,, 
+\quad c_n : =7 n^{2}+2 n+1 \,.
+$$
+The numerator 
+$$
+b_n = 4 n^{3}+8 n+1
+$$
+and denominator 
+$$
+c_n  =7 n^{2}+2 n+1 
+$$
+are both unbounded, and hence $(b_n)$ and $(c_n)$ do not converge. One might be tempted to conclude that $(a_n)$ does not converge. However this is **false** in general: as seen in 
+Example \ref{example-algebra-of-limits-2}, we have
+$$
+\lim_{n \rightarrow \infty} \frac{n^{2}-1}{2 n^{2}-3} = \frac{1}{2} \,,
+$$
+while numerator and denominator are unbounded.
+
+:::
+
+
+
+
+
+Sometimes it is useful to rearrange the terms a bit before using the Algebra of Limits.
+
+
+::: Example 
+
+Define 
+$$
+ a_n := \frac{2 n^{3}+7 n+1}{5 n+9} \cdot \frac{8 n+9}{6 n^{3}+8 n^{2}+3} \,.
+$$
+Prove that 
+$$
+\lim_{n \to \infty}  a_n = \frac{8}{15} \,.
+$$
+
+
+> *Proof.* 
+The first fraction in $(a_n)$ does not converge, as it is unbounded. Therefore we cannot use Point 2 in Theorem \ref{theorem-algebra-limits} directly. However, we note that
+\begin{align*}
+a_{n} & =\frac{2 n^{3}+7 n+1}{5 n+9} \cdot \frac{8 n+9}{6 n^{3}+8 n^{2}+3} \\
+& = \frac{8 n+9}{5 n+9} \cdot \frac{2 n^{3}+7 n+1}{6 n^{3}+8 n^{2}+3} \,.
+\end{align*}
+Factoring out $n$ and $n^3$, respectively, and using the Algebra of Limits, we see that
+$$
+\frac{8 n+9}{5 n+9}=\frac{8+9 / n}{5+9 / n} \to \frac{8+0}{5+0}=\frac{8}{5}
+$$
+and
+$$
+\frac{2+7 / n^{2}+1 / n^{3}}{6+8 / n+3 / n^{3}} \to \frac{2+0+0}{6+0+0}=\frac{1}{3}
+$$
+Therefore Theorem \ref{theorem-algebra-limits} Point 2 ensures that
+$$
+a_{n} \to \frac{8}{5} \cdot \frac{1}{3}=\frac{8}{15} \,.
+$$
+
+:::
+
+
+
+
+
+## Fractional powers
+
+
+The Algebra of Limits Theorem \ref{theorem-algebra-limits} can also be used when fractional powers of $n$ are involved.
+
+::: Example
+
+Prove that 
+$$
+a_n = \frac{n^{7 / 3}+2 \sqrt{n}+7}{4 n^{3 / 2}+5 n}
+$$
+does not converge.
+
+> *Proof*. The largest power of $n$ in the denominator is $n^{3/2}$. Hence we factor out $n^{3/2}$
+\begin{align*}
+a_n & = \frac{n^{7 / 3}+2 \sqrt{n}+7}{4 n^{3 / 2}+5 n} \\
+    & = \frac{n^{7 / 3-3 / 2}+2 n^{1/2 - 3/2} + 7  n^{-3 / 2}}{4 + 5 n^{-3/2} } \\
+    & = \frac{n^{5/6}+2 n^{- 1} + 7  n^{-3 / 2}}{4 + 5 n^{-3/2} } \\
+    & = \frac{b_n}{c_n}
+\end{align*}
+where we set
+$$
+b_n := n^{5/6}+2 n^{- 1} + 7  n^{-3 / 2} \,, \quad 
+c_n := 4 + 5 n^{-3/2} \,.
+$$
+We see that $b_n$ is unbounded while $c_n \to 4$. By the Algebra of Limits (and usual contradiction argument) we conclude that $(a_n)$ is divergent.
+
+:::
+
+
+
+We now present a general result about the square root of a sequence.
+
+::: {.Theorem #theorem-square-root-limit}
+
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{R}$ such that 
+$$
+\lim_{n \to \infty} \, a_n = a \,,
+$$
+for some $a \in \R$. If $a_{n} \geq 0$ for all $n \in \mathbb{N}$ and $a \geq 0$, then
+$$
+\lim _{n \rightarrow \infty} \sqrt{a_{n}}=\sqrt{a} \,.
+$$
+
+:::
+
+
+::: Proof 
+
+Let $\e>0$. We the two cases $a>0$ and $a=0$:
+
+- $a>0$: Define
+$$
+\delta := \frac{a}{2} \,.
+$$
+Since $\delta > 0$ and $a_n \to a$, there exists $N_1 \in \N$ such that
+$$
+\left|a_{n}-a\right| < \delta \,, \quad \forall \, n \geq N_1 \,. 
+$$
+In particular
+$$
+a_n > a - \delta = a - \frac{a}{2} = \frac{a}{2} \,, \quad \forall \, n \geq N_1 \,,
+$$
+from which we infer
+$$
+\sqrt{a_n} > \sqrt{a/2} \,, \quad \forall \, n \geq N_1 \,,
+$$
+Now set
+$$
+\widetilde{\e} := \left(\sqrt{a/2} + \sqrt{a} \right) \, \e \,.
+$$
+Since $\widetilde{\e}>0$ and $a_n \to a$, there exists $N_2 \in \mathbb{N}$ such that 
+$$
+\left|a_{n}-a\right| < \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,. 
+$$
+Let 
+$$
+N:= \max\{  N_1, N_2 \} \,.
+$$
+For $n \geq N$ we have
+\begin{align*}
+\left|\sqrt{a_{n}}-\sqrt{a}\right| 
+& = \left|\frac{\left(\sqrt{a_{n}}-\sqrt{a}\right)\left(\sqrt{a_{n}}+\sqrt{a}\right)}{\sqrt{a_{n}}+\sqrt{a}}\right| \\
+& = \frac{\left|a_{n}-a\right|}{\sqrt{a_{n}}+\sqrt{a}} \\
+& < \frac{ \widetilde{\e} }{\sqrt{a/2} + \sqrt{a}}  \\
+& = \e \,.
+\end{align*}
+
+
+- $a=0$: In this case
+$$
+a_n \to a = 0 \,.
+$$
+Since $\e^2>0$, there exists $N \in \N$ such that
+$$
+|a_n - 0 | = |a_n| < \e^2 \,, \quad \forall \, n \geq N \,.
+$$
+Therefore
+$$
+|\sqrt{a_n} - \sqrt{0} | = | \sqrt{a_n}| < \sqrt{\e^2} = \e \,, \quad \forall \, n \geq N \,.
+$$
+
+
+:::
+
+
+Let us show an application of Theorem \ref{theorem-square-root-limit}.
+
+
+::: Example 
+
+Define the sequence
+$$
+a_n  = \sqrt{9 n^{2}+3 n+1}-3 n \,.
+$$
+Prove that
+$$
+\lim_{n \to \infty} \, a_n = \frac12 \,.
+$$
+
+
+> *Proof*. We first rewrite
+\begin{align*}
+a_n & = \sqrt{9 n^{2}+3 n+1}-3 n \\
+& = \frac{\left(\sqrt{9 n^{2}+3 n+1}-3 n\right)\left(\sqrt{9 n^{2}+3 n+1}+3 n\right)}{\sqrt{9 n^{2}+3 n+1}+3 n} \\
+& =\frac{9 n^{2}+3 n+1-(3 n)^{2}}{\sqrt{9 n^{2}+3 n+1}+3 n} \\
+& =\frac{3 n+1}{\sqrt{9 n^{2}+3 n+1}+3 n} \, .
+\end{align*}
+The biggest power of $n$ in the denominator is $n$. Therefore we factor out $n$:
+\begin{align*}
+a_n & = \sqrt{9 n^{2}+3 n+1}-3 n \\
+& =\frac{3 n+1}{\sqrt{9 n^{2}+3 n+1}+3 n} \\
+& =\frac{3+ \dfrac{1}{n} }{\sqrt{9+ \dfrac{3}{n} + \dfrac{1}{n^{2}}} + 3 } \,.
+\end{align*}
+By the Algebra of Limits we have
+$$
+9+ \frac{3}{n} + \frac{1}{n^{2}} \to 9 + 0 + 0 = 9 \,.
+$$
+Therefore we can use Theorem \ref{theorem-square-root-limit} to infer
+$$
+\sqrt{ 9 + \frac{3}{n} + \frac{1}{n^{2}} } \to \sqrt{9}  \,.
+$$
+By the Algebra of Limits we conclude:
+$$
+a_n = \frac{3+ \dfrac{1}{n} }{\sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{n^{2}} }+ 3 }   \to  \frac{ 3 + 0 }{ \sqrt{9} + 3 } = \frac12 \,.
+$$
+
+
+:::
+
+
+::: Example 
+
+Prove that the sequence
+$$
+a_n = \sqrt{9 n^{2}+3 n+1}-2 n
+$$
+does not converge.
+
+> *Proof.* We rewrite $a_n$ as
+\begin{align*}
+a_n & = \sqrt{9 n^{2}+3 n+1}-2 n  \\
+& =\frac{  (\sqrt{9 n^{2}+3 n+1} - 2 n)  (\sqrt{9 n^{2}+3 n+1}+2 n) }{\sqrt{9 n^{2}+3 n+1}+2 n} \\
+& =\frac{9 n^{2}+3 n+1-(2 n)^{2}}{\sqrt{9 n^{2}+3 n+1}+2 n} \\
+& =\frac{5 n^{2}+3 n+1}{\sqrt{9 n^{2}+3 n+1}+2 n} \\
+& =\frac{5 n + 3 +  \dfrac{1}{n} }{\sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{ n^2 } } + 2 } \\
+& = \frac{b_n}{c_n} \,,
+\end{align*}
+where we factored $n$, being it the largest power of $n$ in the denominator, and defined
+$$
+b_n : = 5 n + 3 +  \dfrac{1}{n}\,, \quad 
+c_n := \sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{ n^2 } } + 2 \,.
+$$
+Note that 
+$$
+9+ \dfrac{3}{n}  + \dfrac{1}{ n^2 }  \to 9
+$$
+by the Algebra of Limits. Therefore 
+$$
+\sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{ n^2 }}  \to \sqrt{9} = 3 
+$$
+by Theorem \ref{theorem-square-root-limit}. Hence 
+$$
+c_n = \sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{ n^2 }} + 2 \to 3 + 2 = 5  \,.
+$$
+The numerator 
+$$
+b_n = 5 n + 3 +  \dfrac{1}{n}
+$$
+is instead unbounded. Therefore $(a_n)$ is not convergent, by the Algebra of Limits and the usual contradiction argument.
+:::
+
+
+
+
 
 
 
@@ -879,15 +1510,27 @@ This proves that the sequence $(\log n)$ is unbounded. Hence $(\log n)$ cannot c
 Use abbot, marcellini, and analisi sapienza note. For next year remove integral test and add cauchy condensation test.
 
 
+## Divergence to infinity
+
+Do this from abbott or marcellini. For the moment we have only done
+divergent as non-convergent. Would need definition of Divergence to $\pm \infty$.
+
+
+## Some notable limits
+
+Marcellini Page 101. Also  see what is the english name for limiti notevoli.
+
+
 ## Example: Euler's Number
 
 
-Marcellini
+Marcellini Page 106
 
 
 ## Recurrence relations
 
-Marcellini
+Marcellini Page 110
+
 
 
 ## Example: Heron's Method
