@@ -66,19 +66,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
-.Warning {
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -86,31 +82,27 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
 }
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -118,21 +110,29 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
-.Corollary {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 </style>
 
@@ -247,6 +247,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#bounded-sequences" id="toc-bounded-sequences" class="nav-link" data-scroll-target="#bounded-sequences"><span class="header-section-number">6.5</span> Bounded sequences</a></li>
   <li><a href="#algebra-of-limits" id="toc-algebra-of-limits" class="nav-link" data-scroll-target="#algebra-of-limits"><span class="header-section-number">6.6</span> Algebra of limits</a></li>
   <li><a href="#fractional-powers" id="toc-fractional-powers" class="nav-link" data-scroll-target="#fractional-powers"><span class="header-section-number">6.7</span> Fractional powers</a></li>
+  <li><a href="#limit-tests" id="toc-limit-tests" class="nav-link" data-scroll-target="#limit-tests"><span class="header-section-number">6.8</span> Limit tests</a>
+  <ul class="collapse">
+  <li><a href="#squeeze-theorem" id="toc-squeeze-theorem" class="nav-link" data-scroll-target="#squeeze-theorem"><span class="header-section-number">6.8.1</span> Squeeze Theorem</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -815,11 +819,9 @@ n \geq e^{M+1} \,.
 <p>Proving convergence using Definition <a href="chap_6.html#definition-convergent-sequence">5</a> can be a tedious task. In this section we discuss how to prove convergence, starting from known convergence results.</p>
 <div id="theorem-algebra-limits" class="Theorem" title="Algebra of limits">
 <details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25: </strong>Algebra of limits</summary><div>
-<p>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> and <span class="math inline">\(\left(b_{n}\right)_{n \in \mathbb{N}}\)</span> be sequences in <span class="math inline">\(\mathbb{R}\)</span> and let <span class="math inline">\(c \in \mathbb{R}\)</span>. Suppose that, for some <span class="math inline">\(a, b \in \mathbb{R}\)</span></p>
-<p><span class="math display">\[
-\lim _{n \rightarrow \infty} a_{n}=a \quad \text { and } \quad \lim _{n \rightarrow \infty} b_{n}=b \text {. }
-\]</span></p>
-<p>Then,</p>
+<p>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> and <span class="math inline">\(\left(b_{n}\right)_{n \in \mathbb{N}}\)</span> be sequences in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math display">\[
+\lim _{n \rightarrow \infty} a_{n}=a \,, \quad  \lim _{n \rightarrow \infty} b_{n}=b \,,
+\]</span> for some <span class="math inline">\(a,b \in \mathbb{R}\)</span>. Then,</p>
 <ol type="1">
 <li><p>Limit of sum is the sum of limits: <span class="math display">\[
 \lim_{n \rightarrow \infty}\left(a_{n} \pm b_{n}\right)=a \pm b
@@ -1155,8 +1157,14 @@ b_n = 5 n + 3 +  \dfrac{1}{n}
 </blockquote>
 </div></details>
 </div>
+</section>
+<section id="limit-tests" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="limit-tests"><span class="header-section-number">6.8</span> Limit tests</h2>
+<section id="squeeze-theorem" class="level3" data-number="6.8.1">
+<h3 data-number="6.8.1" class="anchored" data-anchor-id="squeeze-theorem"><span class="header-section-number">6.8.1</span> Squeeze Theorem</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

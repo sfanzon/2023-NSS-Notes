@@ -913,13 +913,11 @@ Proving convergence using Definition \ref{definition-convergent-sequence} can be
 ::: Theorem 
 ### Algebra of limits {#theorem-algebra-limits} 
 
-Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ and $\left(b_{n}\right)_{n \in \mathbb{N}}$ be sequences in $\mathbb{R}$ and let $c \in \mathbb{R}$. Suppose that, for some $a, b \in \mathbb{R}$
-
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ and $\left(b_{n}\right)_{n \in \mathbb{N}}$ be sequences in $\mathbb{R}$. Suppose that
 $$
-\lim _{n \rightarrow \infty} a_{n}=a \quad \text { and } \quad \lim _{n \rightarrow \infty} b_{n}=b \text {. }
+\lim _{n \rightarrow \infty} a_{n}=a \,, \quad  \lim _{n \rightarrow \infty} b_{n}=b \,,
 $$
-
-Then,
+for some $a,b \in \R$. Then,
 
 1. Limit of sum is the sum of limits:
 $$
@@ -1493,6 +1491,11 @@ is instead unbounded. Therefore $(a_n)$ is not convergent, by the Algebra of Lim
 
 
 
+
+## Limit tests
+
+
+### Squeeze Theorem
 
 
 
