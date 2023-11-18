@@ -8,7 +8,7 @@ $
 
 
 
-# Sequences in $\mathbb{R}$
+# Sequences
 
 
 
@@ -67,7 +67,7 @@ the elements get smaller and smaller, and closer and closer to $0$. We say that 
 We would like to make the notions of sequence and convergence more precise.
 
 
-## Definition of sequence
+## Sequences in $\R$
 
 
 We start with the definition of sequence of Real numbers.
@@ -76,7 +76,7 @@ We start with the definition of sequence of Real numbers.
 ::: Definition 
 ### Sequence of Real numbers
 
-A sequence $a$ in $\R$ is a map
+A sequence $a$ in $\R$ is a function
 $$
 a \colon \N \to \R \,.
 $$
@@ -115,7 +115,7 @@ $$
 \left(a_{1}, a_{2}, a_{3}, \ldots\right)\,.
 $$
 
-- Consider the sequence 
+- Consider the function 
 $$
 a \colon \N \to \N \, , \quad  n \mapsto 2 n \,.
 $$
@@ -1255,7 +1255,8 @@ while numerator and denominator are unbounded.
 
 
 
-Sometimes it is useful to rearrange the terms a bit before using the Algebra of Limits.
+Sometimes it is useful to rearrange the terms of a sequence, before applying the Algebra of Limits.
+
 
 
 ::: Example 
@@ -1492,10 +1493,693 @@ is instead unbounded. Therefore $(a_n)$ is not convergent, by the Algebra of Lim
 
 
 
+
 ## Limit tests
 
 
+In this section we discuss a number of *tests* to determine whether a sequence converges or not. These are known as **limit tests**.
+
+
 ### Squeeze Theorem
+
+
+When a sequence $(a_n)$ oscillates, it is difficult to compute the limit. Examples of terms which produce oscillations are
+$$
+(-1)^n \,, \quad  \sin(n) \,, \quad \cos(n) \,. 
+$$
+In such instance it might be useful to compare $(a_n)$ with other sequences whose limit is known. If we can prove that $(a_n)$ is *squeezed* between two other sequences with the same limiting value, then we can show that also $(a_n)$ converges to this value.
+
+
+
+::: Theorem 
+### Squeeze theorem {#theorem-squeeze}
+
+Let $\left(a_{n}\right), \left(b_{n}\right)$ and $\left(c_{n}\right)$ be sequences in $\R$. Suppose that
+$$
+b_{n} \leq a_{n} \leq c_{n} \,, \quad \forall  \, n \in \N \,,
+$$
+and that
+$$
+\lim_{n \rightarrow \infty} b_{n} = \lim_{n \rightarrow \infty} c_{n} = L \, .
+$$
+Then
+$$
+\lim_{n \rightarrow \infty} a_{n}= L \, .
+$$
+
+:::
+
+
+::: Proof
+
+Let $\e>0$. Since $b_{n} \to L$ and $c_n \to L$ , there exist $N_1, N_2 \in \N$ such that 
+\begin{align*}
+-\e < b_n - L < \e \,, \,\, \forall \, n \geq N_1 \,,  \\
+- \e < c_n - L < \e \,, \,\, \forall \, n \geq N_2 \,. 
+\end{align*}
+Set
+$$
+N := \max\{N_1,N_2\} \,.
+$$
+Let $n \geq N$. Using the assumption that $b_n \leq a_{n} \leq c_{n}$, we get
+$$
+b_n - L  \leq a_{n} - L \leq c_{n} - L \,.
+$$
+In particular
+$$
+- \e < b_n - L  \leq a_n - L \leq b_n - L < \e \,.
+$$
+The above implies 
+$$
+- \e < a_n - L < \e  \quad \implies \quad \left|a_{n}-L\right| < \e \,.
+$$
+
+:::
+
+
+
+::: Example 
+
+Prove that
+$$
+\lim_{n \to \infty} \, \frac{(-1)^{n}}{n} = 0 \,.
+$$
+
+> *Proof.*
+For all $n \in \N$ we can estimate
+$$
+-1 \leq(-1)^{n} \leq 1 \,.
+$$
+Therefore
+$$
+\frac{-1}{n} \leq \frac{(-1)^{n}}{n} \leq \frac{1}{n} \,, \quad \forall \, n \in \N \,.
+$$
+Moreover
+$$
+\lim_{n \to \infty} \frac{-1}{n}= -1 \cdot 0=0 \,, \quad 
+\lim_{n \to \infty} \frac{1}{n}=0 \,.
+$$
+By the Squeeze Theorem \ref{theorem-squeeze} we conclude
+$$
+\lim_{n \to \infty} \frac{(-1)^{n}}{n}=0 \,.
+$$
+
+:::
+
+
+
+::: {.Example #example-squeeze}
+
+Prove that 
+$$
+\lim_{n \to \infty} \frac{\cos (3 n) + 9 n^{2}}{11 n^{2}+15 \sin (17 n)} = \frac{9}{11} \,.
+$$
+
+
+> *Proof.* 
+We know that 
+$$
+-1 \leq \cos(x) \leq 1 \,, \quad - 1 \leq \sin(x) \leq 1 \,, \quad \forall \, x \in \R \,.
+$$
+Therefore, for all $n \in \N$
+$$
+- 1 \leq \cos(3n) \leq 1 \,, \quad -1 \leq \sin(17n) \leq 1 \,.
+$$
+We can use the above to estimate the numerator in the given sequence:
+$$
+-1 + 9 n^{2} \leq \cos (3 n)+9 n^{2} \leq 1+ 9 n^{2} \,.
+$${#eq-squeeze-example-1}
+Concerning the denominator, we have
+$$
+11 n^{2}-15 \leq 11 n^{2}+15 \sin (17 n) \leq  11 n^{2} + 15
+$$
+and therefore
+$$
+\frac{1}{11 n^{2} + 15} \leq \frac{1}{11 n^{2}+15 \sin (17 n)} \leq \frac{1}{11 n^{2}-15} \,.
+$${#eq-squeeze-example-2}
+Putting together (@eq-squeeze-example-1)-(@eq-squeeze-example-2) we obtain 
+$$
+\frac{-1 + 9 n^{2}}{11 n^{2} + 15} \leq \frac{\cos (3 n)+9 n^{2}}{11 n^{2}+15 \sin (17 n)} \leq \frac{1+ 9 n^{2}}{11 n^{2}-15} \,.
+$$
+By the Algebra of Limits we infer
+$$
+\frac{-1+9 n^{2}}{11 n^{2}+15}=\frac{-\dfrac{1}{n^{2}} + 9}{11 + \dfrac{15}{n^{2}}} \to \frac{0+9}{11+0}=\frac{9}{11}
+$$
+and
+$$
+\frac{1+9 n^{2}}{11 n^{2} - 15}=\frac{ \dfrac{1}{n^{2}} + 9}{ 11 - \dfrac{15}{n^{2}}} \to \frac{0+9}{11+0}=\frac{9}{11} \,.
+$$
+Applying the Squeeze Theorem \ref{theorem-squeeze} we conclude
+$$
+\lim_{n \to \infty} \frac{\cos (3 n)+ 9 n^{2}}{11 n^{2}+15 \sin (17 n)}=\frac{9}{11} \,.
+$$
+
+:::
+ 
+::: Warning
+
+Suppose that the sequences $(a_n), (b_n), (c_n)$ satisfy
+$$
+b_n \leq a_n \leq c_n \,, \quad \forall n \in \N \,,
+$$
+and
+$$
+b_n \to L_1 \,, \quad c_n \to L_2 \,, \quad L_1 \neq L_2 \,.
+$$
+In general, we cannot conclude that $a_n$ converges.
+
+:::
+
+
+::: Example 
+
+Consider the sequence
+$$
+a_n = \left( 1 + \frac{1}{n} \right) (-1)^n  \,.
+$$
+For all $n \in \N$ we can bound
+$$
+- 1 - \frac{1}{n} \leq \left( 1 + \frac{1}{n} \right) (-1)^n   \leq 1 + \frac{1}{n}  \,.
+$$
+However 
+$$
+- 1 - \frac{1}{n} \longrightarrow - 1 - 0 = -1 
+$$
+and
+$$
+1 + \frac{1}{n}  \longrightarrow  1 + 0 = 1 \,.
+$$
+Since 
+$$
+- 1 \neq 1 \,,
+$$
+we cannot apply the Squeeze Theorem \ref{theorem-squeeze} to conclude convergence of $(a_n)$. Indeed, $(a_n)$ is a divergent sequence.
+
+> *Proof.* Suppose by contradiction that $a_n \to a$. We have
+$$
+a_n = (-1)^n + \frac{(-1)^n}{n} = b_n + c_n
+$$
+where
+$$
+b_n := (-1)^n \,, \quad c_n := \frac{(-1)^n}{n} \,.
+$$
+We have seen in Example \ref{example-squeeze} that $c_n \to 0$. Therefore, 
+by the Algebra of Limits, we have
+$$
+b_n = a_n - c_n \longrightarrow a - 0 = a \,.
+$$
+However, Theorem \ref{theorem-1-minus-n} says that the sequence
+$b_n = (-1)^n$ diverges. Contradiction. Hence $(a_n)$ diverges.
+
+:::
+
+
+
+
+
+### Geometric sequences
+
+
+::: Definition 
+
+A sequence $\left(a_{n}\right)$ is called a **geometric sequence** if
+$$
+a_{n}=x^{n} \,,
+$$
+for some $x \in \R$.
+
+:::
+
+
+The value of $|x|$ determines whether or not a geometric sequence converges, as shown in the following theorem.
+
+
+::: Theorem 
+### Geometric sequence test   {#theorem-geometric-sequence}
+
+Let $x \in \R$ and let $\left(a_{n}\right)$ be the sequence defined by
+$$
+a_{n}:=x^{n} \,.
+$$
+We have:
+
+1. If $|x|<1$, then 
+$$
+\lim_{n \to \infty} a_{n} = 0 \,.
+$$
+
+2. If $|x|>1$, then sequence $\left(a_{n}\right)$ is unbounded, and hence divergent.
+
+:::
+
+
+
+::: Warning
+
+The Geometric sequence test in Theorem \ref{theorem-geometric-sequence} does not address the case
+$$
+|x|=1 \,.
+$$
+This is because, in this case, the sequence 
+$$
+a_n = x^n 
+$$
+might converge or diverge, depending on the value of $x$. Indeed, 
+$$
+|x| = 1 \quad \implies \quad x = \pm 1 \,.
+$$
+We therefore have two cases:
+
+- $x = 1$: Then 
+$$
+a_n = 1^n = 1
+$$
+so that $a_n \to 1$ and $(a_n)$ is convergent.
+
+- $x=-1$: Then
+$$
+a_n = x^n = (-1)^n
+$$
+which is divergent by Theorem \ref{theorem-1-minus-n}.
+
+:::
+
+
+
+To prove Theorem \ref{theorem-geometric-sequence} we need the following inequality, known as Bernoulli's inequality.
+
+
+::: Lemma 
+### Bernoulli's inequality  {#lemma-bernoulli}
+
+Let $x \in \R$ with $x>-1$. Then
+$$
+(1+x)^{n} \geq 1+n x \,, \quad \forall \, n \in \N \,.
+$${#eq-bernoulli-inequality}
+
+:::
+
+
+::: Proof
+
+Let $x \in \mathbb{R}, x>-1$. We prove the statement by induction:
+
+- Base case: (@eq-bernoulli-inequality) holds with equality when $n=1$.
+
+- Induction hypothesis: Let $k \in \N$ and suppose that (@eq-bernoulli-inequality) holds for $n=k$, i.e.,
+$$
+(1+x)^{k} \geq 1+k x \,.
+$$
+Then
+\begin{align*}
+(1+x)^{k+1} & = (1+x)^{k}(1+x) \\
+            & \geq(1+k x)(1+x) \\
+            & =1+k x+x+k x^{2} \\
+            & \geq 1+(k+1) x \,,
+\end{align*}
+where we used that $kx^2 \geq 0$. Then (@eq-bernoulli-inequality) holds for $n=k+1$.
+
+By induction we conclude (@eq-bernoulli-inequality).
+
+:::
+
+
+We are ready to prove Theorem \ref{theorem-geometric-sequence}.
+
+
+::: Proof 
+### Proof of Theorem \ref{theorem-geometric-sequence}
+
+*Part 1. The case $|x|<1$*. 
+
+If $x=0$, then
+$$
+a_n = x^n = 0 
+$$
+so that $a_n \to 0$. Hence assume $x \neq 0$. We need to prove that
+$$
+\forall \, \e> 0 \,, \, \exists \, N \in \N \st 
+\forall \, n \geq N \,, \,\, |x^n - 0| < \e \,.
+$$
+Let $\e>0$. We have 
+$$
+|x| < 1 \quad \implies \quad \frac{1}{|x|} > 1 \,.
+$$
+Therefore 
+$$
+|x|= \frac{1}{1+u} \,, \quad u:=\frac{1}{|x|} - 1 > 0 \,.
+$$
+Let $N \in \N$ be such that 
+$$
+N > \frac{1}{\e u} \,,
+$$
+so that 
+$$
+\frac{1}{N u} < \e \,.
+$$
+Let $n \geq N$. Then
+\begin{align*}
+\left|x^{n}-0\right| & =|x|^{n} \\
+                     & = \left(\frac{1}{1+u}\right)^{n} \\
+                     & =\frac{1}{(1+u)^{n}} \\
+                     & \leq \frac{1}{1+n u} \\
+                     & \leq \frac{1}{n u} \\
+                     & \leq \frac{1}{N u} \\
+                     & < \e \,,
+\end{align*}
+where we used Bernoulli's inequality (@eq-bernoulli-inequality) in the first inequality.
+
+
+*Part 2. The case $|x|>1$*. 
+
+To prove that (a_n) does not converge, we prove that it is unbounded. 
+This means showing that
+$$
+\forall \, M > 0 \,, \, \exists n \in \N \st  \left| a_{n}\right| >M \,.
+$$
+Let $M > 0$. We have two cases: 
+
+- $0 < M \leq 1$: Choose $n=1$. Then
+$$
+\left|a_{1}\right|=|x|>1 \geq M \,.
+$$
+
+- $M>1$: Choose $n \in \N$ such that 
+$$
+n> \frac{\log M}{\log |x|} \,.
+$$ 
+Note that $\log |x|>0$ since $|x|>1$. Therefore
+\begin{align*}
+n>\frac{\log M}{\log |x|} & \iff n \log |x|>\log M \\
+                          & \iff \log |x|^n>\log M \\
+                          & \iff |x|^{n}>M \,.
+\end{align*}
+Then 
+$$
+\left|a_{n}\right|=\left|x^{n}\right|=|x|^{n} > M \,.
+$$
+
+
+Hence $(a_n)$ is unbounded. By Corollary \ref{corollary-convergent-bounded} we conclude that $(a_n)$ is divergent. 
+
+
+:::
+
+
+
+
+
+
+::: Example 
+
+We can apply Theorem \ref{theorem-geometric-sequence} to prove convergence
+or divergence for the following sequences.
+
+1. We have
+$$
+\left(\frac{1}{2}\right)^{n} \longrightarrow 0
+$$
+since 
+$$
+\left|\frac{1}{2}\right|=\frac{1}{2}<1 \,.
+$$
+
+2. We have
+$$
+\left(\frac{-1}{2}\right)^{n} \longrightarrow 0
+$$
+since 
+$$
+\left|\frac{-1}{2}\right|=\frac{1}{2}<1 \,.
+$$
+
+3. The sequence 
+$$
+a_n = \left(\frac{-3}{2}\right)^{n}
+$$ 
+does not converge, since 
+$$
+\left|\frac{-3}{2}\right|=\frac{3}{2}>1 \,.
+$$
+
+4. As $n \rightarrow \infty$,
+$$
+\frac{3^{n}}{(-5)^{n}}=\left(-\frac{3}{5}\right)^{n} \longrightarrow 0
+$$
+since 
+$$
+\left|-\frac{3}{5}\right|=\frac{3}{5}<1 \,.
+$$
+
+5. The sequence 
+$$
+a_{n}=\frac{(-7)^{n}}{2^{2 n}}
+$$ 
+does not converge, since
+$$
+\frac{(-7)^{n}}{2^{2 n}}=\frac{(-7)^{n}}{\left(2^{2}\right)^{n}}=\left(-\frac{7}{4}\right)^{n}
+$$
+and 
+$$
+\left|-\frac{7}{4}\right|=\frac{7}{4}>1  \,.
+$$
+
+:::
+
+
+
+
+
+
+
+### Ratio test
+
+
+
+::: Theorem 
+### Ratio test
+
+Let $\left(a_{n}\right)$ be a sequence in $\R$ such that
+$$
+a_{n} \neq 0 \,, \quad \forall \, n \in \N \,.
+$$ 
+
+
+1. Suppose that the following limit exists:
+$$
+L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
+$$
+Then,
+
+    - If $L<1$ we have
+    $$
+    \lim_{n \to\infty} a_{n}=0 \,.
+    $$
+
+    - If $L>1$, the sequence $\left(a_{n}\right)$ is unbounded, and hence does not converge.
+
+2. Suppose that there exists $N \in \N$ and $M>1$ such that
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right| \geq M \,, \quad \forall \, n \geq N \,. \,.
+$$
+Then the sequence $\left(a_{n}\right)$ is unbounded, and hence does not converge.
+
+:::
+
+
+
+::: Proof
+
+Define the sequence $b_{n}=\left|a_{n}\right|$. Then,
+
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}=\frac{b_{n+1}}{b_{n}}
+$$
+
+
+*Part 1.* Suppose that there exists the limit
+$$
+L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
+$$
+Therefore 
+$$
+\lim_{n \to \infty} \frac{b_{n+1}}{b_{n}} = L \,.
+$${#eq-ratio-test-proof}
+
+- $L<1$: Choose $r>0$ such that 
+$$
+L<r<1 \,.
+$$
+Set 
+$$
+\e := r-L
+$$
+By the convergence at (@eq-ratio-test-proof) there exists $N \in \N$ such that
+$$
+\left|\frac{b_{n+1}}{b_{n}}-L\right| < \e = r - L \,, \quad \forall \, n \geq N \,.
+$$
+In particular 
+$$
+\frac{b_{n+1}}{b_{n}}-L < r-L \,, \quad \forall \, n \geq N \,,
+$$
+which implies 
+$$
+b_{n+1} <  r \,{b_{n}} \,, \quad \forall \, n \geq N \,.
+$${#eq-ratio-test-proof-1}
+Let $n \geq N$, we can use (@eq-ratio-test-proof-1) recursively and obtain
+$$
+0 \leq b_{n} < \, r b_{n-1} < \ldots < r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,.
+$$
+In particular, we have proven that
+$$
+0 \leq b_{n} < r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \in \N \,.
+$${#eq-ratio-test-proof-2}
+Since $|r|<1$, by the Geometric sequence test Theorem \ref{theorem-geometric-sequence} we infer
+$$
+r^{n} \rightarrow 0 \,.
+$$
+The Algebra of Limits the yields
+$$
+r^{n} \, \frac{b_{N}}{r^{N}} \rightarrow 0 \,.
+$$
+By the Squeeze Theorem \ref{theorem-squeeze} applied to (@eq-ratio-test-proof-2), it follows that 
+$$   
+b_{n} = |a_n| \to 0 \,.
+$$
+Since 
+$$
+-\left|a_{n}\right| \leq a_{n} \leq\left|a_{n}\right| \,,
+$$
+and 
+$$
+-|a_n| \to 0 \,, \quad |a_n| \to 0 \,, 
+$$
+we can again apply the Squeeze Theorem \ref{theorem-squeeze} to infer
+$$
+a_{n} \rightarrow 0 \,.
+$$
+
+- $L>1$: Choose $r>0$ such that $1<r<L$. Let $\varepsilon=L-r>0$. If $\frac{b_{n+1}}{b_{n}} \rightarrow L$, there exists $n_{0} \in \mathbb{N}$ such that for all $n \geq n_{0}$
+
+$$
+\left|\frac{b_{n+1}}{b_{n}}-L\right| \leq \varepsilon=L-r
+$$
+
+In particular,
+
+$$
+-(L-r) \leq \frac{b_{n+1}}{b_{n}}-L \Longleftrightarrow \frac{b_{n+1}}{b_{n}} \geq r \Longleftrightarrow b_{n+1} \geq r b_{n}
+$$
+
+(In the other case we assumed this is the case, so this statement also holds there.) Hence, for all $n \geq n_{0}$
+
+$$
+b_{n} \geq r^{n-n_{0}} b_{n_{0}}=r^{n} \frac{b_{n_{0}}}{r^{n_{0}}}
+$$
+
+Since $|r|>1$, it follows from the geometric sequence test that the right hand side is unbounded and hence also $b_{n}$ is unbounded.
+
+
+:::
+
+
+
+
+::: Example
+
+Let $a_{n}=\frac{3^{n}}{n !}$. Then,
+
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{3^{n+1}}{(n+1) !} / \frac{3^{n}}{n !}=\frac{3^{n+1}}{3^{n}} \frac{n !}{(n+1) !}=3 \frac{1 \cdot 2 \cdots n}{1 \cdot 2 \cdots n \cdot(n+1)}=\frac{3}{n+1} \longrightarrow 0,
+$$
+
+as $n \rightarrow \infty$. Hence, $L=0<1$ so $\lim _{n \rightarrow \infty} a_{n}=0$ by the ratio test.
+
+- Let $b_{n}=\frac{n !}{100^{n}}$. Then
+
+$$
+\left|\frac{b_{n+1}}{b_{n}}\right|=\frac{(n+1) !}{100^{n+1}} / \frac{n !}{100^{n}}=\frac{100^{n}}{100^{n+1}} \frac{(n+1) !}{(n !)}=\frac{n+1}{100} .
+$$
+
+Choose $n_{0}=101$. Then for all $n \geq n_{0}$,
+
+$$
+\left|\frac{b_{n+1}}{b_{n}}\right| \geq \frac{101}{100}>1
+$$
+
+Hence, $b_{n}$ is an unbounded sequence and does not converge.
+
+:::
+
+
+::: Warning
+
+For part (c) of the theorem we give some examples. If you try to apply the ratio test for a fraction of two polynomials, the limit will always be equal to 1 , so the ratio test is inconclusive for this type of sequence.
+
+:::
+
+Example 2.4.13. $\quad$ Let $a_{n}=\frac{1}{n}$. Then,
+
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{1}{n+1} / \frac{1}{n}=\frac{n}{n+1} \rightarrow 1
+$$
+
+so the ratio test is inconclusive. But we know that $\frac{1}{n} \rightarrow 0$.
+
+- Let $b_{n}=\frac{n^{2}}{n+1}$. Then,
+
+$$
+\left|\frac{b_{n+1}}{b_{n}}\right|=\frac{(n+1)^{2}}{(n+1)+1} / \frac{n^{2}}{n+1}=\frac{(n+1)^{3}}{(n+2) n^{2}}=\frac{(1+1 / n)^{3}}{(1+2 / n) 1} \rightarrow 1
+$$
+
+so the ratio test is inconclusive. But we can compute $\frac{n^{2}}{n+1}=\frac{n}{1+1 / n}$, which is unbounded so $b_{n}$ does not converge.
+
+- Let $c_{n}=\frac{n}{2 n+1}$. Then,
+
+$$
+\left|\frac{c_{n+1}}{c_{n}}\right|=\frac{n+1}{2(n+1)+1} / \frac{n}{2 n+1}=\frac{(n+1)(2 n+1)}{(2 n+3) n}=\frac{(1+1 / n)(2+1 / n)}{(2+3 / n) 1} \rightarrow 1,
+$$
+
+so the ratio test is inconclusive. But we can compute $\frac{n}{2 n+1}=\frac{1}{2+1 / n} \rightarrow \frac{1}{2}$.
+
+As mentioned, the ratio test is especially useful if factorials and geometric terms are involved. It is important to make sure you use brackets correctly, it is very easy to make mistakes.
+
+Example 2.4.14. Let
+
+$$
+a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}}
+$$
+
+Then,
+
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{(n+1) ! \cdot 3^{n+1}}{\sqrt{(2(n+1)) !}} / \frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}}=\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}} \cdot \frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}}
+$$
+
+We can simplify $\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}}=3(n+1)$. Combining the square roots and working out the brackets carefully gives that
+
+$$
+\frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}}=\sqrt{\frac{(2 n) !}{(2 n+2) !}}=\sqrt{\frac{1 \cdot 2 \cdots 2 n}{1 \cdot 2 \cdots 2 n \cdot(2 n+1) \cdot(2 n+2)}}=\frac{1}{\sqrt{(2 n+1)(2 n+2)}}
+$$
+
+Hence,
+
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{3(n+1)}{\sqrt{(2 n+1)(2 n+2)}}=\frac{3(1+1 / n)}{\sqrt{\frac{1}{n^{2}}(2 n+1)(2 n+2)}}=\frac{3(1+1 / n)}{\sqrt{(2+1 / n)(2+2 / n)}} \rightarrow \frac{3}{\sqrt{4}}=\frac{3}{2}>1
+$$
+
+Hence, the sequence does not converge by the ratio test.
+
+If the sequence is a geometric sequence, we can also apply the ratio test, which will give the same answer as the geometric sequence test.
+
+Example 2.4.15. Let $x \in \mathbb{R}$ and let $a_{n}=x^{n}$. Then,
+
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{\left|x^{n+1}\right|}{\left|x^{n}\right|}=\frac{|x|^{n+1}}{|x|^{n}}=|x| \rightarrow|x|
+$$
+
+Hence, if $|x|<1$ the sequence converges by the ratio test, if $|x|>1$ the sequence does not converge by the ratio test, and if $|x|=1$ the ratio test is inconclusive. Of course, we would have gotten this result immediately by using the geometric sequence test.
+
 
 
 

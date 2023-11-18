@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Numbers, Sequences and Series - 6&nbsp; Sequences in \(\mathbb{R}\)</title>
+<title>Numbers, Sequences and Series - 6&nbsp; Sequences</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,15 +66,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Theorem {
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
-.Problem {
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -82,25 +86,41 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Remark {
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Proposition {
   --color1: #f4cce0;
@@ -110,29 +130,9 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 </style>
 
@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/chap_6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences in $\mathbb{R}$</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/chap_6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -215,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/chap_6.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences in <span class="math inline">\(\mathbb{R}\)</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -240,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#definition-of-sequence" id="toc-definition-of-sequence" class="nav-link active" data-scroll-target="#definition-of-sequence"><span class="header-section-number">6.1</span> Definition of sequence</a></li>
+  <li><a href="#sequences-in-mathbbr" id="toc-sequences-in-mathbbr" class="nav-link active" data-scroll-target="#sequences-in-mathbbr"><span class="header-section-number">6.1</span> Sequences in <span class="math inline">\(\mathbb{R}\)</span></a></li>
   <li><a href="#convergent-sequences" id="toc-convergent-sequences" class="nav-link" data-scroll-target="#convergent-sequences"><span class="header-section-number">6.2</span> Convergent sequences</a></li>
   <li><a href="#divergent-sequences" id="toc-divergent-sequences" class="nav-link" data-scroll-target="#divergent-sequences"><span class="header-section-number">6.3</span> Divergent sequences</a></li>
   <li><a href="#uniqueness-of-limit" id="toc-uniqueness-of-limit" class="nav-link" data-scroll-target="#uniqueness-of-limit"><span class="header-section-number">6.4</span> Uniqueness of limit</a></li>
@@ -250,6 +250,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#limit-tests" id="toc-limit-tests" class="nav-link" data-scroll-target="#limit-tests"><span class="header-section-number">6.8</span> Limit tests</a>
   <ul class="collapse">
   <li><a href="#squeeze-theorem" id="toc-squeeze-theorem" class="nav-link" data-scroll-target="#squeeze-theorem"><span class="header-section-number">6.8.1</span> Squeeze Theorem</a></li>
+  <li><a href="#geometric-sequences" id="toc-geometric-sequences" class="nav-link" data-scroll-target="#geometric-sequences"><span class="header-section-number">6.8.2</span> Geometric sequences</a></li>
+  <li><a href="#ratio-test" id="toc-ratio-test" class="nav-link" data-scroll-target="#ratio-test"><span class="header-section-number">6.8.3</span> Ratio test</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -259,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences in <span class="math inline">\(\mathbb{R}\)</span></span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sequences</span></h1>
 </div>
 
 
@@ -319,11 +321,11 @@ ul.task-list li input[type="checkbox"] {
 </div></details>
 </div>
 <p>We would like to make the notions of sequence and convergence more precise.</p>
-<section id="definition-of-sequence" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="definition-of-sequence"><span class="header-section-number">6.1</span> Definition of sequence</h2>
+<section id="sequences-in-mathbbr" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sequences-in-mathbbr"><span class="header-section-number">6.1</span> Sequences in <span class="math inline">\(\mathbb{R}\)</span></h2>
 <p>We start with the definition of sequence of Real numbers.</p>
 <div id="sequence-of-real-numbers" class="Definition" title="Sequence of Real numbers">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2: </strong>Sequence of Real numbers</summary><div>A sequence <span class="math inline">\(a\)</span> in <span class="math inline">\(\mathbb{R}\)</span> is a map <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2: </strong>Sequence of Real numbers</summary><div>A sequence <span class="math inline">\(a\)</span> in <span class="math inline">\(\mathbb{R}\)</span> is a function <span class="math display">\[
 a \colon \mathbb{N}\to \mathbb{R}\,.
 \]</span> For <span class="math inline">\(n \in \mathbb{N}\)</span>, we denote the <span class="math inline">\(n\)</span>-th element of the sequence <span class="math inline">\(a\)</span> by <span class="math display">\[
 a_{n}=a(n)
@@ -346,7 +348,7 @@ a_{n}=a(n)
 <li><p>In general <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is the sequence <span class="math display">\[
 \left(a_{1}, a_{2}, a_{3}, \ldots\right)\,.
 \]</span></p></li>
-<li><p>Consider the sequence <span class="math display">\[
+<li><p>Consider the function <span class="math display">\[
 a \colon \mathbb{N}\to \mathbb{N}\, , \quad  n \mapsto 2 n \,.
 \]</span> This is also a sequence of real numbers. It can be written as <span class="math display">\[
 (2 n)_{n \in \mathbb{N}}
@@ -1013,7 +1015,7 @@ c_n  =7 n^{2}+2 n+1
 \]</span> while numerator and denominator are unbounded.</p>
 </div></details>
 </div>
-<p>Sometimes it is useful to rearrange the terms a bit before using the Algebra of Limits.</p>
+<p>Sometimes it is useful to rearrange the terms of a sequence, before applying the Algebra of Limits.</p>
 <div id="Example-29" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 29</strong></summary><div>
 <p>Define <span class="math display">\[
@@ -1160,8 +1162,405 @@ b_n = 5 n + 3 +  \dfrac{1}{n}
 </section>
 <section id="limit-tests" class="level2" data-number="6.8">
 <h2 data-number="6.8" class="anchored" data-anchor-id="limit-tests"><span class="header-section-number">6.8</span> Limit tests</h2>
+<p>In this section we discuss a number of <em>tests</em> to determine whether a sequence converges or not. These are known as <strong>limit tests</strong>.</p>
 <section id="squeeze-theorem" class="level3" data-number="6.8.1">
 <h3 data-number="6.8.1" class="anchored" data-anchor-id="squeeze-theorem"><span class="header-section-number">6.8.1</span> Squeeze Theorem</h3>
+<p>When a sequence <span class="math inline">\((a_n)\)</span> oscillates, it is difficult to compute the limit. Examples of terms which produce oscillations are <span class="math display">\[
+(-1)^n \,, \quad  \sin(n) \,, \quad \cos(n) \,.
+\]</span> In such instance it might be useful to compare <span class="math inline">\((a_n)\)</span> with other sequences whose limit is known. If we can prove that <span class="math inline">\((a_n)\)</span> is <em>squeezed</em> between two other sequences with the same limiting value, then we can show that also <span class="math inline">\((a_n)\)</span> converges to this value.</p>
+<div id="theorem-squeeze" class="Theorem" title="Squeeze theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 34: </strong>Squeeze theorem</summary><div>Let <span class="math inline">\(\left(a_{n}\right), \left(b_{n}\right)\)</span> and <span class="math inline">\(\left(c_{n}\right)\)</span> be sequences in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math display">\[
+b_{n} \leq a_{n} \leq c_{n} \,, \quad \forall  \, n \in \mathbb{N}\,,
+\]</span> and that <span class="math display">\[
+\lim_{n \rightarrow \infty} b_{n} = \lim_{n \rightarrow \infty} c_{n} = L \, .
+\]</span> Then <span class="math display">\[
+\lim_{n \rightarrow \infty} a_{n}= L \, .
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-16" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(\varepsilon&gt;0\)</span>. Since <span class="math inline">\(b_{n} \to L\)</span> and <span class="math inline">\(c_n \to L\)</span> , there exist <span class="math inline">\(N_1, N_2 \in \mathbb{N}\)</span> such that <span class="math display">\[\begin{align*}
+-\varepsilon&lt; b_n - L &lt; \varepsilon\,, \,\, \forall \, n \geq N_1 \,,  \\
+- \varepsilon&lt; c_n - L &lt; \varepsilon\,, \,\, \forall \, n \geq N_2 \,.
+\end{align*}\]</span> Set <span class="math display">\[
+N := \max\{N_1,N_2\} \,.
+\]</span> Let <span class="math inline">\(n \geq N\)</span>. Using the assumption that <span class="math inline">\(b_n \leq a_{n} \leq c_{n}\)</span>, we get <span class="math display">\[
+b_n - L  \leq a_{n} - L \leq c_{n} - L \,.
+\]</span> In particular <span class="math display">\[
+- \varepsilon&lt; b_n - L  \leq a_n - L \leq b_n - L &lt; \varepsilon\,.
+\]</span> The above implies <span class="math display">\[
+- \varepsilon&lt; a_n - L &lt; \varepsilon\quad \implies \quad \left|a_{n}-L\right| &lt; \varepsilon\,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Example-35" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35</strong></summary><div>
+<p>Prove that <span class="math display">\[
+\lim_{n \to \infty} \, \frac{(-1)^{n}}{n} = 0 \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p><em>Proof.</em> For all <span class="math inline">\(n \in \mathbb{N}\)</span> we can estimate <span class="math display">\[
+-1 \leq(-1)^{n} \leq 1 \,.
+\]</span> Therefore <span class="math display">\[
+\frac{-1}{n} \leq \frac{(-1)^{n}}{n} \leq \frac{1}{n} \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Moreover <span class="math display">\[
+\lim_{n \to \infty} \frac{-1}{n}= -1 \cdot 0=0 \,, \quad
+\lim_{n \to \infty} \frac{1}{n}=0 \,.
+\]</span> By the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> we conclude <span class="math display">\[
+\lim_{n \to \infty} \frac{(-1)^{n}}{n}=0 \,.
+\]</span></p>
+</blockquote>
+</div></details>
+</div>
+<div id="example-squeeze" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 36</strong></summary><div>
+<p>Prove that <span class="math display">\[
+\lim_{n \to \infty} \frac{\cos (3 n) + 9 n^{2}}{11 n^{2}+15 \sin (17 n)} = \frac{9}{11} \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p><em>Proof.</em> We know that <span class="math display">\[
+-1 \leq \cos(x) \leq 1 \,, \quad - 1 \leq \sin(x) \leq 1 \,, \quad \forall \, x \in \mathbb{R}\,.
+\]</span> Therefore, for all <span class="math inline">\(n \in \mathbb{N}\)</span> <span class="math display">\[
+- 1 \leq \cos(3n) \leq 1 \,, \quad -1 \leq \sin(17n) \leq 1 \,.
+\]</span> We can use the above to estimate the numerator in the given sequence: <span id="eq-squeeze-example-1"><span class="math display">\[
+-1 + 9 n^{2} \leq \cos (3 n)+9 n^{2} \leq 1+ 9 n^{2} \,.
+\tag{6.7}\]</span></span> Concerning the denominator, we have <span class="math display">\[
+11 n^{2}-15 \leq 11 n^{2}+15 \sin (17 n) \leq  11 n^{2} + 15
+\]</span> and therefore <span id="eq-squeeze-example-2"><span class="math display">\[
+\frac{1}{11 n^{2} + 15} \leq \frac{1}{11 n^{2}+15 \sin (17 n)} \leq \frac{1}{11 n^{2}-15} \,.
+\tag{6.8}\]</span></span> Putting together (<a href="#eq-squeeze-example-1"><span>6.7</span></a>)-(<a href="#eq-squeeze-example-2"><span>6.8</span></a>) we obtain <span class="math display">\[
+\frac{-1 + 9 n^{2}}{11 n^{2} + 15} \leq \frac{\cos (3 n)+9 n^{2}}{11 n^{2}+15 \sin (17 n)} \leq \frac{1+ 9 n^{2}}{11 n^{2}-15} \,.
+\]</span> By the Algebra of Limits we infer <span class="math display">\[
+\frac{-1+9 n^{2}}{11 n^{2}+15}=\frac{-\dfrac{1}{n^{2}} + 9}{11 + \dfrac{15}{n^{2}}} \to \frac{0+9}{11+0}=\frac{9}{11}
+\]</span> and <span class="math display">\[
+\frac{1+9 n^{2}}{11 n^{2} - 15}=\frac{ \dfrac{1}{n^{2}} + 9}{ 11 - \dfrac{15}{n^{2}}} \to \frac{0+9}{11+0}=\frac{9}{11} \,.
+\]</span> Applying the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> we conclude <span class="math display">\[
+\lim_{n \to \infty} \frac{\cos (3 n)+ 9 n^{2}}{11 n^{2}+15 \sin (17 n)}=\frac{9}{11} \,.
+\]</span></p>
+</blockquote>
+</div></details>
+</div>
+<div id="Warning*-17" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>Suppose that the sequences <span class="math inline">\((a_n), (b_n), (c_n)\)</span> satisfy <span class="math display">\[
+b_n \leq a_n \leq c_n \,, \quad \forall n \in \mathbb{N}\,,
+\]</span> and <span class="math display">\[
+b_n \to L_1 \,, \quad c_n \to L_2 \,, \quad L_1 \neq L_2 \,.
+\]</span> In general, we cannot conclude that <span class="math inline">\(a_n\)</span> converges.<p></p>
+</div></details>
+</div>
+<div id="Example-37" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 37</strong></summary><div>
+<p>Consider the sequence <span class="math display">\[
+a_n = \left( 1 + \frac{1}{n} \right) (-1)^n  \,.
+\]</span> For all <span class="math inline">\(n \in \mathbb{N}\)</span> we can bound <span class="math display">\[
+- 1 - \frac{1}{n} \leq \left( 1 + \frac{1}{n} \right) (-1)^n   \leq 1 + \frac{1}{n}  \,.
+\]</span> However <span class="math display">\[
+- 1 - \frac{1}{n} \longrightarrow - 1 - 0 = -1
+\]</span> and <span class="math display">\[
+1 + \frac{1}{n}  \longrightarrow  1 + 0 = 1 \,.
+\]</span> Since <span class="math display">\[
+- 1 \neq 1 \,,
+\]</span> we cannot apply the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> to conclude convergence of <span class="math inline">\((a_n)\)</span>. Indeed, <span class="math inline">\((a_n)\)</span> is a divergent sequence.</p>
+<blockquote class="blockquote">
+<p><em>Proof.</em> Suppose by contradiction that <span class="math inline">\(a_n \to a\)</span>. We have <span class="math display">\[
+a_n = (-1)^n + \frac{(-1)^n}{n} = b_n + c_n
+\]</span> where <span class="math display">\[
+b_n := (-1)^n \,, \quad c_n := \frac{(-1)^n}{n} \,.
+\]</span> We have seen in Example <a href="chap_6.html#example-squeeze">36</a> that <span class="math inline">\(c_n \to 0\)</span>. Therefore, by the Algebra of Limits, we have <span class="math display">\[
+b_n = a_n - c_n \longrightarrow a - 0 = a \,.
+\]</span> However, Theorem <a href="chap_6.html#theorem-1-minus-n">14</a> says that the sequence <span class="math inline">\(b_n = (-1)^n\)</span> diverges. Contradiction. Hence <span class="math inline">\((a_n)\)</span> diverges.</p>
+</blockquote>
+</div></details>
+</div>
+</section>
+<section id="geometric-sequences" class="level3" data-number="6.8.2">
+<h3 data-number="6.8.2" class="anchored" data-anchor-id="geometric-sequences"><span class="header-section-number">6.8.2</span> Geometric sequences</h3>
+<div id="Definition-38" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 38</strong></summary><div>A sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is called a <strong>geometric sequence</strong> if <span class="math display">\[
+a_{n}=x^{n} \,,
+\]</span> for some <span class="math inline">\(x \in \mathbb{R}\)</span>.<p></p>
+</div></details>
+</div>
+<p>The value of <span class="math inline">\(|x|\)</span> determines whether or not a geometric sequence converges, as shown in the following theorem.</p>
+<div id="theorem-geometric-sequence" class="Theorem" title="Geometric sequence test">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 39: </strong>Geometric sequence test</summary><div>
+<p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> and let <span class="math inline">\(\left(a_{n}\right)\)</span> be the sequence defined by <span class="math display">\[
+a_{n}:=x^{n} \,.
+\]</span> We have:</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(|x|&lt;1\)</span>, then <span class="math display">\[
+\lim_{n \to \infty} a_{n} = 0 \,.
+\]</span></p></li>
+<li><p>If <span class="math inline">\(|x|&gt;1\)</span>, then sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is unbounded, and hence divergent.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="Warning*-18" class="Warning">
+<details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>
+<p>The Geometric sequence test in Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a> does not address the case <span class="math display">\[
+|x|=1 \,.
+\]</span> This is because, in this case, the sequence <span class="math display">\[
+a_n = x^n
+\]</span> might converge or diverge, depending on the value of <span class="math inline">\(x\)</span>. Indeed, <span class="math display">\[
+|x| = 1 \quad \implies \quad x = \pm 1 \,.
+\]</span> We therefore have two cases:</p>
+<ul>
+<li><p><span class="math inline">\(x = 1\)</span>: Then <span class="math display">\[
+a_n = 1^n = 1
+\]</span> so that <span class="math inline">\(a_n \to 1\)</span> and <span class="math inline">\((a_n)\)</span> is convergent.</p></li>
+<li><p><span class="math inline">\(x=-1\)</span>: Then <span class="math display">\[
+a_n = x^n = (-1)^n
+\]</span> which is divergent by Theorem <a href="chap_6.html#theorem-1-minus-n">14</a>.</p></li>
+</ul>
+</div></details>
+</div>
+<p>To prove Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a> we need the following inequality, known as Bernoulli’s inequality.</p>
+<div id="lemma-bernoulli" class="Lemma" title="Bernoulli’s inequality">
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 40: </strong>Bernoulli’s inequality</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x&gt;-1\)</span>. Then <span id="eq-bernoulli-inequality"><span class="math display">\[
+(1+x)^{n} \geq 1+n x \,, \quad \forall \, n \in \mathbb{N}\,.
+\tag{6.9}\]</span></span><p></p>
+</div></details>
+</div>
+<div id="Proof*-19" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Let <span class="math inline">\(x \in \mathbb{R}, x&gt;-1\)</span>. We prove the statement by induction:<p></p>
+<ul>
+<li><p>Base case: (<a href="#eq-bernoulli-inequality"><span>6.9</span></a>) holds with equality when <span class="math inline">\(n=1\)</span>.</p></li>
+<li><p>Induction hypothesis: Let <span class="math inline">\(k \in \mathbb{N}\)</span> and suppose that (<a href="#eq-bernoulli-inequality"><span>6.9</span></a>) holds for <span class="math inline">\(n=k\)</span>, i.e., <span class="math display">\[
+(1+x)^{k} \geq 1+k x \,.
+\]</span> Then <span class="math display">\[\begin{align*}
+(1+x)^{k+1} &amp; = (1+x)^{k}(1+x) \\
+          &amp; \geq(1+k x)(1+x) \\
+          &amp; =1+k x+x+k x^{2} \\
+          &amp; \geq 1+(k+1) x \,,
+\end{align*}\]</span> where we used that <span class="math inline">\(kx^2 \geq 0\)</span>. Then (<a href="#eq-bernoulli-inequality"><span>6.9</span></a>) holds for <span class="math inline">\(n=k+1\)</span>.</p></li>
+</ul>
+<p>By induction we conclude (<a href="#eq-bernoulli-inequality"><span>6.9</span></a>).</p>
+</div></details>
+</div>
+<p>We are ready to prove Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a>.</p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 39">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 39</summary><div><em>Part 1. The case <span class="math inline">\(|x|&lt;1\)</span></em>.<p></p>
+<p>If <span class="math inline">\(x=0\)</span>, then <span class="math display">\[
+a_n = x^n = 0
+\]</span> so that <span class="math inline">\(a_n \to 0\)</span>. Hence assume <span class="math inline">\(x \neq 0\)</span>. We need to prove that <span class="math display">\[
+\forall \, \varepsilon&gt; 0 \,, \, \exists \, N \in \mathbb{N}\, \text{ s.t. } \,
+\forall \, n \geq N \,, \,\, |x^n - 0| &lt; \varepsilon\,.
+\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. We have <span class="math display">\[
+|x| &lt; 1 \quad \implies \quad \frac{1}{|x|} &gt; 1 \,.
+\]</span> Therefore <span class="math display">\[
+|x|= \frac{1}{1+u} \,, \quad u:=\frac{1}{|x|} - 1 &gt; 0 \,.
+\]</span> Let <span class="math inline">\(N \in \mathbb{N}\)</span> be such that <span class="math display">\[
+N &gt; \frac{1}{\varepsilon u} \,,
+\]</span> so that <span class="math display">\[
+\frac{1}{N u} &lt; \varepsilon\,.
+\]</span> Let <span class="math inline">\(n \geq N\)</span>. Then <span class="math display">\[\begin{align*}
+\left|x^{n}-0\right| &amp; =|x|^{n} \\
+                     &amp; = \left(\frac{1}{1+u}\right)^{n} \\
+                     &amp; =\frac{1}{(1+u)^{n}} \\
+                     &amp; \leq \frac{1}{1+n u} \\
+                     &amp; \leq \frac{1}{n u} \\
+                     &amp; \leq \frac{1}{N u} \\
+                     &amp; &lt; \varepsilon\,,
+\end{align*}\]</span> where we used Bernoulli’s inequality (<a href="#eq-bernoulli-inequality"><span>6.9</span></a>) in the first inequality.</p>
+<p><em>Part 2. The case <span class="math inline">\(|x|&gt;1\)</span></em>.</p>
+<p>To prove that (a_n) does not converge, we prove that it is unbounded. This means showing that <span class="math display">\[
+\forall \, M &gt; 0 \,, \, \exists n \in \mathbb{N}\, \text{ s.t. } \, \left| a_{n}\right| &gt;M \,.
+\]</span> Let <span class="math inline">\(M &gt; 0\)</span>. We have two cases:</p>
+<ul>
+<li><p><span class="math inline">\(0 &lt; M \leq 1\)</span>: Choose <span class="math inline">\(n=1\)</span>. Then <span class="math display">\[
+\left|a_{1}\right|=|x|&gt;1 \geq M \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(M&gt;1\)</span>: Choose <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
+n&gt; \frac{\log M}{\log |x|} \,.
+\]</span> Note that <span class="math inline">\(\log |x|&gt;0\)</span> since <span class="math inline">\(|x|&gt;1\)</span>. Therefore <span class="math display">\[\begin{align*}
+n&gt;\frac{\log M}{\log |x|} &amp; \iff n \log |x|&gt;\log M \\
+                        &amp; \iff \log |x|^n&gt;\log M \\
+                        &amp; \iff |x|^{n}&gt;M \,.
+\end{align*}\]</span> Then <span class="math display">\[
+\left|a_{n}\right|=\left|x^{n}\right|=|x|^{n} &gt; M \,.
+\]</span></p></li>
+</ul>
+<p>Hence <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">21</a> we conclude that <span class="math inline">\((a_n)\)</span> is divergent.</p>
+</div></details>
+</div>
+<div id="Example-41" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 41</strong></summary><div>
+<p>We can apply Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a> to prove convergence or divergence for the following sequences.</p>
+<ol type="1">
+<li><p>We have <span class="math display">\[
+\left(\frac{1}{2}\right)^{n} \longrightarrow 0
+\]</span> since <span class="math display">\[
+\left|\frac{1}{2}\right|=\frac{1}{2}&lt;1 \,.
+\]</span></p></li>
+<li><p>We have <span class="math display">\[
+\left(\frac{-1}{2}\right)^{n} \longrightarrow 0
+\]</span> since <span class="math display">\[
+\left|\frac{-1}{2}\right|=\frac{1}{2}&lt;1 \,.
+\]</span></p></li>
+<li><p>The sequence <span class="math display">\[
+a_n = \left(\frac{-3}{2}\right)^{n}
+\]</span> does not converge, since <span class="math display">\[
+\left|\frac{-3}{2}\right|=\frac{3}{2}&gt;1 \,.
+\]</span></p></li>
+<li><p>As <span class="math inline">\(n \rightarrow \infty\)</span>, <span class="math display">\[
+\frac{3^{n}}{(-5)^{n}}=\left(-\frac{3}{5}\right)^{n} \longrightarrow 0
+\]</span> since <span class="math display">\[
+\left|-\frac{3}{5}\right|=\frac{3}{5}&lt;1 \,.
+\]</span></p></li>
+<li><p>The sequence <span class="math display">\[
+a_{n}=\frac{(-7)^{n}}{2^{2 n}}
+\]</span> does not converge, since <span class="math display">\[
+\frac{(-7)^{n}}{2^{2 n}}=\frac{(-7)^{n}}{\left(2^{2}\right)^{n}}=\left(-\frac{7}{4}\right)^{n}
+\]</span> and <span class="math display">\[
+\left|-\frac{7}{4}\right|=\frac{7}{4}&gt;1  \,.
+\]</span></p></li>
+</ol>
+</div></details>
+</div>
+</section>
+<section id="ratio-test" class="level3" data-number="6.8.3">
+<h3 data-number="6.8.3" class="anchored" data-anchor-id="ratio-test"><span class="header-section-number">6.8.3</span> Ratio test</h3>
+<div id="ratio-test-1" class="Theorem" title="Ratio test">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 42: </strong>Ratio test</summary><div>
+<p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
+a_{n} \neq 0 \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span></p>
+<ol type="1">
+<li><p>Suppose that the following limit exists: <span class="math display">\[
+L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
+\]</span> Then,</p>
+<ul>
+<li><p>If <span class="math inline">\(L&lt;1\)</span> we have <span class="math display">\[
+\lim_{n \to\infty} a_{n}=0 \,.
+\]</span></p></li>
+<li><p>If <span class="math inline">\(L&gt;1\)</span>, the sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is unbounded, and hence does not converge.</p></li>
+</ul></li>
+<li><p>Suppose that there exists <span class="math inline">\(N \in \mathbb{N}\)</span> and <span class="math inline">\(M&gt;1\)</span> such that <span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right| \geq M \,, \quad \forall \, n \geq N \,. \,.
+\]</span> Then the sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is unbounded, and hence does not converge.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-21" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Define the sequence <span class="math inline">\(b_{n}=\left|a_{n}\right|\)</span>. Then,<p></p>
+<p><span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}=\frac{b_{n+1}}{b_{n}}
+\]</span></p>
+<p><em>Part 1.</em> Suppose that there exists the limit <span class="math display">\[
+L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
+\]</span> Therefore <span id="eq-ratio-test-proof"><span class="math display">\[
+\lim_{n \to \infty} \frac{b_{n+1}}{b_{n}} = L \,.
+\tag{6.10}\]</span></span></p>
+<ul>
+<li><p><span class="math inline">\(L&lt;1\)</span>: Choose <span class="math inline">\(r&gt;0\)</span> such that <span class="math display">\[
+L&lt;r&lt;1 \,.
+\]</span> Set <span class="math display">\[
+\varepsilon:= r-L
+\]</span> By the convergence at (<a href="#eq-ratio-test-proof"><span>6.10</span></a>) there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left|\frac{b_{n+1}}{b_{n}}-L\right| &lt; \varepsilon= r - L \,, \quad \forall \, n \geq N \,.
+\]</span> In particular <span class="math display">\[
+\frac{b_{n+1}}{b_{n}}-L &lt; r-L \,, \quad \forall \, n \geq N \,,
+\]</span> which implies <span id="eq-ratio-test-proof-1"><span class="math display">\[
+b_{n+1} &lt;  r \,{b_{n}} \,, \quad \forall \, n \geq N \,.
+\tag{6.11}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>, we can use (<a href="#eq-ratio-test-proof-1"><span>6.11</span></a>) recursively and obtain <span class="math display">\[
+0 \leq b_{n} &lt; \, r b_{n-1} &lt; \ldots &lt; r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,.
+\]</span> In particular, we have proven that <span id="eq-ratio-test-proof-2"><span class="math display">\[
+0 \leq b_{n} &lt; r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \in \mathbb{N}\,.
+\tag{6.12}\]</span></span> Since <span class="math inline">\(|r|&lt;1\)</span>, by the Geometric sequence test Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a> we infer <span class="math display">\[
+r^{n} \rightarrow 0 \,.
+\]</span> The Algebra of Limits the yields <span class="math display">\[
+r^{n} \, \frac{b_{N}}{r^{N}} \rightarrow 0 \,.
+\]</span> By the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> applied to (<a href="#eq-ratio-test-proof-2"><span>6.12</span></a>), it follows that <span class="math display">\[   
+b_{n} = |a_n| \to 0 \,.
+\]</span> Since <span class="math display">\[
+-\left|a_{n}\right| \leq a_{n} \leq\left|a_{n}\right| \,,
+\]</span> and <span class="math display">\[
+-|a_n| \to 0 \,, \quad |a_n| \to 0 \,,
+\]</span> we can again apply the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> to infer <span class="math display">\[
+a_{n} \rightarrow 0 \,.
+\]</span></p></li>
+<li><p><span class="math inline">\(L&gt;1\)</span>: Choose <span class="math inline">\(r&gt;0\)</span> such that <span class="math inline">\(1&lt;r&lt;L\)</span>. Let <span class="math inline">\(\varepsilon=L-r&gt;0\)</span>. If <span class="math inline">\(\frac{b_{n+1}}{b_{n}} \rightarrow L\)</span>, there exists <span class="math inline">\(n_{0} \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n \geq n_{0}\)</span></p></li>
+</ul>
+<p><span class="math display">\[
+\left|\frac{b_{n+1}}{b_{n}}-L\right| \leq \varepsilon=L-r
+\]</span></p>
+<p>In particular,</p>
+<p><span class="math display">\[
+-(L-r) \leq \frac{b_{n+1}}{b_{n}}-L \Longleftrightarrow \frac{b_{n+1}}{b_{n}} \geq r \Longleftrightarrow b_{n+1} \geq r b_{n}
+\]</span></p>
+<p>(In the other case we assumed this is the case, so this statement also holds there.) Hence, for all <span class="math inline">\(n \geq n_{0}\)</span></p>
+<p><span class="math display">\[
+b_{n} \geq r^{n-n_{0}} b_{n_{0}}=r^{n} \frac{b_{n_{0}}}{r^{n_{0}}}
+\]</span></p>
+<p>Since <span class="math inline">\(|r|&gt;1\)</span>, it follows from the geometric sequence test that the right hand side is unbounded and hence also <span class="math inline">\(b_{n}\)</span> is unbounded.</p>
+</div></details>
+</div>
+<div id="Example-43" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 43</strong></summary><div>Let <span class="math inline">\(a_{n}=\frac{3^{n}}{n !}\)</span>. Then,<p></p>
+<p><span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{3^{n+1}}{(n+1) !} / \frac{3^{n}}{n !}=\frac{3^{n+1}}{3^{n}} \frac{n !}{(n+1) !}=3 \frac{1 \cdot 2 \cdots n}{1 \cdot 2 \cdots n \cdot(n+1)}=\frac{3}{n+1} \longrightarrow 0,
+\]</span></p>
+<p>as <span class="math inline">\(n \rightarrow \infty\)</span>. Hence, <span class="math inline">\(L=0&lt;1\)</span> so <span class="math inline">\(\lim _{n \rightarrow \infty} a_{n}=0\)</span> by the ratio test.</p>
+<ul>
+<li>Let <span class="math inline">\(b_{n}=\frac{n !}{100^{n}}\)</span>. Then</li>
+</ul>
+<p><span class="math display">\[
+\left|\frac{b_{n+1}}{b_{n}}\right|=\frac{(n+1) !}{100^{n+1}} / \frac{n !}{100^{n}}=\frac{100^{n}}{100^{n+1}} \frac{(n+1) !}{(n !)}=\frac{n+1}{100} .
+\]</span></p>
+<p>Choose <span class="math inline">\(n_{0}=101\)</span>. Then for all <span class="math inline">\(n \geq n_{0}\)</span>,</p>
+<p><span class="math display">\[
+\left|\frac{b_{n+1}}{b_{n}}\right| \geq \frac{101}{100}&gt;1
+\]</span></p>
+<p>Hence, <span class="math inline">\(b_{n}\)</span> is an unbounded sequence and does not converge.</p>
+</div></details>
+</div>
+<div id="Warning*-22" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>For part (c) of the theorem we give some examples. If you try to apply the ratio test for a fraction of two polynomials, the limit will always be equal to 1 , so the ratio test is inconclusive for this type of sequence.<p></p>
+</div></details>
+</div>
+<p>Example 2.4.13. <span class="math inline">\(\quad\)</span> Let <span class="math inline">\(a_{n}=\frac{1}{n}\)</span>. Then,</p>
+<p><span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{1}{n+1} / \frac{1}{n}=\frac{n}{n+1} \rightarrow 1
+\]</span></p>
+<p>so the ratio test is inconclusive. But we know that <span class="math inline">\(\frac{1}{n} \rightarrow 0\)</span>.</p>
+<ul>
+<li>Let <span class="math inline">\(b_{n}=\frac{n^{2}}{n+1}\)</span>. Then,</li>
+</ul>
+<p><span class="math display">\[
+\left|\frac{b_{n+1}}{b_{n}}\right|=\frac{(n+1)^{2}}{(n+1)+1} / \frac{n^{2}}{n+1}=\frac{(n+1)^{3}}{(n+2) n^{2}}=\frac{(1+1 / n)^{3}}{(1+2 / n) 1} \rightarrow 1
+\]</span></p>
+<p>so the ratio test is inconclusive. But we can compute <span class="math inline">\(\frac{n^{2}}{n+1}=\frac{n}{1+1 / n}\)</span>, which is unbounded so <span class="math inline">\(b_{n}\)</span> does not converge.</p>
+<ul>
+<li>Let <span class="math inline">\(c_{n}=\frac{n}{2 n+1}\)</span>. Then,</li>
+</ul>
+<p><span class="math display">\[
+\left|\frac{c_{n+1}}{c_{n}}\right|=\frac{n+1}{2(n+1)+1} / \frac{n}{2 n+1}=\frac{(n+1)(2 n+1)}{(2 n+3) n}=\frac{(1+1 / n)(2+1 / n)}{(2+3 / n) 1} \rightarrow 1,
+\]</span></p>
+<p>so the ratio test is inconclusive. But we can compute <span class="math inline">\(\frac{n}{2 n+1}=\frac{1}{2+1 / n} \rightarrow \frac{1}{2}\)</span>.</p>
+<p>As mentioned, the ratio test is especially useful if factorials and geometric terms are involved. It is important to make sure you use brackets correctly, it is very easy to make mistakes.</p>
+<p>Example 2.4.14. Let</p>
+<p><span class="math display">\[
+a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}}
+\]</span></p>
+<p>Then,</p>
+<p><span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{(n+1) ! \cdot 3^{n+1}}{\sqrt{(2(n+1)) !}} / \frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}}=\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}} \cdot \frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}}
+\]</span></p>
+<p>We can simplify <span class="math inline">\(\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}}=3(n+1)\)</span>. Combining the square roots and working out the brackets carefully gives that</p>
+<p><span class="math display">\[
+\frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}}=\sqrt{\frac{(2 n) !}{(2 n+2) !}}=\sqrt{\frac{1 \cdot 2 \cdots 2 n}{1 \cdot 2 \cdots 2 n \cdot(2 n+1) \cdot(2 n+2)}}=\frac{1}{\sqrt{(2 n+1)(2 n+2)}}
+\]</span></p>
+<p>Hence,</p>
+<p><span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{3(n+1)}{\sqrt{(2 n+1)(2 n+2)}}=\frac{3(1+1 / n)}{\sqrt{\frac{1}{n^{2}}(2 n+1)(2 n+2)}}=\frac{3(1+1 / n)}{\sqrt{(2+1 / n)(2+2 / n)}} \rightarrow \frac{3}{\sqrt{4}}=\frac{3}{2}&gt;1
+\]</span></p>
+<p>Hence, the sequence does not converge by the ratio test.</p>
+<p>If the sequence is a geometric sequence, we can also apply the ratio test, which will give the same answer as the geometric sequence test.</p>
+<p>Example 2.4.15. Let <span class="math inline">\(x \in \mathbb{R}\)</span> and let <span class="math inline">\(a_{n}=x^{n}\)</span>. Then,</p>
+<p><span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{\left|x^{n+1}\right|}{\left|x^{n}\right|}=\frac{|x|^{n+1}}{|x|^{n}}=|x| \rightarrow|x|
+\]</span></p>
+<p>Hence, if <span class="math inline">\(|x|&lt;1\)</span> the sequence converges by the ratio test, if <span class="math inline">\(|x|&gt;1\)</span> the sequence does not converge by the ratio test, and if <span class="math inline">\(|x|=1\)</span> the ratio test is inconclusive. Of course, we would have gotten this result immediately by using the geometric sequence test.</p>
 
 
 </section>
