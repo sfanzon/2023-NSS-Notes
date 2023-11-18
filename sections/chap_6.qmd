@@ -8,7 +8,7 @@ $
 
 
 
-# Sequences
+# Sequences in $\mathbb{R}$
 
 
 
@@ -67,7 +67,7 @@ the elements get smaller and smaller, and closer and closer to $0$. We say that 
 We would like to make the notions of sequence and convergence more precise.
 
 
-## Sequences in $\R$
+## Definition of sequence
 
 
 We start with the definition of sequence of Real numbers.
@@ -1957,7 +1957,7 @@ $$
 
 
 ::: Theorem 
-### Ratio test
+### Ratio test {#theorem-ratio-test}
 
 Let $\left(a_{n}\right)$ be a sequence in $\R$ such that
 $$
@@ -1978,9 +1978,9 @@ Then,
 
     - If $L>1$, the sequence $\left(a_{n}\right)$ is unbounded, and hence does not converge.
 
-2. Suppose that there exists $N \in \N$ and $M>1$ such that
+2. Suppose that there exists $N \in \N$ and $L>1$ such that
 $$
-\left|\frac{a_{n+1}}{a_{n}}\right| \geq M \,, \quad \forall \, n \geq N \,. \,.
+\left|\frac{a_{n+1}}{a_{n}}\right| \geq L \,, \quad \forall \, n \geq N \,. 
 $$
 Then the sequence $\left(a_{n}\right)$ is unbounded, and hence does not converge.
 
@@ -2059,126 +2059,220 @@ $$
 a_{n} \rightarrow 0 \,.
 $$
 
-- $L>1$: Choose $r>0$ such that $1<r<L$. Let $\varepsilon=L-r>0$. If $\frac{b_{n+1}}{b_{n}} \rightarrow L$, there exists $n_{0} \in \mathbb{N}$ such that for all $n \geq n_{0}$
 
+- $L>1$: Choose $r>0$ such that 
 $$
-\left|\frac{b_{n+1}}{b_{n}}-L\right| \leq \varepsilon=L-r
+1<r<L  \,.
 $$
-
+Define
+$$
+\e := L - r > 0 \,.
+$$
+By the convergence (@eq-ratio-test-proof), there exists $N \in \N$ such that
+$$
+\left|\frac{b_{n+1}}{b_{n}}-L\right| < \e = L - r \,, \quad \forall \, n \geq N \,.
+$$
 In particular,
-
 $$
--(L-r) \leq \frac{b_{n+1}}{b_{n}}-L \Longleftrightarrow \frac{b_{n+1}}{b_{n}} \geq r \Longleftrightarrow b_{n+1} \geq r b_{n}
+-(L-r) < \frac{b_{n+1}}{b_{n}}-L \,, \quad \forall \, n \geq N \,,
 $$
-
-(In the other case we assumed this is the case, so this statement also holds there.) Hence, for all $n \geq n_{0}$
-
+which implies
 $$
-b_{n} \geq r^{n-n_{0}} b_{n_{0}}=r^{n} \frac{b_{n_{0}}}{r^{n_{0}}}
+b_{n+1} > r \, b_{n} \,, \quad  \forall \, n \geq N \,.
+$${#eq-ratio-test-proof-4}
+Let $n \geq N$. Applying (@eq-ratio-test-proof-4) recursively we get
 $$
+b_{n} > r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \geq N \,.
+$${#eq-ratio-test-proof-5}
+Since $|r|>1$, by the Geometric sequence test we have that the sequence
+$$
+(r^n)
+$$
+is unbounded. Therefore also the right hand side of (@eq-ratio-test-proof-5) is unbounded, proving that $(b_n)$ is unbounded. Since
+$$
+b_n = |a_n|\,,
+$$
+we conclude that $(a_n)$ is unbounded. By Corollary \ref{corollary-convergent-bounded} we conclude that $(a_n)$ does not converge.
 
-Since $|r|>1$, it follows from the geometric sequence test that the right hand side is unbounded and hence also $b_{n}$ is unbounded.
+
+*Part 2.* Suppose that there exists $N \in \N$ and $M>1$ such that
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right| \geq M \,, \quad \forall \, n \geq N \,. 
+$$
+Since $b_n = |a_n|$, we infer
+$$
+b_{n+1} \geq L \, b_n \,, \quad \forall \, n \geq N \,. 
+$$
+Arguing as above, we obtain
+$$
+b_n \geq L^n \, \frac{b_N}{L^N} \,, \quad \forall \, n \geq N \,.
+$$
+Since $L>1$, we have that the sequence 
+$$  
+L^n \, \frac{b_N}{L^N}
+$$
+is unbounded, by the Geometric sequence test. Hence also $(b_n)$ is unbounded, from which we conclude that $(a_n)$ is unbounded. By Corollary \ref{corollary-convergent-bounded} we conclude that $(a_n)$ does not converge.
 
 
 :::
 
+
+Let us apply the Ratio test to some concrete examples.
 
 
 
 ::: Example
 
-Let $a_{n}=\frac{3^{n}}{n !}$. Then,
 
+Let 
 $$
-\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{3^{n+1}}{(n+1) !} / \frac{3^{n}}{n !}=\frac{3^{n+1}}{3^{n}} \frac{n !}{(n+1) !}=3 \frac{1 \cdot 2 \cdots n}{1 \cdot 2 \cdots n \cdot(n+1)}=\frac{3}{n+1} \longrightarrow 0,
+a_{n}=\frac{3^{n}}{n !} \,,
 $$
-
-as $n \rightarrow \infty$. Hence, $L=0<1$ so $\lim _{n \rightarrow \infty} a_{n}=0$ by the ratio test.
-
-- Let $b_{n}=\frac{n !}{100^{n}}$. Then
-
+where we recall that $n!$ (pronounced $n$ factorial) is defined by
 $$
-\left|\frac{b_{n+1}}{b_{n}}\right|=\frac{(n+1) !}{100^{n+1}} / \frac{n !}{100^{n}}=\frac{100^{n}}{100^{n+1}} \frac{(n+1) !}{(n !)}=\frac{n+1}{100} .
+n! := n \cdot (n-1) \cdot (n-2) \cdot  \ldots \cdot  3 \cdot 2 \cdot 1 \,. 
 $$
-
-Choose $n_{0}=101$. Then for all $n \geq n_{0}$,
-
+Prove that
 $$
-\left|\frac{b_{n+1}}{b_{n}}\right| \geq \frac{101}{100}>1
+\lim_{n \to \infty} a_n  = 0 \,.
 $$
 
-Hence, $b_{n}$ is an unbounded sequence and does not converge.
+> *Proof*. We have
+\begin{align*}
+\left|\frac{a_{n+1}}{a_{n}}\right| & = \dfrac{\left( \dfrac{3^{n+1}}{(n+1) !} \right) }{  \left( \dfrac{3^{n}}{n !} \right) } \\
+& = \frac{3^{n+1}}{3^{n}} \, \frac{n !}{(n+1) !} \\
+& = \frac{3 \cdot 3^n}{3^n} \, \frac{n!}{(n+1) n!} \\
+& =\frac{3}{n+1} \longrightarrow L = 0 \,.
+\end{align*}
+Hence, $L=0<1$ so $a_{n} \to 0$ by the Ratio test in Theorem \ref{theorem-ratio-test}.
 
 :::
+
+
+::: Example
+
+Consider the sequence
+$$
+a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}} \,.
+$$
+Prove that $(a_n)$ is divergent.
+
+> *Proof.* We have
+\begin{align*}
+\left|\frac{a_{n+1}}{a_{n}}\right| & =\frac{(n+1) ! \cdot 3^{n+1}}{\sqrt{(2(n+1)) !}}  \frac{\sqrt{(2 n) !}}{n ! \cdot 3^{n}} \\
+& =\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}} \cdot \frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}}
+\end{align*}
+For the first two fractions we have
+$$
+\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}} = 3(n+1) \,,
+$$
+while for the third fraction
+\begin{align*}
+\frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}} & =\sqrt{\frac{(2 n) !}{(2 n+2) !}} \\
+& = \sqrt{\frac{ (2n)! }{ (2n+2) \cdot (2n+1) \cdot (2n)! }} \\
+& = \frac{1}{\sqrt{(2 n+1)(2 n+2)}} \,.
+\end{align*}
+Therefore, using the Algebra of Limits,
+\begin{align*}
+\left|\frac{a_{n+1}}{a_{n}}\right| & = \frac{3(n+1)}{\sqrt{(2 n+1)(2 n+2)}}\\
+& = \frac{3n \left(1+ \dfrac{1}{n} \right)}{\sqrt{n^2 \left( 2 + \dfrac{1}{n}\right) \left(2 + \dfrac{2}{n} \right)}} \\
+& = \frac{3 \left(1+ \dfrac{1}{n} \right)}{\sqrt{ \left( 2 + \dfrac{1}{n}\right) \left(2 + \dfrac{2}{n} \right)}}  \longrightarrow \frac{3}{\sqrt{4}} = \frac{3}{2} > 1 \,.
+\end{align*}
+By the Ratio test we conclude that $(a_n)$ is divergent.
+
+:::
+
+
+
+::: Example 
+
+Let 
+$$
+a_{n}=\frac{n !}{100^{n}} \,.
+$$
+Prove that $(a_n)$ is divergent.
+
+> *Proof.*
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right| 
+= \frac{100^{n}}{100^{n+1}} \frac{(n+1) !}{n !}
+=\frac{n+1}{100} \,.
+$$
+Choose $N=101$. Then for all $n \geq N$,
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right| \geq \frac{101}{100}>1 \,.
+$$
+Hence $a_{n}$ is divergent by the Ratio test.
+
+:::
+
+
 
 
 ::: Warning
 
-For part (c) of the theorem we give some examples. If you try to apply the ratio test for a fraction of two polynomials, the limit will always be equal to 1 , so the ratio test is inconclusive for this type of sequence.
+The Ratio test in Theorem \ref{theorem-ratio-test} does not address the case
+$$
+L=1 \,.
+$$
+This is because, in this case, the sequence $(a_n)$ 
+might converge or diverge. 
+
+For example:
+
+- Define the sequence
+$$
+a_n = \frac1n \,.
+$$
+We have
+$$
+\left|\frac{a_{n+1}}{a_{n}}\right| = \frac{n}{n+1} \rightarrow L = 1 \,. 
+$$
+Hence we cannot apply the Ratio test. However we know that 
+$$
+\lim_{n \to \infty} \, \frac1n = 0 \,.
+$$
+
+
+- Consider the sequence
+$$
+a_n = n \,.
+$$
+We have
+$$
+\frac{|a_{n+1}|}{|a_n|} = \frac{n+1}{n} \rightarrow L = 1 \,. 
+$$
+Hence we cannot apply the Ratio test. However we know that $(a_n)$ is unbounded, and thus divergent.
 
 :::
 
-Example 2.4.13. $\quad$ Let $a_{n}=\frac{1}{n}$. Then,
 
+
+If the sequence $(a_n)$ is geometric, the Ratio test of Theorem \ref{theorem-ratio-test} will give the same
+answer as the Geometric sequence test of Theorem \ref{theorem-geometric-sequence}. This is the content of the following remark.
+
+
+::: Remark
+
+Let $x \in \R$ and define the geometric sequence 
 $$
-\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{1}{n+1} / \frac{1}{n}=\frac{n}{n+1} \rightarrow 1
+a_{n}=x^{n} \,.
 $$
-
-so the ratio test is inconclusive. But we know that $\frac{1}{n} \rightarrow 0$.
-
-- Let $b_{n}=\frac{n^{2}}{n+1}$. Then,
-
+Then
 $$
-\left|\frac{b_{n+1}}{b_{n}}\right|=\frac{(n+1)^{2}}{(n+1)+1} / \frac{n^{2}}{n+1}=\frac{(n+1)^{3}}{(n+2) n^{2}}=\frac{(1+1 / n)^{3}}{(1+2 / n) 1} \rightarrow 1
+\left|\frac{a_{n+1}}{a_{n}}\right|  = \frac{\left|x^{n+1}\right|}{\left|x^{n}\right|} 
+= \frac{|x|^{n+1}}{|x|^{n}} 
+ =|x| \rightarrow |x| \,.
 $$
+Hence: 
 
-so the ratio test is inconclusive. But we can compute $\frac{n^{2}}{n+1}=\frac{n}{1+1 / n}$, which is unbounded so $b_{n}$ does not converge.
+- If $|x|<1$, the sequence $(a_n)$ converges by the Ratio test
+- If $|x|>1$, the sequence $(a_n)$ diverges by the Ratio test. 
+- If $|x|=1$, the sequence $(a_n)$ might be convergent or divergent.
 
-- Let $c_{n}=\frac{n}{2 n+1}$. Then,
+These results are in agreement with the Geometric sequence test. 
 
-$$
-\left|\frac{c_{n+1}}{c_{n}}\right|=\frac{n+1}{2(n+1)+1} / \frac{n}{2 n+1}=\frac{(n+1)(2 n+1)}{(2 n+3) n}=\frac{(1+1 / n)(2+1 / n)}{(2+3 / n) 1} \rightarrow 1,
-$$
-
-so the ratio test is inconclusive. But we can compute $\frac{n}{2 n+1}=\frac{1}{2+1 / n} \rightarrow \frac{1}{2}$.
-
-As mentioned, the ratio test is especially useful if factorials and geometric terms are involved. It is important to make sure you use brackets correctly, it is very easy to make mistakes.
-
-Example 2.4.14. Let
-
-$$
-a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}}
-$$
-
-Then,
-
-$$
-\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{(n+1) ! \cdot 3^{n+1}}{\sqrt{(2(n+1)) !}} / \frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}}=\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}} \cdot \frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}}
-$$
-
-We can simplify $\frac{(n+1) !}{n !} \cdot \frac{3^{n+1}}{3^{n}}=3(n+1)$. Combining the square roots and working out the brackets carefully gives that
-
-$$
-\frac{\sqrt{(2 n) !}}{\sqrt{(2(n+1)) !}}=\sqrt{\frac{(2 n) !}{(2 n+2) !}}=\sqrt{\frac{1 \cdot 2 \cdots 2 n}{1 \cdot 2 \cdots 2 n \cdot(2 n+1) \cdot(2 n+2)}}=\frac{1}{\sqrt{(2 n+1)(2 n+2)}}
-$$
-
-Hence,
-
-$$
-\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{3(n+1)}{\sqrt{(2 n+1)(2 n+2)}}=\frac{3(1+1 / n)}{\sqrt{\frac{1}{n^{2}}(2 n+1)(2 n+2)}}=\frac{3(1+1 / n)}{\sqrt{(2+1 / n)(2+2 / n)}} \rightarrow \frac{3}{\sqrt{4}}=\frac{3}{2}>1
-$$
-
-Hence, the sequence does not converge by the ratio test.
-
-If the sequence is a geometric sequence, we can also apply the ratio test, which will give the same answer as the geometric sequence test.
-
-Example 2.4.15. Let $x \in \mathbb{R}$ and let $a_{n}=x^{n}$. Then,
-
-$$
-\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{\left|x^{n+1}\right|}{\left|x^{n}\right|}=\frac{|x|^{n+1}}{|x|^{n}}=|x| \rightarrow|x|
-$$
-
-Hence, if $|x|<1$ the sequence converges by the ratio test, if $|x|>1$ the sequence does not converge by the ratio test, and if $|x|=1$ the ratio test is inconclusive. Of course, we would have gotten this result immediately by using the geometric sequence test.
+:::
 
 
 

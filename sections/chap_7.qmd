@@ -1,13 +1,4 @@
-::: {.content-hidden}
-$
-{{< include macros.tex >}}
-$
-:::
 
+# Sequences in $\mathbb{C}$
 
-
-
-
-# Series
-
-See Series.pdf file on Canvas
+Coming soon

@@ -695,10 +695,16 @@
 
  [**Example 6.41**](#Example-6.41)\Pageref{Example-6.41}
 
- [**Theorem 6.42**](#ratio-test-1): Ratio test\Pageref{ratio-test-1}
+ [**Theorem 6.42**](#theorem-ratio-test): Ratio test\Pageref{theorem-ratio-test}
 
  [**Proof**](#Proof*-6.21)\Pageref{Proof*-6.21}
 
  [**Example 6.43**](#Example-6.43)\Pageref{Example-6.43}
 
+ [**Example 6.44**](#Example-6.44)\Pageref{Example-6.44}
+
+ [**Example 6.45**](#Example-6.45)\Pageref{Example-6.45}
+
  [**Warning**](#Warning*-6.22)\Pageref{Warning*-6.22}
+
+ [**Remark 6.46**](#Remark-6.46)\Pageref{Remark-6.46}
