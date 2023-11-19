@@ -66,9 +66,45 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Definition {
   --color1: #c6e6ed;
@@ -78,61 +114,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
 }
 .Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 </style>
 
@@ -248,7 +248,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#definition-and-convergence" id="toc-definition-and-convergence" class="nav-link active" data-scroll-target="#definition-and-convergence"><span class="header-section-number">7.1</span> Definition and convergence</a></li>
+  <li><a href="#boundedness" id="toc-boundedness" class="nav-link" data-scroll-target="#boundedness"><span class="header-section-number">7.2</span> Boundedness</a></li>
+  <li><a href="#algebra-of-limits-in-mathbbc" id="toc-algebra-of-limits-in-mathbbc" class="nav-link" data-scroll-target="#algebra-of-limits-in-mathbbc"><span class="header-section-number">7.3</span> Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  <li><a href="#convergence-to-zero" id="toc-convergence-to-zero" class="nav-link" data-scroll-target="#convergence-to-zero"><span class="header-section-number">7.4</span> Convergence to zero</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -270,9 +279,226 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Coming soon</p>
+<p>The theory for sequences in <span class="math inline">\(\mathbb{C}\)</span> is very similar to that of sequences in <span class="math inline">\(\mathbb{R}\)</span>. In <span class="math inline">\(\mathbb{R}\)</span>, we said that a sequence <span class="math inline">\((a_n)\)</span> converges to some number <span class="math inline">\(a \in \mathbb{R}\)</span> if for all <span class="math inline">\(\varepsilon&gt;0\)</span>, it holds <span class="math display">\[
+|a_n - a| &lt; \varepsilon
+\]</span> for all <span class="math inline">\(n\)</span> suffieciently large. The definition of convergence in <span class="math inline">\(\mathbb{C}\)</span> is essentially the same, with the absolute value replaced by the complex modulus.</p>
+<section id="definition-and-convergence" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="definition-and-convergence"><span class="header-section-number">7.1</span> Definition and convergence</h2>
+<p>First of all, let us give the formal definition of sequence in <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<div id="sequence-of-complex-numbers" class="Definition" title="Sequence of Complex numbers">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Sequence of Complex numbers</summary><div>A sequence <span class="math inline">\(a\)</span> in <span class="math inline">\(\mathbb{C}\)</span> is a function <span class="math display">\[
+a \colon \mathbb{N} \to \mathbb{C} \,.
+\]</span> For <span class="math inline">\(n \in \mathbb{N}\)</span>, we denote the <span class="math inline">\(n\)</span>-th element of the sequence <span class="math inline">\(a\)</span> by <span class="math display">\[
+a_{n}=a(n)
+\]</span> and write the sequence as <span class="math display">\[
+\left(a_{n}\right)_{n \in \mathbb{N}} \quad \mbox{ or } \quad
+(a_n) \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>In the following we define convergent sequences in <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<div id="definition-convergent-sequence-C" class="Definition" title="Convergent sequence in \mathbb{C}">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2: </strong>Convergent sequence in <span class="math inline">\(\mathbb{C}\)</span></summary><div>We say that a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> in <span class="math inline">\(\mathbb{C}\)</span> <strong>converges</strong> to <span class="math inline">\(a \in \mathbb{C}\)</span>, or equivalently has limit <span class="math inline">\(a\)</span>, denoted by <span class="math display">\[
+\lim_{n \rightarrow \infty} a_{n}=a  \quad \mbox{ or } \quad a_n \to a \,,
+\]</span> if for all <span class="math inline">\(\varepsilon \in \mathbb{R}\)</span> with <span class="math inline">\(\varepsilon&gt;0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n \in \mathbb{N}, n \geq N\)</span> it holds that <span class="math display">\[
+\left|a_{n}-a\right| &lt; \varepsilon \,.
+\]</span> Using quantifiers, we can write this as <span class="math display">\[
+\forall \, \varepsilon&gt;0 , \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\left|a_{n}-a\right| &lt; \varepsilon \,.
+\]</span><p></p>
+<p>If there exists <span class="math inline">\(a \in \mathbb{C}\)</span> such that <span class="math inline">\(\lim _{n \rightarrow \infty} a_{n}=a\)</span>, then we say that the sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is <strong>convergent</strong>.</p>
+</div></details>
+</div>
+<div id="Important*-1" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>In Definition <a href="chap_7.html#definition-convergent-sequence-C">2</a> we still take <span class="math inline">\(\varepsilon\)</span> to be real. This makes sense, since <span class="math display">\[
+|z| = \sqrt{ x^2 + y^2 } \in \mathbb{R}
+\]</span> for all <span class="math inline">\(z = x + i y \in \mathbb{C}\)</span>.<p></p>
+</div></details>
+</div>
+<div id="Example-3" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 3</strong></summary><div>Using Definition <a href="chap_7.html#definition-convergent-sequence-C">2</a>, prove that <span class="math display">\[
+\lim_{n \rightarrow \infty} \frac{(3+i) n-7 i}{n}=3+i \,.
+\]</span><p></p>
+<p><em>Part 1. Rough Work.</em> Let <span class="math inline">\(\varepsilon &gt;0\)</span>. We would like to understand for which values of <span class="math inline">\(n\)</span> the following holds: <span class="math display">\[
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| &lt; \varepsilon \,.
+\]</span> We have <span class="math display">\[\begin{align*}
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| &amp; = \left|\frac{(3+i) n-7 i-(3+i) n}{n}\right| \\
+&amp; = \frac{|-7 i|}{n} \\
+&amp; = \frac{7}{n} \,.\\
+\end{align*}\]</span> Therefore <span class="math display">\[
+\frac{7}{n} &lt; \varepsilon \quad \iff \quad n &gt; \frac{7}{\varepsilon} \,.
+\]</span></p>
+<p><em>Part 2. Formal Proof.</em> We want to prove that <span class="math display">\[
+\forall \, \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\, \left|\frac{(3+i) n-7 i}{n}-(3+i)\right| &lt; \varepsilon \,.
+\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. Choose <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+N &gt; \frac{7}{\varepsilon} \,.
+\]</span> The above is equivalent to <span class="math display">\[
+\frac{7}{N} &lt; \varepsilon \,.
+\]</span> For <span class="math inline">\(n \geq N\)</span> we have <span class="math display">\[
+\left|\frac{(3+i) n-7 i}{n}-(3+i)\right| = \frac{7}{n} \leq \frac{7}{N}  &lt; \varepsilon \,.
+\]</span></p>
+</div></details>
+</div>
+</section>
+<section id="boundedness" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="boundedness"><span class="header-section-number">7.2</span> Boundedness</h2>
+<p>Boundedness plays an important role for complex sequences.</p>
+<div id="bounded-sequence-in-mathbbc" class="Definition" title="Bounded sequence in \mathbb{C}">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 4: </strong>Bounded sequence in <span class="math inline">\(\mathbb{C}\)</span></summary><div>A sequence <span class="math inline">\(\left(a_{n}\right)\)</span> in <span class="math inline">\(\mathbb{C}\)</span> is called <strong>bounded</strong> if there exists a constant <span class="math inline">\(M \in \mathbb{R}\)</span>, with <span class="math inline">\(M&gt;0\)</span>, such that <span class="math display">\[
+\left|a_{n}\right| \leq M \,, \quad \forall \, n \in \mathbb{N} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>As it happens in <span class="math inline">\(\mathbb{R}\)</span>, we have that complex sequences which converge are also bounded.</p>
+<div id="theorem-convergent-bounded-C" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 5</strong></summary><div>If a sequence <span class="math inline">\(\left(a_{n}\right)\)</span> in <span class="math inline">\(\mathbb{C}\)</span> converges, then the sequence is bounded.<p></p>
+</div></details>
+</div>
+<p>The proof is identical to the one in <span class="math inline">\(\mathbb{R}\)</span>, and is hence omitted. Similarly to real sequences, we can define divergent complex sequences.</p>
+<div id="divergent-sequences-in-mathbbc" class="Definition" title="Divergent sequences in \mathbb{C}">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 6: </strong>Divergent sequences in <span class="math inline">\(\mathbb{C}\)</span></summary><div>We say that a sequence <span class="math inline">\(\left(a_{n}\right)\)</span> in <span class="math inline">\(\mathbb{C}\)</span> is <strong>divergent</strong> if it is not convergent.<p></p>
+</div></details>
+</div>
+<p>As a corollary of Theorem <a href="chap_7.html#theorem-convergent-bounded-C">5</a> we have the following.</p>
+<div id="Corollary-7" class="Corollary">
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 7</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a complex sequence. If <span class="math inline">\(\left(a_{n}\right)\)</span> is not bounded, then it is divergent.<p></p>
+</div></details>
+</div>
+</section>
+<section id="algebra-of-limits-in-mathbbc" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="algebra-of-limits-in-mathbbc"><span class="header-section-number">7.3</span> Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></h2>
+<p>Most of the results about limits that we have shown in <span class="math inline">\(\mathbb{R}\)</span> also hold in <span class="math inline">\(\mathbb{C}\)</span>. The first result is the Algebra of Limits.</p>
+<div id="theorem-algebra-limits-C" class="Theorem" title="Algebra of limits in \mathbb{C}">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 8: </strong>Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
+<p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> and <span class="math inline">\(\left(b_{n}\right)\)</span> be sequences in <span class="math inline">\(\mathbb{C}\)</span>. Suppose that <span class="math display">\[
+\lim_{n \rightarrow \infty} a_{n}=a \,, \quad  \lim_{n \rightarrow \infty} b_{n}=b \,,
+\]</span> for some <span class="math inline">\(a,b \in \mathbb{C}\)</span>. Then,</p>
+<ol type="1">
+<li><p>Limit of sum is the sum of limits: <span class="math display">\[
+\lim_{n \rightarrow \infty}\left(a_{n} \pm b_{n}\right)=a \pm b
+\]</span></p></li>
+<li><p>Limit of product is the product of limits: <span class="math display">\[
+\lim _{n \rightarrow \infty}\left(a_{n}  b_{n}\right) = a  b
+\]</span></p></li>
+<li><p>If <span class="math inline">\(b_{n} \neq 0\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span> and <span class="math inline">\(b \neq 0\)</span>, then <span class="math display">\[
+\lim_{n \rightarrow \infty} \left(\frac{a_{n}}{b_{n}}\right)=\frac{a}{b}
+\]</span></p></li>
+</ol>
+</div></details>
+</div>
+<p>The proof of Theorem <a href="chap_7.html#theorem-algebra-limits-C">8</a> follows word by word the proof of the Algebra of Limits for sequences in <span class="math inline">\(\mathbb{R}\)</span>: one just needs to replace the absolute value by the complex modulus.</p>
+<p>We can use the Algebra of Limits to compute limits of complex sequences.</p>
+<div id="Example-9" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 9</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be the sequence defined by <span class="math display">\[
+a_{n}:=\frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i} \,.
+\]</span> The largest power of <span class="math inline">\(n\)</span> in the denominator is <span class="math inline">\(n^{2}\)</span>. We hence divide by <span class="math inline">\(n^{2}\)</span> to obtain <span class="math display">\[
+a_{n}=\frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i}=
+\frac{(2-i)+\dfrac{6 i}{n}- \dfrac{5}{n^2}- \dfrac{3 i}{ n^{2}} }{(6+3 i)+\dfrac{11 i}{n^{2}}}
+\]</span> By the Algebra of Limits the right hand side converges to <span class="math display">\[
+\frac{(2-i)+0-0-0}{(6+3 i)+0}=\frac{2-i}{6+3 i}
+\]</span> By performing the complex division, we can write the limit in the form <span class="math inline">\(x + i y\)</span>: <span class="math display">\[\begin{align*}
+\lim_{n \rightarrow \infty} a_{n} &amp; =\frac{2-i}{6+3 i} \\
+&amp; =\frac{(2-i)(6-3 i)}{(6+3 i)(6-3 i)} \\
+&amp; =\frac{12-6 i-6 i+3 i^{2}}{36-9 i^{2}} \\
+&amp; =\frac{9-12 i}{45} \\
+&amp; =\frac{1}{5}-\frac{4}{15} i
+\end{align*}\]</span><p></p>
+</div></details>
+</div>
+</section>
+<section id="convergence-to-zero" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="convergence-to-zero"><span class="header-section-number">7.4</span> Convergence to zero</h2>
+<p>The only result that cannot be directly adapted for complex sequences is the Squeeze Theorem. Indeed the chain of inequalities <span class="math display">\[
+b_{n} \leq  a_{n} \leq c_{n}
+\]</span> would not make sense in <span class="math inline">\(\mathbb{C}\)</span>, since there is no order relation.</p>
+<p>We can however prove the following (weaker) result.</p>
+<div id="theorem-convergence-zero-C" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 10</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span> and suppose that <span class="math display">\[
+\lim_{n \rightarrow \infty}\left|a_{n}\right|=0 \,.
+\]</span> Then <span class="math display">\[
+\lim_{n \rightarrow \infty} a_{n}=0 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-2" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Assume that <span class="math inline">\(|a_n| \to 0\)</span>. We need to show that <span class="math display">\[
+\forall \, \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N}
+\, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\,  \left|a_{n}-0\right| &lt; \varepsilon \,.
+\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. Since <span class="math inline">\(\left|a_{n}\right| \rightarrow 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left||a_{n}|-0 \right| &lt; \varepsilon \,, \quad \forall \, n \geq N \,.
+\]</span> Let <span class="math inline">\(n \geq N\)</span>. Then, <span class="math display">\[\begin{align*}
+\left|a_{n}-0\right| &amp; = \left|a_{n}\right| \\
+&amp; = \left|a_{n}\right|-0 \\
+&amp; = || a_{n}|-0| \\
+&amp; &lt; \varepsilon \,.
+\end{align*}\]</span><p></p>
+</div></details>
+</div>
+<p>Note that the sequence <span class="math inline">\(|a_n|\)</span> is real. Therefore the convergence of <span class="math inline">\(|a_n|\)</span> can be studied using convergence results in <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="Example-11" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 11</strong></summary><div>
+<p>Consider the complex sequence <span class="math display">\[
+a_{n}=\left(\frac{1}{2}+\frac{1}{3} i\right)^{n} \,.
+\]</span> Prove that <span class="math inline">\(a_n \to 0\)</span>.</p>
+<blockquote class="blockquote">
+<p><em>Proof.</em> We have <span class="math display">\[\begin{align*}
+\left|a_{n}\right| &amp; = \left|\left(\frac{1}{2}+\frac{1}{3} i\right)^{n}\right| \\
+&amp; = \left|\frac{1}{2}+\frac{1}{3} i\right|^{n} \\
+&amp; = \left(\sqrt{\left(\frac{1}{2}\right)^{2}+\left(\frac{1}{3}\right)^{2}}\right)^{n} \\
+&amp; = \left(\sqrt{\frac{13}{36}}\right)^{n} \,.
+\end{align*}\]</span> Since <span class="math display">\[
+\left|\sqrt{\frac{13}{36}} \right| &lt; 1 \,,
+\]</span> by the Geometric sequence test for real sequences, we conclude that <span class="math display">\[
+\left|a_{n}\right| \rightarrow 0 \,.
+\]</span> Hence <span class="math inline">\(a_n \to 0\)</span> by Theorem <a href="chap_7.html#theorem-convergence-zero-C">10</a>.</p>
+</blockquote>
+</div></details>
+</div>
+<p>Although the Squeeze Theorem cannot be used for complex sequences, sometimes it can be used to deal with real terms in a complex sequence.</p>
+<div id="Example-12" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 12</strong></summary><div>
+<p>Consider the sequence <span class="math display">\[
+a_{n}:=\frac{2 i \cos (3 n) n+(7-i) n^{2}}{3 n^{2}+2 i n+\sin (2 n)} \,.
+\]</span> Prove that <span class="math display">\[
+\lim_{n \to \infty} a_n  = \frac{7}{3}-\frac{1}{3} i \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p><em>Proof.</em> We divide by the largest power in the denominator, to get <span class="math display">\[
+a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\sin (2 n)}{n^{2}}} \,.
+\]</span> Notice that <span class="math display">\[
+- 1 \leq \cos (3 n) \leq 1 \,, \quad \forall \, n \in \mathbb{N} \,,
+\]</span> and thus <span class="math display">\[
+- \frac{2}{n} \leq \frac{2 \cos (3 n)}{n} \leq \frac{2}{n} \,, \quad \forall \, n \in \mathbb{N} \,.
+\]</span> Since <span class="math display">\[
+-\frac{2}{n} \longrightarrow 0 \,, \quad
+\frac{2}{n} \longrightarrow 0 \,,
+\]</span> by the Squeeze Theorem we conclude that also <span class="math display">\[
+\frac{2 \cos (3 n)}{n} \to 0 \,.
+\]</span> In particular we have shown that <span class="math display">\[
+\left| \dfrac{2 i \cos (3 n)}{ n} \right| =
+\left| \dfrac{2 \cos (3 n)}{ n} \right| \to 0 \,.
+\]</span> Using Theorem <a href="chap_7.html#theorem-convergence-zero-C">10</a> we infer <span class="math display">\[
+\dfrac{2 i \cos (3 n)}{ n} \to 0 \,.
+\]</span> Similarly, <span class="math display">\[
+- \frac{1}{n^{2}} \leq \frac{\sin (2 n)}{n^{2}} \leq - \frac{1}{n^{2}} \,, \quad \forall \, n \in \mathbb{N} \,.
+\]</span> Since <span class="math display">\[
+- \frac{1}{n^{2}} \longrightarrow 0 \,, \quad
+\frac{1}{n^{2}} \longrightarrow 0  \,,
+\]</span> by the Squeeze Theorem we conclude <span class="math display">\[
+\frac{\sin (2 n)}{n^2}  \longrightarrow 0 \,.
+\]</span> Finally, we have <span class="math display">\[
+\left|  \frac{2i}{n}  \right| = \frac{2}{n} \longrightarrow 0 \,,
+\]</span> and therefore <span class="math display">\[
+\frac{2i}{n} \longrightarrow 0
+\]</span> by Theorem <a href="chap_7.html#theorem-convergence-zero-C">10</a>. Using the Algebra of Limits in <span class="math inline">\(\mathbb{C}\)</span> we conclude <span class="math display">\[
+a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\sin (2 n)}{n^{2}}}
+\longrightarrow \frac{ 0+ (7-i) }{3+0+0}=\frac{7}{3}-\frac{1}{3} i \,.
+\]</span></p>
+</blockquote>
+</div></details>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

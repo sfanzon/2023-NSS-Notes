@@ -163,13 +163,11 @@ Saying that $|x|$ is *small* is not very precise. Let us now give the formal def
 ::: Definition 
 ### Convergent sequence  {#definition-convergent-sequence}
 
-We say that a sequence $\left(a_{n}\right)_{n \in \N}$ in $\mathbb{R}$ **converges** to $a \in \mathbb{R}$ or equivalently has limit $a$, denoted by
-
+We say that a sequence $\left(a_{n}\right)_{n \in \N}$ in $\mathbb{R}$ **converges** to $a \in \mathbb{R}$, or equivalently has limit $a$, denoted by
 $$
-\lim _{n \rightarrow \infty} a_{n}=a \text {, }
+\lim_{n \rightarrow \infty} a_{n}=a 
 $$
-
-if for all $\e \in \mathbb{R}, \e>0$, there exists an $N \in \N$ such that for all $n \in \N, n \geq N$ it holds that 
+if for all $\e \in \mathbb{R}, \e>0$, there exists $N \in \N$ such that for all $n \in \N, n \geq N$ it holds that 
 $$
 \left|a_{n}-a\right| < \e \,.
 $$
@@ -178,7 +176,21 @@ $$
 \forall \, \e>0 , \, \exists \, N \in \N \st \forall \, n \geq N \,, \,\left|a_{n}-a\right| < \e \,.
 $$
 
-If there exists $a \in \R$ such that $\lim _{n \rightarrow \infty} a_{n}=a$, then we say that the sequence $\left(a_{n}\right)_{n \in \N}$ is **convergent**.
+If there exists $a \in \R$ such that $\lim_{n \rightarrow \infty} a_{n}=a$, then we say that the sequence $\left(a_{n}\right)_{n \in \N}$ is **convergent**.
+
+:::
+
+
+::: Notation
+
+We will often write
+$$
+a_n \to a
+$$
+in place of
+$$
+\lim_{n \rightarrow \infty} a_{n}=a \,.
+$$
 
 :::
 
@@ -915,7 +927,7 @@ Proving convergence using Definition \ref{definition-convergent-sequence} can be
 
 Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ and $\left(b_{n}\right)_{n \in \mathbb{N}}$ be sequences in $\mathbb{R}$. Suppose that
 $$
-\lim _{n \rightarrow \infty} a_{n}=a \,, \quad  \lim _{n \rightarrow \infty} b_{n}=b \,,
+\lim_{n \rightarrow \infty} a_{n}=a \,, \quad  \lim_{n \rightarrow \infty} b_{n}=b \,,
 $$
 for some $a,b \in \R$. Then,
 

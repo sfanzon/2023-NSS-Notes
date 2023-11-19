@@ -66,15 +66,27 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Definition {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Theorem {
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -82,15 +94,19 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Proposition {
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -98,41 +114,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Question {
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
 }
 </style>
 
@@ -390,20 +390,26 @@ a_{n}=(-1)^{n}
 </ul>
 <p>Saying that <span class="math inline">\(|x|\)</span> is <em>small</em> is not very precise. Let us now give the formal definition of convergent sequence.</p>
 <div id="definition-convergent-sequence" class="Definition" title="Convergent sequence">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 5: </strong>Convergent sequence</summary><div>We say that a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> in <span class="math inline">\(\mathbb{R}\)</span> <strong>converges</strong> to <span class="math inline">\(a \in \mathbb{R}\)</span> or equivalently has limit <span class="math inline">\(a\)</span>, denoted by<p></p>
-<p><span class="math display">\[
-\lim _{n \rightarrow \infty} a_{n}=a \text {, }
-\]</span></p>
-<p>if for all <span class="math inline">\(\varepsilon\in \mathbb{R}, \varepsilon&gt;0\)</span>, there exists an <span class="math inline">\(N \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n \in \mathbb{N}, n \geq N\)</span> it holds that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 5: </strong>Convergent sequence</summary><div>We say that a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> in <span class="math inline">\(\mathbb{R}\)</span> <strong>converges</strong> to <span class="math inline">\(a \in \mathbb{R}\)</span>, or equivalently has limit <span class="math inline">\(a\)</span>, denoted by <span class="math display">\[
+\lim_{n \rightarrow \infty} a_{n}=a
+\]</span> if for all <span class="math inline">\(\varepsilon\in \mathbb{R}, \varepsilon&gt;0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that for all <span class="math inline">\(n \in \mathbb{N}, n \geq N\)</span> it holds that <span class="math display">\[
 \left|a_{n}-a\right| &lt; \varepsilon\,.
 \]</span> Using quantifiers, we can write this as <span class="math display">\[
 \forall \, \varepsilon&gt;0 , \, \exists \, N \in \mathbb{N}\, \text{ s.t. } \, \forall \, n \geq N \,, \,\left|a_{n}-a\right| &lt; \varepsilon\,.
-\]</span></p>
-<p>If there exists <span class="math inline">\(a \in \mathbb{R}\)</span> such that <span class="math inline">\(\lim _{n \rightarrow \infty} a_{n}=a\)</span>, then we say that the sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is <strong>convergent</strong>.</p>
+\]</span><p></p>
+<p>If there exists <span class="math inline">\(a \in \mathbb{R}\)</span> such that <span class="math inline">\(\lim_{n \rightarrow \infty} a_{n}=a\)</span>, then we say that the sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is <strong>convergent</strong>.</p>
 </div></details>
 </div>
-<div id="Remark-6" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 6</strong></summary><div>
+<div id="Notation-6" class="Notation">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 6</strong></summary><div>We will often write <span class="math display">\[
+a_n \to a
+\]</span> in place of <span class="math display">\[
+\lim_{n \rightarrow \infty} a_{n}=a \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Remark-7" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 7</strong></summary><div>
 <ul>
 <li><p>Informally, Definition <a href="chap_6.html#definition-convergent-sequence">5</a> says that, no matter how small we choose <span class="math inline">\(\varepsilon\)</span> (as long as it is strictly positive), we always have that <span class="math inline">\(a_{n}\)</span> has a distance to <span class="math inline">\(a\)</span> of less than or equal to <span class="math inline">\(\varepsilon\)</span> from a certain point onwards (i.e., from <span class="math inline">\(N\)</span> onward). The sequence <span class="math inline">\(\left(a_{n}\right)\)</span> may fluctuate wildly in the beginning, but from <span class="math inline">\(N\)</span> onward it should stay within a distance of <span class="math inline">\(\varepsilon\)</span> of <span class="math inline">\(a\)</span>.</p></li>
 <li><p>In general <span class="math inline">\(N\)</span> depends on <span class="math inline">\(\varepsilon\)</span>. If <span class="math inline">\(\varepsilon\)</span> is chosen smaller, we might have to take <span class="math inline">\(N\)</span> larger: this means we need to wait longer before the sequence stays within a distance <span class="math inline">\(\varepsilon\)</span> from <span class="math inline">\(a\)</span>.</p></li>
@@ -414,7 +420,7 @@ a_{n}=(-1)^{n}
 a_n = \frac1n
 \]</span> converges to <span class="math inline">\(0\)</span>, according to Definition <a href="chap_6.html#definition-convergent-sequence">5</a>.</p>
 <div id="theorem-one-over-n" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 7</strong></summary><div>The sequence <span class="math inline">\(\left(\frac{1}{n}\right)_{n \in \mathbb{N}}\)</span> converges to <span class="math inline">\(0\)</span> , i.e.,<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 8</strong></summary><div>The sequence <span class="math inline">\(\left(\frac{1}{n}\right)_{n \in \mathbb{N}}\)</span> converges to <span class="math inline">\(0\)</span> , i.e.,<p></p>
 <p><span class="math display">\[
 \lim_{n \rightarrow \infty} \frac{1}{n}=0 \,.
 \]</span></p>
@@ -425,8 +431,8 @@ a_n = \frac1n
 <li>Long proof, with all the details.</li>
 <li>Short proof, with less details, but still acceptable.</li>
 </ul>
-<div id="proof-of-theorem-long-version" class="Proof" title="Proof of Theorem 7 (Long version)">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 7 (Long version)</summary><div>We have to show that<p></p>
+<div id="proof-of-theorem-long-version" class="Proof" title="Proof of Theorem 8 (Long version)">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 8 (Long version)</summary><div>We have to show that<p></p>
 <p><span class="math display">\[
 \lim _{n \rightarrow \infty} \frac{1}{n}=0,
 \]</span></p>
@@ -456,8 +462,8 @@ N &gt; \frac{1}{\varepsilon} \,.
 <li>We do not mention the Archimedean property.</li>
 <li>We leave out the conclusion when it is obvious that the statement has been proven.</li>
 </ul>
-<div id="proof-of-theorem-short-version" class="Proof" title="Proof of Theorem 7 (Short version)">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 7 (Short version)</summary><div>We have to show that<p></p>
+<div id="proof-of-theorem-short-version" class="Proof" title="Proof of Theorem 8 (Short version)">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 8 (Short version)</summary><div>We have to show that<p></p>
 <p><span class="math display">\[
 \forall \, \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N}\, \text{ s.t. } \, \forall  \, n \geq N \,, \, \left|\frac{1}{n}-0\right| &lt; \varepsilon\,.
 \]</span></p>
@@ -468,13 +474,13 @@ N &gt; \frac{1}{\varepsilon}\,.
 \]</span></p>
 </div></details>
 </div>
-<p>In Theorem <a href="chap_6.html#theorem-one-over-n">7</a> we showed that <span class="math display">\[
+<p>In Theorem <a href="chap_6.html#theorem-one-over-n">8</a> we showed that <span class="math display">\[
 \lim_{n \to \infty} \, \frac{1}{n} = 0 \,.
 \]</span> We can generalise this statement to prove that <span class="math display">\[
 \lim_{n \to \infty} \, \frac{1}{n^{p}} = 0
 \]</span> for any <span class="math inline">\(p&gt;0\)</span> fixed.</p>
 <div id="theorem-one-over-np" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 8</strong></summary><div>For all <span class="math inline">\(p&gt;0\)</span>, the sequence <span class="math inline">\(\left(\frac{1}{n^{p}}\right)_{n \in \mathbb{N}}\)</span> converges to <span class="math inline">\(0\)</span> , i.e.,<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 9</strong></summary><div>For all <span class="math inline">\(p&gt;0\)</span>, the sequence <span class="math inline">\(\left(\frac{1}{n^{p}}\right)_{n \in \mathbb{N}}\)</span> converges to <span class="math inline">\(0\)</span> , i.e.,<p></p>
 <p><span class="math display">\[
 \lim _{n \rightarrow \infty} \frac{1}{n^{p}}=0
 \]</span></p>
@@ -494,8 +500,8 @@ N &gt; \frac{1}{\varepsilon^{1 / p}} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Question-9" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 9</strong></summary><div>Why did we choose <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+<div id="Question-10" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 10</strong></summary><div>Why did we choose <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
 N &gt; \frac{1}{\varepsilon^p}
 \]</span> in the above proof?<p></p>
 </div></details>
@@ -507,8 +513,8 @@ N &gt; \frac{1}{\varepsilon^p}
 <p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>Any <em>rough work</em> required to prove convergence must be shown before the formal proof (in assignments).<p></p>
 </div></details>
 </div>
-<div id="Example-10" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 10</strong></summary><div>Prove that, as <span class="math inline">\(n \rightarrow \infty\)</span>,<p></p>
+<div id="Example-11" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 11</strong></summary><div>Prove that, as <span class="math inline">\(n \rightarrow \infty\)</span>,<p></p>
 <p><span class="math display">\[
 \frac{n}{2n+3} \to \frac{1}{2} \,.
 \]</span></p>
@@ -552,7 +558,7 @@ N &gt; \frac{3}{4\varepsilon} - \frac{6}{4}   \,.
 </div>
 <p>We conclude by showing that constant sequences always converge.</p>
 <div id="theorem-constant-sequence" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 11</strong></summary><div>Let <span class="math inline">\(c \in \mathbb{R}\)</span> and define the constant sequence <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 12</strong></summary><div>Let <span class="math inline">\(c \in \mathbb{R}\)</span> and define the constant sequence <span class="math display">\[
 a_n := c \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> We have that <span class="math display">\[
 \lim_{n \to \infty} \, a_n = c \,.
@@ -572,11 +578,11 @@ a_n := c \,, \quad \forall \, n \in \mathbb{N}\,.
 <h2 data-number="6.3" class="anchored" data-anchor-id="divergent-sequences"><span class="header-section-number">6.3</span> Divergent sequences</h2>
 <p>The opposite of convergent sequences are divergent sequences.</p>
 <div id="divergent-sequence" class="Definition" title="Divergent sequence">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 12: </strong>Divergent sequence</summary><div>We say that a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> in <span class="math inline">\(\mathbb{R}\)</span> is <strong>divergent</strong> if it is not convergent.<p></p>
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 13: </strong>Divergent sequence</summary><div>We say that a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> in <span class="math inline">\(\mathbb{R}\)</span> is <strong>divergent</strong> if it is not convergent.<p></p>
 </div></details>
 </div>
-<div id="Remark-13" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 13</strong></summary><div>Proving that a sequence <span class="math inline">\((a_n)\)</span> is divergent is more complicated than showing it is convergent: To show that <span class="math inline">\((a_n)\)</span> is divergent, we need to show that <span class="math inline">\((a_n)\)</span> cannot converge to <span class="math inline">\(a\)</span> for any <span class="math inline">\(a \in \mathbb{R}\)</span>.<p></p>
+<div id="Remark-14" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 14</strong></summary><div>Proving that a sequence <span class="math inline">\((a_n)\)</span> is divergent is more complicated than showing it is convergent: To show that <span class="math inline">\((a_n)\)</span> is divergent, we need to show that <span class="math inline">\((a_n)\)</span> cannot converge to <span class="math inline">\(a\)</span> for any <span class="math inline">\(a \in \mathbb{R}\)</span>.<p></p>
 <p>In other words, we have to show that there does not exist an <span class="math inline">\(a \in \mathbb{R}\)</span> such that <span class="math display">\[
 \lim _{n \rightarrow \infty} \, a_n = a  \,.
 \]</span> Using quantifiers, this means <span class="math display">\[
@@ -589,7 +595,7 @@ a_n := c \,, \quad \forall \, n \in \mathbb{N}\,.
 </div></details>
 </div>
 <div id="theorem-1-minus-n" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 14</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be the sequence defined by <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be the sequence defined by <span class="math display">\[
 a_{n}=(-1)^{n} \,.
 \]</span> Then <span class="math inline">\(\left(a_{n}\right)\)</span> does not converge.<p></p>
 </div></details>
@@ -637,7 +643,7 @@ a_{n}=(-1)^{n} \,.
 a \neq b \,.
 \]</span> In the next theorem we will show that the limit is unique, if it exists.</p>
 <div id="theorem-uniqueness-limit" class="Theorem" title="Uniqueness of limit">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Uniqueness of limit</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence. Suppose that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 16: </strong>Uniqueness of limit</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence. Suppose that <span class="math display">\[
 \lim_{n \rightarrow \infty} a_{n} = a \,, \quad
 \lim_{n \rightarrow \infty} a_{n} = b \,.
 \]</span> Then <span class="math inline">\(a=b\)</span>.<p></p>
@@ -670,12 +676,12 @@ n \geq N_1 \,, \quad n \geq N_2 \,.
 \end{align*}\]</span> where we used the triangle inequality in the first inequality. Hence <span class="math inline">\(2 \varepsilon&lt; 2 \varepsilon\)</span>, which gives a contradiction.<p></p>
 </div></details>
 </div>
-<div id="Example-16" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div>Prove that<p></p>
+<div id="Example-17" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 17</strong></summary><div>Prove that<p></p>
 <p><span class="math display">\[
 \lim _{n \rightarrow \infty} \frac{n^{2}-1}{2 n^{2}-3}=\frac{1}{2}
 \]</span></p>
-<p>According to Theorem <a href="chap_6.html#theorem-uniqueness-limit">15</a>, it suffices to show that the sequence <span class="math display">\[
+<p>According to Theorem <a href="chap_6.html#theorem-uniqueness-limit">16</a>, it suffices to show that the sequence <span class="math display">\[
 \left(\frac{n^{2}-1}{2 n^{2}-3}\right)_{n \in \mathbb{N}}
 \]</span> converges to <span class="math inline">\(\frac{1}{2}\)</span>, since then <span class="math inline">\(\frac{1}{2}\)</span> can be the only limit.</p>
 <p><em>Part 1. Rough Work.</em></p>
@@ -728,19 +734,19 @@ N &gt; \frac{1}{\sqrt{3 \varepsilon}} \,.
 <h2 data-number="6.5" class="anchored" data-anchor-id="bounded-sequences"><span class="header-section-number">6.5</span> Bounded sequences</h2>
 <p>An important property of sequences is boundedness.</p>
 <div id="definition-bounded-sequence" class="Definition" title="Bounded sequence">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 17: </strong>Bounded sequence</summary><div>A sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is called <strong>bounded</strong> if there exists a constant <span class="math inline">\(M \in \mathbb{R}\)</span>, with <span class="math inline">\(M&gt;0\)</span>, such that <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 18: </strong>Bounded sequence</summary><div>A sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is called <strong>bounded</strong> if there exists a constant <span class="math inline">\(M \in \mathbb{R}\)</span>, with <span class="math inline">\(M&gt;0\)</span>, such that <span class="math display">\[
 \left|a_{n}\right| \leq M \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>Definition <a href="chap_6.html#definition-bounded-sequence">17</a> says that a sequence is bounded, if we can find some constant <span class="math inline">\(M&gt;0\)</span> (possibly very large), such that for all elements of the sequence it holds that <span class="math display">\[
+<p>Definition <a href="chap_6.html#definition-bounded-sequence">18</a> says that a sequence is bounded, if we can find some constant <span class="math inline">\(M&gt;0\)</span> (possibly very large), such that for all elements of the sequence it holds that <span class="math display">\[
 \left|a_{n}\right| \leq M \,,
 \]</span> or equivalently, that <span class="math display">\[
 -M \leq a_{n} \leq M \,.
 \]</span></p>
 <p>We now show that any sequence that converges is also bounded</p>
 <div id="theorem-convergent-bounded" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 18</strong></summary><div>If a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> converges, then the sequence is bounded.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 19</strong></summary><div>If a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> converges, then the sequence is bounded.<p></p>
 </div></details>
 </div>
 <div id="Proof*-8" class="Proof">
@@ -764,43 +770,43 @@ M:=\max \left\{\left|a_{1}\right|,\left|a_{2}\right|, \ldots,\left|a_{N-1}\right
 </div></details>
 </div>
 <p>The choice of <span class="math inline">\(M\)</span> in the above proof says that the sequence can behave wildly for a finite number of terms. After that, it will stay close to the value of the limit, if the latter exists.</p>
-<div id="Example-19" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 19</strong></summary><div>In Theorem <a href="chap_6.html#theorem-one-over-n">7</a> we have shown that <span class="math display">\[
+<div id="Example-20" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 20</strong></summary><div>In Theorem <a href="chap_6.html#theorem-one-over-n">8</a> we have shown that <span class="math display">\[
 \lim_{n \to \infty} \,  \frac{1}{n} = 0
-\]</span> Hence, it follows from Theorem <a href="chap_6.html#theorem-convergent-bounded">18</a> that the sequence <span class="math inline">\((1/n)\)</span> is bounded.<p></p>
+\]</span> Hence, it follows from Theorem <a href="chap_6.html#theorem-convergent-bounded">19</a> that the sequence <span class="math inline">\((1/n)\)</span> is bounded.<p></p>
 <p>Indeed, we have that <span class="math display">\[
 \left|\frac{1}{n}\right|=\frac{1}{n} \leq 1 \,, \quad \forall \, n \in \mathbb{N}\,,
 \]</span> since <span class="math inline">\(n \geq 1\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 </div></details>
 </div>
 <div id="Warning*-9" class="Warning">
-<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>The converse of Theorem <a href="chap_6.html#theorem-convergent-bounded">18</a> does not hold: There exist sequences <span class="math inline">\((a_n)\)</span> which are bounded, but not convergent.<p></p>
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>The converse of Theorem <a href="chap_6.html#theorem-convergent-bounded">19</a> does not hold: There exist sequences <span class="math inline">\((a_n)\)</span> which are bounded, but not convergent.<p></p>
 </div></details>
 </div>
-<div id="Example-20" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 20</strong></summary><div>Define the sequence <span class="math display">\[
+<div id="Example-21" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 21</strong></summary><div>Define the sequence <span class="math display">\[
 a_n = (-1)^n \,.
-\]</span> We have proven in Theorem <a href="chap_6.html#theorem-1-minus-n">14</a> that <span class="math inline">\((a_n)\)</span> is not convergent. However <span class="math inline">\((a_n)\)</span> is bounded, with <span class="math inline">\(M=1\)</span>, since <span class="math display">\[
+\]</span> We have proven in Theorem <a href="chap_6.html#theorem-1-minus-n">15</a> that <span class="math inline">\((a_n)\)</span> is not convergent. However <span class="math inline">\((a_n)\)</span> is bounded, with <span class="math inline">\(M=1\)</span>, since <span class="math display">\[
 |a_n| = |(-1)^n| = 1 = M  \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>Taking the contrapositive of the statement in Theorem <a href="chap_6.html#theorem-convergent-bounded">18</a> we get the following corollary:</p>
+<p>Taking the contrapositive of the statement in Theorem <a href="chap_6.html#theorem-convergent-bounded">19</a> we get the following corollary:</p>
 <div id="corollary-convergent-bounded" class="Corollary">
-<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 21</strong></summary><div>If a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is not bounded, then the sequence does not converge.<p></p>
+<p></p><details class="Corollary fbx-simplebox fbx-default" open=""><summary><strong>Corollary 22</strong></summary><div>If a sequence <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> is not bounded, then the sequence does not converge.<p></p>
 </div></details>
 </div>
-<div id="Remark-22" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 22</strong></summary><div>For a sequence <span class="math inline">\((a_n)\)</span> to be unbounded, it means that <span class="math display">\[
+<div id="Remark-23" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 23</strong></summary><div>For a sequence <span class="math inline">\((a_n)\)</span> to be unbounded, it means that <span class="math display">\[
 \forall \, M &gt; 0 \,, \,\,  \exists \, n \in \mathbb{N}\, \text{ s.t. } \, \left|a_{n}\right| &gt; M \,.
 \]</span> The above is saying that no real number <span class="math inline">\(M&gt;0\)</span> can be a bound for <span class="math inline">\(|a_n|\)</span>, since there is always an index <span class="math inline">\(n \in \mathbb{N}\)</span> such that <span class="math display">\[
 |a_n| &gt; M \,.
 \]</span><p></p>
 </div></details>
 </div>
-<p>We can use Corollary <a href="chap_6.html#corollary-convergent-bounded">21</a> to show that certain sequences do not converge.</p>
-<div id="Theorem-23" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 23</strong></summary><div>For all <span class="math inline">\(p&gt;0\)</span>, the sequence <span class="math inline">\(\left(n^{p}\right)_{n \in \mathbb{N}}\)</span> does not converge.<p></p>
+<p>We can use Corollary <a href="chap_6.html#corollary-convergent-bounded">22</a> to show that certain sequences do not converge.</p>
+<div id="Theorem-24" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 24</strong></summary><div>For all <span class="math inline">\(p&gt;0\)</span>, the sequence <span class="math inline">\(\left(n^{p}\right)_{n \in \mathbb{N}}\)</span> does not converge.<p></p>
 </div></details>
 </div>
 <div id="Proof*-10" class="Proof">
@@ -810,11 +816,11 @@ a_n = (-1)^n \,.
 n &gt; M^{1/p} \,.
 \]</span> Then <span class="math display">\[
 a_n = n^{p}&gt;\left(M^{1/p}\right)^{p}=M \,.
-\]</span> This proves that the sequence <span class="math inline">\((n^p)\)</span> is unbounded. Hence <span class="math inline">\((n^p)\)</span> cannot converge, by Corollary <a href="chap_6.html#corollary-convergent-bounded">21</a>.<p></p>
+\]</span> This proves that the sequence <span class="math inline">\((n^p)\)</span> is unbounded. Hence <span class="math inline">\((n^p)\)</span> cannot converge, by Corollary <a href="chap_6.html#corollary-convergent-bounded">22</a>.<p></p>
 </div></details>
 </div>
-<div id="Theorem-24" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 24</strong></summary><div>The sequence <span class="math inline">\((\log n)_{n \in \mathbb{N}}\)</span> does not converge.<p></p>
+<div id="Theorem-25" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25</strong></summary><div>The sequence <span class="math inline">\((\log n)_{n \in \mathbb{N}}\)</span> does not converge.<p></p>
 </div></details>
 </div>
 <div id="Proof*-11" class="Proof">
@@ -824,7 +830,7 @@ a_n = n^{p}&gt;\left(M^{1/p}\right)^{p}=M \,.
 n \geq e^{M+1} \,.
 \]</span> Then <span class="math display">\[
 |a_n| = |\log n| \geq \left|   \log e^{M+1}   \right| = M + 1 &gt; M \,.
-\]</span> This proves that the sequence <span class="math inline">\((\log n)\)</span> is unbounded. Hence <span class="math inline">\((\log n)\)</span> cannot converge, by Corollary <a href="chap_6.html#corollary-convergent-bounded">21</a>.<p></p>
+\]</span> This proves that the sequence <span class="math inline">\((\log n)\)</span> is unbounded. Hence <span class="math inline">\((\log n)\)</span> cannot converge, by Corollary <a href="chap_6.html#corollary-convergent-bounded">22</a>.<p></p>
 </div></details>
 </div>
 </section>
@@ -832,9 +838,9 @@ n \geq e^{M+1} \,.
 <h2 data-number="6.6" class="anchored" data-anchor-id="algebra-of-limits"><span class="header-section-number">6.6</span> Algebra of limits</h2>
 <p>Proving convergence using Definition <a href="chap_6.html#definition-convergent-sequence">5</a> can be a tedious task. In this section we discuss how to prove convergence, starting from known convergence results.</p>
 <div id="theorem-algebra-limits" class="Theorem" title="Algebra of limits">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25: </strong>Algebra of limits</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26: </strong>Algebra of limits</summary><div>
 <p>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> and <span class="math inline">\(\left(b_{n}\right)_{n \in \mathbb{N}}\)</span> be sequences in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math display">\[
-\lim _{n \rightarrow \infty} a_{n}=a \,, \quad  \lim _{n \rightarrow \infty} b_{n}=b \,,
+\lim_{n \rightarrow \infty} a_{n}=a \,, \quad  \lim_{n \rightarrow \infty} b_{n}=b \,,
 \]</span> for some <span class="math inline">\(a,b \in \mathbb{R}\)</span>. Then,</p>
 <ol type="1">
 <li><p>Limit of sum is the sum of limits: <span class="math display">\[
@@ -878,7 +884,7 @@ N : = \max  \{ N_1, N_2 \} \,.
 \lim_{n \to \infty} (a_n  b_n) = a b  \,,
 \]</span> which is equivalent to <span class="math display">\[
 \forall \, \varepsilon&gt; 0 \,, \, \exists \, N \in \mathbb{N}\, \text{ s.t. } \, \forall \, n \geq N \,, \, \left|a_{n} b_{n} - a b \right| &lt; \varepsilon\,.
-\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. The sequence <span class="math inline">\(\left(a_{n}\right)\)</span> converges, and hence is bounded, by Theorem <a href="chap_6.html#theorem-convergent-bounded">18</a>. This means there exists some <span class="math inline">\(M&gt;0\)</span> such that <span class="math display">\[
+\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. The sequence <span class="math inline">\(\left(a_{n}\right)\)</span> converges, and hence is bounded, by Theorem <a href="chap_6.html#theorem-convergent-bounded">19</a>. This means there exists some <span class="math inline">\(M&gt;0\)</span> such that <span class="math display">\[
 \left|a_{n}\right| \leq M \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> Define <span class="math display">\[
 \widetilde{\varepsilon} = \frac{\varepsilon}{ M + |b| } \,.
@@ -931,49 +937,49 @@ N:= \max\{ N_1, N_2, N_3 \} \,.
 \end{align*}\]</span></p>
 </div></details>
 </div>
-<p>In the future we will refer to Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> as the <em>Algebra of Limits</em>. We now show how to use Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> for computing certain limits.</p>
+<p>In the future we will refer to Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> as the <em>Algebra of Limits</em>. We now show how to use Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> for computing certain limits.</p>
 <div id="example-limit-ploynomial" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 26</strong></summary><div>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 27</strong></summary><div>
 <p>Prove that <span class="math display">\[
 \lim_{n \to \infty} \, \frac{3 n}{7 n+4} = \frac{3}{7} \,.
 \]</span></p>
 <blockquote class="blockquote">
 <p><em>Proof</em>. We can rewrite <span class="math display">\[
 \frac{3 n}{7 n+4}=\frac{3}{7+\dfrac{4}{n}}
-\]</span> By Theorem <a href="chap_6.html#theorem-constant-sequence">11</a> we know that <span class="math display">\[
+\]</span> By Theorem <a href="chap_6.html#theorem-constant-sequence">12</a> we know that <span class="math display">\[
 3 \rightarrow 3\,,  \quad 4 \to 4 \,, \quad 7 \to 7 \,.
-\]</span> From Theorem <a href="chap_6.html#theorem-one-over-n">7</a> we know that <span class="math display">\[
+\]</span> From Theorem <a href="chap_6.html#theorem-one-over-n">8</a> we know that <span class="math display">\[
 \frac{1}{n} \rightarrow 0 \,.
-\]</span> Hence, it follows from Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> Point 2 that <span class="math display">\[
+\]</span> Hence, it follows from Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> Point 2 that <span class="math display">\[
 \frac{4}{n} = 4 \cdot \frac1n \rightarrow 4 \cdot 0 = 0 \,.
-\]</span> By Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> Point 1 we have <span class="math display">\[
+\]</span> By Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> Point 1 we have <span class="math display">\[
 7 + \frac{4}{n} \rightarrow  7 + 0 = 7 \,.
-\]</span> Finally we can use Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> Point 3 to infer <span class="math display">\[
+\]</span> Finally we can use Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> Point 3 to infer <span class="math display">\[
 \frac{3 n}{7 n+4}=\frac{3}{7+\dfrac{4}{n}} \rightarrow \frac{3}{7} \,.
 \]</span></p>
 </blockquote>
 </div></details>
 </div>
 <div id="Important*-13" class="Important">
-<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The technique shown in Example <a href="chap_6.html#example-limit-ploynomial">26</a> is useful to compute limits of fractions of polynomials. To identify the possible limit, if it exists, it is often best to divide by the largest power of <span class="math inline">\(n\)</span> in the denominator.<p></p>
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The technique shown in Example <a href="chap_6.html#example-limit-ploynomial">27</a> is useful to compute limits of fractions of polynomials. To identify the possible limit, if it exists, it is often best to divide by the largest power of <span class="math inline">\(n\)</span> in the denominator.<p></p>
 </div></details>
 </div>
 <div id="example-algebra-of-limits-2" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 27</strong></summary><div>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 28</strong></summary><div>
 <p>Prove that <span class="math display">\[
 \lim_{n \rightarrow \infty} \frac{n^{2}-1}{2 n^{2}-3} = \frac{1}{2} \,.
 \]</span></p>
 <blockquote class="blockquote">
 <p><em>Proof</em>. Factor <span class="math inline">\(n^2\)</span> to obtain <span class="math display">\[
 \frac{n^{2}-1}{2 n^{2}-3} = \frac{1-\dfrac{1}{n^{2}}}{2-\dfrac{3}{n^{2}}} \,.
-\]</span> By Theorem <a href="chap_6.html#theorem-one-over-np">8</a> we have <span class="math display">\[
+\]</span> By Theorem <a href="chap_6.html#theorem-one-over-np">9</a> we have <span class="math display">\[
 \frac{1}{n^2} \to 0 \,.
-\]</span> We can then use the Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> Point 2 to infer <span class="math display">\[
+\]</span> We can then use the Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> Point 2 to infer <span class="math display">\[
 \frac{3}{n^2} \to 3 \cdot 0 = 0
-\]</span> and Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> Point 1 to get <span class="math display">\[
+\]</span> and Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> Point 1 to get <span class="math display">\[
 1 - \frac{1}{n^2} \to 1 - 0 = 1 \,, \quad
 2 - \frac{3}{n^2} \to 2 - 0 = 2 \,.
-\]</span> Finally we use Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> Point 3 and conclude <span class="math display">\[
+\]</span> Finally we use Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> Point 3 and conclude <span class="math display">\[
 \frac{1-\dfrac{1}{n^{2}}}{2-\dfrac{3}{n^{2}}} \to \frac{1}{2} \,.
 \]</span> Therefore <span class="math display">\[
 \lim_{n \to \infty } \, \frac{n^{2}-1}{2 n^{2}-3} = \lim_{n \to \infty} \, \frac{1-\dfrac{1}{n^{2}}}{2-\dfrac{3}{n^{2}}} = \frac{1}{2} \,.
@@ -982,8 +988,8 @@ N:= \max\{ N_1, N_2, N_3 \} \,.
 </div></details>
 </div>
 <p>We can also use the Algebra of Limits to prove that certain limits do not exist.</p>
-<div id="Example-28" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 28</strong></summary><div>
+<div id="Example-29" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 29</strong></summary><div>
 <p>Prove that the sequence <span class="math display">\[
 a_n = \frac{4 n^{3}+8 n+1}{7 n^{2}+2 n+1}
 \]</span> does not converge.</p>
@@ -995,15 +1001,15 @@ a_n &amp; = \frac{4 n^{3}+8 n+1}{7 n^{2}+2 n+1} \\
 \end{align*}\]</span> where we set <span class="math display">\[
 b_n := 4 n+ \dfrac{8}{n}  +  \dfrac{1}{n^{2}}\,, \quad
 c_n := 7 + \dfrac{2}{n}  +  \dfrac{1}{n^{2}} \,.
-\]</span> Using the Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> we see that <span class="math display">\[
+\]</span> Using the Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> we see that <span class="math display">\[
 c_n = 7+  \dfrac{2}{n}  +  \dfrac{1}{n^{2}}  \to 7 \,.
 \]</span> Suppose by contradiction that <span class="math display">\[
 a_n \to a
-\]</span> for some <span class="math inline">\(a \in \mathbb{R}\)</span>. Then, by the Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> we would infer <span class="math display">\[
+\]</span> for some <span class="math inline">\(a \in \mathbb{R}\)</span>. Then, by the Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> we would infer <span class="math display">\[
 b_n = c_n \cdot a_n \to 7 a \,,
 \]</span> concluding that <span class="math inline">\(b_n\)</span> is convergent to <span class="math inline">\(7a\)</span>. We have that <span class="math display">\[
 b_n = 4n + d_n \,, \quad d_n := \dfrac{8}{n}  +  \dfrac{1}{n^{2}} \,.
-\]</span> Again by the Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> we get that <span class="math display">\[
+\]</span> Again by the Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> we get that <span class="math display">\[
 d_n =  \dfrac{8}{n}  +  \dfrac{1}{n^{2}} \to 0 \,,
 \]</span> and hence <span class="math display">\[
 4n = b_n - d_n \to 7a - 0 = 7a \,.
@@ -1022,28 +1028,28 @@ a_n = \frac{b_n}{c_n} \,, \quad b_n:= 4 n^{3}+8 n+1\,,
 b_n = 4 n^{3}+8 n+1
 \]</span> and denominator <span class="math display">\[
 c_n  =7 n^{2}+2 n+1
-\]</span> are both unbounded, and hence <span class="math inline">\((b_n)\)</span> and <span class="math inline">\((c_n)\)</span> do not converge. One might be tempted to conclude that <span class="math inline">\((a_n)\)</span> does not converge. However this is <strong>false</strong> in general: as seen in Example <a href="chap_6.html#example-algebra-of-limits-2">27</a>, we have <span class="math display">\[
+\]</span> are both unbounded, and hence <span class="math inline">\((b_n)\)</span> and <span class="math inline">\((c_n)\)</span> do not converge. One might be tempted to conclude that <span class="math inline">\((a_n)\)</span> does not converge. However this is <strong>false</strong> in general: as seen in Example <a href="chap_6.html#example-algebra-of-limits-2">28</a>, we have <span class="math display">\[
 \lim_{n \rightarrow \infty} \frac{n^{2}-1}{2 n^{2}-3} = \frac{1}{2} \,,
 \]</span> while numerator and denominator are unbounded.</p>
 </div></details>
 </div>
 <p>Sometimes it is useful to rearrange the terms of a sequence, before applying the Algebra of Limits.</p>
-<div id="Example-29" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 29</strong></summary><div>
+<div id="Example-30" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 30</strong></summary><div>
 <p>Define <span class="math display">\[
 a_n := \frac{2 n^{3}+7 n+1}{5 n+9} \cdot \frac{8 n+9}{6 n^{3}+8 n^{2}+3} \,.
 \]</span> Prove that <span class="math display">\[
 \lim_{n \to \infty}  a_n = \frac{8}{15} \,.
 \]</span></p>
 <blockquote class="blockquote">
-<p><em>Proof.</em> The first fraction in <span class="math inline">\((a_n)\)</span> does not converge, as it is unbounded. Therefore we cannot use Point 2 in Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> directly. However, we note that <span class="math display">\[\begin{align*}
+<p><em>Proof.</em> The first fraction in <span class="math inline">\((a_n)\)</span> does not converge, as it is unbounded. Therefore we cannot use Point 2 in Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> directly. However, we note that <span class="math display">\[\begin{align*}
 a_{n} &amp; =\frac{2 n^{3}+7 n+1}{5 n+9} \cdot \frac{8 n+9}{6 n^{3}+8 n^{2}+3} \\
 &amp; = \frac{8 n+9}{5 n+9} \cdot \frac{2 n^{3}+7 n+1}{6 n^{3}+8 n^{2}+3} \,.
 \end{align*}\]</span> Factoring out <span class="math inline">\(n\)</span> and <span class="math inline">\(n^3\)</span>, respectively, and using the Algebra of Limits, we see that <span class="math display">\[
 \frac{8 n+9}{5 n+9}=\frac{8+9 / n}{5+9 / n} \to \frac{8+0}{5+0}=\frac{8}{5}
 \]</span> and <span class="math display">\[
 \frac{2+7 / n^{2}+1 / n^{3}}{6+8 / n+3 / n^{3}} \to \frac{2+0+0}{6+0+0}=\frac{1}{3}
-\]</span> Therefore Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> Point 2 ensures that <span class="math display">\[
+\]</span> Therefore Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> Point 2 ensures that <span class="math display">\[
 a_{n} \to \frac{8}{5} \cdot \frac{1}{3}=\frac{8}{15} \,.
 \]</span></p>
 </blockquote>
@@ -1052,9 +1058,9 @@ a_{n} \to \frac{8}{5} \cdot \frac{1}{3}=\frac{8}{15} \,.
 </section>
 <section id="fractional-powers" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="fractional-powers"><span class="header-section-number">6.7</span> Fractional powers</h2>
-<p>The Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">25</a> can also be used when fractional powers of <span class="math inline">\(n\)</span> are involved.</p>
-<div id="Example-30" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 30</strong></summary><div>
+<p>The Algebra of Limits Theorem <a href="chap_6.html#theorem-algebra-limits">26</a> can also be used when fractional powers of <span class="math inline">\(n\)</span> are involved.</p>
+<div id="Example-31" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 31</strong></summary><div>
 <p>Prove that <span class="math display">\[
 a_n = \frac{n^{7 / 3}+2 \sqrt{n}+7}{4 n^{3 / 2}+5 n}
 \]</span> does not converge.</p>
@@ -1073,7 +1079,7 @@ c_n := 4 + 5 n^{-3/2} \,.
 </div>
 <p>We now present a general result about the square root of a sequence.</p>
 <div id="theorem-square-root-limit" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 31</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 32</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
 \lim_{n \to \infty} \, a_n = a \,,
 \]</span> for some <span class="math inline">\(a \in \mathbb{R}\)</span>. If <span class="math inline">\(a_{n} \geq 0\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span> and <span class="math inline">\(a \geq 0\)</span>, then <span class="math display">\[
 \lim _{n \rightarrow \infty} \sqrt{a_{n}}=\sqrt{a} \,.
@@ -1115,9 +1121,9 @@ a_n \to a = 0 \,.
 </ul>
 </div></details>
 </div>
-<p>Let us show an application of Theorem <a href="chap_6.html#theorem-square-root-limit">31</a>.</p>
-<div id="Example-32" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 32</strong></summary><div>
+<p>Let us show an application of Theorem <a href="chap_6.html#theorem-square-root-limit">32</a>.</p>
+<div id="Example-33" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div>
 <p>Define the sequence <span class="math display">\[
 a_n  = \sqrt{9 n^{2}+3 n+1}-3 n \,.
 \]</span> Prove that <span class="math display">\[
@@ -1135,7 +1141,7 @@ a_n &amp; = \sqrt{9 n^{2}+3 n+1}-3 n \\
 &amp; =\frac{3+ \dfrac{1}{n} }{\sqrt{9+ \dfrac{3}{n} + \dfrac{1}{n^{2}}} + 3 } \,.
 \end{align*}\]</span> By the Algebra of Limits we have <span class="math display">\[
 9+ \frac{3}{n} + \frac{1}{n^{2}} \to 9 + 0 + 0 = 9 \,.
-\]</span> Therefore we can use Theorem <a href="chap_6.html#theorem-square-root-limit">31</a> to infer <span class="math display">\[
+\]</span> Therefore we can use Theorem <a href="chap_6.html#theorem-square-root-limit">32</a> to infer <span class="math display">\[
 \sqrt{ 9 + \frac{3}{n} + \frac{1}{n^{2}} } \to \sqrt{9}  \,.
 \]</span> By the Algebra of Limits we conclude: <span class="math display">\[
 a_n = \frac{3+ \dfrac{1}{n} }{\sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{n^{2}} }+ 3 }   \to  \frac{ 3 + 0 }{ \sqrt{9} + 3 } = \frac12 \,.
@@ -1143,8 +1149,8 @@ a_n = \frac{3+ \dfrac{1}{n} }{\sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{n^{2}} }+ 3 }  
 </blockquote>
 </div></details>
 </div>
-<div id="Example-33" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div>
+<div id="Example-34" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 34</strong></summary><div>
 <p>Prove that the sequence <span class="math display">\[
 a_n = \sqrt{9 n^{2}+3 n+1}-2 n
 \]</span> does not converge.</p>
@@ -1163,7 +1169,7 @@ c_n := \sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{ n^2 } } + 2 \,.
 9+ \dfrac{3}{n}  + \dfrac{1}{ n^2 }  \to 9
 \]</span> by the Algebra of Limits. Therefore <span class="math display">\[
 \sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{ n^2 }}  \to \sqrt{9} = 3
-\]</span> by Theorem <a href="chap_6.html#theorem-square-root-limit">31</a>. Hence <span class="math display">\[
+\]</span> by Theorem <a href="chap_6.html#theorem-square-root-limit">32</a>. Hence <span class="math display">\[
 c_n = \sqrt{9+ \dfrac{3}{n}  + \dfrac{1}{ n^2 }} + 2 \to 3 + 2 = 5  \,.
 \]</span> The numerator <span class="math display">\[
 b_n = 5 n + 3 +  \dfrac{1}{n}
@@ -1181,7 +1187,7 @@ b_n = 5 n + 3 +  \dfrac{1}{n}
 (-1)^n \,, \quad  \sin(n) \,, \quad \cos(n) \,.
 \]</span> In such instance it might be useful to compare <span class="math inline">\((a_n)\)</span> with other sequences whose limit is known. If we can prove that <span class="math inline">\((a_n)\)</span> is <em>squeezed</em> between two other sequences with the same limiting value, then we can show that also <span class="math inline">\((a_n)\)</span> converges to this value.</p>
 <div id="theorem-squeeze" class="Theorem" title="Squeeze theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 34: </strong>Squeeze theorem</summary><div>Let <span class="math inline">\(\left(a_{n}\right), \left(b_{n}\right)\)</span> and <span class="math inline">\(\left(c_{n}\right)\)</span> be sequences in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 35: </strong>Squeeze theorem</summary><div>Let <span class="math inline">\(\left(a_{n}\right), \left(b_{n}\right)\)</span> and <span class="math inline">\(\left(c_{n}\right)\)</span> be sequences in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math display">\[
 b_{n} \leq a_{n} \leq c_{n} \,, \quad \forall  \, n \in \mathbb{N}\,,
 \]</span> and that <span class="math display">\[
 \lim_{n \rightarrow \infty} b_{n} = \lim_{n \rightarrow \infty} c_{n} = L \, .
@@ -1205,8 +1211,8 @@ b_n - L  \leq a_{n} - L \leq c_{n} - L \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Example-35" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35</strong></summary><div>
+<div id="Example-36" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 36</strong></summary><div>
 <p>Prove that <span class="math display">\[
 \lim_{n \to \infty} \, \frac{(-1)^{n}}{n} = 0 \,.
 \]</span></p>
@@ -1218,14 +1224,14 @@ b_n - L  \leq a_{n} - L \leq c_{n} - L \,.
 \]</span> Moreover <span class="math display">\[
 \lim_{n \to \infty} \frac{-1}{n}= -1 \cdot 0=0 \,, \quad
 \lim_{n \to \infty} \frac{1}{n}=0 \,.
-\]</span> By the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> we conclude <span class="math display">\[
+\]</span> By the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">35</a> we conclude <span class="math display">\[
 \lim_{n \to \infty} \frac{(-1)^{n}}{n}=0 \,.
 \]</span></p>
 </blockquote>
 </div></details>
 </div>
 <div id="example-squeeze" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 36</strong></summary><div>
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 37</strong></summary><div>
 <p>Prove that <span class="math display">\[
 \lim_{n \to \infty} \frac{\cos (3 n) + 9 n^{2}}{11 n^{2}+15 \sin (17 n)} = \frac{9}{11} \,.
 \]</span></p>
@@ -1246,7 +1252,7 @@ b_n - L  \leq a_{n} - L \leq c_{n} - L \,.
 \frac{-1+9 n^{2}}{11 n^{2}+15}=\frac{-\dfrac{1}{n^{2}} + 9}{11 + \dfrac{15}{n^{2}}} \to \frac{0+9}{11+0}=\frac{9}{11}
 \]</span> and <span class="math display">\[
 \frac{1+9 n^{2}}{11 n^{2} - 15}=\frac{ \dfrac{1}{n^{2}} + 9}{ 11 - \dfrac{15}{n^{2}}} \to \frac{0+9}{11+0}=\frac{9}{11} \,.
-\]</span> Applying the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> we conclude <span class="math display">\[
+\]</span> Applying the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">35</a> we conclude <span class="math display">\[
 \lim_{n \to \infty} \frac{\cos (3 n)+ 9 n^{2}}{11 n^{2}+15 \sin (17 n)}=\frac{9}{11} \,.
 \]</span></p>
 </blockquote>
@@ -1260,8 +1266,8 @@ b_n \to L_1 \,, \quad c_n \to L_2 \,, \quad L_1 \neq L_2 \,.
 \]</span> In general, we cannot conclude that <span class="math inline">\(a_n\)</span> converges.<p></p>
 </div></details>
 </div>
-<div id="Example-37" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 37</strong></summary><div>
+<div id="Example-38" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 38</strong></summary><div>
 <p>Consider the sequence <span class="math display">\[
 a_n = \left( 1 + \frac{1}{n} \right) (-1)^n  \,.
 \]</span> For all <span class="math inline">\(n \in \mathbb{N}\)</span> we can bound <span class="math display">\[
@@ -1272,30 +1278,30 @@ a_n = \left( 1 + \frac{1}{n} \right) (-1)^n  \,.
 1 + \frac{1}{n}  \longrightarrow  1 + 0 = 1 \,.
 \]</span> Since <span class="math display">\[
 - 1 \neq 1 \,,
-\]</span> we cannot apply the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> to conclude convergence of <span class="math inline">\((a_n)\)</span>. Indeed, <span class="math inline">\((a_n)\)</span> is a divergent sequence.</p>
+\]</span> we cannot apply the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">35</a> to conclude convergence of <span class="math inline">\((a_n)\)</span>. Indeed, <span class="math inline">\((a_n)\)</span> is a divergent sequence.</p>
 <blockquote class="blockquote">
 <p><em>Proof.</em> Suppose by contradiction that <span class="math inline">\(a_n \to a\)</span>. We have <span class="math display">\[
 a_n = (-1)^n + \frac{(-1)^n}{n} = b_n + c_n
 \]</span> where <span class="math display">\[
 b_n := (-1)^n \,, \quad c_n := \frac{(-1)^n}{n} \,.
-\]</span> We have seen in Example <a href="chap_6.html#example-squeeze">36</a> that <span class="math inline">\(c_n \to 0\)</span>. Therefore, by the Algebra of Limits, we have <span class="math display">\[
+\]</span> We have seen in Example <a href="chap_6.html#example-squeeze">37</a> that <span class="math inline">\(c_n \to 0\)</span>. Therefore, by the Algebra of Limits, we have <span class="math display">\[
 b_n = a_n - c_n \longrightarrow a - 0 = a \,.
-\]</span> However, Theorem <a href="chap_6.html#theorem-1-minus-n">14</a> says that the sequence <span class="math inline">\(b_n = (-1)^n\)</span> diverges. Contradiction. Hence <span class="math inline">\((a_n)\)</span> diverges.</p>
+\]</span> However, Theorem <a href="chap_6.html#theorem-1-minus-n">15</a> says that the sequence <span class="math inline">\(b_n = (-1)^n\)</span> diverges. Contradiction. Hence <span class="math inline">\((a_n)\)</span> diverges.</p>
 </blockquote>
 </div></details>
 </div>
 </section>
 <section id="geometric-sequences" class="level3" data-number="6.8.2">
 <h3 data-number="6.8.2" class="anchored" data-anchor-id="geometric-sequences"><span class="header-section-number">6.8.2</span> Geometric sequences</h3>
-<div id="Definition-38" class="Definition">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 38</strong></summary><div>A sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is called a <strong>geometric sequence</strong> if <span class="math display">\[
+<div id="Definition-39" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 39</strong></summary><div>A sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is called a <strong>geometric sequence</strong> if <span class="math display">\[
 a_{n}=x^{n} \,,
 \]</span> for some <span class="math inline">\(x \in \mathbb{R}\)</span>.<p></p>
 </div></details>
 </div>
 <p>The value of <span class="math inline">\(|x|\)</span> determines whether or not a geometric sequence converges, as shown in the following theorem.</p>
 <div id="theorem-geometric-sequence" class="Theorem" title="Geometric sequence test">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 39: </strong>Geometric sequence test</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 40: </strong>Geometric sequence test</summary><div>
 <p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> and let <span class="math inline">\(\left(a_{n}\right)\)</span> be the sequence defined by <span class="math display">\[
 a_{n}:=x^{n} \,.
 \]</span> We have:</p>
@@ -1309,7 +1315,7 @@ a_{n}:=x^{n} \,.
 </div>
 <div id="Warning*-18" class="Warning">
 <details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>
-<p>The Geometric sequence test in Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a> does not address the case <span class="math display">\[
+<p>The Geometric sequence test in Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a> does not address the case <span class="math display">\[
 |x|=1 \,.
 \]</span> This is because, in this case, the sequence <span class="math display">\[
 a_n = x^n
@@ -1322,13 +1328,13 @@ a_n = 1^n = 1
 \]</span> so that <span class="math inline">\(a_n \to 1\)</span> and <span class="math inline">\((a_n)\)</span> is convergent.</p></li>
 <li><p><span class="math inline">\(x=-1\)</span>: Then <span class="math display">\[
 a_n = x^n = (-1)^n
-\]</span> which is divergent by Theorem <a href="chap_6.html#theorem-1-minus-n">14</a>.</p></li>
+\]</span> which is divergent by Theorem <a href="chap_6.html#theorem-1-minus-n">15</a>.</p></li>
 </ul>
 </div></details>
 </div>
-<p>To prove Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a> we need the following inequality, known as Bernoulli’s inequality.</p>
+<p>To prove Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a> we need the following inequality, known as Bernoulli’s inequality.</p>
 <div id="lemma-bernoulli" class="Lemma" title="Bernoulli’s inequality">
-<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 40: </strong>Bernoulli’s inequality</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x&gt;-1\)</span>. Then <span id="eq-bernoulli-inequality"><span class="math display">\[
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 41: </strong>Bernoulli’s inequality</summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> with <span class="math inline">\(x&gt;-1\)</span>. Then <span id="eq-bernoulli-inequality"><span class="math display">\[
 (1+x)^{n} \geq 1+n x \,, \quad \forall \, n \in \mathbb{N}\,.
 \tag{6.9}\]</span></span><p></p>
 </div></details>
@@ -1349,9 +1355,9 @@ a_n = x^n = (-1)^n
 <p>By induction we conclude (<a href="#eq-bernoulli-inequality"><span>6.9</span></a>).</p>
 </div></details>
 </div>
-<p>We are ready to prove Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a>.</p>
-<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 39">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 39</summary><div><em>Part 1. The case <span class="math inline">\(|x|&lt;1\)</span></em>.<p></p>
+<p>We are ready to prove Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a>.</p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 40">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 40</summary><div><em>Part 1. The case <span class="math inline">\(|x|&lt;1\)</span></em>.<p></p>
 <p>If <span class="math inline">\(x=0\)</span>, then <span class="math display">\[
 a_n = x^n = 0
 \]</span> so that <span class="math inline">\(a_n \to 0\)</span>. Hence assume <span class="math inline">\(x \neq 0\)</span>. We need to prove that <span class="math display">\[
@@ -1392,12 +1398,12 @@ n&gt;\frac{\log M}{\log |x|} &amp; \iff n \log |x|&gt;\log M \\
 \left|a_{n}\right|=\left|x^{n}\right|=|x|^{n} &gt; M \,.
 \]</span></p></li>
 </ul>
-<p>Hence <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">21</a> we conclude that <span class="math inline">\((a_n)\)</span> is divergent.</p>
+<p>Hence <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">22</a> we conclude that <span class="math inline">\((a_n)\)</span> is divergent.</p>
 </div></details>
 </div>
-<div id="Example-41" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 41</strong></summary><div>
-<p>We can apply Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a> to prove convergence or divergence for the following sequences.</p>
+<div id="Example-42" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 42</strong></summary><div>
+<p>We can apply Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a> to prove convergence or divergence for the following sequences.</p>
 <ol type="1">
 <li><p>We have <span class="math display">\[
 \left(\frac{1}{2}\right)^{n} \longrightarrow 0
@@ -1433,7 +1439,7 @@ a_{n}=\frac{(-7)^{n}}{2^{2 n}}
 <section id="ratio-test" class="level3" data-number="6.8.3">
 <h3 data-number="6.8.3" class="anchored" data-anchor-id="ratio-test"><span class="header-section-number">6.8.3</span> Ratio test</h3>
 <div id="theorem-ratio-test" class="Theorem" title="Ratio test">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 42: </strong>Ratio test</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 43: </strong>Ratio test</summary><div>
 <p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
 a_{n} \neq 0 \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span></p>
@@ -1478,17 +1484,17 @@ b_{n+1} &lt;  r \,{b_{n}} \,, \quad \forall \, n \geq N \,.
 0 \leq b_{n} &lt; \, r b_{n-1} &lt; \ldots &lt; r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,.
 \]</span> In particular, we have proven that <span id="eq-ratio-test-proof-2"><span class="math display">\[
 0 \leq b_{n} &lt; r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \in \mathbb{N}\,.
-\tag{6.12}\]</span></span> Since <span class="math inline">\(|r|&lt;1\)</span>, by the Geometric sequence test Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a> we infer <span class="math display">\[
+\tag{6.12}\]</span></span> Since <span class="math inline">\(|r|&lt;1\)</span>, by the Geometric sequence test Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a> we infer <span class="math display">\[
 r^{n} \rightarrow 0 \,.
 \]</span> The Algebra of Limits the yields <span class="math display">\[
 r^{n} \, \frac{b_{N}}{r^{N}} \rightarrow 0 \,.
-\]</span> By the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> applied to (<a href="#eq-ratio-test-proof-2"><span>6.12</span></a>), it follows that <span class="math display">\[   
+\]</span> By the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">35</a> applied to (<a href="#eq-ratio-test-proof-2"><span>6.12</span></a>), it follows that <span class="math display">\[   
 b_{n} = |a_n| \to 0 \,.
 \]</span> Since <span class="math display">\[
 -\left|a_{n}\right| \leq a_{n} \leq\left|a_{n}\right| \,,
 \]</span> and <span class="math display">\[
 -|a_n| \to 0 \,, \quad |a_n| \to 0 \,,
-\]</span> we can again apply the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">34</a> to infer <span class="math display">\[
+\]</span> we can again apply the Squeeze Theorem <a href="chap_6.html#theorem-squeeze">35</a> to infer <span class="math display">\[
 a_{n} \rightarrow 0 \,.
 \]</span></p></li>
 <li><p><span class="math inline">\(L&gt;1\)</span>: Choose <span class="math inline">\(r&gt;0\)</span> such that <span class="math display">\[
@@ -1507,7 +1513,7 @@ b_{n} &gt; r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, 
 (r^n)
 \]</span> is unbounded. Therefore also the right hand side of (<a href="#eq-ratio-test-proof-5"><span>6.14</span></a>) is unbounded, proving that <span class="math inline">\((b_n)\)</span> is unbounded. Since <span class="math display">\[
 b_n = |a_n|\,,
-\]</span> we conclude that <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">21</a> we conclude that <span class="math inline">\((a_n)\)</span> does not converge.</p></li>
+\]</span> we conclude that <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">22</a> we conclude that <span class="math inline">\((a_n)\)</span> does not converge.</p></li>
 </ul>
 <p><em>Part 2.</em> Suppose that there exists <span class="math inline">\(N \in \mathbb{N}\)</span> and <span class="math inline">\(M&gt;1\)</span> such that <span class="math display">\[
 \left|\frac{a_{n+1}}{a_{n}}\right| \geq M \,, \quad \forall \, n \geq N \,.
@@ -1517,12 +1523,12 @@ b_{n+1} \geq L \, b_n \,, \quad \forall \, n \geq N \,.
 b_n \geq L^n \, \frac{b_N}{L^N} \,, \quad \forall \, n \geq N \,.
 \]</span> Since <span class="math inline">\(L&gt;1\)</span>, we have that the sequence <span class="math display">\[  
 L^n \, \frac{b_N}{L^N}
-\]</span> is unbounded, by the Geometric sequence test. Hence also <span class="math inline">\((b_n)\)</span> is unbounded, from which we conclude that <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">21</a> we conclude that <span class="math inline">\((a_n)\)</span> does not converge.</p>
+\]</span> is unbounded, by the Geometric sequence test. Hence also <span class="math inline">\((b_n)\)</span> is unbounded, from which we conclude that <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">22</a> we conclude that <span class="math inline">\((a_n)\)</span> does not converge.</p>
 </div></details>
 </div>
 <p>Let us apply the Ratio test to some concrete examples.</p>
-<div id="Example-43" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 43</strong></summary><div>
+<div id="Example-44" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 44</strong></summary><div>
 <p>Let <span class="math display">\[
 a_{n}=\frac{3^{n}}{n !} \,,
 \]</span> where we recall that <span class="math inline">\(n!\)</span> (pronounced <span class="math inline">\(n\)</span> factorial) is defined by <span class="math display">\[
@@ -1536,12 +1542,12 @@ n! := n \cdot (n-1) \cdot (n-2) \cdot  \ldots \cdot  3 \cdot 2 \cdot 1 \,.
 &amp; = \frac{3^{n+1}}{3^{n}} \, \frac{n !}{(n+1) !} \\
 &amp; = \frac{3 \cdot 3^n}{3^n} \, \frac{n!}{(n+1) n!} \\
 &amp; =\frac{3}{n+1} \longrightarrow L = 0 \,.
-\end{align*}\]</span> Hence, <span class="math inline">\(L=0&lt;1\)</span> so <span class="math inline">\(a_{n} \to 0\)</span> by the Ratio test in Theorem <a href="chap_6.html#theorem-ratio-test">42</a>.</p>
+\end{align*}\]</span> Hence, <span class="math inline">\(L=0&lt;1\)</span> so <span class="math inline">\(a_{n} \to 0\)</span> by the Ratio test in Theorem <a href="chap_6.html#theorem-ratio-test">43</a>.</p>
 </blockquote>
 </div></details>
 </div>
-<div id="Example-44" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 44</strong></summary><div>
+<div id="Example-45" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 45</strong></summary><div>
 <p>Consider the sequence <span class="math display">\[
 a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}} \,.
 \]</span> Prove that <span class="math inline">\((a_n)\)</span> is divergent.</p>
@@ -1563,8 +1569,8 @@ a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}} \,.
 </blockquote>
 </div></details>
 </div>
-<div id="Example-45" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 45</strong></summary><div>
+<div id="Example-46" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 46</strong></summary><div>
 <p>Let <span class="math display">\[
 a_{n}=\frac{n !}{100^{n}} \,.
 \]</span> Prove that <span class="math inline">\((a_n)\)</span> is divergent.</p>
@@ -1581,7 +1587,7 @@ a_{n}=\frac{n !}{100^{n}} \,.
 </div>
 <div id="Warning*-22" class="Warning">
 <details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>
-<p>The Ratio test in Theorem <a href="chap_6.html#theorem-ratio-test">42</a> does not address the case <span class="math display">\[
+<p>The Ratio test in Theorem <a href="chap_6.html#theorem-ratio-test">43</a> does not address the case <span class="math display">\[
 L=1 \,.
 \]</span> This is because, in this case, the sequence <span class="math inline">\((a_n)\)</span> might converge or diverge.</p>
 <p>For example:</p>
@@ -1601,9 +1607,9 @@ a_n = n \,.
 </ul>
 </div></details>
 </div>
-<p>If the sequence <span class="math inline">\((a_n)\)</span> is geometric, the Ratio test of Theorem <a href="chap_6.html#theorem-ratio-test">42</a> will give the same answer as the Geometric sequence test of Theorem <a href="chap_6.html#theorem-geometric-sequence">39</a>. This is the content of the following remark.</p>
-<div id="Remark-46" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 46</strong></summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> and define the geometric sequence <span class="math display">\[
+<p>If the sequence <span class="math inline">\((a_n)\)</span> is geometric, the Ratio test of Theorem <a href="chap_6.html#theorem-ratio-test">43</a> will give the same answer as the Geometric sequence test of Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a>. This is the content of the following remark.</p>
+<div id="Remark-47" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 47</strong></summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> and define the geometric sequence <span class="math display">\[
 a_{n}=x^{n} \,.
 \]</span> Then <span class="math display">\[
 \left|\frac{a_{n+1}}{a_{n}}\right|  = \frac{\left|x^{n+1}\right|}{\left|x^{n}\right|}
