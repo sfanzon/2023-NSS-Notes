@@ -66,7 +66,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
 .Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -74,39 +86,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
 .Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -114,15 +94,23 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -130,9 +118,21 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 </style>
 
@@ -256,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#boundedness" id="toc-boundedness" class="nav-link" data-scroll-target="#boundedness"><span class="header-section-number">7.2</span> Boundedness</a></li>
   <li><a href="#algebra-of-limits-in-mathbbc" id="toc-algebra-of-limits-in-mathbbc" class="nav-link" data-scroll-target="#algebra-of-limits-in-mathbbc"><span class="header-section-number">7.3</span> Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></a></li>
   <li><a href="#convergence-to-zero" id="toc-convergence-to-zero" class="nav-link" data-scroll-target="#convergence-to-zero"><span class="header-section-number">7.4</span> Convergence to zero</a></li>
-  <li><a href="#geometric-sequence-test-and-ratio-test-in-mathbbc" id="toc-geometric-sequence-test-and-ratio-test-in-mathbbc" class="nav-link" data-scroll-target="#geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.5</span> Geometric sequence test and Ratio test in <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  <li><a href="#geometric-sequence-test-and-ratio-test-in-mathbbc" id="toc-geometric-sequence-test-and-ratio-test-in-mathbbc" class="nav-link" data-scroll-target="#geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.5</span> Geometric sequence Test and Ratio Test in <span class="math inline">\(\mathbb{C}\)</span></a></li>
   <li><a href="#convergence-of-real-and-imaginary-part" id="toc-convergence-of-real-and-imaginary-part" class="nav-link" data-scroll-target="#convergence-of-real-and-imaginary-part"><span class="header-section-number">7.6</span> Convergence of real and imaginary part</a></li>
   </ul>
 </nav>
@@ -449,7 +449,7 @@ a_{n}=\left(\frac{1}{2}+\frac{1}{3} i\right)^{n} \,.
 &amp; = \left(\sqrt{\frac{13}{36}}\right)^{n} \,.
 \end{align*}\]</span> Since <span class="math display">\[
 \left|\sqrt{\frac{13}{36}} \right| &lt; 1 \,,
-\]</span> by the Geometric sequence test for real sequences, we conclude that <span class="math display">\[
+\]</span> by the Geometric Sequence Test for real sequences, we conclude that <span class="math display">\[
 \left|a_{n}\right| \rightarrow 0 \,.
 \]</span> Hence <span class="math inline">\(a_n \to 0\)</span> by Theorem <a href="chap_7.html#theorem-convergence-zero-C">10</a>.</p>
 </blockquote>
@@ -500,10 +500,10 @@ a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\s
 </div>
 </section>
 <section id="geometric-sequence-test-and-ratio-test-in-mathbbc" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.5</span> Geometric sequence test and Ratio test in <span class="math inline">\(\mathbb{C}\)</span></h2>
-<p>The Geometric sequence test and Ratio test can be generalized to complex sequences.</p>
-<div id="geometric-sequence-test-in-mathbbc" class="Theorem" title="Geometric sequence test in \mathbb{C}">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Geometric sequence test in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
+<h2 data-number="7.5" class="anchored" data-anchor-id="geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.5</span> Geometric sequence Test and Ratio Test in <span class="math inline">\(\mathbb{C}\)</span></h2>
+<p>The Geometric Sequence Test and Ratio Test can be generalized to complex sequences.</p>
+<div id="geometric-sequence-test-in-mathbbc" class="Theorem" title="Geometric sequence Test in \mathbb{C}">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Geometric sequence Test in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
 <p>Let <span class="math inline">\(x \in \mathbb{C}\)</span> and let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be the geometric sequence in <span class="math inline">\(\mathbb{C}\)</span> defined by <span class="math display">\[
 a_{n}:=x^{n} \,.
 \]</span> We have:</p>
@@ -529,7 +529,7 @@ a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}}=\left(\frac{-1+4 i}{7+3 i}\right)^{n}
 &amp; = \frac{\sqrt{17}}{\sqrt{58}} \\
 &amp; = \sqrt{\frac{17}{58}} \\
 &amp; &lt; 1 \,
-\end{align*}\]</span> By the geometric sequence test <span class="math inline">\(a_{n} \rightarrow 0\)</span>.</p></li>
+\end{align*}\]</span> By the Geometric Sequence Test <span class="math inline">\(a_{n} \rightarrow 0\)</span>.</p></li>
 <li><p>Let <span class="math display">\[
 b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}} \,.
 \]</span> We first rewrite <span class="math display">\[
@@ -539,12 +539,12 @@ b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}}=\left(\frac{-5+12 i}{3-4 i}\right)^{n} \
 &amp; = \frac{\sqrt{5^{2}+(-12)^{2}}}{\sqrt{3^{2}+(-4)^{2}}} \\
 &amp; = \frac{13}{5} \\
 &amp; &gt; 1 \,.
-\end{align*}\]</span> By the geometric sequence test, the sequence <span class="math inline">\((b_{n})\)</span> does not converge.</p></li>
+\end{align*}\]</span> By the Geometric Sequence Test, the sequence <span class="math inline">\((b_{n})\)</span> does not converge.</p></li>
 <li><p>Let <span class="math display">\[
 c_{n}=e^{\frac{i \pi}{2} n} \,.
 \]</span> We have <span class="math display">\[
 \left|c_{n}\right|=\left|e^{\frac{i \pi}{2} n}\right|=1 \,,
-\]</span> and hence the Geometric sequence test cannot be applied. However, we can see that <span class="math display">\[
+\]</span> and hence the Geometric Sequence Test cannot be applied. However, we can see that <span class="math display">\[
 c_{n}=e^{\frac{i \pi}{2} n} =
 \begin{cases}
 -1 &amp; \, \mbox{ if } \, n \, \mbox{ even} \\
@@ -570,9 +570,9 @@ i &amp; \, \mbox{ if } \, n \, \mbox{ odd} \\
 </blockquote>
 </div></details>
 </div>
-<p>We now provide the statement of the Ratio test in <span class="math inline">\(\mathbb{C}\)</span>.</p>
-<div id="theorem-ratop-test-C" class="Theorem" title="Ratio test in ">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Ratio test in </summary><div>
+<p>We now provide the statement of the Ratio Test in <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<div id="theorem-ratop-test-C" class="Theorem" title="Ratio Test in ">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Ratio Test in </summary><div>
 <p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span> such that <span class="math display">\[
 a_{n} \neq 0 \,, \quad \forall \, n \in \mathbb{N} \,.
 \]</span></p>
@@ -592,7 +592,7 @@ L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
 </ol>
 </div></details>
 </div>
-<p>The proof of Theorem <a href="chap_7.html#theorem-ratop-test-C">15</a> follows word by word the proof of the Ratio test Theorem in <span class="math inline">\(\mathbb{R}\)</span>, and only two minor modifications are needed:</p>
+<p>The proof of Theorem <a href="chap_7.html#theorem-ratop-test-C">15</a> follows word by word the proof of the Ratio Test Theorem in <span class="math inline">\(\mathbb{R}\)</span>, and only two minor modifications are needed:</p>
 <ul>
 <li>Replace the absolute value with the complex modulus,</li>
 <li>Instead of the Squeeze Theorem, use Theorem <a href="chap_7.html#theorem-convergence-zero-C">10</a>.</li>
@@ -610,7 +610,7 @@ a_{n}=\frac{(4-3 i)^{n}}{(2 n) !} \,.
 &amp; =\frac{\sqrt{4^{2}+(-3)^{2}}}{(2 n+2)(2 n+1)} \\
 &amp; = \frac{5}{(2 n+2)(2 n+1)} \\
 &amp; = \frac{ \dfrac{5}{n^{2}}}{ \left(2+ \dfrac{2}{n} \right) \left(2+ \dfrac{1}{n} \right) } \longrightarrow L = 0 \,.
-\end{align*}\]</span> Since <span class="math inline">\(L=0 &lt; 1\)</span>, by the Ratio test in <span class="math inline">\(\mathbb{C}\)</span> we infer <span class="math inline">\(a_{n} \to 0\)</span>.</p>
+\end{align*}\]</span> Since <span class="math inline">\(L=0 &lt; 1\)</span>, by the Ratio Test in <span class="math inline">\(\mathbb{C}\)</span> we infer <span class="math inline">\(a_{n} \to 0\)</span>.</p>
 </blockquote>
 </div></details>
 </div>

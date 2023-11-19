@@ -66,31 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -98,9 +78,13 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Important {
   --color1: #f4cce0;
@@ -110,13 +94,13 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Question {
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
 }
 .Axiom {
   --color1: #f4cce0;
@@ -126,13 +110,29 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -259,12 +259,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#bounded-sequences" id="toc-bounded-sequences" class="nav-link" data-scroll-target="#bounded-sequences"><span class="header-section-number">6.5</span> Bounded sequences</a></li>
   <li><a href="#algebra-of-limits" id="toc-algebra-of-limits" class="nav-link" data-scroll-target="#algebra-of-limits"><span class="header-section-number">6.6</span> Algebra of limits</a></li>
   <li><a href="#fractional-powers" id="toc-fractional-powers" class="nav-link" data-scroll-target="#fractional-powers"><span class="header-section-number">6.7</span> Fractional powers</a></li>
-  <li><a href="#limit-tests" id="toc-limit-tests" class="nav-link" data-scroll-target="#limit-tests"><span class="header-section-number">6.8</span> Limit tests</a>
+  <li><a href="#limit-tests" id="toc-limit-tests" class="nav-link" data-scroll-target="#limit-tests"><span class="header-section-number">6.8</span> Limit Tests</a>
   <ul class="collapse">
   <li><a href="#squeeze-theorem" id="toc-squeeze-theorem" class="nav-link" data-scroll-target="#squeeze-theorem"><span class="header-section-number">6.8.1</span> Squeeze Theorem</a></li>
   <li><a href="#geometric-sequences" id="toc-geometric-sequences" class="nav-link" data-scroll-target="#geometric-sequences"><span class="header-section-number">6.8.2</span> Geometric sequences</a></li>
-  <li><a href="#ratio-test" id="toc-ratio-test" class="nav-link" data-scroll-target="#ratio-test"><span class="header-section-number">6.8.3</span> Ratio test</a></li>
+  <li><a href="#ratio-test" id="toc-ratio-test" class="nav-link" data-scroll-target="#ratio-test"><span class="header-section-number">6.8.3</span> Ratio Test</a></li>
   </ul></li>
+  <li><a href="#monotone-sequences" id="toc-monotone-sequences" class="nav-link" data-scroll-target="#monotone-sequences"><span class="header-section-number">6.9</span> Monotone sequences</a></li>
   </ul>
 </nav>
     </div>
@@ -1179,8 +1180,8 @@ b_n = 5 n + 3 +  \dfrac{1}{n}
 </div>
 </section>
 <section id="limit-tests" class="level2" data-number="6.8">
-<h2 data-number="6.8" class="anchored" data-anchor-id="limit-tests"><span class="header-section-number">6.8</span> Limit tests</h2>
-<p>In this section we discuss a number of <em>tests</em> to determine whether a sequence converges or not. These are known as <strong>limit tests</strong>.</p>
+<h2 data-number="6.8" class="anchored" data-anchor-id="limit-tests"><span class="header-section-number">6.8</span> Limit Tests</h2>
+<p>In this section we discuss a number of <em>Tests</em> to determine whether a sequence converges or not. These are known as <strong>Limit Tests</strong>.</p>
 <section id="squeeze-theorem" class="level3" data-number="6.8.1">
 <h3 data-number="6.8.1" class="anchored" data-anchor-id="squeeze-theorem"><span class="header-section-number">6.8.1</span> Squeeze Theorem</h3>
 <p>When a sequence <span class="math inline">\((a_n)\)</span> oscillates, it is difficult to compute the limit. Examples of terms which produce oscillations are <span class="math display">\[
@@ -1300,8 +1301,8 @@ a_{n}=x^{n} \,,
 </div></details>
 </div>
 <p>The value of <span class="math inline">\(|x|\)</span> determines whether or not a geometric sequence converges, as shown in the following theorem.</p>
-<div id="theorem-geometric-sequence" class="Theorem" title="Geometric sequence test">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 40: </strong>Geometric sequence test</summary><div>
+<div id="theorem-geometric-sequence" class="Theorem" title="Geometric Sequence Test">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 40: </strong>Geometric Sequence Test</summary><div>
 <p>Let <span class="math inline">\(x \in \mathbb{R}\)</span> and let <span class="math inline">\(\left(a_{n}\right)\)</span> be the sequence defined by <span class="math display">\[
 a_{n}:=x^{n} \,.
 \]</span> We have:</p>
@@ -1315,7 +1316,7 @@ a_{n}:=x^{n} \,.
 </div>
 <div id="Warning*-18" class="Warning">
 <details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>
-<p>The Geometric sequence test in Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a> does not address the case <span class="math display">\[
+<p>The Geometric Sequence Test in Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a> does not address the case <span class="math display">\[
 |x|=1 \,.
 \]</span> This is because, in this case, the sequence <span class="math display">\[
 a_n = x^n
@@ -1437,9 +1438,9 @@ a_{n}=\frac{(-7)^{n}}{2^{2 n}}
 </div>
 </section>
 <section id="ratio-test" class="level3" data-number="6.8.3">
-<h3 data-number="6.8.3" class="anchored" data-anchor-id="ratio-test"><span class="header-section-number">6.8.3</span> Ratio test</h3>
-<div id="theorem-ratio-test" class="Theorem" title="Ratio test">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 43: </strong>Ratio test</summary><div>
+<h3 data-number="6.8.3" class="anchored" data-anchor-id="ratio-test"><span class="header-section-number">6.8.3</span> Ratio Test</h3>
+<div id="theorem-ratio-test" class="Theorem" title="Ratio Test">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 43: </strong>Ratio Test</summary><div>
 <p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
 a_{n} \neq 0 \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span></p>
@@ -1484,7 +1485,7 @@ b_{n+1} &lt;  r \,{b_{n}} \,, \quad \forall \, n \geq N \,.
 0 \leq b_{n} &lt; \, r b_{n-1} &lt; \ldots &lt; r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,.
 \]</span> In particular, we have proven that <span id="eq-ratio-test-proof-2"><span class="math display">\[
 0 \leq b_{n} &lt; r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \in \mathbb{N}\,.
-\tag{6.12}\]</span></span> Since <span class="math inline">\(|r|&lt;1\)</span>, by the Geometric sequence test Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a> we infer <span class="math display">\[
+\tag{6.12}\]</span></span> Since <span class="math inline">\(|r|&lt;1\)</span>, by the Geometric Sequence Test Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a> we infer <span class="math display">\[
 r^{n} \rightarrow 0 \,.
 \]</span> The Algebra of Limits the yields <span class="math display">\[
 r^{n} \, \frac{b_{N}}{r^{N}} \rightarrow 0 \,.
@@ -1509,7 +1510,7 @@ a_{n} \rightarrow 0 \,.
 b_{n+1} &gt; r \, b_{n} \,, \quad  \forall \, n \geq N \,.
 \tag{6.13}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>. Applying (<a href="#eq-ratio-test-proof-4"><span>6.13</span></a>) recursively we get <span id="eq-ratio-test-proof-5"><span class="math display">\[
 b_{n} &gt; r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \geq N \,.
-\tag{6.14}\]</span></span> Since <span class="math inline">\(|r|&gt;1\)</span>, by the Geometric sequence test we have that the sequence <span class="math display">\[
+\tag{6.14}\]</span></span> Since <span class="math inline">\(|r|&gt;1\)</span>, by the Geometric Sequence Test we have that the sequence <span class="math display">\[
 (r^n)
 \]</span> is unbounded. Therefore also the right hand side of (<a href="#eq-ratio-test-proof-5"><span>6.14</span></a>) is unbounded, proving that <span class="math inline">\((b_n)\)</span> is unbounded. Since <span class="math display">\[
 b_n = |a_n|\,,
@@ -1523,10 +1524,10 @@ b_{n+1} \geq L \, b_n \,, \quad \forall \, n \geq N \,.
 b_n \geq L^n \, \frac{b_N}{L^N} \,, \quad \forall \, n \geq N \,.
 \]</span> Since <span class="math inline">\(L&gt;1\)</span>, we have that the sequence <span class="math display">\[  
 L^n \, \frac{b_N}{L^N}
-\]</span> is unbounded, by the Geometric sequence test. Hence also <span class="math inline">\((b_n)\)</span> is unbounded, from which we conclude that <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">22</a> we conclude that <span class="math inline">\((a_n)\)</span> does not converge.</p>
+\]</span> is unbounded, by the Geometric Sequence Test. Hence also <span class="math inline">\((b_n)\)</span> is unbounded, from which we conclude that <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">22</a> we conclude that <span class="math inline">\((a_n)\)</span> does not converge.</p>
 </div></details>
 </div>
-<p>Let us apply the Ratio test to some concrete examples.</p>
+<p>Let us apply the Ratio Test to some concrete examples.</p>
 <div id="Example-44" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 44</strong></summary><div>
 <p>Let <span class="math display">\[
@@ -1542,7 +1543,7 @@ n! := n \cdot (n-1) \cdot (n-2) \cdot  \ldots \cdot  3 \cdot 2 \cdot 1 \,.
 &amp; = \frac{3^{n+1}}{3^{n}} \, \frac{n !}{(n+1) !} \\
 &amp; = \frac{3 \cdot 3^n}{3^n} \, \frac{n!}{(n+1) n!} \\
 &amp; =\frac{3}{n+1} \longrightarrow L = 0 \,.
-\end{align*}\]</span> Hence, <span class="math inline">\(L=0&lt;1\)</span> so <span class="math inline">\(a_{n} \to 0\)</span> by the Ratio test in Theorem <a href="chap_6.html#theorem-ratio-test">43</a>.</p>
+\end{align*}\]</span> Hence, <span class="math inline">\(L=0&lt;1\)</span> so <span class="math inline">\(a_{n} \to 0\)</span> by the Ratio Test in Theorem <a href="chap_6.html#theorem-ratio-test">43</a>.</p>
 </blockquote>
 </div></details>
 </div>
@@ -1565,7 +1566,7 @@ a_{n}=\frac{n ! \cdot 3^{n}}{\sqrt{(2 n) !}} \,.
 \left|\frac{a_{n+1}}{a_{n}}\right| &amp; = \frac{3(n+1)}{\sqrt{(2 n+1)(2 n+2)}}\\
 &amp; = \frac{3n \left(1+ \dfrac{1}{n} \right)}{\sqrt{n^2 \left( 2 + \dfrac{1}{n}\right) \left(2 + \dfrac{2}{n} \right)}} \\
 &amp; = \frac{3 \left(1+ \dfrac{1}{n} \right)}{\sqrt{ \left( 2 + \dfrac{1}{n}\right) \left(2 + \dfrac{2}{n} \right)}}  \longrightarrow \frac{3}{\sqrt{4}} = \frac{3}{2} &gt; 1 \,.
-\end{align*}\]</span> By the Ratio test we conclude that <span class="math inline">\((a_n)\)</span> is divergent.</p>
+\end{align*}\]</span> By the Ratio Test we conclude that <span class="math inline">\((a_n)\)</span> is divergent.</p>
 </blockquote>
 </div></details>
 </div>
@@ -1581,13 +1582,13 @@ a_{n}=\frac{n !}{100^{n}} \,.
 =\frac{n+1}{100} \,.
 \]</span> Choose <span class="math inline">\(N=101\)</span>. Then for all <span class="math inline">\(n \geq N\)</span>, <span class="math display">\[
 \left|\frac{a_{n+1}}{a_{n}}\right| \geq \frac{101}{100}&gt;1 \,.
-\]</span> Hence <span class="math inline">\(a_{n}\)</span> is divergent by the Ratio test.</p>
+\]</span> Hence <span class="math inline">\(a_{n}\)</span> is divergent by the Ratio Test.</p>
 </blockquote>
 </div></details>
 </div>
 <div id="Warning*-22" class="Warning">
 <details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>
-<p>The Ratio test in Theorem <a href="chap_6.html#theorem-ratio-test">43</a> does not address the case <span class="math display">\[
+<p>The Ratio Test in Theorem <a href="chap_6.html#theorem-ratio-test">43</a> does not address the case <span class="math display">\[
 L=1 \,.
 \]</span> This is because, in this case, the sequence <span class="math inline">\((a_n)\)</span> might converge or diverge.</p>
 <p>For example:</p>
@@ -1596,18 +1597,18 @@ L=1 \,.
 a_n = \frac1n \,.
 \]</span> We have <span class="math display">\[
 \left|\frac{a_{n+1}}{a_{n}}\right| = \frac{n}{n+1} \rightarrow L = 1 \,.
-\]</span> Hence we cannot apply the Ratio test. However we know that <span class="math display">\[
+\]</span> Hence we cannot apply the Ratio Test. However we know that <span class="math display">\[
 \lim_{n \to \infty} \, \frac1n = 0 \,.
 \]</span></p></li>
 <li><p>Consider the sequence <span class="math display">\[
 a_n = n \,.
 \]</span> We have <span class="math display">\[
 \frac{|a_{n+1}|}{|a_n|} = \frac{n+1}{n} \rightarrow L = 1 \,.
-\]</span> Hence we cannot apply the Ratio test. However we know that <span class="math inline">\((a_n)\)</span> is unbounded, and thus divergent.</p></li>
+\]</span> Hence we cannot apply the Ratio Test. However we know that <span class="math inline">\((a_n)\)</span> is unbounded, and thus divergent.</p></li>
 </ul>
 </div></details>
 </div>
-<p>If the sequence <span class="math inline">\((a_n)\)</span> is geometric, the Ratio test of Theorem <a href="chap_6.html#theorem-ratio-test">43</a> will give the same answer as the Geometric sequence test of Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a>. This is the content of the following remark.</p>
+<p>If the sequence <span class="math inline">\((a_n)\)</span> is geometric, the Ratio Test of Theorem <a href="chap_6.html#theorem-ratio-test">43</a> will give the same answer as the Geometric Sequence Test of Theorem <a href="chap_6.html#theorem-geometric-sequence">40</a>. This is the content of the following remark.</p>
 <div id="Remark-47" class="Remark">
 <p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 47</strong></summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span> and define the geometric sequence <span class="math display">\[
 a_{n}=x^{n} \,.
@@ -1617,16 +1618,101 @@ a_{n}=x^{n} \,.
 =|x| \rightarrow |x| \,.
 \]</span> Hence:<p></p>
 <ul>
-<li>If <span class="math inline">\(|x|&lt;1\)</span>, the sequence <span class="math inline">\((a_n)\)</span> converges by the Ratio test</li>
-<li>If <span class="math inline">\(|x|&gt;1\)</span>, the sequence <span class="math inline">\((a_n)\)</span> diverges by the Ratio test.</li>
+<li>If <span class="math inline">\(|x|&lt;1\)</span>, the sequence <span class="math inline">\((a_n)\)</span> converges by the Ratio Test</li>
+<li>If <span class="math inline">\(|x|&gt;1\)</span>, the sequence <span class="math inline">\((a_n)\)</span> diverges by the Ratio Test.</li>
 <li>If <span class="math inline">\(|x|=1\)</span>, the sequence <span class="math inline">\((a_n)\)</span> might be convergent or divergent.</li>
 </ul>
-<p>These results are in agreement with the Geometric sequence test.</p>
+<p>These results are in agreement with the Geometric Sequence Test.</p>
+</div></details>
+</div>
+</section>
+</section>
+<section id="monotone-sequences" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="monotone-sequences"><span class="header-section-number">6.9</span> Monotone sequences</h2>
+<p>We showed in Theorem <a href="chap_6.html#theorem-convergent-bounded">19</a> that convergent sequences are bounded. We noted that the converse statement is not true. For example the sequence <span class="math display">\[
+a_n = (-1)^n
+\]</span> is bounded but not convergent, as shown in Theorem <a href="chap_6.html#theorem-1-minus-n">15</a>. On the other hand, if a bounded sequence is <strong>monotone</strong>, then it is convergent.</p>
+<div id="monotone-sequence" class="Definition" title="Monotone sequence">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 48: </strong>Monotone sequence</summary><div>
+<p>Let <span class="math inline">\((a_n)\)</span> be a real sequence. We say that:</p>
+<ol type="1">
+<li><p><span class="math inline">\((a_n)\)</span> is <strong>increasing</strong> if <span class="math display">\[
+a_n \leq a_{n+1} \,, \quad \forall \, n \geq N \,.
+\]</span></p></li>
+<li><p><span class="math inline">\((a_n)\)</span> is <strong>decreasing</strong> if <span class="math display">\[
+a_n \geq a_{n+1} \,, \quad \forall \, n \geq N \,.
+\]</span></p></li>
+<li><p><span class="math inline">\((a_n)\)</span> is <strong>monotone</strong> if it is either increasing or decreasing.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="Example-49" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 49</strong></summary><div>
+<ul>
+<li><p>The sequence <span class="math display">\[
+a_n = \frac1n
+\]</span> is decreasing.</p>
+<blockquote class="blockquote">
+<p>We have <span class="math display">\[
+a_n = \frac1n &gt; \frac{1}{n+1} = a_{n+1} \,.
+\]</span></p>
+</blockquote></li>
+<li><p>The sequence <span class="math display">\[
+b_n = \frac{n-1}{n}
+\]</span> is increasing.</p>
+<blockquote class="blockquote">
+<p>We have <span class="math display">\[
+b_{n+1} = \frac{n}{n+1} &gt; \frac{n-1}{n} = b_n \,,
+\]</span> where the inequality holds because <span class="math display">\[\begin{align*}
+\frac{n}{n+1} &gt; \frac{n-1}{n} \quad &amp; \iff \quad
+n^2 &gt; (n-1)(n+1) \quad  \\
+&amp; \iff \quad n^2 &gt; n^2 - 1 \\
+&amp; \iff \quad 0 &gt;  - 1
+\end{align*}\]</span></p>
+</blockquote></li>
+</ul>
+</div></details>
+</div>
+<p>The main result about monotone sequences is the Monotone Convergence Theorem.</p>
+<div id="theorem-monotone-convergence" class="Theorem" title="Monotone Convergence Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 50: </strong>Monotone Convergence Theorem</summary><div>If a sequence is bounded and monotone, then it converges.<p></p>
+</div></details>
+</div>
+<div id="Proof*-23" class="Proof">
+<details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>
+<p>Assume <span class="math inline">\((a_n)\)</span> is bounded and monotone. Since <span class="math inline">\((a_n)\)</span> is bounded, the set <span class="math display">\[
+A:=\{ a_n \, \colon \,n \in \mathbb{N}\}  \subseteq \mathbb{R}
+\]</span> is bounded below and above. By the Axiom of Completeness of <span class="math inline">\(\mathbb{R}\)</span> there exist <span class="math inline">\(i,s \in \mathbb{R}\)</span> such that <span class="math display">\[
+i = \inf A \,, \quad s = \sup A \,.
+\]</span></p>
+<p>We have two cases:</p>
+<ol type="1">
+<li><p><span class="math inline">\((a_n)\)</span> is increasing: We are going to prove that <span class="math display">\[
+\lim_{n \to \infty} a_n = s \,.
+\]</span> Equivalently, we need to prove that <span class="math display">\[
+\forall \, \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N}\, \text{ s.t. } \, \forall \, n \geq N \,, \,\,
+|a_n - s| &lt; \varepsilon\,.
+\]</span> Let <span class="math inline">\(\varepsilon&gt; 0\)</span>. Since <span class="math inline">\(s\)</span> is the smallest upper bound for <span class="math inline">\(A\)</span>, this means <span class="math display">\[
+s - \varepsilon
+\]</span> is not an upper bound. Therefore there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span id="eq-monotone-convergence-proof-1"><span class="math display">\[
+s - \varepsilon&lt; a_N \,.
+\tag{6.15}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>. Since <span class="math inline">\(a_n\)</span> is increasing, we have <span id="eq-monotone-convergence-proof-2"><span class="math display">\[
+a_N \leq a_n \,, \quad \forall \, n \geq N \,.
+\tag{6.16}\]</span></span> Moreover <span class="math inline">\(s\)</span> is the supremum of <span class="math inline">\(A\)</span>, so that <span id="eq-monotone-convergence-proof-3"><span class="math display">\[
+a_n \leq s &lt; s + \varepsilon\,, \quad \forall \, n \in \mathbb{N}\,.
+\tag{6.17}\]</span></span> Putting together estimates (<a href="#eq-monotone-convergence-proof-1"><span>6.15</span></a>)-(<a href="#eq-monotone-convergence-proof-2"><span>6.16</span></a>)-(<a href="#eq-monotone-convergence-proof-3"><span>6.17</span></a>) we get <span class="math display">\[
+s - \varepsilon&lt; a_N \leq a_n \leq s &lt; s + \varepsilon\,, \quad \forall \, n \geq N \,.
+\]</span> Therefore, for all <span class="math inline">\(n \geq N\)</span>, we have <span class="math display">\[
+s - \varepsilon&lt; a_n &lt; s + \varepsilon\quad \implies \quad |a_n - s | &lt; \varepsilon\,.
+\]</span></p></li>
+<li><p><span class="math inline">\((a_n)\)</span> is decreasing: With a similar proof, one can show that <span class="math display">\[
+\lim_{n \to \infty} a_n = i \,.
+\]</span> This is left as an exercise.</p></li>
+</ol>
 </div></details>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

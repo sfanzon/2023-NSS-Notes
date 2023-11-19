@@ -1506,10 +1506,10 @@ is instead unbounded. Therefore $(a_n)$ is not convergent, by the Algebra of Lim
 
 
 
-## Limit tests
+## Limit Tests
 
 
-In this section we discuss a number of *tests* to determine whether a sequence converges or not. These are known as **limit tests**.
+In this section we discuss a number of *Tests* to determine whether a sequence converges or not. These are known as **Limit Tests**.
 
 
 ### Squeeze Theorem
@@ -1727,7 +1727,7 @@ The value of $|x|$ determines whether or not a geometric sequence converges, as 
 
 
 ::: Theorem 
-### Geometric sequence test   {#theorem-geometric-sequence}
+### Geometric Sequence Test   {#theorem-geometric-sequence}
 
 Let $x \in \R$ and let $\left(a_{n}\right)$ be the sequence defined by
 $$
@@ -1748,7 +1748,7 @@ $$
 
 ::: Warning
 
-The Geometric sequence test in Theorem \ref{theorem-geometric-sequence} does not address the case
+The Geometric Sequence Test in Theorem \ref{theorem-geometric-sequence} does not address the case
 $$
 |x|=1 \,.
 $$
@@ -1964,12 +1964,12 @@ $$
 
 
 
-### Ratio test
+### Ratio Test
 
 
 
 ::: Theorem 
-### Ratio test {#theorem-ratio-test}
+### Ratio Test {#theorem-ratio-test}
 
 Let $\left(a_{n}\right)$ be a sequence in $\R$ such that
 $$
@@ -2046,7 +2046,7 @@ In particular, we have proven that
 $$
 0 \leq b_{n} < r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \in \N \,.
 $${#eq-ratio-test-proof-2}
-Since $|r|<1$, by the Geometric sequence test Theorem \ref{theorem-geometric-sequence} we infer
+Since $|r|<1$, by the Geometric Sequence Test Theorem \ref{theorem-geometric-sequence} we infer
 $$
 r^{n} \rightarrow 0 \,.
 $$
@@ -2096,7 +2096,7 @@ Let $n \geq N$. Applying (@eq-ratio-test-proof-4) recursively we get
 $$
 b_{n} > r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, n \geq N \,.
 $${#eq-ratio-test-proof-5}
-Since $|r|>1$, by the Geometric sequence test we have that the sequence
+Since $|r|>1$, by the Geometric Sequence Test we have that the sequence
 $$
 (r^n)
 $$
@@ -2123,13 +2123,13 @@ Since $L>1$, we have that the sequence
 $$  
 L^n \, \frac{b_N}{L^N}
 $$
-is unbounded, by the Geometric sequence test. Hence also $(b_n)$ is unbounded, from which we conclude that $(a_n)$ is unbounded. By Corollary \ref{corollary-convergent-bounded} we conclude that $(a_n)$ does not converge.
+is unbounded, by the Geometric Sequence Test. Hence also $(b_n)$ is unbounded, from which we conclude that $(a_n)$ is unbounded. By Corollary \ref{corollary-convergent-bounded} we conclude that $(a_n)$ does not converge.
 
 
 :::
 
 
-Let us apply the Ratio test to some concrete examples.
+Let us apply the Ratio Test to some concrete examples.
 
 
 
@@ -2156,7 +2156,7 @@ $$
 & = \frac{3 \cdot 3^n}{3^n} \, \frac{n!}{(n+1) n!} \\
 & =\frac{3}{n+1} \longrightarrow L = 0 \,.
 \end{align*}
-Hence, $L=0<1$ so $a_{n} \to 0$ by the Ratio test in Theorem \ref{theorem-ratio-test}.
+Hence, $L=0<1$ so $a_{n} \to 0$ by the Ratio Test in Theorem \ref{theorem-ratio-test}.
 
 :::
 
@@ -2190,7 +2190,7 @@ Therefore, using the Algebra of Limits,
 & = \frac{3n \left(1+ \dfrac{1}{n} \right)}{\sqrt{n^2 \left( 2 + \dfrac{1}{n}\right) \left(2 + \dfrac{2}{n} \right)}} \\
 & = \frac{3 \left(1+ \dfrac{1}{n} \right)}{\sqrt{ \left( 2 + \dfrac{1}{n}\right) \left(2 + \dfrac{2}{n} \right)}}  \longrightarrow \frac{3}{\sqrt{4}} = \frac{3}{2} > 1 \,.
 \end{align*}
-By the Ratio test we conclude that $(a_n)$ is divergent.
+By the Ratio Test we conclude that $(a_n)$ is divergent.
 
 :::
 
@@ -2214,7 +2214,7 @@ Choose $N=101$. Then for all $n \geq N$,
 $$
 \left|\frac{a_{n+1}}{a_{n}}\right| \geq \frac{101}{100}>1 \,.
 $$
-Hence $a_{n}$ is divergent by the Ratio test.
+Hence $a_{n}$ is divergent by the Ratio Test.
 
 :::
 
@@ -2223,7 +2223,7 @@ Hence $a_{n}$ is divergent by the Ratio test.
 
 ::: Warning
 
-The Ratio test in Theorem \ref{theorem-ratio-test} does not address the case
+The Ratio Test in Theorem \ref{theorem-ratio-test} does not address the case
 $$
 L=1 \,.
 $$
@@ -2240,7 +2240,7 @@ We have
 $$
 \left|\frac{a_{n+1}}{a_{n}}\right| = \frac{n}{n+1} \rightarrow L = 1 \,. 
 $$
-Hence we cannot apply the Ratio test. However we know that 
+Hence we cannot apply the Ratio Test. However we know that 
 $$
 \lim_{n \to \infty} \, \frac1n = 0 \,.
 $$
@@ -2254,14 +2254,14 @@ We have
 $$
 \frac{|a_{n+1}|}{|a_n|} = \frac{n+1}{n} \rightarrow L = 1 \,. 
 $$
-Hence we cannot apply the Ratio test. However we know that $(a_n)$ is unbounded, and thus divergent.
+Hence we cannot apply the Ratio Test. However we know that $(a_n)$ is unbounded, and thus divergent.
 
 :::
 
 
 
-If the sequence $(a_n)$ is geometric, the Ratio test of Theorem \ref{theorem-ratio-test} will give the same
-answer as the Geometric sequence test of Theorem \ref{theorem-geometric-sequence}. This is the content of the following remark.
+If the sequence $(a_n)$ is geometric, the Ratio Test of Theorem \ref{theorem-ratio-test} will give the same
+answer as the Geometric Sequence Test of Theorem \ref{theorem-geometric-sequence}. This is the content of the following remark.
 
 
 ::: Remark
@@ -2278,11 +2278,11 @@ $$
 $$
 Hence: 
 
-- If $|x|<1$, the sequence $(a_n)$ converges by the Ratio test
-- If $|x|>1$, the sequence $(a_n)$ diverges by the Ratio test. 
+- If $|x|<1$, the sequence $(a_n)$ converges by the Ratio Test
+- If $|x|>1$, the sequence $(a_n)$ diverges by the Ratio Test. 
 - If $|x|=1$, the sequence $(a_n)$ might be convergent or divergent.
 
-These results are in agreement with the Geometric sequence test. 
+These results are in agreement with the Geometric Sequence Test. 
 
 :::
 
@@ -2291,13 +2291,211 @@ These results are in agreement with the Geometric sequence test.
 
 
 
+## Monotone sequences
 
 
+We showed in Theorem \ref{theorem-convergent-bounded} that convergent sequences are bounded. We noted that the converse statement is not true. 
+For example the sequence
+$$
+a_n = (-1)^n
+$$
+is bounded but not convergent, as shown in Theorem \ref{theorem-1-minus-n}.
+On the other hand, if a bounded sequence is **monotone**, then it is convergent.
+
+
+::: Definition
+### Monotone sequence
+
+Let $(a_n)$ be a real sequence. We say that:
+
+1. $(a_n)$ is **increasing** if 
+$$
+a_n \leq a_{n+1} \,, \quad \forall \, n \geq N \,.
+$$
+
+2. $(a_n)$ is **decreasing** if 
+$$
+a_n \geq a_{n+1} \,, \quad \forall \, n \geq N \,.
+$$
+
+3. $(a_n)$ is **monotone** if it is either increasing or decreasing.
+
+:::
+
+
+
+::: Example
+
+- The sequence 
+$$
+a_n = \frac1n
+$$
+is decreasing.
+
+  > We have
+  $$
+  a_n = \frac1n > \frac{1}{n+1} = a_{n+1} \,.
+  $$
+
+- The sequence 
+$$
+b_n = \frac{n-1}{n} 
+$$
+is increasing. 
+
+  > We have
+  $$
+  b_{n+1} = \frac{n}{n+1} > \frac{n-1}{n} = b_n \,,
+  $$
+  where the inequality holds because
+  \begin{align*}
+  \frac{n}{n+1} > \frac{n-1}{n} \quad & \iff \quad 
+  n^2 > (n-1)(n+1) \quad  \\
+  & \iff \quad n^2 > n^2 - 1 \\
+  & \iff \quad 0 >  - 1
+  \end{align*}
+
+:::
+
+
+The main result about monotone sequences is the Monotone Convergence
+Theorem.
+
+
+::: Theorem
+### Monotone Convergence Theorem  {#theorem-monotone-convergence}
+
+If a sequence is bounded and monotone, then it converges.
+
+:::
+
+
+::: Proof
+
+Assume $(a_n)$ is bounded and monotone. Since $(a_n)$ is bounded, the set 
+$$
+A:=\{ a_n \divider n \in \N \}  \subseteq \R 
+$$
+is bounded below and above. By the Axiom of Completeness of $\R$ there exist $i,s \in \R$ such that
+$$
+i = \inf A \,, \quad s = \sup A \,.
+$$
+
+We have two cases:
+
+1. $(a_n)$ is increasing: We are going to prove that
+$$
+\lim_{n \to \infty} a_n = s \,.
+$$
+Equivalently, we need to prove that
+$$
+\forall \, \e>0 \,, \, \exists \, N \in \N \st \forall \, n \geq N \,, \,\,
+|a_n - s| < \e \,. 
+$$
+Let $\e > 0$. Since $s$ is the smallest upper bound for $A$, this means
+$$
+s - \e
+$$
+is not an upper bound. Therefore there exists $N \in \N$ such that 
+$$
+s - \e < a_N \,.
+$${#eq-monotone-convergence-proof-1}
+Let $n \geq N$. Since $a_n$ is increasing, we have
+$$
+a_N \leq a_n \,, \quad \forall \, n \geq N \,.
+$${#eq-monotone-convergence-proof-2}
+Moreover $s$ is the supremum of $A$, so that
+$$
+a_n \leq s < s + \e \,, \quad \forall \, n \in \N \,.
+$${#eq-monotone-convergence-proof-3}
+Putting together estimates (@eq-monotone-convergence-proof-1)-(@eq-monotone-convergence-proof-2)-(@eq-monotone-convergence-proof-3)
+we get
+$$
+s - \e < a_N \leq a_n \leq s < s + \e \,, \quad \forall \, n \geq N \,.
+$$
+Therefore, for all $n \geq N$, we have
+$$
+s - \e < a_n < s + \e \quad \implies \quad |a_n - s | < \e \,.
+$$
+
+
+
+
+2. $(a_n)$ is decreasing: With a similar proof, one can show that
+$$
+\lim_{n \to \infty} a_n = i \,.
+$$
+This is left as an exercise.
+
+
+:::
 
 
 
 
 ::: {.content-hidden}
+
+
+
+### Example: Euler's Number
+
+
+As an application of the Monotone Convergence Theorem we can give
+a formal definition for the Euler's Number
+$$
+e = 2.71828182845904523536 \dots
+$$
+
+
+::: Theorem 
+
+Consider the sequence
+$$
+a_n = \left(  1 + \frac{1}{n}  \right)^n  \,.
+$$
+
+We have that:
+
+1. $(a_n)$ is monotone increasing,
+2. $(a_n)$ is bounded.
+
+In particular $(a_n)$ is convergent.
+
+:::
+
+
+::: Proof
+
+Copiala da Marcellini Sbordone, pagina 106
+
+:::
+
+
+Thanks to Theorem \ref{theorem-euler-number} we can define the Euler's Number $e$.
+
+
+::: Definition
+### Euler's Number
+
+The Euler's number is defined as
+$$
+e := \lim_{n \to \infty } \, \left(  1 + \frac{1}{n}  \right)^n \,.
+$$
+
+:::
+
+
+Already for $n=1000$ we have a good approximation of $e$:
+$$
+a_{1000} = 2.7169 \,.
+$$
+
+
+
+
+
+
+
 
 
 Use abbot, marcellini, and analisi sapienza note. For next year remove integral test and add cauchy condensation test.
@@ -2314,10 +2512,7 @@ divergent as non-convergent. Would need definition of Divergence to $\pm \infty$
 Marcellini Page 101. Also  see what is the english name for limiti notevoli.
 
 
-## Example: Euler's Number
 
-
-Marcellini Page 106
 
 
 ## Recurrence relations

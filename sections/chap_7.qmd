@@ -305,7 +305,7 @@ Since
 $$
 \left|\sqrt{\frac{13}{36}} \right| < 1 \,,
 $$ 
-by the Geometric sequence test for real sequences, we conclude that
+by the Geometric Sequence Test for real sequences, we conclude that
 $$
 \left|a_{n}\right| \rightarrow 0 \,.
 $$
@@ -391,15 +391,15 @@ $$
 
 
 
-## Geometric sequence test and Ratio test in $\mathbb{C}$
+## Geometric sequence Test and Ratio Test in $\mathbb{C}$
 
 
-The Geometric sequence test and Ratio test can be generalized to complex
+The Geometric Sequence Test and Ratio Test can be generalized to complex
 sequences.
 
 
 ::: Theorem 
-### Geometric sequence test in $\mathbb{C}$ 
+### Geometric sequence Test in $\mathbb{C}$ 
 
 Let $x \in \mathbb{C}$ and let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be the geometric sequence in $\mathbb{C}$ defined by
 $$
@@ -437,7 +437,7 @@ Then, we compute
 & = \sqrt{\frac{17}{58}} \\
 & < 1 \,
 \end{align*}
-By the geometric sequence test $a_{n} \rightarrow 0$.
+By the Geometric Sequence Test $a_{n} \rightarrow 0$.
 
 - Let 
 $$
@@ -454,7 +454,7 @@ We compute
 & = \frac{13}{5} \\
 & > 1 \,.
 \end{align*}
-By the geometric sequence test, the sequence $(b_{n})$ does not converge.
+By the Geometric Sequence Test, the sequence $(b_{n})$ does not converge.
 
 - Let 
 $$
@@ -464,7 +464,7 @@ We have
 $$
 \left|c_{n}\right|=\left|e^{\frac{i \pi}{2} n}\right|=1 \,,
 $$
-and hence the Geometric sequence test cannot be applied. However, we can see that 
+and hence the Geometric Sequence Test cannot be applied. However, we can see that 
 $$
 c_{n}=e^{\frac{i \pi}{2} n} = 
 \begin{cases}
@@ -502,12 +502,12 @@ which is a contradiction. Hence $(c_n)$ is divergent.
 :::
 
 
-We now provide the statement of the Ratio test in $\mathbb{C}$.
+We now provide the statement of the Ratio Test in $\mathbb{C}$.
 
 
 
 ::: Theorem 
-### Ratio test in \mathbb{C} {#theorem-ratop-test-C}
+### Ratio Test in \mathbb{C} {#theorem-ratop-test-C}
 
 Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$ such that
 $$
@@ -538,7 +538,7 @@ Then the sequence $\left(a_{n}\right)$ is unbounded, and hence does not converge
 
 
 The proof of Theorem \ref{theorem-ratop-test-C} follows word by word the
-proof of the Ratio test Theorem in $\mathbb{R}$, and only two minor 
+proof of the Ratio Test Theorem in $\mathbb{R}$, and only two minor 
 modifications are needed:
 
 
@@ -564,7 +564,7 @@ Prove that $a_n \to 0$.
 & = \frac{5}{(2 n+2)(2 n+1)} \\
 & = \frac{ \dfrac{5}{n^{2}}}{ \left(2+ \dfrac{2}{n} \right) \left(2+ \dfrac{1}{n} \right) } \longrightarrow L = 0 \,.
 \end{align*}
-Since $L=0 < 1$, by the Ratio test in $\mathbb{C}$ we infer $a_{n} \to 0$. 
+Since $L=0 < 1$, by the Ratio Test in $\mathbb{C}$ we infer $a_{n} \to 0$. 
 
 :::
 
@@ -694,6 +694,93 @@ By Theorem \ref{theorem-convergence-real-imaginary} we conclude
 $$
 \lim _{n \rightarrow \infty} z_{n} = \lim_{n \to \infty} a_n  +  i \, \lim_{n \to \infty} b_n = 0+\frac{6}{5} i=\frac{6}{5} i \,.
 $$
+
+
+:::
+
+
+
+
+
+
+::: {.content-hidden}
+
+
+La roba sotto e' di Dommers. Sarebbe bene fare la dimostrazione di Cauchy in 
+R e ignorare quella in C (in cui va assunto che Cauchy implica convergente). In R bisogna fare bolzano Weierstrass per dimostrare che Cauchy implica convergente. E' sia sul marcellini sbordone pag 155, e ci sono anche
+discussioni su abbot, per dimostrare che cauchy implica convergente.
+
+
+Quando hai cauchy, puoi anche eliminare il test di convergenza intergrale per
+serie e rimpiazzarlo con cauchy consensed criterion. Qullo lo trovi su abbott dimostrato per bene (pag 67), o anche sui miei appunti di analisi 1.
+
+
+
+\section{$2.6 *$ Cauchy sequences}
+
+To prove that a sequence converges using the $\varepsilon, n_{0}$ definition, we need to have a candidate for what the limit could be. If we want to prove that a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ in $\mathbb{C}$ converges, we have to choose an $a \in \mathbb{C}$ and prove that $\lim _{n \rightarrow \infty} a_{n}=a$. However, it is not always clear what a potential limit is.
+
+To avoid having to know what the limit is, we can prove that a sequence converges by showing that it is a so-called Cauchy sequence. If you are able to prove that a sequence is a Cauchy sequence, it immediately follows that the sequence converges without knowing what the limit is. Cauchy sequences are defined as follows:
+
+Definition 2.6.1. Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. Then, $\left(a_{n}\right)_{n \in \mathbb{N}}$ is called a Cauchy sequence if
+
+$$
+\forall \varepsilon>0: \exists n_{0} \in \mathbb{N}: \forall m, n \geq n_{0}:\left|a_{m}-a_{n}\right| \leq \varepsilon
+$$
+
+Note that we only defined it for sequences in $\mathbb{C}$, but since we can interpret any real number as a complex number with zero imaginary part, this definition also holds for sequences in $\mathbb{R}$.
+
+The interpretation of this definition is that from a certain point onwards (i.e., from $n_{0}$ ) if you take to terms of the sequence $a_{m}$ and $a_{n}$, then $a_{m}$ and $a_{n}$ are arbitrarily close to each other (even if $n$ and $m$ are very far apart). If all these terms are very close to each other from a certain point onwards, they are also close to the limit, even though we don't have to know what the limit is.
+
+Example 2.6.2. Show that $\left(a_{n}\right)_{n \in \mathbb{N}}$ is a Cauchy sequence, with
+
+$$
+a_{n}:=\frac{3 n}{2 n+1} .
+$$
+
+We need to prove that
+
+$$
+\forall \varepsilon>0: \exists n_{0} \in \mathbb{N}: \forall m, n \geq n_{0}:\left|\frac{3 m}{2 m+1}-\frac{3 n}{2 n+1}\right| \leq \varepsilon
+$$
+
+Let $\varepsilon>0$. Choose $n_{0} \in \mathbb{N}$ such that $n_{0} \geq \frac{3}{2 \varepsilon}$. Let $m, n \geq n_{0}$. Then,
+
+$$
+\begin{aligned}
+\left|\frac{3 m}{2 m+1}-\frac{3 n}{2 n+1}\right| & =\left|\frac{3 m(2 n+1)-3 n(2 m+1)}{(2 m+1)(2 n+1)}\right|=\left|\frac{3 m-3 n}{4 m n+2 m+2 n+1}\right| \\
+& =\frac{3|m-n|}{4 m n+2 m+2 n+1} \stackrel{\text { TI }}{\leq} \frac{3(m+n)}{4 m n}=\frac{3}{4}\left(\frac{1}{n}+\frac{1}{m}\right) \\
+& \leq \frac{3}{4}\left(\frac{1}{n_{0}}+\frac{1}{n_{0}}\right)=\frac{3}{2 n_{0}} \leq \varepsilon .
+\end{aligned}
+$$
+
+Note that in this example we didn't have to guess what the limit of the sequence was first. We claimed that convergence follows from being a Cauchy sequence. The reverse is also true. We formalise this in the following theorem:
+
+Theorem 2.6.3. Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. Then, $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges if and only if $\left(a_{n}\right)_{n \in \mathbb{N}}$ is a Cauchy sequence.
+
+Example 2.6.4. It immediately follows from this theorem and Example 2.6 .2 that the sequence $\left(\frac{3 n}{2 n+1}\right)_{n \in \mathbb{N}}$ converges. Note that this still doesn't tell us what the limit is, only that it exists.
+
+For the example it is easy to see what the limit is, but in many theoretical computations this is often not the case. In such instances, it is often easier to prove that something is a Cauchy sequence, than to prove that it converges using the definition of convergence directly.
+
+\subsection{1 * Completeness revisited}
+
+We did not present the proof of Theorem 2.6.3, but to prove that this result holds for sequences in $\mathbb{R}$ we need that $\mathbb{R}$ is a complete ordered field and construct some bounded set for which we know the supremum exists. So important, in fact, that in an ordered field the convergence of Cauchy sequences and the existence of the supremum for all bounded sets are equivalent:
+
+Theorem 2.6.5. Let $(K,+, \cdot, \mathcal{P})$ be an ordered field. Then the following two statements are equivalent:
+
+(a) If a sequence $\left(a_{n}\right)_{n \in \mathbb{N}}$ in $K$ is a Cauchy sequence, then $\left(a_{n}\right)_{n \in \mathbb{N}}$ converges;
+
+(b) If $A \subseteq K, A \neq \emptyset$ that has an upper bound in $K$, then also $\sup A \in K$.
+
+Note that the second statement was our definition of completeness in ordered fields. Hence, this theorem says that an ordered field is complete if and only if every Cauchy sequence converges. Hence, in stead of using Definition 1.9.12 as our definition of completeness, we can also use statement (a) in this theorem as our definition.
+
+Note that we stated Theorem 2.6.3 for sequences in $\mathbb{C}$. We obviously cannot use the supremum directly to prove this, since $\mathbb{C}$ is not ordered. However, we can use that a sequence in $\mathbb{C}$ converges
+if and only if the real and imaginary parts converge as we proved in Theorem 2.5.12, and then use our proof using suprema for the real and imaginary parts separately.
+
+Hence, also in $\mathbb{C}$ it holds that a sequence converges if and only if it is a Cauchy sequence. In ordered fields, we could use this as the definition of convergence. But since this result also holds in $\mathbb{C}$ which is not ordered, for $\mathbb{C}$ this definition of completeness also makes sense. Hence, we can also say that $\mathbb{C}$ is a complete field, even though it is not ordered.
+
+If we replace the absolute value in the definition of Cauchy sequences by a distance, then this definition of completeness can even be generalised to other fields.
+
 
 
 :::

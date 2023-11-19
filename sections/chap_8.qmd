@@ -10,4 +10,296 @@ $
 
 # Series
 
-Coming soon
+
+
+A series is the sum of all terms in a sequence:
+$$
+a_1 + a_2 + a_3 + \ldots + a_n + \ldots 
+$$
+Since we are dealing with an infinite amount of terms, we need to be careful.
+For example, consider the series
+$$
+\sum_{k=1}^\infty (-1)^k = -1 + 1 - 1 + 1 - 1 + 1 - \ldots 
+$${#eq-series-introduction}
+If we sum the terms in pairs, we obtain
+$$
+\sum_{k=1}^\infty (-1)^k = (-1 + 1) + (- 1 + 1) + ( - 1 + 1) + \ldots  = 0\,.
+$$
+If we reorder the terms, we obtain a different result
+\begin{align*}
+\sum_{k=1}^\infty (-1)^k & = (1 + 1) - 1 + (1 + 1) - 1 + \ldots  \\
+                         & = (2 - 1) + (2 - 1) + \ldots \\
+                         & = 1 + 1 + \ldots \\
+                         & = \infty \,. 
+\end{align*}
+Therefore commutativity of the sum does not hold when summing infinitely many terms. We need a good definition of convergence.
+
+
+We will develop the theory of series in for sequences in $\mathbb{C}$. All the results for complex series will also hold for series in $\mathbb{R}$. Some results will only hold for series in $\R$: this will be the case for comparison tests
+in which the order relation of $\R$ is needed.
+
+
+We start by defining partial sums.
+
+::: Definition 
+### Partial sums
+
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. The $n$-th partial sum of $(a_n)$ is
+$$
+s_{n} :=a_{1}+a_{2}+\ldots+a_{n} = \sum_{k=1}^{n} a_{k}
+$$
+This sequence $\left(s_{n}\right)_{n \in \mathbb{N}}$ is called the sequence of **partial sums**.
+
+:::
+
+We can use the sequence of partial sums to define convergence of a series.
+
+
+::: Definition 
+### Convergent series
+
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. We denote the series of $\left(a_{n}\right)_{n \in \mathbb{N}}$ by
+$$
+\sum_{k=1}^{\infty} a_{k}
+$$
+We say that this series **converges** to $s \in \mathbb{C}$ if
+$$
+\lim_{n \rightarrow \infty} \sum_{k=1}^{n} a_{k} = 
+\lim_{n \rightarrow \infty} s_{n} = s \,.
+$$
+In this case we write
+$$
+\sum_{k=1}^{\infty} a_{k}=s \,.
+$$
+
+:::
+
+
+::: Definition 
+### Divergent series
+
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. The series 
+$$
+\sum_{k=1}^\infty a_k 
+$$
+is **divergent** if the sequence of partial sums $(s_n)$ is divergent.
+
+:::
+
+
+::: Example 
+Consider the series
+$$
+\sum_{k=1}^{\infty} \frac{1}{k(k+1)} \,.
+$$
+Note that
+$$
+\frac{1}{k(k+1)}=\frac{1}{k}-\frac{1}{k+1} \,.
+$$
+Hence, we can compute the partial sums $s_{n}$ as follows:
+\begin{align*}
+s_{n} & =\sum_{k=1}^{n} \frac{1}{k(k+1)} \\
+& =\sum_{k=1}^{n}\left(\frac{1}{k}-\frac{1}{k+1}\right) \\
+& =\frac{1}{1}-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\frac{1}{4}+\ldots+\frac{1}{n}-\frac{1}{n+1} \\
+& =1-\frac{1}{n+1} .
+\end{align*}
+Since,
+$$
+\lim_{n \rightarrow \infty} s_{n}=\lim _{n \rightarrow \infty}\left(1-\frac{1}{n+1}\right)=1 \,,
+$$
+the series converges to 1 , i.e.,
+$$
+\sum_{k=1}^{\infty} \frac{1}{k(k+1)}=1 \,.
+$$
+A series of this kind is called a **telescopic sum**, since we can *fold* the entire partial sum together, in such a way that only two terms remain.
+:::
+
+Let us go back to the series considered in (@eq-series-introduction).
+
+::: Example 
+
+Consider the series
+$$
+\sum_{k=1}^{\infty}(-1)^{k} \,.
+$$
+The partial sums $s_{n}$ are given by
+$$
+s_{n}=\sum_{k=1}^{n}(-1)^{k}= 
+\begin{cases}-1 & \text { if } \, n \, \text { is odd }  \, \\ 
+0 & \text { if } \, n  \, \text { is even. }\end{cases}
+$$
+Therefore $s_{n}$ diverges, so also the series diverges.
+
+:::
+
+
+In general, it is a difficult taks to compute the exact value of a series. Therefore, we will mainly focus our effort on determining whether a series converges or not. 
+
+The following theorem shows that if the terms in the sequence do not converge to $0$, then the series cannot converge.
+
+::: {.Theorem  #theorem-series-necessary}
+
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. If the series 
+$$
+\sum_{k=1}^{\infty} a_{k} 
+$$ 
+converges, then 
+$$
+\lim_{k \rightarrow \infty} a_{k}=0 \,.
+$$
+
+:::
+
+::: Proof
+
+Suppose that 
+$$
+\sum_{k=1}^{\infty} a_{k}
+$$ 
+converges. By definition of convergent series there exists some $s \in \mathbb{C}$ such that
+$$
+\lim_{n \rightarrow \infty} s_{n}=\lim _{n \rightarrow \infty} \sum_{k=1}^{n} a_{k}=s \,.
+$$
+Note that then also
+$$
+\lim_{n \rightarrow \infty} s_{n+1}=s \,.
+$$
+Hence, by the Algebra of Limits in $\C$, we have that
+$$
+\lim_{n \rightarrow \infty}\left(s_{n+1}-s_{n}\right)=\lim _{n \rightarrow \infty} s_{n+1}-\lim _{n \rightarrow \infty} s_{n}=s-s=0 \,.
+$$
+Noting that 
+$$
+s_{n+1}-s_{n}=a_{n+1}\,,
+$$ 
+we obtain
+$$
+\lim _{n \rightarrow \infty} a_{n}=\lim _{n \rightarrow \infty} a_{n+1}=\lim _{n \rightarrow \infty}\left(s_{n+1}-s_{n}\right)=0 \, .
+$$
+
+:::
+
+
+
+The contrapositive statement of Theorem \ref{theorem-series-necessary}
+is particularly useful. For clarity, we give the precise statement. 
+
+
+
+::: {.Theorem  #theorem-series-necessary-1}
+
+Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. If 
+$$
+\lim_{k \rightarrow \infty} a_{k} \neq 0 \,,
+$$
+then the series
+$$
+\sum_{k=1}^{\infty} a_{k}
+$$ 
+does not converge.
+
+:::
+
+
+
+
+
+::: Example 
+
+Consider the series
+$$
+\sum_{k=1}^\infty  (-1)^k \,.
+$${#eq-example-series-1}
+We have that
+$$
+\lim_{k \to \infty} a_k = \lim_{k \to \infty} (-1)^k  \neq 0 \,,
+$$
+being $a_k$ divergent. Therefore the series at (@eq-example-series-1) diverges
+by Theorem \ref{theorem-series-necessary-1}.
+
+:::
+
+
+::: Example 
+Consider the series
+$$
+\sum_{n=1}^{\infty} \frac{n}{5 n+11} \,.
+$$
+Then
+$$
+a_{n}:=\frac{n}{5 n+11}=\frac{1}{5 + \dfrac{11}{n} } \longrightarrow \frac{1}{5} \neq 0 \text {. }
+$$
+Hence, the series does not converge.
+:::
+
+
+::: Important
+
+Theorem \ref{theorem-series-necessary-1} says that if $\sum_{k=1}^\infty a_k$ converges, 
+then
+$$
+a_k \to 0 \,.
+$$
+In general the condition $a_k \to 0$ does not guarantee convergence of the 
+associated series, as shown in the example below.
+
+:::
+
+
+::: Example
+
+Consider the series
+$$
+\sum_{k=1}^\infty a_k \,, \quad a_k := \frac{1}{ \sqrt{k+1} + \sqrt{k} } \,.
+$$
+By the Algebra of Limits we have
+$$
+\lim_{k \to \infty} a_k = 0 \,.
+$$
+However the partial sums are given by
+$$
+s_n = \sum_{k=1}^n a_k = \sqrt{n+1} - 1 \,.
+$$
+Therefore $s_n$ is divergent and so the series is divergent.
+
+> Exercise: Prove by induction that $\sum_{k=1}^n a_k = \sqrt{n+1} - 1$.
+
+:::
+
+
+
+::: Remark
+
+It is customary to sum a series starting at $k=1$. However one could start
+the sum from any $k=N$ with $N \in \N$. This would not affect the convergence
+of the series, but of course it will change the value of the limit. 
+
+:::
+
+
+::: Example 
+
+We have seen that 
+$$
+\sum_{k=1}^{\infty} \frac{1}{k(k+1)} = 1 \,.
+$$
+Hence also the series
+$$
+\sum_{k=7}^{\infty} \frac{1}{k(k+1)}
+$$
+converges. However, in this case, the partial sums are given by
+\begin{align*}
+s_{n} & =\sum_{k=7}^{n} \frac{1}{k(k+1)} \\
+      & =\sum_{k=7}^{n}\left(\frac{1}{k}-\frac{1}{k+1}\right) \\
+      & =\frac{1}{7}-\frac{1}{8}+\frac{1}{8}-\frac{1}{9}+\ldots+\frac{1}{n}-\frac{1}{n+1} \\
+      & =\frac{1}{7}-\frac{1}{n+1} \,.
+\end{align*}
+Therefore
+$$
+\sum_{k=7}^{\infty} \frac{1}{k(k+1)}=\lim _{n \rightarrow \infty} s_{n}=\frac{1}{7} \,.
+$$
+
+:::
+
+
+

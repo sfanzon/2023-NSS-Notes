@@ -685,7 +685,7 @@
 
  [**Definition 6.39**](#Definition-6.39)\Pageref{Definition-6.39}
 
- [**Theorem 6.40**](#theorem-geometric-sequence): Geometric sequence test\Pageref{theorem-geometric-sequence}
+ [**Theorem 6.40**](#theorem-geometric-sequence): Geometric Sequence Test\Pageref{theorem-geometric-sequence}
 
  [**Warning**](#Warning*-6.18)\Pageref{Warning*-6.18}
 
@@ -697,7 +697,7 @@
 
  [**Example 6.42**](#Example-6.42)\Pageref{Example-6.42}
 
- [**Theorem 6.43**](#theorem-ratio-test): Ratio test\Pageref{theorem-ratio-test}
+ [**Theorem 6.43**](#theorem-ratio-test): Ratio Test\Pageref{theorem-ratio-test}
 
  [**Proof**](#Proof*-6.21)\Pageref{Proof*-6.21}
 
@@ -710,6 +710,14 @@
  [**Warning**](#Warning*-6.22)\Pageref{Warning*-6.22}
 
  [**Remark 6.47**](#Remark-6.47)\Pageref{Remark-6.47}
+
+ [**Definition 6.48**](#monotone-sequence): Monotone sequence\Pageref{monotone-sequence}
+
+ [**Example 6.49**](#Example-6.49)\Pageref{Example-6.49}
+
+ [**Theorem 6.50**](#theorem-monotone-convergence): Monotone Convergence Theorem\Pageref{theorem-monotone-convergence}
+
+ [**Proof**](#Proof*-6.23)\Pageref{Proof*-6.23}
 
  [**Definition 7.1**](#sequence-of-complex-numbers): Sequence of Complex numbers\Pageref{sequence-of-complex-numbers}
 
@@ -739,11 +747,11 @@
 
  [**Example 7.12**](#Example-7.12)\Pageref{Example-7.12}
 
- [**Theorem 7.13**](#geometric-sequence-test-in-mathbbc): Geometric sequence test in $\mathbb{C}$\Pageref{geometric-sequence-test-in-mathbbc}
+ [**Theorem 7.13**](#geometric-sequence-test-in-mathbbc): Geometric sequence Test in $\mathbb{C}$\Pageref{geometric-sequence-test-in-mathbbc}
 
  [**Example 7.14**](#Example-7.14)\Pageref{Example-7.14}
 
- [**Theorem 7.15**](#theorem-ratop-test-C): Ratio test in \Pageref{theorem-ratop-test-C}
+ [**Theorem 7.15**](#theorem-ratop-test-C): Ratio Test in \Pageref{theorem-ratop-test-C}
 
  [**Example 7.16**](#Example-7.16)\Pageref{Example-7.16}
 
@@ -752,3 +760,31 @@
  [**Proof**](#Proof*-7.3)\Pageref{Proof*-7.3}
 
  [**Example 7.18**](#Example-7.18)\Pageref{Example-7.18}
+
+ [**Definition 8.1**](#partial-sums): Partial sums\Pageref{partial-sums}
+
+ [**Definition 8.2**](#convergent-series): Convergent series\Pageref{convergent-series}
+
+ [**Definition 8.3**](#divergent-series): Divergent series\Pageref{divergent-series}
+
+ [**Example 8.4**](#Example-8.4)\Pageref{Example-8.4}
+
+ [**Example 8.5**](#Example-8.5)\Pageref{Example-8.5}
+
+ [**Theorem 8.6**](#theorem-series-necessary)\Pageref{theorem-series-necessary}
+
+ [**Proof**](#Proof*-8.1)\Pageref{Proof*-8.1}
+
+ [**Theorem 8.7**](#theorem-series-necessary-1)\Pageref{theorem-series-necessary-1}
+
+ [**Example 8.8**](#Example-8.8)\Pageref{Example-8.8}
+
+ [**Example 8.9**](#Example-8.9)\Pageref{Example-8.9}
+
+ [**Important**](#Important*-8.2)\Pageref{Important*-8.2}
+
+ [**Example 8.10**](#Example-8.10)\Pageref{Example-8.10}
+
+ [**Remark 8.11**](#Remark-8.11)\Pageref{Remark-8.11}
+
+ [**Example 8.12**](#Example-8.12)\Pageref{Example-8.12}
