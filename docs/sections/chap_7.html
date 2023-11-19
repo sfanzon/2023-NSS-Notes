@@ -66,27 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
+.Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -94,11 +78,31 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
 .Proof {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Conjecture {
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -106,33 +110,29 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -256,6 +256,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#boundedness" id="toc-boundedness" class="nav-link" data-scroll-target="#boundedness"><span class="header-section-number">7.2</span> Boundedness</a></li>
   <li><a href="#algebra-of-limits-in-mathbbc" id="toc-algebra-of-limits-in-mathbbc" class="nav-link" data-scroll-target="#algebra-of-limits-in-mathbbc"><span class="header-section-number">7.3</span> Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></a></li>
   <li><a href="#convergence-to-zero" id="toc-convergence-to-zero" class="nav-link" data-scroll-target="#convergence-to-zero"><span class="header-section-number">7.4</span> Convergence to zero</a></li>
+  <li><a href="#geometric-sequence-test-and-ratio-test-in-mathbbc" id="toc-geometric-sequence-test-and-ratio-test-in-mathbbc" class="nav-link" data-scroll-target="#geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.5</span> Geometric sequence test and Ratio test in <span class="math inline">\(\mathbb{C}\)</span></a></li>
   </ul>
 </nav>
     </div>
@@ -493,6 +494,122 @@ a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\s
 a_{n} = \frac{\dfrac{2 i \cos (3 n)}{ n} + (7-i) }{3+ \dfrac{2 i}{n} + \dfrac{\sin (2 n)}{n^{2}}}
 \longrightarrow \frac{ 0+ (7-i) }{3+0+0}=\frac{7}{3}-\frac{1}{3} i \,.
 \]</span></p>
+</blockquote>
+</div></details>
+</div>
+</section>
+<section id="geometric-sequence-test-and-ratio-test-in-mathbbc" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.5</span> Geometric sequence test and Ratio test in <span class="math inline">\(\mathbb{C}\)</span></h2>
+<p>The Geometric sequence test and Ratio test can be generalized to complex sequences.</p>
+<div id="geometric-sequence-test-in-mathbbc" class="Theorem" title="Geometric sequence test in \mathbb{C}">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Geometric sequence test in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
+<p>Let <span class="math inline">\(x \in \mathbb{C}\)</span> and let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be the geometric sequence in <span class="math inline">\(\mathbb{C}\)</span> defined by <span class="math display">\[
+a_{n}:=x^{n} \,.
+\]</span> We have:</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(|x|&lt;1\)</span>, then <span class="math display">\[
+\lim_{n \to \infty} a_{n} = 0 \,.
+\]</span></p></li>
+<li><p>If <span class="math inline">\(|x|&gt;1\)</span>, then sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is unbounded, and hence divergent.</p></li>
+</ol>
+</div></details>
+</div>
+<p>The proof can be obtained as in the real case, replacing the absolute value by the modulus.</p>
+<div id="Example-14" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14</strong></summary><div>
+<ul>
+<li><p>Let <span class="math display">\[
+a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}} \,.
+\]</span> We first rewrite <span class="math display">\[
+a_{n}=\frac{(-1+4 i)^{n}}{(7+3 i)^{n}}=\left(\frac{-1+4 i}{7+3 i}\right)^{n}
+\]</span> Then, we compute <span class="math display">\[\begin{align*}
+\left|\frac{-1+4 i}{7+3 i}\right| &amp; =\frac{|-1+4 i|}{|7+3 i|} \\
+&amp; = \frac{\sqrt{(-1)^{2}+4^{2}}}{\sqrt{7^{2}+3^{2}}} \\
+&amp; = \frac{\sqrt{17}}{\sqrt{58}} \\
+&amp; = \sqrt{\frac{17}{58}} \\
+&amp; &lt; 1 \,
+\end{align*}\]</span> By the geometric sequence test <span class="math inline">\(a_{n} \rightarrow 0\)</span>.</p></li>
+<li><p>Let <span class="math display">\[
+b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}} \,.
+\]</span> We first rewrite <span class="math display">\[
+b_{n}=\frac{(-5+12 i)^{n}}{(3-4 i)^{n}}=\left(\frac{-5+12 i}{3-4 i}\right)^{n} \,.
+\]</span> We compute <span class="math display">\[\begin{align*}
+\left|\frac{-5+12 i}{3-4 i}\right| &amp; = \frac{|-5+12 i|}{|3-4 i|} \\
+&amp; = \frac{\sqrt{5^{2}+(-12)^{2}}}{\sqrt{3^{2}+(-4)^{2}}} \\
+&amp; = \frac{13}{5} \\
+&amp; &gt; 1 \,.
+\end{align*}\]</span> By the geometric sequence test, the sequence <span class="math inline">\((b_{n})\)</span> does not converge.</p></li>
+<li><p>Let <span class="math display">\[
+c_{n}=e^{\frac{i \pi}{2} n} \,.
+\]</span> We have <span class="math display">\[
+\left|c_{n}\right|=\left|e^{\frac{i \pi}{2} n}\right|=1 \,,
+\]</span> and hence the Geometric sequence test cannot be applied. However, we can see that <span class="math display">\[
+c_{n}=e^{\frac{i \pi}{2} n} =
+\begin{cases}
+-1 &amp; \, \mbox{ if } \, n \, \mbox{ even} \\
+i &amp; \, \mbox{ if } \, n \, \mbox{ odd} \\
+\end{cases}
+\]</span> Therefore <span class="math inline">\((c_{n})\)</span> does not converge.</p></li>
+</ul>
+<blockquote class="blockquote">
+<p><em>Proof</em>. Suppose by contradiction that <span class="math inline">\(c_n \to c\)</span> for some <span class="math inline">\(c \in \mathbb{c}\)</span>. Let <span class="math inline">\(\varepsilon := 1/2\)</span>. By the convergence <span class="math inline">\(c_n \to c\)</span> there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+|c_n - c| &lt; \varepsilon = \frac12 \,, \quad \forall \, n \geq N \,.
+\]</span> Let <span class="math inline">\(n=2N\)</span>, so that <span class="math inline">\(n \geq N\)</span>. Then <span class="math display">\[
+|c_{2N} - c| = |-1 - c| &lt; \frac{1}{2} \,.
+\]</span> Let <span class="math inline">\(n=2N+1\)</span>, so that <span class="math inline">\(n \geq N\)</span>. Then <span class="math display">\[
+|c_{2N + 1} - c| = |i - c| &lt; \frac{1}{2} \,.
+\]</span> By triangle inequality we get <span class="math display">\[\begin{align*}
+|-1 - i| &amp; = | -1 - c + c - i  | \\
+&amp; \leq |-1 - c| + |c - i| \\
+&amp; &lt; \frac{1}{2} + \frac{1}{2} \\
+&amp; = 1 \,.
+\end{align*}\]</span> However, <span class="math display">\[
+|-1 - i| = \sqrt{ (-1)^2 + (-1)^2 } = \sqrt{2} &gt;  1 \,,
+\]</span> which is a contradiction. Hence <span class="math inline">\((c_n)\)</span> is divergent.</p>
+</blockquote>
+</div></details>
+</div>
+<p>We now provide the statement of the Ratio test in <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<div id="theorem-ratop-test-C" class="Theorem" title="Ratio test in ">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Ratio test in </summary><div>
+<p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span> such that <span class="math display">\[
+a_{n} \neq 0 \,, \quad \forall \, n \in \mathbb{N} \,.
+\]</span></p>
+<ol type="1">
+<li><p>Suppose that the following limit exists: <span class="math display">\[
+L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
+\]</span> Then,</p>
+<ul>
+<li><p>If <span class="math inline">\(L&lt;1\)</span> we have <span class="math display">\[
+\lim_{n \to\infty} a_{n}=0 \,.
+\]</span></p></li>
+<li><p>If <span class="math inline">\(L&gt;1\)</span>, the sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is unbounded, and hence does not converge.</p></li>
+</ul></li>
+<li><p>Suppose that there exists <span class="math inline">\(N \in \N\)</span> and <span class="math inline">\(L&gt;1\)</span> such that <span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right| \geq L \,, \quad \forall \, n \geq N \,.
+\]</span> Then the sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is unbounded, and hence does not converge.</p></li>
+</ol>
+</div></details>
+</div>
+<p>The proof of Theorem <a href="chap_7.html#theorem-ratop-test-C">15</a> follows word by word the proof of the Ratio test Theorem in <span class="math inline">\(\mathbb{R}\)</span>, and only two minor modifications are needed:</p>
+<ul>
+<li>Replace the absolute value with the complex modulus,</li>
+<li>Instead of the Squeeze Theorem, use Theorem <a href="chap_7.html#theorem-convergence-zero-C">10</a>.</li>
+</ul>
+<div id="Example-16" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div>
+<p>Let <span class="math display">\[
+a_{n}=\frac{(4-3 i)^{n}}{(2 n) !} \,.
+\]</span> Prove that <span class="math inline">\(a_n \to 0\)</span>.</p>
+<blockquote class="blockquote">
+<p><em>Proof.</em> We compute <span class="math display">\[\begin{align*}
+\left|\frac{a_{n+1}}{a_{n}}\right| &amp; =\left|\frac{(4-3 i)^{n+1}}{(2(n+1)) !}  \frac{(2 n) !}{(4-3 i)^{n}}\right| \\
+&amp; = \frac{|4-3 i|^{n+1}}{|4-3 i|^{n}} \cdot \frac{(2 n) !}{(2 n+2) !} \\
+&amp; = \frac{|4 - 3i|}{(2 n+2)(2 n+1)} \\
+&amp; =\frac{\sqrt{4^{2}+(-3)^{2}}}{(2 n+2)(2 n+1)} \\
+&amp; = \frac{5}{(2 n+2)(2 n+1)} \\
+&amp; = \frac{ \dfrac{5}{n^{2}}}{ \left(2+ \dfrac{2}{n} \right) \left(2+ \dfrac{1}{n} \right) } \longrightarrow L = 0 \,.
+\end{align*}\]</span> Since <span class="math inline">\(L=0 &lt; 1\)</span>, by the Ratio test in <span class="math inline">\(\mathbb{C}\)</span> we infer <span class="math inline">\(a_{n} \to 0\)</span>.</p>
 </blockquote>
 </div></details>
 </div>

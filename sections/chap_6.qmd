@@ -2306,7 +2306,7 @@ Use abbot, marcellini, and analisi sapienza note. For next year remove integral 
 ## Divergence to infinity
 
 Do this from abbott or marcellini. For the moment we have only done
-divergent as non-convergent. Would need definition of Divergence to $\pm \infty$.
+divergent as non-convergent. Would need definition of Divergence to $\pm \infty$. Vedi anche forme indeterminate a pagina 96 Marcellini.
 
 
 ## Some notable limits

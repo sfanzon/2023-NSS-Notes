@@ -738,3 +738,11 @@
  [**Example 7.11**](#Example-7.11)\Pageref{Example-7.11}
 
  [**Example 7.12**](#Example-7.12)\Pageref{Example-7.12}
+
+ [**Theorem 7.13**](#geometric-sequence-test-in-mathbbc): Geometric sequence test in $\mathbb{C}$\Pageref{geometric-sequence-test-in-mathbbc}
+
+ [**Example 7.14**](#Example-7.14)\Pageref{Example-7.14}
+
+ [**Theorem 7.15**](#theorem-ratop-test-C): Ratio test in \Pageref{theorem-ratop-test-C}
+
+ [**Example 7.16**](#Example-7.16)\Pageref{Example-7.16}
