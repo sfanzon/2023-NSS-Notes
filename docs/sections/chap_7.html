@@ -66,10 +66,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
 .Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
@@ -78,15 +74,35 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
 .DONE {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.Proposition {
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -94,43 +110,27 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Theorem {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
 }
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Question {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -257,6 +257,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#algebra-of-limits-in-mathbbc" id="toc-algebra-of-limits-in-mathbbc" class="nav-link" data-scroll-target="#algebra-of-limits-in-mathbbc"><span class="header-section-number">7.3</span> Algebra of limits in <span class="math inline">\(\mathbb{C}\)</span></a></li>
   <li><a href="#convergence-to-zero" id="toc-convergence-to-zero" class="nav-link" data-scroll-target="#convergence-to-zero"><span class="header-section-number">7.4</span> Convergence to zero</a></li>
   <li><a href="#geometric-sequence-test-and-ratio-test-in-mathbbc" id="toc-geometric-sequence-test-and-ratio-test-in-mathbbc" class="nav-link" data-scroll-target="#geometric-sequence-test-and-ratio-test-in-mathbbc"><span class="header-section-number">7.5</span> Geometric sequence test and Ratio test in <span class="math inline">\(\mathbb{C}\)</span></a></li>
+  <li><a href="#convergence-of-real-and-imaginary-part" id="toc-convergence-of-real-and-imaginary-part" class="nav-link" data-scroll-target="#convergence-of-real-and-imaginary-part"><span class="header-section-number">7.6</span> Convergence of real and imaginary part</a></li>
   </ul>
 </nav>
     </div>
@@ -610,6 +611,86 @@ a_{n}=\frac{(4-3 i)^{n}}{(2 n) !} \,.
 &amp; = \frac{5}{(2 n+2)(2 n+1)} \\
 &amp; = \frac{ \dfrac{5}{n^{2}}}{ \left(2+ \dfrac{2}{n} \right) \left(2+ \dfrac{1}{n} \right) } \longrightarrow L = 0 \,.
 \end{align*}\]</span> Since <span class="math inline">\(L=0 &lt; 1\)</span>, by the Ratio test in <span class="math inline">\(\mathbb{C}\)</span> we infer <span class="math inline">\(a_{n} \to 0\)</span>.</p>
+</blockquote>
+</div></details>
+</div>
+</section>
+<section id="convergence-of-real-and-imaginary-part" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="convergence-of-real-and-imaginary-part"><span class="header-section-number">7.6</span> Convergence of real and imaginary part</h2>
+<p>A complex number <span class="math inline">\(z \in \mathbb{C}\)</span> can be written as <span class="math display">\[
+z=a+b i
+\]</span> for some <span class="math inline">\(a, b \in \mathbb{R}\)</span>, where</p>
+<ul>
+<li><span class="math inline">\(a\)</span> is the real part of <span class="math inline">\(z\)</span>,</li>
+<li><span class="math inline">\(b\)</span> the imaginary part of <span class="math inline">\(z\)</span>.</li>
+</ul>
+<p>We can prove that a complex sequence converges if and only if both the real parts and the imaginary parts converge.</p>
+<div id="theorem-convergence-real-imaginary" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 17</strong></summary><div>Let <span class="math inline">\(\left(z_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. For <span class="math inline">\(n \in \mathbb{N}\)</span>, let <span class="math inline">\(a_{n}, b_{n} \in \mathbb{R}\)</span> such that <span class="math display">\[
+z_{n}=a_{n}+b_{n} i \,.
+\]</span> Let <span class="math display">\[
+z=a+b i
+\]</span> with <span class="math inline">\(a, b \in \mathbb{R}\)</span>. Then <span class="math display">\[
+\lim_{n \rightarrow \infty} z_{n}=z \quad \iff \quad \lim_{n \rightarrow \infty} a_{n}=a \,, \quad \lim_{n \rightarrow \infty} b_{n}=b \text {. }
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-3" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> Suppose that <span class="math display">\[
+\lim_{n \rightarrow \infty} z_{n}=z \,.
+\]</span> To prove that <span class="math inline">\(a_{n} \to a\)</span> we need to show that <span class="math display">\[
+\forall \, \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\, \left|a_{n}-a\right| &lt; \varepsilon \,.
+\]</span><p></p>
+<p>Let <span class="math inline">\(\varepsilon&gt;0\)</span>. Since <span class="math inline">\(z_{n} \rightarrow z\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left|z_{n}-z\right| &lt; \varepsilon \,, \quad \forall \, n \geq N \,.
+\]</span> Let <span class="math inline">\(n \geq N\)</span>. Then <span class="math display">\[\begin{align*}
+\left|a_{n}-a\right| &amp; =\sqrt{\left(a_{n}-a\right)^{2}} \\
+                     &amp; \leq \sqrt{\left(a_{n}-a\right)^{2}+\left(b_{n}-b\right)^{2}} \\
+                     &amp; =\left|\left(a_{n}-a\right)+\left(b_{n}-b\right) i\right| \\
+                     &amp; = \left|\left(a_{n}+b_{n} i\right)-(a+b i)\right| \\
+                     &amp; = \left|z_{n}-z\right| \\
+                     &amp; &lt; \varepsilon \,.
+\end{align*}\]</span> The proof for <span class="math inline">\(b_{n} \to b\)</span> is similar.</p>
+<p><em>Part 2.</em> Suppose that <span class="math display">\[
+\lim_{n \rightarrow \infty} a_{n}=a \,, \quad \lim_{n \rightarrow \infty} b_{n}=b \,.
+\]</span> To prove that <span class="math inline">\(z_{n} \to z\)</span> we need to show that <span class="math display">\[
+\forall \, \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N} \, \mbox{ s.t. } \, \forall \, n \geq N \,, \,\, \left|z_{n}-z\right| &lt; \varepsilon \,.
+\]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span>. Since <span class="math inline">\(a_{n} \rightarrow a\)</span>, there exists <span class="math inline">\(N_1 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left|a_{n}-a\right| &lt; \frac{\varepsilon}{2} \,, \quad \forall \, n \geq N_1 \,.
+\]</span> Since <span class="math inline">\(b_{n} \rightarrow b\)</span>, there exists <span class="math inline">\(N_2 \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left|b_{n}-b\right| &lt; \frac{\varepsilon}{2} \,, \quad \forall \, n \geq N_2 \,.
+\]</span> Let <span class="math display">\[
+N := \max \left\{ N_1, N_2 \right\} \,.
+\]</span> Let <span class="math inline">\(n \geq N\)</span>. By the triangle inequality, <span class="math display">\[\begin{align*}
+\left|z_{n}-z\right| &amp; =\left|\left(a_{n}+b_{n} i\right)-(a+b i)\right|\\
+&amp; =\left|\left(a_{n}-a\right)+\left(b_{n}-b\right) i\right| \\
+&amp; \leq\left|a_{n}-a\right|+\left|b_{n}-b\right| \cdot|i| \\
+&amp; =\left|a_{n}-a\right|+\left|b_{n}-b\right| \\
+&amp; &lt; \frac{\varepsilon}{2}+\frac{\varepsilon}{2} \\
+&amp; = \varepsilon \,.
+\end{align*}\]</span></p>
+</div></details>
+</div>
+<div id="Example-18" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 18</strong></summary><div>
+<p>Consider the complex sequence <span class="math display">\[
+z_{n}:=\frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}}
+\]</span> Show that <span class="math display">\[
+\lim_{n \to \infty} z_n = \frac65 i \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p><em>Proof.</em> Let us find the real and imaginary parts of <span class="math inline">\(z_n\)</span> <span class="math display">\[\begin{align*}
+z_n &amp; = \frac{\left(4 n+3 n^{2} i\right)\left(2 n^{2}+i\right)}{5 n^{4}} \\
+&amp; = \frac{8 n^{3}+4 n i + 6 n^{4} i + 3 n^{2}i^2}{5 n^{4}} \\
+&amp; = \frac{8 n^{3}-3 n^{2}}{5 n^{4}} + \frac{6 n^{4}+4 n}{5 n^{4}} i \\
+&amp; = a_n + b_n i \,.
+\end{align*}\]</span> Using the Algebra of Limits for real sequences we have that <span class="math display">\[
+a_n = \frac{8 n^{3}-3 n^{2}}{5 n^{4}}=\frac{ \dfrac{8}{n} - \dfrac{3}{n^2}  }{5} \longrightarrow \frac{0-0}{5}=0 \,,
+\]</span> and <span class="math display">\[
+b_n = \frac{6 n^{4}+4 n}{5 n^{4}}=\frac{6+ \dfrac{4}{n^3} }{5} \longrightarrow \frac{6+0}{5}=\frac{6}{5} \,.
+\]</span> By Theorem <a href="chap_7.html#theorem-convergence-real-imaginary">17</a> we conclude <span class="math display">\[
+\lim _{n \rightarrow \infty} z_{n} = \lim_{n \to \infty} a_n  +  i \, \lim_{n \to \infty} b_n = 0+\frac{6}{5} i=\frac{6}{5} i \,.
+\]</span></p>
 </blockquote>
 </div></details>
 </div>

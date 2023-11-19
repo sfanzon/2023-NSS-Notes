@@ -746,3 +746,9 @@
  [**Theorem 7.15**](#theorem-ratop-test-C): Ratio test in \Pageref{theorem-ratop-test-C}
 
  [**Example 7.16**](#Example-7.16)\Pageref{Example-7.16}
+
+ [**Theorem 7.17**](#theorem-convergence-real-imaginary)\Pageref{theorem-convergence-real-imaginary}
+
+ [**Proof**](#Proof*-7.3)\Pageref{Proof*-7.3}
+
+ [**Example 7.18**](#Example-7.18)\Pageref{Example-7.18}
