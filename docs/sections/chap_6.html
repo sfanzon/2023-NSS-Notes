@@ -66,35 +66,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -102,37 +74,65 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Corollary {
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -867,11 +867,10 @@ n \geq e^{M+1} \,.
 \forall \, \varepsilon&gt; 0 \,, \, \exists  \, N \in \mathbb{N}\, \text{ s.t. } \, \forall \, n \geq N \,, \, \left|(a_{n} + b_n) - (a+b)  \right| &lt; \varepsilon\,.
 \]</span> Let <span class="math inline">\(\varepsilon&gt;0\)</span> and set <span class="math display">\[
 \widetilde{\varepsilon} := \frac{\varepsilon}{2} \,.
-\]</span> Since <span class="math inline">\(a_{n} \rightarrow a\)</span> and <span class="math inline">\(\widetilde{\varepsilon}&gt;0\)</span>, there exists <span class="math inline">\(N_1 \in \mathbb{N}\)</span> such that <span class="math display">\[
-|a_n - a|&lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_1 \,.
-\]</span> Since <span class="math inline">\(b_{n} \rightarrow b\)</span> and <span class="math inline">\(\widetilde{\varepsilon}&gt;0\)</span>, there exists <span class="math inline">\(N_2 \in \mathbb{N}\)</span> such that <span class="math display">\[
-|b_n - b|&lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_2 \,.
-\]</span> Define <span class="math display">\[
+\]</span> Since <span class="math inline">\(a_{n} \rightarrow a, b_n \to b\)</span>, and <span class="math inline">\(\widetilde{\varepsilon}&gt;0\)</span>, there exist <span class="math inline">\(N_1, N_2 \in \mathbb{N}\)</span> such that <span class="math display">\[\begin{align*}
+|a_n - a| &amp; &lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_1 \,, \\
+|b_n - b| &amp; &lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_2 \,.
+\end{align*}\]</span> Define <span class="math display">\[
 N : = \max  \{ N_1, N_2 \} \,.
 \]</span> For all <span class="math inline">\(n \geq N\)</span> we have, by the triangle inequality, <span class="math display">\[\begin{align*}
 \left|\left(a_{n}+b_{n}\right)-(a+b)\right|
@@ -889,11 +888,10 @@ N : = \max  \{ N_1, N_2 \} \,.
 \left|a_{n}\right| \leq M \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> Define <span class="math display">\[
 \widetilde{\varepsilon} = \frac{\varepsilon}{ M + |b| } \,.
-\]</span> Since <span class="math inline">\(a_{n} \rightarrow a\)</span> and <span class="math inline">\(\widetilde{\varepsilon} &gt; 0\)</span>, there exists <span class="math inline">\(N_1 \in \mathbb{N}\)</span> such that <span class="math display">\[
-| a_n  - a | &lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_1 \,.
-\]</span> Since <span class="math inline">\(b_{n} \rightarrow b\)</span> and <span class="math inline">\(\widetilde{\varepsilon} &gt; 0\)</span>, there exists <span class="math inline">\(N_2 \in \mathbb{N}\)</span> such that <span class="math display">\[
-| b_n  - b | &lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_2 \,.
-\]</span> Let <span class="math display">\[
+\]</span> Since <span class="math inline">\(a_{n} \rightarrow a, b_n \to b\)</span>, and <span class="math inline">\(\widetilde{\varepsilon} &gt; 0\)</span>, there exist <span class="math inline">\(N_1, N_2 \in \mathbb{N}\)</span> such that <span class="math display">\[\begin{align*}
+| a_n  - a | &amp; &lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_1 \,. \\
+| b_n  - b | &amp; &lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_2 \,.
+\end{align*}\]</span> Let <span class="math display">\[
 N:= \max\{ N_1, N_2 \} \,.
 \]</span> For all <span class="math inline">\(n \geq N\)</span> we have <span class="math display">\[\begin{align*}
 \left|a_{n}b_{n}-a b\right|
@@ -909,7 +907,7 @@ N:= \max\{ N_1, N_2 \} \,.
 \lim_{n \to \infty} \, \frac{a_n}{b_n} = \frac{a}{b} \,,
 \]</span> which is equivalent to <span class="math display">\[
 \forall \, \varepsilon&gt; 0 \,, \, \exists \, N \in \mathbb{N}\, \text{ s.t. } \, \forall \, n \geq N \,, \, \left|\frac{a_{n}}{ b_{n}} - \frac{a}{b} \right| &lt; \varepsilon\,.
-\]</span> We suppose in addition that <span class="math inline">\(b&gt;0\)</span>. The proof is very similar for the case <span class="math inline">\(b &lt;0\)</span>. Let <span class="math inline">\(\varepsilon&gt; 0\)</span>. Set <span class="math display">\[
+\]</span> We suppose in addition that <span class="math inline">\(b&gt;0\)</span>. The proof is very similar for the case <span class="math inline">\(b &lt;0\)</span>, and is hence omitted. Let <span class="math inline">\(\varepsilon&gt; 0\)</span>. Set <span class="math display">\[
 \delta := \frac{b}{2} \,.
 \]</span> Since <span class="math inline">\(b_n \to b\)</span> and <span class="math inline">\(\delta&gt;0\)</span>, there exists <span class="math inline">\(N_1 \in \mathbb{N}\)</span> such that <span class="math display">\[
 |b_n - b| &lt; \delta \, \quad \forall \, n \geq N_1 \,.
@@ -917,11 +915,10 @@ N:= \max\{ N_1, N_2 \} \,.
 b_n &gt; b - \delta = b - \frac{b}{2} = \frac{b}{2}   \, \quad \forall \, n \geq N_1 \,.
 \]</span> Define <span class="math display">\[
 \widetilde{\varepsilon} := \frac{ b^2 }{ 2 (b + |a|)} \, \varepsilon\,.
-\]</span> Since <span class="math inline">\(\widetilde{\varepsilon}&gt;0\)</span> and <span class="math inline">\(a_n \to a\)</span>, there exists <span class="math inline">\(N_2 \in \mathbb{N}\)</span> such that <span class="math display">\[
-|a_n - a |&lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_2 \,.
-\]</span> Since <span class="math inline">\(\widetilde{\varepsilon}&gt;0\)</span> and <span class="math inline">\(b_n \to b\)</span>, there exists <span class="math inline">\(N_3 \in \mathbb{N}\)</span> such that <span class="math display">\[
-|b_n - b |&lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_3 \,.
-\]</span> Define <span class="math display">\[
+\]</span> Since <span class="math inline">\(\widetilde{\varepsilon}&gt;0\)</span> and <span class="math inline">\(a_n \to a, b_n \to b\)</span>, there exist <span class="math inline">\(N_2, N_3 \in \mathbb{N}\)</span> such that <span class="math display">\[\begin{align*}
+|a_n - a | &amp; &lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_2 \,, \\
+|b_n - b | &amp; &lt; \widetilde{\varepsilon} \,, \quad \forall \, n \geq N_3 \,.
+\end{align*}\]</span> Define <span class="math display">\[
 N:= \max\{ N_1, N_2, N_3 \} \,.
 \]</span> For all <span class="math inline">\(n \geq N\)</span> we have <span class="math display">\[\begin{align*}
 \left|\frac{a_{n}}{ b_{n}} - \frac{a}{b} \right| &amp; =

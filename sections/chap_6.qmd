@@ -974,14 +974,11 @@ Let $\e>0$ and set
 $$
 \widetilde{\e} := \frac{\e}{2} \,.
 $$
-Since $a_{n} \rightarrow a$ and $\widetilde{\e}>0$, there exists $N_1 \in \N$ such that
-$$
-|a_n - a|< \widetilde{\e} \,, \quad \forall \, n \geq N_1 \,.
-$$
-Since $b_{n} \rightarrow b$ and $\widetilde{\e}>0$, there exists $N_2 \in \N$ such that
-$$
-|b_n - b|< \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,.
-$$
+Since $a_{n} \rightarrow a, b_n \to b$, and $\widetilde{\e}>0$, there exist $N_1, N_2 \in \N$ such that
+\begin{align*}
+|a_n - a| & < \widetilde{\e} \,, \quad \forall \, n \geq N_1 \,, \\
+|b_n - b| & < \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,.
+\end{align*}
 Define
 $$
 N : = \max  \{ N_1, N_2 \} \,.
@@ -1016,16 +1013,12 @@ Define
 $$
 \widetilde{\e} = \frac{\e}{ M + |b| } \,. 
 $$
-Since $a_{n} \rightarrow a$ and $\widetilde{\e} > 0$, there exists 
-$N_1 \in \N$ such that
-$$
-| a_n  - a | < \widetilde{\e} \,, \quad \forall \, n \geq N_1 \,.
-$$
-Since $b_{n} \rightarrow b$ and $\widetilde{\e} > 0$, there exists 
-$N_2 \in \N$ such that
-$$
-| b_n  - b | < \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,.
-$$
+Since $a_{n} \rightarrow a, b_n \to b$, and $\widetilde{\e} > 0$, there exist 
+$N_1, N_2 \in \N$ such that
+\begin{align*}
+| a_n  - a | & < \widetilde{\e} \,, \quad \forall \, n \geq N_1 \,. \\
+| b_n  - b | & < \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,.
+\end{align*}
 Let 
 $$
 N:= \max\{ N_1, N_2 \} \,.
@@ -1052,7 +1045,7 @@ which is equivalent to
 $$
 \forall \, \e > 0 \,, \, \exists \, N \in \N \st  \forall \, n \geq N \,, \, \left|\frac{a_{n}}{ b_{n}} - \frac{a}{b} \right| < \e \,.
 $$
-We suppose in addition that $b>0$. The proof is very similar for the case $b <0$. Let $\e > 0$. Set
+We suppose in addition that $b>0$. The proof is very similar for the case $b <0$, and is hence omitted. Let $\e > 0$. Set
 $$
 \delta := \frac{b}{2} \,.
 $$
@@ -1068,14 +1061,11 @@ Define
 $$
 \widetilde{\e} := \frac{ b^2 }{ 2 (b + |a|)} \, \e \,.
 $$
-Since $\widetilde{\e}>0$ and $a_n \to a$, there exists $N_2 \in \N$ such that
-$$
-|a_n - a |< \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,.
-$$
-Since $\widetilde{\e}>0$ and $b_n \to b$, there exists $N_3 \in \N$ such that
-$$
-|b_n - b |< \widetilde{\e} \,, \quad \forall \, n \geq N_3 \,.
-$$
+Since $\widetilde{\e}>0$ and $a_n \to a, b_n \to b$, there exist $N_2, N_3 \in \N$ such that
+\begin{align*}
+|a_n - a | & < \widetilde{\e} \,, \quad \forall \, n \geq N_2 \,, \\
+|b_n - b | & < \widetilde{\e} \,, \quad \forall \, n \geq N_3 \,.
+\end{align*}
 Define
 $$
 N:= \max\{ N_1, N_2, N_3 \} \,.
