@@ -763,7 +763,7 @@
 
  [**Definition 8.1**](#partial-sums): Partial sums\Pageref{partial-sums}
 
- [**Definition 8.2**](#convergent-series): Convergent series\Pageref{convergent-series}
+ [**Definition 8.2**](#convergent-series-1): Convergent series\Pageref{convergent-series-1}
 
  [**Definition 8.3**](#divergent-series): Divergent series\Pageref{divergent-series}
 

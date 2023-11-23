@@ -35,6 +35,8 @@ If we reorder the terms, we obtain a different result
 Therefore commutativity of the sum does not hold when summing infinitely many terms. We need a good definition of convergence.
 
 
+## Convergent series
+
 We will develop the theory of series in for sequences in $\mathbb{C}$. All the results for complex series will also hold for series in $\mathbb{R}$. Some results will only hold for series in $\R$: this will be the case for comparison tests
 in which the order relation of $\R$ is needed.
 
@@ -302,4 +304,6 @@ $$
 :::
 
 
+
+## Geometric series
 
