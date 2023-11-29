@@ -1854,7 +1854,7 @@ where we used Bernoulli's inequality (@eq-bernoulli-inequality) in the first ine
 
 *Part 2. The case $|x|>1$*. 
 
-To prove that (a_n) does not converge, we prove that it is unbounded. 
+To prove that $(a_n)$ does not converge, we prove that it is unbounded. 
 This means showing that
 $$
 \forall \, M > 0 \,, \, \exists n \in \N \st  \left| a_{n}\right| >M \,.
@@ -2097,9 +2097,9 @@ $$
 we conclude that $(a_n)$ is unbounded. By Corollary \ref{corollary-convergent-bounded} we conclude that $(a_n)$ does not converge.
 
 
-*Part 2.* Suppose that there exists $N \in \N$ and $M>1$ such that
+*Part 2.* Suppose that there exists $N \in \N$ and $L>1$ such that
 $$
-\left|\frac{a_{n+1}}{a_{n}}\right| \geq M \,, \quad \forall \, n \geq N \,. 
+\left|\frac{a_{n+1}}{a_{n}}\right| \geq L \,, \quad \forall \, n \geq N \,. 
 $$
 Since $b_n = |a_n|$, we infer
 $$
@@ -2423,7 +2423,7 @@ This is left as an exercise.
 
 
 
-::: {.content-hidden}
+
 
 
 
@@ -2437,7 +2437,7 @@ e = 2.71828182845904523536 \dots
 $$
 
 
-::: Theorem 
+::: {.Theorem #theorem-euler-number}
 
 Consider the sequence
 $$
@@ -2454,11 +2454,138 @@ In particular $(a_n)$ is convergent.
 :::
 
 
+
 ::: Proof
 
-Copiala da Marcellini Sbordone, pagina 106
+
+*Part 1.* We prove that $(a_n)$ is increasing
+$$
+a_{n} \geq a_{n-1} \,, \quad \forall \, n \in \N \,,
+$$
+which by definition is equivalent to
+$$
+\left(  1 + \frac{1}{n}  \right)^n \geq 
+\left(  1 + \frac{1}{n + 1}  \right)^{n+1} \,, \quad \forall \, n \in \N \,.
+$$
+Summing the fractions we get
+$$
+\left(  \frac{n+1}{n}  \right)^n \geq 
+\left(  \frac{n}{n-1}  \right)^n  \left(  \frac{n}{n-1}  \right) \,. 
+$$
+Dividing by the term $(n/(n-1))^n$ we obtain
+$$
+\left(  \frac{n^2 - 1}{n^2}  \right)^n \geq 1 - \frac1n \,,
+$$
+which is equivalent to
+$$
+\left(  1 - \frac{1}{n^2}  \right)^n \geq 1 - \frac1n \,, \forall \, n \in \N \,.
+$${#eq-proof-euler-1}
+Therefore $(a_n)$ is increasing if and only if (@eq-proof-euler-1) holds.
+Recall Bernoulli's inequality from Lemma \ref{lemma-bernoulli}: For
+$x \in \R$, $x>-1$, it holds
+$$
+(1 + x )^n  \geq 1 + nx  \,, \quad \forall \, n \in \N \,.
+$$
+Appliying Bernoulli's inequality with 
+$$
+x = -\frac{1}{n^2}
+$$
+yields
+$$
+\left(  1 - \frac{1}{n^2}  \right)^n  \geq 1 + n \left( -\frac{1}{n^2} \right) = 1 - \frac{1}{n} \,,
+$$
+which is exactly (@eq-proof-euler-1). Then $(a_n)$ is increasing.
+
+
+
+*Part 2*. We have to prove that $(a_n)$ is bounded, that is, that there
+exists $M > 0$ such that
+$$
+|a_n| \leq M \,, \quad \forall \, n \in \N \,.
+$$
+To this end, introduce the sequence $(b_n)$ by setting
+$$
+b_n := \left(   1  + \frac1n \right)^{n+1} \,.
+$$
+The sequence $(b_n)$ is decreasing.
+
+> To prove $(b_n)$ is decreasing, we need to show that 
+$$
+b_{n-1} \geq b_n \,, \quad \forall \, n \in \N \,. 
+$$
+To prove the above, we rewrite it as
+$$
+\left(   1  + \frac{1}{n-1} \right)^{n} \geq
+\left(   1  + \frac{1}{n} \right)^{n+1} \,.
+$$
+Expanding the fractions, the above is equivalent to
+$$
+\left(   \frac{n}{n-1} \right)^{n} \geq
+\left(   \frac{n+1}{n} \right)^{n} \left(   \frac{n+1}{n} \right) \,.
+$$
+Dividing by $((n+1)/n)^n$ we get
+$$
+\left(  \frac{n^2}{n^2 - 1} \right)^{n} \geq  \left(   \frac{n+1}{n} \right) \,.
+$$
+The above is equivalent to
+$$
+\left( 1 +  \frac{1}{n^2 - 1} \right)^{n} \geq  \left(  1 + \frac{1}{n} \right) \,.
+$${#eq-proof-euler-3}
+Therefore $(b_n)$ is decreasing if and only if (@eq-proof-euler-3) holds for all $n \in \N$.
+By choosing 
+$$
+x = \frac{1}{n^2 - 1} 
+$$
+in Bernoulli's inequality, we obtain
+\begin{align*}
+\left( 1 +  \frac{1}{n^2 - 1} \right)^{n} & \geq 1 + n \left(  \frac{1}{n^2 - 1}   \right) \\
+& = 1 + \frac{n}{n^2 - 1} \\
+& \geq 1 + \frac1n \,,
+\end{align*}
+where in the last inequality we used that 
+$$
+ \frac{n}{n^2 - 1} > \frac1n \,,
+$$
+which holds, being equivalent to $n^2 > n^2 - 1$. We have therefore proven
+(@eq-proof-euler-3), and hence $(b_n)$ is decreasing.
+
+
+We now observe that
+For all $n \in \N$
+\begin{align*}
+b_n & = \left(   1  + \frac1n \right)^{n+1} \\
+    & = \left(   1  + \frac1n \right)^n \left(   1  + \frac1n \right) \\ 
+    & = a_n \left(   1  + \frac1n \right) \\
+    & > a_n \,.
+\end{align*}
+Since $(a_n)$ is increasing and $(b_n)$ is decreasing, in particular
+$$
+a_n \geq a_1 \,, \quad b_n \leq b_1 \,.
+$$
+Therefore
+$$
+a_1 \leq a_n < b_n \leq b_1 \,, \quad \forall \, n \in \N \,.
+$$
+We compute
+$$
+a_1 = 2 \,, \quad b_1 = 4 \,,
+$$
+from which we get 
+$$
+2 \leq a_n \leq 4 \,, \quad \forall \, n \in \N \,.
+$$
+Therefore 
+$$
+|a_n| \leq 4 \,, \quad \forall \, n \in \N \,,
+$$
+showing that $(a_n)$ is bounded.
+
+
+*Part 3.* The sequence $(a_n)$ is increasing and bounded above. Therefore $(a_n)$ is convergent by the Monotone Convergence Theorem \ref{theorem-monotone-convergence}.
 
 :::
+
+
 
 
 Thanks to Theorem \ref{theorem-euler-number} we can define the Euler's Number $e$.
@@ -2475,9 +2602,9 @@ $$
 :::
 
 
-Already for $n=1000$ we have a good approximation of $e$:
+Setting $n=1000$ in the formula for $(a_n)$, we get an approximation of $e$:
 $$
-a_{1000} = 2.7169 \,.
+e \approx a_{1000} = 2.7169 \,.
 $$
 
 
@@ -2485,6 +2612,268 @@ $$
 
 
 
+## Some important limits
+
+
+
+In this section we investigate limits of some sequences to which 
+the Limit Tests do not apply.
+
+
+::: Theorem
+
+Let $x \in \R$, with $x > 0$. Then
+$$
+\lim_{n \to \infty} \sqrt[n]{x} = 1 \,.
+$$
+
+:::
+
+
+::: Proof
+
+*Step 1.* Assume $x \geq 1$. In this case
+$$
+\sqrt[n]{x} \geq 1 \,.
+$$
+Define 
+$$
+b_n := \sqrt[n]{x} - 1 \,,
+$$
+so that $b_n \geq 0$. By Bernoulli's Inequality we have
+$$
+x = (1 + b_n)^n \geq 1 + n b_n \,.
+$$
+Therefore 
+$$
+0 \leq b_n \leq \frac{x-1}{n} \,.
+$$
+Since 
+$$
+\frac{x-1}{n} \longrightarrow 0 \,,
+$$
+by the Squeeze Theorem we infer $b_n \to 0$, and hence 
+$$
+\sqrt[n]{x} = 1 + b_n \longrightarrow 1 + 0 = 1\,, 
+$$
+by the Algebra of Limits.
+
+*Step 2.* Assume $0< x < 1$. In this case
+$$
+\frac{1}{x} > 1 \,.
+$$
+Therefore
+$$
+\lim_{n \to \infty} \, \sqrt[n]{  1/x  } = 1  \,.
+$$
+by Step 1. Therefore
+$$
+\sqrt[n]{x} = \frac{1}{\sqrt[n]{  1/x  }} \longrightarrow \frac{1}{1} = 1\,,
+$$
+by the Algebra of Limits.
+
+:::
+
+
+
+::: {.Theorem   #theorem-important-limit-1}
+
+Let $(a_n)$ be a sequence such that $a_n \to 0$. Then
+$$
+\sin(a_n) \to 0 \,, \quad 
+\cos(a_n) \to 1 \,.
+$$
+
+:::
+
+::: Proof
+
+*Step 1*. We prove that 
+$$
+\sin(a_n) \to 0 \,.
+$$
+By elementary trigonometry we have
+$$
+0 \leq |\sin (x)| = \sin |x| \leq |x| \,, \quad \forall  \, x \in \left[
+-\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
+$${#eq-limiti-notevoli-1}
+Since $a_n \to 0$, there exists $N \in \N$ such that
+$$
+|a_n| < \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
+$$
+Therefore, by inequality (@eq-limiti-notevoli-1), we get
+$$
+0 \leq |\sin (a_n)|  \leq |a_n| \,, \quad \forall \, n \geq \N \,.
+$$
+Since $a_n \to 0$, we also have $|a_n|\to 0$. Therefore 
+$|\sin (a_n)| \to 0$ by the Squeeze Theorem. This immediately implies 
+$\sin(a_n) \to 0$.
+
+*Step 2*. We prove that 
+$$
+\cos(a_n) \to 1 \,.
+$$
+Inverting the relation
+$$
+\cos^2(x) + \sin^2 (x) = 1 \,,
+$$
+we obtain
+$$
+\cos(x) = \pm \sqrt{ 1 - \sin^2 (x) } \,.
+$$
+We have that $\cos(x) \geq 0$ for $-\pi/2 \leq x \leq \pi/2$. Thus
+$$
+\cos(x) = \sqrt{ 1 - \sin^2 (x) } \,, \quad \forall \, x \in 
+\left[ -\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
+$$
+Since $a_n \to 0$, there exists $N \in \N$ such that
+$$
+|a_n| < \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
+$$
+Therefore 
+$$
+\cos(a_n) = \sqrt{ 1 - \sin^2 (a_n) } \,, \quad \forall \, n \geq N \,. 
+$$
+By Step 1 we know that $\sin(a_n) \to 0$. Therefore, by the Algebra of Limits,
+$$
+ 1 - \sin^2 (a_n) \longrightarrow 1 - 0 \cdot 0 = 1 \,.
+$$
+Using Theorem \ref{theorem-square-root-limit} we have
+$$
+\cos(a_n) = \sqrt{1 - \sin^2 (a_n)} \longrightarrow \sqrt{1} = 1 \,,
+$$
+concluding the proof.
+
+
+:::
+
+
+
+::: {.Theorem  #theorem-important-limit-2}
+
+Suppose $(a_n)$ is such that $a_n \to 0$ and 
+$$
+a_n \neq 0 \,, \quad \forall \, n \in \N \, .
+$$
+Then
+$$
+\lim_{n \to \infty} \frac{\sin(a_n)}{a_n} = 1 \,.
+$$
+
+:::
+
+
+::: Proof
+
+The following elementary trigonometric inequality holds:
+$$
+\sin (x) < x < \tan (x) \,, \quad \forall \, x \in \left[0 ,\frac{\pi}{2} \right]  \,.
+$$
+Note that $\sin x >0$ for $0 < x < \pi/2$. Therefore we can divide the
+above inequality by $\sin(x)$ and take the reciprocals to get
+$$
+\cos(x) < \frac{\sin (x)}{x} < 1 \,, \quad \forall \, x \in \left[0 ,\frac{\pi}{2} \right] \,.
+$$
+If $-\pi/2<x<0$, we can apply the above inequality to $-x$ to obtain
+$$
+\cos(-x) < \frac{\sin(-x)}{-x} < 1  \,.
+$$
+Recalling that $\cos(-x) = \cos(x)$ and $\sin(-x)=-\sin(x)$, we get
+$$
+\cos(x) < \frac{\sin(x)}{x} < 1  \,, \quad \forall \, x \in \left[-\frac{\pi}{2}, 0 \right] \,.
+$$
+Thus
+$$
+\cos(x) < \frac{\sin(x)}{x} < 1  \,, \quad \forall  \, x \in \left[-\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
+$$
+Since $a_n \to 0$, there exists $N \in \N$ such that
+$$
+|a_n| < \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
+$$
+Hence
+$$
+\cos(a_n) < \frac{\sin(a_n)}{a_n} < 1  \,, \quad \forall  \, n \geq N \,.
+$$
+We have 
+$$
+\cos(a_n) \to 1
+$$ 
+by Theorem \ref{theorem-important-limit-1}. By the Squeeze Theorem we conclude that
+$$
+\lim_{n \to \infty} \frac{\sin(a_n)}{a_n} = 1 \,.
+$$
+
+:::
+
+
+
+::: Warning
+
+You might be tempted to apply L'Hôpital's rule (which we did not cover in these Lecture Notes) to compute 
+$$
+\lim_{x \to 0} \frac{\sin(x)}{x}  \,.
+$$
+This would yield the correct limit
+$$
+\lim_{x \to 0} \frac{\sin(x)}{x} =
+\lim_{x \to 0} \frac{(\sin(x))'}{(x)'} = 
+\lim_{x \to 0} \cos(x) = 1  \,.
+$$
+However this is a circular argument, since the derivative of 
+$\sin(x)$ at $x=0$ is defined as the limit
+$$
+\lim_{x \to 0} \frac{\sin(x)}{x} \,.
+$$
+
+:::
+
+
+
+
+::: Theorem
+
+Suppose $(a_n)$ is such that $a_n \to 0$ and 
+$$
+a_n \neq 0 \,, \quad \forall \, n \in \N \, .
+$$
+Then
+\begin{align*}
+\lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,, \\
+\lim_{n \to \infty} \frac{1 - \cos(a_n)}{a_n} = 0  \, . \\
+\end{align*}
+
+:::
+
+
+::: Proof
+
+*Step 1.*  By Theorem \ref{theorem-important-limit-1} and Theorem \ref{theorem-important-limit-2}, we have
+$$
+\cos(a_n) \to 1 \,, \quad \frac{\sin(a_n)}{a_n} \to 1 \,.
+$$
+Therefore
+\begin{align*}
+\frac{1 - \cos(a_n)}{(a_n)^2} & = 
+\frac{1 - \cos(a_n)}{(a_n)^2} \, \frac{1 + \cos(a_n)}{1 + \cos(a_n)} \\
+& = \frac{1 - \cos^2(a_n)}{(a_n)^2} \,  \frac{1}{1 + \cos(a_n)} \\
+& = \left( \frac{\sin(a_n)}{a_n}   \right)^2 \, \frac{1}{1 + \cos(a_n)} \longrightarrow 1 \cdot \frac{1}{1 + 1} = \frac12 \,,
+\end{align*}
+where in the last line we use the Algebra of Limits. 
+
+*Step 2.* We have
+$$
+\frac{1 - \cos(a_n)}{a_n} =  a_n \cdot \frac{1 - \cos(a_n)}{(a_n)^2} \longrightarrow 0 \cdot \frac{1}{2} = 0 \,, 
+$$
+using Step 1 and the Algebra of Limits.
+
+
+
+:::
+
+
+
+
+::: {.content-hidden}
 
 
 
@@ -2495,11 +2884,6 @@ Use abbot, marcellini, and analisi sapienza note. For next year remove integral 
 
 Do this from abbott or marcellini. For the moment we have only done
 divergent as non-convergent. Would need definition of Divergence to $\pm \infty$. Vedi anche forme indeterminate a pagina 96 Marcellini.
-
-
-## Some notable limits
-
-Marcellini Page 101. Also  see what is the english name for limiti notevoli.
 
 
 
@@ -2681,6 +3065,8 @@ $$
 $$
 Therefore the RHS of (@eq-heron-final) converges to $\sqrt{x}$ as $n \to \infty$. Applying the Squeeze Theorem to (@eq-heron-final) we conclude that $a_n \to \sqrt{x}$ as $n \to \infty$.
 :::
+
+
 
 
 

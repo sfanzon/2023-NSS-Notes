@@ -66,7 +66,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Corollary {
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -74,21 +82,17 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Problem {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Conjecture {
   --color1: #f4cce0;
@@ -98,41 +102,37 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
 }
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 </style>
 
@@ -265,7 +265,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#geometric-sequences" id="toc-geometric-sequences" class="nav-link" data-scroll-target="#geometric-sequences"><span class="header-section-number">6.8.2</span> Geometric sequences</a></li>
   <li><a href="#ratio-test" id="toc-ratio-test" class="nav-link" data-scroll-target="#ratio-test"><span class="header-section-number">6.8.3</span> Ratio Test</a></li>
   </ul></li>
-  <li><a href="#monotone-sequences" id="toc-monotone-sequences" class="nav-link" data-scroll-target="#monotone-sequences"><span class="header-section-number">6.9</span> Monotone sequences</a></li>
+  <li><a href="#monotone-sequences" id="toc-monotone-sequences" class="nav-link" data-scroll-target="#monotone-sequences"><span class="header-section-number">6.9</span> Monotone sequences</a>
+  <ul class="collapse">
+  <li><a href="#example-eulers-number" id="toc-example-eulers-number" class="nav-link" data-scroll-target="#example-eulers-number"><span class="header-section-number">6.9.1</span> Example: Euler’s Number</a></li>
+  </ul></li>
+  <li><a href="#some-important-limits" id="toc-some-important-limits" class="nav-link" data-scroll-target="#some-important-limits"><span class="header-section-number">6.10</span> Some important limits</a></li>
   </ul>
 </nav>
     </div>
@@ -1379,7 +1383,7 @@ N &gt; \frac{1}{\varepsilon u} \,,
                      &amp; &lt; \varepsilon\,,
 \end{align*}\]</span> where we used Bernoulli’s inequality (<a href="#eq-bernoulli-inequality"><span>6.9</span></a>) in the first inequality.</p>
 <p><em>Part 2. The case <span class="math inline">\(|x|&gt;1\)</span></em>.</p>
-<p>To prove that (a_n) does not converge, we prove that it is unbounded. This means showing that <span class="math display">\[
+<p>To prove that <span class="math inline">\((a_n)\)</span> does not converge, we prove that it is unbounded. This means showing that <span class="math display">\[
 \forall \, M &gt; 0 \,, \, \exists n \in \mathbb{N}\, \text{ s.t. } \, \left| a_{n}\right| &gt;M \,.
 \]</span> Let <span class="math inline">\(M &gt; 0\)</span>. We have two cases:</p>
 <ul>
@@ -1513,8 +1517,8 @@ b_{n} &gt; r^{n-N} \, b_{N} = r^{n} \, \frac{b_{N}}{r^{N}} \,, \quad \forall \, 
 b_n = |a_n|\,,
 \]</span> we conclude that <span class="math inline">\((a_n)\)</span> is unbounded. By Corollary <a href="chap_6.html#corollary-convergent-bounded">22</a> we conclude that <span class="math inline">\((a_n)\)</span> does not converge.</p></li>
 </ul>
-<p><em>Part 2.</em> Suppose that there exists <span class="math inline">\(N \in \mathbb{N}\)</span> and <span class="math inline">\(M&gt;1\)</span> such that <span class="math display">\[
-\left|\frac{a_{n+1}}{a_{n}}\right| \geq M \,, \quad \forall \, n \geq N \,.
+<p><em>Part 2.</em> Suppose that there exists <span class="math inline">\(N \in \mathbb{N}\)</span> and <span class="math inline">\(L&gt;1\)</span> such that <span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}\right| \geq L \,, \quad \forall \, n \geq N \,.
 \]</span> Since <span class="math inline">\(b_n = |a_n|\)</span>, we infer <span class="math display">\[
 b_{n+1} \geq L \, b_n \,, \quad \forall \, n \geq N \,.
 \]</span> Arguing as above, we obtain <span class="math display">\[
@@ -1706,6 +1710,237 @@ s - \varepsilon&lt; a_n &lt; s + \varepsilon\quad \implies \quad |a_n - s | &lt;
 \lim_{n \to \infty} a_n = i \,.
 \]</span> This is left as an exercise.</p></li>
 </ol>
+</div></details>
+</div>
+<section id="example-eulers-number" class="level3" data-number="6.9.1">
+<h3 data-number="6.9.1" class="anchored" data-anchor-id="example-eulers-number"><span class="header-section-number">6.9.1</span> Example: Euler’s Number</h3>
+<p>As an application of the Monotone Convergence Theorem we can give a formal definition for the Euler’s Number <span class="math display">\[
+e = 2.71828182845904523536 \dots
+\]</span></p>
+<div id="theorem-euler-number" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 51</strong></summary><div>Consider the sequence <span class="math display">\[
+a_n = \left(  1 + \frac{1}{n}  \right)^n  \,.
+\]</span><p></p>
+<p>We have that:</p>
+<ol type="1">
+<li><span class="math inline">\((a_n)\)</span> is monotone increasing,</li>
+<li><span class="math inline">\((a_n)\)</span> is bounded.</li>
+</ol>
+<p>In particular <span class="math inline">\((a_n)\)</span> is convergent.</p>
+</div></details>
+</div>
+<div id="Proof*-24" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We prove that <span class="math inline">\((a_n)\)</span> is increasing <span class="math display">\[
+a_{n} \geq a_{n-1} \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> which by definition is equivalent to <span class="math display">\[
+\left(  1 + \frac{1}{n}  \right)^n \geq
+\left(  1 + \frac{1}{n + 1}  \right)^{n+1} \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Summing the fractions we get <span class="math display">\[
+\left(  \frac{n+1}{n}  \right)^n \geq
+\left(  \frac{n}{n-1}  \right)^n  \left(  \frac{n}{n-1}  \right) \,.
+\]</span> Dividing by the term <span class="math inline">\((n/(n-1))^n\)</span> we obtain <span class="math display">\[
+\left(  \frac{n^2 - 1}{n^2}  \right)^n \geq 1 - \frac1n \,,
+\]</span> which is equivalent to <span id="eq-proof-euler-1"><span class="math display">\[
+\left(  1 - \frac{1}{n^2}  \right)^n \geq 1 - \frac1n \,, \forall \, n \in \mathbb{N}\,.
+\tag{6.18}\]</span></span> Therefore <span class="math inline">\((a_n)\)</span> is increasing if and only if (<a href="#eq-proof-euler-1"><span>6.18</span></a>) holds. Recall Bernoulli’s inequality from Lemma <a href="chap_6.html#lemma-bernoulli">41</a>: For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x&gt;-1\)</span>, it holds <span class="math display">\[
+(1 + x )^n  \geq 1 + nx  \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Appliying Bernoulli’s inequality with <span class="math display">\[
+x = -\frac{1}{n^2}
+\]</span> yields <span class="math display">\[
+\left(  1 - \frac{1}{n^2}  \right)^n  \geq 1 + n \left( -\frac{1}{n^2} \right) = 1 - \frac{1}{n} \,,
+\]</span> which is exactly (<a href="#eq-proof-euler-1"><span>6.18</span></a>). Then <span class="math inline">\((a_n)\)</span> is increasing.<p></p>
+<p><em>Part 2</em>. We have to prove that <span class="math inline">\((a_n)\)</span> is bounded, that is, that there exists <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[
+|a_n| \leq M \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> To this end, introduce the sequence <span class="math inline">\((b_n)\)</span> by setting <span class="math display">\[
+b_n := \left(   1  + \frac1n \right)^{n+1} \,.
+\]</span> The sequence <span class="math inline">\((b_n)\)</span> is decreasing.</p>
+<blockquote class="blockquote">
+<p>To prove <span class="math inline">\((b_n)\)</span> is decreasing, we need to show that <span class="math display">\[
+b_{n-1} \geq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> To prove the above, we rewrite it as <span class="math display">\[
+\left(   1  + \frac{1}{n-1} \right)^{n} \geq
+\left(   1  + \frac{1}{n} \right)^{n+1} \,.
+\]</span> Expanding the fractions, the above is equivalent to <span class="math display">\[
+\left(   \frac{n}{n-1} \right)^{n} \geq
+\left(   \frac{n+1}{n} \right)^{n} \left(   \frac{n+1}{n} \right) \,.
+\]</span> Dividing by <span class="math inline">\(((n+1)/n)^n\)</span> we get <span class="math display">\[
+\left(  \frac{n^2}{n^2 - 1} \right)^{n} \geq  \left(   \frac{n+1}{n} \right) \,.
+\]</span> The above is equivalent to <span id="eq-proof-euler-3"><span class="math display">\[
+\left( 1 +  \frac{1}{n^2 - 1} \right)^{n} \geq  \left(  1 + \frac{1}{n} \right) \,.
+\tag{6.19}\]</span></span> Therefore <span class="math inline">\((b_n)\)</span> is decreasing if and only if (<a href="#eq-proof-euler-3"><span>6.19</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>. By choosing <span class="math display">\[
+x = \frac{1}{n^2 - 1}
+\]</span> in Bernoulli’s inequality, we obtain <span class="math display">\[\begin{align*}
+\left( 1 +  \frac{1}{n^2 - 1} \right)^{n} &amp; \geq 1 + n \left(  \frac{1}{n^2 - 1}   \right) \\
+&amp; = 1 + \frac{n}{n^2 - 1} \\
+&amp; \geq 1 + \frac1n \,,
+\end{align*}\]</span> where in the last inequality we used that <span class="math display">\[
+\frac{n}{n^2 - 1} &gt; \frac1n \,,
+\]</span> which holds, being equivalent to <span class="math inline">\(n^2 &gt; n^2 - 1\)</span>. We have therefore proven (<a href="#eq-proof-euler-3"><span>6.19</span></a>), and hence <span class="math inline">\((b_n)\)</span> is decreasing.</p>
+</blockquote>
+<p>We now observe that For all <span class="math inline">\(n \in \mathbb{N}\)</span> <span class="math display">\[\begin{align*}
+b_n &amp; = \left(   1  + \frac1n \right)^{n+1} \\
+    &amp; = \left(   1  + \frac1n \right)^n \left(   1  + \frac1n \right) \\
+    &amp; = a_n \left(   1  + \frac1n \right) \\
+    &amp; &gt; a_n \,.
+\end{align*}\]</span> Since <span class="math inline">\((a_n)\)</span> is increasing and <span class="math inline">\((b_n)\)</span> is decreasing, in particular <span class="math display">\[
+a_n \geq a_1 \,, \quad b_n \leq b_1 \,.
+\]</span> Therefore <span class="math display">\[
+a_1 \leq a_n &lt; b_n \leq b_1 \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> We compute <span class="math display">\[
+a_1 = 2 \,, \quad b_1 = 4 \,,
+\]</span> from which we get <span class="math display">\[
+2 \leq a_n \leq 4 \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Therefore <span class="math display">\[
+|a_n| \leq 4 \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> showing that <span class="math inline">\((a_n)\)</span> is bounded.</p>
+<p><em>Part 3.</em> The sequence <span class="math inline">\((a_n)\)</span> is increasing and bounded above. Therefore <span class="math inline">\((a_n)\)</span> is convergent by the Monotone Convergence Theorem <a href="chap_6.html#theorem-monotone-convergence">50</a>.</p>
+</div></details>
+</div>
+<p>Thanks to Theorem <a href="chap_6.html#theorem-euler-number">51</a> we can define the Euler’s Number <span class="math inline">\(e\)</span>.</p>
+<div id="eulers-number" class="Definition" title="Euler’s Number">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 52: </strong>Euler’s Number</summary><div>The Euler’s number is defined as <span class="math display">\[
+e := \lim_{n \to \infty } \, \left(  1 + \frac{1}{n}  \right)^n \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Setting <span class="math inline">\(n=1000\)</span> in the formula for <span class="math inline">\((a_n)\)</span>, we get an approximation of <span class="math inline">\(e\)</span>: <span class="math display">\[
+e \approx a_{1000} = 2.7169 \,.
+\]</span></p>
+</section>
+</section>
+<section id="some-important-limits" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="some-important-limits"><span class="header-section-number">6.10</span> Some important limits</h2>
+<p>In this section we investigate limits of some sequences to which the Limit Tests do not apply.</p>
+<div id="Theorem-53" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 53</strong></summary><div>Let <span class="math inline">\(x \in \mathbb{R}\)</span>, with <span class="math inline">\(x &gt; 0\)</span>. Then <span class="math display">\[
+\lim_{n \to \infty} \sqrt[n]{x} = 1 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-25" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1.</em> Assume <span class="math inline">\(x \geq 1\)</span>. In this case <span class="math display">\[
+\sqrt[n]{x} \geq 1 \,.
+\]</span> Define <span class="math display">\[
+b_n := \sqrt[n]{x} - 1 \,,
+\]</span> so that <span class="math inline">\(b_n \geq 0\)</span>. By Bernoulli’s Inequality we have <span class="math display">\[
+x = (1 + b_n)^n \geq 1 + n b_n \,.
+\]</span> Therefore <span class="math display">\[
+0 \leq b_n \leq \frac{x-1}{n} \,.
+\]</span> Since <span class="math display">\[
+\frac{x-1}{n} \longrightarrow 0 \,,
+\]</span> by the Squeeze Theorem we infer <span class="math inline">\(b_n \to 0\)</span>, and hence <span class="math display">\[
+\sqrt[n]{x} = 1 + b_n \longrightarrow 1 + 0 = 1\,,
+\]</span> by the Algebra of Limits.<p></p>
+<p><em>Step 2.</em> Assume <span class="math inline">\(0&lt; x &lt; 1\)</span>. In this case <span class="math display">\[
+\frac{1}{x} &gt; 1 \,.
+\]</span> Therefore <span class="math display">\[
+\lim_{n \to \infty} \, \sqrt[n]{  1/x  } = 1  \,.
+\]</span> by Step 1. Therefore <span class="math display">\[
+\sqrt[n]{x} = \frac{1}{\sqrt[n]{  1/x  }} \longrightarrow \frac{1}{1} = 1\,,
+\]</span> by the Algebra of Limits.</p>
+</div></details>
+</div>
+<div id="theorem-important-limit-1" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 54</strong></summary><div>Let <span class="math inline">\((a_n)\)</span> be a sequence such that <span class="math inline">\(a_n \to 0\)</span>. Then <span class="math display">\[
+\sin(a_n) \to 0 \,, \quad
+\cos(a_n) \to 1 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-26" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1</em>. We prove that <span class="math display">\[
+\sin(a_n) \to 0 \,.
+\]</span> By elementary trigonometry we have <span id="eq-limiti-notevoli-1"><span class="math display">\[
+0 \leq |\sin (x)| = \sin |x| \leq |x| \,, \quad \forall  \, x \in \left[
+-\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
+\tag{6.20}\]</span></span> Since <span class="math inline">\(a_n \to 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+|a_n| &lt; \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
+\]</span> Therefore, by inequality (<a href="#eq-limiti-notevoli-1"><span>6.20</span></a>), we get <span class="math display">\[
+0 \leq |\sin (a_n)|  \leq |a_n| \,, \quad \forall \, n \geq \mathbb{N}\,.
+\]</span> Since <span class="math inline">\(a_n \to 0\)</span>, we also have <span class="math inline">\(|a_n|\to 0\)</span>. Therefore <span class="math inline">\(|\sin (a_n)| \to 0\)</span> by the Squeeze Theorem. This immediately implies <span class="math inline">\(\sin(a_n) \to 0\)</span>.<p></p>
+<p><em>Step 2</em>. We prove that <span class="math display">\[
+\cos(a_n) \to 1 \,.
+\]</span> Inverting the relation <span class="math display">\[
+\cos^2(x) + \sin^2 (x) = 1 \,,
+\]</span> we obtain <span class="math display">\[
+\cos(x) = \pm \sqrt{ 1 - \sin^2 (x) } \,.
+\]</span> We have that <span class="math inline">\(\cos(x) \geq 0\)</span> for <span class="math inline">\(-\pi/2 \leq x \leq \pi/2\)</span>. Thus <span class="math display">\[
+\cos(x) = \sqrt{ 1 - \sin^2 (x) } \,, \quad \forall \, x \in
+\left[ -\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
+\]</span> Since <span class="math inline">\(a_n \to 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+|a_n| &lt; \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
+\]</span> Therefore <span class="math display">\[
+\cos(a_n) = \sqrt{ 1 - \sin^2 (a_n) } \,, \quad \forall \, n \geq N \,.
+\]</span> By Step 1 we know that <span class="math inline">\(\sin(a_n) \to 0\)</span>. Therefore, by the Algebra of Limits, <span class="math display">\[
+1 - \sin^2 (a_n) \longrightarrow 1 - 0 \cdot 0 = 1 \,.
+\]</span> Using Theorem <a href="chap_6.html#theorem-square-root-limit">32</a> we have <span class="math display">\[
+\cos(a_n) = \sqrt{1 - \sin^2 (a_n)} \longrightarrow \sqrt{1} = 1 \,,
+\]</span> concluding the proof.</p>
+</div></details>
+</div>
+<div id="theorem-important-limit-2" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 55</strong></summary><div>Suppose <span class="math inline">\((a_n)\)</span> is such that <span class="math inline">\(a_n \to 0\)</span> and <span class="math display">\[
+a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
+\]</span> Then <span class="math display">\[
+\lim_{n \to \infty} \frac{\sin(a_n)}{a_n} = 1 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-27" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>The following elementary trigonometric inequality holds: <span class="math display">\[
+\sin (x) &lt; x &lt; \tan (x) \,, \quad \forall \, x \in \left[0 ,\frac{\pi}{2} \right]  \,.
+\]</span> Note that <span class="math inline">\(\sin x &gt;0\)</span> for <span class="math inline">\(0 &lt; x &lt; \pi/2\)</span>. Therefore we can divide the above inequality by <span class="math inline">\(\sin(x)\)</span> and take the reciprocals to get <span class="math display">\[
+\cos(x) &lt; \frac{\sin (x)}{x} &lt; 1 \,, \quad \forall \, x \in \left[0 ,\frac{\pi}{2} \right] \,.
+\]</span> If <span class="math inline">\(-\pi/2&lt;x&lt;0\)</span>, we can apply the above inequality to <span class="math inline">\(-x\)</span> to obtain <span class="math display">\[
+\cos(-x) &lt; \frac{\sin(-x)}{-x} &lt; 1  \,.
+\]</span> Recalling that <span class="math inline">\(\cos(-x) = \cos(x)\)</span> and <span class="math inline">\(\sin(-x)=-\sin(x)\)</span>, we get <span class="math display">\[
+\cos(x) &lt; \frac{\sin(x)}{x} &lt; 1  \,, \quad \forall \, x \in \left[-\frac{\pi}{2}, 0 \right] \,.
+\]</span> Thus <span class="math display">\[
+\cos(x) &lt; \frac{\sin(x)}{x} &lt; 1  \,, \quad \forall  \, x \in \left[-\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
+\]</span> Since <span class="math inline">\(a_n \to 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+|a_n| &lt; \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
+\]</span> Hence <span class="math display">\[
+\cos(a_n) &lt; \frac{\sin(a_n)}{a_n} &lt; 1  \,, \quad \forall  \, n \geq N \,.
+\]</span> We have <span class="math display">\[
+\cos(a_n) \to 1
+\]</span> by Theorem <a href="chap_6.html#theorem-important-limit-1">54</a>. By the Squeeze Theorem we conclude that <span class="math display">\[
+\lim_{n \to \infty} \frac{\sin(a_n)}{a_n} = 1 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Warning*-28" class="Warning">
+<p></p><details class="Warning fbx-simplebox fbx-default" open=""><summary><strong>Warning</strong></summary><div>You might be tempted to apply L’Hôpital’s rule (which we did not cover in these Lecture Notes) to compute <span class="math display">\[
+\lim_{x \to 0} \frac{\sin(x)}{x}  \,.
+\]</span> This would yield the correct limit <span class="math display">\[
+\lim_{x \to 0} \frac{\sin(x)}{x} =
+\lim_{x \to 0} \frac{(\sin(x))'}{(x)'} =
+\lim_{x \to 0} \cos(x) = 1  \,.
+\]</span> However this is a circular argument, since the derivative of <span class="math inline">\(\sin(x)\)</span> at <span class="math inline">\(x=0\)</span> is defined as the limit <span class="math display">\[
+\lim_{x \to 0} \frac{\sin(x)}{x} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Theorem-56" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 56</strong></summary><div>Suppose <span class="math inline">\((a_n)\)</span> is such that <span class="math inline">\(a_n \to 0\)</span> and <span class="math display">\[
+a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
+\]</span> Then <span class="math display">\[\begin{align*}
+\lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,, \\
+\lim_{n \to \infty} \frac{1 - \cos(a_n)}{a_n} = 0  \, . \\
+\end{align*}\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-29" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1.</em> By Theorem <a href="chap_6.html#theorem-important-limit-1">54</a> and Theorem <a href="chap_6.html#theorem-important-limit-2">55</a>, we have <span class="math display">\[
+\cos(a_n) \to 1 \,, \quad \frac{\sin(a_n)}{a_n} \to 1 \,.
+\]</span> Therefore <span class="math display">\[\begin{align*}
+\frac{1 - \cos(a_n)}{(a_n)^2} &amp; =
+\frac{1 - \cos(a_n)}{(a_n)^2} \, \frac{1 + \cos(a_n)}{1 + \cos(a_n)} \\
+&amp; = \frac{1 - \cos^2(a_n)}{(a_n)^2} \,  \frac{1}{1 + \cos(a_n)} \\
+&amp; = \left( \frac{\sin(a_n)}{a_n}   \right)^2 \, \frac{1}{1 + \cos(a_n)} \longrightarrow 1 \cdot \frac{1}{1 + 1} = \frac12 \,,
+\end{align*}\]</span> where in the last line we use the Algebra of Limits.<p></p>
+<p><em>Step 2.</em> We have <span class="math display">\[
+\frac{1 - \cos(a_n)}{a_n} =  a_n \cdot \frac{1 - \cos(a_n)}{(a_n)^2} \longrightarrow 0 \cdot \frac{1}{2} = 0 \,,
+\]</span> using Step 1 and the Algebra of Limits.</p>
 </div></details>
 </div>
 

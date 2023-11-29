@@ -719,6 +719,30 @@
 
  [**Proof**](#Proof*-6.23)\Pageref{Proof*-6.23}
 
+ [**Theorem 6.51**](#theorem-euler-number)\Pageref{theorem-euler-number}
+
+ [**Proof**](#Proof*-6.24)\Pageref{Proof*-6.24}
+
+ [**Definition 6.52**](#eulers-number): Euler’s Number\Pageref{eulers-number}
+
+ [**Theorem 6.53**](#Theorem-6.53)\Pageref{Theorem-6.53}
+
+ [**Proof**](#Proof*-6.25)\Pageref{Proof*-6.25}
+
+ [**Theorem 6.54**](#theorem-important-limit-1)\Pageref{theorem-important-limit-1}
+
+ [**Proof**](#Proof*-6.26)\Pageref{Proof*-6.26}
+
+ [**Theorem 6.55**](#theorem-important-limit-2)\Pageref{theorem-important-limit-2}
+
+ [**Proof**](#Proof*-6.27)\Pageref{Proof*-6.27}
+
+ [**Warning**](#Warning*-6.28)\Pageref{Warning*-6.28}
+
+ [**Theorem 6.56**](#Theorem-6.56)\Pageref{Theorem-6.56}
+
+ [**Proof**](#Proof*-6.29)\Pageref{Proof*-6.29}
+
  [**Definition 7.1**](#sequence-of-complex-numbers): Sequence of Complex numbers\Pageref{sequence-of-complex-numbers}
 
  [**Definition 7.2**](#definition-convergent-sequence-C): Convergent sequence in $\mathbb{C}$\Pageref{definition-convergent-sequence-C}
@@ -771,20 +795,76 @@
 
  [**Example 8.5**](#Example-8.5)\Pageref{Example-8.5}
 
- [**Theorem 8.6**](#theorem-series-necessary)\Pageref{theorem-series-necessary}
+ [**Theorem 8.6**](#theorem-series-necessary): Necessary Condition for Convergence\Pageref{theorem-series-necessary}
 
  [**Proof**](#Proof*-8.1)\Pageref{Proof*-8.1}
 
- [**Theorem 8.7**](#theorem-series-necessary-1)\Pageref{theorem-series-necessary-1}
+ [**Important**](#Important*-8.2)\Pageref{Important*-8.2}
+
+ [**Example 8.7**](#Example-8.7)\Pageref{Example-8.7}
 
  [**Example 8.8**](#Example-8.8)\Pageref{Example-8.8}
 
+ [**Important**](#Important*-8.3)\Pageref{Important*-8.3}
+
  [**Example 8.9**](#Example-8.9)\Pageref{Example-8.9}
 
- [**Important**](#Important*-8.2)\Pageref{Important*-8.2}
+ [**Remark 8.10**](#Remark-8.10)\Pageref{Remark-8.10}
 
- [**Example 8.10**](#Example-8.10)\Pageref{Example-8.10}
+ [**Example 8.11**](#Example-8.11)\Pageref{Example-8.11}
 
- [**Remark 8.11**](#Remark-8.11)\Pageref{Remark-8.11}
+ [**Definition 8.12**](#geometric-series-in-mathbbc): Geometric Series in $\mathbb{C}$\Pageref{geometric-series-in-mathbbc}
 
- [**Example 8.12**](#Example-8.12)\Pageref{Example-8.12}
+ [**Theorem 8.13**](#theorem-geometric-series-test): Geometric Series Test\Pageref{theorem-geometric-series-test}
+
+ [**Important**](#Important*-8.4)\Pageref{Important*-8.4}
+
+ [**Proof**](#Proof*-8.5)\Pageref{Proof*-8.5}
+
+ [**Example 8.14**](#Example-8.14)\Pageref{Example-8.14}
+
+ [**Example 8.15**](#Example-8.15)\Pageref{Example-8.15}
+
+ [**Example 8.16**](#Example-8.16)\Pageref{Example-8.16}
+
+ [**Theorem 8.17**](#theorem-algebra-limits-series): Algebra of Limits for Series\Pageref{theorem-algebra-limits-series}
+
+ [**Proof**](#Proof*-8.6)\Pageref{Proof*-8.6}
+
+ [**Example 8.18**](#Example-8.18)\Pageref{Example-8.18}
+
+ [**Important**](#Important*-8.7)\Pageref{Important*-8.7}
+
+ [**Example 8.19**](#Example-8.19)\Pageref{Example-8.19}
+
+ [**Definition 8.20**](#non-negative-series-1): Non-negative series\Pageref{non-negative-series-1}
+
+ [**Question 8.21**](#Question-8.21)\Pageref{Question-8.21}
+
+ [**Theorem 8.22**](#Theorem-8.22)\Pageref{Theorem-8.22}
+
+ [**Proof**](#Proof*-8.8)\Pageref{Proof*-8.8}
+
+ [**Theorem 8.23**](#theorem-harmonic-series): Harmonic series\Pageref{theorem-harmonic-series}
+
+ [**Proof**](#Proof*-8.9)\Pageref{Proof*-8.9}
+
+ [**Theorem 8.24**](#theorem-cauchy-test): Cauchy Condensation Test\Pageref{theorem-cauchy-test}
+
+ [**Proof**](#Proof*-8.10)\Pageref{Proof*-8.10}
+
+ [**Theorem 8.25**](#theorem-p-series): Convergence of $p$-series\Pageref{theorem-p-series}
+
+ [**Proof**](#Proof*-8.11)\Pageref{Proof*-8.11}
+
+ [**Theorem 8.26**](#theorem-p-log-series)\Pageref{theorem-p-log-series}
+
+ [**Proof**](#Proof*-8.12)\Pageref{Proof*-8.12}
+
+ [**Theorem 8.27**](#theorem-comparison-test): Comparison test\Pageref{theorem-comparison-test}
+
+ [**Proof**](#Proof*-8.13)\Pageref{Proof*-8.13}
+
+ [**Example 8.28**](#Example-8.28)\Pageref{Example-8.28}
+
+ [**Example 8.29**](#Example-8.29)\Pageref{Example-8.29}

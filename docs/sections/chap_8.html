@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -66,11 +85,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Important {
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -78,51 +93,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Question {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -130,7 +101,55 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
 .Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -254,6 +273,13 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#convergent-series" id="toc-convergent-series" class="nav-link active" data-scroll-target="#convergent-series"><span class="header-section-number">8.1</span> Convergent series</a></li>
   <li><a href="#geometric-series" id="toc-geometric-series" class="nav-link" data-scroll-target="#geometric-series"><span class="header-section-number">8.2</span> Geometric series</a></li>
+  <li><a href="#algebra-of-limits-for-series" id="toc-algebra-of-limits-for-series" class="nav-link" data-scroll-target="#algebra-of-limits-for-series"><span class="header-section-number">8.3</span> Algebra of Limits for Series</a></li>
+  <li><a href="#non-negative-series" id="toc-non-negative-series" class="nav-link" data-scroll-target="#non-negative-series"><span class="header-section-number">8.4</span> Non-negative series</a>
+  <ul class="collapse">
+  <li><a href="#cauchy-condensation-test" id="toc-cauchy-condensation-test" class="nav-link" data-scroll-target="#cauchy-condensation-test"><span class="header-section-number">8.4.1</span> Cauchy Condensation Test</a></li>
+  <li><a href="#comparison-test" id="toc-comparison-test" class="nav-link" data-scroll-target="#comparison-test"><span class="header-section-number">8.4.2</span> Comparison Test</a></li>
+  <li><a href="#limit-comparison-test" id="toc-limit-comparison-test" class="nav-link" data-scroll-target="#limit-comparison-test"><span class="header-section-number">8.4.3</span> Limit Comparison Test</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -280,166 +306,752 @@ ul.task-list li input[type="checkbox"] {
 <p>A series is the sum of all terms in a sequence: <span class="math display">\[
 a_1 + a_2 + a_3 + \ldots + a_n + \ldots
 \]</span> Since we are dealing with an infinite amount of terms, we need to be careful. For example, consider the series <span id="eq-series-introduction"><span class="math display">\[
-\sum_{k=1}^\infty (-1)^k = -1 + 1 - 1 + 1 - 1 + 1 - \ldots
+\sum_{n=1}^\infty (-1)^n = -1 + 1 - 1 + 1 - 1 + 1 - \ldots
 \tag{8.1}\]</span></span> If we sum the terms in pairs, we obtain <span class="math display">\[
-\sum_{k=1}^\infty (-1)^k = (-1 + 1) + (- 1 + 1) + ( - 1 + 1) + \ldots  = 0\,.
+\sum_{n=1}^\infty (-1)^n = (-1 + 1) + (- 1 + 1) + ( - 1 + 1) + \ldots  = 0\,.
 \]</span> If we reorder the terms, we obtain a different result <span class="math display">\[\begin{align*}
-\sum_{k=1}^\infty (-1)^k &amp; = (1 + 1) - 1 + (1 + 1) - 1 + \ldots  \\
+\sum_{k=1}^\infty (-1)^n &amp; = (1 + 1) - 1 + (1 + 1) - 1 + \ldots  \\
                          &amp; = (2 - 1) + (2 - 1) + \ldots \\
                          &amp; = 1 + 1 + \ldots \\
                          &amp; = \infty \,.
 \end{align*}\]</span> Therefore commutativity of the sum does not hold when summing infinitely many terms. We need a good definition of convergence.</p>
 <section id="convergent-series" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="convergent-series"><span class="header-section-number">8.1</span> Convergent series</h2>
-<p>We will develop the theory of series in for sequences in <span class="math inline">\(\mathbb{C}\)</span>. All the results for complex series will also hold for series in <span class="math inline">\(\mathbb{R}\)</span>. Some results will only hold for series in <span class="math inline">\(\mathbb{R}\)</span>: this will be the case for comparison tests in which the order relation of <span class="math inline">\(\mathbb{R}\)</span> is needed.</p>
+<p>We will develop the theory of series for sequences in <span class="math inline">\(\mathbb{C}\)</span>. All the results for complex series will also hold for series in <span class="math inline">\(\mathbb{R}\)</span>. Some results will only hold for series in <span class="math inline">\(\mathbb{R}\)</span>: this will be the case for comparison tests in which the order relation of <span class="math inline">\(\mathbb{R}\)</span> is needed.</p>
 <p>We start by defining partial sums.</p>
 <div id="partial-sums" class="Definition" title="Partial sums">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Partial sums</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The <span class="math inline">\(n\)</span>-th partial sum of <span class="math inline">\((a_n)\)</span> is <span class="math display">\[
-s_{n} :=a_{1}+a_{2}+\ldots+a_{n} = \sum_{k=1}^{n} a_{k}
-\]</span> This sequence <span class="math inline">\(\left(s_{n}\right)_{n \in \mathbb{N}}\)</span> is called the sequence of <strong>partial sums</strong>.<p></p>
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Partial sums</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The <span class="math inline">\(k\)</span>-th partial sum of <span class="math inline">\((a_n)\)</span> is <span class="math display">\[
+s_{k} :=a_{1}+a_{2}+\ldots+a_{k} = \sum_{n=1}^{k} a_{n}
+\]</span> This sequence <span class="math inline">\(\left(s_{k}\right)_{k \in \mathbb{N}}\)</span> is called the sequence of <strong>partial sums</strong>.<p></p>
 </div></details>
 </div>
 <p>We can use the sequence of partial sums to define convergence of a series.</p>
 <div id="convergent-series-1" class="Definition" title="Convergent series">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2: </strong>Convergent series</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. We denote the series of <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> by <span class="math display">\[
-\sum_{k=1}^{\infty} a_{k}
+\sum_{n=1}^{\infty} a_{n}
 \]</span> We say that this series <strong>converges</strong> to <span class="math inline">\(s \in \mathbb{C}\)</span> if <span class="math display">\[
-\lim_{n \rightarrow \infty} \sum_{k=1}^{n} a_{k} =
-\lim_{n \rightarrow \infty} s_{n} = s \,.
+\lim_{k \rightarrow \infty} \sum_{n=1}^{k} a_{n} =
+\lim_{k \rightarrow \infty} s_{k} = s \,.
 \]</span> In this case we write <span class="math display">\[
-\sum_{k=1}^{\infty} a_{k}=s \,.
+\sum_{n=1}^{\infty} a_{n} = s \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="divergent-series" class="Definition" title="Divergent series">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 3: </strong>Divergent series</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The series <span class="math display">\[
-\sum_{k=1}^\infty a_k
-\]</span> is <strong>divergent</strong> if the sequence of partial sums <span class="math inline">\((s_n)\)</span> is divergent.<p></p>
+\sum_{n=1}^\infty a_n
+\]</span> is <strong>divergent</strong> if the sequence of partial sums <span class="math inline">\((s_k)\)</span> is divergent.<p></p>
 </div></details>
 </div>
 <div id="Example-4" class="Example">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 4</strong></summary><div>Consider the series <span class="math display">\[
-\sum_{k=1}^{\infty} \frac{1}{k(k+1)} \,.
+\sum_{n=1}^{\infty} \frac{1}{n(n+1)} \,.
 \]</span> Note that <span class="math display">\[
-\frac{1}{k(k+1)}=\frac{1}{k}-\frac{1}{k+1} \,.
+\frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1} \,.
 \]</span> Hence, we can compute the partial sums <span class="math inline">\(s_{n}\)</span> as follows: <span class="math display">\[\begin{align*}
-s_{n} &amp; =\sum_{k=1}^{n} \frac{1}{k(k+1)} \\
-&amp; =\sum_{k=1}^{n}\left(\frac{1}{k}-\frac{1}{k+1}\right) \\
-&amp; =\frac{1}{1}-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\frac{1}{4}+\ldots+\frac{1}{n}-\frac{1}{n+1} \\
-&amp; =1-\frac{1}{n+1} .
+s_{k} &amp; =\sum_{n=1}^{k} \frac{1}{n(n+1)} \\
+&amp; =\sum_{n=1}^{k}\left(\frac{1}{n}-\frac{1}{n+1}\right) \\
+&amp; =\frac{1}{1}-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\frac{1}{4}+\ldots+\frac{1}{k}-\frac{1}{k+1} \\
+&amp; =1-\frac{1}{k+1} .
 \end{align*}\]</span> Since, <span class="math display">\[
-\lim_{n \rightarrow \infty} s_{n}=\lim _{n \rightarrow \infty}\left(1-\frac{1}{n+1}\right)=1 \,,
-\]</span> the series converges to 1 , i.e., <span class="math display">\[
-\sum_{k=1}^{\infty} \frac{1}{k(k+1)}=1 \,.
+\lim_{k \rightarrow \infty} s_{k}=\lim _{k \rightarrow \infty}\left(1-\frac{1}{k+1}\right)=1 \,,
+\]</span> the series converges to <span class="math inline">\(1\)</span>, that is, <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1}{n(n+1)}=1 \,.
 \]</span> A series of this kind is called a <strong>telescopic sum</strong>, since we can <em>fold</em> the entire partial sum together, in such a way that only two terms remain.<p></p>
 </div></details>
 </div>
 <p>Let us go back to the series considered in (<a href="#eq-series-introduction"><span>8.1</span></a>).</p>
 <div id="Example-5" class="Example">
 <p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 5</strong></summary><div>Consider the series <span class="math display">\[
-\sum_{k=1}^{\infty}(-1)^{k} \,.
-\]</span> The partial sums <span class="math inline">\(s_{n}\)</span> are given by <span class="math display">\[
-s_{n}=\sum_{k=1}^{n}(-1)^{k}=
+\sum_{n=1}^{\infty}(-1)^{n} \,.
+\]</span> The partial sums <span class="math inline">\(s_{k}\)</span> are given by <span class="math display">\[
+s_{k}=\sum_{n=1}^{k}(-1)^{n}=
 \begin{cases}-1 &amp; \text { if } \, n \, \text { is odd }  \, \\
 0 &amp; \text { if } \, n  \, \text { is even. }\end{cases}
-\]</span> Therefore <span class="math inline">\(s_{n}\)</span> diverges, so also the series diverges.<p></p>
+\]</span> Therefore <span class="math inline">\(s_{k}\)</span> diverges, so also the series diverges.<p></p>
 </div></details>
 </div>
 <p>In general, it is a difficult taks to compute the exact value of a series. Therefore, we will mainly focus our effort on determining whether a series converges or not.</p>
 <p>The following theorem shows that if the terms in the sequence do not converge to <span class="math inline">\(0\)</span>, then the series cannot converge.</p>
-<div id="theorem-series-necessary" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 6</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. If the series <span class="math display">\[
-\sum_{k=1}^{\infty} a_{k}
+<div id="theorem-series-necessary" class="Theorem" title="Necessary Condition for Convergence">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 6: </strong>Necessary Condition for Convergence</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. If the series <span class="math display">\[
+\sum_{n=1}^{\infty} a_{n}
 \]</span> converges, then <span class="math display">\[
-\lim_{k \rightarrow \infty} a_{k}=0 \,.
+\lim_{n \rightarrow \infty} a_{n}=0 \,.
 \]</span><p></p>
 </div></details>
 </div>
 <div id="Proof*-1" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Suppose that <span class="math display">\[
-\sum_{k=1}^{\infty} a_{k}
+\sum_{n=1}^{\infty} a_{n}
 \]</span> converges. By definition of convergent series there exists some <span class="math inline">\(s \in \mathbb{C}\)</span> such that <span class="math display">\[
-\lim_{n \rightarrow \infty} s_{n}=\lim _{n \rightarrow \infty} \sum_{k=1}^{n} a_{k}=s \,.
-\]</span> Note that then also <span class="math display">\[
-\lim_{n \rightarrow \infty} s_{n+1}=s \,.
+\lim_{k \rightarrow \infty} s_{k}=\lim_{k \rightarrow \infty} \sum_{n=1}^{k} a_{n} = s \,.
+\]</span> Then also <span class="math display">\[
+\lim_{k \rightarrow \infty} s_{k+1} = s \,.
 \]</span> Hence, by the Algebra of Limits in <span class="math inline">\(\mathbb{C}\)</span>, we have that <span class="math display">\[
-\lim_{n \rightarrow \infty}\left(s_{n+1}-s_{n}\right)=\lim _{n \rightarrow \infty} s_{n+1}-\lim _{n \rightarrow \infty} s_{n}=s-s=0 \,.
+\lim_{k \rightarrow \infty}\left(s_{k+1}-s_{k}\right)=\lim _{k \rightarrow \infty} s_{k+1}-\lim_{k \rightarrow \infty} s_{k} = s - s = 0 \,.
 \]</span> Noting that <span class="math display">\[
-s_{n+1}-s_{n}=a_{n+1}\,,
+s_{k+1} - s_{k} = a_{k+1}\,, \quad \forall \, k \in \mathbb{N}\,,
 \]</span> we obtain <span class="math display">\[
-\lim _{n \rightarrow \infty} a_{n}=\lim _{n \rightarrow \infty} a_{n+1}=\lim _{n \rightarrow \infty}\left(s_{n+1}-s_{n}\right)=0 \, .
+\lim_{k \rightarrow \infty} a_{k}
+= \lim_{k \rightarrow \infty} a_{k+1}
+= \lim_{k \rightarrow \infty} \left( s_{k+1} - s_{k} \right) = 0 \, .
 \]</span><p></p>
 </div></details>
 </div>
-<p>The contrapositive statement of Theorem <a href="chap_8.html#theorem-series-necessary">6</a> is particularly useful. For clarity, we give the precise statement.</p>
-<div id="theorem-series-necessary-1" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 7</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. If <span class="math display">\[
-\lim_{k \rightarrow \infty} a_{k} \neq 0 \,,
+<div id="Important*-2" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>Theorem <a href="chap_8.html#theorem-series-necessary">6</a> is saying that, if <span class="math display">\[
+\lim_{n \rightarrow \infty} a_{n} \neq 0 \,,
 \]</span> then the series <span class="math display">\[
-\sum_{k=1}^{\infty} a_{k}
+\sum_{n=1}^{\infty} a_{n}
 \]</span> does not converge.<p></p>
 </div></details>
 </div>
-<div id="Example-8" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 8</strong></summary><div>Consider the series <span id="eq-example-series-1"><span class="math display">\[
-\sum_{k=1}^\infty  (-1)^k \,.
+<div id="Example-7" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 7</strong></summary><div>Consider the series <span id="eq-example-series-1"><span class="math display">\[
+\sum_{n=1}^\infty  (-1)^n \,.
 \tag{8.2}\]</span></span> We have that <span class="math display">\[
-\lim_{k \to \infty} a_k = \lim_{k \to \infty} (-1)^k  \neq 0 \,,
-\]</span> being <span class="math inline">\(a_k\)</span> divergent. Therefore the series at (<a href="#eq-example-series-1"><span>8.2</span></a>) diverges by Theorem <a href="chap_8.html#theorem-series-necessary-1">7</a>.<p></p>
+\lim_{n \to \infty} a_n = \lim_{n \to \infty} (-1)^n  \neq 0 \,,
+\]</span> being <span class="math inline">\((a_n)\)</span> divergent. Therefore the series at (<a href="#eq-example-series-1"><span>8.2</span></a>) diverges by Theorem <a href="chap_8.html#theorem-series-necessary">6</a>.<p></p>
 </div></details>
 </div>
-<div id="Example-9" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 9</strong></summary><div>Consider the series <span class="math display">\[
+<div id="Example-8" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 8</strong></summary><div>Consider the series <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{n}{5 n+11} \,.
 \]</span> Then <span class="math display">\[
-a_{n}:=\frac{n}{5 n+11}=\frac{1}{5 + \dfrac{11}{n} } \longrightarrow \frac{1}{5} \neq 0 \text {. }
+a_{n}:=\frac{n}{5 n+11}=\frac{1}{5 + \dfrac{11}{n} } \longrightarrow \frac{1}{5} \neq 0 \,.
 \]</span> Hence, the series does not converge.<p></p>
 </div></details>
 </div>
-<div id="Important*-2" class="Important">
-<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>Theorem <a href="chap_8.html#theorem-series-necessary-1">7</a> says that if <span class="math inline">\(\sum_{k=1}^\infty a_k\)</span> converges, then <span class="math display">\[
-a_k \to 0 \,.
-\]</span> In general the condition <span class="math inline">\(a_k \to 0\)</span> does not guarantee convergence of the associated series, as shown in the example below.<p></p>
+<div id="Important*-3" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>Theorem <a href="chap_8.html#theorem-series-necessary">6</a> says that if <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> converges, then <span class="math display">\[
+a_n \to 0 \,.
+\]</span> The converse is false: In general the condition <span class="math inline">\(a_n \to 0\)</span> does not guarantee convergence of the associated series, as shown in the example below.<p></p>
 </div></details>
 </div>
-<div id="Example-10" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 10</strong></summary><div>
+<div id="Example-9" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 9</strong></summary><div>
 <p>Consider the series <span class="math display">\[
-\sum_{k=1}^\infty a_k \,, \quad a_k := \frac{1}{ \sqrt{k+1} + \sqrt{k} } \,.
+\sum_{n=1}^\infty a_n \,, \quad a_n := \frac{1}{ \sqrt{n+1} + \sqrt{n} } \,.
 \]</span> By the Algebra of Limits we have <span class="math display">\[
-\lim_{k \to \infty} a_k = 0 \,.
+\lim_{n \to \infty} a_n = 0 \,.
 \]</span> However the partial sums are given by <span class="math display">\[
-s_n = \sum_{k=1}^n a_k = \sqrt{n+1} - 1 \,.
-\]</span> Therefore <span class="math inline">\(s_n\)</span> is divergent and so the series is divergent.</p>
+s_k = \sum_{n=1}^k a_n = \sqrt{k+1} - 1 \,.
+\]</span> Therefore <span class="math inline">\((s_k)\)</span> is divergent and so the series is divergent.</p>
 <blockquote class="blockquote">
-<p>Exercise: Prove by induction that <span class="math inline">\(\sum_{k=1}^n a_k = \sqrt{n+1} - 1\)</span>.</p>
+<p>Exercise: Prove by induction that <span class="math display">\[
+\sum_{n=1}^k a_n = \sqrt{k+1} - 1 \,.
+\]</span></p>
 </blockquote>
 </div></details>
 </div>
-<div id="Remark-11" class="Remark">
-<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 11</strong></summary><div>It is customary to sum a series starting at <span class="math inline">\(k=1\)</span>. However one could start the sum from any <span class="math inline">\(k=N\)</span> with <span class="math inline">\(N \in \mathbb{N}\)</span>. This would not affect the convergence of the series, but of course it will change the value of the limit.<p></p>
+<div id="Remark-10" class="Remark">
+<p></p><details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 10</strong></summary><div>It is customary to sum a series starting at <span class="math inline">\(n=1\)</span>. However one could start the sum at any <span class="math inline">\(n=N\)</span> with <span class="math inline">\(N \in \mathbb{N}\)</span>. This does not affect the convergence of the series, but of course it changes the value of the limit.<p></p>
 </div></details>
 </div>
-<div id="Example-12" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 12</strong></summary><div>We have seen that <span class="math display">\[
-\sum_{k=1}^{\infty} \frac{1}{k(k+1)} = 1 \,.
+<div id="Example-11" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 11</strong></summary><div>We have seen that <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1}{n(n+1)} = 1 \,.
 \]</span> Hence also the series <span class="math display">\[
-\sum_{k=7}^{\infty} \frac{1}{k(k+1)}
+\sum_{n=7}^{\infty} \frac{1}{n(n+1)}
 \]</span> converges. However, in this case, the partial sums are given by <span class="math display">\[\begin{align*}
-s_{n} &amp; =\sum_{k=7}^{n} \frac{1}{k(k+1)} \\
-      &amp; =\sum_{k=7}^{n}\left(\frac{1}{k}-\frac{1}{k+1}\right) \\
-      &amp; =\frac{1}{7}-\frac{1}{8}+\frac{1}{8}-\frac{1}{9}+\ldots+\frac{1}{n}-\frac{1}{n+1} \\
-      &amp; =\frac{1}{7}-\frac{1}{n+1} \,.
+s_{k} &amp; =\sum_{n=7}^{k} \frac{1}{n(n+1)} \\
+      &amp; =\sum_{n=7}^{k}\left(\frac{1}{n}-\frac{1}{n+1}\right) \\
+      &amp; =\frac{1}{7}-\frac{1}{8}+\frac{1}{8}-\frac{1}{9}+\ldots+\frac{1}{k}-\frac{1}{k+1} \\
+      &amp; =\frac{1}{7}-\frac{1}{k+1} \,.
 \end{align*}\]</span> Therefore <span class="math display">\[
-\sum_{k=7}^{\infty} \frac{1}{k(k+1)}=\lim _{n \rightarrow \infty} s_{n}=\frac{1}{7} \,.
+\sum_{n=7}^{\infty} \frac{1}{n(n+1)} = \lim_{k \rightarrow \infty} s_{k} = \frac{1}{7} \,.
 \]</span><p></p>
 </div></details>
 </div>
 </section>
 <section id="geometric-series" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="geometric-series"><span class="header-section-number">8.2</span> Geometric series</h2>
+<div id="geometric-series-in-mathbbc" class="Definition" title="Geometric Series in \mathbb{C}">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 12: </strong>Geometric Series in <span class="math inline">\(\mathbb{C}\)</span></summary><div>Let <span class="math inline">\(x \in \mathbb{C}\)</span>. The <strong>geometric series</strong> of ratio <span class="math inline">\(x\)</span> is the series <span class="math display">\[
+\sum_{n=0}^{\infty} x^{n} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Geometric series are one of the few types of series that can be explicitly computed, as stated in the following theorem.</p>
+<div id="theorem-geometric-series-test" class="Theorem" title="Geometric Series Test">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 13: </strong>Geometric Series Test</summary><div>
+<p>Let <span class="math inline">\(x \in \mathbb{C}\)</span>. We have:</p>
+<ol type="1">
+<li>If <span class="math inline">\(|x|&lt;1\)</span>, then the geometric series of ratio <span class="math inline">\(x\)</span> converges, with</li>
+</ol>
+<p><span id="eq-geometric-series-sum"><span class="math display">\[
+\sum_{n=0}^{\infty} x^{n}=\frac{1}{1-x} \,.
+\tag{8.3}\]</span></span></p>
+<ol start="2" type="1">
+<li>If <span class="math inline">\(|x| \geq 1\)</span>, then the geometric series of ratio <span class="math inline">\(x\)</span> diverges.</li>
+</ol>
+</div></details>
+</div>
+<div id="Important*-4" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>Recall that the Geometric Sequence Test does not cover the case <span class="math inline">\(|x|=1\)</span>, since in general the sequence <span class="math display">\[
+a_n = x^n
+\]</span> could be convergent or divergent. However the Geometric Series Test covers the case <span class="math inline">\(|x|=1\)</span>, in which case <span class="math display">\[
+\sum_{n=0}^{\infty} x^{n}
+\]</span> diverges.<p></p>
+</div></details>
+</div>
+<div id="Proof*-5" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1</em>. Suppose that <span class="math inline">\(|x|&lt;1\)</span>. By using induction we prove that <span id="eq-proof-geometric-series"><span class="math display">\[
+s_{k} := \sum_{n=0}^{k} x^{n}=\frac{1-x^{k+1}}{1-x} \,, \quad \forall \, k \in \mathbb{N}\,.
+\tag{8.4}\]</span></span><p></p>
+<ul>
+<li><p>Base case: For <span class="math inline">\(k=0\)</span>, we get that <span class="math display">\[
+s_{0} = x^{0} = 1 = \frac{1-x^{1}}{1-x} \,.
+\]</span></p></li>
+<li><p>Induction step: Let <span class="math inline">\(k \in \mathbb{N}\cup \{0\}\)</span> and suppose that <span class="math display">\[
+s_{k}=\frac{1-x^{k+1}}{1-x} \,.
+\]</span> Then, <span class="math display">\[\begin{align*}
+s_{k+1} &amp; = s_{k}+x^{k+1} \\
+      &amp; = \frac{1-x^{k+1}}{1-x}+x^{k+1} \\
+      &amp; = \frac{1-x^{k+1}+(1-x) x^{k+1}}{1-x} \\
+      &amp; = \frac{1-x^{k+1}+x^{k+1}-x^{k+2}}{1-x} \\
+      &amp; = \frac{1-x^{k+2}}{1-x} \,,
+\end{align*}\]</span> concluding the proof of the inductive step.</p></li>
+</ul>
+<p>By the Principle of Induction formula (<a href="#eq-proof-geometric-series"><span>8.4</span></a>) holds for all <span class="math inline">\(k \in \mathbb{N}\)</span>. Since <span class="math inline">\(|x|&lt;1\)</span>, by the Geometric Sequence Test we infer <span class="math display">\[
+\lim_{k \to \infty} \, x^{k} = 0 \,.
+\]</span> Hence <span class="math display">\[\begin{align*}
+\sum_{n=0}^{\infty} x^{n} &amp; = \lim_{k \to \infty } \, s_k \\
+                          &amp; = \lim_{k \rightarrow \infty}  \, \frac{1-x^{k+1}}{1-x} \\
+                          &amp; = \lim_{k \rightarrow \infty} \frac{1-x \cdot x^{k}}{1-x} \\
+                          &amp; = \frac{1}{1-x} \,,
+\end{align*}\]</span> where the last equality follows from the Algebra of Limits.</p>
+<p><em>Part 2.</em> Suppose <span class="math inline">\(|x| \geq 1\)</span>. Then <span id="eq-proof-geometric-series-2"><span class="math display">\[
+\lim_{n \to \infty} \, x^n \neq 0 \,.
+\tag{8.5}\]</span></span> Indeed, suppose by contradiction that <span class="math inline">\(x_n \to 0\)</span>. Hence, for <span class="math inline">\(\varepsilon= 1/2\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left|x^{n}-0\right| &lt; \varepsilon= \frac{1}{2}  \,, \quad \forall \, n \geq \mathbb{N}\,.
+\]</span> However <span class="math display">\[
+\left|x^{n}-0\right| = |x^n| = |x|^n \geq 1 \,,
+\]</span> which yields <span class="math display">\[
+1 &lt; \varepsilon= \frac12 \,,
+\]</span> contradiction. Then (<a href="#eq-proof-geometric-series-2"><span>8.5</span></a>) holds and the series <span class="math display">\[
+\sum_{n=0}^{\infty} x^{n}
+\]</span> diverges by the Necessary Condition in Theorem <a href="chap_8.html#theorem-series-necessary">6</a>.</p>
+</div></details>
+</div>
+<p>Let us show some applications of the Geometric Series Test of Theorem <a href="chap_8.html#theorem-geometric-series-test">13</a>.</p>
+<div id="Example-14" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 14</strong></summary><div>
+<ul>
+<li><p>Since <span class="math inline">\(\left|\frac{1}{2}\right|&lt;1\)</span> we have <span class="math display">\[
+\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}=\frac{1}{1-\dfrac{1}{2}}=2
+\]</span></p></li>
+<li><p>Since <span class="math inline">\(\left|\frac{-3}{2}\right|=\frac{3}{2}&gt;1\)</span> the series <span class="math display">\[
+\sum_{n=0}^{\infty}\left(\frac{-3}{2}\right)^{n}
+\]</span> does not converge.</p></li>
+<li><p>Since <span class="math inline">\(\left|\frac{-3}{4}\right|=\frac{3}{4}&lt;1\)</span>, we have <span class="math display">\[
+\sum_{n=0}^{\infty}\left(\frac{-3}{4}\right)^{n}=\frac{1}{1-\dfrac{-3}{4}}=\frac{1}{\dfrac{7}{4}}=\frac{4}{7}
+\]</span></p></li>
+<li><p>Since <span class="math inline">\(|-1|=1\)</span>, the series <span class="math display">\[
+\sum_{n=0}^{\infty}(-1)^{n}
+\]</span> does not converge.</p></li>
+</ul>
+</div></details>
+</div>
+<p>If the sum of a Geometric Sries does not start at <span class="math inline">\(n=0\)</span>, we need to tweak the summation formula at (<a href="#eq-geometric-series-sum"><span>8.3</span></a>).</p>
+<div id="Example-15" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 15</strong></summary><div>We have that<p></p>
+<p><span class="math display">\[\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n}=\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}-\left(\frac{1}{2}\right)^{0}=2-1=1 \,.
+\]</span></p>
+</div></details>
+</div>
+<p>The Geometric Series Test of Theorem <a href="chap_8.html#theorem-geometric-series-test">13</a> can be applied to complex geometric series as well.</p>
+<div id="Example-16" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 16</strong></summary><div>
+<ul>
+<li><p>Consider the series <span class="math display">\[
+\sum_{n=0}^{\infty} \frac{1}{(1+i)^{n}} \,.
+\]</span> Since <span class="math display">\[
+\frac{1}{(1+i)^{n}}=\left(\frac{1}{1+i}\right)^{n}
+\]</span> and <span class="math display">\[
+\left|\frac{1}{1+i}\right| = \frac{1}{\sqrt{1^{2}+1^{2}}} = \frac{1}{\sqrt{2}} &lt; 1\,,
+\]</span> Therefore the series converges by the Geometric Series Test, and <span class="math display">\[\begin{align*}
+\sum_{n=0}^{\infty} \frac{1}{(1+i)^{n}} &amp; = \frac{1}{1-\dfrac{1}{1+i}} \\
+                                      &amp; = \frac{1}{\dfrac{1+i-1}{1+i}} \\
+                                      &amp; = \frac{1+i}{i} \\
+                                      &amp; = \frac{(1+i) i}{i^{2}} \\
+                                      &amp; = \frac{i-1}{-1} \\
+                                      &amp; = 1-i \,.
+\end{align*}\]</span></p></li>
+<li><p>Consider the series <span class="math display">\[
+\sum_{n=0}^{\infty}\left(\frac{-5-5 i}{3+3 i}\right)^{n} \,.
+\]</span> Since <span class="math display">\[\begin{align*}
+\left|\frac{-5-5 i}{3+3 i}\right| &amp; = \frac{|-5-5 i|}{|3+3 i|}  \\
+                                &amp; =\frac{\sqrt{(-5)^{2}+(-5)^{2}}}{\sqrt{3^{2}+3^{2}}} \\
+                                &amp; = \sqrt{\frac{50}{18}} \\
+                                &amp; =\frac{5}{3} &gt; 1 \,,
+\end{align*}\]</span> the above series does not converge.</p></li>
+<li><p>Consider the series <span class="math display">\[
+\sum_{n=0}^{\infty}\left(\frac{2+i}{3-2 i}\right)^{n} \,.
+\]</span> We have <span class="math display">\[\begin{align*}
+\left|\frac{2+i}{3-2 i}\right| &amp; = \frac{|2+i|}{|3-2 i|} \\
+                             &amp; = \frac{\sqrt{2^{2}+1^{2}}}{\sqrt{3^{2}+(-2)^{2}}} \\
+                             &amp; = \sqrt{\frac{5}{13}} &lt; 1 \,.
+\end{align*}\]</span> Therefore the series converges by the Geometric Series Test, and <span class="math display">\[\begin{align*}
+\sum_{n=0}^{\infty}\left(\frac{2+i}{3-2 i}\right)^{n} &amp; = \frac{1}{1-\dfrac{2+i}{3-2 i}} \\
+&amp; = \frac{1}{\dfrac{3-2 i-(2+i)}{3-2 i}} \\
+&amp; = \frac{3-2 i}{1-3 i} \\
+&amp; = \frac{3-2 i}{1-3 i} \, \frac{1+3 i}{1+3 i} \\
+&amp; = \frac{3-2 i+9 i-6 i^{2}}{1-9 i^{2}} \\
+&amp; = \frac{9+7 i}{10} \\
+&amp; = \frac{9}{10} + \frac{7}{10} i
+\end{align*}\]</span></p></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="algebra-of-limits-for-series" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="algebra-of-limits-for-series"><span class="header-section-number">8.3</span> Algebra of Limits for Series</h2>
+<p>We have proven the Algebra of Limit Theorem for sequences in <span class="math inline">\(\mathbb{C}\)</span>. A similar results holds for series as well.</p>
+<div id="theorem-algebra-limits-series" class="Theorem" title="Algebra of Limits for Series">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 17: </strong>Algebra of Limits for Series</summary><div>
+<p>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> and <span class="math inline">\(\left(b_{n}\right)_{n \in \mathbb{N}}\)</span> be sequences in <span class="math inline">\(\mathbb{C}\)</span> and let <span class="math inline">\(c \in \mathbb{C}\)</span>. Suppose that <span class="math display">\[
+\sum_{n=1}^{\infty} a_{n}=a \,, \qquad \sum_{n=1}^{\infty} b_{n}=b \,.
+\]</span> Then:</p>
+<ol type="1">
+<li><p>The sum of series is the series of the sums: <span class="math display">\[
+\sum_{n=1}^{\infty}\left(a_{n} \pm b_{n}\right) = a \pm b \,.
+\]</span></p></li>
+<li><p>The product of a series with a number obeys <span class="math display">\[
+\sum_{n=1}^{\infty} c \cdot a_{n}= c \cdot a \,.
+\]</span></p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-6" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> We prove the formula with the <span class="math inline">\(+\)</span> sign, since in the other case the proof is the same. To this end, define the partial sums <span class="math display">\[
+s_{k} := \sum_{n=1}^{k} a_{n} \,, \quad t_{k} := \sum_{n=1}^{k} b_{n} \,, \quad v_{k} := \sum_{n=1}^{k}\left(a_{n}+b_{n}\right) \,.
+\]</span> We can write <span class="math display">\[\begin{align*}
+v_k   &amp; = \sum_{n=1}^{k} \left(a_{n}+b_{n}\right) \\
+      &amp; = \left(a_{1}+b_{1}\right)+\ldots+\left(a_{k}+b_{k}\right) \\
+      &amp; = \left(a_{1}+\ldots+a_{k}\right)+\left(b_{1}+\ldots+b_{k}\right) \\
+      &amp; = s_{k} + t_{k} \,.
+\end{align*}\]</span> By assumption <span class="math inline">\(s_{k} \to a\)</span> and <span class="math inline">\(t_{k} \to b\)</span>. Hence, by the Algebra of Limits in <span class="math inline">\(\mathbb{C}\)</span>, we infer <span class="math display">\[\begin{align*}
+\sum_{n=1}^{\infty}\left(a_{n}+b_{n}\right) &amp;  = \lim_{k \rightarrow \infty} v_{k} \\
+      &amp; = \lim_{k \rightarrow \infty} \left(s_{k}+t_{k}\right) \\
+      &amp; = \lim_{k \rightarrow \infty} \, s_{k} + \lim_{k \to \infty} \, t_{k}  \\
+      &amp; = a + b \,.
+\end{align*}\]</span><p></p>
+<p><em>Part 2.</em> Denote the partial sums by <span class="math display">\[
+s_{k} := \sum_{n=1}^{k} a_{n} \, , \quad  t_{k} := \sum_{n=1}^{k} c \cdot a_{n} \,.
+\]</span> We can write <span class="math display">\[\begin{align*}
+t_k &amp; = \sum_{n=1}^{k} c \cdot a_{k} \\
+    &amp; = c \cdot a_{1} +c \cdot a_{2}+\ldots+c \cdot a_{k} \\
+    &amp; = c \cdot \left(a_{1}+a_{2}+\ldots+a_{k}\right) = \\
+    &amp; = c \cdot s_{k} \,.
+\end{align*}\]</span> By assumption <span class="math inline">\(s_{k} \to a\)</span>, so that the Algebra of Limits in <span class="math inline">\(\mathbb{C}\)</span> allows to conclude <span class="math display">\[\begin{align*}
+\sum_{n=1}^{\infty} c \cdot a_{n} &amp; = \lim_{k \rightarrow \infty} t_{k} \\
+                                  &amp; = \lim_{k \rightarrow \infty} c \cdot s_{k} \\
+                                  &amp; = c \cdot a \,.
+\end{align*}\]</span></p>
+</div></details>
+</div>
+<p>Let us apply the Algebra of Limits for Series to a concrete example.</p>
+<div id="Example-18" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 18</strong></summary><div>Consider the following series<p></p>
+<p><span class="math display">\[
+\sum_{n=0}^{\infty}\left(2\left(\frac{1}{3}\right)^{n}+\left(\frac{2}{3}\right)^{n}\right) \,.
+\]</span> Note that <span class="math display">\[
+\sum_{n=0}^{\infty}\left(\frac{1}{3}\right)^{n}=\frac{1}{1-\dfrac{1}{3}}=\frac{3}{2} \,, \quad
+\sum_{n=0}^{\infty}\left(\frac{2}{3}\right)^{n}=\frac{1}{1-\dfrac{2}{3}}=3 \,,
+\]</span> by the Geometric Series Test of Theorem <a href="chap_8.html#theorem-geometric-series-test">13</a>. Therefore we can apply the Algebra of Limit for Series to conclude <span class="math display">\[\begin{align*}
+\sum_{n=0}^{\infty}\left(2\left(\frac{1}{3}\right)^{n}+\left(\frac{2}{3}\right)^{n}\right) &amp;
+=
+2 \cdot \sum_{n=0}^{\infty} \left(\frac{1}{3}\right)^{k}
++ \sum_{n=0}^{\infty} \left(\frac{2}{3}\right)^{k} \\
+&amp; = 2 \cdot \frac{3}{2} + 3 = 6
+\end{align*}\]</span></p>
+</div></details>
+</div>
+<div id="Important*-7" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>The Algebra of Limits Theorem <a href="chap_8.html#theorem-algebra-limits-series">17</a> does not discuss product and quotient of series. The situation becomes more complicated in this case: Indeed, we have <span class="math display">\[
+(a_1 + a_2) \cdot (a_2 + b_2) = a_1b_1 + a_2 b_2 + a_1 b_2 + a_2 b_1  \,.
+\]</span> Therefore, in general, we can expect <span id="eq-product-series"><span class="math display">\[
+\left( \sum_{n=0}^{\infty} a_n \right) \cdot \left( \sum_{n=0}^{\infty} b_n \right) \neq
+\sum_{n=0}^{\infty} a_n \cdot b_n \,.
+\tag{8.6}\]</span></span> A way to compute <span class="math display">\[
+\left( \sum_{n=0}^{\infty} a_n \right) \cdot \left( \sum_{n=0}^{\infty} b_n \right)
+\]</span> is through the so-called <strong>Cauchy Product</strong> of two series. We do not cover the latter, and the interested reader can refer to Page <span class="math inline">\(82\)</span> in <span class="citation" data-cites="abbott">(<a href="references.html#ref-abbott" role="doc-biblioref">Abbott 2015</a>)</span>.<p></p>
+<p>Similarly, we expect that <span id="eq-quotient-series"><span class="math display">\[
+\dfrac{ \displaystyle\sum_{n=0}^{\infty} a_n }{ \displaystyle\sum_{n=0}^{\infty} b_n }
+\neq \sum_{n=0}^{\infty} \frac{a_n}{b_n} \,.
+\tag{8.7}\]</span></span></p>
+</div></details>
+</div>
+<p>Let us give two examples to show that formulas (<a href="#eq-product-series"><span>8.6</span></a>) and (<a href="#eq-quotient-series"><span>8.7</span></a>) hold.</p>
+<div id="Example-19" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 19</strong></summary><div>
+<ul>
+<li><p>We know that <span id="eq-product-series-2"><span class="math display">\[
+\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}=\frac{1}{1-\dfrac{1}{2}}=2 \,.
+\tag{8.8}\]</span></span> Therefore <span class="math display">\[
+\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right) \cdot
+\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right)  
+= 2 \cdot 2 = 4 \,.
+\]</span> However <span class="math display">\[
+\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \cdot\left(\frac{1}{2}\right)^{n}
+= \sum_{n=0}^{\infty}\left(\frac{1}{4}\right)^{n}
+= \frac{1}{1-\dfrac{1}{4}}
+= \frac{4}{3}  \,.
+\]</span> Hence <span class="math display">\[
+\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right) \cdot
+\left(\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \right)  = 4 \neq \frac{4}{3} = \sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n} \cdot\left(\frac{1}{2}\right)^{n} \,.
+\]</span></p></li>
+<li><p>Using (<a href="#eq-product-series-2"><span>8.8</span></a>) we have <span class="math display">\[
+\frac{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}}{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}} = \frac{2}{2} = 1 \,.
+\]</span> On the other hand <span class="math display">\[
+\sum_{n=0}^{\infty} \dfrac{\left(\dfrac{1}{2}\right)^{n}}{\left(\dfrac{1}{2}\right)^{n}}
+=\sum_{n=0}^{\infty} 1 \,,
+\]</span> which does not converge by the Necessary Condition, since <span class="math inline">\(1\)</span> does not converge to <span class="math inline">\(0\)</span>. Therefore <span class="math display">\[
+\frac{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}}{\displaystyle\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}} \neq
+\sum_{n=0}^{\infty} \dfrac{\left(\dfrac{1}{2}\right)^{n}}{\left(\dfrac{1}{2}\right)^{n}}  \,.
+\]</span></p></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="non-negative-series" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="non-negative-series"><span class="header-section-number">8.4</span> Non-negative series</h2>
+<p>We now investigate series of which all terms are non-negative. To be precise:</p>
+<div id="non-negative-series-1" class="Definition" title="Non-negative series">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>Non-negative series</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span>. We call the series <span class="math display">\[
+\sum_{n=1}^{\infty} a_{n}
+\]</span> a <strong>non-negative series</strong> if <span class="math display">\[
+a_n \geq 0 \,, \quad  \forall \, n \in \mathbb{N}\,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>We present several tests for the convergence of non-negative series.</p>
+<section id="cauchy-condensation-test" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="cauchy-condensation-test"><span class="header-section-number">8.4.1</span> Cauchy Condensation Test</h3>
+<p>Let us start with the study of the two non-negative series: <span class="math display">\[
+\sum_{n=1}^\infty \frac{1}{n^2} \,, \quad
+\sum_{n=1}^\infty \frac{1}{n} \,.
+\]</span></p>
+<div id="Question-21" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 21</strong></summary><div>Do the above series converge or diverge?<p></p>
+</div></details>
+</div>
+<p>The answer is that the first series converges, while the second diverges. We prove it in the next two theorems.</p>
+<div id="Theorem-22" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 22</strong></summary><div>The following series converges <span class="math display">\[
+\sum_{n=1}^\infty \frac{1}{n^2} \,.
+\]</span><p></p>
+</div></details>
+</div>
+<div id="Proof*-8" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For <span class="math inline">\(k \in \mathbb{N}\)</span> define the sequence of partial sums <span class="math display">\[
+s_{k} := \sum_{n=1}^k \frac{1}{n^2} \,.
+\]</span> Note that <span class="math inline">\(s_k\)</span> is increasing: <span class="math display">\[
+s_{k+1} = \sum_{n=1}^{k+1} \frac{1}{n^2} = s_k + \frac{1}{(k+1)^2} &gt; s_k \,.
+\]</span> Moreover <span class="math display">\[\begin{align*}
+s_k &amp; = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots + \frac{1}{k^2} \\
+    &amp; = 1 + \frac{1}{2 \cdot 2} + \frac{1}{3 \cdot 3} + \frac{1}{4 \cdot 4} + \ldots + \frac{1}{k \cdot k} \\
+    &amp; &lt; 1 + \frac{1}{2 \cdot 1} + \frac{1}{3 \cdot 2} + \frac{1}{4 \cdot 3} + \ldots + \frac{1}{k \cdot (k-1)} \\
+    &amp; = 1 + \left( \frac{1}{2} - \frac{1}{3}  \right) + \left( \frac{1}{3} - \frac{1}{4}  \right) + \ldots + \left( \frac{1}{k-1} - \frac{1}{k}  \right) \\
+    &amp; = 1 + 1 - \frac{1}{k} \\
+    &amp; = 2 - \frac{1}{k} \\
+    &amp; &lt; 2 \,,
+\end{align*}\]</span> showing that <span class="math inline">\(s_k\)</span> is bounded above. Since <span class="math inline">\(s_k\)</span> is also increasing, by the Monotone Convergence Theorem we conclude that <span class="math inline">\(s_k\)</span> converges. Therefore the series <span class="math display">\[
+\sum_{n=1}^\infty \frac{1}{n^2}
+\]</span> is convergent.<p></p>
+</div></details>
+</div>
+<div id="theorem-harmonic-series" class="Theorem" title="Harmonic series">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 23: </strong>Harmonic series</summary><div>The <strong>harmonic series</strong> <span class="math display">\[
+\sum_{n=1}^\infty \frac{1}{n}
+\]</span> is divergent.<p></p>
+</div></details>
+</div>
+<div id="Proof*-9" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For <span class="math inline">\(k \in \mathbb{N}\)</span> define the sequence of partial sums <span class="math display">\[
+s_{k} := \sum_{n=1}^k \frac{1}{n} \,.
+\]</span> Note that <span class="math display">\[
+s_2 = 1 + \frac{1}{2}
+\]</span> while <span class="math display">\[\begin{align*}
+s_4 &amp; = 1 + \frac{1}{2} + \left( \frac{1}{3} + \frac{1}{4} \right) \\
+    &amp; &gt; 1 + \frac{1}{2} + \left( \frac{1}{4} + \frac{1}{4} \right) \\
+    &amp; = 1 + \frac{1}{2} + 2 \left( \frac{1}{4} \right) \\
+    &amp; = 1 + \frac{1}{2} + \frac{1}{2} \\
+    &amp; = 1 + 2 \left( \frac{1}{2} \right) \\
+\end{align*}\]</span> Similarly <span class="math display">\[\begin{align*}
+s_4 &amp; = 1 + \frac{1}{2} + \left( \frac{1}{3} + \frac{1}{4} \right) +
+        \left( \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} \right) \\
+    &amp; &gt; 1 + \frac{1}{2} + \left( \frac{1}{4} + \frac{1}{4} \right) +
+        \left( \frac{1}{8} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} \right) \\
+    &amp; = 1 + \frac{1}{2} + 2 \left( \frac{1}{4} \right) + 4 \left( \frac{1}{8} \right) \\
+    &amp; = 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} \\
+    &amp; = 1 + 3 \left( \frac{1}{2} \right) \\
+\end{align*}\]</span> Proceeding in a similar way, for <span class="math inline">\(k \in \mathbb{N}\)</span> we have <span class="math display">\[\begin{align*}
+s_{2^k} &amp; = 1 + \frac{1}{2} + \left( \frac{1}{3} + \frac{1}{4} \right) +
+        \left( \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} \right) \\
+        &amp; \qquad + \ldots + \left( \frac{1}{2^{k-1} + 1} + \ldots + \frac{1}{2^k} \right) \\
+    &amp; &gt; 1 + \frac{1}{2} + \left( \frac{1}{4} + \frac{1}{4} \right) +
+        \left( \frac{1}{8} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} \right) \\
+        &amp; \qquad + \ldots + \left( \frac{1}{2^k} + \ldots + \frac{1}{2^k} \right) \\
+    &amp; = 1 + \frac{1}{2} + 2 \left( \frac{1}{4} \right) + 4 \left( \frac{1}{8} \right) + \ldots +
+            2^{k-1} \left( \frac{1}{2^k} \right)\\
+    &amp; = 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \ldots + \frac{1}{2} \\
+    &amp; = 1 + k \left( \frac{1}{2} \right) \\
+\end{align*}\]</span> Hence <span class="math display">\[
+s_{2^k} &gt; 1 + k \left( \frac{1}{2} \right) \,, \quad \forall \, k \in \mathbb{N}\,,
+\]</span> showing that <span class="math inline">\(s_{2^k}\)</span> is unbounded. Therefore <span class="math inline">\(s_k\)</span> is unbounded, and <span class="math inline">\(s_k\)</span> does not converge. Therefore the series <span class="math display">\[
+\sum_{n=1}^\infty \frac1n
+\]</span> is divergent.<p></p>
+</div></details>
+</div>
+<p>The proofs of the above theorems inspire the Cauchy Condensation Test.</p>
+<div id="theorem-cauchy-test" class="Theorem" title="Cauchy Condensation Test">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 24: </strong>Cauchy Condensation Test</summary><div>
+<p>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math inline">\((a_n)\)</span> is non-negative and decreasing, that is, <span class="math display">\[
+a_{n} \geq a_{n+1} \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> They are equivalent:</p>
+<ol type="1">
+<li><p>The series <span class="math display">\[
+\sum_{n=1}^\infty a_n
+\]</span> converges.</p></li>
+<li><p>The series <span class="math display">\[
+\sum_{n=0}^\infty 2^n a_{2^n} = a_1 + 2a_2 + 8a_8 + 16 a_{16} + \ldots
+\]</span> converges.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-10" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For <span class="math inline">\(k \in \mathbb{N}\)</span> denote the partial sums by <span class="math display">\[
+s_k := \sum_{n=1}^k a_n \,, \quad t_k := \sum_{n=0}^k 2^n a_{2^n} \,.
+\]</span> Since <span class="math inline">\(a_n \geq 0\)</span>, it is immediate to check that the sequences <span class="math inline">\((s_k)\)</span> and <span class="math inline">\((t_k)\)</span> are increasing.<p></p>
+<p><em>Part 1.</em> Assume that the series <span class="math display">\[
+\sum_{n=0}^\infty 2^n a_{2^n}
+\]</span> diverges. Hence the sequence <span class="math inline">\((t_k)\)</span> diverges and therefore <span class="math inline">\((t_k)\)</span> is not bounded above.</p>
+<blockquote class="blockquote">
+<p>Indeed, suppose <span class="math inline">\((t_k)\)</span> was bounded above. Since <span class="math inline">\((t_k)\)</span> is increasing, we would conclude that <span class="math inline">\((t_k)\)</span> is convergent by the Monotone Convergence Theorem. Contradiction.</p>
+</blockquote>
+<p>We want to estimate <span class="math inline">\(s_k\)</span> from below. To this end, we notice that <span class="math display">\[\begin{align*}
+s_2 &amp; = a_1 + a_2  \\
+    &amp; \geq \frac{1}{2} a_1 + a_2 \\
+    &amp; = \frac{1}{2} \left(  a_1 + 2a_2  \right) \\
+    &amp; = \frac{1}{2} \, t_1 \,,
+\end{align*}\]</span> where we used that <span class="math inline">\(a_n \geq 0\)</span>, and so <span class="math inline">\(a_1 &gt; a_1/2\)</span>. Moreover <span class="math display">\[\begin{align*}
+s_4 &amp; = a_1 + a_2 + (a_3 + a_4) \\
+    &amp; \geq a_1 + a_2 + (a_4 + a_4) \\
+    &amp; = a_1 + a_2 + 2a_4 \\
+    &amp; \geq \frac{1}{2} \, a_1 + a_2 + 2 a_4 \\
+    &amp; = \frac{1}{2} \left(  a_1 + 2a_2 + 4a_4 \right) \\
+    &amp; = \frac{1}{2} \, t_2 \,,
+\end{align*}\]</span> where we used also that <span class="math inline">\((a_n)\)</span> is decreasing. Similar reasoning yields <span class="math display">\[\begin{align*}
+s_8 &amp; = a_1 + a_2 + (a_3 + a_4) + (a_5 + a_6 + a_7 + a_8) \\
+    &amp; \geq a_1 + a_2 + (a_4 + a_4) + (a_8 + a_8 + a_8 + a_8) \\
+    &amp; = a_1 + a_2 + 2 a_4 + 4 a_8 \\
+    &amp; \geq \frac{1}{2} \, a_1 + a_2 + 2 a_4 + 4 a_8 \\
+    &amp; = \frac{1}{2} \left(  a_1 + 2a_2 + 4a_4 + 8 a_8 \right) \\
+    &amp; = \frac{1}{2} \, t_3 \,.
+\end{align*}\]</span> where again we used that <span class="math inline">\((a_n)\)</span> is decreasing, and <span class="math inline">\(a_n \geq 0\)</span>. Iterating, we obtain that for all <span class="math inline">\(k \in \mathbb{N}\)</span> it holds: <span class="math display">\[\begin{align*}
+s_{2^k} &amp; = a_1 + a_2 + (a_3 + a_4) + (a_5 + a_6 + a_7 + a_8) \\
+        &amp; \qquad + \ldots + (a_{2^{k-1}} + \ldots + a_{2^k}) \\
+    &amp; \geq a_1 + a_2 + (a_4 + a_4) + (a_8 + a_8 + a_8 + a_8) \\
+    &amp; \qquad + \ldots + (a_{2^k} + \ldots + a_{2^k}) \\
+    &amp; = a_1 + a_2 + 2 a_4 + 4 a_8 + \ldots + 2^{k-1} a_{2^k}\\
+    &amp; \geq \frac{1}{2} \, a_1 + a_2 + 2 a_4 + 4 a_8 + \ldots + 2^{k-1} a_{2^k} \\
+    &amp; = \frac{1}{2} \left(  a_1 + 2a_2 + 4a_4 + 8 a_8 + \ldots + 2^k a_{2^k} \right) \\
+    &amp; = \frac{1}{2} \, t_k \,.
+\end{align*}\]</span> We have shown that <span class="math display">\[
+s_{2^k} \geq \frac{1}{2} \, t_k \,, \quad  \forall \, k \in \mathbb{N}\,.
+\]</span> Since <span class="math inline">\((t_k)\)</span> is not bounded above, we infer that <span class="math inline">\((s_{2^k})\)</span> is not bounded above. In particular <span class="math inline">\((s_k)\)</span> is not bounded, and hence divergent. Thus the series <span class="math display">\[
+\sum_{n=1}^\infty a_n
+\]</span> diverges.</p>
+<p><em>Part2.</em> Suppose that the series <span class="math display">\[
+\sum_{n=0}^\infty 2^n a_{2^n}
+\]</span> converges. Hence the sequence <span class="math inline">\((t_k)\)</span> converges, and therefore <span class="math inline">\((t_k)\)</span> is bounded. This means that there exists <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[
+|t_k| \leq M \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Since <span class="math inline">\(t_k \geq 0\)</span>, the above reads <span class="math display">\[
+t_k \leq M \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Fix <span class="math inline">\(k \in \mathbb{N}\)</span> and let <span class="math inline">\(m \in \mathbb{N}\)</span> be such that <span class="math display">\[
+k \leq 2^{m+1} - 1 \,.
+\]</span> In this way <span class="math display">\[
+s_k \leq s_{2^{m+1}-1} \,.
+\]</span> We have <span class="math display">\[\begin{align*}
+s_{2^{m+1}-1} &amp; = a_1 + (a_2 + a_3) + (a_4 + a_5 + a_6 + a_7) \\
+              &amp; \qquad + \ldots + (a_{2^m} + \ldots + a_{2^{m+1}-1}) \\
+              &amp; \leq a_1 + (a_2 + a_2) + (a_4 + a_4 + a_4 + a_4) \\
+              &amp; \qquad + \ldots + (a_{2^m} + \ldots + a_{2^m} ) \\
+              &amp; = a_1 + 2a_2 + 4a_4 + \ldots + 2^m a_{2^m} \\
+              &amp; = t_m \,,
+\end{align*}\]</span> where we used that <span class="math inline">\((a_n)\)</span> is decreasing. We have then shown <span class="math display">\[
+s_k \leq s_{2^{m+1}-1} \leq t_m \leq M \,.
+\]</span> Since <span class="math inline">\(M\)</span> does not depend on <span class="math inline">\(k\)</span>, we conclude that <span class="math display">\[
+s_k \leq M \,, \quad \forall \, k \in \mathbb{N}\,.
+\]</span> As <span class="math inline">\(s_k \geq 0\)</span>, we conclude that <span class="math inline">\(s_k\)</span> is bounded. Recalling that <span class="math inline">\((s_k)\)</span> is increasing, by the Monotone Convergence Theorem we infer that <span class="math inline">\((s_k)\)</span> converges. This proves that the series <span class="math display">\[
+\sum_{n=1}^\infty a_n
+\]</span> is convergent, ending the proof.</p>
+</div></details>
+</div>
+<p>Thanks to the Cauchy Condensation Test of Theorem <a href="chap_8.html#theorem-cauchy-test">24</a> we can prove the following result.</p>
+<div id="theorem-p-series" class="Theorem" title="Convergence of p-series">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25: </strong>Convergence of <span class="math inline">\(p\)</span>-series</summary><div>
+<p>Let <span class="math inline">\(p \in \mathbb{R}\)</span>. Consider the <span class="math inline">\(p\)</span>-series <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1}{n^{p}} \,.
+\]</span> We have:</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(p&gt;1\)</span> the <span class="math inline">\(p\)</span>-series converges.</p></li>
+<li><p>If <span class="math inline">\(p \leq 1\)</span> the <span class="math inline">\(p\)</span>-series diverges.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-11" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>The series in question is <span class="math display">\[
+\sum_{n=1}^\infty a_n  \,, \quad  a_n := \frac{1}{n^p} \,.
+\]</span> Note that <span class="math inline">\((a_n)\)</span> is decreasing and non-negative. Hence, by the Cauchy Condensation Test of Theorem <a href="chap_8.html#theorem-cauchy-test">24</a>, the <span class="math inline">\(p\)</span>-series converges if and only if <span class="math display">\[
+\sum_{n=0}^\infty 2^n a_{2^n}
+\]</span> converges. We have <span class="math display">\[
+\sum_{n=0}^\infty 2^n a_{2^n}  = \sum_{n=0}^\infty 2^{n-np} =
+\sum_{n=0}^\infty (2^{1-p})^{n} \,,
+\]</span> and the latter is a Geometric Series of ratio <span class="math display">\[
+x := 2^{1-p} \,.
+\]</span> By the Geometric Series Test, we have convergence of <span class="math display">\[
+\sum_{n=0}^\infty (2^{1-p})^{n}
+\]</span> if and only if <span class="math display">\[
+|x| &lt; 1 \,.
+\]</span> The above is equivalent to <span class="math display">\[
+2^{1-p} &lt; 1 = 2^0 \quad \iff \quad
+1 - p &lt; 0 \quad \iff \quad p &gt; 1 \,.
+\]</span> Therefore <span class="math display">\[
+\sum_{n=1}^\infty \frac{1}{n^p}
+\]</span> converges if and only if <span class="math inline">\(p&gt;1\)</span>, ending the proof.<p></p>
+</div></details>
+</div>
+<p>The following is another notable application of the Cauchy Condensation Test.</p>
+<div id="theorem-p-log-series" class="Theorem">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26</strong></summary><div>
+<p>Let <span class="math inline">\(p \in \mathbb{R}\)</span>. Consider the series <span class="math display">\[
+\sum_{n=2}^{\infty} \frac{1}{n \left( \log n \right)^p} \,.
+\]</span> We have:</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(p&gt;1\)</span> the series converges.</p></li>
+<li><p>If <span class="math inline">\(p \leq 1\)</span> the series diverges.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-12" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>The series in question is <span class="math display">\[
+\sum_{n=2}^{\infty} a_n \,, \quad a_n := \frac{1}{n \left( \log n \right)^p}  \,.
+\]</span> Note that <span class="math inline">\((a_n)\)</span> is non-negative and decreasing. Therefore we can apply the Cauchy Condensation Test to conclude that the above series is convergent if and only if the series <span class="math display">\[
+\sum_{n=1}^\infty 2^n a_{2^n}
+\]</span> is convergent. We have <span class="math display">\[
+2^n a_{2^n} = 2^n \, \frac{1}{2^n  \left(  \log 2^n \right)^p } = \frac{1}{n^p \, \log 2}
+\]</span> so that <span class="math display">\[
+\sum_{n=1}^\infty 2^n a_{2^n}  = \frac{1}{\log 2 } \, \sum_{n=1}^\infty \frac{1}{n^p} \,.
+\]</span> The latter is a <span class="math inline">\(p\)</span>-series, which by Theorem <a href="chap_8.html#theorem-p-series">25</a> converges if and only if <span class="math inline">\(p &gt; 1\)</span>. Hence <span class="math display">\[
+\sum_{n=2}^{\infty} \frac{1}{n \left( \log n \right)^p}
+\]</span> converges if and only if <span class="math inline">\(p &gt; 1\)</span>, and the proof is concluded.<p></p>
+</div></details>
+</div>
+</section>
+<section id="comparison-test" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="comparison-test"><span class="header-section-number">8.4.2</span> Comparison Test</h3>
+<p>Another really useful result to study the convergence of non-negative series is the Comparison Test.</p>
+<div id="theorem-comparison-test" class="Theorem" title="Comparison test">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 27: </strong>Comparison test</summary><div>
+<p>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> and <span class="math inline">\(\left(b_{n}\right)_{n \in \mathbb{N}}\)</span> be non-negative sequences. Suppose that there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+a_{n} \leq b_{n} \,, \quad \, \forall \, n \geq N \,.
+\]</span> They hold:</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(\sum_{n=1}^{\infty} b_{n}\)</span> converges, then also <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges.</p></li>
+<li><p>If <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> diverges, then also <span class="math inline">\(\sum_{n=1}^{\infty} b_{n}\)</span> diverges.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-13" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1</em>. Define the partial sums starting at <span class="math inline">\(n=N\)</span> <span class="math display">\[
+s_k := \sum_{n=N}^k a_k \,, \quad
+t_k := \sum_{n=N}^k b_k \,.
+\]</span> Suppose that <span class="math display">\[
+\sum_{n=1}^{\infty} b_{n}
+\]</span> converges. Hence also the series <span class="math display">\[
+\sum_{n=N}^{\infty} b_{n}
+\]</span> converges. Then <span class="math inline">\((t_k)\)</span> is a convergent sequence, which implies that <span class="math inline">\((t_k)\)</span> is bounded, and hence bounded above. We have that:<p></p>
+<ul>
+<li><p><span class="math inline">\(s_k\)</span> is bounded above: Indeed, using the assumption, we have <span class="math display">\[\begin{align*}
+s_k &amp; = a_N + a_{N+1} + \ldots + a_k \\
+  &amp; \leq b_N + b_{N+1} + \ldots + b_k \\
+  &amp; = t_k \,,
+\end{align*}\]</span> which reads <span class="math display">\[
+s_k \leq t_k \,, \quad  \forall \, k \geq N \,.
+\]</span> Therefore <span class="math inline">\((s_k)\)</span> is bounded above, being <span class="math inline">\((t_k)\)</span> bounded above.</p></li>
+<li><p><span class="math inline">\(s_k\)</span> is increasing: This is because <span class="math inline">\(a_n \geq 0\)</span>, so that <span class="math display">\[
+s_{k+1} = \sum_{n=N}^{k+1} a_n = s_k + a_{k+1} \geq s_k \,.
+\]</span></p></li>
+</ul>
+<p>In total, we have that <span class="math inline">\((s_k)\)</span> is increasing and bounded above. By the Monotone Convergence Theorem we conclude that <span class="math inline">\(s_k\)</span> is convergent, showing that the series <span class="math display">\[
+\sum_{n=N}^\infty a_n
+\]</span> converges. Hence also the series <span class="math display">\[
+\sum_{n=1}^\infty a_n
+\]</span> converges, concluding the proof of Point 1.</p>
+<p><em>Part 2.</em> Note that Point 2 is the contrapositive of Point 1, and hence it holds.</p>
+</div></details>
+</div>
+<p>Let us give two applications of the Comparison Test.</p>
+<div id="Example-28" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 28</strong></summary><div>
+<ul>
+<li><p>Consider the series <span id="eq-comparison-example-1"><span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1}{n^{2}+3 n-1} \,.
+\tag{8.9}\]</span></span> Since <span class="math inline">\(3 n-1 \geq 0\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, we get <span class="math display">\[
+\frac{1}{n^{2}+3 n-1} \leq \frac{1}{n^{2}} \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> By Theorem <a href="chap_8.html#theorem-p-series">25</a> the <span class="math inline">\(p\)</span>-series <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}
+\]</span> converges. Therefore also the series at (<a href="#eq-comparison-example-1"><span>8.9</span></a>) converges by the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">27</a>.</p></li>
+<li><p>Consider the series <span id="eq-comparison-example-2"><span class="math display">\[
+\sum_{n=0}^{\infty} \frac{3^{n}+6 n+\dfrac{1}{n+1}}{2^{n}} \,.
+\tag{8.10}\]</span></span> Note that <span class="math display">\[
+\frac{3^{n}+6 n+\dfrac{1}{n+1}}{2^{n}} \geq \frac{3^{n}}{2^{n}}=\left(\frac{3}{2}\right)^{n} \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Since <span class="math inline">\(\left|\frac{3}{2}\right|=\frac{3}{2}&gt;1\)</span>, the series <span class="math display">\[
+\sum_{n=0}^{\infty}\left(\frac{3}{2}\right)^{n}
+\]</span> diverges by the Geometric Series Test in Theorem <a href="chap_8.html#theorem-geometric-series-test">13</a>. Therefore, by the Comparison Test, also the series at (<a href="#eq-comparison-example-2"><span>8.10</span></a>) diverges.</p></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="limit-comparison-test" class="level3" data-number="8.4.3">
+<h3 data-number="8.4.3" class="anchored" data-anchor-id="limit-comparison-test"><span class="header-section-number">8.4.3</span> Limit Comparison Test</h3>
+<div id="Example-29" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 29</strong></summary><div>
+<p>Prove that the series <span class="math display">\[
+\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
+\]</span> converges.</p>
+<blockquote class="blockquote">
+<p><em>Solution.</em> Recall the limit <span class="math display">\[
+\lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,,
+\]</span> where <span class="math inline">\((a_n)\)</span> is a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math inline">\(a_n \to 0\)</span> and <span class="math display">\[
+a_n \neq 0 \quad \forall \, n \in \mathbb{N}\,.
+\]</span> In particular, for <span class="math inline">\(a_n = 1/n\)</span>, we obtain <span class="math display">\[
+\lim_{n \to \infty} \, n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right)  = \frac{1}{2} \,.
+\]</span> Set <span class="math display">\[
+b_n : =  1 - \cos\left( \frac{1}{n} \right)  \,, \quad
+c_n := \frac{1}{n^2} \,.
+\]</span> We have <span class="math display">\[
+\frac{b_n}{c_n} =  n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right)  \longrightarrow \frac{1}{2} \,.
+\]</span> Note that the series <span class="math display">\[
+\sum_{n=1}^\infty c_n = \sum_{n=1}^\infty \frac{1}{n^2}
+\]</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p&gt;2\)</span>. Therefore also the series <span class="math display">\[
+\sum_{n=1}^\infty b_n =\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
+\]</span> converges, by the Limit Comparison Test.</p>
+</blockquote>
+</div></details>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-abbott" class="csl-entry" role="listitem">
+Abbott, Sthephen. 2015. <em>Understanding Analysis</em>. Second Edition. Springer.
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
