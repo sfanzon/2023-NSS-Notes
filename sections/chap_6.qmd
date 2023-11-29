@@ -2830,17 +2830,16 @@ $$
 
 
 
-::: Theorem
+::: {.Theorem  #theorem-important-limit-3}
 
 Suppose $(a_n)$ is such that $a_n \to 0$ and 
 $$
 a_n \neq 0 \,, \quad \forall \, n \in \N \, .
 $$
-Then
-\begin{align*}
-\lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,, \\
-\lim_{n \to \infty} \frac{1 - \cos(a_n)}{a_n} = 0  \, . \\
-\end{align*}
+$$
+\lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,, \quad 
+\lim_{n \to \infty} \frac{1 - \cos(a_n)}{a_n} = 0  \, .
+$$
 
 :::
 
@@ -2866,6 +2865,74 @@ $$
 $$
 using Step 1 and the Algebra of Limits.
 
+
+
+:::
+
+
+
+::: Example
+
+- We have
+$$
+\lim_{n \to \infty} \, n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) = 2 \,.
+$$
+This is because 
+$$
+\cos \left( \frac{2}{n}  \right) \longrightarrow 1 \,,
+$$
+by Theorem \ref{theorem-important-limit-1} applied with $a_n = 2/n$. Moreover
+$$
+\frac{\sin \left( \dfrac{2}{n}  \right)}{\dfrac{2}{n}} \longrightarrow 1 \,,
+$$
+by Theorem \ref{theorem-important-limit-2} applied with $a_n = 2/n$. Therefore
+$$
+n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) = 
+2 \cdot \cos \left( \frac{2}{n}  \right) \cdot \frac{\sin \left( \dfrac{2}{n}  \right)}{\dfrac{2}{n}} 
+\longrightarrow 2 \cdot 1 \cdot 1 = 2 
+$$
+where we used the Algebra of Limits.
+
+- We have
+$$
+\lim_{n \to \infty} \, n^2 \left(  1 - \cos \left(  \dfrac{1}{n} \right)  \right) = \frac12 \,.
+$${#eq-notable-limits-1}
+Indeed, 
+$$
+n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,,
+$$
+by applying Theorem \ref{theorem-important-limit-3} with $a_n = 1/n$.
+
+
+- We have
+$$
+\lim_{n \to \infty} \, n  \sin \left(  \frac{1}{n} \right)  = 1 \,.
+$${#eq-notable-limits-2}
+This is because
+$$
+n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,,
+$$
+by Theorem \ref{theorem-important-limit-2} with $a_n = 1/n$.
+
+- We have
+$$
+\lim_{n \to \infty} \, \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } = \frac12 \,.
+$$
+Indeed, using (@eq-notable-limits-1)-(@eq-notable-limits-2) and the Algebra of Limits
+$$
+ \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } =
+  \frac{n^2  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ n \sin \left( \dfrac{1}{n} \right) } \longrightarrow \frac{1/2}{1} = \frac12 \,.
+$$
+
+-  We have
+$$
+\lim_{n \to \infty} \, \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right)  = 1 \,.
+$$
+To prove it, note that
+$$
+\frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right) = \left( \frac{1+\dfrac{1}{n^2}}{1+ \dfrac{1}{n}} \right) \cdot \left( n \sin \left(  \dfrac{1}{n} \right) \right) \longrightarrow \frac{1 + 0}{1 + 0} \cdot 1 = 1\,,
+$$
+where we used (@eq-notable-limits-2) and the Algebra of Limits.
 
 
 :::

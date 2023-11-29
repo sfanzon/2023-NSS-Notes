@@ -739,9 +739,11 @@
 
  [**Warning**](#Warning*-6.28)\Pageref{Warning*-6.28}
 
- [**Theorem 6.56**](#Theorem-6.56)\Pageref{Theorem-6.56}
+ [**Theorem 6.56**](#theorem-important-limit-3)\Pageref{theorem-important-limit-3}
 
  [**Proof**](#Proof*-6.29)\Pageref{Proof*-6.29}
+
+ [**Example 6.57**](#Example-6.57)\Pageref{Example-6.57}
 
  [**Definition 7.1**](#sequence-of-complex-numbers): Sequence of Complex numbers\Pageref{sequence-of-complex-numbers}
 
@@ -867,4 +869,16 @@
 
  [**Example 8.28**](#Example-8.28)\Pageref{Example-8.28}
 
- [**Example 8.29**](#Example-8.29)\Pageref{Example-8.29}
+ [**Theorem 8.29**](#theorem-limit-comparison-test): Limit Comparison Test\Pageref{theorem-limit-comparison-test}
+
+ [**Proof**](#Proof*-8.14)\Pageref{Proof*-8.14}
+
+ [**Important**](#Important*-8.15)\Pageref{Important*-8.15}
+
+ [**Example 8.30**](#Example-8.30)\Pageref{Example-8.30}
+
+ [**Example 8.31**](#Example-8.31)\Pageref{Example-8.31}
+
+ [**Example 8.32**](#Example-8.32)\Pageref{Example-8.32}
+
+ [**Example 8.33**](#Example-8.33)\Pageref{Example-8.33}

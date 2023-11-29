@@ -1247,7 +1247,231 @@ at (@eq-comparison-example-2) diverges.
 
 
 
+
+
 ### Limit Comparison Test
+
+
+To apply the Comparison Test to the series
+$$
+\sum_{n=1}^\infty a_n \,, 
+$$
+one needs to find another sequence $(b_n)$ such that 
+$$
+a_n \leq b_n \,,\quad \forall \, n \geq N \,,
+$$
+or 
+$$
+b_n \leq a_n \,, \quad \forall \, n \geq N \,.
+$$
+This is not always possible. However, one might be able to show that 
+$$
+L = \lim_{n\to \infty} \frac{a_n}{b_n}
+$$
+for some $L \in \R$. In this case, the series of $(a_n)$ and $(b_n)$ can still be compared, 
+in the sense specified in the below theorem.
+
+
+
+::: Theorem 
+### Limit Comparison Test  {#theorem-limit-comparison-test}
+
+Let $(a_n)$ and $(b_n)$ be sequences such that
+$$
+a_n \geq 0 \,, \quad b_n > 0 \,, \quad \forall \, n \in  \N \,.
+$$
+Suppose there exists $L \in \R$ such that
+$$
+L = \lim _{n \rightarrow \infty} \frac{a_{n}}{b_{n}} \,.
+$$
+They hold:
+
+1. If $0<L<\infty$, then
+$$
+\sum_{n=1}^{\infty} a_{n} \,\, \text { converges } \Longleftrightarrow \quad \sum_{n=1}^{\infty} b_{n} \,\, \text { converges. }
+$$
+
+2. If $L=0$, then
+
+      - If $\sum_{n=1}^{\infty} b_{n}$ converges also $\sum_{n=1}^{\infty} a_{n}$ converges,
+
+      - If $\sum_{n=1}^{\infty} a_{n}$ diverges also $\sum_{n=1}^{\infty} b_{n}$ diverges.
+
+::: 
+
+
+
+::: Proof 
+
+*Part 1.* Suppose that $0<L<1$. Set
+$$
+\e := \frac{L}{2} \,.
+$$
+Since $\e>0$ and $a_n/b_n \to L$, there exists $N \in \N$ such that
+$$
+\left|\frac{a_{n}}{b_{n}} - L \right| < \e   \,, \quad \forall \, n \geq N \,.
+$$
+The above is equivalent to 
+$$
+L - \e < \frac{a_{n}}{b_{n}}  < \e + L  \,, \quad \forall \, n \geq N \,.
+$$
+Since $\e = L/2$, we get
+$$
+\frac{L}{2}  < \frac{a_{n}}{b_{n}}  < \frac{3L}{2}  \,, \quad \forall \, n \geq N \,,
+$$
+or equivalently,
+$$
+\frac{L}{2} \, b_n < a_n  < \frac{3L}{2} \, b_n  \,, \quad \forall \, n \geq N \,.
+$$
+We are now ready to prove the main claim:
+
+- Suppose that
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$ 
+converges. Then also 
+$$
+\sum_{n=N}^{\infty} a_{n} \,,
+$$ 
+since we are only discarding a finite number of terms. As 
+$$
+\frac{L}{2} b_{n} \leq a_{n} \,, \quad \forall \, n \geq N \,,
+$$ 
+it follows from the Comparison Test in Theorem \ref{theorem-comparison-test} that the series
+$$
+\sum_{n=N}^{\infty} \frac{L}{2} b_{n} \,.
+$$ 
+converges. Since $L/2$ is a constant, we also conclude that 
+$$
+\sum_{n=1}^{\infty} b_{n} 
+$$
+converges.
+
+- Suppose that 
+$$
+\sum_{n=1}^{\infty} b_{n}
+$$ 
+converges. Then also 
+$$
+\sum_{n=N}^{\infty} \frac{3 L}{2} b_{n}
+$$ 
+converges. Since 
+$$
+a_{n} < \frac{3 L}{2} b_{n} \,, \quad \forall \, n \geq N \,,
+$$ 
+by the Comparison Test we infer that 
+$$
+\sum_{n=N}^{\infty} a_{n}
+$$ 
+converges. Therefore, also 
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$ 
+converges.
+
+*Part 2.* Suppose that $L = 0$. Note that the second bullet point is the contrapositive of the first. Hence we only need to show the first bullet point. Let $\e = 1$. Since $a_n / b_n \to 0$, 
+there exists $N \in \N$ such that 
+$$
+\left|\frac{a_{n}}{b_{n}}-0\right| < \e = 1 \,, \quad \forall \, n \geq N \,. 
+$$ 
+Therefore
+$$
+a_{n} < b_{n} \,, \quad \forall \, n \geq N \,.
+$$
+The thesis follows immediately by the Comparison Test in Theorem \ref{theorem-comparison-test}.
+
+:::
+
+
+::: Important
+
+It might happen that
+$$
+\lim_{n \to \infty } \, \frac{a_{n}}{b_{n}} = \infty \,.
+$$
+In this case it can be helpful to interchange the roles of $a_{n}$ and $b_{n}$, since then 
+$$
+\lim_{n \to \infty } \, \frac{b_{n}}{a_{n}} = 0 \,.
+$$
+
+:::
+
+
+Let us give a few applications of the Limit Comparison Tets.
+
+
+::: Example 
+
+The following series converges
+$$
+\sum_{n=1}^{\infty} \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5} \,.
+$$
+
+> *Proof*. Set
+$$
+a_n :=  \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5}\,, \quad 
+b_n := \frac{1}{n^3} \,.
+$$
+We have
+\begin{align*}
+L & :=\lim_{n \rightarrow \infty}  \frac{a_n}{b_n} \\
+& = \lim_{n \to \infty} \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5} \bigg/  \frac{1}{n^{3}} \\
+& = \lim_{n \rightarrow \infty} \frac{2 n^{6}+5 n^{4}+n^{3}}{7 n^{6}+2 n+5} \\
+& = \lim_{n \rightarrow \infty} \frac{2+ \dfrac{5}{n^{2}} + \dfrac{1}{n^{3}} }{7 + \dfrac{2}{n^{5}}+ \dfrac{5}{n^{6}} } 
+ = \frac{2}{7} \,.
+\end{align*}
+The series 
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^{3}}
+$$ 
+converges, being a $p$-series with $p =3 > 1$. Since $L = \frac{2}{7}>0$, also the series of interest converges, by the Limit Comparison Test.
+
+:::
+
+
+
+::: Example 
+
+Prove that the following series diverges 
+$$
+\sum_{n=1}^{\infty} \frac{n+\cos (n)}{n^{2}} \,.
+$$
+
+> *Proof.* We expect the terms in the series to behave like $1/n$ for large $n$. Hence we set
+$$
+a_n := \frac{n+\cos (n)}{n^{2}} \,, \quad b_n = \frac{1}{n} \,.
+$$
+We compute
+\begin{align*}
+L & := \frac{a_n}{b_n} \\ 
+  & = \lim_{n \rightarrow \infty} \frac{n+\cos (n)}{n^{2}} \bigg/ \frac{1}{n} \\
+  &  = \lim_{n \rightarrow \infty} \frac{n^{2}+n \cos (n)}{n^{2}} \\
+  & = \lim_{n \rightarrow \infty} \left(1+\frac{\cos (n)}{n}\right)
+\end{align*}
+Since
+$$
+-1 \leq \cos (n) \leq 1 \,,
+$$
+we obtain
+$$
+-\frac{1}{n} \leq \frac{\cos (n)}{n} \leq \frac{1}{n} \,.
+$$
+As both $-\frac{1}{n} \rightarrow 0$ and $\frac{1}{n} \rightarrow 0$, by the Squeeze Theorem 
+$$
+\frac{\cos (n)}{n} \longrightarrow 0 \,.
+$$
+Hence 
+$$
+L = \lim_{n \rightarrow \infty} \left(1+\frac{\cos (n)}{n}\right) = 1 \,.
+$$
+The harmonic series
+$$
+\sum_{n=1}^{\infty} \frac{1}{n}
+$$ 
+does not converge. Since $L = 1 > 0$, the series of interest diverges by the Limit Comparison Test.
+
+:::
+
 
 
 ::: Example
@@ -1258,7 +1482,11 @@ $$
 $$
 converges.
 
->*Solution.* Recall the limit
+>*Solution.* Since 
+$$
+\cos \left( \frac{1}{n} \right) \leq 1 \,,
+$$
+the above is a non-negative series. Recall the limit
 $$
 \lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,,
 $$
@@ -1276,18 +1504,63 @@ b_n : =  1 - \cos\left( \frac{1}{n} \right)  \,, \quad
 c_n := \frac{1}{n^2} \,.
 $$
 We have
-$$
-\frac{b_n}{c_n} =  n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right)  \longrightarrow \frac{1}{2} \,.
-$$
+\begin{align*}
+L & := \lim_{n \to \infty} \frac{b_n}{c_n} \\
+  & = \lim_{n \to \infty} n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right) \\
+  & =  \frac{1}{2} \,.
+\end{align*}
 Note that the series
 $$
-\sum_{n=1}^\infty c_n = \sum_{n=1}^\infty \frac{1}{n^2} 
+\sum_{n=1}^\infty \frac{1}{n^2} 
 $$
-converges, being a $p$-series with $p>2$. Therefore also the series
+converges, being a $p$-series with $p>2$. Therefore, since $L = 1/2 >0$, also the series
 $$
-\sum_{n=1}^\infty b_n =\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
+\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
 $$
 converges, by the Limit Comparison Test.
 
 
 :::
+
+
+Sometimes the Limit Comparison Test fails, but the Comparison Test works.
+
+
+::: Example 
+
+Consider the series
+$$
+\sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}} \,.
+$$
+Since 
+$$
+\sin (n) \geq-1 \,,
+$$
+the above is a non-negative series. We expect this series to behave similar to 
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^{2}} \,.
+$$ 
+However
+$$
+\frac{1+\sin (n)}{n^{2}} \bigg/ \frac{1}{n^{2}}=1+\sin (n)
+$$
+does not converge. Hence, we cannot use the Limit Comparison Test.
+In alternative, we note that
+$$
+\frac{1+\sin (n)}{n^{2}} \leq \frac{2}{n^{2}} \,, \quad \forall \, n \in \N \,.
+$$
+The series
+$$
+\sum_{n=1}^{\infty} \frac{2}{n^{2}}
+$$ 
+converges, being a $p$-series with $p=2>1$. Therefore also 
+$$
+\sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}}
+$$ 
+converges, by the Comparison Test of Theorem \ref{theorem-comparison-test}.
+
+
+:::
+
+
+

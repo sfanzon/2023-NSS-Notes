@@ -85,19 +85,7 @@ div.csl-indent {
   }
 }</script>
 <style>
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -105,29 +93,25 @@ div.csl-indent {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
 }
 .DONE {
   --color1: #cce7b1;
@@ -137,7 +121,23 @@ div.csl-indent {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Conjecture {
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -145,13 +145,13 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
 </style>
 
@@ -1019,13 +1019,143 @@ s_{k+1} = \sum_{n=N}^{k+1} a_n = s_k + a_{k+1} \geq s_k \,.
 </section>
 <section id="limit-comparison-test" class="level3" data-number="8.4.3">
 <h3 data-number="8.4.3" class="anchored" data-anchor-id="limit-comparison-test"><span class="header-section-number">8.4.3</span> Limit Comparison Test</h3>
-<div id="Example-29" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 29</strong></summary><div>
+<p>To apply the Comparison Test to the series <span class="math display">\[
+\sum_{n=1}^\infty a_n \,,
+\]</span> one needs to find another sequence <span class="math inline">\((b_n)\)</span> such that <span class="math display">\[
+a_n \leq b_n \,,\quad \forall \, n \geq N \,,
+\]</span> or <span class="math display">\[
+b_n \leq a_n \,, \quad \forall \, n \geq N \,.
+\]</span> This is not always possible. However, one might be able to show that <span class="math display">\[
+L = \lim_{n\to \infty} \frac{a_n}{b_n}
+\]</span> for some <span class="math inline">\(L \in \mathbb{R}\)</span>. In this case, the series of <span class="math inline">\((a_n)\)</span> and <span class="math inline">\((b_n)\)</span> can still be compared, in the sense specified in the below theorem.</p>
+<div id="theorem-limit-comparison-test" class="Theorem" title="Limit Comparison Test">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 29: </strong>Limit Comparison Test</summary><div>
+<p>Let <span class="math inline">\((a_n)\)</span> and <span class="math inline">\((b_n)\)</span> be sequences such that <span class="math display">\[
+a_n \geq 0 \,, \quad b_n &gt; 0 \,, \quad \forall \, n \in  \mathbb{N}\,.
+\]</span> Suppose there exists <span class="math inline">\(L \in \mathbb{R}\)</span> such that <span class="math display">\[
+L = \lim _{n \rightarrow \infty} \frac{a_{n}}{b_{n}} \,.
+\]</span> They hold:</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(0&lt;L&lt;\infty\)</span>, then <span class="math display">\[
+\sum_{n=1}^{\infty} a_{n} \,\, \text { converges } \Longleftrightarrow \quad \sum_{n=1}^{\infty} b_{n} \,\, \text { converges. }
+\]</span></p></li>
+<li><p>If <span class="math inline">\(L=0\)</span>, then</p>
+<ul>
+<li><p>If <span class="math inline">\(\sum_{n=1}^{\infty} b_{n}\)</span> converges also <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges,</p></li>
+<li><p>If <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> diverges also <span class="math inline">\(\sum_{n=1}^{\infty} b_{n}\)</span> diverges.</p></li>
+</ul></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-14" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> Suppose that <span class="math inline">\(0&lt;L&lt;1\)</span>. Set <span class="math display">\[
+\varepsilon:= \frac{L}{2} \,.
+\]</span> Since <span class="math inline">\(\varepsilon&gt;0\)</span> and <span class="math inline">\(a_n/b_n \to L\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left|\frac{a_{n}}{b_{n}} - L \right| &lt; \varepsilon\,, \quad \forall \, n \geq N \,.
+\]</span> The above is equivalent to <span class="math display">\[
+L - \varepsilon&lt; \frac{a_{n}}{b_{n}}  &lt; \varepsilon+ L  \,, \quad \forall \, n \geq N \,.
+\]</span> Since <span class="math inline">\(\varepsilon= L/2\)</span>, we get <span class="math display">\[
+\frac{L}{2}  &lt; \frac{a_{n}}{b_{n}}  &lt; \frac{3L}{2}  \,, \quad \forall \, n \geq N \,,
+\]</span> or equivalently, <span class="math display">\[
+\frac{L}{2} \, b_n &lt; a_n  &lt; \frac{3L}{2} \, b_n  \,, \quad \forall \, n \geq N \,.
+\]</span> We are now ready to prove the main claim:<p></p>
+<ul>
+<li><p>Suppose that <span class="math display">\[
+\sum_{n=1}^{\infty} a_{n}
+\]</span> converges. Then also <span class="math display">\[
+\sum_{n=N}^{\infty} a_{n} \,,
+\]</span> since we are only discarding a finite number of terms. As <span class="math display">\[
+\frac{L}{2} b_{n} \leq a_{n} \,, \quad \forall \, n \geq N \,,
+\]</span> it follows from the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">27</a> that the series <span class="math display">\[
+\sum_{n=N}^{\infty} \frac{L}{2} b_{n} \,.
+\]</span> converges. Since <span class="math inline">\(L/2\)</span> is a constant, we also conclude that <span class="math display">\[
+\sum_{n=1}^{\infty} b_{n}
+\]</span> converges.</p></li>
+<li><p>Suppose that <span class="math display">\[
+\sum_{n=1}^{\infty} b_{n}
+\]</span> converges. Then also <span class="math display">\[
+\sum_{n=N}^{\infty} \frac{3 L}{2} b_{n}
+\]</span> converges. Since <span class="math display">\[
+a_{n} &lt; \frac{3 L}{2} b_{n} \,, \quad \forall \, n \geq N \,,
+\]</span> by the Comparison Test we infer that <span class="math display">\[
+\sum_{n=N}^{\infty} a_{n}
+\]</span> converges. Therefore, also <span class="math display">\[
+\sum_{n=1}^{\infty} a_{n}
+\]</span> converges.</p></li>
+</ul>
+<p><em>Part 2.</em> Suppose that <span class="math inline">\(L = 0\)</span>. Note that the second bullet point is the contrapositive of the first. Hence we only need to show the first bullet point. Let <span class="math inline">\(\varepsilon= 1\)</span>. Since <span class="math inline">\(a_n / b_n \to 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left|\frac{a_{n}}{b_{n}}-0\right| &lt; \varepsilon= 1 \,, \quad \forall \, n \geq N \,.
+\]</span> Therefore <span class="math display">\[
+a_{n} &lt; b_{n} \,, \quad \forall \, n \geq N \,.
+\]</span> The thesis follows immediately by the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">27</a>.</p>
+</div></details>
+</div>
+<div id="Important*-15" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>It might happen that <span class="math display">\[
+\lim_{n \to \infty } \, \frac{a_{n}}{b_{n}} = \infty \,.
+\]</span> In this case it can be helpful to interchange the roles of <span class="math inline">\(a_{n}\)</span> and <span class="math inline">\(b_{n}\)</span>, since then <span class="math display">\[
+\lim_{n \to \infty } \, \frac{b_{n}}{a_{n}} = 0 \,.
+\]</span><p></p>
+</div></details>
+</div>
+<p>Let us give a few applications of the Limit Comparison Tets.</p>
+<div id="Example-30" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 30</strong></summary><div>
+<p>The following series converges <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5} \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p><em>Proof</em>. Set <span class="math display">\[
+a_n :=  \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5}\,, \quad
+b_n := \frac{1}{n^3} \,.
+\]</span> We have <span class="math display">\[\begin{align*}
+L &amp; :=\lim_{n \rightarrow \infty}  \frac{a_n}{b_n} \\
+&amp; = \lim_{n \to \infty} \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5} \bigg/  \frac{1}{n^{3}} \\
+&amp; = \lim_{n \rightarrow \infty} \frac{2 n^{6}+5 n^{4}+n^{3}}{7 n^{6}+2 n+5} \\
+&amp; = \lim_{n \rightarrow \infty} \frac{2+ \dfrac{5}{n^{2}} + \dfrac{1}{n^{3}} }{7 + \dfrac{2}{n^{5}}+ \dfrac{5}{n^{6}} }
+= \frac{2}{7} \,.
+\end{align*}\]</span> The series <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1}{n^{3}}
+\]</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p =3 &gt; 1\)</span>. Since <span class="math inline">\(L = \frac{2}{7}&gt;0\)</span>, also the series of interest converges, by the Limit Comparison Test.</p>
+</blockquote>
+</div></details>
+</div>
+<div id="Example-31" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 31</strong></summary><div>
+<p>Prove that the following series diverges <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{n+\cos (n)}{n^{2}} \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p><em>Proof.</em> We expect the terms in the series to behave like <span class="math inline">\(1/n\)</span> for large <span class="math inline">\(n\)</span>. Hence we set <span class="math display">\[
+a_n := \frac{n+\cos (n)}{n^{2}} \,, \quad b_n = \frac{1}{n} \,.
+\]</span> We compute <span class="math display">\[\begin{align*}
+L &amp; := \frac{a_n}{b_n} \\
+&amp; = \lim_{n \rightarrow \infty} \frac{n+\cos (n)}{n^{2}} \bigg/ \frac{1}{n} \\
+&amp;  = \lim_{n \rightarrow \infty} \frac{n^{2}+n \cos (n)}{n^{2}} \\
+&amp; = \lim_{n \rightarrow \infty} \left(1+\frac{\cos (n)}{n}\right)
+\end{align*}\]</span> Since <span class="math display">\[
+-1 \leq \cos (n) \leq 1 \,,
+\]</span> we obtain <span class="math display">\[
+-\frac{1}{n} \leq \frac{\cos (n)}{n} \leq \frac{1}{n} \,.
+\]</span> As both <span class="math inline">\(-\frac{1}{n} \rightarrow 0\)</span> and <span class="math inline">\(\frac{1}{n} \rightarrow 0\)</span>, by the Squeeze Theorem <span class="math display">\[
+\frac{\cos (n)}{n} \longrightarrow 0 \,.
+\]</span> Hence <span class="math display">\[
+L = \lim_{n \rightarrow \infty} \left(1+\frac{\cos (n)}{n}\right) = 1 \,.
+\]</span> The harmonic series <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1}{n}
+\]</span> does not converge. Since <span class="math inline">\(L = 1 &gt; 0\)</span>, the series of interest diverges by the Limit Comparison Test.</p>
+</blockquote>
+</div></details>
+</div>
+<div id="Example-32" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 32</strong></summary><div>
 <p>Prove that the series <span class="math display">\[
 \sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
 \]</span> converges.</p>
 <blockquote class="blockquote">
-<p><em>Solution.</em> Recall the limit <span class="math display">\[
+<p><em>Solution.</em> Since <span class="math display">\[
+\cos \left( \frac{1}{n} \right) \leq 1 \,,
+\]</span> the above is a non-negative series. Recall the limit <span class="math display">\[
 \lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,,
 \]</span> where <span class="math inline">\((a_n)\)</span> is a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math inline">\(a_n \to 0\)</span> and <span class="math display">\[
 a_n \neq 0 \quad \forall \, n \in \mathbb{N}\,.
@@ -1034,14 +1164,35 @@ a_n \neq 0 \quad \forall \, n \in \mathbb{N}\,.
 \]</span> Set <span class="math display">\[
 b_n : =  1 - \cos\left( \frac{1}{n} \right)  \,, \quad
 c_n := \frac{1}{n^2} \,.
-\]</span> We have <span class="math display">\[
-\frac{b_n}{c_n} =  n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right)  \longrightarrow \frac{1}{2} \,.
-\]</span> Note that the series <span class="math display">\[
-\sum_{n=1}^\infty c_n = \sum_{n=1}^\infty \frac{1}{n^2}
-\]</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p&gt;2\)</span>. Therefore also the series <span class="math display">\[
-\sum_{n=1}^\infty b_n =\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
+\]</span> We have <span class="math display">\[\begin{align*}
+L &amp; := \lim_{n \to \infty} \frac{b_n}{c_n} \\
+&amp; = \lim_{n \to \infty} n^2 \, \left(1 - \cos \left( \frac{1}{n} \right) \right) \\
+&amp; =  \frac{1}{2} \,.
+\end{align*}\]</span> Note that the series <span class="math display">\[
+\sum_{n=1}^\infty \frac{1}{n^2}
+\]</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p&gt;2\)</span>. Therefore, since <span class="math inline">\(L = 1/2 &gt;0\)</span>, also the series <span class="math display">\[
+\sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
 \]</span> converges, by the Limit Comparison Test.</p>
 </blockquote>
+</div></details>
+</div>
+<p>Sometimes the Limit Comparison Test fails, but the Comparison Test works.</p>
+<div id="Example-33" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div>Consider the series <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}} \,.
+\]</span> Since <span class="math display">\[
+\sin (n) \geq-1 \,,
+\]</span> the above is a non-negative series. We expect this series to behave similar to <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1}{n^{2}} \,.
+\]</span> However <span class="math display">\[
+\frac{1+\sin (n)}{n^{2}} \bigg/ \frac{1}{n^{2}}=1+\sin (n)
+\]</span> does not converge. Hence, we cannot use the Limit Comparison Test. In alternative, we note that <span class="math display">\[
+\frac{1+\sin (n)}{n^{2}} \leq \frac{2}{n^{2}} \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> The series <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{2}{n^{2}}
+\]</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=2&gt;1\)</span>. Therefore also <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}}
+\]</span> converges, by the Comparison Test of Theorem <a href="chap_8.html#theorem-comparison-test">27</a>.<p></p>
 </div></details>
 </div>
 
