@@ -841,41 +841,43 @@
 
  [**Definition 8.20**](#non-negative-series-1): Non-negative series\Pageref{non-negative-series-1}
 
- [**Question 8.21**](#Question-8.21)\Pageref{Question-8.21}
-
- [**Theorem 8.22**](#Theorem-8.22)\Pageref{Theorem-8.22}
+ [**Lemma 8.21**](#lemma-partial-sums-increasing)\Pageref{lemma-partial-sums-increasing}
 
  [**Proof**](#Proof*-8.8)\Pageref{Proof*-8.8}
 
- [**Theorem 8.23**](#theorem-harmonic-series): Harmonic series\Pageref{theorem-harmonic-series}
+ [**Question 8.22**](#Question-8.22)\Pageref{Question-8.22}
+
+ [**Theorem 8.23**](#Theorem-8.23)\Pageref{Theorem-8.23}
 
  [**Proof**](#Proof*-8.9)\Pageref{Proof*-8.9}
 
- [**Theorem 8.24**](#theorem-cauchy-test): Cauchy Condensation Test\Pageref{theorem-cauchy-test}
+ [**Theorem 8.24**](#theorem-harmonic-series): Harmonic series\Pageref{theorem-harmonic-series}
 
  [**Proof**](#Proof*-8.10)\Pageref{Proof*-8.10}
 
- [**Theorem 8.25**](#theorem-p-series): Convergence of $p$-series\Pageref{theorem-p-series}
+ [**Theorem 8.25**](#theorem-cauchy-test): Cauchy Condensation Test\Pageref{theorem-cauchy-test}
 
  [**Proof**](#Proof*-8.11)\Pageref{Proof*-8.11}
 
- [**Theorem 8.26**](#theorem-p-log-series)\Pageref{theorem-p-log-series}
+ [**Theorem 8.26**](#theorem-p-series): Convergence of $p$-series\Pageref{theorem-p-series}
 
  [**Proof**](#Proof*-8.12)\Pageref{Proof*-8.12}
 
- [**Theorem 8.27**](#theorem-comparison-test): Comparison test\Pageref{theorem-comparison-test}
+ [**Theorem 8.27**](#theorem-p-log-series)\Pageref{theorem-p-log-series}
 
  [**Proof**](#Proof*-8.13)\Pageref{Proof*-8.13}
 
- [**Example 8.28**](#Example-8.28)\Pageref{Example-8.28}
-
- [**Theorem 8.29**](#theorem-limit-comparison-test): Limit Comparison Test\Pageref{theorem-limit-comparison-test}
+ [**Theorem 8.28**](#theorem-comparison-test): Comparison test\Pageref{theorem-comparison-test}
 
  [**Proof**](#Proof*-8.14)\Pageref{Proof*-8.14}
 
- [**Important**](#Important*-8.15)\Pageref{Important*-8.15}
+ [**Example 8.29**](#Example-8.29)\Pageref{Example-8.29}
 
- [**Example 8.30**](#Example-8.30)\Pageref{Example-8.30}
+ [**Theorem 8.30**](#theorem-limit-comparison-test): Limit Comparison Test\Pageref{theorem-limit-comparison-test}
+
+ [**Proof**](#Proof*-8.15)\Pageref{Proof*-8.15}
+
+ [**Important**](#Important*-8.16)\Pageref{Important*-8.16}
 
  [**Example 8.31**](#Example-8.31)\Pageref{Example-8.31}
 
@@ -883,12 +885,14 @@
 
  [**Example 8.33**](#Example-8.33)\Pageref{Example-8.33}
 
- [**Theorem 8.34**](#theorem-ratio-test-series): Ratio Test for Series\Pageref{theorem-ratio-test-series}
+ [**Example 8.34**](#Example-8.34)\Pageref{Example-8.34}
 
- [**Proof**](#Proof*-8.16)\Pageref{Proof*-8.16}
+ [**Theorem 8.35**](#theorem-ratio-test-series): Ratio Test for Series\Pageref{theorem-ratio-test-series}
 
- [**Example 8.35**](#Example-8.35)\Pageref{Example-8.35}
-
- [**Important**](#Important*-8.17)\Pageref{Important*-8.17}
+ [**Proof**](#Proof*-8.17)\Pageref{Proof*-8.17}
 
  [**Example 8.36**](#Example-8.36)\Pageref{Example-8.36}
+
+ [**Important**](#Important*-8.18)\Pageref{Important*-8.18}
+
+ [**Example 8.37**](#Example-8.37)\Pageref{Example-8.37}

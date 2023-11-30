@@ -2284,7 +2284,7 @@ These results are in agreement with the Geometric Sequence Test.
 ## Monotone sequences
 
 
-We showed in Theorem \ref{theorem-convergent-bounded} that convergent sequences are bounded. We noted that the converse statement is not true. 
+We have seen in Theorem \ref{theorem-convergent-bounded} that convergent sequences are bounded. We noted that the converse statement is not true. 
 For example the sequence
 $$
 a_n = (-1)^n
@@ -2316,22 +2316,11 @@ $$
 
 ::: Example
 
-- The sequence 
-$$
-a_n = \frac1n
-$$
-is decreasing.
 
-  > We have
-  $$
-  a_n = \frac1n > \frac{1}{n+1} = a_{n+1} \,.
-  $$
-
-- The sequence 
+- The sequence below is increasing
 $$
-b_n = \frac{n-1}{n} 
+b_n = \frac{n-1}{n} \,.
 $$
-is increasing. 
 
   > We have
   $$
@@ -2345,6 +2334,20 @@ is increasing.
   & \iff \quad 0 >  - 1
   \end{align*}
 
+
+
+- The sequence below is decreasing
+$$
+a_n = \frac1n \,.
+$$
+
+
+  > We have
+  $$
+  a_n = \frac1n > \frac{1}{n+1} = a_{n+1} \,.
+  $$
+
+
 :::
 
 
@@ -2355,7 +2358,8 @@ Theorem.
 ::: Theorem
 ### Monotone Convergence Theorem  {#theorem-monotone-convergence}
 
-If a sequence is bounded and monotone, then it converges.
+Let $(a_n)$ be a sequence in $\R$. Suppose that $(a_n)$ is bounded and
+monotone. Then $(a_n)$ converges.
 
 :::
 
@@ -2381,7 +2385,7 @@ Equivalently, we need to prove that
 $$
 \forall \, \e>0 \,, \, \exists \, N \in \N \st \forall \, n \geq N \,, \,\,
 |a_n - s| < \e \,. 
-$$
+$${#eq-monotone-conv-proof}
 Let $\e > 0$. Since $s$ is the smallest upper bound for $A$, this means
 $$
 s - \e
@@ -2403,10 +2407,11 @@ we get
 $$
 s - \e < a_N \leq a_n \leq s < s + \e \,, \quad \forall \, n \geq N \,.
 $$
-Therefore, for all $n \geq N$, we have
+The above implies 
 $$
-s - \e < a_n < s + \e \quad \implies \quad |a_n - s | < \e \,.
+s - \e < a_n < s + \e \,, \quad \forall \, n \geq N \,,
 $$
+which is equivalent to (@eq-monotone-conv-proof).
 
 
 

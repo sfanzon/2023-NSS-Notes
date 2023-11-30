@@ -66,6 +66,30 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
@@ -74,35 +98,23 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
 .Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Corollary {
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -110,27 +122,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Conjecture {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
 .Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -1630,7 +1630,7 @@ a_{n}=x^{n} \,.
 </section>
 <section id="monotone-sequences" class="level2" data-number="6.9">
 <h2 data-number="6.9" class="anchored" data-anchor-id="monotone-sequences"><span class="header-section-number">6.9</span> Monotone sequences</h2>
-<p>We showed in Theorem <a href="chap_6.html#theorem-convergent-bounded">19</a> that convergent sequences are bounded. We noted that the converse statement is not true. For example the sequence <span class="math display">\[
+<p>We have seen in Theorem <a href="chap_6.html#theorem-convergent-bounded">19</a> that convergent sequences are bounded. We noted that the converse statement is not true. For example the sequence <span class="math display">\[
 a_n = (-1)^n
 \]</span> is bounded but not convergent, as shown in Theorem <a href="chap_6.html#theorem-1-minus-n">15</a>. On the other hand, if a bounded sequence is <strong>monotone</strong>, then it is convergent.</p>
 <div id="monotone-sequence" class="Definition" title="Monotone sequence">
@@ -1650,17 +1650,9 @@ a_n \geq a_{n+1} \,, \quad \forall \, n \geq N \,.
 <div id="Example-49" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 49</strong></summary><div>
 <ul>
-<li><p>The sequence <span class="math display">\[
-a_n = \frac1n
-\]</span> is decreasing.</p>
-<blockquote class="blockquote">
-<p>We have <span class="math display">\[
-a_n = \frac1n &gt; \frac{1}{n+1} = a_{n+1} \,.
+<li><p>The sequence below is increasing <span class="math display">\[
+b_n = \frac{n-1}{n} \,.
 \]</span></p>
-</blockquote></li>
-<li><p>The sequence <span class="math display">\[
-b_n = \frac{n-1}{n}
-\]</span> is increasing.</p>
 <blockquote class="blockquote">
 <p>We have <span class="math display">\[
 b_{n+1} = \frac{n}{n+1} &gt; \frac{n-1}{n} = b_n \,,
@@ -1671,12 +1663,20 @@ n^2 &gt; (n-1)(n+1) \quad  \\
 &amp; \iff \quad 0 &gt;  - 1
 \end{align*}\]</span></p>
 </blockquote></li>
+<li><p>The sequence below is decreasing <span class="math display">\[
+a_n = \frac1n \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p>We have <span class="math display">\[
+a_n = \frac1n &gt; \frac{1}{n+1} = a_{n+1} \,.
+\]</span></p>
+</blockquote></li>
 </ul>
 </div></details>
 </div>
 <p>The main result about monotone sequences is the Monotone Convergence Theorem.</p>
 <div id="theorem-monotone-convergence" class="Theorem" title="Monotone Convergence Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 50: </strong>Monotone Convergence Theorem</summary><div>If a sequence is bounded and monotone, then it converges.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 50: </strong>Monotone Convergence Theorem</summary><div>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math inline">\((a_n)\)</span> is bounded and monotone. Then <span class="math inline">\((a_n)\)</span> converges.<p></p>
 </div></details>
 </div>
 <div id="Proof*-23" class="Proof">
@@ -1690,22 +1690,22 @@ i = \inf A \,, \quad s = \sup A \,.
 <ol type="1">
 <li><p><span class="math inline">\((a_n)\)</span> is increasing: We are going to prove that <span class="math display">\[
 \lim_{n \to \infty} a_n = s \,.
-\]</span> Equivalently, we need to prove that <span class="math display">\[
+\]</span> Equivalently, we need to prove that <span id="eq-monotone-conv-proof"><span class="math display">\[
 \forall \, \varepsilon&gt;0 \,, \, \exists \, N \in \mathbb{N}\, \text{ s.t. } \, \forall \, n \geq N \,, \,\,
 |a_n - s| &lt; \varepsilon\,.
-\]</span> Let <span class="math inline">\(\varepsilon&gt; 0\)</span>. Since <span class="math inline">\(s\)</span> is the smallest upper bound for <span class="math inline">\(A\)</span>, this means <span class="math display">\[
+\tag{6.15}\]</span></span> Let <span class="math inline">\(\varepsilon&gt; 0\)</span>. Since <span class="math inline">\(s\)</span> is the smallest upper bound for <span class="math inline">\(A\)</span>, this means <span class="math display">\[
 s - \varepsilon
 \]</span> is not an upper bound. Therefore there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span id="eq-monotone-convergence-proof-1"><span class="math display">\[
 s - \varepsilon&lt; a_N \,.
-\tag{6.15}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>. Since <span class="math inline">\(a_n\)</span> is increasing, we have <span id="eq-monotone-convergence-proof-2"><span class="math display">\[
+\tag{6.16}\]</span></span> Let <span class="math inline">\(n \geq N\)</span>. Since <span class="math inline">\(a_n\)</span> is increasing, we have <span id="eq-monotone-convergence-proof-2"><span class="math display">\[
 a_N \leq a_n \,, \quad \forall \, n \geq N \,.
-\tag{6.16}\]</span></span> Moreover <span class="math inline">\(s\)</span> is the supremum of <span class="math inline">\(A\)</span>, so that <span id="eq-monotone-convergence-proof-3"><span class="math display">\[
+\tag{6.17}\]</span></span> Moreover <span class="math inline">\(s\)</span> is the supremum of <span class="math inline">\(A\)</span>, so that <span id="eq-monotone-convergence-proof-3"><span class="math display">\[
 a_n \leq s &lt; s + \varepsilon\,, \quad \forall \, n \in \mathbb{N}\,.
-\tag{6.17}\]</span></span> Putting together estimates (<a href="#eq-monotone-convergence-proof-1"><span>6.15</span></a>)-(<a href="#eq-monotone-convergence-proof-2"><span>6.16</span></a>)-(<a href="#eq-monotone-convergence-proof-3"><span>6.17</span></a>) we get <span class="math display">\[
+\tag{6.18}\]</span></span> Putting together estimates (<a href="#eq-monotone-convergence-proof-1"><span>6.16</span></a>)-(<a href="#eq-monotone-convergence-proof-2"><span>6.17</span></a>)-(<a href="#eq-monotone-convergence-proof-3"><span>6.18</span></a>) we get <span class="math display">\[
 s - \varepsilon&lt; a_N \leq a_n \leq s &lt; s + \varepsilon\,, \quad \forall \, n \geq N \,.
-\]</span> Therefore, for all <span class="math inline">\(n \geq N\)</span>, we have <span class="math display">\[
-s - \varepsilon&lt; a_n &lt; s + \varepsilon\quad \implies \quad |a_n - s | &lt; \varepsilon\,.
-\]</span></p></li>
+\]</span> The above implies <span class="math display">\[
+s - \varepsilon&lt; a_n &lt; s + \varepsilon\,, \quad \forall \, n \geq N \,,
+\]</span> which is equivalent to (<a href="#eq-monotone-conv-proof"><span>6.15</span></a>).</p></li>
 <li><p><span class="math inline">\((a_n)\)</span> is decreasing: With a similar proof, one can show that <span class="math display">\[
 \lim_{n \to \infty} a_n = i \,.
 \]</span> This is left as an exercise.</p></li>
@@ -1742,13 +1742,13 @@ a_{n} \geq a_{n-1} \,, \quad \forall \, n \in \mathbb{N}\,,
 \left(  \frac{n^2 - 1}{n^2}  \right)^n \geq 1 - \frac1n \,,
 \]</span> which is equivalent to <span id="eq-proof-euler-1"><span class="math display">\[
 \left(  1 - \frac{1}{n^2}  \right)^n \geq 1 - \frac1n \,, \forall \, n \in \mathbb{N}\,.
-\tag{6.18}\]</span></span> Therefore <span class="math inline">\((a_n)\)</span> is increasing if and only if (<a href="#eq-proof-euler-1"><span>6.18</span></a>) holds. Recall Bernoulli’s inequality from Lemma <a href="chap_6.html#lemma-bernoulli">41</a>: For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x&gt;-1\)</span>, it holds <span class="math display">\[
+\tag{6.19}\]</span></span> Therefore <span class="math inline">\((a_n)\)</span> is increasing if and only if (<a href="#eq-proof-euler-1"><span>6.19</span></a>) holds. Recall Bernoulli’s inequality from Lemma <a href="chap_6.html#lemma-bernoulli">41</a>: For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x&gt;-1\)</span>, it holds <span class="math display">\[
 (1 + x )^n  \geq 1 + nx  \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> Appliying Bernoulli’s inequality with <span class="math display">\[
 x = -\frac{1}{n^2}
 \]</span> yields <span class="math display">\[
 \left(  1 - \frac{1}{n^2}  \right)^n  \geq 1 + n \left( -\frac{1}{n^2} \right) = 1 - \frac{1}{n} \,,
-\]</span> which is exactly (<a href="#eq-proof-euler-1"><span>6.18</span></a>). Then <span class="math inline">\((a_n)\)</span> is increasing.<p></p>
+\]</span> which is exactly (<a href="#eq-proof-euler-1"><span>6.19</span></a>). Then <span class="math inline">\((a_n)\)</span> is increasing.<p></p>
 <p><em>Part 2</em>. We have to prove that <span class="math inline">\((a_n)\)</span> is bounded, that is, that there exists <span class="math inline">\(M &gt; 0\)</span> such that <span class="math display">\[
 |a_n| \leq M \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> To this end, introduce the sequence <span class="math inline">\((b_n)\)</span> by setting <span class="math display">\[
@@ -1767,7 +1767,7 @@ b_{n-1} \geq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
 \left(  \frac{n^2}{n^2 - 1} \right)^{n} \geq  \left(   \frac{n+1}{n} \right) \,.
 \]</span> The above is equivalent to <span id="eq-proof-euler-3"><span class="math display">\[
 \left( 1 +  \frac{1}{n^2 - 1} \right)^{n} \geq  \left(  1 + \frac{1}{n} \right) \,.
-\tag{6.19}\]</span></span> Therefore <span class="math inline">\((b_n)\)</span> is decreasing if and only if (<a href="#eq-proof-euler-3"><span>6.19</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>. By choosing <span class="math display">\[
+\tag{6.20}\]</span></span> Therefore <span class="math inline">\((b_n)\)</span> is decreasing if and only if (<a href="#eq-proof-euler-3"><span>6.20</span></a>) holds for all <span class="math inline">\(n \in \mathbb{N}\)</span>. By choosing <span class="math display">\[
 x = \frac{1}{n^2 - 1}
 \]</span> in Bernoulli’s inequality, we obtain <span class="math display">\[\begin{align*}
 \left( 1 +  \frac{1}{n^2 - 1} \right)^{n} &amp; \geq 1 + n \left(  \frac{1}{n^2 - 1}   \right) \\
@@ -1775,7 +1775,7 @@ x = \frac{1}{n^2 - 1}
 &amp; \geq 1 + \frac1n \,,
 \end{align*}\]</span> where in the last inequality we used that <span class="math display">\[
 \frac{n}{n^2 - 1} &gt; \frac1n \,,
-\]</span> which holds, being equivalent to <span class="math inline">\(n^2 &gt; n^2 - 1\)</span>. We have therefore proven (<a href="#eq-proof-euler-3"><span>6.19</span></a>), and hence <span class="math inline">\((b_n)\)</span> is decreasing.</p>
+\]</span> which holds, being equivalent to <span class="math inline">\(n^2 &gt; n^2 - 1\)</span>. We have therefore proven (<a href="#eq-proof-euler-3"><span>6.20</span></a>), and hence <span class="math inline">\((b_n)\)</span> is decreasing.</p>
 </blockquote>
 <p>We now observe that For all <span class="math inline">\(n \in \mathbb{N}\)</span> <span class="math display">\[\begin{align*}
 b_n &amp; = \left(   1  + \frac1n \right)^{n+1} \\
@@ -1853,9 +1853,9 @@ x = (1 + b_n)^n \geq 1 + n b_n \,.
 \]</span> By elementary trigonometry we have <span id="eq-limiti-notevoli-1"><span class="math display">\[
 0 \leq |\sin (x)| = \sin |x| \leq |x| \,, \quad \forall  \, x \in \left[
 -\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
-\tag{6.20}\]</span></span> Since <span class="math inline">\(a_n \to 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\tag{6.21}\]</span></span> Since <span class="math inline">\(a_n \to 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
 |a_n| &lt; \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
-\]</span> Therefore, by inequality (<a href="#eq-limiti-notevoli-1"><span>6.20</span></a>), we get <span class="math display">\[
+\]</span> Therefore, by inequality (<a href="#eq-limiti-notevoli-1"><span>6.21</span></a>), we get <span class="math display">\[
 0 \leq |\sin (a_n)|  \leq |a_n| \,, \quad \forall \, n \geq \mathbb{N}\,.
 \]</span> Since <span class="math inline">\(a_n \to 0\)</span>, we also have <span class="math inline">\(|a_n|\to 0\)</span>. Therefore <span class="math inline">\(|\sin (a_n)| \to 0\)</span> by the Squeeze Theorem. This immediately implies <span class="math inline">\(\sin(a_n) \to 0\)</span>.<p></p>
 <p><em>Step 2</em>. We prove that <span class="math display">\[
@@ -1959,17 +1959,17 @@ n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) =
 \]</span> where we used the Algebra of Limits.</p></li>
 <li><p>We have <span id="eq-notable-limits-1"><span class="math display">\[
 \lim_{n \to \infty} \, n^2 \left(  1 - \cos \left(  \dfrac{1}{n} \right)  \right) = \frac12 \,.
-\tag{6.21}\]</span></span> Indeed, <span class="math display">\[
+\tag{6.22}\]</span></span> Indeed, <span class="math display">\[
 n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,,
 \]</span> by applying Theorem <a href="chap_6.html#theorem-important-limit-3">56</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p></li>
 <li><p>We have <span id="eq-notable-limits-2"><span class="math display">\[
 \lim_{n \to \infty} \, n  \sin \left(  \frac{1}{n} \right)  = 1 \,.
-\tag{6.22}\]</span></span> This is because <span class="math display">\[
+\tag{6.23}\]</span></span> This is because <span class="math display">\[
 n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,,
 \]</span> by Theorem <a href="chap_6.html#theorem-important-limit-2">55</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p></li>
 <li><p>We have <span class="math display">\[
 \lim_{n \to \infty} \, \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } = \frac12 \,.
-\]</span> Indeed, using (<a href="#eq-notable-limits-1"><span>6.21</span></a>)-(<a href="#eq-notable-limits-2"><span>6.22</span></a>) and the Algebra of Limits <span class="math display">\[
+\]</span> Indeed, using (<a href="#eq-notable-limits-1"><span>6.22</span></a>)-(<a href="#eq-notable-limits-2"><span>6.23</span></a>) and the Algebra of Limits <span class="math display">\[
 \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } =
 \frac{n^2  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ n \sin \left( \dfrac{1}{n} \right) } \longrightarrow \frac{1/2}{1} = \frac12 \,.
 \]</span></p></li>
@@ -1977,7 +1977,7 @@ n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }
 \lim_{n \to \infty} \, \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right)  = 1 \,.
 \]</span> To prove it, note that <span class="math display">\[
 \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right) = \left( \frac{1+\dfrac{1}{n^2}}{1+ \dfrac{1}{n}} \right) \cdot \left( n \sin \left(  \dfrac{1}{n} \right) \right) \longrightarrow \frac{1 + 0}{1 + 0} \cdot 1 = 1\,,
-\]</span> where we used (<a href="#eq-notable-limits-2"><span>6.22</span></a>) and the Algebra of Limits.</p></li>
+\]</span> where we used (<a href="#eq-notable-limits-2"><span>6.23</span></a>) and the Algebra of Limits.</p></li>
 </ul>
 </div></details>
 </div>

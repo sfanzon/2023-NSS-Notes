@@ -733,7 +733,7 @@ We now investigate series of which all terms are non-negative. To be precise:
 ::: Definition 
 ### Non-negative series
 
-Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{R}$. We call the series 
+Let $(a_{n})$ be a sequence in $\mathbb{R}$. We call the series 
 $$
 \sum_{n=1}^{\infty} a_{n}
 $$ 
@@ -743,6 +743,52 @@ a_n \geq 0 \,, \quad  \forall \, n \in \N \,.
 $$
 
 :::
+
+
+The key remark for non-negative series is that the partial sums are increasing.
+
+
+:::{.Lemma #lemma-partial-sums-increasing}
+
+Let $(a_{n}$ be a sequence in $\mathbb{R}$ with 
+$$
+a_n \geq 0 \,, \quad  \forall \, n \in \N \,.
+$$
+Define the partial sums as
+$$
+s_k := \sum_{n=1}^k a_n \,.
+$$
+The sequence $(s_k)$ is increasing.
+
+:::
+
+
+::: Proof
+
+For all $k \in \N$ we have
+$$
+s_{k+1} = \sum_{n=1}^{k+1} a_n = s_k + a_{k+1} \geq s_k \,,
+$$
+where we used that $a_{k+1} \geq 0$. Therefore $(s_k)$ is increasing.
+
+:::
+
+
+
+Therefore, if we have a series with non-negative terms
+$$
+\sum_{n=1}^\infty a_n
+$$
+there are only $2$ options:
+
+- $\sum_{n=1}^\infty a_n$ converges,
+- $\sum_{n=1}^\infty a_n$ diverges to $+\infty$.
+
+This is because the partial sums $(s_k)$ are increasing. Therefore we have either:
+
+- $(s_k)$ is bounded above: Then $s_k$ converges by the Monotone Convergence Theorem
+- $(s_k)$ is not bounded above: Therefore $s_k$ diverges to $+\infty$.
+
 
 We present several tests for the convergence of non-negative series. 
 
@@ -785,11 +831,7 @@ For $k \in \N$ define the sequence of partial sums
 $$
 s_{k} := \sum_{n=1}^k \frac{1}{n^2} \,.
 $$
-Note that $s_k$ is increasing:
-$$
-s_{k+1} = \sum_{n=1}^{k+1} \frac{1}{n^2} = s_k + \frac{1}{(k+1)^2} > s_k \,.
-$$
-Moreover
+Note that 
 \begin{align*}
 s_k & = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots + \frac{1}{k^2} \\
     & = 1 + \frac{1}{2 \cdot 2} + \frac{1}{3 \cdot 3} + \frac{1}{4 \cdot 4} + \ldots + \frac{1}{k \cdot k} \\
@@ -799,8 +841,9 @@ s_k & = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots + \frac{1}{k^
     & = 2 - \frac{1}{k} \\
     & < 2 \,,
 \end{align*}
-showing that $s_k$ is bounded above. Since $s_k$ is also increasing, by the Monotone Convergence Theorem
-we conclude that $s_k$ converges. Therefore the series
+showing that $s_k$ is bounded above. Recall that $s_k$ is increasing, by 
+Lemma \ref{lemma-partial-sums-increasing}. Therefore, by the Monotone Convergence Theorem,
+we conclude that $s_k$ converges. Hence the series
 $$
 \sum_{n=1}^\infty \frac{1}{n^2}
 $$
@@ -1171,9 +1214,7 @@ converges. Hence also the series
 $$
 \sum_{n=N}^{\infty} b_{n}
 $$
-converges. Then $(t_k)$ is a convergent sequence, which implies that $(t_k)$ is bounded, and hence bounded above. We have that:
-
-- $s_k$ is bounded above: Indeed, using the assumption, we have
+converges. Then $(t_k)$ is a convergent sequence, which implies that $(t_k)$ is bounded, and hence bounded above. We have that $s_k$ is bounded above: Indeed, using the assumption, we have
 \begin{align*}
 s_k & = a_N + a_{N+1} + \ldots + a_k \\
     & \leq b_N + b_{N+1} + \ldots + b_k \\
@@ -1183,16 +1224,9 @@ which reads
 $$
 s_k \leq t_k \,, \quad  \forall \, k \geq N \,.
 $$
-Therefore $(s_k)$ is bounded above, being $(t_k)$ bounded above.
-
-- $s_k$ is increasing: This is because $a_n \geq 0$, so that
-$$
-s_{k+1} = \sum_{n=N}^{k+1} a_n = s_k + a_{k+1} \geq s_k \,.
-$$
-
-
-In total, we have that $(s_k)$ is increasing and bounded above. By the
-Monotone Convergence Theorem we conclude that $s_k$ is convergent, showing
+Therefore $(s_k)$ is bounded above, being $(t_k)$ bounded above. Recall
+that $s_k$ is increasing, by Lemma \ref{lemma-partial-sums-increasing}. 
+By the Monotone Convergence Theorem we conclude that $s_k$ is convergent, showing
 that the series
 $$
 \sum_{n=N}^\infty a_n 
@@ -1739,3 +1773,20 @@ a $p$-series with $p = 2 >1$.
 
 
 
+
+## General series
+
+In the previous section we presented several tests for non-negative series. 
+For non-negative series we shows that the partial sums $(s_k)$ are increasing, see Lemma
+\ref{lemma-partial-sums-increasing}. This makes non-negative terms series relatively easy to study. 
+
+When a series contains both positive and negative terms, the partial sums
+$(s_k)$ might oscillate, making the series harder to study. 
+In this section we present some tests for general series in $\mathbb{C}$.
+
+
+### Absolute convergence
+
+
+To study general series, we introduce a stronger notions of convergence,
+known as **absolute convergence**.

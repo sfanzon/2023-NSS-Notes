@@ -85,9 +85,25 @@ div.csl-indent {
   }
 }</script>
 <style>
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Proof {
   --color1: #f1f1f2;
@@ -97,35 +113,15 @@ div.csl-indent {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Proposition {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
+.Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -137,21 +133,25 @@ div.csl-indent {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -280,6 +280,10 @@ div.csl-indent {
   <li><a href="#comparison-test" id="toc-comparison-test" class="nav-link" data-scroll-target="#comparison-test"><span class="header-section-number">8.4.2</span> Comparison Test</a></li>
   <li><a href="#limit-comparison-test" id="toc-limit-comparison-test" class="nav-link" data-scroll-target="#limit-comparison-test"><span class="header-section-number">8.4.3</span> Limit Comparison Test</a></li>
   <li><a href="#ratio-test-for-positive-series" id="toc-ratio-test-for-positive-series" class="nav-link" data-scroll-target="#ratio-test-for-positive-series"><span class="header-section-number">8.4.4</span> Ratio Test for positive series</a></li>
+  </ul></li>
+  <li><a href="#general-series" id="toc-general-series" class="nav-link" data-scroll-target="#general-series"><span class="header-section-number">8.5</span> General series</a>
+  <ul class="collapse">
+  <li><a href="#absolute-convergence" id="toc-absolute-convergence" class="nav-link" data-scroll-target="#absolute-convergence"><span class="header-section-number">8.5.1</span> Absolute convergence</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -721,13 +725,40 @@ t_k &amp; = \sum_{n=1}^{k} c \cdot a_{k} \\
 <h2 data-number="8.4" class="anchored" data-anchor-id="non-negative-series"><span class="header-section-number">8.4</span> Non-negative series</h2>
 <p>We now investigate series of which all terms are non-negative. To be precise:</p>
 <div id="non-negative-series-1" class="Definition" title="Non-negative series">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>Non-negative series</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span>. We call the series <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 20: </strong>Non-negative series</summary><div>Let <span class="math inline">\((a_{n})\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span>. We call the series <span class="math display">\[
 \sum_{n=1}^{\infty} a_{n}
 \]</span> a <strong>non-negative series</strong> if <span class="math display">\[
 a_n \geq 0 \,, \quad  \forall \, n \in \mathbb{N}\,.
 \]</span><p></p>
 </div></details>
 </div>
+<p>The key remark for non-negative series is that the partial sums are increasing.</p>
+<div id="lemma-partial-sums-increasing" class="Lemma">
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 21</strong></summary><div>Let <span class="math inline">\((a_{n}\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> with <span class="math display">\[
+a_n \geq 0 \,, \quad  \forall \, n \in \mathbb{N}\,.
+\]</span> Define the partial sums as <span class="math display">\[
+s_k := \sum_{n=1}^k a_n \,.
+\]</span> The sequence <span class="math inline">\((s_k)\)</span> is increasing.<p></p>
+</div></details>
+</div>
+<div id="Proof*-8" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For all <span class="math inline">\(k \in \mathbb{N}\)</span> we have <span class="math display">\[
+s_{k+1} = \sum_{n=1}^{k+1} a_n = s_k + a_{k+1} \geq s_k \,,
+\]</span> where we used that <span class="math inline">\(a_{k+1} \geq 0\)</span>. Therefore <span class="math inline">\((s_k)\)</span> is increasing.<p></p>
+</div></details>
+</div>
+<p>Therefore, if we have a series with non-negative terms <span class="math display">\[
+\sum_{n=1}^\infty a_n
+\]</span> there are only <span class="math inline">\(2\)</span> options:</p>
+<ul>
+<li><span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> converges,</li>
+<li><span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> diverges to <span class="math inline">\(+\infty\)</span>.</li>
+</ul>
+<p>This is because the partial sums <span class="math inline">\((s_k)\)</span> are increasing. Therefore we have either:</p>
+<ul>
+<li><span class="math inline">\((s_k)\)</span> is bounded above: Then <span class="math inline">\(s_k\)</span> converges by the Monotone Convergence Theorem</li>
+<li><span class="math inline">\((s_k)\)</span> is not bounded above: Therefore <span class="math inline">\(s_k\)</span> diverges to <span class="math inline">\(+\infty\)</span>.</li>
+</ul>
 <p>We present several tests for the convergence of non-negative series.</p>
 <section id="cauchy-condensation-test" class="level3" data-number="8.4.1">
 <h3 data-number="8.4.1" class="anchored" data-anchor-id="cauchy-condensation-test"><span class="header-section-number">8.4.1</span> Cauchy Condensation Test</h3>
@@ -735,23 +766,21 @@ a_n \geq 0 \,, \quad  \forall \, n \in \mathbb{N}\,.
 \sum_{n=1}^\infty \frac{1}{n^2} \,, \quad
 \sum_{n=1}^\infty \frac{1}{n} \,.
 \]</span></p>
-<div id="Question-21" class="Question">
-<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 21</strong></summary><div>Do the above series converge or diverge?<p></p>
+<div id="Question-22" class="Question">
+<p></p><details class="Question fbx-simplebox fbx-default" open=""><summary><strong>Question 22</strong></summary><div>Do the above series converge or diverge?<p></p>
 </div></details>
 </div>
 <p>The answer is that the first series converges, while the second diverges. We prove it in the next two theorems.</p>
-<div id="Theorem-22" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 22</strong></summary><div>The following series converges <span class="math display">\[
+<div id="Theorem-23" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 23</strong></summary><div>The following series converges <span class="math display">\[
 \sum_{n=1}^\infty \frac{1}{n^2} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Proof*-8" class="Proof">
+<div id="Proof*-9" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For <span class="math inline">\(k \in \mathbb{N}\)</span> define the sequence of partial sums <span class="math display">\[
 s_{k} := \sum_{n=1}^k \frac{1}{n^2} \,.
-\]</span> Note that <span class="math inline">\(s_k\)</span> is increasing: <span class="math display">\[
-s_{k+1} = \sum_{n=1}^{k+1} \frac{1}{n^2} = s_k + \frac{1}{(k+1)^2} &gt; s_k \,.
-\]</span> Moreover <span class="math display">\[\begin{align*}
+\]</span> Note that <span class="math display">\[\begin{align*}
 s_k &amp; = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots + \frac{1}{k^2} \\
     &amp; = 1 + \frac{1}{2 \cdot 2} + \frac{1}{3 \cdot 3} + \frac{1}{4 \cdot 4} + \ldots + \frac{1}{k \cdot k} \\
     &amp; &lt; 1 + \frac{1}{2 \cdot 1} + \frac{1}{3 \cdot 2} + \frac{1}{4 \cdot 3} + \ldots + \frac{1}{k \cdot (k-1)} \\
@@ -759,18 +788,18 @@ s_k &amp; = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots + \frac{1
     &amp; = 1 + 1 - \frac{1}{k} \\
     &amp; = 2 - \frac{1}{k} \\
     &amp; &lt; 2 \,,
-\end{align*}\]</span> showing that <span class="math inline">\(s_k\)</span> is bounded above. Since <span class="math inline">\(s_k\)</span> is also increasing, by the Monotone Convergence Theorem we conclude that <span class="math inline">\(s_k\)</span> converges. Therefore the series <span class="math display">\[
+\end{align*}\]</span> showing that <span class="math inline">\(s_k\)</span> is bounded above. Recall that <span class="math inline">\(s_k\)</span> is increasing, by Lemma <a href="chap_8.html#lemma-partial-sums-increasing">21</a>. Therefore, by the Monotone Convergence Theorem, we conclude that <span class="math inline">\(s_k\)</span> converges. Hence the series <span class="math display">\[
 \sum_{n=1}^\infty \frac{1}{n^2}
 \]</span> is convergent.<p></p>
 </div></details>
 </div>
 <div id="theorem-harmonic-series" class="Theorem" title="Harmonic series">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 23: </strong>Harmonic series</summary><div>The <strong>harmonic series</strong> <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 24: </strong>Harmonic series</summary><div>The <strong>harmonic series</strong> <span class="math display">\[
 \sum_{n=1}^\infty \frac{1}{n}
 \]</span> is divergent.<p></p>
 </div></details>
 </div>
-<div id="Proof*-9" class="Proof">
+<div id="Proof*-10" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For <span class="math inline">\(k \in \mathbb{N}\)</span> define the sequence of partial sums <span class="math display">\[
 s_{k} := \sum_{n=1}^k \frac{1}{n} \,.
 \]</span> Note that <span class="math display">\[
@@ -809,7 +838,7 @@ s_{2^k} &gt; 1 + k \left( \frac{1}{2} \right) \,, \quad \forall \, k \in \mathbb
 </div>
 <p>The proofs of the above theorems inspire the Cauchy Condensation Test.</p>
 <div id="theorem-cauchy-test" class="Theorem" title="Cauchy Condensation Test">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 24: </strong>Cauchy Condensation Test</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25: </strong>Cauchy Condensation Test</summary><div>
 <p>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that <span class="math inline">\((a_n)\)</span> is non-negative and decreasing, that is, <span class="math display">\[
 a_{n} \geq a_{n+1} \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> They are equivalent:</p>
@@ -823,7 +852,7 @@ a_{n} \geq a_{n+1} \,, \quad \forall \, n \in \mathbb{N}\,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-10" class="Proof">
+<div id="Proof*-11" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>For <span class="math inline">\(k \in \mathbb{N}\)</span> denote the partial sums by <span class="math display">\[
 s_k := \sum_{n=1}^k a_n \,, \quad t_k := \sum_{n=0}^k 2^n a_{2^n} \,.
 \]</span> Since <span class="math inline">\(a_n \geq 0\)</span>, it is immediate to check that the sequences <span class="math inline">\((s_k)\)</span> and <span class="math inline">\((t_k)\)</span> are increasing.<p></p>
@@ -892,9 +921,9 @@ s_k \leq M \,, \quad \forall \, k \in \mathbb{N}\,.
 \]</span> is convergent, ending the proof.</p>
 </div></details>
 </div>
-<p>Thanks to the Cauchy Condensation Test of Theorem <a href="chap_8.html#theorem-cauchy-test">24</a> we can prove the following result.</p>
+<p>Thanks to the Cauchy Condensation Test of Theorem <a href="chap_8.html#theorem-cauchy-test">25</a> we can prove the following result.</p>
 <div id="theorem-p-series" class="Theorem" title="Convergence of p-series">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 25: </strong>Convergence of <span class="math inline">\(p\)</span>-series</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26: </strong>Convergence of <span class="math inline">\(p\)</span>-series</summary><div>
 <p>Let <span class="math inline">\(p \in \mathbb{R}\)</span>. Consider the <span class="math inline">\(p\)</span>-series <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{1}{n^{p}} \,.
 \]</span> We have:</p>
@@ -904,10 +933,10 @@ s_k \leq M \,, \quad \forall \, k \in \mathbb{N}\,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-11" class="Proof">
+<div id="Proof*-12" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>The series in question is <span class="math display">\[
 \sum_{n=1}^\infty a_n  \,, \quad  a_n := \frac{1}{n^p} \,.
-\]</span> Note that <span class="math inline">\((a_n)\)</span> is decreasing and non-negative. Hence, by the Cauchy Condensation Test of Theorem <a href="chap_8.html#theorem-cauchy-test">24</a>, the <span class="math inline">\(p\)</span>-series converges if and only if <span class="math display">\[
+\]</span> Note that <span class="math inline">\((a_n)\)</span> is decreasing and non-negative. Hence, by the Cauchy Condensation Test of Theorem <a href="chap_8.html#theorem-cauchy-test">25</a>, the <span class="math inline">\(p\)</span>-series converges if and only if <span class="math display">\[
 \sum_{n=0}^\infty 2^n a_{2^n}
 \]</span> converges. We have <span class="math display">\[
 \sum_{n=0}^\infty 2^n a_{2^n}  = \sum_{n=0}^\infty 2^{n-np} =
@@ -928,7 +957,7 @@ x := 2^{1-p} \,.
 </div>
 <p>The following is another notable application of the Cauchy Condensation Test.</p>
 <div id="theorem-p-log-series" class="Theorem">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 26</strong></summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 27</strong></summary><div>
 <p>Let <span class="math inline">\(p \in \mathbb{R}\)</span>. Consider the series <span class="math display">\[
 \sum_{n=2}^{\infty} \frac{1}{n \left( \log n \right)^p} \,.
 \]</span> We have:</p>
@@ -938,7 +967,7 @@ x := 2^{1-p} \,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-12" class="Proof">
+<div id="Proof*-13" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>The series in question is <span class="math display">\[
 \sum_{n=2}^{\infty} a_n \,, \quad a_n := \frac{1}{n \left( \log n \right)^p}  \,.
 \]</span> Note that <span class="math inline">\((a_n)\)</span> is non-negative and decreasing. Therefore we can apply the Cauchy Condensation Test to conclude that the above series is convergent if and only if the series <span class="math display">\[
@@ -947,7 +976,7 @@ x := 2^{1-p} \,.
 2^n a_{2^n} = 2^n \, \frac{1}{2^n  \left(  \log 2^n \right)^p } = \frac{1}{n^p \, \log 2}
 \]</span> so that <span class="math display">\[
 \sum_{n=1}^\infty 2^n a_{2^n}  = \frac{1}{\log 2 } \, \sum_{n=1}^\infty \frac{1}{n^p} \,.
-\]</span> The latter is a <span class="math inline">\(p\)</span>-series, which by Theorem <a href="chap_8.html#theorem-p-series">25</a> converges if and only if <span class="math inline">\(p &gt; 1\)</span>. Hence <span class="math display">\[
+\]</span> The latter is a <span class="math inline">\(p\)</span>-series, which by Theorem <a href="chap_8.html#theorem-p-series">26</a> converges if and only if <span class="math inline">\(p &gt; 1\)</span>. Hence <span class="math display">\[
 \sum_{n=2}^{\infty} \frac{1}{n \left( \log n \right)^p}
 \]</span> converges if and only if <span class="math inline">\(p &gt; 1\)</span>, and the proof is concluded.<p></p>
 </div></details>
@@ -957,7 +986,7 @@ x := 2^{1-p} \,.
 <h3 data-number="8.4.2" class="anchored" data-anchor-id="comparison-test"><span class="header-section-number">8.4.2</span> Comparison Test</h3>
 <p>Another really useful result to study the convergence of non-negative series is the Comparison Test.</p>
 <div id="theorem-comparison-test" class="Theorem" title="Comparison test">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 27: </strong>Comparison test</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 28: </strong>Comparison test</summary><div>
 <p>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> and <span class="math inline">\(\left(b_{n}\right)_{n \in \mathbb{N}}\)</span> be non-negative sequences. Suppose that there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
 a_{n} \leq b_{n} \,, \quad \, \forall \, n \geq N \,.
 \]</span> They hold:</p>
@@ -967,7 +996,7 @@ a_{n} \leq b_{n} \,, \quad \, \forall \, n \geq N \,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-13" class="Proof">
+<div id="Proof*-14" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1</em>. Define the partial sums starting at <span class="math inline">\(n=N\)</span> <span class="math display">\[
 s_k := \sum_{n=N}^k a_k \,, \quad
 t_k := \sum_{n=N}^k b_k \,.
@@ -975,38 +1004,31 @@ t_k := \sum_{n=N}^k b_k \,.
 \sum_{n=1}^{\infty} b_{n}
 \]</span> converges. Hence also the series <span class="math display">\[
 \sum_{n=N}^{\infty} b_{n}
-\]</span> converges. Then <span class="math inline">\((t_k)\)</span> is a convergent sequence, which implies that <span class="math inline">\((t_k)\)</span> is bounded, and hence bounded above. We have that:<p></p>
-<ul>
-<li><p><span class="math inline">\(s_k\)</span> is bounded above: Indeed, using the assumption, we have <span class="math display">\[\begin{align*}
+\]</span> converges. Then <span class="math inline">\((t_k)\)</span> is a convergent sequence, which implies that <span class="math inline">\((t_k)\)</span> is bounded, and hence bounded above. We have that <span class="math inline">\(s_k\)</span> is bounded above: Indeed, using the assumption, we have <span class="math display">\[\begin{align*}
 s_k &amp; = a_N + a_{N+1} + \ldots + a_k \\
-  &amp; \leq b_N + b_{N+1} + \ldots + b_k \\
-  &amp; = t_k \,,
+    &amp; \leq b_N + b_{N+1} + \ldots + b_k \\
+    &amp; = t_k \,,
 \end{align*}\]</span> which reads <span class="math display">\[
 s_k \leq t_k \,, \quad  \forall \, k \geq N \,.
-\]</span> Therefore <span class="math inline">\((s_k)\)</span> is bounded above, being <span class="math inline">\((t_k)\)</span> bounded above.</p></li>
-<li><p><span class="math inline">\(s_k\)</span> is increasing: This is because <span class="math inline">\(a_n \geq 0\)</span>, so that <span class="math display">\[
-s_{k+1} = \sum_{n=N}^{k+1} a_n = s_k + a_{k+1} \geq s_k \,.
-\]</span></p></li>
-</ul>
-<p>In total, we have that <span class="math inline">\((s_k)\)</span> is increasing and bounded above. By the Monotone Convergence Theorem we conclude that <span class="math inline">\(s_k\)</span> is convergent, showing that the series <span class="math display">\[
+\]</span> Therefore <span class="math inline">\((s_k)\)</span> is bounded above, being <span class="math inline">\((t_k)\)</span> bounded above. Recall that <span class="math inline">\(s_k\)</span> is increasing, by Lemma <a href="chap_8.html#lemma-partial-sums-increasing">21</a>. By the Monotone Convergence Theorem we conclude that <span class="math inline">\(s_k\)</span> is convergent, showing that the series <span class="math display">\[
 \sum_{n=N}^\infty a_n
 \]</span> converges. Hence also the series <span class="math display">\[
 \sum_{n=1}^\infty a_n
-\]</span> converges, concluding the proof of Point 1.</p>
+\]</span> converges, concluding the proof of Point 1.<p></p>
 <p><em>Part 2.</em> Note that Point 2 is the contrapositive of Point 1, and hence it holds.</p>
 </div></details>
 </div>
 <p>Let us give two applications of the Comparison Test.</p>
-<div id="Example-28" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 28</strong></summary><div>
+<div id="Example-29" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 29</strong></summary><div>
 <ul>
 <li><p>Consider the series <span id="eq-comparison-example-1"><span class="math display">\[
 \sum_{n=1}^{\infty} \frac{1}{n^{2}+3 n-1} \,.
 \tag{8.9}\]</span></span> Since <span class="math inline">\(3 n-1 \geq 0\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, we get <span class="math display">\[
 \frac{1}{n^{2}+3 n-1} \leq \frac{1}{n^{2}} \,, \quad \forall \, n \in \mathbb{N}\,.
-\]</span> By Theorem <a href="chap_8.html#theorem-p-series">25</a> the <span class="math inline">\(p\)</span>-series <span class="math display">\[
+\]</span> By Theorem <a href="chap_8.html#theorem-p-series">26</a> the <span class="math inline">\(p\)</span>-series <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{1}{n^{2}}
-\]</span> converges. Therefore also the series at (<a href="#eq-comparison-example-1"><span>8.9</span></a>) converges by the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">27</a>.</p></li>
+\]</span> converges. Therefore also the series at (<a href="#eq-comparison-example-1"><span>8.9</span></a>) converges by the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">28</a>.</p></li>
 <li><p>Consider the series <span id="eq-comparison-example-2"><span class="math display">\[
 \sum_{n=0}^{\infty} \frac{3^{n}+6 n+\dfrac{1}{n+1}}{2^{n}} \,.
 \tag{8.10}\]</span></span> Note that <span class="math display">\[
@@ -1030,7 +1052,7 @@ b_n \leq a_n \,, \quad \forall \, n \geq N \,.
 L = \lim_{n\to \infty} \frac{a_n}{b_n}
 \]</span> for some <span class="math inline">\(L \in \mathbb{R}\)</span>. In this case, the series of <span class="math inline">\((a_n)\)</span> and <span class="math inline">\((b_n)\)</span> can still be compared, in the sense specified in the below theorem.</p>
 <div id="theorem-limit-comparison-test" class="Theorem" title="Limit Comparison Test">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 29: </strong>Limit Comparison Test</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 30: </strong>Limit Comparison Test</summary><div>
 <p>Let <span class="math inline">\((a_n)\)</span> and <span class="math inline">\((b_n)\)</span> be sequences such that <span class="math display">\[
 a_n \geq 0 \,, \quad b_n &gt; 0 \,, \quad \forall \, n \in  \mathbb{N}\,.
 \]</span> Suppose there exists <span class="math inline">\(L \in \mathbb{R}\)</span> such that <span class="math display">\[
@@ -1048,7 +1070,7 @@ L = \lim _{n \rightarrow \infty} \frac{a_{n}}{b_{n}} \,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-14" class="Proof">
+<div id="Proof*-15" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> Suppose that <span class="math inline">\(0&lt;L&lt;1\)</span>. Set <span class="math display">\[
 \varepsilon:= \frac{L}{2} \,.
 \]</span> Since <span class="math inline">\(\varepsilon&gt;0\)</span> and <span class="math inline">\(a_n/b_n \to L\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
@@ -1067,7 +1089,7 @@ L - \varepsilon&lt; \frac{a_{n}}{b_{n}}  &lt; \varepsilon+ L  \,, \quad \forall 
 \sum_{n=N}^{\infty} a_{n} \,,
 \]</span> since we are only discarding a finite number of terms. As <span class="math display">\[
 \frac{L}{2} b_{n} \leq a_{n} \,, \quad \forall \, n \geq N \,,
-\]</span> it follows from the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">27</a> that the series <span class="math display">\[
+\]</span> it follows from the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">28</a> that the series <span class="math display">\[
 \sum_{n=N}^{\infty} \frac{L}{2} b_{n} \,.
 \]</span> converges. Since <span class="math inline">\(L/2\)</span> is a constant, we also conclude that <span class="math display">\[
 \sum_{n=1}^{\infty} b_{n}
@@ -1088,10 +1110,10 @@ a_{n} &lt; \frac{3 L}{2} b_{n} \,, \quad \forall \, n \geq N \,,
 \left|\frac{a_{n}}{b_{n}}-0\right| &lt; \varepsilon= 1 \,, \quad \forall \, n \geq N \,.
 \]</span> Therefore <span class="math display">\[
 a_{n} &lt; b_{n} \,, \quad \forall \, n \geq N \,.
-\]</span> The thesis follows immediately by the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">27</a>.</p>
+\]</span> The thesis follows immediately by the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">28</a>.</p>
 </div></details>
 </div>
-<div id="Important*-15" class="Important">
+<div id="Important*-16" class="Important">
 <p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>It might happen that <span class="math display">\[
 \lim_{n \to \infty } \, \frac{a_{n}}{b_{n}} = \infty \,.
 \]</span> In this case it can be helpful to interchange the roles of <span class="math inline">\(a_{n}\)</span> and <span class="math inline">\(b_{n}\)</span>, since then <span class="math display">\[
@@ -1100,8 +1122,8 @@ a_{n} &lt; b_{n} \,, \quad \forall \, n \geq N \,.
 </div></details>
 </div>
 <p>Let us give a few applications of the Limit Comparison Tets.</p>
-<div id="Example-30" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 30</strong></summary><div>
+<div id="Example-31" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 31</strong></summary><div>
 <p>The following series converges <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{2 n^{3}+5 n+1}{7 n^{6}+2 n+5} \,.
 \]</span></p>
@@ -1121,8 +1143,8 @@ L &amp; :=\lim_{n \rightarrow \infty}  \frac{a_n}{b_n} \\
 </blockquote>
 </div></details>
 </div>
-<div id="Example-31" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 31</strong></summary><div>
+<div id="Example-32" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 32</strong></summary><div>
 <p>Prove that the following series diverges <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{n+\cos (n)}{n^{2}} \,.
 \]</span></p>
@@ -1148,8 +1170,8 @@ L = \lim_{n \rightarrow \infty} \left(1+\frac{\cos (n)}{n}\right) = 1 \,.
 </blockquote>
 </div></details>
 </div>
-<div id="Example-32" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 32</strong></summary><div>
+<div id="Example-33" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div>
 <p>Prove that the series <span class="math display">\[
 \sum_{n=1}^\infty \left( 1 - \cos\left( \frac{1}{n} \right) \right)
 \]</span> converges.</p>
@@ -1178,8 +1200,8 @@ L &amp; := \lim_{n \to \infty} \frac{b_n}{c_n} \\
 </div></details>
 </div>
 <p>Sometimes the Limit Comparison Test fails, but the Comparison Test works.</p>
-<div id="Example-33" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 33</strong></summary><div>Consider the series <span class="math display">\[
+<div id="Example-34" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 34</strong></summary><div>Consider the series <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}} \,.
 \]</span> Since <span class="math display">\[
 \sin (n) \geq-1 \,,
@@ -1193,7 +1215,7 @@ L &amp; := \lim_{n \to \infty} \frac{b_n}{c_n} \\
 \sum_{n=1}^{\infty} \frac{2}{n^{2}}
 \]</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=2&gt;1\)</span>. Therefore also <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}}
-\]</span> converges, by the Comparison Test of Theorem <a href="chap_8.html#theorem-comparison-test">27</a>.<p></p>
+\]</span> converges, by the Comparison Test of Theorem <a href="chap_8.html#theorem-comparison-test">28</a>.<p></p>
 </div></details>
 </div>
 </section>
@@ -1201,7 +1223,7 @@ L &amp; := \lim_{n \to \infty} \frac{b_n}{c_n} \\
 <h3 data-number="8.4.4" class="anchored" data-anchor-id="ratio-test-for-positive-series"><span class="header-section-number">8.4.4</span> Ratio Test for positive series</h3>
 <p>The Ratio Test can be generalized to series. Notice that in this case the terms of the series need to be positive.</p>
 <div id="theorem-ratio-test-series" class="Theorem" title="Ratio Test for Series">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 34: </strong>Ratio Test for Series</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 35: </strong>Ratio Test for Series</summary><div>
 <p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
 a_{n}&gt;0 \,, \quad \forall \, n \in \mathbb{N}\, .
 \]</span></p>
@@ -1219,7 +1241,7 @@ L:=\lim_{n \to \infty} \frac{a_{n+1}}{a_{n}} \,.
 </ol>
 </div></details>
 </div>
-<div id="Proof*-16" class="Proof">
+<div id="Proof*-17" class="Proof">
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> Let <span class="math display">\[
 L:=\lim_{n \to \infty} \frac{a_{n+1}}{a_{n}} \,.
 \]</span><p></p>
@@ -1238,7 +1260,7 @@ a_{n+1} &lt;  r \, a_n  \,, \quad \forall \, n \geq N \,.
 0 &lt; a_{n} &lt;  r  \, a_{n-1} &lt; \ldots &lt; r^{n-N} \, a_{N} \,, \quad \forall \, n \geq N \,.
 \tag{8.11}\]</span></span> Note that the series of <span class="math inline">\(r^{n-N} \, a_{N}\)</span> converges, since <span class="math display">\[
 \sum_{n=N}^\infty r^{n-N} \, a_{N} = a_{N} \sum_{k=0}^\infty r^k = a_N \frac{1}{1-r} \,,
-\]</span> where the last equality follows because <span class="math inline">\(\sum_{k=0}^\infty r^k\)</span> is a geometric series and <span class="math inline">\(0&lt;r&lt;1\)</span>. Since (<a href="#eq-limit-comparison-1"><span>8.11</span></a>) holds, by the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">27</a> we conclude that the series <span class="math display">\[
+\]</span> where the last equality follows because <span class="math inline">\(\sum_{k=0}^\infty r^k\)</span> is a geometric series and <span class="math inline">\(0&lt;r&lt;1\)</span>. Since (<a href="#eq-limit-comparison-1"><span>8.11</span></a>) holds, by the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">28</a> we conclude that the series <span class="math display">\[
 \sum_{n=N}^\infty a_n
 \]</span> converges. Therefore also the series <span class="math display">\[
 \sum_{n=1}^\infty a_n
@@ -1252,8 +1274,8 @@ a_{n+1} &lt;  r \, a_n  \,, \quad \forall \, n \geq N \,.
 \]</span> By the Ratio Test for sequences it follows that <span class="math inline">\(a_n\)</span> diverges. Therefore <span class="math inline">\(\sum_{n=1}^\infty\)</span> diverges by the Necessary Condition.</p>
 </div></details>
 </div>
-<div id="Example-35" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35</strong></summary><div>Consider the series <span class="math display">\[
+<div id="Example-36" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 36</strong></summary><div>Consider the series <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{(n !)^{2}}{(2 n) !}
 \]</span> Let <span class="math display">\[
 a_{n}=\frac{(n !)^{2}}{(2 n) !}
@@ -1269,14 +1291,14 @@ L = \lim_{n \to \infty} \frac{a_{n+1}}{a_n} =
 \]</span> Since <span class="math inline">\(L = 1/4 &lt;1\)</span>, be the Ratio Test for Series we conclude that the series of interest converges.<p></p>
 </div></details>
 </div>
-<div id="Important*-17" class="Important">
-<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>Like with the Ratio Test for sequences, the case <span class="math inline">\(L=1\)</span> is not covered by Theorem <a href="chap_8.html#theorem-ratio-test-series">34</a>. This is because, in this case, the series <span class="math display">\[
+<div id="Important*-18" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>Like with the Ratio Test for sequences, the case <span class="math inline">\(L=1\)</span> is not covered by Theorem <a href="chap_8.html#theorem-ratio-test-series">35</a>. This is because, in this case, the series <span class="math display">\[
 \sum_{n=1}^\infty a_n
 \]</span> might be convergent or divergent, as shown in the next example.<p></p>
 </div></details>
 </div>
-<div id="Example-36" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 36</strong></summary><div>
+<div id="Example-37" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 37</strong></summary><div>
 <ul>
 <li><p>Consider the series <span class="math display">\[
 \sum_{n=1}^\infty \frac{1}{n} \,.
@@ -1295,6 +1317,15 @@ L &amp; = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
 </ul>
 </div></details>
 </div>
+</section>
+</section>
+<section id="general-series" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="general-series"><span class="header-section-number">8.5</span> General series</h2>
+<p>In the previous section we presented several tests for non-negative series. For non-negative series we shows that the partial sums <span class="math inline">\((s_k)\)</span> are increasing, see Lemma <a href="chap_8.html#lemma-partial-sums-increasing">21</a>. This makes non-negative terms series relatively easy to study.</p>
+<p>When a series contains both positive and negative terms, the partial sums <span class="math inline">\((s_k)\)</span> might oscillate, making the series harder to study. In this section we present some tests for general series in <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<section id="absolute-convergence" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="absolute-convergence"><span class="header-section-number">8.5.1</span> Absolute convergence</h3>
+<p>To study general series, we introduce a stronger notions of convergence, known as <strong>absolute convergence</strong>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
