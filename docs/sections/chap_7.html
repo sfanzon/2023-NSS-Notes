@@ -66,19 +66,23 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -86,23 +90,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -110,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #cce7b1;
   --color2: #86b754;
 }
-.Problem {
+.Theorem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -118,21 +114,25 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Corollary {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Question {
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 </style>
 
@@ -409,7 +409,7 @@ a_{n}=\frac{(2-i) n^{2}+6 i n-5-3 i}{(6+3 i) n^{2}+11 i}=
 </section>
 <section id="convergence-to-zero" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="convergence-to-zero"><span class="header-section-number">7.4</span> Convergence to zero</h2>
-<p>The only result that cannot be directly adapted for complex sequences is the Squeeze Theorem. Indeed the chain of inequalities <span class="math display">\[
+<p>One of the results that cannot hold for complex sequences is the Squeeze Theorem. Indeed the chain of inequalities <span class="math display">\[
 b_{n} \leq  a_{n} \leq c_{n}
 \]</span> would not make sense in <span class="math inline">\(\mathbb{C}\)</span>, since there is no order relation.</p>
 <p>We can however prove the following (weaker) result.</p>

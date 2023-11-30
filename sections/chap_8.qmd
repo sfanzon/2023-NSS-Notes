@@ -46,7 +46,7 @@ We start by defining partial sums.
 ::: Definition 
 ### Partial sums
 
-Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. The $k$-th partial sum of $(a_n)$ is
+Let $(a_{n})$ be a sequence in $\mathbb{C}$. The $k$-th partial sum of $(a_n)$ is
 $$
 s_{k} :=a_{1}+a_{2}+\ldots+a_{k} = \sum_{n=1}^{k} a_{n}
 $$
@@ -61,7 +61,7 @@ We can use the sequence of partial sums to define convergence of a series.
 ::: Definition 
 ### Convergent series
 
-Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. We denote the series of $\left(a_{n}\right)_{n \in \mathbb{N}}$ by
+Let $(a_{n})$ be a sequence in $\mathbb{C}$. We denote the series of $\left(a_{n}\right)_{n \in \mathbb{N}}$ by
 $$
 \sum_{n=1}^{\infty} a_{n}
 $$
@@ -81,7 +81,7 @@ $$
 ::: Definition 
 ### Divergent series
 
-Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. The series 
+Let $(a_{n})$ be a sequence in $\mathbb{C}$. The series 
 $$
 \sum_{n=1}^\infty a_n 
 $$
@@ -143,7 +143,7 @@ The following theorem shows that if the terms in the sequence do not converge to
 ::: Theorem 
 ### Necessary Condition for Convergence {#theorem-series-necessary}
 
-Let $\left(a_{n}\right)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{C}$. If the series 
+Let $(a_{n})$ be a sequence in $\mathbb{C}$. If the series 
 $$
 \sum_{n=1}^{\infty} a_{n} 
 $$ 
@@ -750,7 +750,7 @@ The key remark for non-negative series is that the partial sums are increasing.
 
 :::{.Lemma #lemma-partial-sums-increasing}
 
-Let $(a_{n}$ be a sequence in $\mathbb{R}$ with 
+Let $(a_{n})$ be a sequence in $\mathbb{R}$ with 
 $$
 a_n \geq 0 \,, \quad  \forall \, n \in \N \,.
 $$
@@ -1790,3 +1790,91 @@ In this section we present some tests for general series in $\mathbb{C}$.
 
 To study general series, we introduce a stronger notions of convergence,
 known as **absolute convergence**.
+
+
+::: Definition 
+### Absolute convergence
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$. The series 
+$\sum_{n=1}^{\infty} a_{n}$ is said to **converge absolutely** if the non-negative series
+$$
+\sum_{n=1}^{\infty}\left|a_{n}\right|
+$$
+converges.
+
+:::
+
+
+Let us show that absolute convergence implies convergence.
+
+
+::: Theorem 
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$. If the series $\sum_{n=1}^{\infty} a_{n}$ converge absolutely, then the series converges.
+
+:::
+
+
+::: Proof
+
+We present the proof for series in $\mathbb{R}$. For series in $\mathbb{C}$, the same proof can be used for the real and imaginary parts separately.
+
+For any number $a \in \mathbb{R}$, we write $a^{+}:=\max \{a, 0\}$ and $a^{-}:=\max \{-a, 0\}$. These are called the positive part and negative part of $a$, respectively. Note that both $a^{+}=0$ and $a^{-}=0$. Furthermore, it holds that $a=a^{+}-a^{-}$. To see this, we compute
+
+$$
+a^{+}-a^{-}=\left\{\begin{array}{lll}
+a-0 & =a, & \text { if } a \geq 0 \\
+0-(-a) & =a, & \text { if } a<0
+\end{array}\right.
+$$
+
+Suppose that $\sum_{n=1}^{\infty} a_{n}$ converges absolutely. Then by definition, $\sum_{n=1}^{\infty}\left|a_{n}\right|$ converges. Since we have that $0 \leq a_{n}^{+} \leq\left|a_{n}\right|$ for all $n \in \mathbb{N}$, we can use the comparison test for nonnegative series (Theorem 3.4.7) and it follows that $\sum_{n=1}^{\infty} a_{n}^{+}$converges.
+
+Similarly, $0 \leq a_{n}^{-} \leq\left|a_{n}\right|$ so that also $\sum_{n=1}^{\infty} a_{n}^{-}$converges by the comparison test.
+
+We can now combine these results using Theorem 3.3.1(c) to prove that also
+
+$$
+\sum_{n=1}^{\infty} a_{n}=\sum_{n=1}^{\infty}\left(a_{n}^{+}-a_{n}^{-}\right)=\sum_{n=1}^{\infty} a_{n}^{+}-\sum_{n=1}^{\infty} a_{n}^{-}
+$$
+
+converges.
+
+:::
+
+
+
+
+
+
+::: Example 
+
+The series $\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n}$ does not converge absolutely, since
+
+$$
+\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{1}{n}\right|=\sum_{n=1}^{\infty} \frac{1}{n}
+$$
+
+doesn't converge ( $p$-series with $p=1)$.
+
+:::
+
+
+::: Example 
+
+Consider the series $\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}$. Then
+$$
+\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}
+$$
+where we used the triangle inequality. Since
+$$
+\frac{n^{2}+5 n+2}{n^{4}} / \frac{1}{n^{2}}=\frac{n^{4}+5 n^{3}+2 n^{2}}{n^{4}}=1+5 / n+2 / n^{2} \longrightarrow 1
+$$
+and $\sum_{n=1}^{\infty} \frac{1}{n^{2}}$ converges ( $p$-series with $p=2$ ), also $\sum_{n=1}^{\infty} \frac{n^{2}+5 n+2}{n^{4}}$ converges by the limit comparison test (for nonnegative series). Since $0 \leq \frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}$, the series
+$$
+\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\sum_{n=1}^{\infty} \frac{\left|n^{2}-5 n+2\right|}{n^{4}}
+$$
+converges by the comparison test (for nonnegative series).
+Therefore $\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}$ converges absolutely.
+
+:::

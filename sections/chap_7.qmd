@@ -236,7 +236,7 @@ $x + i y$:
 ## Convergence to zero
 
 
-The only result that cannot be directly adapted for complex sequences is
+One of the results that cannot hold for complex sequences is
 the Squeeze Theorem. Indeed the chain of inequalities
 $$
 b_{n} \leq  a_{n} \leq c_{n}
@@ -709,10 +709,6 @@ $$
 La roba sotto e' di Dommers. Sarebbe bene fare la dimostrazione di Cauchy in 
 R e ignorare quella in C (in cui va assunto che Cauchy implica convergente). In R bisogna fare bolzano Weierstrass per dimostrare che Cauchy implica convergente. E' sia sul marcellini sbordone pag 155, e ci sono anche
 discussioni su abbot, per dimostrare che cauchy implica convergente.
-
-
-Quando hai cauchy, puoi anche eliminare il test di convergenza intergrale per
-serie e rimpiazzarlo con cauchy consensed criterion. Qullo lo trovi su abbott dimostrato per bene (pag 67), o anche sui miei appunti di analisi 1.
 
 
 

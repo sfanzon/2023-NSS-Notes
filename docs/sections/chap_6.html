@@ -66,9 +66,29 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Lemma {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Definition {
   --color1: #c6e6ed;
@@ -78,51 +98,11 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .TODO {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Theorem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -130,9 +110,29 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
 .Important {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
 }
 </style>
 
@@ -1734,14 +1734,15 @@ a_n = \left(  1 + \frac{1}{n}  \right)^n  \,.
 a_{n} \geq a_{n-1} \,, \quad \forall \, n \in \mathbb{N}\,,
 \]</span> which by definition is equivalent to <span class="math display">\[
 \left(  1 + \frac{1}{n}  \right)^n \geq
-\left(  1 + \frac{1}{n + 1}  \right)^{n+1} \,, \quad \forall \, n \in \mathbb{N}\,.
+\left(  1 + \frac{1}{n - 1}  \right)^{n-1} \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> Summing the fractions we get <span class="math display">\[
 \left(  \frac{n+1}{n}  \right)^n \geq
-\left(  \frac{n}{n-1}  \right)^n  \left(  \frac{n}{n-1}  \right) \,.
-\]</span> Dividing by the term <span class="math inline">\((n/(n-1))^n\)</span> we obtain <span class="math display">\[
-\left(  \frac{n^2 - 1}{n^2}  \right)^n \geq 1 - \frac1n \,,
-\]</span> which is equivalent to <span id="eq-proof-euler-1"><span class="math display">\[
-\left(  1 - \frac{1}{n^2}  \right)^n \geq 1 - \frac1n \,, \forall \, n \in \mathbb{N}\,.
+\left(  \frac{n}{n-1}  \right)^{n-1} \,.  
+\]</span> Multiplying by <span class="math inline">\(((n-1)/n)^n\)</span> we obtain <span class="math display">\[
+\left(  \frac{n-1}{n}  \right)^n  \left(  \frac{n+1}{n}  \right)^n  \geq
+\frac{n-1}{n}  \,,
+\]</span> which simplifies to <span id="eq-proof-euler-1"><span class="math display">\[
+\left(  1 - \frac{1}{n^2}  \right)^n \geq 1 - \frac1n \,, \quad  \forall \, n \in \mathbb{N}\,.
 \tag{6.19}\]</span></span> Therefore <span class="math inline">\((a_n)\)</span> is increasing if and only if (<a href="#eq-proof-euler-1"><span>6.19</span></a>) holds. Recall Bernoulli’s inequality from Lemma <a href="chap_6.html#lemma-bernoulli">41</a>: For <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(x&gt;-1\)</span>, it holds <span class="math display">\[
 (1 + x )^n  \geq 1 + nx  \,, \quad \forall \, n \in \mathbb{N}\,.
 \]</span> Appliying Bernoulli’s inequality with <span class="math display">\[
@@ -1757,13 +1758,13 @@ b_n := \left(   1  + \frac1n \right)^{n+1} \,.
 <blockquote class="blockquote">
 <p>To prove <span class="math inline">\((b_n)\)</span> is decreasing, we need to show that <span class="math display">\[
 b_{n-1} \geq b_n \,, \quad \forall \, n \in \mathbb{N}\,.
-\]</span> To prove the above, we rewrite it as <span class="math display">\[
+\]</span> By definition of <span class="math inline">\(b_n\)</span>, the above reads <span class="math display">\[
 \left(   1  + \frac{1}{n-1} \right)^{n} \geq
-\left(   1  + \frac{1}{n} \right)^{n+1} \,.
-\]</span> Expanding the fractions, the above is equivalent to <span class="math display">\[
+\left(   1  + \frac{1}{n} \right)^{n+1} \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Summing the terms inside the brackets, the above is equivalent to <span class="math display">\[
 \left(   \frac{n}{n-1} \right)^{n} \geq
 \left(   \frac{n+1}{n} \right)^{n} \left(   \frac{n+1}{n} \right) \,.
-\]</span> Dividing by <span class="math inline">\(((n+1)/n)^n\)</span> we get <span class="math display">\[
+\]</span> Multiplying by <span class="math inline">\((n/(n+1))^n\)</span> we get <span class="math display">\[
 \left(  \frac{n^2}{n^2 - 1} \right)^{n} \geq  \left(   \frac{n+1}{n} \right) \,.
 \]</span> The above is equivalent to <span id="eq-proof-euler-3"><span class="math display">\[
 \left( 1 +  \frac{1}{n^2 - 1} \right)^{n} \geq  \left(  1 + \frac{1}{n} \right) \,.
@@ -1848,16 +1849,19 @@ x = (1 + b_n)^n \geq 1 + n b_n \,.
 </div></details>
 </div>
 <div id="Proof*-26" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Step 1</em>. We prove that <span class="math display">\[
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>Assume that <span class="math inline">\(a_n \to 0\)</span> and set <span class="math display">\[
+\varepsilon:= \frac{\pi}{2} \,.
+\]</span> By the convergence <span class="math inline">\(a_m \to 0\)</span> there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span id="eq-limiti-notevoli-1"><span class="math display">\[
+|a_n| &lt; \varepsilon= \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
+\tag{6.21}\]</span></span><p></p>
+<p><em>Step 1</em>. We prove that <span class="math display">\[
 \sin(a_n) \to 0 \,.
-\]</span> By elementary trigonometry we have <span id="eq-limiti-notevoli-1"><span class="math display">\[
+\]</span> By elementary trigonometry we have <span class="math display">\[
 0 \leq |\sin (x)| = \sin |x| \leq |x| \,, \quad \forall  \, x \in \left[
 -\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
-\tag{6.21}\]</span></span> Since <span class="math inline">\(a_n \to 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
-|a_n| &lt; \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
-\]</span> Therefore, by inequality (<a href="#eq-limiti-notevoli-1"><span>6.21</span></a>), we get <span class="math display">\[
+\]</span> Therefore, since (<a href="#eq-limiti-notevoli-1"><span>6.21</span></a>) holds, we can substitute <span class="math inline">\(x=a_n\)</span> in the above inequality to get <span class="math display">\[
 0 \leq |\sin (a_n)|  \leq |a_n| \,, \quad \forall \, n \geq \mathbb{N}\,.
-\]</span> Since <span class="math inline">\(a_n \to 0\)</span>, we also have <span class="math inline">\(|a_n|\to 0\)</span>. Therefore <span class="math inline">\(|\sin (a_n)| \to 0\)</span> by the Squeeze Theorem. This immediately implies <span class="math inline">\(\sin(a_n) \to 0\)</span>.<p></p>
+\]</span> Since <span class="math inline">\(a_n \to 0\)</span>, we also have <span class="math inline">\(|a_n|\to 0\)</span>. Therefore <span class="math inline">\(|\sin (a_n)| \to 0\)</span> by the Squeeze Theorem. This immediately implies <span class="math inline">\(\sin(a_n) \to 0\)</span>.</p>
 <p><em>Step 2</em>. We prove that <span class="math display">\[
 \cos(a_n) \to 1 \,.
 \]</span> Inverting the relation <span class="math display">\[
@@ -1867,9 +1871,7 @@ x = (1 + b_n)^n \geq 1 + n b_n \,.
 \]</span> We have that <span class="math inline">\(\cos(x) \geq 0\)</span> for <span class="math inline">\(-\pi/2 \leq x \leq \pi/2\)</span>. Thus <span class="math display">\[
 \cos(x) = \sqrt{ 1 - \sin^2 (x) } \,, \quad \forall \, x \in
 \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
-\]</span> Since <span class="math inline">\(a_n \to 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
-|a_n| &lt; \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
-\]</span> Therefore <span class="math display">\[
+\]</span> Since (<a href="#eq-limiti-notevoli-1"><span>6.21</span></a>) holds, we can set <span class="math inline">\(x=a_n\)</span> in the above inequality and obtain <span class="math display">\[
 \cos(a_n) = \sqrt{ 1 - \sin^2 (a_n) } \,, \quad \forall \, n \geq N \,.
 \]</span> By Step 1 we know that <span class="math inline">\(\sin(a_n) \to 0\)</span>. Therefore, by the Algebra of Limits, <span class="math display">\[
 1 - \sin^2 (a_n) \longrightarrow 1 - 0 \cdot 0 = 1 \,.
@@ -1890,16 +1892,21 @@ a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
 <p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>The following elementary trigonometric inequality holds: <span class="math display">\[
 \sin (x) &lt; x &lt; \tan (x) \,, \quad \forall \, x \in \left[0 ,\frac{\pi}{2} \right]  \,.
 \]</span> Note that <span class="math inline">\(\sin x &gt;0\)</span> for <span class="math inline">\(0 &lt; x &lt; \pi/2\)</span>. Therefore we can divide the above inequality by <span class="math inline">\(\sin(x)\)</span> and take the reciprocals to get <span class="math display">\[
-\cos(x) &lt; \frac{\sin (x)}{x} &lt; 1 \,, \quad \forall \, x \in \left[0 ,\frac{\pi}{2} \right] \,.
+\cos(x) &lt; \frac{\sin (x)}{x} &lt; 1 \,, \quad \forall \, x \in \Big( 0 ,\frac{\pi}{2} \Big] \,.
 \]</span> If <span class="math inline">\(-\pi/2&lt;x&lt;0\)</span>, we can apply the above inequality to <span class="math inline">\(-x\)</span> to obtain <span class="math display">\[
 \cos(-x) &lt; \frac{\sin(-x)}{-x} &lt; 1  \,.
 \]</span> Recalling that <span class="math inline">\(\cos(-x) = \cos(x)\)</span> and <span class="math inline">\(\sin(-x)=-\sin(x)\)</span>, we get <span class="math display">\[
-\cos(x) &lt; \frac{\sin(x)}{x} &lt; 1  \,, \quad \forall \, x \in \left[-\frac{\pi}{2}, 0 \right] \,.
-\]</span> Thus <span class="math display">\[
-\cos(x) &lt; \frac{\sin(x)}{x} &lt; 1  \,, \quad \forall  \, x \in \left[-\frac{\pi}{2}, \frac{\pi}{2} \right] \,.
+\cos(x) &lt; \frac{\sin(x)}{x} &lt; 1  \,, \quad \forall \, x \in \Big( -\frac{\pi}{2}, 0 \Big] \,.
+\]</span> Thus <span id="eq-limiti-notevoli-3"><span class="math display">\[
+\cos(x) &lt; \frac{\sin(x)}{x} &lt; 1  \,, \quad \forall  \, x \in \left[-\frac{\pi}{2}, \frac{\pi}{2} \right] \smallsetminus \{0\} \,.
+\tag{6.22}\]</span></span> Let <span class="math display">\[
+\varepsilon:= \frac{\pi}{2} \,.
 \]</span> Since <span class="math inline">\(a_n \to 0\)</span>, there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
-|a_n| &lt; \frac{\pi}{2} \, \quad \forall \, n \geq N \,.
-\]</span> Hence <span class="math display">\[
+|a_n| &lt; \varepsilon= \frac{\pi}{2} \,, \quad \forall \, n \geq N \,.
+\]</span> Since <span class="math inline">\(a_n \neq 0\)</span> by assumption, the above shows that <span class="math display">\[
+a_n \in \Big[ -\frac{\pi}{2}, \frac{\pi}{2}  \Big] \smallsetminus \{0\} \,,
+\quad \forall \, n \geq \mathbb{N}\,.
+\]</span> Therefore we can substitute <span class="math inline">\(x=a_n\)</span> into (<a href="#eq-limiti-notevoli-3"><span>6.22</span></a>) to get <span class="math display">\[
 \cos(a_n) &lt; \frac{\sin(a_n)}{a_n} &lt; 1  \,, \quad \forall  \, n \geq N \,.
 \]</span> We have <span class="math display">\[
 \cos(a_n) \to 1
@@ -1946,6 +1953,22 @@ a_n \neq 0 \,, \quad \forall \, n \in \mathbb{N}\, .
 <div id="Example-57" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 57</strong></summary><div>
 <ul>
+<li><p>We have <span id="eq-notable-limits-2"><span class="math display">\[
+\lim_{n \to \infty} \, n  \sin \left(  \frac{1}{n} \right)  = 1 \,.
+\tag{6.23}\]</span></span> This is because <span class="math display">\[
+n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,,
+\]</span> by Theorem <a href="chap_6.html#theorem-important-limit-2">55</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p></li>
+<li><p>We have <span id="eq-notable-limits-1"><span class="math display">\[
+\lim_{n \to \infty} \, n^2 \left(  1 - \cos \left(  \dfrac{1}{n} \right)  \right) = \frac12 \,.
+\tag{6.24}\]</span></span> Indeed, <span class="math display">\[
+n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,,
+\]</span> by applying Theorem <a href="chap_6.html#theorem-important-limit-3">56</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p></li>
+<li><p>We have <span class="math display">\[
+\lim_{n \to \infty} \, \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } = \frac12 \,.
+\]</span> Indeed, using (<a href="#eq-notable-limits-1"><span>6.24</span></a>)-(<a href="#eq-notable-limits-2"><span>6.23</span></a>) and the Algebra of Limits <span class="math display">\[
+\frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } =
+\frac{n^2  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ n \sin \left( \dfrac{1}{n} \right) } \longrightarrow \frac{1/2}{1} = \frac12 \,.
+\]</span></p></li>
 <li><p>We have <span class="math display">\[
 \lim_{n \to \infty} \, n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) = 2 \,.
 \]</span> This is because <span class="math display">\[
@@ -1957,22 +1980,6 @@ n \cos \left( \frac{2}{n}  \right) \sin \left( \frac{2}{n}  \right) =
 2 \cdot \cos \left( \frac{2}{n}  \right) \cdot \frac{\sin \left( \dfrac{2}{n}  \right)}{\dfrac{2}{n}}
 \longrightarrow 2 \cdot 1 \cdot 1 = 2
 \]</span> where we used the Algebra of Limits.</p></li>
-<li><p>We have <span id="eq-notable-limits-1"><span class="math display">\[
-\lim_{n \to \infty} \, n^2 \left(  1 - \cos \left(  \dfrac{1}{n} \right)  \right) = \frac12 \,.
-\tag{6.22}\]</span></span> Indeed, <span class="math display">\[
-n^2 \left(  1 - \cos \left(  \frac{1}{n} \right)\right) = \dfrac{1 - \cos \left(  \dfrac{1}{n} \right)}{\dfrac{1}{n^2}} \longrightarrow \frac12 \,,
-\]</span> by applying Theorem <a href="chap_6.html#theorem-important-limit-3">56</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p></li>
-<li><p>We have <span id="eq-notable-limits-2"><span class="math display">\[
-\lim_{n \to \infty} \, n  \sin \left(  \frac{1}{n} \right)  = 1 \,.
-\tag{6.23}\]</span></span> This is because <span class="math display">\[
-n  \sin \left(  \frac{1}{n} \right) = \frac{ \sin \left(  \dfrac{1}{n} \right) }{ \dfrac{1}{n} } \longrightarrow 1 \,,
-\]</span> by Theorem <a href="chap_6.html#theorem-important-limit-2">55</a> with <span class="math inline">\(a_n = 1/n\)</span>.</p></li>
-<li><p>We have <span class="math display">\[
-\lim_{n \to \infty} \, \frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } = \frac12 \,.
-\]</span> Indeed, using (<a href="#eq-notable-limits-1"><span>6.22</span></a>)-(<a href="#eq-notable-limits-2"><span>6.23</span></a>) and the Algebra of Limits <span class="math display">\[
-\frac{n  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ \sin \left( \dfrac{1}{n} \right) } =
-\frac{n^2  \left( 1- \cos \left(  \dfrac{1}{n} \right) \right) }{ n \sin \left( \dfrac{1}{n} \right) } \longrightarrow \frac{1/2}{1} = \frac12 \,.
-\]</span></p></li>
 <li><p>We have <span class="math display">\[
 \lim_{n \to \infty} \, \frac{n^2+1}{n+1} \sin \left(  \dfrac{1}{n} \right)  = 1 \,.
 \]</span> To prove it, note that <span class="math display">\[

@@ -896,3 +896,13 @@
  [**Important**](#Important*-8.18)\Pageref{Important*-8.18}
 
  [**Example 8.37**](#Example-8.37)\Pageref{Example-8.37}
+
+ [**Definition 8.38**](#absolute-convergence-1): Absolute convergence\Pageref{absolute-convergence-1}
+
+ [**Theorem 8.39**](#Theorem-8.39)\Pageref{Theorem-8.39}
+
+ [**Proof**](#Proof*-8.19)\Pageref{Proof*-8.19}
+
+ [**Example 8.40**](#Example-8.40)\Pageref{Example-8.40}
+
+ [**Example 8.41**](#Example-8.41)\Pageref{Example-8.41}

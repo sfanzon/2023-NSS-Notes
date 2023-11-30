@@ -85,11 +85,11 @@ div.csl-indent {
   }
 }</script>
 <style>
-.Lemma {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
 }
-.Theorem {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -97,31 +97,7 @@ div.csl-indent {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Problem {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -129,19 +105,27 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Warning {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
 .Remark {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Corollary {
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Important {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -149,7 +133,23 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Warning {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -325,14 +325,14 @@ a_1 + a_2 + a_3 + \ldots + a_n + \ldots
 <p>We will develop the theory of series for sequences in <span class="math inline">\(\mathbb{C}\)</span>. All the results for complex series will also hold for series in <span class="math inline">\(\mathbb{R}\)</span>. Some results will only hold for series in <span class="math inline">\(\mathbb{R}\)</span>: this will be the case for comparison tests in which the order relation of <span class="math inline">\(\mathbb{R}\)</span> is needed.</p>
 <p>We start by defining partial sums.</p>
 <div id="partial-sums" class="Definition" title="Partial sums">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Partial sums</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The <span class="math inline">\(k\)</span>-th partial sum of <span class="math inline">\((a_n)\)</span> is <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 1: </strong>Partial sums</summary><div>Let <span class="math inline">\((a_{n})\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The <span class="math inline">\(k\)</span>-th partial sum of <span class="math inline">\((a_n)\)</span> is <span class="math display">\[
 s_{k} :=a_{1}+a_{2}+\ldots+a_{k} = \sum_{n=1}^{k} a_{n}
 \]</span> This sequence <span class="math inline">\(\left(s_{k}\right)_{k \in \mathbb{N}}\)</span> is called the sequence of <strong>partial sums</strong>.<p></p>
 </div></details>
 </div>
 <p>We can use the sequence of partial sums to define convergence of a series.</p>
 <div id="convergent-series-1" class="Definition" title="Convergent series">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2: </strong>Convergent series</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. We denote the series of <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> by <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 2: </strong>Convergent series</summary><div>Let <span class="math inline">\((a_{n})\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. We denote the series of <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> by <span class="math display">\[
 \sum_{n=1}^{\infty} a_{n}
 \]</span> We say that this series <strong>converges</strong> to <span class="math inline">\(s \in \mathbb{C}\)</span> if <span class="math display">\[
 \lim_{k \rightarrow \infty} \sum_{n=1}^{k} a_{n} =
@@ -343,7 +343,7 @@ s_{k} :=a_{1}+a_{2}+\ldots+a_{k} = \sum_{n=1}^{k} a_{n}
 </div></details>
 </div>
 <div id="divergent-series" class="Definition" title="Divergent series">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 3: </strong>Divergent series</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The series <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 3: </strong>Divergent series</summary><div>Let <span class="math inline">\((a_{n})\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The series <span class="math display">\[
 \sum_{n=1}^\infty a_n
 \]</span> is <strong>divergent</strong> if the sequence of partial sums <span class="math inline">\((s_k)\)</span> is divergent.<p></p>
 </div></details>
@@ -379,7 +379,7 @@ s_{k}=\sum_{n=1}^{k}(-1)^{n}=
 <p>In general, it is a difficult taks to compute the exact value of a series. Therefore, we will mainly focus our effort on determining whether a series converges or not.</p>
 <p>The following theorem shows that if the terms in the sequence do not converge to <span class="math inline">\(0\)</span>, then the series cannot converge.</p>
 <div id="theorem-series-necessary" class="Theorem" title="Necessary Condition for Convergence">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 6: </strong>Necessary Condition for Convergence</summary><div>Let <span class="math inline">\(\left(a_{n}\right)_{n \in \mathbb{N}}\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. If the series <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 6: </strong>Necessary Condition for Convergence</summary><div>Let <span class="math inline">\((a_{n})\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. If the series <span class="math display">\[
 \sum_{n=1}^{\infty} a_{n}
 \]</span> converges, then <span class="math display">\[
 \lim_{n \rightarrow \infty} a_{n}=0 \,.
@@ -734,7 +734,7 @@ a_n \geq 0 \,, \quad  \forall \, n \in \mathbb{N}\,.
 </div>
 <p>The key remark for non-negative series is that the partial sums are increasing.</p>
 <div id="lemma-partial-sums-increasing" class="Lemma">
-<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 21</strong></summary><div>Let <span class="math inline">\((a_{n}\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> with <span class="math display">\[
+<p></p><details class="Lemma fbx-simplebox fbx-default" open=""><summary><strong>Lemma 21</strong></summary><div>Let <span class="math inline">\((a_{n})\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> with <span class="math display">\[
 a_n \geq 0 \,, \quad  \forall \, n \in \mathbb{N}\,.
 \]</span> Define the partial sums as <span class="math display">\[
 s_k := \sum_{n=1}^k a_n \,.
@@ -1326,6 +1326,53 @@ L &amp; = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
 <section id="absolute-convergence" class="level3" data-number="8.5.1">
 <h3 data-number="8.5.1" class="anchored" data-anchor-id="absolute-convergence"><span class="header-section-number">8.5.1</span> Absolute convergence</h3>
 <p>To study general series, we introduce a stronger notions of convergence, known as <strong>absolute convergence</strong>.</p>
+<div id="absolute-convergence-1" class="Definition" title="Absolute convergence">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 38: </strong>Absolute convergence</summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The series <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> is said to <strong>converge absolutely</strong> if the non-negative series <span class="math display">\[
+\sum_{n=1}^{\infty}\left|a_{n}\right|
+\]</span> converges.<p></p>
+</div></details>
+</div>
+<p>Let us show that absolute convergence implies convergence.</p>
+<div id="Theorem-39" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 39</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. If the series <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converge absolutely, then the series converges.<p></p>
+</div></details>
+</div>
+<div id="Proof*-19" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We present the proof for series in <span class="math inline">\(\mathbb{R}\)</span>. For series in <span class="math inline">\(\mathbb{C}\)</span>, the same proof can be used for the real and imaginary parts separately.<p></p>
+<p>For any number <span class="math inline">\(a \in \mathbb{R}\)</span>, we write <span class="math inline">\(a^{+}:=\max \{a, 0\}\)</span> and <span class="math inline">\(a^{-}:=\max \{-a, 0\}\)</span>. These are called the positive part and negative part of <span class="math inline">\(a\)</span>, respectively. Note that both <span class="math inline">\(a^{+}=0\)</span> and <span class="math inline">\(a^{-}=0\)</span>. Furthermore, it holds that <span class="math inline">\(a=a^{+}-a^{-}\)</span>. To see this, we compute</p>
+<p><span class="math display">\[
+a^{+}-a^{-}=\left\{\begin{array}{lll}
+a-0 &amp; =a, &amp; \text { if } a \geq 0 \\
+0-(-a) &amp; =a, &amp; \text { if } a&lt;0
+\end{array}\right.
+\]</span></p>
+<p>Suppose that <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges absolutely. Then by definition, <span class="math inline">\(\sum_{n=1}^{\infty}\left|a_{n}\right|\)</span> converges. Since we have that <span class="math inline">\(0 \leq a_{n}^{+} \leq\left|a_{n}\right|\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, we can use the comparison test for nonnegative series (Theorem 3.4.7) and it follows that <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}^{+}\)</span>converges.</p>
+<p>Similarly, <span class="math inline">\(0 \leq a_{n}^{-} \leq\left|a_{n}\right|\)</span> so that also <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}^{-}\)</span>converges by the comparison test.</p>
+<p>We can now combine these results using Theorem 3.3.1(c) to prove that also</p>
+<p><span class="math display">\[
+\sum_{n=1}^{\infty} a_{n}=\sum_{n=1}^{\infty}\left(a_{n}^{+}-a_{n}^{-}\right)=\sum_{n=1}^{\infty} a_{n}^{+}-\sum_{n=1}^{\infty} a_{n}^{-}
+\]</span></p>
+<p>converges.</p>
+</div></details>
+</div>
+<div id="Example-40" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 40</strong></summary><div>The series <span class="math inline">\(\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n}\)</span> does not converge absolutely, since<p></p>
+<p><span class="math display">\[
+\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{1}{n}\right|=\sum_{n=1}^{\infty} \frac{1}{n}
+\]</span></p>
+<p>doesn’t converge ( <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=1)\)</span>.</p>
+</div></details>
+</div>
+<div id="Example-41" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 41</strong></summary><div>Consider the series <span class="math inline">\(\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\)</span>. Then <span class="math display">\[
+\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}
+\]</span> where we used the triangle inequality. Since <span class="math display">\[
+\frac{n^{2}+5 n+2}{n^{4}} / \frac{1}{n^{2}}=\frac{n^{4}+5 n^{3}+2 n^{2}}{n^{4}}=1+5 / n+2 / n^{2} \longrightarrow 1
+\]</span> and <span class="math inline">\(\sum_{n=1}^{\infty} \frac{1}{n^{2}}\)</span> converges ( <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=2\)</span> ), also <span class="math inline">\(\sum_{n=1}^{\infty} \frac{n^{2}+5 n+2}{n^{4}}\)</span> converges by the limit comparison test (for nonnegative series). Since <span class="math inline">\(0 \leq \frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}\)</span>, the series <span class="math display">\[
+\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\sum_{n=1}^{\infty} \frac{\left|n^{2}-5 n+2\right|}{n^{4}}
+\]</span> converges by the comparison test (for nonnegative series). Therefore <span class="math inline">\(\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\)</span> converges absolutely.<p></p>
+</div></details>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
