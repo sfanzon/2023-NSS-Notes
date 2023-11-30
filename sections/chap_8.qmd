@@ -1564,3 +1564,178 @@ converges, by the Comparison Test of Theorem \ref{theorem-comparison-test}.
 
 
 
+
+
+### Ratio Test for positive series
+
+
+The Ratio Test can be generalized to series. Notice that in this case the terms of the series need
+to be positive.
+
+
+::: Theorem  
+### Ratio Test for Series {#theorem-ratio-test-series}
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{R}$ such that
+$$
+a_{n}>0 \,, \quad \forall \, n \in \N \, .
+$$
+
+1. Suppose that the following limit exists:
+$$
+L:=\lim_{n \to \infty} \frac{a_{n+1}}{a_{n}} \,.
+$$
+They hold:
+
+    - If $L<1$ then $\sum_{n=1}^\infty a_n$ converges.
+
+    - If $L>1$ then $\sum_{n=1}^\infty a_n$ diverges.
+
+
+2. Suppose that there exists $N \in \N$ and $L>1$ such that
+$$
+\frac{a_{n+1}}{a_{n}} \geq L \,, \quad \forall \, n \geq N \,. 
+$$
+Then the series $\sum_{n=1}^\infty a_n$ diverges.
+
+:::
+
+::: Proof
+
+*Part 1.* Let 
+$$
+L:=\lim_{n \to \infty} \frac{a_{n+1}}{a_{n}} \,.
+$$
+
+- Suppose that $L<1$. Therefore there exists $r$ such that
+$$
+L < r < 1 \,.
+$$
+Define
+$$
+\e := r - L \,,
+$$
+so that $\e>0$. By the convergence $a_{n+1}/a_n \to L$ there exists $N \in \N$ such that
+$$
+\left|\frac{a_{n+1}}{a_{n}}-L\right| < \e = r - L \,, \quad \forall \, n \geq N \,.
+$$
+In particular 
+$$
+\frac{a_{n+1}}{a_{n}}-L  <  r - L \,, \quad \forall \, n \geq N \,,
+$$
+which implies 
+$$
+a_{n+1} <  r \, a_n  \,, \quad \forall \, n \geq N \,.
+$$
+Applying $n-N$ times the above estimate we get
+$$
+0 < a_{n} <  r  \, a_{n-1} < \ldots < r^{n-N} \, a_{N} \,, \quad \forall \, n \geq N \,.
+$${#eq-limit-comparison-1}
+Note that the series of $r^{n-N} \, a_{N}$ converges, since
+$$
+\sum_{n=N}^\infty r^{n-N} \, a_{N} = a_{N} \sum_{k=0}^\infty r^k = a_N \frac{1}{1-r} \,,
+$$
+where the last equality follows because $\sum_{k=0}^\infty r^k$ is a geometric series and $0<r<1$. Since (@eq-limit-comparison-1) holds, by
+the Comparison Test in Theorem \ref{theorem-comparison-test} we conclude that
+the series
+$$
+\sum_{n=N}^\infty a_n
+$$
+converges. Therefore also the series 
+$$
+\sum_{n=1}^\infty a_n 
+$$
+converges, ending the proof in the case $L<1$.
+
+- Suppose $L>1$: Then, by the Ratio Test for sequences, it follows that $a_n$ diverges. Therefore 
+$$
+\lim_{n \rightarrow \infty} a_{n} \neq 0 \,,
+$$ 
+and the series $\sum_{n=1}^\infty$ diverges by the Necessary Condition, see
+Theorem \ref{theorem-series-necessary}.
+
+*Part 2.* Suppose there exists $L>1$ and $N \in \N$ such that
+$$
+\frac{a_{n+1}}{a_n} \geq L \,, \quad \forall \, n \geq N \,.
+$$
+By the Ratio Test for sequences it follows that $a_n$ diverges. 
+Therefore $\sum_{n=1}^\infty$ diverges by the Necessary Condition.
+
+:::
+
+
+
+
+::: Example 
+Consider the series 
+$$
+\sum_{n=1}^{\infty} \frac{(n !)^{2}}{(2 n) !}
+$$
+Let 
+$$
+a_{n}=\frac{(n !)^{2}}{(2 n) !}
+$$ 
+and compute
+\begin{align*}
+\frac{a_{n+1}}{a_{n}} & =\frac{((n+1) !)^{2}}{(2(n+1)) !} \bigg/ \frac{(n !)^{2}}{(2 n) !} \\
+& = \frac{((n+1) !)^{2}}{(n !)^{2}} \frac{(2 n) !}{(2(n+1)) !} \\
+& = \left(\frac{(n+1) !}{n !}\right)^{2} \frac{(2 n) !}{(2 n+2) !} \\
+& = \frac{(n+1)^{2}}{(2 n+2)(2 n+1)} \\
+& = \frac{\left(1+\dfrac{1}{n}\right)^{2}}{\left(2+\dfrac{2}{n}\right)\left(2+\dfrac{1}{n}\right)} 
+\end{align*}
+Therefore 
+$$
+L = \lim_{n \to \infty} \frac{a_{n+1}}{a_n} = 
+\lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^{2}}{\left(2+\dfrac{2}{n}\right)\left(2+\dfrac{1}{n}\right)}  = \frac{1}{4} \,.
+$$
+Since $L = 1/4 <1$, be the Ratio Test for Series we conclude that the series of interest converges.
+
+:::
+
+
+
+
+::: Important
+
+Like with the Ratio Test for sequences, the case $L=1$ is not covered by Theorem \ref{theorem-ratio-test-series}. This is because, in this case, the series
+$$
+\sum_{n=1}^\infty a_n
+$$
+might be convergent or divergent, as shown in the next example.
+
+:::
+
+
+::: Example
+
+- Consider the series
+$$
+\sum_{n=1}^\infty \frac{1}{n} \,.
+$$
+Setting $a_n = 1/n$, we have
+\begin{align*}
+L & = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
+  & = \lim_{n \to \infty} \frac{1}{n+1} \bigg/ \frac{1}{n} \\
+  & = \lim_{n \to \infty} \frac{n}{n+1} = 1 \,.
+\end{align*}
+Therefore $L = 1$ and we cannot apply the Ratio Test. However the series in question diverges, being the harmonic series.
+
+
+- Consider the series
+$$
+\sum_{n=1}^\infty \frac{1}{n^2} \,.
+$$
+Setting $a_n = 1/n^2$, we have
+\begin{align*}
+L & = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
+  & = \lim_{n \to \infty} \frac{1}{(n+1)^2} \bigg/ \frac{1}{n^2} \\
+  & = \lim_{n \to \infty} \frac{n^2}{n^2 + 2n +1} = 1 \,.
+\end{align*}
+Therefore $L=1$ and we cannot apply the Ratio Test. However the series in question diverges, being
+a $p$-series with $p = 2 >1$.
+
+
+:::
+
+
+

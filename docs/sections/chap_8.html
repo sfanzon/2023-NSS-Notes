@@ -85,19 +85,19 @@ div.csl-indent {
   }
 }</script>
 <style>
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
 }
-.Theorem {
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -105,7 +105,7 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -113,19 +113,19 @@ div.csl-indent {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
-.Question {
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Lemma {
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -133,25 +133,25 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Definition {
+.Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
 }
 .Problem {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 </style>
 
@@ -279,6 +279,7 @@ div.csl-indent {
   <li><a href="#cauchy-condensation-test" id="toc-cauchy-condensation-test" class="nav-link" data-scroll-target="#cauchy-condensation-test"><span class="header-section-number">8.4.1</span> Cauchy Condensation Test</a></li>
   <li><a href="#comparison-test" id="toc-comparison-test" class="nav-link" data-scroll-target="#comparison-test"><span class="header-section-number">8.4.2</span> Comparison Test</a></li>
   <li><a href="#limit-comparison-test" id="toc-limit-comparison-test" class="nav-link" data-scroll-target="#limit-comparison-test"><span class="header-section-number">8.4.3</span> Limit Comparison Test</a></li>
+  <li><a href="#ratio-test-for-positive-series" id="toc-ratio-test-for-positive-series" class="nav-link" data-scroll-target="#ratio-test-for-positive-series"><span class="header-section-number">8.4.4</span> Ratio Test for positive series</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1193,6 +1194,105 @@ L &amp; := \lim_{n \to \infty} \frac{b_n}{c_n} \\
 \]</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=2&gt;1\)</span>. Therefore also <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{1+\sin (n)}{n^{2}}
 \]</span> converges, by the Comparison Test of Theorem <a href="chap_8.html#theorem-comparison-test">27</a>.<p></p>
+</div></details>
+</div>
+</section>
+<section id="ratio-test-for-positive-series" class="level3" data-number="8.4.4">
+<h3 data-number="8.4.4" class="anchored" data-anchor-id="ratio-test-for-positive-series"><span class="header-section-number">8.4.4</span> Ratio Test for positive series</h3>
+<p>The Ratio Test can be generalized to series. Notice that in this case the terms of the series need to be positive.</p>
+<div id="theorem-ratio-test-series" class="Theorem" title="Ratio Test for Series">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 34: </strong>Ratio Test for Series</summary><div>
+<p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
+a_{n}&gt;0 \,, \quad \forall \, n \in \mathbb{N}\, .
+\]</span></p>
+<ol type="1">
+<li><p>Suppose that the following limit exists: <span class="math display">\[
+L:=\lim_{n \to \infty} \frac{a_{n+1}}{a_{n}} \,.
+\]</span> They hold:</p>
+<ul>
+<li><p>If <span class="math inline">\(L&lt;1\)</span> then <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> converges.</p></li>
+<li><p>If <span class="math inline">\(L&gt;1\)</span> then <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> diverges.</p></li>
+</ul></li>
+<li><p>Suppose that there exists <span class="math inline">\(N \in \mathbb{N}\)</span> and <span class="math inline">\(L&gt;1\)</span> such that <span class="math display">\[
+\frac{a_{n+1}}{a_{n}} \geq L \,, \quad \forall \, n \geq N \,.
+\]</span> Then the series <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> diverges.</p></li>
+</ol>
+</div></details>
+</div>
+<div id="Proof*-16" class="Proof">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div><em>Part 1.</em> Let <span class="math display">\[
+L:=\lim_{n \to \infty} \frac{a_{n+1}}{a_{n}} \,.
+\]</span><p></p>
+<ul>
+<li><p>Suppose that <span class="math inline">\(L&lt;1\)</span>. Therefore there exists <span class="math inline">\(r\)</span> such that <span class="math display">\[
+L &lt; r &lt; 1 \,.
+\]</span> Define <span class="math display">\[
+\varepsilon:= r - L \,,
+\]</span> so that <span class="math inline">\(\varepsilon&gt;0\)</span>. By the convergence <span class="math inline">\(a_{n+1}/a_n \to L\)</span> there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\left|\frac{a_{n+1}}{a_{n}}-L\right| &lt; \varepsilon= r - L \,, \quad \forall \, n \geq N \,.
+\]</span> In particular <span class="math display">\[
+\frac{a_{n+1}}{a_{n}}-L  &lt;  r - L \,, \quad \forall \, n \geq N \,,
+\]</span> which implies <span class="math display">\[
+a_{n+1} &lt;  r \, a_n  \,, \quad \forall \, n \geq N \,.
+\]</span> Applying <span class="math inline">\(n-N\)</span> times the above estimate we get <span id="eq-limit-comparison-1"><span class="math display">\[
+0 &lt; a_{n} &lt;  r  \, a_{n-1} &lt; \ldots &lt; r^{n-N} \, a_{N} \,, \quad \forall \, n \geq N \,.
+\tag{8.11}\]</span></span> Note that the series of <span class="math inline">\(r^{n-N} \, a_{N}\)</span> converges, since <span class="math display">\[
+\sum_{n=N}^\infty r^{n-N} \, a_{N} = a_{N} \sum_{k=0}^\infty r^k = a_N \frac{1}{1-r} \,,
+\]</span> where the last equality follows because <span class="math inline">\(\sum_{k=0}^\infty r^k\)</span> is a geometric series and <span class="math inline">\(0&lt;r&lt;1\)</span>. Since (<a href="#eq-limit-comparison-1"><span>8.11</span></a>) holds, by the Comparison Test in Theorem <a href="chap_8.html#theorem-comparison-test">27</a> we conclude that the series <span class="math display">\[
+\sum_{n=N}^\infty a_n
+\]</span> converges. Therefore also the series <span class="math display">\[
+\sum_{n=1}^\infty a_n
+\]</span> converges, ending the proof in the case <span class="math inline">\(L&lt;1\)</span>.</p></li>
+<li><p>Suppose <span class="math inline">\(L&gt;1\)</span>: Then, by the Ratio Test for sequences, it follows that <span class="math inline">\(a_n\)</span> diverges. Therefore <span class="math display">\[
+\lim_{n \rightarrow \infty} a_{n} \neq 0 \,,
+\]</span> and the series <span class="math inline">\(\sum_{n=1}^\infty\)</span> diverges by the Necessary Condition, see Theorem <a href="chap_8.html#theorem-series-necessary">6</a>.</p></li>
+</ul>
+<p><em>Part 2.</em> Suppose there exists <span class="math inline">\(L&gt;1\)</span> and <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
+\frac{a_{n+1}}{a_n} \geq L \,, \quad \forall \, n \geq N \,.
+\]</span> By the Ratio Test for sequences it follows that <span class="math inline">\(a_n\)</span> diverges. Therefore <span class="math inline">\(\sum_{n=1}^\infty\)</span> diverges by the Necessary Condition.</p>
+</div></details>
+</div>
+<div id="Example-35" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 35</strong></summary><div>Consider the series <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{(n !)^{2}}{(2 n) !}
+\]</span> Let <span class="math display">\[
+a_{n}=\frac{(n !)^{2}}{(2 n) !}
+\]</span> and compute <span class="math display">\[\begin{align*}
+\frac{a_{n+1}}{a_{n}} &amp; =\frac{((n+1) !)^{2}}{(2(n+1)) !} \bigg/ \frac{(n !)^{2}}{(2 n) !} \\
+&amp; = \frac{((n+1) !)^{2}}{(n !)^{2}} \frac{(2 n) !}{(2(n+1)) !} \\
+&amp; = \left(\frac{(n+1) !}{n !}\right)^{2} \frac{(2 n) !}{(2 n+2) !} \\
+&amp; = \frac{(n+1)^{2}}{(2 n+2)(2 n+1)} \\
+&amp; = \frac{\left(1+\dfrac{1}{n}\right)^{2}}{\left(2+\dfrac{2}{n}\right)\left(2+\dfrac{1}{n}\right)}
+\end{align*}\]</span> Therefore <span class="math display">\[
+L = \lim_{n \to \infty} \frac{a_{n+1}}{a_n} =
+\lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^{2}}{\left(2+\dfrac{2}{n}\right)\left(2+\dfrac{1}{n}\right)}  = \frac{1}{4} \,.
+\]</span> Since <span class="math inline">\(L = 1/4 &lt;1\)</span>, be the Ratio Test for Series we conclude that the series of interest converges.<p></p>
+</div></details>
+</div>
+<div id="Important*-17" class="Important">
+<p></p><details class="Important fbx-simplebox fbx-default" open=""><summary><strong>Important</strong></summary><div>Like with the Ratio Test for sequences, the case <span class="math inline">\(L=1\)</span> is not covered by Theorem <a href="chap_8.html#theorem-ratio-test-series">34</a>. This is because, in this case, the series <span class="math display">\[
+\sum_{n=1}^\infty a_n
+\]</span> might be convergent or divergent, as shown in the next example.<p></p>
+</div></details>
+</div>
+<div id="Example-36" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 36</strong></summary><div>
+<ul>
+<li><p>Consider the series <span class="math display">\[
+\sum_{n=1}^\infty \frac{1}{n} \,.
+\]</span> Setting <span class="math inline">\(a_n = 1/n\)</span>, we have <span class="math display">\[\begin{align*}
+L &amp; = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
+&amp; = \lim_{n \to \infty} \frac{1}{n+1} \bigg/ \frac{1}{n} \\
+&amp; = \lim_{n \to \infty} \frac{n}{n+1} = 1 \,.
+\end{align*}\]</span> Therefore <span class="math inline">\(L = 1\)</span> and we cannot apply the Ratio Test. However the series in question diverges, being the harmonic series.</p></li>
+<li><p>Consider the series <span class="math display">\[
+\sum_{n=1}^\infty \frac{1}{n^2} \,.
+\]</span> Setting <span class="math inline">\(a_n = 1/n^2\)</span>, we have <span class="math display">\[\begin{align*}
+L &amp; = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
+&amp; = \lim_{n \to \infty} \frac{1}{(n+1)^2} \bigg/ \frac{1}{n^2} \\
+&amp; = \lim_{n \to \infty} \frac{n^2}{n^2 + 2n +1} = 1 \,.
+\end{align*}\]</span> Therefore <span class="math inline">\(L=1\)</span> and we cannot apply the Ratio Test. However the series in question diverges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p = 2 &gt;1\)</span>.</p></li>
+</ul>
 </div></details>
 </div>
 

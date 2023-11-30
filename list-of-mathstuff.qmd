@@ -882,3 +882,13 @@
  [**Example 8.32**](#Example-8.32)\Pageref{Example-8.32}
 
  [**Example 8.33**](#Example-8.33)\Pageref{Example-8.33}
+
+ [**Theorem 8.34**](#theorem-ratio-test-series): Ratio Test for Series\Pageref{theorem-ratio-test-series}
+
+ [**Proof**](#Proof*-8.16)\Pageref{Proof*-8.16}
+
+ [**Example 8.35**](#Example-8.35)\Pageref{Example-8.35}
+
+ [**Important**](#Important*-8.17)\Pageref{Important*-8.17}
+
+ [**Example 8.36**](#Example-8.36)\Pageref{Example-8.36}
