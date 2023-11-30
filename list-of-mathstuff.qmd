@@ -777,7 +777,7 @@
 
  [**Example 7.14**](#Example-7.14)\Pageref{Example-7.14}
 
- [**Theorem 7.15**](#theorem-ratop-test-C): Ratio Test in \Pageref{theorem-ratop-test-C}
+ [**Theorem 7.15**](#theorem-ratop-test-C): Ratio Test in $\mathbb{C}$\Pageref{theorem-ratop-test-C}
 
  [**Example 7.16**](#Example-7.16)\Pageref{Example-7.16}
 
@@ -899,10 +899,12 @@
 
  [**Definition 8.38**](#absolute-convergence-1): Absolute convergence\Pageref{absolute-convergence-1}
 
- [**Theorem 8.39**](#Theorem-8.39)\Pageref{Theorem-8.39}
+ [**Theorem 8.39**](#theorem-absolute-convergence)\Pageref{theorem-absolute-convergence}
 
- [**Proof**](#Proof*-8.19)\Pageref{Proof*-8.19}
+ [**Notation 8.40**](#positive-and-negative-part): Positive and negative part\Pageref{positive-and-negative-part}
 
- [**Example 8.40**](#Example-8.40)\Pageref{Example-8.40}
+ [**Proof**](#proof-of-theorem-6): Proof of Theorem 8.39\Pageref{proof-of-theorem-6}
 
  [**Example 8.41**](#Example-8.41)\Pageref{Example-8.41}
+
+ [**Example 8.42**](#Example-8.42)\Pageref{Example-8.42}

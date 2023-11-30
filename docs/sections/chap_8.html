@@ -89,23 +89,7 @@ div.csl-indent {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Lemma {
+.Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -113,15 +97,27 @@ div.csl-indent {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Remark {
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Example {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
 }
-.Theorem {
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -129,7 +125,11 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Proposition {
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Corollary {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -137,19 +137,19 @@ div.csl-indent {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
-.Problem {
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
-.Warning {
+.Conjecture {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -1333,44 +1333,91 @@ L &amp; = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
 </div></details>
 </div>
 <p>Let us show that absolute convergence implies convergence.</p>
-<div id="Theorem-39" class="Theorem">
+<div id="theorem-absolute-convergence" class="Theorem">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 39</strong></summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. If the series <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converge absolutely, then the series converges.<p></p>
 </div></details>
 </div>
-<div id="Proof*-19" class="Proof">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof</strong></summary><div>We present the proof for series in <span class="math inline">\(\mathbb{R}\)</span>. For series in <span class="math inline">\(\mathbb{C}\)</span>, the same proof can be used for the real and imaginary parts separately.<p></p>
-<p>For any number <span class="math inline">\(a \in \mathbb{R}\)</span>, we write <span class="math inline">\(a^{+}:=\max \{a, 0\}\)</span> and <span class="math inline">\(a^{-}:=\max \{-a, 0\}\)</span>. These are called the positive part and negative part of <span class="math inline">\(a\)</span>, respectively. Note that both <span class="math inline">\(a^{+}=0\)</span> and <span class="math inline">\(a^{-}=0\)</span>. Furthermore, it holds that <span class="math inline">\(a=a^{+}-a^{-}\)</span>. To see this, we compute</p>
-<p><span class="math display">\[
-a^{+}-a^{-}=\left\{\begin{array}{lll}
-a-0 &amp; =a, &amp; \text { if } a \geq 0 \\
-0-(-a) &amp; =a, &amp; \text { if } a&lt;0
-\end{array}\right.
-\]</span></p>
-<p>Suppose that <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges absolutely. Then by definition, <span class="math inline">\(\sum_{n=1}^{\infty}\left|a_{n}\right|\)</span> converges. Since we have that <span class="math inline">\(0 \leq a_{n}^{+} \leq\left|a_{n}\right|\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>, we can use the comparison test for nonnegative series (Theorem 3.4.7) and it follows that <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}^{+}\)</span>converges.</p>
-<p>Similarly, <span class="math inline">\(0 \leq a_{n}^{-} \leq\left|a_{n}\right|\)</span> so that also <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}^{-}\)</span>converges by the comparison test.</p>
-<p>We can now combine these results using Theorem 3.3.1(c) to prove that also</p>
-<p><span class="math display">\[
-\sum_{n=1}^{\infty} a_{n}=\sum_{n=1}^{\infty}\left(a_{n}^{+}-a_{n}^{-}\right)=\sum_{n=1}^{\infty} a_{n}^{+}-\sum_{n=1}^{\infty} a_{n}^{-}
-\]</span></p>
-<p>converges.</p>
+<p>Before proceeding with the proof, we introduce some notation.</p>
+<div id="positive-and-negative-part" class="Notation" title="Positive and negative part">
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 40: </strong>Positive and negative part</summary><div>For a number <span class="math inline">\(x \in \mathbb{R}\)</span>, we define <span class="math display">\[
+x^{+}:=
+\begin{cases}
+x &amp; \mbox{ if } \, x \geq 0 \\
+0 &amp; \mbox{ if } \, x &lt; 0 \\
+\end{cases}  \qquad
+x^{-}:=
+\begin{cases}
+-x &amp; \mbox{ if } \, x &lt; 0 \\
+0 &amp; \mbox{ if } \, x \geq 0 \\
+\end{cases}
+\]</span> These are called the <strong>positive part</strong> and <strong>negative part</strong> of <span class="math inline">\(x\)</span>, respectively. Note that <span class="math display">\[
+x^+ \geq 0 \,, \quad x^{-} \geq 0 \,.
+\]</span> Moreover they hold <span class="math display">\[
+x = x^+ - x^- \,, \quad |x| = x^+ + x^- \,.
+\]</span> The above relations are easy to check, and the proof is omitted. In particular, it holds that <span class="math display">\[
+x^+ \leq |x| \,, \quad x^- \leq |x| \,.
+\]</span><p></p>
 </div></details>
 </div>
-<div id="Example-40" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 40</strong></summary><div>The series <span class="math inline">\(\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n}\)</span> does not converge absolutely, since<p></p>
-<p><span class="math display">\[
-\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{1}{n}\right|=\sum_{n=1}^{\infty} \frac{1}{n}
-\]</span></p>
-<p>doesn’t converge ( <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=1)\)</span>.</p>
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 39">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 39</summary><div><em>Part 1.</em> Suppose first that <span class="math inline">\((a_n)\)</span> is a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
+\sum_{n=1}^\infty |a_n|
+\]</span> converges. Since <span class="math display">\[
+0 \leq a_{n}^{+} \leq\left|a_{n}\right| \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> we can use the Comparison Test for non-negative series (Theorem <a href="chap_8.html#theorem-comparison-test">28</a>) and conclude that the series <span class="math display">\[
+\sum_{n=1}^{\infty} a_{n}^{+} \,.
+\]</span> converges. Similarly, we have <span class="math display">\[
+0 \leq a_{n}^{-} \leq\left|a_{n}\right| \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Therefore also the series <span class="math display">\[
+\sum_{n=1}^{\infty} a_{n}^{-}
+\]</span> converges by the Comparison Test. Since <span class="math display">\[
+a_n = a_n^+ - a_n^- \,, \quad \forall \, n \in \mathbb{N}\,,
+\]</span> we can use the Algebra of Limits for series (Theorem <a href="chap_8.html#theorem-algebra-limits-series">17</a>) to conclude that <span class="math display">\[
+\sum_{n=1}^{\infty} a_{n} =\sum_{n=1}^{\infty}\left(a_{n}^{+}-a_{n}^{-}\right)=\sum_{n=1}^{\infty} a_{n}^{+}-\sum_{n=1}^{\infty} a_{n}^{-}
+\]</span> converges.<p></p>
+<p><em>Part 2.</em> Suppose now that <span class="math inline">\((a_n)\)</span> is a sequence in <span class="math inline">\(\mathbb{C}\)</span> such that <span class="math display">\[
+\sum_{n=1}^\infty |a_n|
+\]</span> converges. Let <span class="math inline">\(x_n, y_n \in \mathbb{R}\)</span> denote the real and imaginary part of <span class="math inline">\(a_n\)</span>. Therefore <span class="math display">\[
+|x_n| = \sqrt{x_n^2} \leq \sqrt{x_n^2 + y_n^2} = |a_n| \,, \quad \forall \, n \in \mathbb{N}\,.
+\]</span> Therefore the series <span class="math display">\[
+\sum_{n=1}^\infty |x_n|
+\]</span> converges by the Comparison Test for non-negative series (Theorem <a href="chap_8.html#theorem-comparison-test">28</a>). Since <span class="math inline">\((x_n)\)</span> is a real sequence, from Part 1 of the proof we have that the series <span class="math display">\[
+\sum_{n=1}^\infty x_n
+\]</span> converges. Arguing in the same way for the imaginary part <span class="math inline">\(y_n\)</span> we conclude that also <span class="math display">\[
+\sum_{n=1}^\infty y_n
+\]</span> converges. Finally, by the Algebra of Limits in <span class="math inline">\(\mathbb{C}\)</span>, we get <span class="math display">\[
+\sum_{n=1}^\infty a_n = \sum_{n=1}^\infty \left( x_n + i y_n  \right) = \sum_{n=1}^\infty x_n + i \sum_{n=1}^\infty y_n \,,   
+\]</span> proving that <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> converges.</p>
 </div></details>
 </div>
 <div id="Example-41" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 41</strong></summary><div>Consider the series <span class="math inline">\(\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\)</span>. Then <span class="math display">\[
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 41</strong></summary><div>The series <span class="math display">\[
+\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n}
+\]</span> does not converge absolutely, since <span class="math display">\[
+\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{1}{n}\right|=\sum_{n=1}^{\infty} \frac{1}{n}
+\]</span> doesn’t converge, being the harmonic series.<p></p>
+</div></details>
+</div>
+<div id="Example-42" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 42</strong></summary><div>Consider the series <span class="math display">\[
+\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}} \,.
+\]</span> We have <span class="math display">\[
 \left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}
-\]</span> where we used the triangle inequality. Since <span class="math display">\[
-\frac{n^{2}+5 n+2}{n^{4}} / \frac{1}{n^{2}}=\frac{n^{4}+5 n^{3}+2 n^{2}}{n^{4}}=1+5 / n+2 / n^{2} \longrightarrow 1
-\]</span> and <span class="math inline">\(\sum_{n=1}^{\infty} \frac{1}{n^{2}}\)</span> converges ( <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=2\)</span> ), also <span class="math inline">\(\sum_{n=1}^{\infty} \frac{n^{2}+5 n+2}{n^{4}}\)</span> converges by the limit comparison test (for nonnegative series). Since <span class="math inline">\(0 \leq \frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}\)</span>, the series <span class="math display">\[
-\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\sum_{n=1}^{\infty} \frac{\left|n^{2}-5 n+2\right|}{n^{4}}
-\]</span> converges by the comparison test (for nonnegative series). Therefore <span class="math inline">\(\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\)</span> converges absolutely.<p></p>
+\]</span> where we used the triangle inequality. Note that <span class="math display">\[\begin{align*}
+\frac{n^{2}+5 n+2}{n^{4}} \bigg/ \frac{1}{n^{2}} &amp; =\frac{n^{4}+5 n^{3}+2 n^{2}}{n^{4}} \\
+                                            &amp; = 1+ \frac{5}{n} + \frac{2}{n^{2}} \longrightarrow 1
+\end{align*}\]</span> The series <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}
+\]</span> converges, being a <span class="math inline">\(p\)</span>-series with <span class="math inline">\(p=2\)</span>. Hence, also <span class="math display">\[
+\sum_{n=1}^{\infty} \frac{n^{2}+5 n+2}{n^{4}}
+\]</span> converges by the Limit Comparison Test for non-negative series (Theorem <a href="chap_8.html#theorem-limit-comparison-test">30</a>). Since <span class="math display">\[\begin{align*}
+0 \leq \left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|  &amp; = \frac{\left|n^{2}-5 n+2\right|}{n^{4}}  \\
+  &amp; \leq \frac{n^{2}+5 n+2}{n^{4}} \,,
+\end{align*}\]</span> the series <span class="math display">\[
+\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|
+\]</span> converges by the Comparison Test for non-negative series (Theorem <a href="chap_8.html#theorem-comparison-test">28</a>). This shows the series <span class="math display">\[
+\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}
+\]</span> converges absolutely.<p></p>
 </div></details>
 </div>
 

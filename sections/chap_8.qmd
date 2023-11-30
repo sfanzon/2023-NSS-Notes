@@ -233,7 +233,7 @@ $$
 Hence, the series does not converge.
 
 :::
-
+ 
 
 ::: Important
 
@@ -1808,37 +1808,109 @@ converges.
 Let us show that absolute convergence implies convergence.
 
 
-::: Theorem 
+::: {.Theorem #theorem-absolute-convergence}
 
 Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$. If the series $\sum_{n=1}^{\infty} a_{n}$ converge absolutely, then the series converges.
 
 :::
 
+Before proceeding with the proof, we introduce some notation.
+
+::: Notation
+### Positive and negative part
+
+For a number $x \in \R$, we define
+$$
+x^{+}:=
+\begin{cases}
+x & \mbox{ if } \, x \geq 0 \\
+0 & \mbox{ if } \, x < 0 \\
+\end{cases}  \qquad 
+x^{-}:=
+\begin{cases}
+-x & \mbox{ if } \, x < 0 \\
+0 & \mbox{ if } \, x \geq 0 \\
+\end{cases} 
+$$ 
+These are called the **positive part** and **negative part** of $x$, respectively. Note that 
+$$
+x^+ \geq 0 \,, \quad x^{-} \geq 0 \,.
+$$
+Moreover they hold
+$$
+x = x^+ - x^- \,, \quad |x| = x^+ + x^- \,.
+$$
+The above relations are easy to check, and the proof is omitted. In particular, it holds that
+$$
+x^+ \leq |x| \,, \quad x^- \leq |x| \,.
+$$
+
+
+:::
 
 ::: Proof
+### Proof of Theorem \ref{theorem-absolute-convergence}
 
-We present the proof for series in $\mathbb{R}$. For series in $\mathbb{C}$, the same proof can be used for the real and imaginary parts separately.
-
-For any number $a \in \mathbb{R}$, we write $a^{+}:=\max \{a, 0\}$ and $a^{-}:=\max \{-a, 0\}$. These are called the positive part and negative part of $a$, respectively. Note that both $a^{+}=0$ and $a^{-}=0$. Furthermore, it holds that $a=a^{+}-a^{-}$. To see this, we compute
-
+*Part 1.* Suppose first that $(a_n)$ is a sequence in $\R$ such that 
 $$
-a^{+}-a^{-}=\left\{\begin{array}{lll}
-a-0 & =a, & \text { if } a \geq 0 \\
-0-(-a) & =a, & \text { if } a<0
-\end{array}\right.
+\sum_{n=1}^\infty |a_n|
 $$
-
-Suppose that $\sum_{n=1}^{\infty} a_{n}$ converges absolutely. Then by definition, $\sum_{n=1}^{\infty}\left|a_{n}\right|$ converges. Since we have that $0 \leq a_{n}^{+} \leq\left|a_{n}\right|$ for all $n \in \mathbb{N}$, we can use the comparison test for nonnegative series (Theorem 3.4.7) and it follows that $\sum_{n=1}^{\infty} a_{n}^{+}$converges.
-
-Similarly, $0 \leq a_{n}^{-} \leq\left|a_{n}\right|$ so that also $\sum_{n=1}^{\infty} a_{n}^{-}$converges by the comparison test.
-
-We can now combine these results using Theorem 3.3.1(c) to prove that also
-
+converges. Since 
 $$
-\sum_{n=1}^{\infty} a_{n}=\sum_{n=1}^{\infty}\left(a_{n}^{+}-a_{n}^{-}\right)=\sum_{n=1}^{\infty} a_{n}^{+}-\sum_{n=1}^{\infty} a_{n}^{-}
+0 \leq a_{n}^{+} \leq\left|a_{n}\right| \,, \quad \forall \, n \in \N \,,
+$$ 
+we can use the Comparison Test for non-negative series (Theorem \ref{theorem-comparison-test})
+and conclude that the series
 $$
-
+\sum_{n=1}^{\infty} a_{n}^{+} \,.
+$$
+converges. Similarly, we have
+$$
+0 \leq a_{n}^{-} \leq\left|a_{n}\right| \,, \quad \forall \, n \in \N \,.
+$$ 
+Therefore also the series
+$$
+\sum_{n=1}^{\infty} a_{n}^{-} 
+$$
+converges by the Comparison Test. Since 
+$$
+a_n = a_n^+ - a_n^- \,, \quad \forall \, n \in \N \,,
+$$
+we can use the Algebra of Limits for series (Theorem \ref{theorem-algebra-limits-series}) to 
+conclude that
+$$
+\sum_{n=1}^{\infty} a_{n} =\sum_{n=1}^{\infty}\left(a_{n}^{+}-a_{n}^{-}\right)=\sum_{n=1}^{\infty} a_{n}^{+}-\sum_{n=1}^{\infty} a_{n}^{-}
+$$
 converges.
+
+
+*Part 2.* Suppose now that $(a_n)$ is a sequence in $\C$ such that 
+$$
+\sum_{n=1}^\infty |a_n|
+$$
+converges. Let $x_n, y_n \in \R$ denote the real and imaginary part of $a_n$.
+Therefore
+$$
+|x_n| = \sqrt{x_n^2} \leq \sqrt{x_n^2 + y_n^2} = |a_n| \,, \quad \forall \, n \in \N \,.
+$$
+Therefore the series
+$$
+\sum_{n=1}^\infty |x_n|
+$$
+converges by the Comparison Test for non-negative series (Theorem \ref{theorem-comparison-test}). 
+Since $(x_n)$ is a real sequence, from Part 1 of the proof we have that the series
+$$
+\sum_{n=1}^\infty x_n 
+$$
+converges. Arguing in the same way for the imaginary part $y_n$ we conclude that also
+$$
+\sum_{n=1}^\infty y_n 
+$$
+converges. Finally, by the Algebra of Limits in $\C$, we get
+$$
+\sum_{n=1}^\infty a_n = \sum_{n=1}^\infty \left( x_n + i y_n  \right) = \sum_{n=1}^\infty x_n + i \sum_{n=1}^\infty y_n \,,   
+$$
+proving that $\sum_{n=1}^\infty a_n$ converges.
 
 :::
 
@@ -1849,32 +1921,56 @@ converges.
 
 ::: Example 
 
-The series $\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n}$ does not converge absolutely, since
-
+The series 
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n}
+$$ 
+does not converge absolutely, since
 $$
 \sum_{n=1}^{\infty}\left|(-1)^{n} \frac{1}{n}\right|=\sum_{n=1}^{\infty} \frac{1}{n}
 $$
-
-doesn't converge ( $p$-series with $p=1)$.
+doesn't converge, being the harmonic series.
 
 :::
 
 
 ::: Example 
 
-Consider the series $\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}$. Then
+Consider the series 
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}} \,.
+$$
+We have
 $$
 \left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}
 $$
-where we used the triangle inequality. Since
+where we used the triangle inequality. Note that
+\begin{align*}
+\frac{n^{2}+5 n+2}{n^{4}} \bigg/ \frac{1}{n^{2}} & =\frac{n^{4}+5 n^{3}+2 n^{2}}{n^{4}} \\
+                                            & = 1+ \frac{5}{n} + \frac{2}{n^{2}} \longrightarrow 1
+\end{align*}
+The series
 $$
-\frac{n^{2}+5 n+2}{n^{4}} / \frac{1}{n^{2}}=\frac{n^{4}+5 n^{3}+2 n^{2}}{n^{4}}=1+5 / n+2 / n^{2} \longrightarrow 1
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}
+$$ 
+converges, being a $p$-series with $p=2$. Hence, also 
 $$
-and $\sum_{n=1}^{\infty} \frac{1}{n^{2}}$ converges ( $p$-series with $p=2$ ), also $\sum_{n=1}^{\infty} \frac{n^{2}+5 n+2}{n^{4}}$ converges by the limit comparison test (for nonnegative series). Since $0 \leq \frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}$, the series
+\sum_{n=1}^{\infty} \frac{n^{2}+5 n+2}{n^{4}}
+$$ 
+converges by the Limit Comparison Test for non-negative series (Theorem \ref{theorem-limit-comparison-test}). Since 
+\begin{align*}
+0 \leq \left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|  & = \frac{\left|n^{2}-5 n+2\right|}{n^{4}}  \\
+  & \leq \frac{n^{2}+5 n+2}{n^{4}} \,,
+\end{align*} 
+the series
 $$
-\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\sum_{n=1}^{\infty} \frac{\left|n^{2}-5 n+2\right|}{n^{4}}
+\sum_{n=1}^{\infty}\left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|
 $$
-converges by the comparison test (for nonnegative series).
-Therefore $\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}$ converges absolutely.
+converges by the Comparison Test for non-negative series (Theorem \ref{theorem-comparison-test}). 
+This shows the series
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}
+$$
+converges absolutely.
 
 :::

@@ -466,6 +466,26 @@ $$
 $$
 and hence the Geometric Sequence Test cannot be applied. However, we can see that 
 $$
+c_n = (i,-1,-i, 1, i,-1,-i, 1, \ldots ) \,,
+$$
+that is, $c_n$ assumes only the values $\{i,-1,-i,1\}$, and each of them
+is assumed infinitely many times. Thus $c_n$ is oscillating and it is 
+divergent.
+
+
+:::
+
+
+
+::: {.content-hidden}
+
+In particular, $c_n$ contains the 
+oscillating sequence
+$$
+d_n := c_{2n} = (-1)^{n+1} \,.
+$$
+Since $d_n$ di
+$$
 c_{n}=e^{\frac{i \pi}{2} n} = 
 \begin{cases}
 -1 & \, \mbox{ if } \, n \, \mbox{ even} \\
@@ -507,7 +527,7 @@ We now provide the statement of the Ratio Test in $\mathbb{C}$.
 
 
 ::: Theorem 
-### Ratio Test in \mathbb{C} {#theorem-ratop-test-C}
+### Ratio Test in $\mathbb{C}$ {#theorem-ratop-test-C}
 
 Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$ such that
 $$
@@ -528,7 +548,7 @@ Then,
 
     - If $L>1$, the sequence $\left(a_{n}\right)$ is unbounded, and hence does not converge.
 
-2. Suppose that there exists $N \in \N$ and $L>1$ such that
+2. Suppose that there exists $N \in N$ and $L>1$ such that
 $$
 \left|\frac{a_{n+1}}{a_{n}}\right| \geq L \,, \quad \forall \, n \geq N \,. 
 $$

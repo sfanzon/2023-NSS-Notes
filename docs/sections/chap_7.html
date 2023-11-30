@@ -66,19 +66,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
 }
 .Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -86,7 +78,15 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.Conjecture {
+.Question {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Axiom {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -94,17 +94,33 @@ ul.task-list li input[type="checkbox"] {
   --color1: #e7b1b4;
   --color2: #8c3236;
 }
+.Important {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Proposition {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
 .Notation {
   --color1: #c6e6ed;
   --color2: #1995ad;
 }
-.Question {
+.Remark {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
 }
 .Theorem {
   --color1: #f4cce0;
@@ -114,23 +130,7 @@ ul.task-list li input[type="checkbox"] {
   --color1: #f1f1f2;
   --color2: #c0c0c1;
 }
-.Proposition {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
 .Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Important {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Remark {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -545,34 +545,14 @@ c_{n}=e^{\frac{i \pi}{2} n} \,.
 \]</span> We have <span class="math display">\[
 \left|c_{n}\right|=\left|e^{\frac{i \pi}{2} n}\right|=1 \,,
 \]</span> and hence the Geometric Sequence Test cannot be applied. However, we can see that <span class="math display">\[
-c_{n}=e^{\frac{i \pi}{2} n} =
-\begin{cases}
--1 &amp; \, \mbox{ if } \, n \, \mbox{ even} \\
-i &amp; \, \mbox{ if } \, n \, \mbox{ odd} \\
-\end{cases}
-\]</span> Therefore <span class="math inline">\((c_{n})\)</span> does not converge.</p></li>
+c_n = (i,-1,-i, 1, i,-1,-i, 1, \ldots ) \,,
+\]</span> that is, <span class="math inline">\(c_n\)</span> assumes only the values <span class="math inline">\(\{i,-1,-i,1\}\)</span>, and each of them is assumed infinitely many times. Thus <span class="math inline">\(c_n\)</span> is oscillating and it is divergent.</p></li>
 </ul>
-<blockquote class="blockquote">
-<p><em>Proof</em>. Suppose by contradiction that <span class="math inline">\(c_n \to c\)</span> for some <span class="math inline">\(c \in \mathbb{c}\)</span>. Let <span class="math inline">\(\varepsilon := 1/2\)</span>. By the convergence <span class="math inline">\(c_n \to c\)</span> there exists <span class="math inline">\(N \in \mathbb{N}\)</span> such that <span class="math display">\[
-|c_n - c| &lt; \varepsilon = \frac12 \,, \quad \forall \, n \geq N \,.
-\]</span> Let <span class="math inline">\(n=2N\)</span>, so that <span class="math inline">\(n \geq N\)</span>. Then <span class="math display">\[
-|c_{2N} - c| = |-1 - c| &lt; \frac{1}{2} \,.
-\]</span> Let <span class="math inline">\(n=2N+1\)</span>, so that <span class="math inline">\(n \geq N\)</span>. Then <span class="math display">\[
-|c_{2N + 1} - c| = |i - c| &lt; \frac{1}{2} \,.
-\]</span> By triangle inequality we get <span class="math display">\[\begin{align*}
-|-1 - i| &amp; = | -1 - c + c - i  | \\
-&amp; \leq |-1 - c| + |c - i| \\
-&amp; &lt; \frac{1}{2} + \frac{1}{2} \\
-&amp; = 1 \,.
-\end{align*}\]</span> However, <span class="math display">\[
-|-1 - i| = \sqrt{ (-1)^2 + (-1)^2 } = \sqrt{2} &gt;  1 \,,
-\]</span> which is a contradiction. Hence <span class="math inline">\((c_n)\)</span> is divergent.</p>
-</blockquote>
 </div></details>
 </div>
 <p>We now provide the statement of the Ratio Test in <span class="math inline">\(\mathbb{C}\)</span>.</p>
-<div id="theorem-ratop-test-C" class="Theorem" title="Ratio Test in ">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Ratio Test in </summary><div>
+<div id="theorem-ratop-test-C" class="Theorem" title="Ratio Test in \mathbb{C}">
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 15: </strong>Ratio Test in <span class="math inline">\(\mathbb{C}\)</span></summary><div>
 <p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span> such that <span class="math display">\[
 a_{n} \neq 0 \,, \quad \forall \, n \in \mathbb{N} \,.
 \]</span></p>
@@ -586,7 +566,7 @@ L:=\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \,.
 \]</span></p></li>
 <li><p>If <span class="math inline">\(L&gt;1\)</span>, the sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is unbounded, and hence does not converge.</p></li>
 </ul></li>
-<li><p>Suppose that there exists <span class="math inline">\(N \in \N\)</span> and <span class="math inline">\(L&gt;1\)</span> such that <span class="math display">\[
+<li><p>Suppose that there exists <span class="math inline">\(N \in N\)</span> and <span class="math inline">\(L&gt;1\)</span> such that <span class="math display">\[
 \left|\frac{a_{n+1}}{a_{n}}\right| \geq L \,, \quad \forall \, n \geq N \,.
 \]</span> Then the sequence <span class="math inline">\(\left(a_{n}\right)\)</span> is unbounded, and hence does not converge.</p></li>
 </ol>
