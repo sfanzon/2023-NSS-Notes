@@ -825,61 +825,61 @@
 
  [**Example 8.14**](#Example-8.14)\Pageref{Example-8.14}
 
- [**Example 8.15**](#Example-8.15)\Pageref{Example-8.15}
+ [**Remark 8.15**](#Remark-8.15)\Pageref{Remark-8.15}
 
  [**Example 8.16**](#Example-8.16)\Pageref{Example-8.16}
 
- [**Theorem 8.17**](#theorem-algebra-limits-series): Algebra of Limits for Series\Pageref{theorem-algebra-limits-series}
+ [**Example 8.17**](#Example-8.17)\Pageref{Example-8.17}
+
+ [**Theorem 8.18**](#theorem-algebra-limits-series): Algebra of Limits for Series\Pageref{theorem-algebra-limits-series}
 
  [**Proof**](#Proof*-8.6)\Pageref{Proof*-8.6}
 
- [**Example 8.18**](#Example-8.18)\Pageref{Example-8.18}
+ [**Example 8.19**](#Example-8.19)\Pageref{Example-8.19}
 
  [**Important**](#Important*-8.7)\Pageref{Important*-8.7}
 
- [**Example 8.19**](#Example-8.19)\Pageref{Example-8.19}
+ [**Example 8.20**](#Example-8.20)\Pageref{Example-8.20}
 
- [**Definition 8.20**](#non-negative-series-1): Non-negative series\Pageref{non-negative-series-1}
+ [**Definition 8.21**](#non-negative-series-1): Non-negative series\Pageref{non-negative-series-1}
 
- [**Lemma 8.21**](#lemma-partial-sums-increasing)\Pageref{lemma-partial-sums-increasing}
+ [**Lemma 8.22**](#lemma-partial-sums-increasing)\Pageref{lemma-partial-sums-increasing}
 
  [**Proof**](#Proof*-8.8)\Pageref{Proof*-8.8}
 
- [**Question 8.22**](#Question-8.22)\Pageref{Question-8.22}
+ [**Question 8.23**](#Question-8.23)\Pageref{Question-8.23}
 
- [**Theorem 8.23**](#Theorem-8.23)\Pageref{Theorem-8.23}
+ [**Theorem 8.24**](#Theorem-8.24)\Pageref{Theorem-8.24}
 
  [**Proof**](#Proof*-8.9)\Pageref{Proof*-8.9}
 
- [**Theorem 8.24**](#theorem-harmonic-series): Harmonic series\Pageref{theorem-harmonic-series}
+ [**Theorem 8.25**](#theorem-harmonic-series): Harmonic series\Pageref{theorem-harmonic-series}
 
  [**Proof**](#Proof*-8.10)\Pageref{Proof*-8.10}
 
- [**Theorem 8.25**](#theorem-cauchy-test): Cauchy Condensation Test\Pageref{theorem-cauchy-test}
+ [**Theorem 8.26**](#theorem-cauchy-test): Cauchy Condensation Test\Pageref{theorem-cauchy-test}
 
  [**Proof**](#Proof*-8.11)\Pageref{Proof*-8.11}
 
- [**Theorem 8.26**](#theorem-p-series): Convergence of $p$-series\Pageref{theorem-p-series}
+ [**Theorem 8.27**](#theorem-p-series): Convergence of $p$-series\Pageref{theorem-p-series}
 
  [**Proof**](#Proof*-8.12)\Pageref{Proof*-8.12}
 
- [**Theorem 8.27**](#theorem-p-log-series)\Pageref{theorem-p-log-series}
+ [**Theorem 8.28**](#theorem-p-log-series)\Pageref{theorem-p-log-series}
 
  [**Proof**](#Proof*-8.13)\Pageref{Proof*-8.13}
 
- [**Theorem 8.28**](#theorem-comparison-test): Comparison test\Pageref{theorem-comparison-test}
+ [**Theorem 8.29**](#theorem-comparison-test): Comparison test\Pageref{theorem-comparison-test}
 
  [**Proof**](#Proof*-8.14)\Pageref{Proof*-8.14}
 
- [**Example 8.29**](#Example-8.29)\Pageref{Example-8.29}
+ [**Example 8.30**](#Example-8.30)\Pageref{Example-8.30}
 
- [**Theorem 8.30**](#theorem-limit-comparison-test): Limit Comparison Test\Pageref{theorem-limit-comparison-test}
+ [**Theorem 8.31**](#theorem-limit-comparison-test): Limit Comparison Test\Pageref{theorem-limit-comparison-test}
 
  [**Proof**](#Proof*-8.15)\Pageref{Proof*-8.15}
 
  [**Important**](#Important*-8.16)\Pageref{Important*-8.16}
-
- [**Example 8.31**](#Example-8.31)\Pageref{Example-8.31}
 
  [**Example 8.32**](#Example-8.32)\Pageref{Example-8.32}
 
@@ -887,24 +887,60 @@
 
  [**Example 8.34**](#Example-8.34)\Pageref{Example-8.34}
 
- [**Theorem 8.35**](#theorem-ratio-test-series): Ratio Test for Series\Pageref{theorem-ratio-test-series}
+ [**Example 8.35**](#Example-8.35)\Pageref{Example-8.35}
+
+ [**Theorem 8.36**](#theorem-ratio-test-series): Ratio Test for positive series\Pageref{theorem-ratio-test-series}
 
  [**Proof**](#Proof*-8.17)\Pageref{Proof*-8.17}
 
- [**Example 8.36**](#Example-8.36)\Pageref{Example-8.36}
+ [**Example 8.37**](#Example-8.37)\Pageref{Example-8.37}
 
  [**Important**](#Important*-8.18)\Pageref{Important*-8.18}
 
- [**Example 8.37**](#Example-8.37)\Pageref{Example-8.37}
+ [**Example 8.38**](#Example-8.38)\Pageref{Example-8.38}
 
- [**Definition 8.38**](#absolute-convergence-1): Absolute convergence\Pageref{absolute-convergence-1}
+ [**Definition 8.39**](#absolute-convergence): Absolute convergence\Pageref{absolute-convergence}
 
- [**Theorem 8.39**](#theorem-absolute-convergence)\Pageref{theorem-absolute-convergence}
+ [**Theorem 8.40**](#theorem-absolute-convergence-test): Absolute Convergence Test\Pageref{theorem-absolute-convergence-test}
 
- [**Notation 8.40**](#positive-and-negative-part): Positive and negative part\Pageref{positive-and-negative-part}
+ [**Notation 8.41**](#positive-and-negative-part): Positive and negative part\Pageref{positive-and-negative-part}
 
- [**Proof**](#proof-of-theorem-6): Proof of Theorem 8.39\Pageref{proof-of-theorem-6}
-
- [**Example 8.41**](#Example-8.41)\Pageref{Example-8.41}
+ [**Proof**](#proof-of-theorem-6): Proof of Theorem 8.40\Pageref{proof-of-theorem-6}
 
  [**Example 8.42**](#Example-8.42)\Pageref{Example-8.42}
+
+ [**Example 8.43**](#Example-8.43)\Pageref{Example-8.43}
+
+ [**Theorem 8.44**](#theorem-ratio-test-general): Ratio Test for general series\Pageref{theorem-ratio-test-general}
+
+ [**Proof**](#Proof*-8.20)\Pageref{Proof*-8.20}
+
+ [**Example 8.45**](#Example-8.45)\Pageref{Example-8.45}
+
+ [**Theorem 8.46**](#exponential-series): Exponential series\Pageref{exponential-series}
+
+ [**Proof**](#Proof*-8.21)\Pageref{Proof*-8.21}
+
+ [**Definition 8.47**](#exponential-function): Exponential function\Pageref{exponential-function}
+
+ [**Remark 8.48**](#Remark-8.48)\Pageref{Remark-8.48}
+
+ [**Definition 8.49**](#conditional-convergence-1): Conditional convergence\Pageref{conditional-convergence-1}
+
+ [**Definition 8.50**](#rearrangement-of-a-series): Rearrangement of a series\Pageref{rearrangement-of-a-series}
+
+ [**Theorem 8.51**](#Theorem-8.51)\Pageref{Theorem-8.51}
+
+ [**Theorem 8.52**](#riemann-rearrangement-theorem): Riemann rearrangement Theorem\Pageref{riemann-rearrangement-theorem}
+
+ [**Theorem 8.53**](#dirichlet-test): Dirichlet Test\Pageref{dirichlet-test}
+
+ [**Proof**](#Proof*-8.22)\Pageref{Proof*-8.22}
+
+ [**Example 8.54**](#Example-8.54)\Pageref{Example-8.54}
+
+ [**Theorem 8.55**](#alternate-convergence-test): Alternate Convergence Test\Pageref{alternate-convergence-test}
+
+ [**Proof**](#Proof*-8.23)\Pageref{Proof*-8.23}
+
+ [**Example 8.56**](#Example-8.56)\Pageref{Example-8.56}

@@ -277,7 +277,15 @@ $$
 
 It is customary to sum a series starting at $n=1$. However one could start
 the sum at any $n=N$ with $N \in \N$. This does not affect the convergence
-of the series, but of course it changes the value of the limit. 
+of the series, in the sense that
+$$
+\sum_{n=1}^\infty a_n \,\, \mbox{ converges \,} \iff \,\,
+\sum_{n=N}^\infty a_n \,\, \mbox{ converges.} 
+$$
+In case of convergence, we would of course have
+$$
+\sum_{n=N}^\infty a_n = \sum_{n=1}^\infty a_n - \left(  a_1 + \ldots + a_{N-1} \right) \,.
+$$
 
 :::
 
@@ -459,17 +467,23 @@ does not converge.
 :::
 
 
+::: Remark
 
 If the sum of a Geometric Sries does not start at $n=0$, we need to tweak the summation formula 
-at (@eq-geometric-series-sum).
+at (@eq-geometric-series-sum). For example, if $|x|<1$, and we start the series at $n=1$, we get
+$$
+\sum_{n=1}^\infty x^k = \frac{1}{1-x} - 1 = \frac{x}{1-x} \,.
+$$
 
+:::
 
 
 ::: Example 
 
 We have that
 
-$$\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n}=\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}-\left(\frac{1}{2}\right)^{0}=2-1=1 \,.
+$$\sum_{n=1}^{\infty}\left(\frac{1}{2}\right)^{n}=   
+\frac{ \dfrac{1}{2}}{1- \dfrac{1}{2}} = 1 \,.
 $$
 
 :::
@@ -1608,7 +1622,7 @@ to be positive.
 
 
 ::: Theorem  
-### Ratio Test for Series {#theorem-ratio-test-series}
+### Ratio Test for positive series {#theorem-ratio-test-series}
 
 Let $\left(a_{n}\right)$ be a sequence in $\mathbb{R}$ such that
 $$
@@ -1785,7 +1799,7 @@ $(s_k)$ might oscillate, making the series harder to study.
 In this section we present some tests for general series in $\mathbb{C}$.
 
 
-### Absolute convergence
+### Absolute Convergence Test
 
 
 To study general series, we introduce a stronger notions of convergence,
@@ -1808,7 +1822,8 @@ converges.
 Let us show that absolute convergence implies convergence.
 
 
-::: {.Theorem #theorem-absolute-convergence}
+::: Theorem
+### Absolute Convergence Test    {#theorem-absolute-convergence-test}
 
 Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$. If the series $\sum_{n=1}^{\infty} a_{n}$ converge absolutely, then the series converges.
 
@@ -1849,7 +1864,7 @@ $$
 :::
 
 ::: Proof
-### Proof of Theorem \ref{theorem-absolute-convergence}
+### Proof of Theorem \ref{theorem-absolute-convergence-test}
 
 *Part 1.* Suppose first that $(a_n)$ is a sequence in $\R$ such that 
 $$
@@ -1936,11 +1951,12 @@ doesn't converge, being the harmonic series.
 
 ::: Example 
 
-Consider the series 
+Prove that the following series converges 
 $$
 \sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}} \,.
 $$
-We have
+
+> *Solution*. We have
 $$
 \left|(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}\right|=\frac{\left|n^{2}-5 n+2\right|}{n^{4}} \leq \frac{n^{2}+5 n+2}{n^{4}}
 $$
@@ -1971,6 +1987,542 @@ This shows the series
 $$
 \sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}}
 $$
+converges by the Absolute Convergence Test.
+
+:::
+
+
+
+
+
+### Ratio Test for general series
+
+
+
+As an application of the Absolute Convergence Test we obtain the Ratio Test for general series.
+
+
+::: Theorem 
+### Ratio Test for general series  {#theorem-ratio-test-general}
+
+Let $\left(a_{n}\right)$ be a sequence in $\mathbb{C}$, such that
+$$
+a_{n} \neq 0 \, \quad \forall \, n \in \N \,.
+$$
+
+1. Suppose that the following limit exists:
+$$
+L:=\lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right| \,.
+$$
+They hold:
+
+    - If $L<1$ then $\sum_{n=1}^\infty a_n$ converges absolutely, and hence converges.
+
+    - If $L>1$ then $\sum_{n=1}^\infty a_n$ diverges.
+
+
+2. Suppose that there exists $N \in \N$ and $L>1$ such that
+$$
+\left| \frac{a_{n+1}}{a_{n}} \right| \geq L \,, \quad \forall \, n \geq N \,. 
+$$
+Then the series $\sum_{n=1}^\infty a_n$ diverges.
+
+:::
+
+
+::: Proof
+
+*Part 1.* Let
+$$
+b_{n} := \left|a_{n}\right| \,, 
+$$
+so that 
+$$
+L:= \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right| 
+  = \lim_{n \to \infty} \frac{b_{n+1}}{b_{n}} \,. 
+$$
+
+- Suppose that $L<1$. Since $(b_n)$ is a sequence with non-negative terms, we have that 
+$$
+\sum_{n=1}^{\infty} b_{n}
+$$ 
+converges by the Ratio Test for non-negative series, see Theorem \ref{theorem-ratio-test-series}. Since, by definition
+$$
+\sum_{n=1}^{\infty} b_{n}=\sum_{n=1}^{\infty}\left|a_{n}\right|
+$$
+also the latter series converges, i.e., $\sum_{n=1}^{\infty} a_{n}$ converges absolutely. In particular $\sum_{n=1}^{\infty} a_{n}$ converges, by the Absolute Convergence Test in Theorem \ref{theorem-absolute-convergence-test}.
+
+- Suppose that $L>1$. Then the sequence $(a_n)$ diverges by the Ratio
+Test for sequences. Hence the series 
+$$
+\sum_{n=1}^\infty a_n
+$$
+diverges by the Necessary Condition in Theorem \ref{theorem-series-necessary}.
+
+
+*Part 2.* If there exists $N \in \N$ and $L>1$ such that
+$$
+\left| \frac{a_{n+1}}{a_{n}} \right| \geq L \,, \quad \forall \, n \geq N \,,
+$$
+then the sequence $(a_n)$ diverges by the Ratio
+Test for sequences, and we conclude as above.
+
+:::
+
+
+::: Example 
+
+Prove that the below series converges
+$$
+\sum_{n=1}^{\infty} \frac{(4-3 i)^{n}}{(n+1) !}
+$$
+
+> *Solution.* Set
+$$
+a_{n} := \frac{(4-3 i)^{n}}{(n+1) !} \,.
+$$
+Then
+\begin{align*}
+L & := \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| \\
+& = \left|\frac{a_{n+1}}{a_{n}}\right| \\
+& =\left|\frac{(4-3 i)^{n+1}}{((n+1)+1) !} \bigg/ \frac{(4-3 i)^{n}}{(n+1) !}\right| \\
+& = \frac{|4-3 i|^{n+1}}{|4-3 i|^{n}} \frac{(n+1) !}{(n+2) !} \\ 
+& = \frac{5}{n+2}  \\
+& = 0
+\end{align*}
+By the Ratio Test we conclude that the series $\sum_{n=1}^\infty a_n$
+converges absolutely, and hence converges.
+
+:::
+
+
+
+
+### Exponential function and Euler's Number
+
+We have already encountered the exponential function in the Euler's identity
+$$
+e^{i\theta} = \cos(\theta) + i \sin (\theta) \,, \quad \, \theta \in \R \,.
+$$
+Using the Ratio Test for general series, we can give a precise definition 
+for $e^z$ with $z \in \C$. We start by studying convergence of the exponential series.
+
+
+::: Theorem 
+### Exponential series
+
+Let $z \in \mathbb{C}$. The **exponential series**
+$$
+\sum_{n=0}^{\infty} \frac{z^{n}}{n !}
+$$
 converges absolutely.
 
 :::
+
+::: Proof
+
+Set 
+$$
+a_{n}=\frac{z^{n}}{n !} \,.
+$$
+Then
+\begin{align*}
+L & = \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right| \\
+  & =  \lim_{n \to \infty} \left|\frac{z^{n+1}}{(n+1) !} \bigg/ \frac{z^{n}}{n !}\right| \\
+  & =  \lim_{n \to \infty} \frac{|z|^{n+1}}{|z|^{n}} \frac{n !}{(n+1) !} \\
+  & =  \lim_{n \to \infty} \frac{|z|}{n+1} \\
+  & =    |z| \cdot \lim_{n \to \infty} \frac{1}{n+1} = 0 \,.
+\end{align*}
+Therefore the series converges absolutely by the Ratio Test in Theorem \ref{theorem-ratio-test-general}.
+
+
+:::
+
+
+
+::: Definition 
+### Exponential function
+
+Define the exponential function 
+$$
+\exp \colon \C \to \C \,, \quad 
+\exp (z) := \sum_{n=0}^{\infty} \frac{z^{n}}{n !}
+$$
+for $z \in \mathbb{C}$. We denote 
+$$
+e^{z} := \exp(z) \,, \quad e:=e^{1} \,.
+$$
+
+:::
+
+
+::: Remark
+
+1. Using the definition of $e^z$, one can show the usual properties of exponentials, such that
+$$
+e^{x+y}=e^{x} e^{y} \,, \quad \frac{\mathrm{d}}{\mathrm{d} x} e^{x}=e^{x} \,.
+$$
+
+2. We had defined 
+$$
+e := \lim_{n \to \infty } \left( 1 + \frac1n  \right)^n \,.
+$$
+Using the binomial theorem one can prove that 
+$$
+\lim_{n \to \infty } \left( 1 + \frac1n  \right)^n = 
+\sum_{n=0}^{\infty} \frac{1}{n !} \,.
+$$
+
+:::
+
+
+
+
+
+
+
+### Conditional convergence
+
+Some series do not converge absolutely, but still converge. Such series are said to converge conditionally.
+
+::: Definition 
+### Conditional convergence
+
+Let $(a_n)$ be a sequence in $\C$. We say that the series
+$$
+\sum_{n=1}^{\infty} a_{n}
+$$ 
+converges **conditionally** if it converges, but it does not converge
+absolutely.
+
+:::
+
+
+In practice conditional convergence means that the convergence of the series depends on the order in which we perform the summation. Changing the
+order of summation of a series is called rearrangement.
+
+
+
+
+
+::: Definition
+### Rearrangement of a series
+
+Let $(a_n)$ be a sequence in $\C$. We define:
+
+- A **permutation** is a bijection $\sigma \colon \N \to \N$. 
+- A **rearrangement** of the series $\sum_{n=1}^\infty a_n$ is a series
+$$
+\sum_{n=1 }^\infty a_{\sigma(n)}
+$$
+for some permutation $\sigma$.
+
+:::
+
+
+If a series of complex numebers converges absolutely, 
+then all its rearrangements converge to the same limit.
+
+::: Theorem
+
+Let $(a_n)$ be a sequence in $\C$ such that 
+$$
+\sum_{n=1}^\infty |a_n|
+$$
+converges. For any permutation $\sigma$ we have
+$$
+\sum_{n=1}^\infty a_{\sigma(n)}  = \sum_{n=1}^\infty a_n  \, .
+$$
+
+:::
+
+For a proof, see Theorem 3.55 in [@rudin_introduction]. A very surprising result is the following: If a series of real numbers converges 
+conditionally, then the series can be rearranged to converge to
+any real number.
+
+
+::: Theorem
+### Riemann rearrangement Theorem
+
+Let $(a_n)$ be a real series such that
+$$
+\sum_{n=1}^\infty a_n
+$$
+converges conditionally. Let 
+$$ 
+L \in \R \,\, \mbox{ or } \,\, L = \pm \infty  \,.
+$$
+There exists a permutation $\sigma$ such that the corresponding rearrangement $\sum_{n=1}^\infty a_{\sigma(n)}$ converges
+conditionally to $L$, that is, 
+$$
+\sum_{n=1}^\infty a_{\sigma(n)}  = L  \, .
+$$
+
+:::
+
+
+For a proof, we refer the reader to Theorem 3.54 in [@rudin_introduction].
+
+
+
+
+### Dirichlet and Alternating Series Tests
+
+
+
+There are very few conditional convergence tests available. We present
+the Dirichlet Test and the Alternating Series Test.
+
+
+::: Theorem
+### Dirichlet Test
+
+Let $(c_n)$ be a sequence in $\C$ and $(q_n)$ a sequence in $\R$.
+Suppose that 
+
+- $q_n$ is decreasing, 
+- $q_n \to 0$,
+- $q_n \geq 0$ for all $n \in \N$. 
+
+Also suppose there exists $M > 0$ such that
+$$
+\left|  \sum_{n=1}^k c_k \right| \leq M \,, \quad \forall \, k \in \N \,.
+$$
+Then the following series converges
+$$
+\sum_{n=1}^\infty c_n q_n
+$$
+
+:::
+
+
+::: Proof 
+
+Define the partial sums
+$$
+s_k := \sum_{n=1}^k c_n \,, \quad \forall \, k \in \N \,.
+$$
+By assumption it holds
+$$
+|s_k| \leq M \,, \quad \forall \, k \in \N \,.
+$${#eq-dirichlet-test-proof}
+Note that 
+\begin{align*}
+c_1 & = s_1 \\ 
+c_2 & = s_2 - s_1 \\
+& \ldots  \ldots \\ 
+c_n & = s_{n} - s_{n-1} \,.
+\end{align*}
+Therefore
+\begin{align*}
+\sum_{n=1}^k c_k q_k & = c_1 q_1 + c_2 q_2 + \ldots + c_k q_k \\
+                     & = s_1 q_1 + (s_2 - s_1) q_2 + \ldots + (s_k - s_{k-1})q_k \\
+                     & = s_1 (q_1 - q_2) + s_2 (q_2 - q_3) + \ldots +
+                         s_{k-1} (q_{k-1} - q_k) + s_k q_k \\
+                     & = \left( \sum_{n=1}^{k-1} s_n (q_n - q_{n+1}) \right) + s_k q_k
+\end{align*}
+Since $(s_k)$ is bounded and $q_k \to 0$, we conclude that
+$$
+s_k q_k \to 0 \,.
+$$
+Further, notice that
+$$
+q_n - q_{n+1} \geq 0 \,,
+$$
+since $q_n$ is decreasing. Therefore, using (@eq-dirichlet-test-proof), we get
+\begin{align*}
+|s_n| |q_n -  q_{n+1}| & = |s_n| (q_n -  q_{n+1}) \\
+                       & \leq M (q_n -  q_{n+1})
+\end{align*}
+for all $n \in \N$. Note that
+and 
+$$
+\sum_{n=1}^{k-1} M (q_n -  q_{n+1}) = M (q_1 - q_{n}) \,.
+$$
+Since $q_n \to 0$ we conclude that
+$$
+\sum_{n=1}^{\infty} M (q_n -  q_{n+1}) = M q_1 \,.
+$$
+Hence, by the Comparison Test for non-negative series, we infer
+that 
+$$
+\sum_{n=1}^\infty  |s_n| |q_n -  q_{n+1}|  \,.
+$$
+In particular the series
+$$
+\sum_{n=1}^\infty  s_n (q_n -  q_{n+1})
+$$
+converges by the Absolute Convergence Test. Since we have shown
+$$
+\sum_{n=1}^k c_k q_k = \left( \sum_{n=1}^{k-1} s_n (q_n - q_{n+1}) \right) + s_k q_k
+$$
+and $s_k q_k \to 0$, we conclude that
+$$
+\sum_{n=1}^\infty c_k q_k  
+$$
+converges.
+
+::: 
+
+
+
+::: Example
+
+Let $\theta \in \R$, with 
+$$
+\theta \neq 2 k \pi \,, \quad \forall \, k \in \Z \,.
+$$
+Prove that the below series are conditionally convergent
+$$
+\sum_{n=1}^\infty \frac{e^{i \theta n}}{n} \,, \quad \sum_{n=1}^{\infty} \frac{\cos(\theta n)}{n} \,, \quad \sum_{n=1}^{\infty} \frac{\sin(\theta n)}{n} \,.
+$$
+
+> *Solution.* Clearly the series
+$$
+\sum_{n=1}^\infty \frac{e^{i \theta n}}{n}
+$$
+does not converge absolutely, since 
+$$
+\sum_{n=1}^\infty \left| \frac{e^{i \theta n}}{n} \right| 
+= \sum_{n=1}^\infty \frac{1}{n}
+$$
+diverges, being the Harmonic Series. Let us prove convergence of
+$\sum_{n=1}^\infty \frac{e^{i \theta n}}{n}$.
+Define the sequences
+$$
+c_n := e^{i\theta n} \,, \quad q_n := \frac{1}{n} \,.
+$$
+We have that $q_n$ is decreasing, $q_n \to 0$ and $q_n \geq 0$. 
+Let us prove that there exists $M>0$ such that
+$$
+\left| \sum_{n=1}^k  e^{i\theta n} \right| \leq M \,,\quad \forall \, k \in \N \,. 
+$${#eq-dirichlet-example}
+Note that
+$$
+1 - e^{i\theta} \neq 0 \,,
+$$
+since $\theta \neq 2k\pi$ for all $k \in \Z$. Therefore we can use the
+Geometric Series (truncated) summation formula to get
+\begin{align*}
+\sum_{n=1}^k  e^{i\theta n} & = \sum_{n=1}^k  e^{i\theta n} \\
+                            & = \frac{1- e^{i(k+1)\theta}}{1 - e^{i\theta}} - 1 \\
+                            & = e^{i\theta} \, 
+                            \frac{1- e^{ik\theta}}{1 - e^{i\theta}}
+\end{align*}
+Thus
+\begin{align*}
+\left| \sum_{n=1}^k  e^{i\theta n} \right| & = \left| e^{i\theta} \, 
+                            \frac{1- e^{ik\theta}}{1 - e^{i\theta}} \right| \\
+                            & = \left| e^{i \theta} \right|
+                            \left|\frac{1- e^{ik\theta}}{1 - e^{i\theta}} \right| \\
+                            & = \frac{ |1- e^{ik\theta}|}{|1 - e^{i\theta} |} \\
+                            & \leq \frac{ |1| + |e^{ik\theta}|}{|1 - e^{i\theta} |} \\
+                            & =  \frac{ |1| }{|1 - e^{i\theta} |}
+\end{align*}
+where we used the triangle inequality. Since the right hand side does not
+depend on $k$, we can set
+$$
+M := \frac{ |1| }{|1 - e^{i\theta} |} \,,
+$$
+so that (@eq-dirichlet-example) holds. Therefore 
+$$
+\sum_{n=1}^\infty \frac{e^{i \theta n}}{n}
+$$
+converges by the Dirichlet Test. Recalling the Euler's Identity
+$$
+e^{i\theta} = \cos(\theta) + i \sin(\theta) \,,
+$$
+we obtain that also the series 
+$$
+\sum_{n=1}^\infty \frac{\cos(n \theta)}{n} \,, \quad 
+\sum_{n=1}^\infty \frac{\sin(n \theta)}{n}
+$$
+converge. 
+
+:::
+
+
+As a corollary of the Dirichlet Test we obtain the Alternate Convergence
+Test.
+
+
+
+
+::: Theorem 
+### Alternate Convergence Test
+
+Let $(q_n)$ be a sequence in $\R$ such that 
+
+- $q_n$ is decreasing, 
+- $q_n \to 0$,
+- $q_n \geq 0$ for all $n \in \N$. 
+
+The following series converges
+$$
+\sum_{n=1}^\infty (-1)^n q_n
+$$
+
+:::
+
+
+::: Proof
+
+Define the sequence
+$$
+c_n := (-1)^n \,.
+$$
+Then 
+$$
+\sum_{n=1}^k c_n = 
+\begin{cases}
+0  &  \,\, \mbox{ if } \,\, k \, \mbox{ even} \\
+-1  &  \,\, \mbox{ if } \,\, k \, \mbox{ odd} \\
+\end{cases}
+$$
+Hence
+$$
+\left| \sum_{n=1}^k c_n \right| \leq 1 \,, \quad  \forall \, k \in \N \,.
+$$
+By the Dirichlet Test we have convergence of
+$$
+\sum_{n=1}^\infty c_n q_n = 
+\sum_{n=1}^\infty (-1)^n q_n  \,.
+$$
+
+:::
+
+
+
+::: Example 
+
+Prove that the below series converges conditionally
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} \,.
+$$
+
+>*Solution.* The series does not converge absolutely, since
+$$
+\sum_{n=1}^{\infty} \left| (-1)^{n} \frac{1}{n} \right| =
+\sum_{n=1}^\infty \frac1n
+$$
+diverges, being the Harmonic Series. We need to show convergence of
+$$
+\sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} \,.
+$$
+To this end, set 
+$$
+q_n := \frac1n \,.
+$$
+Clearly $q_n \geq 0$, $q_n \to 0$ and $q_n$ is decreasing. Hence the series
+converges by the Alternating Series Test.
+
+:::
+
+
+
+
+
+
+
+
+
