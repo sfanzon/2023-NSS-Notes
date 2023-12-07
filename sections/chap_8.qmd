@@ -2283,11 +2283,11 @@ Suppose that
 - $q_n$ is decreasing, 
 - $q_n \to 0$,
 - $q_n \geq 0$ for all $n \in \N$. 
+- Suppose there exists $M > 0$ such that
+$$
+\left|  \sum_{n=1}^k c_n \right| \leq M \,, \quad \forall \, k \in \N \,.
+$$
 
-Also suppose there exists $M > 0$ such that
-$$
-\left|  \sum_{n=1}^k c_k \right| \leq M \,, \quad \forall \, k \in \N \,.
-$$
 Then the following series converges
 $$
 \sum_{n=1}^\infty c_n q_n
@@ -2335,11 +2335,10 @@ since $q_n$ is decreasing. Therefore, using (@eq-dirichlet-test-proof), we get
                        & \leq M (q_n -  q_{n+1})
 \end{align*}
 for all $n \in \N$. Note that
-and 
 $$
-\sum_{n=1}^{k-1} M (q_n -  q_{n+1}) = M (q_1 - q_{n}) \,.
+\sum_{n=1}^{k-1} M (q_n -  q_{n+1}) = M (q_1 - q_{k}) \,.
 $$
-Since $q_n \to 0$ we conclude that
+Since $q_k \to 0$ as $k \to \infty$, we conclude that
 $$
 \sum_{n=1}^{\infty} M (q_n -  q_{n+1}) = M q_1 \,.
 $$
