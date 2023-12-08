@@ -2853,6 +2853,7 @@ Suppose $(a_n)$ is such that $a_n \to 0$ and
 $$
 a_n \neq 0 \,, \quad \forall \, n \in \N \, .
 $$
+Then
 $$
 \lim_{n \to \infty} \frac{1 - \cos(a_n)}{(a_n)^2} = \frac{1}{2} \,, \quad 
 \lim_{n \to \infty} \frac{1 - \cos(a_n)}{a_n} = 0  \, .
@@ -2885,6 +2886,8 @@ using Step 1 and the Algebra of Limits.
 
 
 :::
+
+
 
 
 
