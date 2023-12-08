@@ -1189,6 +1189,8 @@ converges if and only if $p > 1$, and the proof is concluded.
 
 
 
+
+
 ### Comparison Test
 
 
@@ -1785,6 +1787,33 @@ a $p$-series with $p = 2 >1$.
 
 :::
 
+
+
+The Ratio Test can often be combined with other convergence tests, as seen in the 
+following example.
+
+
+::: Example
+
+Using the Cauchy Condensation Test and the Ratio Test, prove that the series below converges
+$$
+\sum_{n=1}^\infty \frac{\log (n)}{ n^{2} } \,.
+$$
+
+>*Solution.* With $a_{n}=\log n / n^{2}$, we have
+$$
+\sum_{n=0}^{\infty} 2^{n} a_{2^{n}}
+=\sum_{n=2}^{\infty} 2^{n} \frac{\log (2^{n})}{\left(2^{n}\right)^{2}}
+=\log (2) \, \sum_{n=2}^{\infty} \frac{n }{2^{n}}
+$$
+This converges according to the Ratio Test: With $b_{n}=n / 2^{n}$, we have
+$$
+\frac{b_{n+1}}{b_n} = \frac{n+1}{2^{n+1}} \bigg/ \frac{n}{2^n} = \frac{n+1}{2n} \longrightarrow \frac12 < 1 \,.
+$$
+Hence $\sum_{n=1}^{\infty} \frac{\log n}{n^{2}}$ converges by the Cauchy Condensation Test.
+
+
+:::
 
 
 

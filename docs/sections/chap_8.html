@@ -85,6 +85,54 @@ div.csl-indent {
   }
 }</script>
 <style>
+.Definition {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Axiom {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Example {
+  --color1: #bce5de;
+  --color2: #21aa93;
+}
+.Proof {
+  --color1: #f1f1f2;
+  --color2: #c0c0c1;
+}
+.TODO {
+  --color1: #e7b1b4;
+  --color2: #8c3236;
+}
+.Warning {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Theorem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Corollary {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Notation {
+  --color1: #c6e6ed;
+  --color2: #1995ad;
+}
+.Conjecture {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.Problem {
+  --color1: #f4cce0;
+  --color2: #db4d92;
+}
+.DONE {
+  --color1: #cce7b1;
+  --color2: #86b754;
+}
 .Lemma {
   --color1: #f4cce0;
   --color2: #db4d92;
@@ -93,59 +141,11 @@ div.csl-indent {
   --color1: #bce5de;
   --color2: #21aa93;
 }
-.Notation {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.Proof {
-  --color1: #f1f1f2;
-  --color2: #c0c0c1;
-}
-.Question {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Example {
-  --color1: #bce5de;
-  --color2: #21aa93;
-}
-.Conjecture {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Definition {
-  --color1: #c6e6ed;
-  --color2: #1995ad;
-}
-.TODO {
-  --color1: #e7b1b4;
-  --color2: #8c3236;
-}
 .Proposition {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
-.DONE {
-  --color1: #cce7b1;
-  --color2: #86b754;
-}
-.Problem {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Warning {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Axiom {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Corollary {
-  --color1: #f4cce0;
-  --color2: #db4d92;
-}
-.Theorem {
+.Question {
   --color1: #f4cce0;
   --color2: #db4d92;
 }
@@ -1332,6 +1332,23 @@ L &amp; = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
 </ul>
 </div></details>
 </div>
+<p>The Ratio Test can often be combined with other convergence tests, as seen in the following example.</p>
+<div id="Example-39" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 39</strong></summary><div>
+<p>Using the Cauchy Condensation Test and the Ratio Test, prove that the series below converges <span class="math display">\[
+\sum_{n=1}^\infty \frac{\log (n)}{ n^{2} } \,.
+\]</span></p>
+<blockquote class="blockquote">
+<p><em>Solution.</em> With <span class="math inline">\(a_{n}=\log n / n^{2}\)</span>, we have <span class="math display">\[
+\sum_{n=0}^{\infty} 2^{n} a_{2^{n}}
+=\sum_{n=2}^{\infty} 2^{n} \frac{\log (2^{n})}{\left(2^{n}\right)^{2}}
+=\log (2) \, \sum_{n=2}^{\infty} \frac{n }{2^{n}}
+\]</span> This converges according to the Ratio Test: With <span class="math inline">\(b_{n}=n / 2^{n}\)</span>, we have <span class="math display">\[
+\frac{b_{n+1}}{b_n} = \frac{n+1}{2^{n+1}} \bigg/ \frac{n}{2^n} = \frac{n+1}{2n} \longrightarrow \frac12 &lt; 1 \,.
+\]</span> Hence <span class="math inline">\(\sum_{n=1}^{\infty} \frac{\log n}{n^{2}}\)</span> converges by the Cauchy Condensation Test.</p>
+</blockquote>
+</div></details>
+</div>
 </section>
 </section>
 <section id="general-series" class="level2" data-number="8.5">
@@ -1342,19 +1359,19 @@ L &amp; = \lim_{n\to \infty} \frac{a_{n+1}}{a_n} \\
 <h3 data-number="8.5.1" class="anchored" data-anchor-id="absolute-convergence-test"><span class="header-section-number">8.5.1</span> Absolute Convergence Test</h3>
 <p>To study general series, we introduce a stronger notions of convergence, known as <strong>absolute convergence</strong>.</p>
 <div id="absolute-convergence" class="Definition" title="Absolute convergence">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 39: </strong>Absolute convergence</summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The series <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> is said to <strong>converge absolutely</strong> if the non-negative series <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 40: </strong>Absolute convergence</summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. The series <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> is said to <strong>converge absolutely</strong> if the non-negative series <span class="math display">\[
 \sum_{n=1}^{\infty}\left|a_{n}\right|
 \]</span> converges.<p></p>
 </div></details>
 </div>
 <p>Let us show that absolute convergence implies convergence.</p>
 <div id="theorem-absolute-convergence-test" class="Theorem" title="Absolute Convergence Test">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 40: </strong>Absolute Convergence Test</summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. If the series <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converge absolutely, then the series converges.<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 41: </strong>Absolute Convergence Test</summary><div>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. If the series <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converge absolutely, then the series converges.<p></p>
 </div></details>
 </div>
 <p>Before proceeding with the proof, we introduce some notation.</p>
 <div id="positive-and-negative-part" class="Notation" title="Positive and negative part">
-<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 41: </strong>Positive and negative part</summary><div>For a number <span class="math inline">\(x \in \mathbb{R}\)</span>, we define <span class="math display">\[
+<p></p><details class="Notation fbx-simplebox fbx-default" open=""><summary><strong>Notation 42: </strong>Positive and negative part</summary><div>For a number <span class="math inline">\(x \in \mathbb{R}\)</span>, we define <span class="math display">\[
 x^{+}:=
 \begin{cases}
 x &amp; \mbox{ if } \, x \geq 0 \\
@@ -1374,8 +1391,8 @@ x^+ \leq |x| \,, \quad x^- \leq |x| \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 40">
-<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 40</summary><div><em>Part 1.</em> Suppose first that <span class="math inline">\((a_n)\)</span> is a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
+<div id="proof-of-theorem" class="Proof" title="Proof of Theorem 41">
+<p></p><details class="Proof fbx-simplebox fbx-default" open=""><summary><strong>Proof: </strong>Proof of Theorem 41</summary><div><em>Part 1.</em> Suppose first that <span class="math inline">\((a_n)\)</span> is a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that <span class="math display">\[
 \sum_{n=1}^\infty |a_n|
 \]</span> converges. Since <span class="math display">\[
 0 \leq a_{n}^{+} \leq\left|a_{n}\right| \,, \quad \forall \, n \in \mathbb{N}\,,
@@ -1405,16 +1422,16 @@ a_n = a_n^+ - a_n^- \,, \quad \forall \, n \in \mathbb{N}\,,
 \]</span> proving that <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> converges.</p>
 </div></details>
 </div>
-<div id="Example-42" class="Example">
-<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 42</strong></summary><div>The series <span class="math display">\[
+<div id="Example-43" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 43</strong></summary><div>The series <span class="math display">\[
 \sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n}
 \]</span> does not converge absolutely, since <span class="math display">\[
 \sum_{n=1}^{\infty}\left|(-1)^{n} \frac{1}{n}\right|=\sum_{n=1}^{\infty} \frac{1}{n}
 \]</span> doesn’t converge, being the harmonic series.<p></p>
 </div></details>
 </div>
-<div id="Example-43" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 43</strong></summary><div>
+<div id="Example-44" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 44</strong></summary><div>
 <p>Prove that the following series converges <span class="math display">\[
 \sum_{n=1}^{\infty}(-1)^{n} \frac{n^{2}-5 n+2}{n^{4}} \,.
 \]</span></p>
@@ -1444,7 +1461,7 @@ a_n = a_n^+ - a_n^- \,, \quad \forall \, n \in \mathbb{N}\,,
 <h3 data-number="8.5.2" class="anchored" data-anchor-id="ratio-test-for-general-series"><span class="header-section-number">8.5.2</span> Ratio Test for general series</h3>
 <p>As an application of the Absolute Convergence Test we obtain the Ratio Test for general series.</p>
 <div id="theorem-ratio-test-general" class="Theorem" title="Ratio Test for general series">
-<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 44: </strong>Ratio Test for general series</summary><div>
+<details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 45: </strong>Ratio Test for general series</summary><div>
 <p>Let <span class="math inline">\(\left(a_{n}\right)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>, such that <span class="math display">\[
 a_{n} \neq 0 \, \quad \forall \, n \in \mathbb{N}\,.
 \]</span></p>
@@ -1474,7 +1491,7 @@ L:= \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right|
 \sum_{n=1}^{\infty} b_{n}
 \]</span> converges by the Ratio Test for non-negative series, see Theorem <a href="chap_8.html#theorem-ratio-test-series">36</a>. Since, by definition <span class="math display">\[
 \sum_{n=1}^{\infty} b_{n}=\sum_{n=1}^{\infty}\left|a_{n}\right|
-\]</span> also the latter series converges, i.e., <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges absolutely. In particular <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges, by the Absolute Convergence Test in Theorem <a href="chap_8.html#theorem-absolute-convergence-test">40</a>.</p></li>
+\]</span> also the latter series converges, i.e., <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges absolutely. In particular <span class="math inline">\(\sum_{n=1}^{\infty} a_{n}\)</span> converges, by the Absolute Convergence Test in Theorem <a href="chap_8.html#theorem-absolute-convergence-test">41</a>.</p></li>
 <li><p>Suppose that <span class="math inline">\(L&gt;1\)</span>. Then the sequence <span class="math inline">\((a_n)\)</span> diverges by the Ratio Test for sequences. Hence the series <span class="math display">\[
 \sum_{n=1}^\infty a_n
 \]</span> diverges by the Necessary Condition in Theorem <a href="chap_8.html#theorem-series-necessary">6</a>.</p></li>
@@ -1484,8 +1501,8 @@ L:= \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right|
 \]</span> then the sequence <span class="math inline">\((a_n)\)</span> diverges by the Ratio Test for sequences, and we conclude as above.</p>
 </div></details>
 </div>
-<div id="Example-45" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 45</strong></summary><div>
+<div id="Example-46" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 46</strong></summary><div>
 <p>Prove that the below series converges <span class="math display">\[
 \sum_{n=1}^{\infty} \frac{(4-3 i)^{n}}{(n+1) !}
 \]</span></p>
@@ -1510,7 +1527,7 @@ L &amp; := \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| \\
 e^{i\theta} = \cos(\theta) + i \sin (\theta) \,, \quad \, \theta \in \mathbb{R}\,.
 \]</span> Using the Ratio Test for general series, we can give a precise definition for <span class="math inline">\(e^z\)</span> with <span class="math inline">\(z \in \mathbb{C}\)</span>. We start by studying convergence of the exponential series.</p>
 <div id="exponential-series" class="Theorem" title="Exponential series">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 46: </strong>Exponential series</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span>. The <strong>exponential series</strong> <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 47: </strong>Exponential series</summary><div>Let <span class="math inline">\(z \in \mathbb{C}\)</span>. The <strong>exponential series</strong> <span class="math display">\[
 \sum_{n=0}^{\infty} \frac{z^{n}}{n !}
 \]</span> converges absolutely.<p></p>
 </div></details>
@@ -1524,11 +1541,11 @@ L &amp; = \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right| \\
   &amp; =  \lim_{n \to \infty} \frac{|z|^{n+1}}{|z|^{n}} \frac{n !}{(n+1) !} \\
   &amp; =  \lim_{n \to \infty} \frac{|z|}{n+1} \\
   &amp; =    |z| \cdot \lim_{n \to \infty} \frac{1}{n+1} = 0 \,.
-\end{align*}\]</span> Therefore the series converges absolutely by the Ratio Test in Theorem <a href="chap_8.html#theorem-ratio-test-general">44</a>.<p></p>
+\end{align*}\]</span> Therefore the series converges absolutely by the Ratio Test in Theorem <a href="chap_8.html#theorem-ratio-test-general">45</a>.<p></p>
 </div></details>
 </div>
 <div id="exponential-function" class="Definition" title="Exponential function">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 47: </strong>Exponential function</summary><div>Define the exponential function <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 48: </strong>Exponential function</summary><div>Define the exponential function <span class="math display">\[
 \exp \colon \mathbb{C}\to \mathbb{C}\,, \quad
 \exp (z) := \sum_{n=0}^{\infty} \frac{z^{n}}{n !}
 \]</span> for <span class="math inline">\(z \in \mathbb{C}\)</span>. We denote <span class="math display">\[
@@ -1536,8 +1553,8 @@ e^{z} := \exp(z) \,, \quad e:=e^{1} \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Remark-48" class="Remark">
-<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 48</strong></summary><div>
+<div id="Remark-49" class="Remark">
+<details class="Remark fbx-simplebox fbx-default" open=""><summary><strong>Remark 49</strong></summary><div>
 <ol type="1">
 <li><p>Using the definition of <span class="math inline">\(e^z\)</span>, one can show the usual properties of exponentials, such that <span class="math display">\[
 e^{x+y}=e^{x} e^{y} \,, \quad \frac{\mathrm{d}}{\mathrm{d} x} e^{x}=e^{x} \,.
@@ -1556,14 +1573,14 @@ e := \lim_{n \to \infty } \left( 1 + \frac1n  \right)^n \,.
 <h3 data-number="8.5.4" class="anchored" data-anchor-id="conditional-convergence"><span class="header-section-number">8.5.4</span> Conditional convergence</h3>
 <p>Some series do not converge absolutely, but still converge. Such series are said to converge conditionally.</p>
 <div id="conditional-convergence-1" class="Definition" title="Conditional convergence">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 49: </strong>Conditional convergence</summary><div>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. We say that the series <span class="math display">\[
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 50: </strong>Conditional convergence</summary><div>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. We say that the series <span class="math display">\[
 \sum_{n=1}^{\infty} a_{n}
 \]</span> converges <strong>conditionally</strong> if it converges, but it does not converge absolutely.<p></p>
 </div></details>
 </div>
 <p>In practice conditional convergence means that the convergence of the series depends on the order in which we perform the summation. Changing the order of summation of a series is called rearrangement.</p>
 <div id="rearrangement-of-a-series" class="Definition" title="Rearrangement of a series">
-<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 50: </strong>Rearrangement of a series</summary><div>
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition 51: </strong>Rearrangement of a series</summary><div>
 <p>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span>. We define:</p>
 <ul>
 <li>A <strong>permutation</strong> is a bijection <span class="math inline">\(\sigma \colon \mathbb{N}\to \mathbb{N}\)</span>.</li>
@@ -1574,8 +1591,8 @@ e := \lim_{n \to \infty } \left( 1 + \frac1n  \right)^n \,.
 </div></details>
 </div>
 <p>If a series of complex numebers converges absolutely, then all its rearrangements converge to the same limit.</p>
-<div id="Theorem-51" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 51</strong></summary><div>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span> such that <span class="math display">\[
+<div id="Theorem-52" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 52</strong></summary><div>Let <span class="math inline">\((a_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span> such that <span class="math display">\[
 \sum_{n=1}^\infty |a_n|
 \]</span> converges. For any permutation <span class="math inline">\(\sigma\)</span> we have <span class="math display">\[
 \sum_{n=1}^\infty a_{\sigma(n)}  = \sum_{n=1}^\infty a_n  \, .
@@ -1584,7 +1601,7 @@ e := \lim_{n \to \infty } \left( 1 + \frac1n  \right)^n \,.
 </div>
 <p>For a proof, see Theorem 3.55 in <span class="citation" data-cites="rudin_introduction">(<a href="references.html#ref-rudin_introduction" role="doc-biblioref">Rudin 1976</a>)</span>. A very surprising result is the following: If a series of real numbers converges conditionally, then the series can be rearranged to converge to any real number.</p>
 <div id="riemann-rearrangement-theorem" class="Theorem" title="Riemann rearrangement Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 52: </strong>Riemann rearrangement Theorem</summary><div>Let <span class="math inline">\((a_n)\)</span> be a real series such that <span class="math display">\[
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 53: </strong>Riemann rearrangement Theorem</summary><div>Let <span class="math inline">\((a_n)\)</span> be a real series such that <span class="math display">\[
 \sum_{n=1}^\infty a_n
 \]</span> converges conditionally. Let <span class="math display">\[
 L \in \mathbb{R}\,\, \mbox{ or } \,\, L = \pm \infty  \,.
@@ -1599,7 +1616,7 @@ L \in \mathbb{R}\,\, \mbox{ or } \,\, L = \pm \infty  \,.
 <h3 data-number="8.5.5" class="anchored" data-anchor-id="dirichlet-and-alternating-series-tests"><span class="header-section-number">8.5.5</span> Dirichlet and Alternating Series Tests</h3>
 <p>There are very few conditional convergence tests available. We present the Dirichlet Test and the Alternating Series Test.</p>
 <div id="dirichlet-test" class="Theorem" title="Dirichlet Test">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 53: </strong>Dirichlet Test</summary><div>Let <span class="math inline">\((c_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span> and <span class="math inline">\((q_n)\)</span> a sequence in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 54: </strong>Dirichlet Test</summary><div>Let <span class="math inline">\((c_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{C}\)</span> and <span class="math inline">\((q_n)\)</span> a sequence in <span class="math inline">\(\mathbb{R}\)</span>. Suppose that<p></p>
 <ul>
 <li><span class="math inline">\(q_n\)</span> is decreasing,</li>
 <li><span class="math inline">\(q_n \to 0\)</span>,</li>
@@ -1651,8 +1668,8 @@ q_n - q_{n+1} \geq 0 \,,
 \]</span> converges.<p></p>
 </div></details>
 </div>
-<div id="Example-54" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 54</strong></summary><div>
+<div id="Example-55" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 55</strong></summary><div>
 <p>Let <span class="math inline">\(\theta \in \mathbb{R}\)</span>, with <span class="math display">\[
 \theta \neq 2 k \pi \,, \quad \forall \, k \in \mathbb{Z}\,.
 \]</span> Prove that the below series are conditionally convergent <span class="math display">\[
@@ -1698,7 +1715,7 @@ e^{i\theta} = \cos(\theta) + i \sin(\theta) \,,
 </div>
 <p>As a corollary of the Dirichlet Test we obtain the Alternate Convergence Test.</p>
 <div id="alternate-convergence-test" class="Theorem" title="Alternate Convergence Test">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 55: </strong>Alternate Convergence Test</summary><div>Let <span class="math inline">\((q_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that<p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem 56: </strong>Alternate Convergence Test</summary><div>Let <span class="math inline">\((q_n)\)</span> be a sequence in <span class="math inline">\(\mathbb{R}\)</span> such that<p></p>
 <ul>
 <li><span class="math inline">\(q_n\)</span> is decreasing,</li>
 <li><span class="math inline">\(q_n \to 0\)</span>,</li>
@@ -1726,8 +1743,8 @@ c_n := (-1)^n \,.
 \]</span><p></p>
 </div></details>
 </div>
-<div id="Example-56" class="Example">
-<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 56</strong></summary><div>
+<div id="Example-57" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example 57</strong></summary><div>
 <p>Prove that the below series converges conditionally <span class="math display">\[
 \sum_{n=1}^{\infty}(-1)^{n} \frac{1}{n} \,.
 \]</span></p>

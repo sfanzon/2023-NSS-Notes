@@ -899,48 +899,50 @@
 
  [**Example 8.38**](#Example-8.38)\Pageref{Example-8.38}
 
- [**Definition 8.39**](#absolute-convergence): Absolute convergence\Pageref{absolute-convergence}
+ [**Example 8.39**](#Example-8.39)\Pageref{Example-8.39}
 
- [**Theorem 8.40**](#theorem-absolute-convergence-test): Absolute Convergence Test\Pageref{theorem-absolute-convergence-test}
+ [**Definition 8.40**](#absolute-convergence): Absolute convergence\Pageref{absolute-convergence}
 
- [**Notation 8.41**](#positive-and-negative-part): Positive and negative part\Pageref{positive-and-negative-part}
+ [**Theorem 8.41**](#theorem-absolute-convergence-test): Absolute Convergence Test\Pageref{theorem-absolute-convergence-test}
 
- [**Proof**](#proof-of-theorem-6): Proof of Theorem 8.40\Pageref{proof-of-theorem-6}
+ [**Notation 8.42**](#positive-and-negative-part): Positive and negative part\Pageref{positive-and-negative-part}
 
- [**Example 8.42**](#Example-8.42)\Pageref{Example-8.42}
+ [**Proof**](#proof-of-theorem-6): Proof of Theorem 8.41\Pageref{proof-of-theorem-6}
 
  [**Example 8.43**](#Example-8.43)\Pageref{Example-8.43}
 
- [**Theorem 8.44**](#theorem-ratio-test-general): Ratio Test for general series\Pageref{theorem-ratio-test-general}
+ [**Example 8.44**](#Example-8.44)\Pageref{Example-8.44}
+
+ [**Theorem 8.45**](#theorem-ratio-test-general): Ratio Test for general series\Pageref{theorem-ratio-test-general}
 
  [**Proof**](#Proof*-8.20)\Pageref{Proof*-8.20}
 
- [**Example 8.45**](#Example-8.45)\Pageref{Example-8.45}
+ [**Example 8.46**](#Example-8.46)\Pageref{Example-8.46}
 
- [**Theorem 8.46**](#exponential-series): Exponential series\Pageref{exponential-series}
+ [**Theorem 8.47**](#exponential-series): Exponential series\Pageref{exponential-series}
 
  [**Proof**](#Proof*-8.21)\Pageref{Proof*-8.21}
 
- [**Definition 8.47**](#exponential-function): Exponential function\Pageref{exponential-function}
+ [**Definition 8.48**](#exponential-function): Exponential function\Pageref{exponential-function}
 
- [**Remark 8.48**](#Remark-8.48)\Pageref{Remark-8.48}
+ [**Remark 8.49**](#Remark-8.49)\Pageref{Remark-8.49}
 
- [**Definition 8.49**](#conditional-convergence-1): Conditional convergence\Pageref{conditional-convergence-1}
+ [**Definition 8.50**](#conditional-convergence-1): Conditional convergence\Pageref{conditional-convergence-1}
 
- [**Definition 8.50**](#rearrangement-of-a-series): Rearrangement of a series\Pageref{rearrangement-of-a-series}
+ [**Definition 8.51**](#rearrangement-of-a-series): Rearrangement of a series\Pageref{rearrangement-of-a-series}
 
- [**Theorem 8.51**](#Theorem-8.51)\Pageref{Theorem-8.51}
+ [**Theorem 8.52**](#Theorem-8.52)\Pageref{Theorem-8.52}
 
- [**Theorem 8.52**](#riemann-rearrangement-theorem): Riemann rearrangement Theorem\Pageref{riemann-rearrangement-theorem}
+ [**Theorem 8.53**](#riemann-rearrangement-theorem): Riemann rearrangement Theorem\Pageref{riemann-rearrangement-theorem}
 
- [**Theorem 8.53**](#dirichlet-test): Dirichlet Test\Pageref{dirichlet-test}
+ [**Theorem 8.54**](#dirichlet-test): Dirichlet Test\Pageref{dirichlet-test}
 
  [**Proof**](#Proof*-8.22)\Pageref{Proof*-8.22}
 
- [**Example 8.54**](#Example-8.54)\Pageref{Example-8.54}
+ [**Example 8.55**](#Example-8.55)\Pageref{Example-8.55}
 
- [**Theorem 8.55**](#alternate-convergence-test): Alternate Convergence Test\Pageref{alternate-convergence-test}
+ [**Theorem 8.56**](#alternate-convergence-test): Alternate Convergence Test\Pageref{alternate-convergence-test}
 
  [**Proof**](#Proof*-8.23)\Pageref{Proof*-8.23}
 
- [**Example 8.56**](#Example-8.56)\Pageref{Example-8.56}
+ [**Example 8.57**](#Example-8.57)\Pageref{Example-8.57}
