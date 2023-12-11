@@ -2521,7 +2521,7 @@ $$
 
 
 
-::: Example 
+::: {.Example  #example-alternating-series-test}
 
 Prove that the below series converges conditionally
 $$
@@ -2547,6 +2547,73 @@ converges by the Alternating Series Test.
 :::
 
 
+
+
+### Abel's Test
+
+
+Another conditional convergence test is the Abel Test. This looks similar
+to the Dirichlet Test, however notice that the Abel Test only deals 
+with real sequences.
+
+
+::: Theorem
+### Abel's Test
+
+Let $(a_n)$ and $(q_n)$ be sequences in $\R$.
+Suppose that 
+
+- $q_n$ is monotone, 
+- $q_n$ is bounded,
+- The series below converges
+$$
+\sum_{n=1}^\infty a_n \,.
+$$
+
+Then the following series converges
+$$
+\sum_{n=1}^\infty a_n q_n
+$$
+
+
+:::
+
+
+The proof is similar to the one of the Dirichlet Test. We decided to omit it.
+
+
+::: Example
+
+Prove that the series below converges conditionally
+$$
+\sum_{n=1}^\infty \ \frac{(-1)^n}{n} \left( 1 + \frac{1}{n} \right)^n \,.
+$$
+
+> *Solution.* Set 
+$$
+a_n:= \frac{(-1)^n}{n}\,, \quad q_n := \left( 1 + \frac{1}{n} \right)^n \,.
+$$
+We have seen that $q_n$ is monotone increasing and bounded. Moreover the
+series $\sum_{n=1}^\infty a_n$ converges by the Alternating Series Test, 
+as seen in Example \ref{example-alternating-series-test}. Hence the series $\sum_{n=1}^\infty a_n q_n$ converges by the Abel Test.
+>
+>However the series in question does not converge absolutely. Indeed, 
+$$
+\left|\frac{(-1)^n}{n} \left( 1 + \frac{1}{n} \right)^n \right| = 
+\frac{1}{n} q_n \geq  \frac{1}{n} q_1 \,,
+$$
+since $(q_n)$ is increasing. As the series 
+$$
+\sum_{n=1}^\infty \frac{1}{n} q_1
+$$
+diverges, by the Comparison Test we conclude that also 
+$$
+\sum_{n=1}^\infty \left|\frac{(-1)^n}{n} \left( 1 + \frac{1}{n} \right)^n \right|
+$$
+diverges, proving that the series in the example converges conditionally.
+
+
+:::
 
 
 

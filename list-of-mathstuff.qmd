@@ -945,4 +945,8 @@
 
  [**Proof**](#Proof*-8.23)\Pageref{Proof*-8.23}
 
- [**Example 8.57**](#Example-8.57)\Pageref{Example-8.57}
+ [**Example 8.57**](#example-alternating-series-test)\Pageref{example-alternating-series-test}
+
+ [**Theorem 8.58**](#abels-test-1): Abel’s Test\Pageref{abels-test-1}
+
+ [**Example 8.59**](#Example-8.59)\Pageref{Example-8.59}
